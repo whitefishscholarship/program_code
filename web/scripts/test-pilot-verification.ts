@@ -52,6 +52,46 @@ const verifiedIds = [
   'award-c7fa5bcb0cda',
   'award-e34d317f0f51',
   'award-838198d95997',
+  'award-0a1f1d1b8505',
+  'award-01f442f53c03',
+  'award-810497f483c1',
+  'award-79b477a8cbf5',
+  'award-d06d7c7342e2',
+  'award-5be8186316cf',
+  'award-1b7e12cc1279',
+  'award-d21bc9824cca',
+  'award-1b50b8ba8dc7',
+  'award-025b82622063',
+  'award-555518400a06',
+  'award-d0abc8910545',
+  'award-84615bac9529',
+  'award-4cdd1ce9e18c',
+  'award-00c8fd2e3b19',
+  'award-67869a40834d',
+  'award-e6d33b3f2691',
+  'award-25d250ec58c6',
+  'award-6f66c4a77103',
+  'award-5a085314245e',
+  'award-82867636c6e1',
+  'award-59d82b621dea',
+  'award-15228c015499',
+  'award-22920b157d01',
+  'award-145de4f3884e',
+  'award-74e0f7fdd4c5',
+  'award-a9c6e0fcc5af',
+  'award-cc404ac65f10',
+  'award-9185ae8439e3',
+  'award-dafc0ee48bd2',
+  'award-4343de48868d',
+  'award-f52f9786a495',
+  'award-aee0c1547953',
+  'award-8250bfe7501a',
+  'award-4f14964df035',
+  'award-ba504649a05d',
+  'award-9da4b8e00a27',
+  'award-098d6a3e2296',
+  'award-0546c2fa9e62',
+  'award-c0fca5630f43',
 ];
 const uncheckedIds = ['award-577dacb8c225', 'award-ce44143820a7'];
 
@@ -64,6 +104,12 @@ assert.equal(byId.get('award-5fec013fe00c')?.eligibility.minimumGpa, null);
 assert.equal(byId.get('award-fa027b498c44')?.verification?.openStatus, 'closed_next_not_posted');
 assert.equal(byId.get('award-04b4c1f204d1')?.verification?.deadline, 'March 15, 2027, 4:00 p.m.');
 assert.equal(byId.get('award-140b97cfb628')?.verification, undefined);
+assert.equal(byId.get('award-d06d7c7342e2')?.verification?.openStatus, 'open_now');
+assert.equal(byId.get('award-d06d7c7342e2')?.verification?.deadline, 'March 21, 2027');
+assert.equal(byId.get('award-318b34958cc0')?.verification, undefined);
+assert.match(byId.get('award-318b34958cc0')?.verificationNote ?? '', /does not list/);
+assert.equal(byId.get('award-fa212121a110')?.verificationNote, undefined);
+assert.equal(R3_CATALOG.awards.filter((award) => award.verificationNote).length, 10);
 assert.equal(R3_CATALOG.awards.filter((award) => displayVerification(award).status === 'not_yet_checked').length, 411 - verifiedIds.length);
 
 const counted = { active: 0, upcoming: 0, closed: 0, unavailable: 0, unknown: 0 };

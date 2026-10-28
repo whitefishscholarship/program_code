@@ -106,6 +106,7 @@ export const StudentAwardSchema = z.object({
   }),
   sourcePublicIds: z.array(publicId).min(1),
   verification: AwardVerificationSchema.optional(),
+  verificationNote: z.string().min(1).optional(),
 }).strict();
 
 export const StudentSourceSchema = z.object({

@@ -25,11 +25,11 @@
       "awards": 411,
       "applicationGroups": 4,
       "cycles": 411,
-      "activeCycles": 5,
-      "upcomingCycles": 9,
-      "closedCycles": 29,
+      "activeCycles": 15,
+      "upcomingCycles": 28,
+      "closedCycles": 40,
       "unavailableCycles": 0,
-      "unknownCycles": 368,
+      "unknownCycles": 328,
       "minimumObservedRecipientSlots": 71
     },
     "awards": [
@@ -38,14 +38,14 @@
         "name": "2024-2025 ADHD Scholarship",
         "summary": null,
         "amount": {
-          "label": "TBD",
+          "label": "Amount not stated",
           "minimum": null,
           "maximum": null,
           "currency": null,
-          "state": "unparseable"
+          "state": "unknown"
         },
         "eligibility": {
-          "audience": "Any",
+          "audience": "Not stated on the NCLD scholarships page",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
@@ -67,84 +67,99 @@
         },
         "sourcePublicIds": [
           "source-52fc5ef42158"
-        ]
+        ],
+        "verificationNote": "The NCLD scholarships page does not list this award."
       },
       {
         "publicId": "award-0a1f1d1b8505",
         "name": "2027 Wings for Val Foundation Lt. Cmdr. Lyndsay Evans Memorial Scholarship",
-        "summary": "Pilot training support for a woman demonstrating preparation, accountability, aviation commitment and leadership. No specific military-family requirement inferred from honoree. WAI2027 cycle closed September 1, 2026 at 11:59 p.m. ET. WAI membership required by August 30, 2026 and active through March 30, 2027; at most three applications. Submit through WAI portal: two non-family one-page recommendations, 500-word essay, resume of at most two pages, and award-specific materials. Flight applicants supply pilot/medical certificates and last three logbook pages; these are not required for non-flight awards. FAQ permits members of any gender, age and nationality subject to each award’s specific rules; the award-specific descriptions above remain controlling. No next-cycle deadline inferred.",
+        "summary": "Wings for Val Foundation scholarship of $10,000 for a woman in pilot training who shows preparation, accountability, and leadership. WAI2027 applications closed September 1, 2026. WAI2028 applications open in the summer of 2027.",
         "amount": {
           "label": "$10,000",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "minimum": 10000,
+          "maximum": 10000,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Woman in pilot training",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 2026-09-01 23:59 ET (WAI2027; closed). Current availability not verified.",
-          "year": null,
-          "opens": null,
+          "status": "upcoming",
+          "label": "Opens summer of 2027",
+          "year": 2028,
+          "opens": "summer of 2027",
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "WAI online scholarship portal via https://www.wai.org/scholarship-listings ; linked OAuth/member route observed. Closed cycle; authenticated application not entered.",
-          "url": null,
+          "mode": "direct_per_award",
+          "label": "WAI scholarship listings",
+          "url": "https://www.wai.org/scholarship-listings",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-0a1f1d1b8505"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.wai.org/scholarship-listings",
+          "openStatus": "opens_on",
+          "deadline": null
+        }
       },
       {
         "publicId": "award-01f442f53c03",
         "name": "2027 Wings for Val Foundation Lt. Valerie Cappelaere Delaney Memorial Scholarship",
-        "summary": "Pilot-in-training support, with determination, resilience, leadership and service emphasized. No military-family eligibility inferred from honoree; current guide does not repeat the older age 18 or medical-specific award terms. WAI2027 cycle closed September 1, 2026 at 11:59 p.m. ET. WAI membership required by August 30, 2026 and active through March 30, 2027; at most three applications. Submit through WAI portal: two non-family one-page recommendations, 500-word essay, resume of at most two pages, and award-specific materials. Flight applicants supply pilot/medical certificates and last three logbook pages; these are not required for non-flight awards. FAQ permits members of any gender, age and nationality subject to each award’s specific rules; the award-specific descriptions above remain controlling. No next-cycle deadline inferred.",
+        "summary": "Wings for Val Foundation scholarship of $10,000 for a pilot in training who shows determination, resilience, and service. WAI2027 applications closed September 1, 2026. WAI2028 applications open in the summer of 2027.",
         "amount": {
           "label": "$10,000",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "minimum": 10000,
+          "maximum": 10000,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Pilot in training",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 2026-09-01 23:59 ET (WAI2027; closed). Current availability not verified.",
-          "year": null,
-          "opens": null,
+          "status": "upcoming",
+          "label": "Opens summer of 2027",
+          "year": 2028,
+          "opens": "summer of 2027",
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "WAI online scholarship portal via https://www.wai.org/scholarship-listings ; linked OAuth/member route observed. Closed cycle; authenticated application not entered.",
-          "url": null,
+          "mode": "direct_per_award",
+          "label": "WAI scholarship listings",
+          "url": "https://www.wai.org/scholarship-listings",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-01f442f53c03"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.wai.org/scholarship-listings",
+          "openStatus": "opens_on",
+          "deadline": null
+        }
       },
       {
         "publicId": "award-810497f483c1",
         "name": "2nd Chance Scholarships for College or Trade Schools",
-        "summary": "AFSA Second Chance Scholarship Contest is open to US citizens or legal residents with a high-school diploma, GED or equivalent who plan to attend an accredited US college, university or trade school in Fall 2026 or Spring 2027. There are no GPA or income requirements. Family members of AFSA staff or national board members and previous AFSA scholarship winners are ineligible. Enter once using the online form and eight-question quiz; multiple entries disqualify. Five awards of $1,000 are selected randomly and paid to the school for tuition or books. The 2026 window was January 1 at 12:00 a.m. CDT through August 31 at 12:59 p.m. CDT and is now past. Future cycles are not verified. This is distinct from AFSA's high-school contest.",
+        "summary": "Five $1,000 scholarships for a U.S. citizen or legal resident with a high school diploma or GED who plans to start college or trade school in fall 2026 or spring 2027. The page states no GPA requirement. Entries closed August 31, 2026.",
         "amount": {
           "label": "$1,000",
           "minimum": 1000,
@@ -153,106 +168,41 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "National",
+          "audience": "U.S. citizen or legal resident with a high school diploma or GED",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
-          "opens": null,
-          "closes": "46265",
+          "status": "closed",
+          "label": "Closed",
+          "year": 2026,
+          "opens": "January 1, 2026",
+          "closes": "August 31, 2026, 12:59 p.m. CDT",
           "recurrence": "unknown"
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
+          "label": "AFSA Second Chance scholarship page",
           "url": "https://www.afsascholarship.org/secondchance/",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-7e756e0b2ccf"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.afsascholarship.org/secondchance/",
+          "openStatus": "closed_next_not_posted",
+          "deadline": "August 31, 2026, 12:59 p.m. CDT"
+        }
       },
       {
         "publicId": "award-79b477a8cbf5",
         "name": "Action Air Scholarship",
-        "summary": "Action Air Scholarship supports undergraduate students currently pursuing HVAC at Chattanooga State Community College in Tennessee. The sponsor's Click Here to Apply links directly to this exact Bold.org award page. It is a conditional opportunity for students attending that program; the college's location alone is not a Montana residency exclusion. The Bold program page lists2500dollars, no essay and a preference for a complete student profile. The sponsor's page title says May5,2026 while its body says May12 without a year, followed by selection June5 and award June12. These dates conflict; current-cycle availability and an exact reliable deadline remain unresolved. No GPA, income or renewal requirement is established. The system does not create a Bold profile or access private applications.",
-        "amount": {
-          "label": "$2,500",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
-        },
-        "eligibility": {
-          "audience": "Geography not recorded",
-          "minimumGpa": null,
-          "schoolTypes": [],
-          "focus": null
-        },
-        "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: Conflicting dates: May 5, 2026 page title; May 12 in undated page body. Current availability not verified.",
-          "year": null,
-          "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
-        },
-        "application": {
-          "mode": "unknown",
-          "label": "https://bold.org/scholarships/action-air-scholarship/",
-          "url": "https://bold.org/scholarships/action-air-scholarship/",
-          "groupPublicId": null,
-          "supplements": "unknown"
-        },
-        "sourcePublicIds": [
-          "source-79b477a8cbf5"
-        ]
-      },
-      {
-        "publicId": "award-d06d7c7342e2",
-        "name": "Adam Montes Pride Scholarship",
-        "summary": "The Adam Montes Pride Scholarship supports LGBTQ+ high-school seniors who are underrepresented minorities and will be first-generation college students. Students interested in education degrees are preferred. The application requests a400–600-word essay about the applicant's distinguishing experiences and reasons for seeking a scholarship. Selection lists ambition, need and the Bold.org profile. The public award page displays Apply Now to Bold.org signup; application requires that external account, which was not created or accessed. The deadline is March21,2027. GPA, renewal and a formal financial-need threshold are not specified. First-generation and underrepresented-minority definitions are not further resolved by the page.",
-        "amount": {
-          "label": "$500 each; two awards ($1,000 total)",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
-        },
-        "eligibility": {
-          "audience": "National",
-          "minimumGpa": null,
-          "schoolTypes": [],
-          "focus": null
-        },
-        "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: March 21, 2027. Current availability not verified.",
-          "year": null,
-          "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
-        },
-        "application": {
-          "mode": "unknown",
-          "label": "https://bold.org/apply/",
-          "url": "https://bold.org/apply/",
-          "groupPublicId": null,
-          "supplements": "unknown"
-        },
-        "sourcePublicIds": [
-          "source-d06d7c7342e2"
-        ]
-      },
-      {
-        "publicId": "award-5be8186316cf",
-        "name": "Adams/Marcellin International Interest Scholarship",
-        "summary": null,
+        "summary": "One $2,500 no-essay scholarship for an undergraduate HVAC student at Chattanooga State Community College. The deadline was May 12, 2026, and winners have been announced.",
         "amount": {
           "label": "$2,500",
           "minimum": 2500,
@@ -261,43 +211,141 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "Any (incl. Int'l)",
-          "minimumGpa": 3.3,
+          "audience": "Undergraduate HVAC student at Chattanooga State Community College",
+          "minimumGpa": null,
+          "schoolTypes": [
+            "two_year"
+          ],
+          "focus": "HVAC"
+        },
+        "cycle": {
+          "status": "closed",
+          "label": "Closed",
+          "year": 2026,
+          "opens": null,
+          "closes": "May 12, 2026",
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Action Air scholarship page",
+          "url": "https://bold.org/scholarships/action-air-scholarship/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-79b477a8cbf5"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://bold.org/scholarships/action-air-scholarship/",
+          "openStatus": "closed_next_not_posted",
+          "deadline": "May 12, 2026"
+        }
+      },
+      {
+        "publicId": "award-d06d7c7342e2",
+        "name": "Adam Montes Pride Scholarship",
+        "summary": "Two $500 scholarships for an LGBTQ+ high school senior who is an underrepresented minority and will be a first-generation college student. Interest in an education degree is preferred. The page does not state a GPA.",
+        "amount": {
+          "label": "$500 each (two awards)",
+          "minimum": 500,
+          "maximum": 500,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "LGBTQ+ first-generation high school senior",
+          "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "active",
+          "label": "Open now",
+          "year": 2027,
           "opens": null,
-          "closes": "4/10/2026",
+          "closes": "March 21, 2027",
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Adam Montes Pride scholarship page",
+          "url": "https://bold.org/scholarships/adam-montes-pride-scholarship/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-d06d7c7342e2"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://bold.org/scholarships/adam-montes-pride-scholarship/",
+          "openStatus": "open_now",
+          "deadline": "March 21, 2027"
+        }
+      },
+      {
+        "publicId": "award-5be8186316cf",
+        "name": "Adams/Marcellin International Interest Scholarship",
+        "summary": "One $2,500 scholarship for a graduating senior at Whitefish High School or Whitefish Independent High School who will attend an accredited two-year or four-year school full time. Minimum GPA is 3.3. The 2025-26 application was due April 10, 2026.",
+        "amount": {
+          "label": "$2,500",
+          "minimum": 2500,
+          "maximum": 2500,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "Whitefish High School or Whitefish Independent High School senior",
+          "minimumGpa": 3.3,
+          "schoolTypes": [
+            "two_year",
+            "four_year"
+          ],
+          "focus": null
+        },
+        "cycle": {
+          "status": "closed",
+          "label": "Closed",
+          "year": 2026,
+          "opens": null,
+          "closes": "April 10, 2026",
           "recurrence": "unknown"
         },
         "application": {
           "mode": "offline",
-          "label": "Paper or counselor-provided application",
+          "label": "Adams/Marcellin application",
           "url": "https://docs.google.com/document/d/1Uz-Wec4WfbZLzPAastos5d1405kjnBI79OeDQDWgFiE/edit",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-9de8db2d34cf"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://docs.google.com/document/d/1Uz-Wec4WfbZLzPAastos5d1405kjnBI79OeDQDWgFiE/edit",
+          "openStatus": "closed_next_not_posted",
+          "deadline": "April 10, 2026"
+        }
       },
       {
         "publicId": "award-2a22470d390c",
         "name": "Adoption STAR Academic Scholarship",
-        "summary": "Academic scholarships for college-bound students who were adopted or experienced foster care, overcame adversity, and demonstrate good character and academic progress, with plans for a four-year college. The official academic program page and linked application do not state an award amount or deadline. The $1,000 / $750 / $500 amounts and May 31 date belong to a separate prospective-adoptive-parent grant; Ongoing belongs to a separate adoption grant. Awardees must agree to public sharing of their name, photo, personal statement and college update.",
+        "summary": "Academic scholarship for a college-bound student who was adopted or in foster care, overcame adversity, and plans to attend a four-year college. The page does not state an award amount, GPA, or deadline.",
         "amount": {
-          "label": "Amount not recorded",
+          "label": "Amount not stated",
           "minimum": null,
           "maximum": null,
           "currency": null,
           "state": "unknown"
         },
         "eligibility": {
-          "audience": "National",
+          "audience": "Adopted or foster-care student planning to attend a four-year college",
           "minimumGpa": null,
           "schoolTypes": [
             "four_year"
@@ -321,48 +369,56 @@
         },
         "sourcePublicIds": [
           "source-5d3b5af11d04"
-        ]
+        ],
+        "verificationNote": "The academic scholarship page does not state an amount or deadline."
       },
       {
         "publicId": "award-1b7e12cc1279",
         "name": "AeroStar ATP CTP Certification Training Scholarship",
-        "summary": "ATP CTP course, 7–9 days, for the ATP multi-engine knowledge-test prerequisite. Training must begin within one year. Lodging and transportation excluded; nontransferable and no cash conversion. WAI2027 cycle closed September 1, 2026 at 11:59 p.m. ET. WAI membership required by August 30, 2026 and active through March 30, 2027; at most three applications. Submit through WAI portal: two non-family one-page recommendations, 500-word essay, resume of at most two pages, and award-specific materials. Flight applicants supply pilot/medical certificates and last three logbook pages; these are not required for non-flight awards. FAQ permits members of any gender, age and nationality subject to each award’s specific rules; the award-specific descriptions above remain controlling. No next-cycle deadline inferred.",
+        "summary": "AeroStar scholarship covers a $3,900 ATP CTP course. Training must start within one year. Lodging and transportation are not included. WAI2027 applications closed September 1, 2026. WAI2028 applications open in the summer of 2027.",
         "amount": {
-          "label": "$3,900 training value",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "label": "$3,900",
+          "minimum": 3900,
+          "maximum": 3900,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "ATP CTP applicant",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 2026-09-01 23:59 ET (WAI2027; closed). Current availability not verified.",
-          "year": null,
-          "opens": null,
+          "status": "upcoming",
+          "label": "Opens summer of 2027",
+          "year": 2028,
+          "opens": "summer of 2027",
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "WAI online scholarship portal via https://www.wai.org/scholarship-listings ; linked OAuth/member route observed. Closed cycle; authenticated application not entered.",
-          "url": null,
+          "mode": "direct_per_award",
+          "label": "WAI scholarship listings",
+          "url": "https://www.wai.org/scholarship-listings",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-1b7e12cc1279"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.wai.org/scholarship-listings",
+          "openStatus": "opens_on",
+          "deadline": null
+        }
       },
       {
         "publicId": "award-d21bc9824cca",
         "name": "AFSA No Essay Scholarship Program",
-        "summary": null,
+        "summary": "Five $1,000 scholarships for a U.S. citizen or legal resident who is a high school senior and plans to attend an accredited college, university, or trade school. The page states no GPA requirement. Entries are open through December 31, 2026.",
         "amount": {
           "label": "$1,000",
           "minimum": 1000,
@@ -371,34 +427,41 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "Any",
+          "audience": "U.S. high school senior",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
-          "opens": null,
-          "closes": "August 31st, Annually",
-          "recurrence": "annual"
+          "status": "active",
+          "label": "Open now",
+          "year": 2026,
+          "opens": "September 1, 2026",
+          "closes": "December 31, 2026, 12:59 p.m. CDT",
+          "recurrence": "unknown"
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
-          "url": "https://www.afsascholarship.org/secondchance/",
+          "label": "AFSA high school scholarship page",
+          "url": "https://www.afsascholarship.org/high-school-scholarships/",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-7e756e0b2ccf"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.afsascholarship.org/high-school-scholarships/",
+          "openStatus": "open_now",
+          "deadline": "December 31, 2026, 12:59 p.m. CDT"
+        }
       },
       {
         "publicId": "award-1b50b8ba8dc7",
         "name": "Agri Industries",
-        "summary": null,
+        "summary": "Amount varies for a high school senior or college student interested in irrigation, electrical trades, HVAC, water wells, underground utilities, plumbing, welding, or fabrication. The shared Reach Higher Montana application opens January 1 and closes March 1 at 11:59 p.m. MST.",
         "amount": {
           "label": "Amount varies",
           "minimum": null,
@@ -407,20 +470,17 @@
           "state": "variable"
         },
         "eligibility": {
-          "audience": "Montana students",
+          "audience": "High school senior or college student interested in the listed trades",
           "minimumGpa": null,
-          "schoolTypes": [
-            "four_year",
-            "trade"
-          ],
-          "focus": null
+          "schoolTypes": [],
+          "focus": "Trades related to irrigation, electrical, HVAC, wells, utilities, plumbing, welding, or fabrication"
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
+          "status": "upcoming",
+          "label": "Opens January 1",
           "year": null,
-          "opens": "01-01 each year (year not verified)",
-          "closes": "03-01 each year (year not verified)",
+          "opens": "January 1",
+          "closes": "March 1, 11:59 p.m. MST",
           "recurrence": "annual"
         },
         "application": {
@@ -433,12 +493,19 @@
         "sourcePublicIds": [
           "source-ac022918a599",
           "source-c19c47f183aa"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.reachhighermontana.org/pay-for-school/scholarships",
+          "openStatus": "opens_on",
+          "deadline": "March 1, 11:59 p.m. MST"
+        }
       },
       {
         "publicId": "award-025b82622063",
         "name": "Aircraft Lighting International Scholarship",
-        "summary": null,
+        "summary": "$5,000 for a high school senior or college student in an accredited avionics or aircraft maintenance program. Applications for the 2027-28 school year are available. This award's page does not state a GPA or a closing date.",
         "amount": {
           "label": "$5,000",
           "minimum": 5000,
@@ -447,34 +514,41 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "National",
+          "audience": "High school senior or college student in avionics or aircraft maintenance",
           "minimumGpa": null,
           "schoolTypes": [],
-          "focus": "Avionics or Aircraft Maintenance"
+          "focus": "Avionics or aircraft maintenance"
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "active",
+          "label": "Open now",
+          "year": 2027,
           "opens": null,
-          "closes": "October (for 2027-2028 applications)",
+          "closes": null,
           "recurrence": "unknown"
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
+          "label": "AEA Educational Foundation scholarships",
           "url": "https://aea.net/educationalfoundation/scholarships.asp",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-e9744c77fa29"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://aea.net/educationalfoundation/scholarships.asp",
+          "openStatus": "open_now",
+          "deadline": null
+        }
       },
       {
         "publicId": "award-555518400a06",
         "name": "Aircraft Mechanic Scholarship (CVG Airport)",
-        "summary": "One of two $20,000 scholarships for U.S. high school seniors who are U.S. Citizens or Permanent Residents. Applicants must be 18 years old by the time of completing the program, and can start training within 12 months and use the scholarship within 24 months. Must have consistent, reliable transportation and parent/guardian approval if under 18. This scholarship is awarded for training at CVG Airport. The current Epic mechanic application requires confirming that you have not applied for the FEAM scholarship at CVG and states that the FEAM and Epic scholarships cannot both be received.",
+        "summary": "A $20,000 aircraft mechanic scholarship for a U.S. citizen or permanent resident who is a high school senior, will be 18 by the end of the program, and can start within 12 months. The 2026 application deadline was October 1, 2026. The page does not state a GPA. This award is for training at CVG Airport.",
         "amount": {
           "label": "$20,000",
           "minimum": 20000,
@@ -483,36 +557,43 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "National",
+          "audience": "U.S. high school senior",
           "minimumGpa": null,
           "schoolTypes": [
             "trade"
           ],
-          "focus": "Aircraft Mechanic"
+          "focus": "Aircraft mechanic"
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "closed",
+          "label": "Closed",
+          "year": 2026,
           "opens": null,
-          "closes": "46296",
+          "closes": "October 1, 2026",
           "recurrence": "unknown"
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
+          "label": "Epic Flight Academy scholarship page",
           "url": "https://epicflightacademy.com/aviation-scholarship/",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-d86a64240d48"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://epicflightacademy.com/aviation-scholarship/",
+          "openStatus": "closed_next_not_posted",
+          "deadline": "October 1, 2026"
+        }
       },
       {
         "publicId": "award-d0abc8910545",
         "name": "Aircraft Mechanic Scholarship (New Smyrna Beach)",
-        "summary": "One of two $20,000 scholarships for U.S. high school seniors who are U.S. Citizens or Permanent Residents. Applicants must be 18 years old by the time of completing the program, and can start training within 12 months and use the scholarship within 24 months. Must have consistent, reliable transportation and parent/guardian approval if under 18. This scholarship is awarded for training at New Smyrna Beach. The current Epic mechanic application requires confirming that you have not applied for the FEAM scholarship at CVG and states that the FEAM and Epic scholarships cannot both be received.",
+        "summary": "A $20,000 aircraft mechanic scholarship for a U.S. citizen or permanent resident who is a high school senior, will be 18 by the end of the program, and can start within 12 months. The 2026 application deadline was October 1, 2026. The page does not state a GPA. This award is for training at New Smyrna Beach.",
         "amount": {
           "label": "$20,000",
           "minimum": 20000,
@@ -521,67 +602,81 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "National",
+          "audience": "U.S. high school senior",
           "minimumGpa": null,
           "schoolTypes": [
             "trade"
           ],
-          "focus": "Aircraft Mechanic"
+          "focus": "Aircraft mechanic"
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "closed",
+          "label": "Closed",
+          "year": 2026,
           "opens": null,
-          "closes": "46296",
+          "closes": "October 1, 2026",
           "recurrence": "unknown"
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
+          "label": "Epic Flight Academy scholarship page",
           "url": "https://epicflightacademy.com/aviation-scholarship/",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-d86a64240d48"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://epicflightacademy.com/aviation-scholarship/",
+          "openStatus": "closed_next_not_posted",
+          "deadline": "October 1, 2026"
+        }
       },
       {
         "publicId": "award-84615bac9529",
         "name": "Airlines on Autopilot MEI Scholarship",
-        "summary": "U.S. applicants holding CFI and commercial pilot certificates with multi-engine ratings; passion for teaching and intent to instruct through airline minimum hours. Paid to flight school; complete within one year. WAI2027 cycle closed September 1, 2026 at 11:59 p.m. ET. WAI membership required by August 30, 2026 and active through March 30, 2027; at most three applications. Submit through WAI portal: two non-family one-page recommendations, 500-word essay, resume of at most two pages, and award-specific materials. Flight applicants supply pilot/medical certificates and last three logbook pages; these are not required for non-flight awards. FAQ permits members of any gender, age and nationality subject to each award’s specific rules; the award-specific descriptions above remain controlling. No next-cycle deadline inferred.",
+        "summary": "One $5,000 scholarship toward a multi-engine instructor certificate for a U.S. applicant who holds CFI and commercial certificates with a multi-engine rating. Funds are paid to the flight school. WAI2027 applications closed September 1, 2026. WAI2028 applications open in the summer of 2027.",
         "amount": {
           "label": "$5,000",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "minimum": 5000,
+          "maximum": 5000,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "U.S. CFI with a commercial multi-engine certificate",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 2026-09-01 23:59 ET (WAI2027; closed). Current availability not verified.",
-          "year": null,
-          "opens": null,
+          "status": "upcoming",
+          "label": "Opens summer of 2027",
+          "year": 2028,
+          "opens": "summer of 2027",
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "WAI online scholarship portal via https://www.wai.org/scholarship-listings ; linked OAuth/member route observed. Closed cycle; authenticated application not entered.",
-          "url": null,
+          "mode": "direct_per_award",
+          "label": "WAI scholarship listings",
+          "url": "https://www.wai.org/scholarship-listings",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-84615bac9529"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.wai.org/scholarship-listings",
+          "openStatus": "opens_on",
+          "deadline": null
+        }
       },
       {
         "publicId": "award-57c071d7e024",
@@ -629,23 +724,23 @@
       {
         "publicId": "award-c601a3ce6b92",
         "name": "Alaska Airlines/Horizon Air Maintenance Scholarship",
-        "summary": "Female mechanic pursuing A&P with Alaska Air Group career goal; enrolled in accredited aviation maintenance or Alaska Maintenance Technician Development program, in good academic standing. Historical WAI2025 award: membership by October 1, 2024; application deadline October 11, 2024 at 11:59 p.m. EST, now closed. Not present in the WAI2027 guide; future availability unknown. The public WAI portal is the program application route, currently closed. Current-cycle common rules are not retroactively substituted for 2025.",
+        "summary": null,
         "amount": {
-          "label": "$5,000",
+          "label": "Amount not stated",
           "minimum": null,
           "maximum": null,
           "currency": null,
-          "state": "unparseable"
+          "state": "unknown"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Not stated on the current WAI page",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
           "status": "unknown",
-          "label": "Recorded deadline: 2024-10-11 23:59 EST (WAI2025; closed). Current availability not verified.",
+          "label": "Availability not verified",
           "year": null,
           "opens": null,
           "closes": null,
@@ -660,7 +755,8 @@
         },
         "sourcePublicIds": [
           "source-c601a3ce6b92"
-        ]
+        ],
+        "verificationNote": "The current WAI listings and 2027 guide do not include this award."
       },
       {
         "publicId": "award-69a595e31c6a",
@@ -709,7 +805,7 @@
       {
         "publicId": "award-4cdd1ce9e18c",
         "name": "All-American Pest Control STEAM Trailblazer Scholarship",
-        "summary": null,
+        "summary": "One $1,000 scholarship for a female high school senior or college or trade-school student in the United States who is pursuing STEAM. Minimum GPA is 3.0. Applications opened October 1, 2026, and close November 30, 2026.",
         "amount": {
           "label": "$1,000",
           "minimum": 1000,
@@ -718,322 +814,388 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "National",
+          "audience": "Female high school senior or college or trade-school student in the United States",
           "minimumGpa": 3,
           "schoolTypes": [],
-          "focus": "Science, Technology, Engineering, Arts, and Mathematics (STEAM)"
+          "focus": "STEAM"
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
-          "opens": null,
-          "closes": "TBD, 2026",
+          "status": "active",
+          "label": "Open now",
+          "year": 2026,
+          "opens": "October 1, 2026",
+          "closes": "November 30, 2026",
           "recurrence": "unknown"
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
+          "label": "STEAM Trailblazer scholarship page",
           "url": "https://www.allamericanpestcontrol.com/steam-scholarship",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-1068de73367e"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.allamericanpestcontrol.com/steam-scholarship",
+          "openStatus": "open_now",
+          "deadline": "November 30, 2026"
+        }
       },
       {
         "publicId": "award-00c8fd2e3b19",
         "name": "Allegra Ford Thomas Scholarship",
-        "summary": null,
+        "summary": "A $5,000 scholarship, paid as $2,500 a year for two years, for a graduating high school senior with a documented learning disability who will enroll in a two-year college, vocational or technical program, or a specialized disability program. The stated deadline was May 10, 2026. The page does not state a GPA.",
         "amount": {
-          "label": "$5,000 ($2,500 each year over two years)",
+          "label": "$5,000 ($2,500 a year for two years)",
           "minimum": 2500,
           "maximum": 5000,
           "currency": "USD",
           "state": "known"
         },
         "eligibility": {
-          "audience": "Any",
+          "audience": "Graduating high school senior with a documented learning disability",
           "minimumGpa": null,
-          "schoolTypes": [],
+          "schoolTypes": [
+            "two_year",
+            "trade"
+          ],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: May 10, 2026 at 23:59 (timezone not stated; closed). Current availability not verified.",
-          "year": null,
+          "status": "closed",
+          "label": "Closed",
+          "year": 2026,
           "opens": null,
-          "closes": null,
+          "closes": "May 10, 2026",
           "recurrence": "unknown"
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
-          "url": "https://apply.mykaleidoscope.com/program/AnneAllegraFordThomas2026",
+          "label": "Allegra Ford Thomas scholarship page",
+          "url": "https://ncld.org/scholarships-awards/allegra-ford-thomas-scholarship/",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-188fcb86109f"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://ncld.org/scholarships-awards/allegra-ford-thomas-scholarship/",
+          "openStatus": "closed_next_not_posted",
+          "deadline": "May 10, 2026"
+        }
       },
       {
         "publicId": "award-67869a40834d",
         "name": "Amazon Maintenance Technician Scholarship",
-        "summary": "Guide supports a woman enrolled in an A&P program or an aspiring maintenance technician. Academic excellence, leadership and aviation-community impact considered; 500-word essay and two recommendations. WAI2027 cycle closed September 1, 2026 at 11:59 p.m. ET. WAI membership required by August 30, 2026 and active through March 30, 2027; at most three applications. Submit through WAI portal: two non-family one-page recommendations, 500-word essay, resume of at most two pages, and award-specific materials. Flight applicants supply pilot/medical certificates and last three logbook pages; these are not required for non-flight awards. FAQ permits members of any gender, age and nationality subject to each award’s specific rules; the award-specific descriptions above remain controlling. No next-cycle deadline inferred.",
+        "summary": "Amazon scholarship of $2,500 for a woman enrolled in an A&P program or training to be a maintenance technician. The application needs a 500-word essay and two recommendations. WAI2027 applications closed September 1, 2026. WAI2028 applications open in the summer of 2027.",
         "amount": {
           "label": "$2,500",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "minimum": 2500,
+          "maximum": 2500,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Woman in aviation maintenance training",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 2026-09-01 23:59 ET (WAI2027; closed). Current availability not verified.",
-          "year": null,
-          "opens": null,
+          "status": "upcoming",
+          "label": "Opens summer of 2027",
+          "year": 2028,
+          "opens": "summer of 2027",
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "WAI online scholarship portal via https://www.wai.org/scholarship-listings ; linked OAuth/member route observed. Closed cycle; authenticated application not entered.",
-          "url": null,
+          "mode": "direct_per_award",
+          "label": "WAI scholarship listings",
+          "url": "https://www.wai.org/scholarship-listings",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-67869a40834d"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.wai.org/scholarship-listings",
+          "openStatus": "opens_on",
+          "deadline": null
+        }
       },
       {
         "publicId": "award-e6d33b3f2691",
         "name": "Amazon Professional Flight Training Scholarship",
-        "summary": "Woman enrolled in flight training; academic excellence, leadership and aviation-community impact considered, with essay and two recommendations. WAI2027 cycle closed September 1, 2026 at 11:59 p.m. ET. WAI membership required by August 30, 2026 and active through March 30, 2027; at most three applications. Submit through WAI portal: two non-family one-page recommendations, 500-word essay, resume of at most two pages, and award-specific materials. Flight applicants supply pilot/medical certificates and last three logbook pages; these are not required for non-flight awards. FAQ permits members of any gender, age and nationality subject to each award’s specific rules; the award-specific descriptions above remain controlling. No next-cycle deadline inferred.",
+        "summary": "Amazon scholarship of $2,500 for a woman enrolled in flight training. The application needs a 500-word essay and two recommendations. WAI2027 applications closed September 1, 2026. WAI2028 applications open in the summer of 2027.",
         "amount": {
           "label": "$2,500",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "minimum": 2500,
+          "maximum": 2500,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Woman enrolled in flight training",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 2026-09-01 23:59 ET (WAI2027; closed). Current availability not verified.",
-          "year": null,
-          "opens": null,
+          "status": "upcoming",
+          "label": "Opens summer of 2027",
+          "year": 2028,
+          "opens": "summer of 2027",
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "WAI online scholarship portal via https://www.wai.org/scholarship-listings ; linked OAuth/member route observed. Closed cycle; authenticated application not entered.",
-          "url": null,
+          "mode": "direct_per_award",
+          "label": "WAI scholarship listings",
+          "url": "https://www.wai.org/scholarship-listings",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-e6d33b3f2691"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.wai.org/scholarship-listings",
+          "openStatus": "opens_on",
+          "deadline": null
+        }
       },
       {
         "publicId": "award-25d250ec58c6",
         "name": "Amazon Unmanned Aircraft System (UAS) Training Scholarship",
-        "summary": "Woman enrolled in UAS training; academic excellence, leadership and community impact considered, with essay and two recommendations. WAI2027 cycle closed September 1, 2026 at 11:59 p.m. ET. WAI membership required by August 30, 2026 and active through March 30, 2027; at most three applications. Submit through WAI portal: two non-family one-page recommendations, 500-word essay, resume of at most two pages, and award-specific materials. Flight applicants supply pilot/medical certificates and last three logbook pages; these are not required for non-flight awards. FAQ permits members of any gender, age and nationality subject to each award’s specific rules; the award-specific descriptions above remain controlling. No next-cycle deadline inferred.",
+        "summary": "Amazon scholarship of $2,500 for a woman enrolled in unmanned aircraft training. The application needs a 500-word essay and two recommendations. WAI2027 applications closed September 1, 2026. WAI2028 applications open in the summer of 2027.",
         "amount": {
           "label": "$2,500",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "minimum": 2500,
+          "maximum": 2500,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Woman enrolled in unmanned aircraft training",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 2026-09-01 23:59 ET (WAI2027; closed). Current availability not verified.",
-          "year": null,
-          "opens": null,
+          "status": "upcoming",
+          "label": "Opens summer of 2027",
+          "year": 2028,
+          "opens": "summer of 2027",
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "WAI online scholarship portal via https://www.wai.org/scholarship-listings ; linked OAuth/member route observed. Closed cycle; authenticated application not entered.",
-          "url": null,
+          "mode": "direct_per_award",
+          "label": "WAI scholarship listings",
+          "url": "https://www.wai.org/scholarship-listings",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-25d250ec58c6"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.wai.org/scholarship-listings",
+          "openStatus": "opens_on",
+          "deadline": null
+        }
       },
       {
         "publicId": "award-6f66c4a77103",
         "name": "American Airlines Aircraft Maintenance Technician Scholarship",
-        "summary": "Currently enrolled in an A&P program or aviation-maintenance-technology degree at an accredited U.S. maintenance program; U.S. citizen or permanent resident; GPA at least 3.0. Academics, accomplishments, teamwork, leadership and community service considered. WAI2027 cycle closed September 1, 2026 at 11:59 p.m. ET. WAI membership required by August 30, 2026 and active through March 30, 2027; at most three applications. Submit through WAI portal: two non-family one-page recommendations, 500-word essay, resume of at most two pages, and award-specific materials. Flight applicants supply pilot/medical certificates and last three logbook pages; these are not required for non-flight awards. FAQ permits members of any gender, age and nationality subject to each award’s specific rules; the award-specific descriptions above remain controlling. No next-cycle deadline inferred.",
+        "summary": "Two $7,500 scholarships for a student in an accredited U.S. aviation maintenance program. GPA must be 3.0 or higher, and the student must be a U.S. citizen or permanent resident. WAI2027 applications closed September 1, 2026. WAI2028 applications open in the summer of 2027.",
         "amount": {
-          "label": "$7,500 each; two recipients",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "label": "$7,500 each (two awards)",
+          "minimum": 7500,
+          "maximum": 7500,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
-          "minimumGpa": null,
+          "audience": "Student in a U.S. aviation maintenance program",
+          "minimumGpa": 3,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 2026-09-01 23:59 ET (WAI2027; closed). Current availability not verified.",
-          "year": null,
-          "opens": null,
+          "status": "upcoming",
+          "label": "Opens summer of 2027",
+          "year": 2028,
+          "opens": "summer of 2027",
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "WAI online scholarship portal via https://www.wai.org/scholarship-listings ; linked OAuth/member route observed. Closed cycle; authenticated application not entered.",
-          "url": null,
+          "mode": "direct_per_award",
+          "label": "WAI scholarship listings",
+          "url": "https://www.wai.org/scholarship-listings",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-6f66c4a77103"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.wai.org/scholarship-listings",
+          "openStatus": "opens_on",
+          "deadline": null
+        }
       },
       {
         "publicId": "award-5a085314245e",
-        "name": "American Airlines Dispatcher Certification Scholarship",
-        "summary": "Spring 2026 LPA scholarship; application deadline May 10, 2026 at 11:59 pm Pacific has passed. FAA Aircraft Dispatcher Certification training through the American Airlines partnership. Other certification prerequisites are not detailed on this scholarship page. All applicants must be active LPA members, at least 17 years old (18 for Epic/UAA), and accepted to or enrolled at an accredited institution in the US or its territories. Enrollment evidence is required upon award; funds go directly to the institution. Resume, two recommendations and two essays are application steps. Next cycle, GPA and renewal are unconfirmed. Ethnicity is not inferred as an eligibility condition from the organization’s name.",
+        "name": "LPA Dispatcher Certification Scholarship",
+        "summary": "LPA scholarship for FAA aircraft dispatcher certification. The award amount varies, and two awards are available. Applicants must be active LPA members, at least 17, and enrolled or accepted at an accredited U.S. institution. The fall 2026 deadline is November 5, 2026, at 11:59 p.m. PT. The page does not state a GPA or a $6,000 amount.",
         "amount": {
-          "label": "$6000",
+          "label": "Award varies",
           "minimum": null,
           "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "currency": "USD",
+          "state": "variable"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Active LPA member, at least 17, pursuing dispatcher certification",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 2026-05-10 23:59 PT (closed; next cycle unknown). Current availability not verified.",
-          "year": null,
-          "opens": null,
-          "closes": null,
+          "status": "active",
+          "label": "Open now",
+          "year": 2026,
+          "opens": "October 15, 2026",
+          "closes": "November 5, 2026, 11:59 p.m. PT",
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "Sign in or join LPA, then open the Scholarship Portal through the Membership Hub during the application window. Membership enrollment link: https://latinopilot.app.neoncrm.com/forms/newmembership2024 . Official instructions: https://www.lpa-aero.org/scholarships . Authenticated scholarship portal not tested; spring2026 cycle closed.",
-          "url": null,
+          "mode": "direct_per_award",
+          "label": "LPA scholarships page",
+          "url": "https://www.lpa-aero.org/scholarships",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-5a085314245e"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.lpa-aero.org/scholarships",
+          "openStatus": "open_now",
+          "deadline": "November 5, 2026, 11:59 p.m. PT"
+        }
       },
       {
         "publicId": "award-82867636c6e1",
         "name": "American Airlines Engineering Scholarship",
-        "summary": "Enrolled in an accredited U.S. college/university engineering program; U.S. citizen or permanent resident; GPA at least 3.0. Aviation career interest, academics, accomplishments, teamwork, leadership and community service considered. WAI2027 cycle closed September 1, 2026 at 11:59 p.m. ET. WAI membership required by August 30, 2026 and active through March 30, 2027; at most three applications. Submit through WAI portal: two non-family one-page recommendations, 500-word essay, resume of at most two pages, and award-specific materials. Flight applicants supply pilot/medical certificates and last three logbook pages; these are not required for non-flight awards. FAQ permits members of any gender, age and nationality subject to each award’s specific rules; the award-specific descriptions above remain controlling. No next-cycle deadline inferred.",
+        "summary": "Two $7,500 scholarships for a student in an accredited U.S. engineering program who wants to work in aviation. GPA must be 3.0 or higher, and the student must be a U.S. citizen or permanent resident. WAI2027 applications closed September 1, 2026. WAI2028 applications open in the summer of 2027.",
         "amount": {
-          "label": "$7,500 each; two recipients",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "label": "$7,500 each (two awards)",
+          "minimum": 7500,
+          "maximum": 7500,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
-          "minimumGpa": null,
+          "audience": "Student in a U.S. engineering program",
+          "minimumGpa": 3,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 2026-09-01 23:59 ET (WAI2027; closed). Current availability not verified.",
-          "year": null,
-          "opens": null,
+          "status": "upcoming",
+          "label": "Opens summer of 2027",
+          "year": 2028,
+          "opens": "summer of 2027",
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "WAI online scholarship portal via https://www.wai.org/scholarship-listings ; linked OAuth/member route observed. Closed cycle; authenticated application not entered.",
-          "url": null,
+          "mode": "direct_per_award",
+          "label": "WAI scholarship listings",
+          "url": "https://www.wai.org/scholarship-listings",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-82867636c6e1"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.wai.org/scholarship-listings",
+          "openStatus": "opens_on",
+          "deadline": null
+        }
       },
       {
         "publicId": "award-59d82b621dea",
         "name": "American Airlines Flight Educational Scholarship",
-        "summary": "Flight training for private, instrument, multi-engine, commercial, instructor or ATP; excludes sport/recreational certificates. Explain career benefit, why applying and WAI involvement. Older 2025 age/diploma/ground-school restrictions are not restated in the current guide and are not carried forward. WAI2027 cycle closed September 1, 2026 at 11:59 p.m. ET. WAI membership required by August 30, 2026 and active through March 30, 2027; at most three applications. Submit through WAI portal: two non-family one-page recommendations, 500-word essay, resume of at most two pages, and award-specific materials. Flight applicants supply pilot/medical certificates and last three logbook pages; these are not required for non-flight awards. FAQ permits members of any gender, age and nationality subject to each award’s specific rules; the award-specific descriptions above remain controlling. No next-cycle deadline inferred.",
+        "summary": "Up to four $7,500 scholarships for flight training toward a private, instrument, multi-engine, commercial, instructor, or ATP certificate. Sport and recreational certificates are excluded. WAI2027 applications closed September 1, 2026. WAI2028 applications open in the summer of 2027.",
         "amount": {
-          "label": "$7,500 each; up to four recipients",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "label": "$7,500 each (up to four awards)",
+          "minimum": 7500,
+          "maximum": 7500,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "WAI member in flight training",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 2026-09-01 23:59 ET (WAI2027; closed). Current availability not verified.",
-          "year": null,
-          "opens": null,
+          "status": "upcoming",
+          "label": "Opens summer of 2027",
+          "year": 2028,
+          "opens": "summer of 2027",
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "WAI online scholarship portal via https://www.wai.org/scholarship-listings ; linked OAuth/member route observed. Closed cycle; authenticated application not entered.",
-          "url": null,
+          "mode": "direct_per_award",
+          "label": "WAI scholarship listings",
+          "url": "https://www.wai.org/scholarship-listings",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-59d82b621dea"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.wai.org/scholarship-listings",
+          "openStatus": "opens_on",
+          "deadline": null
+        }
       },
       {
         "publicId": "award-15228c015499",
         "name": "AMTOPP Scholarship",
-        "summary": null,
+        "summary": "One $500 scholarship for a high school senior FFA member with a GPA of at least 2.0. The shared Reach Higher Montana application opens January 1 and closes March 1 at 11:59 p.m. MST.",
         "amount": {
           "label": "$500",
           "minimum": 500,
@@ -1042,17 +1204,17 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "Montana students",
+          "audience": "High school senior and FFA member",
           "minimumGpa": 2,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
+          "status": "upcoming",
+          "label": "Opens January 1",
           "year": null,
-          "opens": "01-01 each year (year not verified)",
-          "closes": "03-01 each year (year not verified)",
+          "opens": "January 1",
+          "closes": "March 1, 11:59 p.m. MST",
           "recurrence": "annual"
         },
         "application": {
@@ -1065,21 +1227,28 @@
         "sourcePublicIds": [
           "source-ac022918a599",
           "source-c19c47f183aa"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.reachhighermontana.org/pay-for-school/scholarships",
+          "openStatus": "opens_on",
+          "deadline": "March 1, 11:59 p.m. MST"
+        }
       },
       {
         "publicId": "award-22920b157d01",
         "name": "AMVETS Children/Grandchildren Scholarship",
-        "summary": null,
+        "summary": "2026 AMVETS scholarship for a child or grandchild of a veteran or service member who is a high school senior entering an accredited four-year college. The national page lists $4,000. The 2026 application window was January through April 30. The application page does not state a numeric GPA minimum.",
         "amount": {
-          "label": "$1,000/yr (up to $4,000)",
-          "minimum": 1000,
+          "label": "$4,000",
+          "minimum": 4000,
           "maximum": 4000,
           "currency": "USD",
           "state": "known"
         },
         "eligibility": {
-          "audience": "National",
+          "audience": "Child or grandchild of a veteran or service member entering a four-year college",
           "minimumGpa": null,
           "schoolTypes": [
             "four_year"
@@ -1087,59 +1256,75 @@
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
-          "opens": null,
-          "closes": "Annual — Jan to Apr 30",
+          "status": "closed",
+          "label": "Closed",
+          "year": 2026,
+          "opens": "January 2026",
+          "closes": "April 30, 2026",
           "recurrence": "annual"
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
+          "label": "AMVETS children and grandchildren application",
           "url": "https://apply.mykaleidoscope.com/program/AMVETSchildrenandgrandchildren26",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-5db176c2906b"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://apply.mykaleidoscope.com/program/AMVETSchildrenandgrandchildren26",
+          "openStatus": "closed_next_not_posted",
+          "deadline": "April 30, 2026"
+        }
       },
       {
         "publicId": "award-145de4f3884e",
         "name": "AMVETS Veteran Scholarship Program",
-        "summary": "AMVETS Veteran Scholarship Program2024 supports veterans, including Guard/Reserve, active-duty service members or their spouses entering eligible construction-trades study. A high-school diploma or GED and eligible enrollment/acceptance are required; children are explicitly ineligible. Submit the named official Kaleidoscope application with eligibility verification, enrollment/acceptance and short essay. Awards range1000–5000. The verified route is the closed2024 program; the saved row’s2025label is not supported by that page and is retained as historical source provenance. A graduating senior could qualify conditionally through the spouse pathway after diploma/GED and accepted trades study. No numeric GPA, need threshold, guaranteed renewal or next opening is established. This is distinct from AMVETS Children/Grandchildren Master155.",
+        "summary": "AMVETS and WD-40 scholarships of $1,000 to $5,000 for a veteran, active-duty member, Guard or Reserve member, or spouse entering construction-trades training. Children are not eligible. The 2024 application is closed, and the page does not post the next deadline or a GPA.",
         "amount": {
           "label": "$1,000–$5,000",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "minimum": 1000,
+          "maximum": 5000,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Veteran, service member, or spouse entering construction trades",
           "minimumGpa": null,
-          "schoolTypes": [],
-          "focus": null
+          "schoolTypes": [
+            "trade"
+          ],
+          "focus": "Construction trades"
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 2024 program closed; next deadline unverified. Current availability not verified.",
-          "year": null,
+          "status": "closed",
+          "label": "Closed",
+          "year": 2024,
           "opens": null,
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "https://apply.mykaleidoscope.com/scholarships/VSP2024",
+          "mode": "direct_per_award",
+          "label": "AMVETS Veteran Scholarship Program 2024",
           "url": "https://apply.mykaleidoscope.com/scholarships/VSP2024",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-145de4f3884e"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://apply.mykaleidoscope.com/scholarships/VSP2024",
+          "openStatus": "closed_next_not_posted",
+          "deadline": null
+        }
       },
       {
         "publicId": "award-a1106312a9de",
@@ -1191,52 +1376,59 @@
       {
         "publicId": "award-74e0f7fdd4c5",
         "name": "Anne Bridge Baddour Aviation Scholarship",
-        "summary": "Guide describes a female pilot advancing toward instrument, multi-engine or ATP training. WAI2027 cycle closed September 1, 2026 at 11:59 p.m. ET. WAI membership required by August 30, 2026 and active through March 30, 2027; at most three applications. Submit through WAI portal: two non-family one-page recommendations, 500-word essay, resume of at most two pages, and award-specific materials. Flight applicants supply pilot/medical certificates and last three logbook pages; these are not required for non-flight awards. FAQ permits members of any gender, age and nationality subject to each award’s specific rules; the award-specific descriptions above remain controlling. No next-cycle deadline inferred.",
+        "summary": "A $5,000 scholarship for a female pilot working toward an instrument rating, multi-engine rating, or ATP. WAI2027 applications closed September 1, 2026. WAI2028 applications open in the summer of 2027.",
         "amount": {
           "label": "$5,000",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "minimum": 5000,
+          "maximum": 5000,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Female pilot",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 2026-09-01 23:59 ET (WAI2027; closed). Current availability not verified.",
-          "year": null,
-          "opens": null,
+          "status": "upcoming",
+          "label": "Opens summer of 2027",
+          "year": 2028,
+          "opens": "summer of 2027",
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "WAI online scholarship portal via https://www.wai.org/scholarship-listings ; linked OAuth/member route observed. Closed cycle; authenticated application not entered.",
-          "url": null,
+          "mode": "direct_per_award",
+          "label": "WAI scholarship listings",
+          "url": "https://www.wai.org/scholarship-listings",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-74e0f7fdd4c5"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.wai.org/scholarship-listings",
+          "openStatus": "opens_on",
+          "deadline": null
+        }
       },
       {
         "publicId": "award-a9c6e0fcc5af",
         "name": "Anne Ford Scholarship",
-        "summary": "This scholarship is granted to a graduating high school senior who will enroll in a full-time bachelor’s degree program. Applicants must have a documented learning disability (LD), and students with Attention Deficit Hyperactivity Disorder (ADHD) who also have a learning disability are encouraged to apply. Financial need is considered in selection; it is not stated as a universal financial-need eligibility gate. The specific 2026 overview and application list May 10, 2026 (11:59 p.m.; timezone not stated), superseding the generic early-April and stale April 2023 FAQ dates.",
+        "summary": "A $10,000 scholarship, paid as $2,500 a year for four years, for a graduating high school senior with a documented learning disability who will enroll full time in a bachelor's program. The stated deadline was May 10, 2026. The page does not state a GPA.",
         "amount": {
-          "label": "$10,000 ($2,500/year over four years)",
+          "label": "$10,000 ($2,500 a year for four years)",
           "minimum": 2500,
           "maximum": 10000,
           "currency": "USD",
           "state": "known"
         },
         "eligibility": {
-          "audience": "Any",
+          "audience": "Graduating high school senior with a documented learning disability",
           "minimumGpa": null,
           "schoolTypes": [
             "four_year"
@@ -1244,44 +1436,51 @@
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 5/10/2026. Current availability not verified.",
-          "year": null,
+          "status": "closed",
+          "label": "Closed",
+          "year": 2026,
           "opens": null,
-          "closes": null,
+          "closes": "May 10, 2026",
           "recurrence": "unknown"
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
-          "url": "https://apply.mykaleidoscope.com/program/AnneAllegraFordThomas2026",
+          "label": "Anne Ford scholarship page",
+          "url": "https://ncld.org/scholarships-awards/anne-ford-scholarship/",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-188fcb86109f"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://ncld.org/scholarships-awards/anne-ford-scholarship/",
+          "openStatus": "closed_next_not_posted",
+          "deadline": "May 10, 2026"
+        }
       },
       {
         "publicId": "award-2974a6462e95",
         "name": "AOPA FOUNDATION SCHOLARSHIP",
-        "summary": "AOPA lists this named fund under Examples of Past Scholarships. Historical terms: Age 16 minimum at application; student pilot certificate required. Primary sport, recreational or private pilot training. Historical amount: $2500 and up. The current general application requires AOPA membership and residence in US/DC, Canada, Guam, Puerto Rico or US Virgin Islands; HS membership is free. Applications reopen October 1, 2026, but this child fund’s next offering and funding is unconfirmed. The fall deadline conflicts between parent December 30 and FAQ December 31, so no exact deadline is proposed. Flight training normally completed within 12 months; maintenance training within 24 months. Award-specific prerequisites must be confirmed for the next cycle.",
+        "summary": "The AOPA page lists this under examples of past scholarships: $2,500 and up for primary sport, recreational, or private pilot training. The applicant had to be 16 and hold a student pilot certificate. The page does not give this named award a current deadline.",
         "amount": {
-          "label": "$2500 and up (past example; next funding unconfirmed)",
+          "label": "$2,500 and up",
           "minimum": null,
           "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "currency": "USD",
+          "state": "variable"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Past example: age 16 with a student pilot certificate",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
           "status": "unknown",
-          "label": "Recorded deadline: Unknown. Current availability not verified.",
+          "label": "Availability not verified",
           "year": null,
           "opens": null,
           "closes": null,
@@ -1296,7 +1495,8 @@
         },
         "sourcePublicIds": [
           "source-2974a6462e95"
-        ]
+        ],
+        "verificationNote": "Listed only as an example of a past scholarship, with no current cycle."
       },
       {
         "publicId": "award-d8ff6ef257b3",
@@ -1344,59 +1544,68 @@
       {
         "publicId": "award-cc404ac65f10",
         "name": "AOPA Student Pilot Scholarship",
-        "summary": "U.S. citizen pursuing private, recreational or sport certificate; student pilot certificate by application deadline. GPA 3.0 applies if a full-time high-school, flight-program or college/university student, not universally. Additional 300-word general-aviation involvement essay. Paid to recipient and used within one year. WAI2027 cycle closed September 1, 2026 at 11:59 p.m. ET. WAI membership required by August 30, 2026 and active through March 30, 2027; at most three applications. Submit through WAI portal: two non-family one-page recommendations, 500-word essay, resume of at most two pages, and award-specific materials. Flight applicants supply pilot/medical certificates and last three logbook pages; these are not required for non-flight awards. FAQ permits members of any gender, age and nationality subject to each award’s specific rules; the award-specific descriptions above remain controlling. No next-cycle deadline inferred.",
+        "summary": "A $3,000 scholarship for a U.S. citizen WAI member working toward a private, recreational, or sport certificate. A student pilot certificate is required by the deadline. A 3.0 GPA applies only to full-time students. WAI2027 applications closed September 1, 2026. WAI2028 applications open in the summer of 2027.",
         "amount": {
           "label": "$3,000",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "minimum": 3000,
+          "maximum": 3000,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "U.S. citizen seeking a student pilot certificate",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 2026-09-01 23:59 ET (WAI2027; closed). Current availability not verified.",
-          "year": null,
-          "opens": null,
+          "status": "upcoming",
+          "label": "Opens summer of 2027",
+          "year": 2028,
+          "opens": "summer of 2027",
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "WAI online scholarship portal via https://www.wai.org/scholarship-listings ; linked OAuth/member route observed. Closed cycle; authenticated application not entered.",
-          "url": null,
+          "mode": "direct_per_award",
+          "label": "WAI scholarship listings",
+          "url": "https://www.wai.org/scholarship-listings",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-cc404ac65f10"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.wai.org/scholarship-listings",
+          "openStatus": "opens_on",
+          "deadline": null
+        }
       },
       {
         "publicId": "award-c6bf70d530da",
         "name": "Ardean A.Anvik Endowed Scholarship",
-        "summary": "The linked general form requires admission application and high-school cumulative GPA 2.25 for first-year students; transfer applicants need 12 graded college credits and cumulative college GPA 2.25. Current/former DCC students need degree-seeking admission, degree/certificate enrollment or plans, 12 graded credits and GPA 2.0; dual-enrollment students need 12 credits to use the returning category. Resume, academic-goals essay, transcripts, two recommendations and award-specific materials are required. DCC requires FAFSA for need-based awards. These general conditions do not replace higher or narrower award-specific conditions. Dawson Community College scholarship. Full-time DCC student in good standing; interest in creative writing, political/civic discourse or social-science issues; overall GPA 3.0. The foundation listing is undated and marked under construction; confirm award-specific conditions and funding for the application cycle. DCC’s 2026–27 general scholarship priority deadline was March 1, 2026, but its official page says late applicants should still apply. General application combines foundation awards; specific committee/coursework/packet requirements above remain separate. No single GPA threshold is proposed because it depends on applicant category and award conditions. Any unsupported amount, renewal or gap-year condition remains unknown.",
+        "summary": "Dawson Community College award equal to half of in-district full-time tuition for a full-time student interested in creative writing, political or civic discourse, or social science. The recipient must maintain a 3.0 GPA. The page does not state an application deadline.",
         "amount": {
-          "label": "Amount not recorded",
+          "label": "Half of in-district full-time tuition",
           "minimum": null,
           "maximum": null,
-          "currency": null,
-          "state": "unknown"
+          "currency": "USD",
+          "state": "variable"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
-          "minimumGpa": null,
-          "schoolTypes": [],
-          "focus": null
+          "audience": "Full-time Dawson Community College student",
+          "minimumGpa": 3,
+          "schoolTypes": [
+            "two_year"
+          ],
+          "focus": "Creative writing, civic discourse, or social science"
         },
         "cycle": {
           "status": "unknown",
-          "label": "Recorded deadline: 2026-03-01 priority (general; late applications allowed; award-specific dates may differ). Current availability not verified.",
+          "label": "Availability not verified",
           "year": null,
           "opens": null,
           "closes": null,
@@ -1411,28 +1620,29 @@
         },
         "sourcePublicIds": [
           "source-c6bf70d530da"
-        ]
+        ],
+        "verificationNote": "The endowment page does not state an application deadline."
       },
       {
         "publicId": "award-71e2ee7f2172",
         "name": "ASE Scholarship",
-        "summary": "NTHS member enrolled in automotive, collision or diesel coursework with ASE Endorsement; automatic drawing entry. NTHS lists the application route shown here. Dates are annual/yearless; a current open cycle is not established. GPA, location restrictions and renewal terms remain unknown.",
+        "summary": "One $500 scholarship drawing for an NTHS member in automotive, collision, or diesel coursework who has the ASE Endorsement. The page lists the window as May 1 through April 30 and does not name a year or a GPA.",
         "amount": {
           "label": "$500",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "minimum": 500,
+          "maximum": 500,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "NTHS member with the ASE Endorsement",
           "minimumGpa": null,
           "schoolTypes": [],
-          "focus": "trades"
+          "focus": "Automotive, collision, or diesel"
         },
         "cycle": {
           "status": "unknown",
-          "label": "Recorded deadline: May 1–April 30 (annual; cycle year/status unknown). Current availability not verified.",
+          "label": "Availability not verified",
           "year": null,
           "opens": null,
           "closes": null,
@@ -1447,67 +1657,77 @@
         },
         "sourcePublicIds": [
           "source-71e2ee7f2172"
-        ]
+        ],
+        "verificationNote": "The page gives a yearless window of May 1 to April 30 and does not name a cycle year."
       },
       {
         "publicId": "award-9185ae8439e3",
         "name": "Associated General Contractors of America’s Workforce Development Scholarship",
-        "summary": "The AGC/NCCER Workforce Development scholarship supports full- or part-time students, including high school seniors, who intend a construction career and enroll or intend to enroll in an approved accredited construction degree, certificate, craft training or registered apprenticeship program. U.S. citizenship or permanent residency is required. Awards are up to $1,000 per year, renewable for up to two years subject to continuing enrollment and good standing (2.5 GPA or equivalent for renewal). The 2026–27 form requires a fall 2026 class and is closed; its June 1 deadline time conflicts between the header and body. Master row 146 represents the same program; consolidation remains a separate unapplied recommendation. Students pursuing a four-year bachelor's degree must use the separate AGC Undergraduate Scholarship application rather than this Workforce Development program.",
+        "summary": "Workforce Development Scholarship of $1,000 a year, renewable for up to two years, for craft or technical construction training, including associate degrees and certificates. The 2027-2028 program opens March 1, 2027, and the criteria close the window on June 1. A 2.5 GPA is required only for renewal.",
         "amount": {
-          "label": "TBD",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "label": "$1,000 per year",
+          "minimum": 1000,
+          "maximum": 1000,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "National",
+          "audience": "Student in craft, technical, or associate construction training",
           "minimumGpa": null,
           "schoolTypes": [
             "two_year",
             "trade"
           ],
-          "focus": "Construction industry"
+          "focus": "Construction"
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
-          "opens": null,
-          "closes": "June 1st",
-          "recurrence": "unknown"
+          "status": "upcoming",
+          "label": "Opens March 1, 2027",
+          "year": 2027,
+          "opens": "March 1, 2027",
+          "closes": "June 1, 2027",
+          "recurrence": "annual"
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
-          "url": "https://www.byf.org/all-resources/scholarships/#1584583671954-985d7487-8bc5",
+          "label": "AGC scholarship program",
+          "url": "https://www.agc.org/learn/education-and-research-foundation/scholarship-program",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-ef6935b71d8d"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.agc.org/learn/education-and-research-foundation/scholarship-program",
+          "openStatus": "opens_on",
+          "deadline": "June 1, 2027"
+        }
       },
       {
         "publicId": "award-62a1f1662db9",
         "name": "Astoria Hotel & Suites Athletic Scholarship",
-        "summary": "The linked general form requires admission application and high-school cumulative GPA 2.25 for first-year students; transfer applicants need 12 graded college credits and cumulative college GPA 2.25. Current/former DCC students need degree-seeking admission, degree/certificate enrollment or plans, 12 graded credits and GPA 2.0; dual-enrollment students need 12 credits to use the returning category. Resume, academic-goals essay, transcripts, two recommendations and award-specific materials are required. DCC requires FAFSA for need-based awards. These general conditions do not replace higher or narrower award-specific conditions. Dawson Community College scholarship. Returning DCC athlete nominated by coaches for character, leadership and community service; not an incoming-student award. The foundation listing is undated and marked under construction; confirm award-specific conditions and funding for the application cycle. DCC’s 2026–27 general scholarship priority deadline was March 1, 2026, but its official page says late applicants should still apply. General application combines foundation awards; specific committee/coursework/packet requirements above remain separate. No single GPA threshold is proposed because it depends on applicant category and award conditions. Any unsupported amount, renewal or gap-year condition remains unknown.",
+        "summary": "Dawson Community College coaches nominate a returning athlete who shows character, leadership, and community service. The page does not state an amount, GPA, or deadline.",
         "amount": {
-          "label": "Amount not recorded",
+          "label": "Amount not stated",
           "minimum": null,
           "maximum": null,
           "currency": null,
           "state": "unknown"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Returning Dawson Community College athlete",
           "minimumGpa": null,
-          "schoolTypes": [],
+          "schoolTypes": [
+            "two_year"
+          ],
           "focus": null
         },
         "cycle": {
           "status": "unknown",
-          "label": "Recorded deadline: 2026-03-01 priority (general; late applications allowed; award-specific dates may differ). Current availability not verified.",
+          "label": "Availability not verified",
           "year": null,
           "opens": null,
           "closes": null,
@@ -1522,28 +1742,31 @@
         },
         "sourcePublicIds": [
           "source-62a1f1662db9"
-        ]
+        ],
+        "verificationNote": "The endowment page does not state an amount or application deadline."
       },
       {
         "publicId": "award-e19043cae9b6",
         "name": "August \" Cole\" Dooper Memorial Endowed Baseball Scholarship",
-        "summary": "The linked general form requires admission application and high-school cumulative GPA 2.25 for first-year students; transfer applicants need 12 graded college credits and cumulative college GPA 2.25. Current/former DCC students need degree-seeking admission, degree/certificate enrollment or plans, 12 graded credits and GPA 2.0; dual-enrollment students need 12 credits to use the returning category. Resume, academic-goals essay, transcripts, two recommendations and award-specific materials are required. DCC requires FAFSA for need-based awards. These general conditions do not replace higher or narrower award-specific conditions. Dawson Community College scholarship. DCC freshman or sophomore baseball player; coaching staff selects recipient. The foundation listing is undated and marked under construction; confirm award-specific conditions and funding for the application cycle. DCC’s 2026–27 general scholarship priority deadline was March 1, 2026, but its official page says late applicants should still apply. General application combines foundation awards; specific committee/coursework/packet requirements above remain separate. No single GPA threshold is proposed because it depends on applicant category and award conditions. Any unsupported amount, renewal or gap-year condition remains unknown.",
+        "summary": "$400 a year for a freshman or sophomore baseball player at Dawson Community College, chosen by the baseball coaching staff. The page does not state a GPA or an application deadline.",
         "amount": {
           "label": "$400",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "minimum": 400,
+          "maximum": 400,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Dawson Community College freshman or sophomore baseball player",
           "minimumGpa": null,
-          "schoolTypes": [],
+          "schoolTypes": [
+            "two_year"
+          ],
           "focus": null
         },
         "cycle": {
           "status": "unknown",
-          "label": "Recorded deadline: 2026-03-01 priority (general; late applications allowed; award-specific dates may differ). Current availability not verified.",
+          "label": "Availability not verified",
           "year": null,
           "opens": null,
           "closes": null,
@@ -1558,84 +1781,99 @@
         },
         "sourcePublicIds": [
           "source-e19043cae9b6"
-        ]
+        ],
+        "verificationNote": "The endowment page does not state an application deadline."
       },
       {
         "publicId": "award-dafc0ee48bd2",
         "name": "Avfuel Pilot-in-Training Scholarship",
-        "summary": "Engaged in or preparing to begin pilot training and interested in aviation education and a pilot license. Flight-school and expected-completion fields are optional. Work-history fields allow Not Applicable if no experience. Avfuel/Avflight employees and their relatives are ineligible. Essays and complete application required; possible finalist interview. Funds further aviation education and are jointly payable to recipient and school. Official application says redeem by September 1, 2027; parent page says October 31, 2027. Redemption deadline conflicts and needs provider clarification before use; no single date accepted. Minimum GPA, age, location and renewal unknown.",
+        "summary": "Three awards of $1,500, $1,000, and $500 for someone in or preparing to begin pilot training. Avfuel and Avflight employees and their relatives are not eligible. The 2026 application is due October 31, 2026, at 11:59 p.m. EDT. The form does not state a GPA.",
         "amount": {
-          "label": "$1,500 / $1,000 / $500 (three recipient tiers)",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "label": "$500, $1,000, and $1,500",
+          "minimum": 500,
+          "maximum": 1500,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Person engaged in or preparing to begin pilot training",
           "minimumGpa": null,
           "schoolTypes": [],
-          "focus": "Aviation education / pilot training"
+          "focus": "Pilot training"
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: October 31, 2026, 11:59 p.m. EDT. Current availability not verified.",
-          "year": null,
+          "status": "active",
+          "label": "Open now",
+          "year": 2026,
           "opens": null,
-          "closes": null,
+          "closes": "October 31, 2026, 11:59 p.m. EDT",
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "https://form.jotform.com/253366200193148",
+          "mode": "direct_per_award",
+          "label": "Avfuel Pilot-in-Training application",
           "url": "https://form.jotform.com/253366200193148",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-dafc0ee48bd2"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://form.jotform.com/253366200193148",
+          "openStatus": "open_now",
+          "deadline": "October 31, 2026, 11:59 p.m. EDT"
+        }
       },
       {
         "publicId": "award-4343de48868d",
         "name": "AVTRIP Scholarship",
-        "summary": "Current AVTRIP member (new members eligible), at least 250 AVTRIP points accrued during prior 24 months; enrollment grants 250 bonus points. Interest in continuing aviation education required. Blank form requires an airman certificate upload and work history; exact certificate level is not specified. Avfuel/Avflight employees and their relatives are ineligible. Essays and complete application required; possible finalist interview. Funds further aviation education and are jointly payable to recipient and school. Official application says redeem by September 1, 2027; parent page says October 31, 2027. Redemption deadline conflicts and needs provider clarification before use; no single date accepted. Minimum GPA, age, location and renewal unknown.",
+        "summary": "One $2,000 scholarship for a current AVTRIP member, including a new member, with 250 points in the previous 24 months. Avfuel and Avflight employees and their relatives are not eligible. The 2026 application is due October 31, 2026, at 11:59 p.m. EDT. The form does not state a GPA.",
         "amount": {
           "label": "$2,000",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "minimum": 2000,
+          "maximum": 2000,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Current AVTRIP member",
           "minimumGpa": null,
           "schoolTypes": [],
-          "focus": "Aviation education / pilot training"
+          "focus": "Aviation education"
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: October 31, 2026, 11:59 p.m. EDT. Current availability not verified.",
-          "year": null,
+          "status": "active",
+          "label": "Open now",
+          "year": 2026,
           "opens": null,
-          "closes": null,
+          "closes": "October 31, 2026, 11:59 p.m. EDT",
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "https://form.jotform.com/260607434083151",
+          "mode": "direct_per_award",
+          "label": "AVTRIP scholarship application",
           "url": "https://form.jotform.com/260607434083151",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-4343de48868d"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://form.jotform.com/260607434083151",
+          "openStatus": "open_now",
+          "deadline": "October 31, 2026, 11:59 p.m. EDT"
+        }
       },
       {
         "publicId": "award-f52f9786a495",
         "name": "Bernard Greufe Memorial Honor Scholarship",
-        "summary": null,
+        "summary": "$1,500 for a Montana Farm Bureau member or a member's child pursuing a degree at an accredited institution. The field does not have to be agriculture. The application was due April 1, 2026. The page does not state a GPA.",
         "amount": {
           "label": "$1,500",
           "minimum": 1500,
@@ -1644,29 +1882,36 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "In-State",
+          "audience": "Montana Farm Bureau member or member's child",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "closed",
+          "label": "Closed",
+          "year": 2026,
           "opens": null,
-          "closes": "Annual — closes Apr 1",
-          "recurrence": "annual"
+          "closes": "April 1, 2026",
+          "recurrence": "unknown"
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
-          "url": "https://form.jotform.com/250345411585151",
+          "label": "Montana Farm Bureau scholarships",
+          "url": "https://www.mfbf.org/scholarships",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-53e2c940d0e2"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.mfbf.org/scholarships",
+          "openStatus": "closed_next_not_posted",
+          "deadline": "April 1, 2026"
+        }
       },
       {
         "publicId": "award-6307b228e380",
@@ -1703,12 +1948,57 @@
         "sourcePublicIds": [
           "source-3a6f9880e175",
           "source-cc45e4a1b952"
-        ]
+        ],
+        "verificationNote": "The linked file could not be read beyond a Whitefish High School senior requirement."
       },
       {
         "publicId": "award-aee0c1547953",
-        "name": "Big Sky State Games Scholarship ($500)",
-        "summary": null,
+        "name": "Big Sky State Games Character Counts! Scholarship",
+        "summary": "Character Counts! Scholarship for a Montana high school junior in the 2026-2027 school year who competes in the Big Sky State Games. It can be used for trade school or community college. The 2027 deadline is May 1. The page states that 2026 winners received $500 and does not state the 2027 amount or a GPA.",
+        "amount": {
+          "label": "Amount not stated",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "Montana high school junior in the Big Sky State Games",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "active",
+          "label": "Open now",
+          "year": 2027,
+          "opens": null,
+          "closes": "May 1, 2027",
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Character Counts! scholarship page",
+          "url": "https://bigskygames.org/character-counts-scholarship/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-4d14833e9985",
+          "source-86bdcda38a76"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://bigskygames.org/character-counts-scholarship/",
+          "openStatus": "open_now",
+          "deadline": "May 1, 2027"
+        }
+      },
+      {
+        "publicId": "award-8250bfe7501a",
+        "name": "Big Sun Athletics Scholarship",
+        "summary": "A $500 scholarship for a student athlete who is a high school senior or attending a postsecondary school. The essay is due June 19, 2027. The page does not state a GPA.",
         "amount": {
           "label": "$500",
           "minimum": 500,
@@ -1717,71 +2007,41 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "National",
+          "audience": "High school senior or postsecondary student athlete",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "active",
+          "label": "Open now",
+          "year": 2027,
           "opens": null,
-          "closes": "5/2/2026",
+          "closes": "June 19, 2027",
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "direct_per_award",
-          "label": "Separate application for this award",
-          "url": "https://app.racereach.com/form/71734",
-          "groupPublicId": null,
-          "supplements": "unknown"
-        },
-        "sourcePublicIds": [
-          "source-4d14833e9985",
-          "source-86bdcda38a76"
-        ]
-      },
-      {
-        "publicId": "award-8250bfe7501a",
-        "name": "Big Sun Athletics Scholarship",
-        "summary": "BigSun Scholarship offers a $500 individual award to student athletes in any sport or capacity who are high-school seniors or attending a postsecondary institution. Email a500–1,000-word essay to athleticawards@bigsunathletics.com by June19,2027. Address how high-school sports participation influenced you, your career goals and how you relate to your family. The rules do not specify a numeric GPA, financial-need threshold, restricted major or guaranteed renewal. Provider winner notification/public posting is part of its process; this system collects no applicant essay or personal details.",
-        "amount": {
-          "label": "$500",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
-        },
-        "eligibility": {
-          "audience": "Geography not recorded",
-          "minimumGpa": null,
-          "schoolTypes": [],
-          "focus": null
-        },
-        "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: June 19, 2027. Current availability not verified.",
-          "year": null,
-          "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
-        },
-        "application": {
-          "mode": "unknown",
-          "label": "mailto:athleticawards@bigsunathletics.com",
-          "url": null,
+          "mode": "offline",
+          "label": "Email essay to BigSun Athletics",
+          "url": "https://bigsunathletics.com/",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-8250bfe7501a"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://bigsunathletics.com/",
+          "openStatus": "open_now",
+          "deadline": "June 19, 2027"
+        }
       },
       {
         "publicId": "award-4f14964df035",
         "name": "Black Mountain Software Scholarship (2 - $1,000)",
-        "summary": null,
+        "summary": "Two $1,000 scholarships for a 2024 Montana high school senior attending an accredited trade school, technical school, college, or university. Applications were due April 15, 2024. The page does not state a GPA or a later cycle.",
         "amount": {
           "label": "$1,000",
           "minimum": 1000,
@@ -1790,30 +2050,37 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "National",
+          "audience": "2024 Montana high school senior",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "closed",
+          "label": "Closed",
+          "year": 2024,
           "opens": null,
-          "closes": "2/26/2025",
+          "closes": "April 15, 2024",
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "direct_per_award",
-          "label": "Separate application for this award",
-          "url": "https://forms.office.com/pages/responsepage.aspx?id=d8zTdi9hL0WokQVf_A-NyMANDORXMx5AvDV8AyLM8v9UME9HRVZCR1k2N1ZSVVpNWkxISDhRV0FUWC4u&route=shorturl",
+          "mode": "offline",
+          "label": "Black Mountain Software scholarship page",
+          "url": "https://support.blackmountainsoftware.com/scholarship.html",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-9942a9b94bca",
           "source-beb3e2595d72"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://support.blackmountainsoftware.com/scholarship.html",
+          "openStatus": "closed_next_not_posted",
+          "deadline": "April 15, 2024"
+        }
       },
       {
         "publicId": "award-9ef3717601cd",
@@ -1854,7 +2121,7 @@
       {
         "publicId": "award-d2f262e03fe2",
         "name": "Blue Collar Brain Scholarship Program",
-        "summary": null,
+        "summary": "One $2,500 scholarship for a skilled trade. The page requires a 3.0 GPA and full-time enrollment in a vocational, technical, or two-year program, but it says the program is paused and application dates are TBD.",
         "amount": {
           "label": "$2,500",
           "minimum": 2500,
@@ -1863,19 +2130,20 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "National",
+          "audience": "Student in a skilled-trade program",
           "minimumGpa": 3,
           "schoolTypes": [
-            "trade"
+            "trade",
+            "two_year"
           ],
-          "focus": "Skilled Trade"
+          "focus": "Skilled trade"
         },
         "cycle": {
           "status": "unknown",
           "label": "Availability not verified",
           "year": null,
           "opens": null,
-          "closes": "TBD",
+          "closes": null,
           "recurrence": "unknown"
         },
         "application": {
@@ -1887,84 +2155,99 @@
         },
         "sourcePublicIds": [
           "source-777fca5dae9b"
-        ]
+        ],
+        "verificationNote": "The page says the program is paused and the dates are still TBD."
       },
       {
         "publicId": "award-ba504649a05d",
         "name": "Boeing Flight Training Scholarship",
-        "summary": "Female pursuing private, recreational, sport certificate or instrument rating. Full-time high-school, accredited flight-program or college/university students should have GPA 3.0; not a universal scalar minimum. Passion, completion commitment and two character references; paid to school, complete within one year. WAI2027 cycle closed September 1, 2026 at 11:59 p.m. ET. WAI membership required by August 30, 2026 and active through March 30, 2027; at most three applications. Submit through WAI portal: two non-family one-page recommendations, 500-word essay, resume of at most two pages, and award-specific materials. Flight applicants supply pilot/medical certificates and last three logbook pages; these are not required for non-flight awards. FAQ permits members of any gender, age and nationality subject to each award’s specific rules; the award-specific descriptions above remain controlling. No next-cycle deadline inferred.",
+        "summary": "A $7,500 scholarship for a woman working toward a private, recreational, or sport certificate or an instrument rating. Funds are paid to the flight school. A 3.0 GPA is requested only for full-time students. WAI2027 applications closed September 1, 2026. WAI2028 applications open in the summer of 2027.",
         "amount": {
           "label": "$7,500",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "minimum": 7500,
+          "maximum": 7500,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Woman in primary or instrument flight training",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 2026-09-01 23:59 ET (WAI2027; closed). Current availability not verified.",
-          "year": null,
-          "opens": null,
+          "status": "upcoming",
+          "label": "Opens summer of 2027",
+          "year": 2028,
+          "opens": "summer of 2027",
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "WAI online scholarship portal via https://www.wai.org/scholarship-listings ; linked OAuth/member route observed. Closed cycle; authenticated application not entered.",
-          "url": null,
+          "mode": "direct_per_award",
+          "label": "WAI scholarship listings",
+          "url": "https://www.wai.org/scholarship-listings",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-ba504649a05d"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.wai.org/scholarship-listings",
+          "openStatus": "opens_on",
+          "deadline": null
+        }
       },
       {
         "publicId": "award-9da4b8e00a27",
         "name": "Boeing Maintenance Training Scholarship",
-        "summary": "Guide describes a female student currently enrolled in an accredited maintenance program or college/university, who the guide says should have GPA 3.0 or better (not established as a mandatory minimum). Aviation passion, career commitment and ability to complete training considered; two character references. Paid to school; complete within one year. WAI2027 cycle closed September 1, 2026 at 11:59 p.m. ET. WAI membership required by August 30, 2026 and active through March 30, 2027; at most three applications. Submit through WAI portal: two non-family one-page recommendations, 500-word essay, resume of at most two pages, and award-specific materials. Flight applicants supply pilot/medical certificates and last three logbook pages; these are not required for non-flight awards. FAQ permits members of any gender, age and nationality subject to each award’s specific rules; the award-specific descriptions above remain controlling. No next-cycle deadline inferred.",
+        "summary": "A $7,500 scholarship for a woman enrolled in an accredited maintenance program or college. Funds are paid to the school and training must be finished within one year. The page says a 3.0 GPA is expected, not that it is required. WAI2027 applications closed September 1, 2026. WAI2028 applications open in the summer of 2027.",
         "amount": {
           "label": "$7,500",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "minimum": 7500,
+          "maximum": 7500,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Woman in an accredited maintenance program",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 2026-09-01 23:59 ET (WAI2027; closed). Current availability not verified.",
-          "year": null,
-          "opens": null,
+          "status": "upcoming",
+          "label": "Opens summer of 2027",
+          "year": 2028,
+          "opens": "summer of 2027",
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "WAI online scholarship portal via https://www.wai.org/scholarship-listings ; linked OAuth/member route observed. Closed cycle; authenticated application not entered.",
-          "url": null,
+          "mode": "direct_per_award",
+          "label": "WAI scholarship listings",
+          "url": "https://www.wai.org/scholarship-listings",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-9da4b8e00a27"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.wai.org/scholarship-listings",
+          "openStatus": "opens_on",
+          "deadline": null
+        }
       },
       {
         "publicId": "award-098d6a3e2296",
-        "name": "Bold $25,000 Scholarship",
-        "summary": "The $25,000 Be Bold No-Essay Scholarship is open to students at any education level, state, field of study or GPA, including high school students. Selection favors the boldest profile, described by earnestness, determination and impact, with a preference for earlier applications. The official award page links to free student registration. At this observation it lists September 30, 2026 as a rolling monthly deadline and December 1, 2026 for the winner announcement; no future month is inferred.",
+        "name": "Bold.org $25,000 \"Be Bold\" No-Essay Scholarship",
+        "summary": "A $25,000 no-essay scholarship open to any education level, state, field of study, or GPA. The page lists the deadline as October 31, 2026, and shows the application as open. Winners are announced December 1, 2026.",
         "amount": {
           "label": "$25,000",
           "minimum": 25000,
@@ -1973,70 +2256,84 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "Any",
+          "audience": "Any student",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "active",
+          "label": "Open now",
+          "year": 2026,
           "opens": null,
-          "closes": "TBD",
+          "closes": "October 31, 2026",
           "recurrence": "unknown"
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
-          "url": "https://scholarshipinstitute.org/scholarships/undergraduate-scholarships/",
+          "label": "Be Bold No-Essay scholarship page",
+          "url": "https://bold.org/scholarships/the-be-bold-no-essay-scholarship/",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-1065ce78e9d4"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://bold.org/scholarships/the-be-bold-no-essay-scholarship/",
+          "openStatus": "open_now",
+          "deadline": "October 31, 2026"
+        }
       },
       {
         "publicId": "award-0546c2fa9e62",
         "name": "Bonita Jean Olson Memorial Scholarship",
-        "summary": "Enrolled or committed to attend an accredited two-/four-year college, technical institute or certificate program for STEM with aviation/aerospace career plans; STEM/aviation/WAI volunteer in prior year. Seattle/Washington preference, all considered; essay covers career and service. Current guide spells Olson; older guide spells Olsen. WAI2027 cycle closed September 1, 2026 at 11:59 p.m. ET. WAI membership required by August 30, 2026 and active through March 30, 2027; at most three applications. Submit through WAI portal: two non-family one-page recommendations, 500-word essay, resume of at most two pages, and award-specific materials. Flight applicants supply pilot/medical certificates and last three logbook pages; these are not required for non-flight awards. FAQ permits members of any gender, age and nationality subject to each award’s specific rules; the award-specific descriptions above remain controlling. No next-cycle deadline inferred.",
+        "summary": "A $3,000 scholarship for a student enrolled or committed to a two-year, four-year, technical, or certificate STEM program and planning an aviation or aerospace career. Seattle and Washington applicants are preferred. WAI2027 applications closed September 1, 2026. WAI2028 applications open in the summer of 2027.",
         "amount": {
           "label": "$3,000",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "minimum": 3000,
+          "maximum": 3000,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "STEM student planning an aviation or aerospace career",
           "minimumGpa": null,
           "schoolTypes": [],
-          "focus": null
+          "focus": "STEM"
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 2026-09-01 23:59 ET (WAI2027; closed). Current availability not verified.",
-          "year": null,
-          "opens": null,
+          "status": "upcoming",
+          "label": "Opens summer of 2027",
+          "year": 2028,
+          "opens": "summer of 2027",
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "WAI online scholarship portal via https://www.wai.org/scholarship-listings ; linked OAuth/member route observed. Closed cycle; authenticated application not entered.",
-          "url": null,
+          "mode": "direct_per_award",
+          "label": "WAI scholarship listings",
+          "url": "https://www.wai.org/scholarship-listings",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-0546c2fa9e62"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.wai.org/scholarship-listings",
+          "openStatus": "opens_on",
+          "deadline": null
+        }
       },
       {
         "publicId": "award-c0fca5630f43",
         "name": "Bridging the Gap Scholarship",
-        "summary": null,
+        "summary": "$1,000 for one or more students who complete the Reach Higher Montana application and have aged out of foster care. The page does not state a GPA. The application opens January 1 and closes March 1 at 11:59 p.m. MST.",
         "amount": {
           "label": "$1,000",
           "minimum": 1000,
@@ -2045,17 +2342,17 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "Montana students",
+          "audience": "Student who has aged out of foster care",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
+          "status": "upcoming",
+          "label": "Opens January 1",
           "year": null,
-          "opens": "01-01 each year (year not verified)",
-          "closes": "03-01 each year (year not verified)",
+          "opens": "January 1",
+          "closes": "March 1, 11:59 p.m. MST",
           "recurrence": "annual"
         },
         "application": {
@@ -2068,7 +2365,14 @@
         "sourcePublicIds": [
           "source-ac022918a599",
           "source-c19c47f183aa"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.reachhighermontana.org/pay-for-school/scholarships",
+          "openStatus": "opens_on",
+          "deadline": "March 1, 11:59 p.m. MST"
+        }
       },
       {
         "publicId": "award-fa212121a110",

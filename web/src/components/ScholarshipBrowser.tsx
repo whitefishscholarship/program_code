@@ -422,7 +422,7 @@ function AwardCard({ award, result }: { award: StudentAward; result?: DisplayRes
           {verification.sourceUrl && <a href={verification.sourceUrl} target="_blank" rel="noopener noreferrer" className="font-bold text-teal-800 underline decoration-2 underline-offset-4 hover:text-teal-950 focus:outline-none focus:ring-4 focus:ring-teal-200">Official source <span className="sr-only">for {award.name}</span><span aria-hidden="true"> ↗</span></a>}
         </p>
       ) : (
-        <p className="mt-3 text-sm text-slate-600">Not yet checked</p>
+        <p className="mt-3 text-sm text-slate-600">{award.verificationNote ? `Not yet checked. ${award.verificationNote}` : 'Not yet checked'}</p>
       )}
       {openness && <p className="mt-2 text-sm font-semibold leading-6 text-slate-900">{openness}</p>}
       <p className="mt-4 text-3xl font-black text-teal-900">{award.amount.label}</p>
