@@ -22,10 +22,10 @@ export const STUDENT_EXPORT_COLUMNS = [
 export type StudentExportColumn = (typeof STUDENT_EXPORT_COLUMNS)[number];
 export type StudentExportRow = Record<StudentExportColumn, string>;
 
-export function toStudentExportRows(awards: readonly StudentAward[]): StudentExportRow[] {
+export function toStudentExportRows(awards: readonly StudentAward[], now: Date = new Date()): StudentExportRow[] {
   return awards.map((award) => ({
     Name: plainStudentText(award.name),
-    Status: STUDENT_STATUS_LABELS[studentStatus(award)],
+    Status: STUDENT_STATUS_LABELS[studentStatus(award, now)],
     Deadline: deadlineLabel(award),
     Amount: amountLabel(award),
     Link: officialUrl(award) ?? '',
@@ -39,7 +39,7 @@ function csvCell(value: string): string {
 }
 
 export function serializeStudentCsv(awards: readonly StudentAward[], now: Date): string {
-  const rows = toStudentExportRows(awards);
+  const rows = toStudentExportRows(awards, now);
   const lines = [
     csvCell(formatListStamp(now)),
     STUDENT_EXPORT_COLUMNS.map(csvCell).join(','),
@@ -244,7 +244,7 @@ function textFile(value: string): Uint8Array {
 }
 
 export function buildStudentWorkbook(awards: readonly StudentAward[], now: Date): Uint8Array {
-  const rows = toStudentExportRows(awards);
+  const rows = toStudentExportRows(awards, now);
   const { sheet, links } = worksheetXml(formatListStamp(now), rows);
   const entries = [
     { name: '[Content_Types].xml', data: textFile(contentTypesXml()) },

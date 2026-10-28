@@ -25,9 +25,11 @@ import {
   restoreAwardId,
   sortStudentAwards,
   splitHidden,
+  explicitDeadlineDate,
+  STUDENT_STATUS_LABELS,
   studentStatus,
 } from '../src/lib/studentList';
-import { StudentAwardSchema, type StudentAward } from '../src/lib/studentCatalog';
+import { openStatusText, StudentAwardSchema, type StudentAward } from '../src/lib/studentCatalog';
 
 const now = new Date(2026, 9, 28);
 
@@ -63,7 +65,7 @@ const openAward = award({
   publicId: 'award-aaaaaaaaaaa1',
   name: 'Open Example',
   cycle: { status: 'unknown', label: 'Availability not verified', year: 2026, opens: 'October 1, 2026', closes: null, recurrence: 'annual' },
-  verification: { status: 'verified', lastChecked: '2026-10-28', sourceUrl: 'https://example.com/open', openStatus: 'open_now', deadline: 'March 31, 2026' },
+  verification: { status: 'verified', lastChecked: '2026-10-28', sourceUrl: 'https://example.com/open', openStatus: 'open_now', deadline: 'December 15, 2026' },
 });
 const laterAward = award({
   publicId: 'award-aaaaaaaaaaa2',
@@ -123,10 +125,48 @@ assert.deepEqual(split.concealed.map((item) => item.name), ['Open Example', 'Lat
 hidden = restoreAwardId(hidden, openAward.publicId);
 assert.deepEqual(splitHidden([openAward, laterAward, closedAward], hidden).visible.map((item) => item.name), ['Open Example', 'Closed Example']);
 
-assert.equal(studentStatus(openAward), 'open_now');
-assert.equal(studentStatus(laterAward), 'opens_later');
-assert.equal(studentStatus(closedAward), 'closed');
-assert.equal(studentStatus(unsureAward), 'not_sure', 'an unchecked award stays Not sure even when the old cycle label says open');
+assert.equal(studentStatus(openAward, now), 'open_now');
+assert.equal(studentStatus(laterAward, now), 'opens_later');
+assert.equal(studentStatus(closedAward, now), 'closed');
+assert.equal(studentStatus(unsureAward, now), 'not_sure', 'an unchecked award stays Not sure even when the old cycle label says open');
+
+const dueToday = award({
+  publicId: 'award-aaaaaaaaaaa6',
+  name: 'Due Today Example',
+  verification: { status: 'verified', lastChecked: '2026-10-28', sourceUrl: 'https://example.com/today', openStatus: 'open_now', deadline: 'October 28, 2026' },
+});
+const noYear = award({
+  publicId: 'award-aaaaaaaaaaa7',
+  name: 'No Year Example',
+  verification: { status: 'verified', lastChecked: '2026-10-28', sourceUrl: 'https://example.com/noyear', openStatus: 'open_now', deadline: 'December 31, 11:59 p.m. ET' },
+});
+assert.equal(studentStatus(dueToday, now), 'open_now', 'a deadline of today is not before today');
+assert.equal(studentStatus(noYear, now), 'open_now', 'a deadline without a year is not treated as past');
+
+const catalog = JSON.parse(fs.readFileSync('fixtures/r3/catalog-v1.json', 'utf8')) as { catalog: { awards: unknown[] } };
+const gatesRecord = catalog.catalog.awards.find((item) => typeof item === 'object' && item !== null && 'name' in item && item.name === 'The Gates Scholarship');
+assert(gatesRecord, 'catalog includes The Gates Scholarship');
+const gatesAward = StudentAwardSchema.parse(gatesRecord);
+assert.equal(gatesAward.verification?.deadline, 'September 15, 2026');
+assert.deepEqual(explicitDeadlineDate(gatesAward), { year: 2026, month: 9, day: 15 });
+assert.equal(studentStatus(gatesAward, now), 'closed');
+assert.equal(STUDENT_STATUS_LABELS[studentStatus(gatesAward, now)], 'Closed');
+const gatesStoredOpen = StudentAwardSchema.parse({
+  ...gatesAward,
+  cycle: { ...gatesAward.cycle, status: 'active', label: 'Open now' },
+  verification: { ...gatesAward.verification, openStatus: 'open_now' },
+});
+assert.equal(studentStatus(gatesStoredOpen, now), 'closed', 'a past dated deadline stays Closed even when the stored status says Open now');
+assert.equal(STUDENT_STATUS_LABELS[studentStatus(gatesStoredOpen, now)], 'Closed');
+assert.equal(openStatusText(gatesStoredOpen, now), 'Closed. Deadline September 15, 2026.');
+const gatesIso = award({
+  publicId: 'award-aaaaaaaaaaa8',
+  name: 'The Gates Scholarship',
+  verification: { status: 'verified', lastChecked: '2026-10-28', sourceUrl: 'https://www.thegatesscholarship.org/scholarship/', openStatus: 'open_now', deadline: '2026-09-15' },
+});
+assert.equal(studentStatus(gatesIso, now), 'closed');
+assert.equal(STUDENT_STATUS_LABELS[studentStatus(gatesIso, now)], 'Closed');
+assert.equal(formatStudentDeadline('2026-09-15'), '09/15/2026');
 assert.equal(isOpeningThisMonth(monthAward, now), true);
 assert.equal(isOpeningThisMonth(laterAward, now), false);
 assert.equal(isOpeningThisMonth(unsureAward, now), false);
@@ -140,10 +180,10 @@ const byName = sortStudentAwards([laterAward, openAward, closedAward], 'name', n
 assert.deepEqual(byName, ['Closed Example', 'Later Example', 'Open Example']);
 
 assert.equal(toStudentExportRows([closedAward])[0].Link, 'https://school.example/buried');
-const exported = toStudentExportRows([openAward, laterAward]);
+const exported = toStudentExportRows([openAward, laterAward], now);
 assert.deepEqual(Object.keys(exported[0]), [...STUDENT_EXPORT_COLUMNS]);
 assert.equal(exported[0].Status, 'Open now');
-assert.equal(exported[0].Deadline, '03/31/2026');
+assert.equal(exported[0].Deadline, '12/15/2026');
 assert.equal(exported[0].Amount, '$1,000');
 assert.equal(exported[1].Status, 'Opens later');
 assert.equal(exported[1].Deadline, '01/15/2027');
@@ -187,7 +227,7 @@ for (const [name, data] of files) {
 
 const calendar = serializeStudentCalendar([openAward, closedAward, unsureAward], now);
 assert(calendar.includes('BEGIN:VCALENDAR'));
-assert(calendar.includes('DTSTART;VALUE=DATE:20260331'));
+assert(calendar.includes('DTSTART;VALUE=DATE:20261215'));
 assert(calendar.includes('Deadline: Open Example'));
 assert(!calendar.includes('Closed Example'));
 assert(!calendar.includes('Unsure Example'));

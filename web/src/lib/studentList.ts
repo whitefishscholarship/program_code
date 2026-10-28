@@ -1,4 +1,4 @@
-import { parseDeadline } from './dateParse';
+import { calendarDayIsBefore, explicitCalendarDay, parseDeadline } from './dateParse';
 import { displayVerification, type StudentAward } from './studentCatalog';
 
 export const BOOKMARK_NOTE = "Bookmark this link. Don't share it, it holds your answers.";
@@ -23,7 +23,6 @@ const MONTHS: Record<string, number> = {
   september: 8, oct: 9, october: 9, nov: 10, november: 10, dec: 11, december: 11,
 };
 const MONTH_ALT = Object.keys(MONTHS).sort((left, right) => right.length - left.length).join('|');
-const EXPLICIT_DATE = new RegExp(`\\b(${MONTH_ALT})\\.?\\s+(\\d{1,2})(?:st|nd|rd|th)?,?\\s+(\\d{4})\\b`, 'i');
 const OPEN_DATE = new RegExp(`\\b(${MONTH_ALT})\\b(?:\\.?\\s+(\\d{1,2})(?:st|nd|rd|th)?)?(?:,)?(?:\\s+(\\d{4}))?`, 'i');
 const URL_IN_TEXT = /https?:\/\/[^\s<>"')\]]+/i;
 
@@ -31,17 +30,27 @@ export function plainStudentText(value: string): string {
   return value.replaceAll('\u2014', ', ').replaceAll('\u2013', '-');
 }
 
-export function studentStatus(award: StudentAward): StudentStatus {
+/**
+ * Display safety rule. A deadline that names a year and falls before today is
+ * Closed on screen, even when the stored status still says open.
+ */
+export function datedDeadlineIsBeforeToday(award: StudentAward, now: Date): boolean {
+  const date = explicitDeadlineDate(award);
+  return date !== null && calendarDayIsBefore(date, now);
+}
+
+export function studentStatus(award: StudentAward, now: Date = new Date()): StudentStatus {
   const verification = displayVerification(award);
   if (verification.status !== 'verified') return 'not_sure';
+  if (datedDeadlineIsBeforeToday(award, now)) return 'closed';
   if (verification.openStatus === 'open_now') return 'open_now';
   if (verification.openStatus === 'opens_on') return 'opens_later';
   if (verification.openStatus === 'closed_next_not_posted') return 'closed';
   return 'not_sure';
 }
 
-export function matchesStudentStatus(award: StudentAward, filter: StatusFilter): boolean {
-  return filter === 'all' || studentStatus(award) === filter;
+export function matchesStudentStatus(award: StudentAward, filter: StatusFilter, now: Date = new Date()): boolean {
+  return filter === 'all' || studentStatus(award, now) === filter;
 }
 
 export function officialUrl(award: StudentAward): string | null {
@@ -103,17 +112,7 @@ function isDollarRange(text: string, matches: RegExpMatchArray[]): boolean {
 type CalendarDate = { year: number; month: number; day: number };
 
 function explicitDateInText(text: string): CalendarDate | null {
-  const withoutNotes = text.replace(/\([^)]*\)/g, ' ');
-  const matches = [...withoutNotes.matchAll(new RegExp(EXPLICIT_DATE.source, 'gi'))];
-  const match = matches.at(-1);
-  if (!match) return null;
-  const month = MONTHS[match[1].toLowerCase()];
-  const day = Number(match[2]);
-  const year = Number(match[3]);
-  if (month === undefined || day < 1 || day > 31) return null;
-  const date = new Date(Date.UTC(year, month, day));
-  if (date.getUTCFullYear() !== year || date.getUTCMonth() !== month || date.getUTCDate() !== day) return null;
-  return { year, month: month + 1, day };
+  return explicitCalendarDay(text);
 }
 
 /** Student-facing deadline. A missing year stays "See site" and is never guessed. */
@@ -174,7 +173,7 @@ export function sortStudentAwards(awards: readonly StudentAward[], sort: Student
 }
 
 export function isOpeningThisMonth(award: StudentAward, now: Date): boolean {
-  const status = studentStatus(award);
+  const status = studentStatus(award, now);
   if (status !== 'open_now' && status !== 'opens_later') return false;
   const opens = award.cycle.opens;
   if (!opens) return false;

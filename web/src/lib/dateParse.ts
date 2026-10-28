@@ -54,6 +54,44 @@ const MONTH_ALT = Object.keys(MONTHS).sort((a, b) => b.length - a.length).join('
 const NAME_DAY_RE = new RegExp(`\\b(${MONTH_ALT})\\.?\\s+(\\d{1,2})(?:st|nd|rd|th)?(?:,?\\s+(\\d{4}))?`, 'gi');
 // "15 March", "15th March 2027"
 const DAY_NAME_RE = new RegExp(`\\b(\\d{1,2})(?:st|nd|rd|th)?\\s+(${MONTH_ALT})\\.?(?:,?\\s+(\\d{4}))?`, 'gi');
+const EXPLICIT_YEAR_RE = new RegExp(`\\b(${MONTH_ALT})\\.?\\s+(\\d{1,2})(?:st|nd|rd|th)?,?\\s+(\\d{4})\\b`, 'gi');
+const ISO_DAY_RE = /\b(\d{4})-(\d{2})-(\d{2})\b/g;
+
+export type CalendarDay = { year: number; month: number; day: number };
+
+function isRealCalendarDay(year: number, month: number, day: number): boolean {
+    const date = new Date(Date.UTC(year, month - 1, day));
+    return date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day;
+}
+
+/** A deadline date only when the text itself names the year. A missing year is not guessed. */
+export function explicitCalendarDay(text: string): CalendarDay | null {
+    const withoutNotes = text.replace(/\([^)]*\)/g, ' ');
+    const hits: Array<CalendarDay & { index: number }> = [];
+    for (const match of withoutNotes.matchAll(new RegExp(EXPLICIT_YEAR_RE.source, 'gi'))) {
+        const month = MONTHS[match[1].toLowerCase()];
+        const day = Number(match[2]);
+        const year = Number(match[3]);
+        if (!month || !isRealCalendarDay(year, month, day)) continue;
+        hits.push({ index: match.index ?? 0, year, month, day });
+    }
+    for (const match of withoutNotes.matchAll(new RegExp(ISO_DAY_RE.source, 'g'))) {
+        const year = Number(match[1]);
+        const month = Number(match[2]);
+        const day = Number(match[3]);
+        if (!isRealCalendarDay(year, month, day)) continue;
+        hits.push({ index: match.index ?? 0, year, month, day });
+    }
+    const last = hits.sort((left, right) => left.index - right.index).at(-1);
+    return last ? { year: last.year, month: last.month, day: last.day } : null;
+}
+
+/** True only when the calendar day is strictly before today's calendar day. */
+export function calendarDayIsBefore(day: CalendarDay, now: Date): boolean {
+    const deadline = Date.UTC(day.year, day.month - 1, day.day);
+    const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+    return deadline < today;
+}
 
 interface DateToken {
     month: number;

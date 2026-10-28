@@ -115,7 +115,7 @@ export default function StudentMatchList({
       const matchesMethod = method === 'all' || award.application.mode === method;
       const matchesSchool = schoolType === 'all' || award.eligibility.schoolTypes.includes(schoolType);
       const matchesMonth = !openingThisMonth || isOpeningThisMonth(award, now);
-      return matchesSearch && matchesStudentStatus(award, statusFilter) && matchesMethod && matchesSchool && matchesMonth;
+      return matchesSearch && matchesStudentStatus(award, statusFilter, now) && matchesMethod && matchesSchool && matchesMonth;
     });
   }, [awards, method, now, openingThisMonth, schoolType, search, statusFilter]);
 
@@ -127,7 +127,7 @@ export default function StudentMatchList({
   const datedCount = sorted.filter((award) => explicitDeadlineDate(award)).length;
   const groups = STUDENT_STATUS_ORDER.map((status) => ({
     status,
-    awards: sorted.filter((award) => studentStatus(award) === status),
+    awards: sorted.filter((award) => studentStatus(award, now) === status),
   })).filter((group) => group.awards.length > 0);
 
   const copyLink = async () => {
@@ -278,12 +278,12 @@ export default function StudentMatchList({
                 <span className="rounded-full bg-slate-200 px-2 py-0.5 text-xs font-bold text-slate-700">{group.awards.length}</span>
                 <p className="text-sm text-slate-600">{sectionHelp[group.status]}</p>
               </div>
-              <div className="space-y-3">{group.awards.map((award) => <AwardRow key={award.publicId} award={award} result={resultsById.get(award.publicId)} onHide={onHide} />)}</div>
+              <div className="space-y-3">{group.awards.map((award) => <AwardRow key={award.publicId} award={award} now={now} result={resultsById.get(award.publicId)} onHide={onHide} />)}</div>
             </section>
           ))}
         </div>
       ) : (
-        <div className="mt-6 space-y-3">{sorted.map((award) => <AwardRow key={award.publicId} award={award} result={resultsById.get(award.publicId)} onHide={onHide} />)}</div>
+        <div className="mt-6 space-y-3">{sorted.map((award) => <AwardRow key={award.publicId} award={award} now={now} result={resultsById.get(award.publicId)} onHide={onHide} />)}</div>
       )}
 
       <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -304,8 +304,8 @@ function FilterButton({ pressed, onClick, children }: { pressed: boolean; onClic
   return <button type="button" aria-pressed={pressed} onClick={onClick} className={`rounded-full px-3 py-1.5 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-teal-200 ${pressed ? 'bg-[#123c3a] text-white' : 'bg-white text-slate-700 ring-1 ring-slate-300 hover:bg-slate-50'}`}>{children}</button>;
 }
 
-function AwardRow({ award, result, onHide }: { award: StudentAward; result?: DisplayResult; onHide: (id: string) => void }) {
-  const status = studentStatus(award);
+function AwardRow({ award, now, result, onHide }: { award: StudentAward; now: Date; result?: DisplayResult; onHide: (id: string) => void }) {
+  const status = studentStatus(award, now);
   const url = officialUrl(award);
   const verification = displayVerification(award);
   const why = result?.reasons.find((reason) => reason.message.trim())?.message;

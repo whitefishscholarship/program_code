@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { calendarDayIsBefore, explicitCalendarDay } from './dateParse';
 
 export const STUDENT_CATALOG_SCHEMA_VERSION = '1.0.0' as const;
 
@@ -196,10 +197,14 @@ export function displayMatchReason(message: string): string {
   return message.replace(UNSUPPORTED_AOPA_EXAM_NOTE, 'Check the age range stated on the official page. ');
 }
 
-export function openStatusText(award: StudentAward): string | null {
+export function openStatusText(award: StudentAward, now: Date = new Date()): string | null {
   const verification = displayVerification(award);
   if (verification.status !== 'verified') return null;
   const sentence = (value: string) => value.endsWith('.') ? value : `${value}.`;
+  const datedDeadline = verification.deadline ? explicitCalendarDay(verification.deadline) : null;
+  if (datedDeadline && calendarDayIsBefore(datedDeadline, now) && verification.openStatus !== 'closed_next_not_posted') {
+    return verification.deadline ? sentence(`Closed. Deadline ${verification.deadline}`) : 'Closed.';
+  }
   if (verification.openStatus === 'open_now') {
     return verification.deadline ? sentence(`Open now. Deadline ${verification.deadline}`) : 'Open now.';
   }

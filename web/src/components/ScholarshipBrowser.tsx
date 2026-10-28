@@ -11,7 +11,7 @@ import {
 import { CURRENT_ACCEPTED_MATCH_FACTS } from '@/lib/p8mMatchingFacts';
 import { shortlistAwards, type DisplayResult } from '@/lib/spreadsheetShortlist';
 import { decodeStudentLink, encodeStudentLink, writeStudentFragment } from '@/lib/studentLink';
-import { hideAwardId, restoreAwardId } from '@/lib/studentList';
+import { hideAwardId, restoreAwardId, studentStatus } from '@/lib/studentList';
 import { loadStudentCatalog, type CatalogQaMode } from '@/lib/studentCatalogClient';
 import type { StudentCatalog, StudentPortal, StudentSource } from '@/lib/studentCatalog';
 
@@ -266,7 +266,7 @@ export default function ScholarshipBrowser() {
           </div>
           <dl className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6" aria-label="Catalog counts">
             <Count label="Awards" value={catalog.counts.awards} />
-            <Count label="Open now" value={catalog.awards.filter((award) => award.verification?.status === 'verified' && award.verification.openStatus === 'open_now').length} emphasis="positive" />
+            <Count label="Open now" value={catalog.awards.filter((award) => studentStatus(award) === 'open_now').length} emphasis="positive" />
             <Count label="Not checked" value={catalog.awards.filter((award) => award.verification?.status !== 'verified').length} emphasis="warning" />
             <Count label="Portals" value={catalog.counts.portals} />
             <Count label="Sources" value={catalog.counts.sources} />
