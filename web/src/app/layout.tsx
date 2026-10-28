@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Whitefish High School Scholarships",
-  description: "Explore Whitefish scholarship award records, application methods, and clearly labeled cycle availability.",
+  title: "Whitefish Scholarship Finder",
+  description: "Find scholarships and open the real application sites. No account. Nothing is saved about you.",
 };
 
 export default function RootLayout({
