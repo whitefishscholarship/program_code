@@ -22,14 +22,14 @@
     "counts": {
       "sources": 438,
       "portals": 21,
-      "awards": 391,
+      "awards": 390,
       "applicationGroups": 4,
-      "cycles": 391,
-      "activeCycles": 108,
-      "upcomingCycles": 149,
+      "cycles": 390,
+      "activeCycles": 109,
+      "upcomingCycles": 154,
       "closedCycles": 97,
       "unavailableCycles": 0,
-      "unknownCycles": 37,
+      "unknownCycles": 30,
       "minimumObservedRecipientSlots": 71
     },
     "awards": [
@@ -6494,7 +6494,7 @@
       {
         "publicId": "award-9bb9b1051d9e",
         "name": "Hilleman Scholars Program",
-        "summary": "MSU Hilleman Scholars Program scholarship of $4,000 per year for four years, $16,000 in total, for a Montana resident who graduated from a Montana high school in academic year 2025-26. The FAQ says the 2026 application is open and also says the deadline was April 2026. Completing the Summer Success Academy adds a $2,000 stipend. The page does not state one application GPA.",
+        "summary": "MSU Hilleman Scholars Program scholarship of $4,000 per year for four years, $16,000 in total, for a Montana resident who graduated from a Montana high school in academic year 2025-26. The deadline is April 1, 2027. Completing the Summer Success Academy adds a $2,000 stipend. The page does not state one application GPA.",
         "amount": {
           "label": "$4,000 per year",
           "minimum": 4000,
@@ -6511,11 +6511,11 @@
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "upcoming",
+          "label": "Upcoming (open date not stated)",
+          "year": 2027,
           "opens": null,
-          "closes": null,
+          "closes": "April 1, 2027",
           "recurrence": "unknown"
         },
         "application": {
@@ -6528,7 +6528,14 @@
         "sourcePublicIds": [
           "source-2d03d16e3c28"
         ],
-        "verificationNote": "The FAQ says the 2026 application is open and also gives an April 2026 deadline."
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.montana.edu/hillemanscholars/faqs.html",
+          "openStatus": "opens_on",
+          "deadline": "April 1, 2027"
+        },
+        "verificationNote": "confirmed by Kelsey: deadline April 1, 2027."
       },
       {
         "publicId": "award-b2d1411189ef",
@@ -9735,16 +9742,16 @@
       {
         "publicId": "award-40db1e8dee39",
         "name": "Montana Treasure State First Generation Scholarship",
-        "summary": "The MSU Fall 2027 resident freshman page lists the Montana Treasure State First Generation Scholarship at $1,500 per year for a Montana resident who self-reports being a first-generation student on the admission application. It is renewable for four years. The page does not state an application deadline.",
+        "summary": "Montana Treasure State First Generation Scholarship of $1,000 to $4,000 per year, renewable for four years. Montana freshmen who apply for admission are considered automatically, using the cumulative GPA on the Self Report Form. There is no separate scholarship deadline.",
         "amount": {
-          "label": "$1,500 per year",
-          "minimum": 1500,
-          "maximum": 1500,
+          "label": "$1,000 to $4,000 per year",
+          "minimum": 1000,
+          "maximum": 4000,
           "currency": "USD",
-          "state": "known"
+          "state": "variable"
         },
         "eligibility": {
-          "audience": "Montana resident first-generation freshman",
+          "audience": "Montana freshman who applies for admission",
           "minimumGpa": null,
           "schoolTypes": [
             "four_year"
@@ -9752,24 +9759,31 @@
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
+          "status": "active",
+          "label": "Automatic with admission",
           "year": null,
           "opens": null,
           "closes": null,
-          "recurrence": "unknown"
+          "recurrence": "rolling"
         },
         "application": {
           "mode": "automatic_consideration",
-          "label": "MSU resident freshman scholarships",
-          "url": "https://www.montana.edu/admissions/scholarships/residents/index.html",
+          "label": "Automatic with admission",
+          "url": "https://www.montana.edu/apply",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-a42230db50da"
         ],
-        "verificationNote": "The Fall 2027 page states the award amount and does not state an application deadline."
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.montana.edu/apply",
+          "openStatus": "open_now",
+          "deadline": null
+        },
+        "verificationNote": "confirmed by Kelsey: amount $1,000-$4,000 per year, renewable four years; automatic consideration for Montana freshmen who apply for admission (https://www.montana.edu/apply) with cumulative GPA on the Self Report Form; no separate deadline, rolling/automatic like MSU Premier."
       },
       {
         "publicId": "award-9635e0eb7f5e",
@@ -10302,23 +10316,23 @@
       {
         "publicId": "award-5b5b0db70dd0",
         "name": "NFPA (National Foster Parent Association) Scholarship",
-        "summary": null,
+        "summary": "NFPA scholarship of $500. The site lists no dates.",
         "amount": {
-          "label": "Amount not stated",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unknown"
+          "label": "$500",
+          "minimum": 500,
+          "maximum": 500,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Not stated; the NFPA scholarships page could not be read",
+          "audience": "Not stated",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
+          "status": "upcoming",
+          "label": "Not sure/Opens later",
           "year": null,
           "opens": null,
           "closes": null,
@@ -10334,7 +10348,7 @@
         "sourcePublicIds": [
           "source-6a3e32b0b0af"
         ],
-        "verificationNote": "The NFPA scholarships page could not be read."
+        "verificationNote": "confirmed by Kelsey: no dates on site. Status Not sure/Opens later with no deadline. check weekly for new dates"
       },
       {
         "publicId": "award-068bd3a04e24",
@@ -10779,7 +10793,7 @@
       {
         "publicId": "award-39cdccc5a462",
         "name": "NTHS TechForce Scholarship",
-        "summary": "NTHS provides two $2,500 TechForce scholarships annually for members pursuing careers in the skilled trades. Applicants join the TechForce Network and apply on that platform. The page does not name a cycle year or an application deadline.",
+        "summary": "NTHS provides two $2,500 TechForce scholarships annually for members pursuing careers in the skilled trades. Applicants join the TechForce Network and apply on that platform. The deadline is May 31, 2027.",
         "amount": {
           "label": "Two awards of $2,500",
           "minimum": 2500,
@@ -10794,12 +10808,12 @@
           "focus": "Skilled trades"
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "upcoming",
+          "label": "Upcoming (open date not stated)",
+          "year": 2027,
           "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
+          "closes": "May 31, 2027",
+          "recurrence": "annual"
         },
         "application": {
           "mode": "direct_per_award",
@@ -10811,7 +10825,14 @@
         "sourcePublicIds": [
           "source-39cdccc5a462"
         ],
-        "verificationNote": "The NTHS page lists two $2,500 scholarships annually and does not name a cycle year."
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://nths.org/techforce/",
+          "openStatus": "opens_on",
+          "deadline": "May 31, 2027"
+        },
+        "verificationNote": "confirmed by Kelsey: May 31 is listed. Deadline set to May 31, 2027."
       },
       {
         "publicId": "award-5ecbf2de5f92",
@@ -10947,44 +10968,6 @@
           "deadline": "March 1, 2027"
         },
         "verificationNote": "confirmed by Kelsey: assumed 2027, needs review to watch for date changes Recheck weekly."
-      },
-      {
-        "publicId": "award-8ec14d114e2f",
-        "name": "Oratory Scholarship",
-        "summary": "The linked Google document is labeled 2025 and describes a Columbia Falls American Legion oratorical contest on March 15, with local awards of $200, $150, and $100. A second linked 2025 flyer describes a March 22 district contest with different award amounts. Neither document states a current cycle.",
-        "amount": {
-          "label": "Amount not stated",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unknown"
-        },
-        "eligibility": {
-          "audience": "High school student",
-          "minimumGpa": null,
-          "schoolTypes": [],
-          "focus": null
-        },
-        "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
-          "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
-        },
-        "application": {
-          "mode": "direct_per_award",
-          "label": "2025 oratorical information",
-          "url": "https://docs.google.com/document/d/1T9no6rCR7UreO7I9JorJwm9XxeWhkmRU/edit",
-          "groupPublicId": null,
-          "supplements": "unknown"
-        },
-        "sourcePublicIds": [
-          "source-2c7ea3787573",
-          "source-a254dd55ba34"
-        ],
-        "verificationNote": "The linked 2025 documents do not state a current cycle."
       },
       {
         "publicId": "award-47478b1163e1",
@@ -13846,7 +13829,7 @@
       },
       {
         "publicId": "award-72b47d9371a6",
-        "name": "The Joseph James Morelli Legacy Foundation Scholarship",
+        "name": "The Neurodiversity Scholarship",
         "summary": null,
         "amount": {
           "label": "Amount not stated",
@@ -13856,17 +13839,17 @@
           "state": "unknown"
         },
         "eligibility": {
-          "audience": "Not stated; the official page could not be read",
+          "audience": "Not stated",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
-          "opens": null,
-          "closes": null,
+          "status": "upcoming",
+          "label": "Opens November 1, 2026",
+          "year": 2027,
+          "opens": "November 1, 2026",
+          "closes": "January 15, 2027",
           "recurrence": "unknown"
         },
         "application": {
@@ -13879,7 +13862,14 @@
         "sourcePublicIds": [
           "source-bdfff18bc385"
         ],
-        "verificationNote": "The provider page returned a bot check and did not display a deadline, amount, or cycle."
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://thendalliance.org/scholarship/",
+          "openStatus": "opens_on",
+          "deadline": "January 15, 2027"
+        },
+        "verificationNote": "confirmed by Kelsey: rename to The Neurodiversity Scholarship. Opens November 1, 2026. Deadline January 15, 2027. From https://thendalliance.org/scholarship/."
       },
       {
         "publicId": "award-21b6dce7662e",
@@ -15415,7 +15405,7 @@
       {
         "publicId": "award-5fec013fe00c",
         "name": "Whitefish Lake Institute Ripple Effect Scholarship",
-        "summary": "The Whitefish Lake Institute page describes three Ripple Effect opportunities: a $3,000 limnology internship stipend due March 15, a $500 scholarship for a Columbia Falls or Whitefish High School senior entering a two- or four-year environmental science program due April 15, and graduate thesis support with the amount marked TBD. It does not name a year on either due date.",
+        "summary": "The Whitefish Lake Institute page describes three Ripple Effect opportunities: a $3,000 limnology internship stipend due March 15, a $500 scholarship for a Columbia Falls or Whitefish High School senior entering a two- or four-year environmental science program due April 15, and graduate thesis support with the amount marked TBD. Both dates are annual. The high school scholarship deadline is April 15, 2027.",
         "amount": {
           "label": "High school award $500; internship stipend $3,000",
           "minimum": 500,
@@ -15433,12 +15423,12 @@
           "focus": "Environmental science or limnology"
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "upcoming",
+          "label": "Upcoming (open date not stated)",
+          "year": 2027,
           "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
+          "closes": "April 15, 2027",
+          "recurrence": "annual"
         },
         "application": {
           "mode": "offline",
@@ -15451,7 +15441,14 @@
           "source-6fe53590c44a",
           "source-a30e7f33bd14"
         ],
-        "verificationNote": "The page states a $500 high school award due April 15 and a $3,000 internship stipend due March 15, and does not name a year."
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://whitefishlake.org/internship-and-scholarship-opportunities/",
+          "openStatus": "opens_on",
+          "deadline": "April 15, 2027"
+        },
+        "verificationNote": "confirmed by Kelsey: the page's internship date and scholarship date are both correct (March 15 and April 15). The high school scholarship is due April 15 and the internship is due March 15. Treated as annual; scholarship deadline is April 15, 2027."
       },
       {
         "publicId": "award-5230a4d409fd",
@@ -17389,7 +17386,7 @@
         "url": "https://docs.google.com/document/d/1T9no6rCR7UreO7I9JorJwm9XxeWhkmRU/edit",
         "access": "public",
         "availability": "unknown",
-        "awardCount": 1
+        "awardCount": 0
       },
       {
         "publicId": "source-4a752c02740a",
@@ -17849,7 +17846,7 @@
         "url": "https://drive.google.com/file/d/1nLQxZ65wVoMcXXNxtzbj8f2FBumXMfvZ/view",
         "access": "public",
         "availability": "unknown",
-        "awardCount": 1
+        "awardCount": 0
       },
       {
         "publicId": "source-d8e086af8bbd",

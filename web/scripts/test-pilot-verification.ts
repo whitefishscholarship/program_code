@@ -364,23 +364,39 @@ const verifiedIds = [
   'award-3caab7453e5b',
   'award-51729cb7b370',
   'award-a321ba096da1',
-];
-const uncheckedIds = [
-  'award-8ec14d114e2f',
   'award-5fec013fe00c',
   'award-39cdccc5a462',
-  'award-5b5b0db70dd0',
   'award-72b47d9371a6',
   'award-9bb9b1051d9e',
   'award-40db1e8dee39',
+];
+const uncheckedIds = [
+  'award-5b5b0db70dd0',
 ];
 
 const byId = new Map(R3_CATALOG.awards.map((award) => [award.publicId, award]));
 assert.equal(R3_CATALOG.awards.filter((award) => award.verification?.status === 'verified').length, verifiedIds.length);
 for (const id of verifiedIds) assert.equal(byId.get(id)?.verification?.status, 'verified', id);
 for (const id of uncheckedIds) assert.equal(byId.get(id)?.verification, undefined, id);
-assert.equal(byId.get('award-5fec013fe00c')?.verification, undefined);
+assert.equal(byId.get('award-8ec14d114e2f'), undefined);
+assert.equal(byId.get('award-5fec013fe00c')?.verification?.status, 'verified');
+assert.equal(byId.get('award-5fec013fe00c')?.verification?.deadline, 'April 15, 2027');
+assert.equal(byId.get('award-5fec013fe00c')?.cycle.recurrence, 'annual');
 assert.equal(byId.get('award-5fec013fe00c')?.eligibility.minimumGpa, null);
+assert.equal(byId.get('award-5b5b0db70dd0')?.verification, undefined);
+assert.equal(byId.get('award-5b5b0db70dd0')?.cycle.label, 'Not sure/Opens later');
+assert.equal(byId.get('award-5b5b0db70dd0')?.cycle.closes, null);
+assert.equal(byId.get('award-5b5b0db70dd0')?.amount.minimum, 500);
+assert.match(byId.get('award-5b5b0db70dd0')?.verificationNote ?? '', /check weekly for new dates/);
+assert.equal(byId.get('award-72b47d9371a6')?.name, 'The Neurodiversity Scholarship');
+assert.equal(byId.get('award-72b47d9371a6')?.cycle.opens, 'November 1, 2026');
+assert.equal(byId.get('award-72b47d9371a6')?.verification?.deadline, 'January 15, 2027');
+assert.equal(byId.get('award-9bb9b1051d9e')?.verification?.deadline, 'April 1, 2027');
+assert.equal(byId.get('award-40db1e8dee39')?.amount.label, '$1,000 to $4,000 per year');
+assert.equal(byId.get('award-40db1e8dee39')?.cycle.recurrence, 'rolling');
+assert.equal(byId.get('award-40db1e8dee39')?.verification?.openStatus, 'open_now');
+assert.equal(byId.get('award-40db1e8dee39')?.verification?.deadline, null);
+assert.equal(byId.get('award-40db1e8dee39')?.eligibility.minimumGpa, null);
 assert.equal(byId.get('award-fa027b498c44')?.verification?.openStatus, 'closed_next_not_posted');
 assert.equal(byId.get('award-04b4c1f204d1')?.verification?.deadline, 'March 15, 2027, 4:00 p.m.');
 assert.equal(byId.get('award-140b97cfb628')?.verification?.openStatus, 'closed_next_not_posted');
@@ -405,10 +421,11 @@ assert.match(byId.get('award-fa212121a110')?.verificationNote ?? '', /confirmed 
 assert.equal(byId.get('award-7e11abb8d4fc')?.verification?.openStatus, 'open_now');
 assert.equal(byId.get('award-7e11abb8d4fc')?.verification?.deadline, 'December 1, 2026 at midnight MST');
 assert.equal(byId.get('award-5ecbf2de5f92')?.verification?.openStatus, null);
-assert.match(byId.get('award-39cdccc5a462')?.verificationNote ?? '', /does not name a cycle year/);
+assert.equal(byId.get('award-39cdccc5a462')?.verification?.deadline, 'May 31, 2027');
+assert.match(byId.get('award-39cdccc5a462')?.verificationNote ?? '', /confirmed by Kelsey/);
 assert.match(byId.get('award-86f5be697eda')?.verificationNote ?? '', /confirmed by Kelsey/);
 assert.match(byId.get('award-86f5be697eda')?.verificationNote ?? '', /only 2026 data/);
-assert.equal(R3_CATALOG.awards.filter((award) => award.verificationNote).length, 181);
+assert.equal(R3_CATALOG.awards.filter((award) => award.verificationNote).length, 180);
 assert.equal(R3_CATALOG.awards.filter((award) => displayVerification(award).status === 'not_yet_checked').length, R3_CATALOG.awards.length - verifiedIds.length);
 
 const counted = { active: 0, upcoming: 0, closed: 0, unavailable: 0, unknown: 0 };
@@ -454,7 +471,7 @@ const belowResult = belowGpa.results.find((result) => result.award.publicId === 
 assert.notEqual(belowResult?.decision, 'recorded_mismatch');
 assert.equal(displayVerification(aopaResult.award).status, 'verified');
 
-const stillUnchecked = journey.results.find((result) => result.award.publicId === 'award-5fec013fe00c');
+const stillUnchecked = journey.results.find((result) => result.award.publicId === 'award-5b5b0db70dd0');
 assert.equal(displayVerification(stillUnchecked!.award).status, 'not_yet_checked');
 
 const csv = serializeAwardCsv([aopaResult.award, stillUnchecked!.award]);

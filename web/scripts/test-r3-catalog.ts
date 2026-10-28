@@ -74,6 +74,7 @@ const clearedByOfficialPage = new Map<string, Set<string>>([
 ]);
 const removedByKelseyReview = new Set([
  'award-318b34958cc0',
+ 'award-8ec14d114e2f',
  'award-34904382b098','award-37a2016dce09','award-4324fe0c431f','award-c6bf70d530da','award-62a1f1662db9','award-e19043cae9b6','award-dff1020e685c','award-343120fd6333','award-778e9253ce6d','award-accf465ba36a','award-2f8fa31e3280','award-d24c44f947c9','award-f4bd69ecca3b','award-6928b42fe38b','award-de2472768ac1','award-06e091c47bb2','award-605031b54332','award-50bcf3e9b734','award-ee389267b9e8','award-b635d98ac545','award-5a38f085903a','award-a9e9afc47c79','award-f3a6e63a87c4','award-09ed49380d56','award-a782a3fbc54a','award-84ae951380f0','award-078cd40f16b9','award-ca18e06be6db','award-64db0bf7d10b','award-8d772774a201','award-38d067ff9b32','award-50b400bb43b2','award-bc98a78a6008','award-b6ad51367540','award-fb0f8c7451e4','award-29a09d648214','award-add96070b66e','award-0db5835e0500','award-9b87f4d1ad2f','award-f05669a7d363','award-6299e3690153','award-e7ee72738a89','award-3dbe39e6a748','award-dee227e56cd8','award-aa0957679b02','award-1330369782b8','award-8096a5f7b187','award-013610e8fa5a','award-859f900d3625','award-2e991f852dca',
 ]);
 for(const id of removedByKelseyReview) assert.equal(R3_CATALOG.awards.find(award=>award.publicId===id), undefined, id);
