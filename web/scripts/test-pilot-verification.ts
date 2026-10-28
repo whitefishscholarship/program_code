@@ -7,7 +7,6 @@ import { serializeAwardCsv } from '../src/lib/export';
 
 const AOPA_ID = 'award-d8ff6ef257b3';
 const verifiedIds = [
-  AOPA_ID,
   'award-2179b44d009d',
   'award-26c4b3c65985',
   'award-a2f7b9b6cbec',
@@ -220,8 +219,161 @@ const verifiedIds = [
   'award-88670d80cadf',
   'award-12a7ca904d6a',
   'award-fd629c83fb3f',
+  'award-2a22470d390c',
+  'award-c601a3ce6b92',
+  'award-2974a6462e95',
+  'award-d8ff6ef257b3',
+  'award-71e2ee7f2172',
+  'award-6307b228e380',
+  'award-9ef3717601cd',
+  'award-d2f262e03fe2',
+  'award-fa212121a110',
+  'award-7933697626cd',
+  'award-b9a12b09957d',
+  'award-67ca7bc4fa40',
+  'award-a15386569627',
+  'award-cc062852a7f2',
+  'award-6781caed705a',
+  'award-07f8d89b10ba',
+  'award-023bcc028b05',
+  'award-6eb2676b69f4',
+  'award-807d8245fb2b',
+  'award-6c9a2b50553e',
+  'award-c50893f87fdc',
+  'award-83f3b6b43c5e',
+  'award-d6ec98fa1642',
+  'award-85eccd5611e9',
+  'award-bb295b2828b5',
+  'award-36791c097a52',
+  'award-6a6b073e14f6',
+  'award-f6107529bd46',
+  'award-8e955dce3eaa',
+  'award-39bc01d95ee8',
+  'award-9c85eb732e7a',
+  'award-3ec37786eaf6',
+  'award-3b5ec8c60897',
+  'award-943678a94833',
+  'award-54180c19eb74',
+  'award-36ff5fe7d091',
+  'award-cadbe502505a',
+  'award-6ee1bd1bab1f',
+  'award-b5978bd2f102',
+  'award-5a371acc5f8b',
+  'award-e58fc41d18c6',
+  'award-88ecf11c683e',
+  'award-f8748579eb81',
+  'award-8bce77306c27',
+  'award-203ab9685eb1',
+  'award-b42417e9530c',
+  'award-a60341b46e39',
+  'award-511571f33677',
+  'award-440219a21c52',
+  'award-bbad8145ca3e',
+  'award-62b0511e59fe',
+  'award-be12d7769d06',
+  'award-467dbfa796e2',
+  'award-88d2adae4d6d',
+  'award-0a0daa895593',
+  'award-df57e3f6a067',
+  'award-2541f267aecb',
+  'award-de35aff29b9f',
+  'award-e3aec30264fc',
+  'award-a4ca14a7716d',
+  'award-66c48204573e',
+  'award-5565234bc80e',
+  'award-168218cd3b3c',
+  'award-5b93bad03efd',
+  'award-3c66c7edc5d3',
+  'award-2126bc5d2f6b',
+  'award-bb776f54425c',
+  'award-6b4f548adb79',
+  'award-116fe9ce5784',
+  'award-b1a9ae5d6f04',
+  'award-e17a43d5029c',
+  'award-a0f5a36b98a2',
+  'award-b86982e726be',
+  'award-251c136369e5',
+  'award-d26867d69108',
+  'award-f8f731aa27df',
+  'award-fc37c2d47f56',
+  'award-7e66bc43f068',
+  'award-5d3eb630cded',
+  'award-ead4360dadca',
+  'award-b4faadd4c1d5',
+  'award-4f96382a8925',
+  'award-068bd3a04e24',
+  'award-7b8c0838e0b9',
+  'award-b23111c6755c',
+  'award-59ca9fde81ba',
+  'award-295621b942a5',
+  'award-330e6040b83b',
+  'award-9047b192ebf2',
+  'award-8debb4562aa5',
+  'award-1901179dd5bd',
+  'award-a35f143a67e4',
+  'award-10b85bfc0c0c',
+  'award-47478b1163e1',
+  'award-0a8edc3902fa',
+  'award-86f5be697eda',
+  'award-3100c2d6122e',
+  'award-938db8ede16a',
+  'award-54af9ccbbb57',
+  'award-49934bf76150',
+  'award-f1d6a4b38033',
+  'award-1a058b4c5510',
+  'award-ec7d28fb15f9',
+  'award-0651dcec4d07',
+  'award-ffbd0f0b989f',
+  'award-df416d89833f',
+  'award-8367e34203f4',
+  'award-7b536c5d129d',
+  'award-aba97e610d99',
+  'award-d629176b982e',
+  'award-da7f4a7038ef',
+  'award-4b84affbfa6e',
+  'award-201e7734747c',
+  'award-1ba2675c98f9',
+  'award-846cd31bf119',
+  'award-02666b75eb76',
+  'award-000eeb62b003',
+  'award-fb2de42b1e28',
+  'award-ce44143820a7',
+  'award-2dc33d508924',
+  'award-8739a664c0d7',
+  'award-e360b55057a5',
+  'award-816598124402',
+  'award-23a5338563e4',
+  'award-21b6dce7662e',
+  'award-5648e87a76d7',
+  'award-03e0f76e1886',
+  'award-84882a48ae6c',
+  'award-913072c89540',
+  'award-0fdf8e6ce228',
+  'award-ad1e28e0e26c',
+  'award-dd3cf3aeab83',
+  'award-273fe6406702',
+  'award-ceec2cef2d5b',
+  'award-5dc2aab768d2',
+  'award-07059d5bb542',
+  'award-29c97f527be9',
+  'award-f7fc6a093ae3',
+  'award-d90198f6225f',
+  'award-a4379bfbc7bd',
+  'award-d2b44a62c0a7',
+  'award-b8ae28986a81',
+  'award-3caab7453e5b',
+  'award-51729cb7b370',
+  'award-a321ba096da1',
 ];
-const uncheckedIds = ['award-ce44143820a7'];
+const uncheckedIds = [
+  'award-8ec14d114e2f',
+  'award-5fec013fe00c',
+  'award-39cdccc5a462',
+  'award-5b5b0db70dd0',
+  'award-72b47d9371a6',
+  'award-9bb9b1051d9e',
+  'award-40db1e8dee39',
+];
 
 const byId = new Map(R3_CATALOG.awards.map((award) => [award.publicId, award]));
 assert.equal(R3_CATALOG.awards.filter((award) => award.verification?.status === 'verified').length, verifiedIds.length);
@@ -235,16 +387,29 @@ assert.equal(byId.get('award-140b97cfb628')?.verification?.openStatus, 'closed_n
 assert.equal(byId.get('award-140b97cfb628')?.verification?.deadline, 'April 17, 2026');
 assert.equal(byId.get('award-d06d7c7342e2')?.verification?.openStatus, 'open_now');
 assert.equal(byId.get('award-d06d7c7342e2')?.verification?.deadline, 'March 21, 2027');
-assert.equal(byId.get('award-318b34958cc0')?.verification, undefined);
-assert.match(byId.get('award-318b34958cc0')?.verificationNote ?? '', /does not list/);
-assert.match(byId.get('award-fa212121a110')?.verificationNote ?? '', /does not name a cycle year/);
+assert.equal(byId.get('award-318b34958cc0'), undefined);
+assert.equal(byId.get('award-60b634d314c6')?.name, 'Everyday Champion Award');
+assert.equal(byId.get('award-60b634d314c6')?.verification, undefined);
+assert.match(byId.get('award-60b634d314c6')?.verificationNote ?? '', /does not state a deadline/);
+assert.equal(byId.get('award-a9c6e0fcc5af')?.verification?.status, 'verified');
+assert.equal(byId.get('award-00c8fd2e3b19')?.verification?.status, 'verified');
+assert.equal(byId.get('award-2a22470d390c')?.verification?.openStatus, 'open_now');
+assert.equal(byId.get('award-2a22470d390c')?.cycle.recurrence, 'rolling');
+assert.equal(byId.get('award-b8ae28986a81')?.verification?.status, 'verified');
+assert.equal(byId.get('award-3caab7453e5b')?.verification?.status, 'verified');
+assert.equal(byId.get('award-51729cb7b370')?.verification?.status, 'verified');
+assert.equal(byId.get('award-a321ba096da1')?.verification?.deadline, 'September 1, 2026');
+assert.equal(byId.get('award-a321ba096da1')?.verification?.openStatus, 'closed_next_not_posted');
+assert.equal(byId.get('award-e30f226ed6fc')?.verification, undefined);
+assert.match(byId.get('award-fa212121a110')?.verificationNote ?? '', /confirmed by Kelsey/);
 assert.equal(byId.get('award-7e11abb8d4fc')?.verification?.openStatus, 'open_now');
 assert.equal(byId.get('award-7e11abb8d4fc')?.verification?.deadline, 'December 1, 2026 at midnight MST');
 assert.equal(byId.get('award-5ecbf2de5f92')?.verification?.openStatus, null);
 assert.match(byId.get('award-39cdccc5a462')?.verificationNote ?? '', /does not name a cycle year/);
-assert.match(byId.get('award-86f5be697eda')?.verificationNote ?? '', /does not display an entry deadline/);
-assert.equal(R3_CATALOG.awards.filter((award) => award.verificationNote).length, 198);
-assert.equal(R3_CATALOG.awards.filter((award) => displayVerification(award).status === 'not_yet_checked').length, 411 - verifiedIds.length);
+assert.match(byId.get('award-86f5be697eda')?.verificationNote ?? '', /confirmed by Kelsey/);
+assert.match(byId.get('award-86f5be697eda')?.verificationNote ?? '', /only 2026 data/);
+assert.equal(R3_CATALOG.awards.filter((award) => award.verificationNote).length, 181);
+assert.equal(R3_CATALOG.awards.filter((award) => displayVerification(award).status === 'not_yet_checked').length, R3_CATALOG.awards.length - verifiedIds.length);
 
 const counted = { active: 0, upcoming: 0, closed: 0, unavailable: 0, unknown: 0 };
 for (const award of R3_CATALOG.awards) counted[award.cycle.status] += 1;
@@ -289,10 +454,10 @@ const belowResult = belowGpa.results.find((result) => result.award.publicId === 
 assert.notEqual(belowResult?.decision, 'recorded_mismatch');
 assert.equal(displayVerification(aopaResult.award).status, 'verified');
 
-const barnes = journey.results.find((result) => result.award.publicId === 'award-ce44143820a7');
-assert.equal(displayVerification(barnes!.award).status, 'not_yet_checked');
+const stillUnchecked = journey.results.find((result) => result.award.publicId === 'award-5fec013fe00c');
+assert.equal(displayVerification(stillUnchecked!.award).status, 'not_yet_checked');
 
-const csv = serializeAwardCsv([aopaResult.award, barnes!.award]);
+const csv = serializeAwardCsv([aopaResult.award, stillUnchecked!.award]);
 assert.match(csv, /Verified/);
 assert.match(csv, /Not yet checked/);
 assert.match(csv, /2026-10-28/);
@@ -300,7 +465,7 @@ assert.match(csv, /https:\/\/www\.aopa\.org\/training-and-safety\/students\/aopa
 
 console.log('PILOT VERIFICATION PASS', JSON.stringify({
   verified: verifiedIds.length,
-  unchecked: 411 - verifiedIds.length,
+  unchecked: R3_CATALOG.awards.length - verifiedIds.length,
   aopaDecision: aopaResult.decision,
   aopaRelevant: aopaResult.relevant,
 }));
