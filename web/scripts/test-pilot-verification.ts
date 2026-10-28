@@ -167,6 +167,29 @@ const verifiedIds = [
   'award-5dd6fcbcc0f8',
   'award-3ea4f475bc9f',
   'award-8809a8f1adc4',
+  'award-5ecbf2de5f92',
+  'award-901370e1548e',
+  'award-ef357d97de32',
+  'award-9c7b61be754a',
+  'award-7e11abb8d4fc',
+  'award-8b09bb021129',
+  'award-b4cd9cb209ea',
+  'award-a9386e11715e',
+  'award-453110814fe5',
+  'award-3c1de856d59e',
+  'award-d9861aae050d',
+  'award-66bd050a37ca',
+  'award-79c1268f1ea5',
+  'award-aeb5e9e39b82',
+  'award-19c987735664',
+  'award-8dc9700421f7',
+  'award-0f841a2f9a61',
+  'award-f41c36b42ac9',
+  'award-feaafc99a9fb',
+  'award-667db7bac4b9',
+  'award-a2fca0938b4e',
+  'award-4abfd54c1a6a',
+  'award-005b794acb14',
 ];
 const uncheckedIds = ['award-577dacb8c225', 'award-ce44143820a7'];
 
@@ -185,7 +208,12 @@ assert.equal(byId.get('award-d06d7c7342e2')?.verification?.deadline, 'March 21, 
 assert.equal(byId.get('award-318b34958cc0')?.verification, undefined);
 assert.match(byId.get('award-318b34958cc0')?.verificationNote ?? '', /does not list/);
 assert.match(byId.get('award-fa212121a110')?.verificationNote ?? '', /does not name a cycle year/);
-assert.equal(R3_CATALOG.awards.filter((award) => award.verificationNote).length, 135);
+assert.equal(byId.get('award-7e11abb8d4fc')?.verification?.openStatus, 'open_now');
+assert.equal(byId.get('award-7e11abb8d4fc')?.verification?.deadline, 'December 1, 2026 at midnight MST');
+assert.equal(byId.get('award-5ecbf2de5f92')?.verification?.openStatus, null);
+assert.match(byId.get('award-39cdccc5a462')?.verificationNote ?? '', /does not name a cycle year/);
+assert.match(byId.get('award-86f5be697eda')?.verificationNote ?? '', /does not display an entry deadline/);
+assert.equal(R3_CATALOG.awards.filter((award) => award.verificationNote).length, 162);
 assert.equal(R3_CATALOG.awards.filter((award) => displayVerification(award).status === 'not_yet_checked').length, 411 - verifiedIds.length);
 
 const counted = { active: 0, upcoming: 0, closed: 0, unavailable: 0, unknown: 0 };
