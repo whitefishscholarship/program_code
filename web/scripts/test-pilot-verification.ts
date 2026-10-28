@@ -133,6 +133,26 @@ const verifiedIds = [
   'award-7fa6002a8718',
   'award-01dc5649ad46',
   'award-084548999d06',
+  'award-8034b093b983',
+  'award-f3e3f2d8bec0',
+  'award-b2d1411189ef',
+  'award-0c6f9832a101',
+  'award-44bcbb2eeb9c',
+  'award-4aa2be1b2660',
+  'award-4ea4015b19b3',
+  'award-0b75492e8353',
+  'award-e8e0a4382e8d',
+  'award-ea2e209de181',
+  'award-86fa99382474',
+  'award-ffe029a85b2a',
+  'award-1f84b7995c22',
+  'award-df3626999a99',
+  'award-d6faaec17330',
+  'award-26777f7302e7',
+  'award-3703c9eee32b',
+  'award-f72b8b128a76',
+  'award-abf4abd96954',
+  'award-3279a3f6cdff',
 ];
 const uncheckedIds = ['award-577dacb8c225', 'award-ce44143820a7'];
 
@@ -150,7 +170,7 @@ assert.equal(byId.get('award-d06d7c7342e2')?.verification?.deadline, 'March 21, 
 assert.equal(byId.get('award-318b34958cc0')?.verification, undefined);
 assert.match(byId.get('award-318b34958cc0')?.verificationNote ?? '', /does not list/);
 assert.match(byId.get('award-fa212121a110')?.verificationNote ?? '', /does not name a cycle year/);
-assert.equal(R3_CATALOG.awards.filter((award) => award.verificationNote).length, 69);
+assert.equal(R3_CATALOG.awards.filter((award) => award.verificationNote).length, 99);
 assert.equal(R3_CATALOG.awards.filter((award) => displayVerification(award).status === 'not_yet_checked').length, 411 - verifiedIds.length);
 
 const counted = { active: 0, upcoming: 0, closed: 0, unavailable: 0, unknown: 0 };
