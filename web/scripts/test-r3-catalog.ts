@@ -33,6 +33,15 @@ const clearedByOfficialPage = new Map<string, Set<string>>([
  ['award-5230a4d409fd', new Set(['recorded_school'])],
  ['award-ffbd0f0b989f', new Set(['recorded_school'])],
  ['award-bb8ca59a7f0f', new Set(['recorded_gpa'])],
+ ['award-077975690fea', new Set(['recorded_gpa'])],
+ ['award-84882a48ae6c', new Set(['recorded_gpa'])],
+ ['award-6c3df1c9b693', new Set(['recorded_gpa'])],
+ ['award-3ec37786eaf6', new Set(['recorded_school'])],
+ ['award-e34d317f0f51', new Set(['recorded_school'])],
+ ['award-11631fa03190', new Set(['recorded_school'])],
+ ['award-3de0c3240164', new Set(['recorded_school'])],
+ ['award-1f64dfaa7bf7', new Set(['recorded_school'])],
+ ['award-40f544a79f9d', new Set(['recorded_school'])],
 ]);
 for(const profile of profiles){
  const before=shortlistAwards(old.awards,profile,SHORTLIST_PUBLICATION.rows,[]);
