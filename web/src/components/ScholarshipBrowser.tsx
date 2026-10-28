@@ -17,6 +17,7 @@ import {
   CYCLE_STATUSES,
   type ApplicationMode,
   type CycleStatus,
+  displayMatchReason,
   displayVerification,
   formatCheckedDate,
   openStatusText,
@@ -323,7 +324,7 @@ export default function ScholarshipBrowser() {
           </dl>
           <p className="mt-2 text-xs text-slate-500">* Historical or undated minimum observed across these award records; not a count of currently open slots.</p>
           <div className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-950">
-            <strong>Checked October 27, 2026:</strong> {catalog.awards.filter((award) => award.verification?.status === 'verified').length} scholarships are marked Verified, with a source link and a clear open, upcoming, or closed status. The other awards are not yet checked, so an unknown cycle is not labeled open.
+            <strong>Checked October 28, 2026:</strong> {catalog.awards.filter((award) => award.verification?.status === 'verified').length} scholarships are marked Verified, with a source link and a clear open, upcoming, or closed status. The other awards are not yet checked, so an unknown cycle is not labeled open.
           </div>
         </div>
       )}
@@ -435,7 +436,7 @@ function AwardCard({ award, result }: { award: StudentAward; result?: DisplayRes
           <h4 className="font-black text-slate-950">Why this decision</h4>
           {'relevant' in result && result.relevant && <p className="mt-2 font-bold text-teal-900">Connected to your answers — check the details below</p>}
           <ul className="mt-2 space-y-2 text-sm leading-6 text-slate-700">
-            {result.reasons.map((reason, index) => <li key={`${reason.code}-${index}`} className="flex gap-2"><span aria-hidden="true">{reason.kind === 'known_conflict' ? '×' : reason.kind === 'verification_needed' ? '?' : reason.kind === 'preference' ? '◇' : '✓'}</span><span>{reason.message}</span></li>)}
+            {result.reasons.map((reason, index) => <li key={`${reason.code}-${index}`} className="flex gap-2"><span aria-hidden="true">{reason.kind === 'known_conflict' ? '×' : reason.kind === 'verification_needed' ? '?' : reason.kind === 'preference' ? '◇' : '✓'}</span><span>{displayMatchReason(reason.message)}</span></li>)}
           </ul>
         </div>
       )}

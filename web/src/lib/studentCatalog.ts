@@ -189,6 +189,12 @@ export function formatCheckedDate(isoDate: string): string {
   }).format(new Date(Date.UTC(year, month - 1, day)));
 }
 
+const UNSUPPORTED_AOPA_EXAM_NOTE = 'Check age limits and the FAA written-exam prerequisite. ';
+
+export function displayMatchReason(message: string): string {
+  return message.replace(UNSUPPORTED_AOPA_EXAM_NOTE, 'Check the age range stated on the official page. ');
+}
+
 export function openStatusText(award: StudentAward): string | null {
   const verification = displayVerification(award);
   if (verification.status !== 'verified') return null;

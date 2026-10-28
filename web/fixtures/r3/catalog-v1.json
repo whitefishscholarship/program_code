@@ -27,9 +27,9 @@
       "cycles": 411,
       "activeCycles": 2,
       "upcomingCycles": 2,
-      "closedCycles": 2,
+      "closedCycles": 1,
       "unavailableCycles": 0,
-      "unknownCycles": 405,
+      "unknownCycles": 406,
       "minimumObservedRecipientSlots": 71
     },
     "awards": [
@@ -1277,7 +1277,7 @@
       {
         "publicId": "award-d8ff6ef257b3",
         "name": "AOPA Foundation You Can Fly High School Flight Training Scholarship",
-        "summary": "AOPA Foundation high school flight training scholarship. Current AOPA members living in the U.S., Canada, Guam, Puerto Rico, or the U.S. Virgin Islands; high school membership is free. Ages 16 to 18, and applicants must not have passed the private pilot checkride. At least 90 awards of $12,000 for the private pilot certificate. The fall period runs October 1 through December 31, 2026, 11:59 PM ET, with decisions by April 15. Next step: get the free AOPA high school membership, line up two references on the AOPA form (at least one from a teacher, counselor, coach, or school official; no relatives) and a current-year transcript, then apply on the AOPA Foundation platform by December 31, 2026.",
+        "summary": "AOPA Foundation high school flight training scholarships. The page says it is now accepting applications. At least 90 scholarships of $12,000 each are for students aged 16 to 18 to earn a private pilot certificate. Applicants must be current AOPA members living in the United States, the District of Columbia, Canada, Guam, Puerto Rico, or the U.S. Virgin Islands. High school students qualify for a free membership. Fall applications run October 1 through December 31, 11:59 p.m. ET, with decisions by April 15. A spring period runs April 1 through June 30, 11:59 p.m. ET, with decisions by September 15. The page does not print a year next to those dates, and it says additional criteria are in the FAQs. Next step: create an account in the AOPA application system, separate from an AOPA login, complete the general application, and upload a transcript, references, and other required materials before the deadline.",
         "amount": {
           "label": "At least 90 awards of $12,000",
           "minimum": 12000,
@@ -1286,18 +1286,18 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "Ages 16 to 18 in the U.S., Canada, Guam, Puerto Rico, or USVI",
-          "minimumGpa": 2.7,
+          "audience": "Ages 16 to 18; AOPA members in the U.S., D.C., Canada, Guam, Puerto Rico, or USVI",
+          "minimumGpa": null,
           "schoolTypes": [],
-          "focus": "Aviation (Private Pilot Certificate)"
+          "focus": "Private pilot certificate"
         },
         "cycle": {
           "status": "active",
           "label": "Open now",
-          "year": 2026,
-          "opens": "October 1, 2026",
-          "closes": "December 31, 2026, 11:59 PM ET",
-          "recurrence": "unknown"
+          "year": null,
+          "opens": "October 1",
+          "closes": "December 31, 11:59 p.m. ET",
+          "recurrence": "annual"
         },
         "application": {
           "mode": "direct_per_award",
@@ -1311,10 +1311,10 @@
         ],
         "verification": {
           "status": "verified",
-          "lastChecked": "2026-10-27",
+          "lastChecked": "2026-10-28",
           "sourceUrl": "https://www.aopa.org/training-and-safety/students/aopa-flight-training-scholarships",
           "openStatus": "open_now",
-          "deadline": "December 31, 2026, 11:59 PM ET"
+          "deadline": "December 31, 11:59 p.m. ET"
         }
       },
       {
@@ -8148,26 +8148,26 @@
       {
         "publicId": "award-cd0fb7cd0c64",
         "name": "LIFT Academy Pilot Scholarship",
-        "summary": "Female pilot pursuing professional career; current or incoming LIFT Academy student. Academic standing, accomplishments, teamwork, leadership and airmanship considered. WAI2027 cycle closed September 1, 2026 at 11:59 p.m. ET. WAI membership required by August 30, 2026 and active through March 30, 2027; at most three applications. Submit through WAI portal: two non-family one-page recommendations, 500-word essay, resume of at most two pages, and award-specific materials. Flight applicants supply pilot/medical certificates and last three logbook pages; these are not required for non-flight awards. FAQ permits members of any gender, age and nationality subject to each award’s specific rules; the award-specific descriptions above remain controlling. No next-cycle deadline inferred.",
+        "summary": "The WAI how-to-apply page does not name the LIFT Academy Pilot Scholarship and does not state this award's amount or award-specific eligibility. It describes the general WAI2027 scholarship window as June 1, 2026 through September 1, 2026, 11:59 p.m. ET, for current WAI members, with up to three applications.",
         "amount": {
-          "label": "$5,000",
-          "minimum": 5000,
-          "maximum": 5000,
-          "currency": "USD",
-          "state": "known"
+          "label": "Amount not stated",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
         },
         "eligibility": {
-          "audience": "Female pilots pursuing a professional pilot career",
+          "audience": "Not stated for this award on the source page",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "closed",
-          "label": "Closed — next cycle not posted",
-          "year": 2026,
-          "opens": "June 1, 2026",
-          "closes": "September 1, 2026, 11:59 PM ET",
+          "status": "unknown",
+          "label": "Not stated for this award",
+          "year": null,
+          "opens": null,
+          "closes": null,
           "recurrence": "unknown"
         },
         "application": {
@@ -8182,10 +8182,10 @@
         ],
         "verification": {
           "status": "verified",
-          "lastChecked": "2026-10-27",
+          "lastChecked": "2026-10-28",
           "sourceUrl": "https://www.wai.org/how-to-apply",
-          "openStatus": "closed_next_not_posted",
-          "deadline": "September 1, 2026, 11:59 PM ET"
+          "openStatus": null,
+          "deadline": null
         }
       },
       {
@@ -8229,9 +8229,9 @@
       {
         "publicId": "award-52b096183d9d",
         "name": "Live Your Dream Award",
-        "summary": "Soroptimist Live Your Dream Awards are for women who provide primary financial support for themselves and their dependents and have financial need. Applicants must be enrolled in or accepted to a vocational/skills training or undergraduate degree program and be motivated to achieve their education and career goals. High-school-equivalency study alone is not listed as an eligible program. Dependents may include children, spouse, partner, siblings or parents. Applicants must reside in a Soroptimist International of the Americas member country or territory, including the United States; previous Women's Opportunity or Live Your Dream recipients, people with or pursuing a graduate degree, Soroptimist members, employees and their immediate family are ineligible. Applications run August 1 to November 15. The page does not print a year next to those dates, and the window is open now. Club awards are about $1,000; region awards are $3,000 or $5,000; the international award is $10,000, for a potential total up to $16,000. Written sections must be in the applicant's own words. Clubs announce from January to April. Most Whitefish High School seniors will not qualify, because the applicant must support dependents. Next step: use the official online application only if you are the main financial support for yourself and dependents.",
+        "summary": "Soroptimist Live Your Dream: Education and Training Award for Women. Eligible applicants can apply from August 1 to November 15. The page does not print a year next to those dates. A recipient can receive up to $16,000. Club awards vary and average $1,000. Region awards are $3,000 or $5,000. Each region's first-place recipient is eligible for one of three international awards, shown as $10,000. Clubs announce recipients from January to April. You are eligible if you are a woman who provides the primary financial support for yourself and your dependents (children, spouse, partner, siblings, and/or parents), has financial need, is enrolled in or accepted to a vocational/skills training or undergraduate degree program, is motivated to achieve your education and career goals, and lives in a Soroptimist International of the Americas member country or territory, including the United States. Previous Women's Opportunity or Live Your Dream recipients, people with or pursuing a graduate degree, and Soroptimist members, employees, and their immediate family are not eligible. Written sections must be your own words. AI tools may help with grammar or organization.",
         "amount": {
-          "label": "About $1,000 at club level, up to $16,000 total",
+          "label": "Club awards average $1,000; up to $16,000 total",
           "minimum": 1000,
           "maximum": 16000,
           "currency": "USD",
@@ -8263,7 +8263,7 @@
         ],
         "verification": {
           "status": "verified",
-          "lastChecked": "2026-10-27",
+          "lastChecked": "2026-10-28",
           "sourceUrl": "https://www.soroptimist.org/our-work/live-your-dream-awards/apply-for-the-live-your-dream-awards.html",
           "openStatus": "open_now",
           "deadline": "November 15 (August 1 to November 15; year not printed on the page)"
@@ -9140,17 +9140,17 @@
       },
       {
         "publicId": "award-26c4b3c65985",
-        "name": "Montana Clerk & Recorder's Scholarship (2) $1,000",
-        "summary": "Montana Clerk & Recorder's Scholarship, Montana Association of Clerks and Recorders, through the Flathead County Clerk & Recorder. For a graduating Flathead County high school senior going to an in-state school (four-year, community college, vo-tech, or other accredited). $1,000, paid to the school after acceptance. The page says one winner and one alternate are picked. The 2026 cycle closed on March 13, 2026, and the next cycle will be posted when it opens. Apply with the paper form (student, parent, and school official signatures), work history, activities, a goals statement, an unusual-circumstances essay of at most 500 words, and an essay on four ways county government affects you (250 to 500 words). Return it to the Flathead County Clerk & Recorder, 800 S. Main Street, Room 114, Kalispell. Next step: watch the county page for the 2027 form.",
+        "name": "Clerk & Recorder Scholarship",
+        "summary": "The Flathead County page says the Montana Association of Clerks and Recorders offers this scholarship for a graduating Flathead County high school senior continuing education in Montana, and also describes it as a graduating senior who will attend an in-state college or university. One winner and one alternate are selected. The scholarship is paid to the school after the student is accepted. The application asks for career objectives and future goals, unusual family or personal circumstances, work experience, and school and community activities. 2026 applications are closed. The deadline was March 13, 2026, and the next cycle will be posted when it opens. Pick up an application or use the page's reference copy, and return it to the Flathead County Clerk & Recorder, 800 S. Main Street, Room 114, Kalispell, MT 59901.",
         "amount": {
-          "label": "$1,000",
-          "minimum": 1000,
-          "maximum": 1000,
-          "currency": "USD",
-          "state": "known"
+          "label": "Amount not stated",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
         },
         "eligibility": {
-          "audience": "Graduating Flathead County senior attending an in-state school",
+          "audience": "Graduating Flathead County high school senior continuing education in Montana",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
@@ -9176,7 +9176,7 @@
         ],
         "verification": {
           "status": "verified",
-          "lastChecked": "2026-10-27",
+          "lastChecked": "2026-10-28",
           "sourceUrl": "https://flatheadcounty.gov/department-directory/clerk-and-recorder/scholarship",
           "openStatus": "closed_next_not_posted",
           "deadline": "March 13, 2026"
@@ -10912,21 +10912,19 @@
       {
         "publicId": "award-2179b44d009d",
         "name": "Pell Promise for Montana Students",
-        "summary": "Carroll College Pell Promise, Helena, Montana. Pell-eligible first-time freshmen or transfer students from any state, starting fall 2027, with a GPA of 3.0 or higher, who live on campus and in the U.S. It covers remaining tuition after Pell, at least a $3,500 subsidized Stafford loan, and other institutional aid. Tuition only, for up to 8 semesters. The older Montana-only page now returns 404. No application deadline is listed. Next step: apply to Carroll and file the 2027-28 FAFSA, then ask Carroll Financial Aid about timing.",
+        "summary": "Carroll College Pell Promise. Beginning fall 2027, it covers remaining tuition for qualifying Pell-eligible first-time, first-year students from any state, and qualifying transfer students, after the federal Pell Grant, at least $3,500 in subsidized Stafford loans, and other institutional aid. The maximum subsidized Stafford loan on the page is $3,500 freshman year, $4,500 sophomore year, and $5,500 junior and senior year. Students must live in the United States, live on campus, maintain a 3.0 GPA, and complete at least 12 credits a semester. It covers tuition only, for up to eight semesters. The page does not list an application deadline. Next step: apply to Carroll, file the FAFSA, and agree to borrow the subsidized Stafford loan.",
         "amount": {
-          "label": "Potentially up to 100% of tuition; package includes loans",
+          "label": "Remaining tuition after Pell, a subsidized Stafford loan, and other institutional aid",
           "minimum": null,
           "maximum": null,
           "currency": null,
           "state": "unparseable"
         },
         "eligibility": {
-          "audience": "Pell-eligible students in any state, starting fall 2027",
+          "audience": "Pell-eligible first-time, first-year or transfer students from any state, starting fall 2027",
           "minimumGpa": 3,
-          "schoolTypes": [
-            "four_year"
-          ],
-          "focus": "Liberal Arts, Professional, Pre-Professional"
+          "schoolTypes": [],
+          "focus": null
         },
         "cycle": {
           "status": "unknown",
@@ -10948,7 +10946,7 @@
         ],
         "verification": {
           "status": "verified",
-          "lastChecked": "2026-10-27",
+          "lastChecked": "2026-10-28",
           "sourceUrl": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
           "openStatus": null,
           "deadline": null
@@ -11546,7 +11544,7 @@
       {
         "publicId": "award-a2f7b9b6cbec",
         "name": "Republic Airways Aviation Management Scholarship (NGPA)",
-        "summary": "Republic Airways Aviation Management Scholarship, National Gay Pilots Association. For a current student in an aviation management or related program, including dispatch certification, who is an NGPA member and at least 18. Award is $5,000. The 2026 cycle is closed to new applicants. The 2027 application opens June 2027, and the exact 2027 deadline is not posted. Apply through an opportunity profile on ngpa.org when the window opens; student memberships are available. Not a fit for most high school seniors. Next step: revisit in June 2027.",
+        "summary": "Republic Airways Aviation Management Scholarship, National Gay Pilots Association. $5,000 for a current student enrolled in an aviation management program or a related program, including dispatch certification. Universal requirements on the page: be an active NGPA member and at least 18. The 2026 cycle is closed to new applicants. The 2027 application opens June 2027. The page does not state the 2027 deadline. Applicants submit an opportunity profile on ngpa.org.",
         "amount": {
           "label": "$5,000",
           "minimum": 5000,
@@ -11580,7 +11578,7 @@
         ],
         "verification": {
           "status": "verified",
-          "lastChecked": "2026-10-27",
+          "lastChecked": "2026-10-28",
           "sourceUrl": "https://www.ngpa.org/2026_scholarships",
           "openStatus": "opens_on",
           "deadline": null
@@ -13662,26 +13660,26 @@
       {
         "publicId": "award-97dfaadd1d31",
         "name": "The Neurodiversity Scholarship",
-        "summary": "The Neurodiversity Alliance scholarship for students age 18 to 26 during 2027-28 who identify as neurodivergent, including dyslexia, ADHD, processing disorders, autism, or similar. For an associate, bachelor's, or certificate program, full or part time, at a U.S. nonprofit college. Not for international students on temporary visas or for staff relatives. Priority for active community members and unmet need. 25 awards: $2,500 for full-time study at a four-year school, and $1,000 for a community or technical college or part-time study. Opens November 1, 2026, 12:00 AM PT and closes January 15, 2027, 11:59 PM PT. Apply through the Alliance online portal or app. Next step: join the free online community, then apply on November 1.",
+        "summary": "The Neurodiversity Alliance scholarship. Applicants must be 18 to 26 during the 2027-28 academic year and have been identified by a healthcare or educational professional as having dyslexia, ADHD, a processing disorder, autism, or a similar learning difference. They must be enrolled or plan to enroll full or part time in an associate, bachelor's, or certificate program at a not-for-profit college or university in the United States. Current staff, board members, and contractors of The Neurodiversity Alliance, and their relatives, are not eligible. International students on temporary visas are not eligible. Priority goes to students and alumni active in the programs and community who demonstrate unmet financial need. There are 25 one-year awards for 2027-28, with the option to reapply annually for up to four years. $2,500 is for full-time enrollment of 12 or more credit hours at a traditional four-year college or university. $1,000 is for a community or technical college, or for part-time classes of fewer than 12 credit hours at a four-year college or university. Applications open November 1, 2026. The deadline is January 15, 2027. Apply in the Alliance online portal or mobile app. Next step: join the free online community, then apply on November 1.",
         "amount": {
-          "label": "25 awards: $2,500 full-time four-year, or $1,000 community, technical, or part-time",
+          "label": "25 awards: $2,500 full-time four-year, or $1,000 community, technical, or part-time four-year",
           "minimum": 1000,
           "maximum": 2500,
           "currency": "USD",
           "state": "variable"
         },
         "eligibility": {
-          "audience": "Neurodivergent students age 18 to 26 at a U.S. nonprofit college",
+          "audience": "Students age 18 to 26 identified with a learning difference, at a U.S. not-for-profit college",
           "minimumGpa": null,
           "schoolTypes": [],
-          "focus": "Neurodiversity/Learning Differences"
+          "focus": null
         },
         "cycle": {
           "status": "upcoming",
           "label": "Opens November 1, 2026",
           "year": 2027,
-          "opens": "November 1, 2026, 12:00 AM PT",
-          "closes": "January 15, 2027, 11:59 PM PT",
+          "opens": "November 1, 2026",
+          "closes": "January 15, 2027",
           "recurrence": "unknown"
         },
         "application": {
@@ -13696,10 +13694,10 @@
         ],
         "verification": {
           "status": "verified",
-          "lastChecked": "2026-10-27",
+          "lastChecked": "2026-10-28",
           "sourceUrl": "https://thendalliance.org/scholarships/",
           "openStatus": "opens_on",
-          "deadline": "January 15, 2027, 11:59 PM PT"
+          "deadline": "January 15, 2027"
         }
       },
       {
@@ -19742,7 +19740,7 @@
         "supplements": "mixed"
       }
     ],
-    "notice": "Organizer records captured September 14, 2026. Seven pilot scholarships were checked against official public pages on October 27, 2026 and are marked Verified. Every other award is not yet checked. Confirm with each provider before you apply."
+    "notice": "Organizer records captured September 14, 2026. Seven pilot scholarships were checked against their official pages on October 28, 2026 and are marked Verified. Every other award is not yet checked. Confirm with each provider before you apply."
   },
   "shortlistRows": [
     {
@@ -19789,9 +19787,7 @@
       "targetKind": "award",
       "targetId": "award-2179b44d009d",
       "minimumGpa": null,
-      "schoolTypes": [
-        "four_year"
-      ],
+      "schoolTypes": [],
       "applicationPreference": "direct_per_award"
     },
     {
@@ -20779,7 +20775,7 @@
       "sourceRow": 120,
       "targetKind": "award",
       "targetId": "award-d8ff6ef257b3",
-      "minimumGpa": 2.7,
+      "minimumGpa": null,
       "schoolTypes": [],
       "applicationPreference": "direct_per_award"
     },

@@ -25,14 +25,22 @@ function choose(id:string):InterviewAnswers {
  return InterviewAnswersSchema.parse({...base,...(id==='financial_need'?{financialNeedInterest:'yes'}:id.startsWith('org_')?{studentOrganizations:[id.slice(4)],organizationResponse:'selected'}:id==='education_teaching'?{discoveryInterests:[id]}:ACTIVITY_QUESTIONS.some(x=>x.id===id)?{activities:[id]}:{selectedCriteria:[id]})});
 }
 const profiles:InterviewAnswers[] = [base,...[0,2,3,4].map(gpa=>({...base,gpa})),...(['two_year','trade_vocational','undecided'] as const).map(s=>({...base,targetSchoolTypes:[s]})),...SPECIAL_CRITERIA.map(c=>choose(c.id)),...ACTIVITY_QUESTIONS.map(c=>choose(c.id)),choose('financial_need'),choose('education_teaching'),...STUDENT_ORGANIZATIONS.map(o=>choose('org_'+o.id))];
+const clearedByOfficialPage = new Map<string, Set<string>>([
+ ['award-d8ff6ef257b3', new Set(['recorded_gpa'])],
+ ['award-2179b44d009d', new Set(['recorded_school'])],
+]);
 for(const profile of profiles){
  const before=shortlistAwards(old.awards,profile,SHORTLIST_PUBLICATION.rows,[]);
  const now=shortlistAwards(R3_CATALOG.awards,profile);
  assert.equal(now.results.length,411);
  for(const prior of before.results){
   const retained=now.results.find(x=>x.award.publicId===prior.award.publicId)!;
-  assert.equal(retained.decision,prior.decision,'existing academic decision changed');
-  for(const reason of prior.reasons)assert(retained.reasons.some(r=>r.code===reason.code&&r.message===reason.message),'existing reason lost');
+  const cleared=clearedByOfficialPage.get(prior.award.publicId);
+  if(!cleared) assert.equal(retained.decision,prior.decision,'existing academic decision changed');
+  for(const reason of prior.reasons){
+   if(cleared?.has(reason.code)) continue;
+   assert(retained.reasons.some(r=>r.code===reason.code&&r.message===reason.message),'existing reason lost');
+  }
  }
 }
 const baseline=shortlistAwards(R3_CATALOG.awards,base);
