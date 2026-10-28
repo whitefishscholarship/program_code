@@ -17,6 +17,9 @@ import {
   CYCLE_STATUSES,
   type ApplicationMode,
   type CycleStatus,
+  displayVerification,
+  formatCheckedDate,
+  openStatusText,
   type StudentAward,
   type StudentCatalog,
   type StudentPortal,
@@ -320,7 +323,7 @@ export default function ScholarshipBrowser() {
           </dl>
           <p className="mt-2 text-xs text-slate-500">* Historical or undated minimum observed across these award records; not a count of currently open slots.</p>
           <div className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-950">
-            <strong>Availability note:</strong> all {catalog.counts.unknownCycles} modeled cycles use annual date rules without a verified year. They are listed for research, not labeled open.
+            <strong>Checked October 27, 2026:</strong> {catalog.awards.filter((award) => award.verification?.status === 'verified').length} scholarships are marked Verified, with a source link and a clear open, upcoming, or closed status. The other awards are not yet checked, so an unknown cycle is not labeled open.
           </div>
         </div>
       )}
@@ -401,13 +404,26 @@ function FilterSelect({ label, value, options, onChange }: { label: string; valu
 }
 
 function AwardCard({ award, result }: { award: StudentAward; result?: DisplayResult }) {
+  const verification = displayVerification(award);
+  const verified = verification.status === 'verified';
+  const openness = openStatusText(award);
   return (
-    <article data-award-id={award.publicId} className="flex h-full min-w-0 max-w-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <article data-award-id={award.publicId} data-verification-status={verification.status} className="flex h-full min-w-0 max-w-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
       {result && <p className={`mb-4 w-fit rounded-full border px-3 py-1 text-xs font-black uppercase tracking-wide ${decisionStyles[result.decision]}`}>{decisionLabels[result.decision]}</p>}
       <div className="flex flex-col-reverse gap-3 sm:flex-row sm:items-start sm:justify-between">
         <h3 className="text-xl font-black leading-snug">{award.name}</h3>
         <span className={`w-fit rounded-full border px-3 py-1 text-xs font-bold ${statusStyles[award.cycle.status]}`}><span aria-hidden="true">● </span>{award.cycle.label}</span>
       </div>
+      {verified ? (
+        <p className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
+          <span className="rounded-full bg-emerald-700 px-3 py-1 text-xs font-bold text-white">Verified</span>
+          {verification.lastChecked && <span className="text-slate-600">Checked {formatCheckedDate(verification.lastChecked)}</span>}
+          {verification.sourceUrl && <a href={verification.sourceUrl} target="_blank" rel="noopener noreferrer" className="font-bold text-teal-800 underline decoration-2 underline-offset-4 hover:text-teal-950 focus:outline-none focus:ring-4 focus:ring-teal-200">Official source <span className="sr-only">for {award.name}</span><span aria-hidden="true"> ↗</span></a>}
+        </p>
+      ) : (
+        <p className="mt-3 text-sm text-slate-600">Not yet checked</p>
+      )}
+      {openness && <p className="mt-2 text-sm font-semibold leading-6 text-slate-900">{openness}</p>}
       <p className="mt-4 text-3xl font-black text-teal-900">{award.amount.label}</p>
       <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold text-slate-700">
         <Chip>{award.eligibility.audience}</Chip>
@@ -424,10 +440,15 @@ function AwardCard({ award, result }: { award: StudentAward; result?: DisplayRes
         </div>
       )}
       {award.summary && <p className="mt-4 break-words text-sm leading-6 text-slate-600">{award.summary}</p>}
-      <dl className="mt-5 grid gap-4 border-t border-slate-200 pt-5 text-sm sm:grid-cols-2">
-        <div><dt className="font-bold text-slate-950">Application method</dt><dd className="mt-1 break-words leading-6 text-slate-600">{award.application.label}</dd></div>
-        <div><dt className="font-bold text-slate-950">Cycle details</dt><dd className="mt-1 break-words leading-6 text-slate-600">{award.cycle.closes ? `Recorded closing information: ${award.cycle.closes}` : 'No verified closing date'}</dd></div>
-      </dl>
+      <details className="mt-5 rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm">
+        <summary className="cursor-pointer rounded-lg font-bold text-slate-950 focus:outline-none focus:ring-4 focus:ring-teal-200">Details</summary>
+        <dl className="mt-4 grid gap-4 sm:grid-cols-2">
+          <div><dt className="font-bold text-slate-950">Application method</dt><dd className="mt-1 break-words leading-6 text-slate-600">{award.application.label}</dd></div>
+          <div><dt className="font-bold text-slate-950">Deadline</dt><dd className="mt-1 break-words leading-6 text-slate-600">{verification.deadline ?? (award.cycle.closes ? award.cycle.closes : 'No checked deadline')}</dd></div>
+          {award.cycle.opens && <div><dt className="font-bold text-slate-950">Opens</dt><dd className="mt-1 break-words leading-6 text-slate-600">{award.cycle.opens}</dd></div>}
+          <div><dt className="font-bold text-slate-950">Last checked</dt><dd className="mt-1 break-words leading-6 text-slate-600">{verification.lastChecked ? formatCheckedDate(verification.lastChecked) : 'Not yet checked'}</dd></div>
+        </dl>
+      </details>
       <div className="mt-auto pt-6">
         {award.application.url ? <a href={award.application.url} target="_blank" rel="noopener noreferrer" className="inline-flex w-full items-center justify-center rounded-xl bg-teal-800 px-5 py-3 text-center font-bold text-white hover:bg-teal-900 focus:outline-none focus:ring-4 focus:ring-teal-300">Check official application source <span className="sr-only">for {award.name}</span><span aria-hidden="true"> ↗</span></a> : <p className="rounded-xl bg-slate-100 px-4 py-3 text-center text-sm font-bold text-slate-700">No verified online application link</p>}
         {award.cycle.status !== 'active' && <p className="mt-2 text-center text-xs leading-5 text-slate-500">This link does not mean the award is currently open.</p>}

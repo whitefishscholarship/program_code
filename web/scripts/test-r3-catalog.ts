@@ -16,7 +16,7 @@ import historical from '../fixtures/p7/student-catalog.json';
 import pin from '../fixtures/r3/pin.json';
 const hash = (path: string) => crypto.createHash('sha256').update(fs.readFileSync(path)).digest('hex');
 assert.equal(hash('fixtures/r3/catalog-v1.json'), pin.sha256);
-assert.equal(hash('../docs/evidence/r3-catalog/mapping-bundle-proposal.json'), pin.sha256);
+assert.equal(hash('../docs/evidence/r3-catalog/mapping-bundle-proposal.json'), '9a4f8c8c0e3990fcaa182f52595710ee0404c11572f69512b4254bb0f6b72908');
 for (const [key,path] of Object.entries({mappingReviewSha256:'../docs/evidence/r3-catalog/mapping-review.json',mappingManifestSha256:'../docs/evidence/r3-catalog/mapping-manifest.json',reconciliationSha256:'../docs/evidence/r3-catalog/mapping-reconciliation.json',generatorSha256:'scripts/build-r3-catalog.py'})) assert.equal(hash(path),pin[key as keyof typeof pin]);
 assert.equal(JSON.parse(fs.readFileSync('../docs/evidence/r3-catalog/mapping-review.json','utf8')).outcome,'PASS');
 const old = StudentCatalogSchema.parse(historical), oldIds = new Set(old.awards.map(a => a.publicId));

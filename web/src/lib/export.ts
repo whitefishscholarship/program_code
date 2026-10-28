@@ -1,4 +1,4 @@
-import type { StudentAward } from './studentCatalog';
+import { displayVerification, openStatusText, type StudentAward } from './studentCatalog';
 
 export const EXPORT_HEADERS = [
   'Award ID',
@@ -11,6 +11,11 @@ export const EXPORT_HEADERS = [
   'School types',
   'Application method',
   'Official link',
+  'Verification',
+  'Last checked',
+  'Verification source',
+  'Open status',
+  'Deadline',
 ] as const;
 
 export type ExportRow = Record<(typeof EXPORT_HEADERS)[number], string>;
@@ -34,6 +39,11 @@ export function toExportRows(awards: StudentAward[]): ExportRow[] {
     'School types': award.eligibility.schoolTypes.map((type) => schoolTypeLabels[type]).join('; '),
     'Application method': award.application.label,
     'Official link': award.application.url ?? '',
+    'Verification': displayVerification(award).status === 'verified' ? 'Verified' : 'Not yet checked',
+    'Last checked': displayVerification(award).lastChecked ?? '',
+    'Verification source': displayVerification(award).sourceUrl ?? '',
+    'Open status': openStatusText(award) ?? '',
+    'Deadline': displayVerification(award).deadline ?? '',
   }));
 }
 
