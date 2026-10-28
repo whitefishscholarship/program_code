@@ -190,8 +190,38 @@ const verifiedIds = [
   'award-a2fca0938b4e',
   'award-4abfd54c1a6a',
   'award-005b794acb14',
+  'award-3e63902e8554',
+  'award-9d3f65e8d844',
+  'award-577dacb8c225',
+  'award-a3c9f5127f45',
+  'award-7d262385f5d5',
+  'award-5d6c289f9cf6',
+  'award-db429f56aafe',
+  'award-fa0711891ae7',
+  'award-9049848e68c9',
+  'award-221b3ca571aa',
+  'award-4ac74a9f17fd',
+  'award-4562d94cb7b9',
+  'award-8e7ecab8f784',
+  'award-62f23380f97a',
+  'award-f7f89058438d',
+  'award-580ec7a464a7',
+  'award-43f86bc61115',
+  'award-4a29a85c87bc',
+  'award-142da69533e6',
+  'award-607fe66710d6',
+  'award-c3491944119d',
+  'award-4792ca67f2e1',
+  'award-2726fc6e69fc',
+  'award-1a3f42f9e6a9',
+  'award-cadb7a3c4afa',
+  'award-5230a4d409fd',
+  'award-5dd4c3d3988a',
+  'award-88670d80cadf',
+  'award-12a7ca904d6a',
+  'award-fd629c83fb3f',
 ];
-const uncheckedIds = ['award-577dacb8c225', 'award-ce44143820a7'];
+const uncheckedIds = ['award-ce44143820a7'];
 
 const byId = new Map(R3_CATALOG.awards.map((award) => [award.publicId, award]));
 assert.equal(R3_CATALOG.awards.filter((award) => award.verification?.status === 'verified').length, verifiedIds.length);
@@ -213,7 +243,7 @@ assert.equal(byId.get('award-7e11abb8d4fc')?.verification?.deadline, 'December 1
 assert.equal(byId.get('award-5ecbf2de5f92')?.verification?.openStatus, null);
 assert.match(byId.get('award-39cdccc5a462')?.verificationNote ?? '', /does not name a cycle year/);
 assert.match(byId.get('award-86f5be697eda')?.verificationNote ?? '', /does not display an entry deadline/);
-assert.equal(R3_CATALOG.awards.filter((award) => award.verificationNote).length, 162);
+assert.equal(R3_CATALOG.awards.filter((award) => award.verificationNote).length, 198);
 assert.equal(R3_CATALOG.awards.filter((award) => displayVerification(award).status === 'not_yet_checked').length, 411 - verifiedIds.length);
 
 const counted = { active: 0, upcoming: 0, closed: 0, unavailable: 0, unknown: 0 };
