@@ -42,6 +42,12 @@ const clearedByOfficialPage = new Map<string, Set<string>>([
  ['award-3de0c3240164', new Set(['recorded_school'])],
  ['award-1f64dfaa7bf7', new Set(['recorded_school'])],
  ['award-40f544a79f9d', new Set(['recorded_school'])],
+ ['award-347a9a678c08', new Set(['recorded_school'])],
+ ['award-baac2dac6d2e', new Set(['recorded_school'])],
+ ['award-34904382b098', new Set(['recorded_gpa'])],
+ ['award-3dbe39e6a748', new Set(['recorded_school'])],
+ ['award-b1a03b264f02', new Set(['recorded_school'])],
+ ['award-bbe935853482', new Set(['recorded_school'])],
 ]);
 for(const profile of profiles){
  const before=shortlistAwards(old.awards,profile,SHORTLIST_PUBLICATION.rows,[]);
@@ -85,8 +91,8 @@ for(const row of R3_SHORTLIST_ROWS.filter(r=>!oldIds.has(r.targetId)&&r.targetKi
   if(missing){assert.equal(shortlistAwards([award],{...base,gpa:4,targetSchoolTypes:[missing]}).results[0].decision,'recorded_mismatch');assert.notEqual(shortlistAwards([award],{...base,gpa:4,targetSchoolTypes:[missing,'undecided']}).results[0].decision,'recorded_mismatch');}
  }
 }
-assert.equal(R3_SHORTLIST_ROWS.filter(r=>r.targetKind==='award'&&!oldIds.has(r.targetId)&&r.minimumGpa!==null).length,9);
-assert.equal(R3_SHORTLIST_ROWS.filter(r=>r.targetKind==='award'&&!oldIds.has(r.targetId)&&r.schoolTypes.length).length,7);
+assert.equal(R3_SHORTLIST_ROWS.filter(r=>r.targetKind==='award'&&!oldIds.has(r.targetId)&&r.minimumGpa!==null).length,7);
+assert.equal(R3_SHORTLIST_ROWS.filter(r=>r.targetKind==='award'&&!oldIds.has(r.targetId)&&r.schoolTypes.length).length,5);
 assert.equal(STUDENT_ORGANIZATIONS.length,9);
 for(const org of STUDENT_ORGANIZATIONS)assert([...COVERAGE_PUBLICATION.connections,...R3_CONNECTIONS].some(c=>c.answerId==='org_'+org.id));
 assert(!UNSUPPORTED_SPECIAL_CHOICES.some(c=>c.id==='aviation_management'));
@@ -98,4 +104,4 @@ assert.deepEqual(csv.headers,[...EXPORT_HEADERS]);assert.deepEqual(csv.rows.map(
 for(const key of ['financialNeedInterest','studentOrganizations','discoveryInterests','reasons','decision'])assert(!csv.headers.some(header=>header===key));
 assert.equal(R3_PROVENANCE.sourceRevision,'229');assert.equal(R3_PROVENANCE.snapshotDate,'2026-09-14');
 assert.equal(R3_PROVENANCE.revisionType,'connector_reported');
-console.log('R3 CATALOG PASS',JSON.stringify({awards:411,preservedAwards:192,profiles:profiles.length,pairedConnections:R3_CONNECTIONS.length,newGpaRules:9,newSchoolRules:7,organizations:9,publicCsvIds:true,sensitiveSkipNonExcluding:true}));
+console.log('R3 CATALOG PASS',JSON.stringify({awards:411,preservedAwards:192,profiles:profiles.length,pairedConnections:R3_CONNECTIONS.length,newGpaRules:7,newSchoolRules:5,organizations:9,publicCsvIds:true,sensitiveSkipNonExcluding:true}));
