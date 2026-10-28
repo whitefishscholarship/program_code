@@ -198,16 +198,17 @@ export function displayMatchReason(message: string): string {
 export function openStatusText(award: StudentAward): string | null {
   const verification = displayVerification(award);
   if (verification.status !== 'verified') return null;
+  const sentence = (value: string) => value.endsWith('.') ? value : `${value}.`;
   if (verification.openStatus === 'open_now') {
-    return verification.deadline ? `Open now. Deadline ${verification.deadline}.` : 'Open now.';
+    return verification.deadline ? sentence(`Open now. Deadline ${verification.deadline}`) : 'Open now.';
   }
   if (verification.openStatus === 'opens_on') {
     const opens = award.cycle.opens ? `Opens ${award.cycle.opens}.` : 'Opens on a later date.';
-    return verification.deadline ? `${opens} Deadline ${verification.deadline}.` : `${opens} Exact deadline is not posted.`;
+    return verification.deadline ? sentence(`${opens} Deadline ${verification.deadline}`) : `${opens} Exact deadline is not posted.`;
   }
   if (verification.openStatus === 'closed_next_not_posted') {
     return verification.deadline
-      ? `Closed, next cycle not posted. Last deadline ${verification.deadline}.`
+      ? sentence(`Closed, next cycle not posted. Last deadline ${verification.deadline}`)
       : 'Closed, next cycle not posted.';
   }
   return 'Verified. No application deadline is listed.';

@@ -25,11 +25,11 @@
       "awards": 411,
       "applicationGroups": 4,
       "cycles": 411,
-      "activeCycles": 2,
-      "upcomingCycles": 2,
-      "closedCycles": 1,
+      "activeCycles": 4,
+      "upcomingCycles": 3,
+      "closedCycles": 5,
       "unavailableCycles": 0,
-      "unknownCycles": 406,
+      "unknownCycles": 399,
       "minimumObservedRecipientSlots": 71
     },
     "awards": [
@@ -2741,38 +2741,45 @@
       {
         "publicId": "award-c32eca2c949c",
         "name": "CSKT Higher Education Scholarship",
-        "summary": null,
+        "summary": "Confederated Salish and Kootenai Tribes higher education scholarship for an enrolled CSKT member with a high school diploma or GED/HiSET, accepted at a regionally accredited college, not in default on other funding, and not convicted of a felony in the past year. Undergraduate or graduate study. The page says the 2026-2027 application has closed and late applications are accepted until October 31. Applications open each January and the regular deadline is May 1. The page does not state an award amount.",
         "amount": {
-          "label": "Varies",
+          "label": "Amount not stated",
           "minimum": null,
           "maximum": null,
           "currency": null,
-          "state": "variable"
+          "state": "unknown"
         },
         "eligibility": {
-          "audience": "Montana",
+          "audience": "Enrolled member of the Confederated Salish and Kootenai Tribes",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
-          "opens": null,
-          "closes": "Annual — May 1 (opens Jan)",
+          "status": "active",
+          "label": "Open now",
+          "year": 2026,
+          "opens": "January",
+          "closes": "October 31, 2026",
           "recurrence": "annual"
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
+          "label": "CSKT Higher Education page",
           "url": "https://cskt.org/education/higher-education/",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-0007419d0eb7"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://cskt.org/education/higher-education/",
+          "openStatus": "open_now",
+          "deadline": "October 31, 2026 (late applications for 2026-2027)"
+        }
       },
       {
         "publicId": "award-accf465ba36a",
@@ -4726,23 +4733,23 @@
       {
         "publicId": "award-de2472768ac1",
         "name": "F.J. Efta Memorial Scholarship",
-        "summary": "The linked general form requires admission application and high-school cumulative GPA 2.25 for first-year students; transfer applicants need 12 graded college credits and cumulative college GPA 2.25. Current/former DCC students need degree-seeking admission, degree/certificate enrollment or plans, 12 graded credits and GPA 2.0; dual-enrollment students need 12 credits to use the returning category. Resume, academic-goals essay, transcripts, two recommendations and award-specific materials are required. DCC requires FAFSA for need-based awards. These general conditions do not replace higher or narrower award-specific conditions. Dawson Community College scholarship. Wibaux County High School senior/graduate OR young adult with a special Wibaux County connection, planning DCC. Full-time enrollment and GPA 2.0 in 12 credits for continuation; up to four consecutive semesters. A qualifying county connection is a condition, not inferred from Whitefish attendance. The foundation listing is undated and marked under construction; confirm award-specific conditions and funding for the application cycle. DCC’s 2026–27 general scholarship priority deadline was March 1, 2026, but its official page says late applicants should still apply. General application combines foundation awards; specific committee/coursework/packet requirements above remain separate. No single GPA threshold is proposed because it depends on applicant category and award conditions. Any unsupported amount, renewal or gap-year condition remains unknown.",
+        "summary": "Dawson College Foundation scholarship for a Wibaux County High School senior, a past Wibaux graduate, or a young adult with a special connection to Wibaux County who plans to attend Dawson Community College. $250 a semester, $500 a year, renewable for four consecutive semesters. Recipients must be full-time, take 12 credits, and keep a 2.0 GPA. The foundation page does not state a current deadline for this award.",
         "amount": {
-          "label": "$500 annual ($250 per semester)",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "label": "$250 a semester ($500 a year)",
+          "minimum": 500,
+          "maximum": 500,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
-          "minimumGpa": null,
+          "audience": "Wibaux County connection, planning to attend Dawson Community College",
+          "minimumGpa": 2.0,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
           "status": "unknown",
-          "label": "Recorded deadline: 2026-03-01 priority (general; late applications allowed; award-specific dates may differ). Current availability not verified.",
+          "label": "No deadline listed",
           "year": null,
           "opens": null,
           "closes": null,
@@ -4762,39 +4769,46 @@
       {
         "publicId": "award-fa027b498c44",
         "name": "FEC Scholarships",
-        "summary": null,
+        "summary": "Flathead Electric Cooperative scholarships, funded by unclaimed capital credits. Individual awards range from $1,500 to $6,000. The applicant or a parent or legal guardian must be a Flathead Electric member served at their primary residence. The money must be used at an accredited Montana post-secondary school. Open to graduating seniors in the co-op service area, graduating homeschool students, and current undergraduate students. Applications were due February 22, 2026, and the page says applications are now closed. Check back next year.",
         "amount": {
-          "label": "$1500-6K",
+          "label": "$1,500 to $6,000",
           "minimum": 1500,
-          "maximum": 1500,
+          "maximum": 6000,
           "currency": "USD",
-          "state": "known"
+          "state": "variable"
         },
         "eligibility": {
-          "audience": "In-state",
+          "audience": "Flathead Electric member, or the child of a member, at the primary residence",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "closed",
+          "label": "Closed — next cycle not posted",
+          "year": 2026,
           "opens": null,
-          "closes": "2/22/2026",
-          "recurrence": "unknown"
+          "closes": "February 22, 2026",
+          "recurrence": "annual"
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
-          "url": "https://fec.submittable.com/submit/336920/2026-flathead-electric-co-op-scholarships",
+          "label": "Flathead Electric scholarships page",
+          "url": "https://www.flatheadelectric.com/our-community/educational-support/scholarships/",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-1f3c487868c7",
           "source-b69f2d5ed157"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.flatheadelectric.com/our-community/educational-support/scholarships/",
+          "openStatus": "closed_next_not_posted",
+          "deadline": "February 22, 2026"
+        }
       },
       {
         "publicId": "award-d1dc783a1ff8",
@@ -4947,31 +4961,31 @@
       {
         "publicId": "award-04b4c1f204d1",
         "name": "Flathead Conservation District Scholarship",
-        "summary": null,
+        "summary": "Flathead Conservation District college scholarship for a local high school senior who intends to study natural resources or a related field, such as agriculture, forestry, environmental science, or wildlife biology. The student must live in Flathead County and have a GPA of at least 2.5. A student may receive it only once. The application needs a transcript, an instructor recommendation, and a 500-word essay. Due Monday, March 15, 2027, at 4:00 p.m. The page does not state an award amount.",
         "amount": {
-          "label": "$500",
-          "minimum": 500,
-          "maximum": 500,
-          "currency": "USD",
-          "state": "known"
+          "label": "Amount not stated",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
         },
         "eligibility": {
-          "audience": "National",
+          "audience": "Flathead County high school senior studying natural resources",
           "minimumGpa": 2.5,
           "schoolTypes": [],
-          "focus": "Natural Resources, or a related field"
+          "focus": "Natural resources"
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "active",
+          "label": "Open now",
+          "year": 2027,
           "opens": null,
-          "closes": "3/13/26",
+          "closes": "March 15, 2027, 4:00 p.m.",
           "recurrence": "unknown"
         },
         "application": {
           "mode": "offline",
-          "label": "Paper or counselor-provided application",
+          "label": "Flathead Conservation District scholarship page",
           "url": "https://flatheadcd.org/programs/education-programs/college-scholarship/",
           "groupPublicId": null,
           "supplements": "unknown"
@@ -4979,7 +4993,14 @@
         "sourcePublicIds": [
           "source-1dd05c6732da",
           "source-472551453001"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://flatheadcd.org/programs/education-programs/college-scholarship/",
+          "openStatus": "open_now",
+          "deadline": "March 15, 2027, 4:00 p.m."
+        }
       },
       {
         "publicId": "award-eb52009c1f31",
@@ -5021,62 +5042,67 @@
       {
         "publicId": "award-1e5f468f541c",
         "name": "Flathead Electric Basin and MECA Scholarship (2 scholarships, 1 application!)",
-        "summary": null,
+        "summary": "Basin Electric awards one $2,500 scholarship a year to a Flathead Electric member's child who is graduating from high school or in undergraduate college. MECA awards one $500 scholarship to a regional electric cooperative member's child in the same situation. Flathead Electric says one application covers both. Applications were due January 11, 2026, and the page says they are now closed.",
         "amount": {
-          "label": "$500 - $2,500",
+          "label": "Basin $2,500 and MECA $500",
           "minimum": 500,
           "maximum": 2500,
           "currency": "USD",
-          "state": "known"
+          "state": "variable"
         },
         "eligibility": {
-          "audience": "National",
+          "audience": "Child of a Flathead Electric or regional co-op member, graduating or in undergraduate college",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "closed",
+          "label": "Closed — next cycle not posted",
+          "year": 2026,
           "opens": null,
-          "closes": "1/11/2026",
-          "recurrence": "unknown"
+          "closes": "January 11, 2026",
+          "recurrence": "annual"
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
-          "url": "https://fec.submittable.com/signup?ReturnUrl=%2Fsubmit%2F277088%2F2024-meca-basin-scholarships",
+          "label": "Flathead Electric scholarships page",
+          "url": "https://www.flatheadelectric.com/our-community/educational-support/scholarships/",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-a588dc7ac60a",
           "source-ea6d80b1ff11"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.flatheadelectric.com/our-community/educational-support/scholarships/",
+          "openStatus": "closed_next_not_posted",
+          "deadline": "January 11, 2026"
+        }
       },
       {
         "publicId": "award-36ff5fe7d091",
         "name": "Flathead Electric Coop. Early Childhood Education Scholarship @ FVCC",
-        "summary": null,
+        "summary": "The Flathead Electric scholarships page says awards go each year to students interested in Flathead Valley Community College's Early Childhood Education Program. It does not state an amount, a GPA, or a current deadline for this award.",
         "amount": {
-          "label": "$500",
-          "minimum": 500,
-          "maximum": 500,
-          "currency": "USD",
-          "state": "known"
+          "label": "Amount not stated",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
         },
         "eligibility": {
-          "audience": "In-State (FVCC)",
+          "audience": "Not stated on the Flathead Electric scholarships page",
           "minimumGpa": null,
-          "schoolTypes": [
-            "other"
-          ],
+          "schoolTypes": [],
           "focus": null
         },
         "cycle": {
           "status": "unknown",
-          "label": "Availability not verified",
+          "label": "No deadline listed",
           "year": null,
           "opens": null,
           "closes": null,
@@ -5097,39 +5123,46 @@
       {
         "publicId": "award-b0e6889263b0",
         "name": "Flathead Valley Community College Eagle Scholarship",
-        "summary": "FVCC Eagle Scholarship supports new incoming degree-seeking students for the upcoming fall semester; prior degree-seeking applicants are ineligible. Running Start students may qualify when becoming degree-seeking. Selection uses recent GPA, HiSET or GED scores and available funds. Recipients must enroll in at least six credits during award semesters. Renewal for the following year is possible if the required cumulative GPA is maintained; the public page does not specify that GPA threshold. Applications open December 15 annually until funds are exhausted; an exact current application route was not visible on the checked page.",
+        "summary": "FVCC Eagle Scholarship for a new incoming degree-seeking student at Flathead Valley Community College for the upcoming fall semester. Awards use the most recent cumulative GPA, HiSET, or GED score and are first-come, first-served. Students must enroll in at least 6 credits while receiving it. Applications open December 15 each year and stay open until the funds are gone. The page does not state an award amount or a numbered GPA minimum.",
         "amount": {
-          "label": "$500",
-          "minimum": 500,
-          "maximum": 500,
-          "currency": "USD",
-          "state": "known"
+          "label": "Amount not stated",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
         },
         "eligibility": {
-          "audience": "In-State",
+          "audience": "New incoming degree-seeking FVCC student",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
+          "status": "upcoming",
+          "label": "Opens December 15",
           "year": null,
-          "opens": null,
-          "closes": "Opens 12/15",
-          "recurrence": "unknown"
+          "opens": "December 15",
+          "closes": null,
+          "recurrence": "annual"
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
-          "url": "https://fvcc.awardspring.com/",
+          "label": "FVCC scholarships page",
+          "url": "https://www.fvcc.edu/admissions-financial-aid/financial-aid-scholarships/scholarships-waivers/",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-4af7302c315a",
           "source-d83b0bcb3829"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.fvcc.edu/admissions-financial-aid/financial-aid-scholarships/scholarships-waivers/",
+          "openStatus": "opens_on",
+          "deadline": null
+        }
       },
       {
         "publicId": "award-cadbe502505a",
@@ -8382,38 +8415,45 @@
       {
         "publicId": "award-78528c7a2312",
         "name": "Louise A. Dean All Montana Tribal Nations Scholarship",
-        "summary": null,
+        "summary": "Montana Community Foundation scholarship for an enrolled member of one of the eight Tribes in Montana, with a GPA of at least 2.25 and proof of financial need, enrolled at an accredited college by the awarded term. Typically $2,500 to $3,000 a year, usually 3 to 4 recipients, for up to 4 years. Previous recipients may not apply again. The page lists an open date of January 1, 2026 and a deadline of March 31, 2026. It does not post a later cycle.",
         "amount": {
-          "label": "~$2,500–$3,000/yr",
+          "label": "Typically $2,500 to $3,000 a year",
           "minimum": 2500,
           "maximum": 3000,
           "currency": "USD",
-          "state": "known"
+          "state": "variable"
         },
         "eligibility": {
-          "audience": "Montana",
+          "audience": "Enrolled member of one of the eight Tribes in Montana",
           "minimumGpa": 2.25,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
-          "opens": null,
-          "closes": "Annual — Mar 31 (opens Jan 1)",
-          "recurrence": "annual"
+          "status": "closed",
+          "label": "Closed — next cycle not posted",
+          "year": 2026,
+          "opens": "January 1, 2026",
+          "closes": "March 31, 2026",
+          "recurrence": "unknown"
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
+          "label": "Montana Community Foundation scholarship page",
           "url": "https://mtcf.org/scholarship/louise-a-dean-all-montana-tribal-nations-scholarship",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-a47da0c72e8a"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://mtcf.org/scholarship/louise-a-dean-all-montana-tribal-nations-scholarship",
+          "openStatus": "closed_next_not_posted",
+          "deadline": "March 31, 2026"
+        }
       },
       {
         "publicId": "award-f05669a7d363",
@@ -8742,27 +8782,27 @@
       {
         "publicId": "award-6b4f548adb79",
         "name": "MABA-MGEA Scholarship",
-        "summary": null,
+        "summary": "Reach Higher Montana lists the MABA-MGEA Scholarship as two $500 awards for a high school senior who is an FFA member with a GPA of 2.0 or higher. That listing is not included in the page's January 1 to March 1 application, and no separate deadline is printed for this award.",
         "amount": {
-          "label": "$500",
+          "label": "Two $500 scholarships",
           "minimum": 500,
           "maximum": 500,
           "currency": "USD",
           "state": "known"
         },
         "eligibility": {
-          "audience": "In-State",
-          "minimumGpa": 2,
+          "audience": "High school senior and FFA member",
+          "minimumGpa": 2.0,
           "schoolTypes": [],
           "focus": "Agriculture / Ag-Business"
         },
         "cycle": {
           "status": "unknown",
-          "label": "Availability not verified",
+          "label": "No deadline listed for this award",
           "year": null,
           "opens": null,
-          "closes": "Annual — opens Jan 1, closes Mar 1",
-          "recurrence": "annual"
+          "closes": null,
+          "recurrence": "unknown"
         },
         "application": {
           "mode": "direct_per_award",
@@ -9185,39 +9225,46 @@
       {
         "publicId": "award-bb8ca59a7f0f",
         "name": "Montana Coffee Traders Scholarship (2 - $1,000)",
-        "summary": null,
+        "summary": "Whitefish Community Foundation scholarship. Two $1,000 awards: one for a Montana Coffee Traders employee or the child or legal dependent of a current employee, and one for a Flathead Valley resident. The page says applications were accepted from January 30 to March 31, 2026, at 11:59 p.m. It does not state a GPA. It does not post a later cycle.",
         "amount": {
-          "label": "$1,000",
+          "label": "Two $1,000 scholarships",
           "minimum": 1000,
           "maximum": 1000,
           "currency": "USD",
           "state": "known"
         },
         "eligibility": {
-          "audience": "National",
-          "minimumGpa": 3,
+          "audience": "MCT employee or dependent, or a Flathead Valley resident",
+          "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
-          "opens": null,
-          "closes": "3/31/2026",
+          "status": "closed",
+          "label": "Closed — next cycle not posted",
+          "year": 2026,
+          "opens": "January 30, 2026",
+          "closes": "March 31, 2026, 11:59 p.m.",
           "recurrence": "unknown"
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
-          "url": "https://www.grantinterface.com/Home/Logon?urlkey=wcfscholarship",
+          "label": "Whitefish Community Foundation scholarship page",
+          "url": "https://whitefishcommunityfoundation.org/menu/montana-coffee-traders-scholarship",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-69960d74e3d5",
           "source-bc01f0b4ec82"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://whitefishcommunityfoundation.org/menu/montana-coffee-traders-scholarship",
+          "openStatus": "closed_next_not_posted",
+          "deadline": "March 31, 2026, 11:59 p.m."
+        }
       },
       {
         "publicId": "award-a0f5a36b98a2",
@@ -12179,14 +12226,12 @@
         "eligibility": {
           "audience": "National",
           "minimumGpa": null,
-          "schoolTypes": [
-            "trade"
-          ],
+          "schoolTypes": [],
           "focus": null
         },
         "cycle": {
           "status": "unknown",
-          "label": "Recorded deadline: September 15 (annual August 1–September 15 window; cycle year not stated). Current availability not verified.",
+          "label": "August 1 to September 15; year not stated",
           "year": null,
           "opens": null,
           "closes": null,
@@ -14576,34 +14621,32 @@
       {
         "publicId": "award-2e991f852dca",
         "name": "Western Undergraduate Exchange (WUE) Tuition Discount",
-        "summary": "UM's WUE tuition discount is for new first-degree undergraduates from the program's listed qualifying states and territories, which exclude Montana. Freshmen need at least 3.0 weighted or unweighted GPA, whichever is higher; transfers need 3.5. Admission plus transcript by January 15 gives automatic consideration, not a guaranteed award; later applicants may be considered if space remains. The public deadline is yearless. Renewal can last up to four years, with 3.0 GPA and continuing enrollment; the page uses inconsistent semester-versus-annual credit wording, which needs confirmation. Missoula/Bitterroot College transfer, Montana residency and online-only enrollment forfeit the discount. WUE does not stack with UMAAS.",
+        "summary": "Western Undergraduate Exchange, run by WICHE. Students who live in a WICHE state or territory, including Montana, can pay no more than 150 percent of resident tuition at a participating public college in another WICHE state. Each school sets its own GPA, major, and deadline rules. The WICHE page does not state one current deadline.",
         "amount": {
-          "label": "Tuition Discount",
+          "label": "No more than 150% of resident tuition",
           "minimum": null,
           "maximum": null,
           "currency": null,
-          "state": "unparseable"
+          "state": "variable"
         },
         "eligibility": {
-          "audience": "National",
+          "audience": "Resident of a WICHE state or territory, including Montana",
           "minimumGpa": null,
-          "schoolTypes": [
-            "four_year"
-          ],
+          "schoolTypes": [],
           "focus": null
         },
         "cycle": {
           "status": "unknown",
-          "label": "Availability not verified",
+          "label": "No single deadline listed",
           "year": null,
           "opens": null,
-          "closes": "1/15/2026",
+          "closes": null,
           "recurrence": "unknown"
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
-          "url": "https://umontana.edu/how-to-apply/scholarships.php",
+          "label": "WICHE WUE page",
+          "url": "https://www.wiche.edu/tuition-savings/wue/",
           "groupPublicId": null,
           "supplements": "unknown"
         },
@@ -14687,7 +14730,7 @@
       {
         "publicId": "award-29c97f527be9",
         "name": "Whitefish Education Foundation - Community Service Scholarship  (2) $1,000 ",
-        "summary": null,
+        "summary": "Whitefish Education Foundation Community Service Scholarship, $1,000, for a student who exemplifies community volunteerism. The page lists 2024 recipients and says applications are available at the Whitefish High School counseling office. It does not state a current deadline.",
         "amount": {
           "label": "$1,000",
           "minimum": 1000,
@@ -14696,17 +14739,17 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "National",
+          "audience": "Whitefish High School student",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
           "status": "unknown",
-          "label": "Availability not verified",
+          "label": "No current deadline listed",
           "year": null,
           "opens": null,
-          "closes": "4/4/2025",
+          "closes": null,
           "recurrence": "unknown"
         },
         "application": {
@@ -14760,7 +14803,7 @@
       {
         "publicId": "award-5fec013fe00c",
         "name": "Whitefish Lake Institute Ripple Effect Scholarship",
-        "summary": null,
+        "summary": "Whitefish Lake Institute high school scholarship for a Columbia Falls or Whitefish High School senior entering a two-year or four-year college and planning to major in an environmental field. The page lists a $500 award and says the application, two teacher references, transcripts, and an essay are due April 15. It does not print a year next to that date and does not state a GPA minimum.",
         "amount": {
           "label": "$500",
           "minimum": 500,
@@ -14769,19 +14812,20 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "National",
-          "minimumGpa": 3,
+          "audience": "Columbia Falls or Whitefish High School senior",
+          "minimumGpa": null,
           "schoolTypes": [
+            "two_year",
             "four_year"
           ],
-          "focus": "Environmental Sciences"
+          "focus": "Environmental science"
         },
         "cycle": {
           "status": "unknown",
-          "label": "Availability not verified",
+          "label": "Deadline April 15; year not stated",
           "year": null,
           "opens": null,
-          "closes": "4/15/2026",
+          "closes": "April 15",
           "recurrence": "unknown"
         },
         "application": {
@@ -14799,26 +14843,26 @@
       {
         "publicId": "award-5230a4d409fd",
         "name": "Whitefish Lions Scholarship",
-        "summary": null,
+        "summary": "The Whitefish Lions club page says the club provides scholarships to local high school students based on volunteer service. It does not state an amount, a count of awards, or a deadline.",
         "amount": {
-          "label": "$1,000 (2)",
-          "minimum": 1000,
-          "maximum": 1000,
-          "currency": "USD",
-          "state": "known"
+          "label": "Amount not stated",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
         },
         "eligibility": {
-          "audience": "National",
+          "audience": "Local high school student",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
           "status": "unknown",
-          "label": "Availability not verified",
+          "label": "No deadline listed",
           "year": null,
           "opens": null,
-          "closes": "3/30/2026",
+          "closes": null,
           "recurrence": "unknown"
         },
         "application": {
@@ -14910,26 +14954,26 @@
       {
         "publicId": "award-5dd4c3d3988a",
         "name": "Whitefish Soroptimist Memorial Scholarship for Girls Graduating High School",
-        "summary": null,
+        "summary": "Soroptimist International of Whitefish memorial scholarship for senior girls at Whitefish, Columbia Falls, Bigfork, Flathead, and Glacier public high schools. The page lists $1,000 to $3,000, with priority for financial need and academic success and a preference for Montana colleges. It says applications are now open, but the only deadline printed is April 17, 2026.",
         "amount": {
-          "label": "$1,000 - $3,000",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "label": "$1,000 to $3,000",
+          "minimum": 1000,
+          "maximum": 3000,
+          "currency": "USD",
+          "state": "variable"
         },
         "eligibility": {
-          "audience": "National",
+          "audience": "Senior girls at Whitefish, Columbia Falls, Bigfork, Flathead, or Glacier public high schools",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
           "status": "unknown",
-          "label": "Recorded deadline: 4/17/2026. Current availability not verified.",
-          "year": null,
+          "label": "Page says open; printed deadline April 17, 2026",
+          "year": 2026,
           "opens": null,
-          "closes": null,
+          "closes": "April 17, 2026",
           "recurrence": "unknown"
         },
         "application": {
@@ -19740,7 +19784,7 @@
         "supplements": "mixed"
       }
     ],
-    "notice": "Organizer records captured September 14, 2026. Seven pilot scholarships were checked against their official pages on October 28, 2026 and are marked Verified. Every other award is not yet checked. Confirm with each provider before you apply."
+    "notice": "Organizer records captured September 14, 2026. Scholarships checked against an official page on October 28, 2026 are marked Verified. Every other award is not yet checked. Confirm with each provider before you apply."
   },
   "shortlistRows": [
     {
@@ -19895,8 +19939,9 @@
       "sourceRow": 19,
       "targetKind": "award",
       "targetId": "award-5fec013fe00c",
-      "minimumGpa": 3,
+      "minimumGpa": null,
       "schoolTypes": [
+        "two_year",
         "four_year"
       ],
       "applicationPreference": null
@@ -20042,7 +20087,7 @@
       "sourceRow": 35,
       "targetKind": "award",
       "targetId": "award-bb8ca59a7f0f",
-      "minimumGpa": 3,
+      "minimumGpa": null,
       "schoolTypes": [],
       "applicationPreference": "direct_per_award"
     },
@@ -20193,11 +20238,7 @@
       "targetKind": "award",
       "targetId": "award-5230a4d409fd",
       "minimumGpa": null,
-      "schoolTypes": [
-        "four_year",
-        "trade_vocational",
-        "two_year"
-      ],
+      "schoolTypes": [],
       "applicationPreference": "offline"
     },
     {
@@ -20426,9 +20467,7 @@
       "targetKind": "award",
       "targetId": "award-ffbd0f0b989f",
       "minimumGpa": null,
-      "schoolTypes": [
-        "trade_vocational"
-      ],
+      "schoolTypes": [],
       "applicationPreference": "direct_per_award"
     },
     {
@@ -20605,10 +20644,8 @@
       "sourceRow": 102,
       "targetKind": "award",
       "targetId": "award-2e991f852dca",
-      "minimumGpa": 3,
-      "schoolTypes": [
-        "four_year"
-      ],
+      "minimumGpa": null,
+      "schoolTypes": [],
       "applicationPreference": "automatic_consideration"
     },
     {

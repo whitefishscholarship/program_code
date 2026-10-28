@@ -28,6 +28,11 @@ const profiles:InterviewAnswers[] = [base,...[0,2,3,4].map(gpa=>({...base,gpa}))
 const clearedByOfficialPage = new Map<string, Set<string>>([
  ['award-d8ff6ef257b3', new Set(['recorded_gpa'])],
  ['award-2179b44d009d', new Set(['recorded_school'])],
+ ['award-5fec013fe00c', new Set(['recorded_gpa', 'recorded_school'])],
+ ['award-2e991f852dca', new Set(['recorded_gpa', 'recorded_school'])],
+ ['award-5230a4d409fd', new Set(['recorded_school'])],
+ ['award-ffbd0f0b989f', new Set(['recorded_school'])],
+ ['award-bb8ca59a7f0f', new Set(['recorded_gpa'])],
 ]);
 for(const profile of profiles){
  const before=shortlistAwards(old.awards,profile,SHORTLIST_PUBLICATION.rows,[]);

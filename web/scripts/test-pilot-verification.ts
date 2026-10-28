@@ -14,6 +14,13 @@ const verifiedIds = [
   'award-cd0fb7cd0c64',
   'award-52b096183d9d',
   'award-97dfaadd1d31',
+  'award-fa027b498c44',
+  'award-1e5f468f541c',
+  'award-04b4c1f204d1',
+  'award-78528c7a2312',
+  'award-bb8ca59a7f0f',
+  'award-c32eca2c949c',
+  'award-b0e6889263b0',
 ];
 const uncheckedIds = ['award-577dacb8c225', 'award-ce44143820a7'];
 
@@ -21,6 +28,11 @@ const byId = new Map(R3_CATALOG.awards.map((award) => [award.publicId, award]));
 assert.equal(R3_CATALOG.awards.filter((award) => award.verification?.status === 'verified').length, verifiedIds.length);
 for (const id of verifiedIds) assert.equal(byId.get(id)?.verification?.status, 'verified', id);
 for (const id of uncheckedIds) assert.equal(byId.get(id)?.verification, undefined, id);
+assert.equal(byId.get('award-5fec013fe00c')?.verification, undefined);
+assert.equal(byId.get('award-5fec013fe00c')?.eligibility.minimumGpa, null);
+assert.equal(byId.get('award-fa027b498c44')?.verification?.openStatus, 'closed_next_not_posted');
+assert.equal(byId.get('award-04b4c1f204d1')?.verification?.deadline, 'March 15, 2027, 4:00 p.m.');
+assert.equal(byId.get('award-140b97cfb628')?.verification, undefined);
 assert.equal(R3_CATALOG.awards.filter((award) => displayVerification(award).status === 'not_yet_checked').length, 411 - verifiedIds.length);
 
 const counted = { active: 0, upcoming: 0, closed: 0, unavailable: 0, unknown: 0 };
