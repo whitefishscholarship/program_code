@@ -25,11 +25,11 @@
       "awards": 411,
       "applicationGroups": 4,
       "cycles": 411,
-      "activeCycles": 36,
-      "upcomingCycles": 51,
-      "closedCycles": 57,
+      "activeCycles": 44,
+      "upcomingCycles": 53,
+      "closedCycles": 61,
       "unavailableCycles": 0,
-      "unknownCycles": 267,
+      "unknownCycles": 253,
       "minimumObservedRecipientSlots": 71
     },
     "awards": [
@@ -9284,38 +9284,39 @@
       {
         "publicId": "award-bb776f54425c",
         "name": "LogTen Pro CFII Training Scholarship (NGPA)",
-        "summary": "NGPA 2026 scholarship, now closed. Pursuing CFII training. Universal requirements: active NGPA membership and age 18 or older. Flight-training awards require a current third-class medical or higher and at least a student pilot certificate; medical is not required for non-flight awards. Allies may apply with a documented history of LGBTQ+ advocacy. Applications had to be started by July 31,2026 and completed by August 7,2026 at 11:59 pm Pacific. The FAQ says most industry-sponsored awards require US work authorization; confirm the specific sponsor condition. No GPA, renewal or later-cycle deadline is stated.",
+        "summary": "NGPA lists the LogTen Pro CFII Training Scholarship at $3,000 for a person pursuing CFII training. NGPA sends the funds to the flight school. Universal requirements on the page are active NGPA membership, age 18 or older, and at least a current third-class medical for flight-training scholarships. The page does not state a deadline.",
         "amount": {
-          "label": "$3000",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "label": "$3,000",
+          "minimum": 3000,
+          "maximum": 3000,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Active NGPA member, age 18 or older, pursuing CFII training",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
           "status": "unknown",
-          "label": "Recorded deadline: 2026-08-07 23:59 PT (closed; application start deadline2026-07-31). Current availability not verified.",
+          "label": "Availability not verified",
           "year": null,
           "opens": null,
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "Apply through NGPA scholarship tab to Reviewr during the window: https://www.ngpa.org/applynow . Public login observed; authenticated application not tested.",
-          "url": null,
+          "mode": "direct_per_award",
+          "label": "NGPA 2026 scholarships",
+          "url": "https://www.ngpa.org/2026_scholarships",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-bb776f54425c"
-        ]
+        ],
+        "verificationNote": "The 2026 scholarships page lists this award and does not state a deadline. The FAQ says the next cycle opens in June 2027 and also points to a 2025 list."
       },
       {
         "publicId": "award-d81c0b25b5de",
@@ -9407,376 +9408,16 @@
       {
         "publicId": "award-f05669a7d363",
         "name": "LPA Advanced Rating Scholarship",
-        "summary": "Spring 2026 LPA scholarship; application deadline May 10, 2026 at 11:59 pm Pacific has passed. Commercial, multi-engine, instructor, ATP/CTP or selected type ratings. A current private pilot certificate is required for commercial training; a commercial certificate is required for the other listed advanced ratings. All applicants must be active LPA members, at least 17 years old (18 for Epic/UAA), and accepted to or enrolled at an accredited institution in the US or its territories. Enrollment evidence is required upon award; funds go directly to the institution. Resume, two recommendations and two essays are application steps. Next cycle, GPA and renewal are unconfirmed. Ethnicity is not inferred as an eligibility condition from the organization’s name.",
-        "amount": {
-          "label": "Amount not recorded",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unknown"
-        },
-        "eligibility": {
-          "audience": "Geography not recorded",
-          "minimumGpa": null,
-          "schoolTypes": [],
-          "focus": null
-        },
-        "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 2026-05-10 23:59 PT (closed; next cycle unknown). Current availability not verified.",
-          "year": null,
-          "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
-        },
-        "application": {
-          "mode": "unknown",
-          "label": "Sign in or join LPA, then open the Scholarship Portal through the Membership Hub during the application window. Membership enrollment link: https://latinopilot.app.neoncrm.com/forms/newmembership2024 . Official instructions: https://www.lpa-aero.org/scholarships . Authenticated scholarship portal not tested; spring2026 cycle closed.",
-          "url": null,
-          "groupPublicId": null,
-          "supplements": "unknown"
-        },
-        "sourcePublicIds": [
-          "source-f05669a7d363"
-        ]
-      },
-      {
-        "publicId": "award-063f7b85a1ae",
-        "name": "LPA Aerospace Degree Advancement Scholarship",
-        "summary": "Spring 2026 LPA scholarship; application deadline May 10, 2026 at 11:59 pm Pacific has passed. Aerospace-related degree study, including engineering, business, maintenance, air traffic control, dispatch or technology. Flight training is expressly excluded. All applicants must be active LPA members, at least 17 years old (18 for Epic/UAA), and accepted to or enrolled at an accredited institution in the US or its territories. Enrollment evidence is required upon award; funds go directly to the institution. Resume, two recommendations and two essays are application steps. Next cycle, GPA and renewal are unconfirmed. Ethnicity is not inferred as an eligibility condition from the organization’s name.",
-        "amount": {
-          "label": "Amount not recorded",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unknown"
-        },
-        "eligibility": {
-          "audience": "Geography not recorded",
-          "minimumGpa": null,
-          "schoolTypes": [],
-          "focus": null
-        },
-        "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 2026-05-10 23:59 PT (closed; next cycle unknown). Current availability not verified.",
-          "year": null,
-          "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
-        },
-        "application": {
-          "mode": "unknown",
-          "label": "Sign in or join LPA, then open the Scholarship Portal through the Membership Hub during the application window. Membership enrollment link: https://latinopilot.app.neoncrm.com/forms/newmembership2024 . Official instructions: https://www.lpa-aero.org/scholarships . Authenticated scholarship portal not tested; spring2026 cycle closed.",
-          "url": null,
-          "groupPublicId": null,
-          "supplements": "unknown"
-        },
-        "sourcePublicIds": [
-          "source-063f7b85a1ae"
-        ]
-      },
-      {
-        "publicId": "award-4eb144ad1c26",
-        "name": "LPA Aviation Maintenance Technician Scholarship",
-        "summary": "Spring 2026 LPA scholarship; application deadline May 10, 2026 at 11:59 pm Pacific has passed. Airframe and Powerplant or Inspection Authorization training; enrolled or planning to enroll in an FAA-recognized A&P program. All applicants must be active LPA members, at least 17 years old (18 for Epic/UAA), and accepted to or enrolled at an accredited institution in the US or its territories. Enrollment evidence is required upon award; funds go directly to the institution. Resume, two recommendations and two essays are application steps. Next cycle, GPA and renewal are unconfirmed. Ethnicity is not inferred as an eligibility condition from the organization’s name.",
-        "amount": {
-          "label": "Amount not recorded",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unknown"
-        },
-        "eligibility": {
-          "audience": "Geography not recorded",
-          "minimumGpa": null,
-          "schoolTypes": [],
-          "focus": null
-        },
-        "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 2026-05-10 23:59 PT (closed; next cycle unknown). Current availability not verified.",
-          "year": null,
-          "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
-        },
-        "application": {
-          "mode": "unknown",
-          "label": "Sign in or join LPA, then open the Scholarship Portal through the Membership Hub during the application window. Membership enrollment link: https://latinopilot.app.neoncrm.com/forms/newmembership2024 . Official instructions: https://www.lpa-aero.org/scholarships . Authenticated scholarship portal not tested; spring2026 cycle closed.",
-          "url": null,
-          "groupPublicId": null,
-          "supplements": "unknown"
-        },
-        "sourcePublicIds": [
-          "source-4eb144ad1c26"
-        ]
-      },
-      {
-        "publicId": "award-6299e3690153",
-        "name": "LPA Private Pilot Scholarship",
-        "summary": "Spring 2026 LPA scholarship; application deadline May 10, 2026 at 11:59 pm Pacific has passed. Private pilot training, current third-class medical and student pilot certificate; enrolled or planning to enroll in a Part 61 or Part 141 flight school. All applicants must be active LPA members, at least 17 years old (18 for Epic/UAA), and accepted to or enrolled at an accredited institution in the US or its territories. Enrollment evidence is required upon award; funds go directly to the institution. Resume, two recommendations and two essays are application steps. Next cycle, GPA and renewal are unconfirmed. Ethnicity is not inferred as an eligibility condition from the organization’s name.",
-        "amount": {
-          "label": "Amount not recorded",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unknown"
-        },
-        "eligibility": {
-          "audience": "Geography not recorded",
-          "minimumGpa": null,
-          "schoolTypes": [],
-          "focus": null
-        },
-        "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 2026-05-10 23:59 PT (closed; next cycle unknown). Current availability not verified.",
-          "year": null,
-          "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
-        },
-        "application": {
-          "mode": "unknown",
-          "label": "Sign in or join LPA, then open the Scholarship Portal through the Membership Hub during the application window. Membership enrollment link: https://latinopilot.app.neoncrm.com/forms/newmembership2024 . Official instructions: https://www.lpa-aero.org/scholarships . Authenticated scholarship portal not tested; spring2026 cycle closed.",
-          "url": null,
-          "groupPublicId": null,
-          "supplements": "unknown"
-        },
-        "sourcePublicIds": [
-          "source-6299e3690153"
-        ]
-      },
-      {
-        "publicId": "award-f3ea8c7493c6",
-        "name": "LPA Professional Flight Degree Scholarship",
-        "summary": "Spring 2026 LPA scholarship; application deadline May 10, 2026 at 11:59 pm Pacific has passed. Enrollment in an accredited professional flight degree program; supports associated tuition, flight fees and training. All applicants must be active LPA members, at least 17 years old (18 for Epic/UAA), and accepted to or enrolled at an accredited institution in the US or its territories. Enrollment evidence is required upon award; funds go directly to the institution. Resume, two recommendations and two essays are application steps. Next cycle, GPA and renewal are unconfirmed. Ethnicity is not inferred as an eligibility condition from the organization’s name.",
-        "amount": {
-          "label": "Amount not recorded",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unknown"
-        },
-        "eligibility": {
-          "audience": "Geography not recorded",
-          "minimumGpa": null,
-          "schoolTypes": [],
-          "focus": null
-        },
-        "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 2026-05-10 23:59 PT (closed; next cycle unknown). Current availability not verified.",
-          "year": null,
-          "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
-        },
-        "application": {
-          "mode": "unknown",
-          "label": "Sign in or join LPA, then open the Scholarship Portal through the Membership Hub during the application window. Membership enrollment link: https://latinopilot.app.neoncrm.com/forms/newmembership2024 . Official instructions: https://www.lpa-aero.org/scholarships . Authenticated scholarship portal not tested; spring2026 cycle closed.",
-          "url": null,
-          "groupPublicId": null,
-          "supplements": "unknown"
-        },
-        "sourcePublicIds": [
-          "source-f3ea8c7493c6"
-        ]
-      },
-      {
-        "publicId": "award-e7ee72738a89",
-        "name": "LPA VOLAR Military Scholarship",
-        "summary": "Spring 2026 LPA scholarship; application deadline May 10, 2026 at 11:59 pm Pacific has passed. Active-duty military, reservists, veterans and military-affiliated applicants pursuing aviation or aerospace training. The page requests military identification; exact family-affiliation limits are not stated. All applicants must be active LPA members, at least 17 years old (18 for Epic/UAA), and accepted to or enrolled at an accredited institution in the US or its territories. Enrollment evidence is required upon award; funds go directly to the institution. Resume, two recommendations and two essays are application steps. Next cycle, GPA and renewal are unconfirmed. Ethnicity is not inferred as an eligibility condition from the organization’s name.",
-        "amount": {
-          "label": "Amount not recorded",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unknown"
-        },
-        "eligibility": {
-          "audience": "Geography not recorded",
-          "minimumGpa": null,
-          "schoolTypes": [],
-          "focus": null
-        },
-        "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 2026-05-10 23:59 PT (closed; next cycle unknown). Current availability not verified.",
-          "year": null,
-          "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
-        },
-        "application": {
-          "mode": "unknown",
-          "label": "Sign in or join LPA, then open the Scholarship Portal through the Membership Hub during the application window. Membership enrollment link: https://latinopilot.app.neoncrm.com/forms/newmembership2024 . Official instructions: https://www.lpa-aero.org/scholarships . Authenticated scholarship portal not tested; spring2026 cycle closed.",
-          "url": null,
-          "groupPublicId": null,
-          "supplements": "unknown"
-        },
-        "sourcePublicIds": [
-          "source-e7ee72738a89"
-        ]
-      },
-      {
-        "publicId": "award-4156f119417d",
-        "name": "Lt. Col. Romeo and Josephine Bass Ferretti Scholarship",
-        "summary": "Ferretti Scholarship offers one5000award to a minor dependent of active-duty or retired enlisted Air Force, Air Force Reserve, Air National Guard or Space Force personnel. The child record requires a2026high-school graduate entering first year at an accredited university in STEM. Selection considers academic achievement, character and financial need. Required materials include an essay up to600words, signed recommendation, official high-school transcript, acceptance identifying STEM major and first-term tuition/fees. Use the exact provider-linked SmarterSelect program record. NumericGPA, application deadline, current opening and renewal are unverified; military-dependent status alone does not establish all conditions.",
-        "amount": {
-          "label": "$5,000; one award",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
-        },
-        "eligibility": {
-          "audience": "Geography not recorded",
-          "minimumGpa": null,
-          "schoolTypes": [],
-          "focus": null
-        },
-        "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: Unknown. Current availability not verified.",
-          "year": null,
-          "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
-        },
-        "application": {
-          "mode": "unknown",
-          "label": "https://app.smarterselect.com/programs/94006-Air--Space-Forces-Association",
-          "url": "https://app.smarterselect.com/programs/94006-Air--Space-Forces-Association",
-          "groupPublicId": null,
-          "supplements": "unknown"
-        },
-        "sourcePublicIds": [
-          "source-4156f119417d"
-        ]
-      },
-      {
-        "publicId": "award-8d772774a201",
-        "name": "M.C. and Florence Kolstad Vocational Technical Scholarship",
-        "summary": "The linked general form requires admission application and high-school cumulative GPA 2.25 for first-year students; transfer applicants need 12 graded college credits and cumulative college GPA 2.25. Current/former DCC students need degree-seeking admission, degree/certificate enrollment or plans, 12 graded credits and GPA 2.0; dual-enrollment students need 12 credits to use the returning category. Resume, academic-goals essay, transcripts, two recommendations and award-specific materials are required. DCC requires FAFSA for need-based awards. These general conditions do not replace higher or narrower award-specific conditions. The linked form specifies Gas and Diesel Technology or Welding Technology, with returning sophomores preferred. These specific programs narrow the foundation’s generic skill-based description. Dawson Community College scholarship. Skill-based vocational program at DCC; original auto-mechanics program discontinued. Academic achievement and recommendations rather than need. The foundation listing is undated and marked under construction; confirm award-specific conditions and funding for the application cycle. DCC’s 2026–27 general scholarship priority deadline was March 1, 2026, but its official page says late applicants should still apply. General application combines foundation awards; specific committee/coursework/packet requirements above remain separate. No single GPA threshold is proposed because it depends on applicant category and award conditions. Any unsupported amount, renewal or gap-year condition remains unknown.",
-        "amount": {
-          "label": "Amount not recorded",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unknown"
-        },
-        "eligibility": {
-          "audience": "Geography not recorded",
-          "minimumGpa": null,
-          "schoolTypes": [],
-          "focus": null
-        },
-        "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 2026-03-01 priority (general; late applications allowed; award-specific dates may differ). Current availability not verified.",
-          "year": null,
-          "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
-        },
-        "application": {
-          "mode": "unknown",
-          "label": "https://dawsoncommunitycollege.formstack.com/forms/dcc_general_scholarship_application",
-          "url": "https://dawsoncommunitycollege.formstack.com/forms/dcc_general_scholarship_application",
-          "groupPublicId": null,
-          "supplements": "unknown"
-        },
-        "sourcePublicIds": [
-          "source-8d772774a201"
-        ]
-      },
-      {
-        "publicId": "award-38d067ff9b32",
-        "name": "M.L. Graves Memorial Scholarship (DCC)",
-        "summary": "The linked general form requires admission application and high-school cumulative GPA 2.25 for first-year students; transfer applicants need 12 graded college credits and cumulative college GPA 2.25. Current/former DCC students need degree-seeking admission, degree/certificate enrollment or plans, 12 graded credits and GPA 2.0; dual-enrollment students need 12 credits to use the returning category. Resume, academic-goals essay, transcripts, two recommendations and award-specific materials are required. DCC requires FAFSA for need-based awards. These general conditions do not replace higher or narrower award-specific conditions. Education major OR baseball/softball athlete. Education applicants must have completed EDU 200 or approved EDU course and submit a philosophy-of-education essay. Returning sophomores preferred. The form offers 2026–27 applications; general priority deadline March 1, 2026 is past but DCC encourages late applications. Award-specific dates, renewal and any unlisted restrictions remain unverified.",
-        "amount": {
-          "label": "Up to$1200",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
-        },
-        "eligibility": {
-          "audience": "Geography not recorded",
-          "minimumGpa": null,
-          "schoolTypes": [],
-          "focus": null
-        },
-        "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: 2026-03-01 priority (general; late applications allowed). Current availability not verified.",
-          "year": null,
-          "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
-        },
-        "application": {
-          "mode": "unknown",
-          "label": "https://dawsoncommunitycollege.formstack.com/forms/dcc_general_scholarship_application",
-          "url": "https://dawsoncommunitycollege.formstack.com/forms/dcc_general_scholarship_application",
-          "groupPublicId": null,
-          "supplements": "unknown"
-        },
-        "sourcePublicIds": [
-          "source-38d067ff9b32"
-        ]
-      },
-      {
-        "publicId": "award-6b4f548adb79",
-        "name": "MABA-MGEA Scholarship",
-        "summary": "Reach Higher Montana lists the MABA-MGEA Scholarship as two $500 awards for a high school senior who is an FFA member with a GPA of 2.0 or higher. That listing is not included in the page's January 1 to March 1 application, and no separate deadline is printed for this award.",
-        "amount": {
-          "label": "Two $500 scholarships",
-          "minimum": 500,
-          "maximum": 500,
-          "currency": "USD",
-          "state": "known"
-        },
-        "eligibility": {
-          "audience": "High school senior and FFA member",
-          "minimumGpa": 2,
-          "schoolTypes": [],
-          "focus": "Agriculture / Ag-Business"
-        },
-        "cycle": {
-          "status": "unknown",
-          "label": "No deadline listed for this award",
-          "year": null,
-          "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
-        },
-        "application": {
-          "mode": "direct_per_award",
-          "label": "Separate application for this award",
-          "url": "https://reachhighermontana.org/pay-for-school/scholarships",
-          "groupPublicId": null,
-          "supplements": "unknown"
-        },
-        "sourcePublicIds": [
-          "source-e6d5e0366500"
-        ]
-      },
-      {
-        "publicId": "award-116fe9ce5784",
-        "name": "Margaret & Jane Fellows Drama/Theatre Scholarship ($500)",
         "summary": null,
         "amount": {
-          "label": "$500",
-          "minimum": 500,
-          "maximum": 500,
-          "currency": "USD",
-          "state": "known"
+          "label": "Amount not stated",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
         },
         "eligibility": {
-          "audience": "National",
+          "audience": "Not listed on the current LPA scholarships page",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
@@ -9786,40 +9427,437 @@
           "label": "Availability not verified",
           "year": null,
           "opens": null,
-          "closes": "4/25/2025",
+          "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "offline",
-          "label": "Paper or counselor-provided application",
-          "url": "https://drive.google.com/file/d/1btB704nlikOJDiqFT0RgVmsVOVcCEM9g/view",
+          "mode": "unknown",
+          "label": "https://www.lpa-aero.org/scholarships",
+          "url": "https://www.lpa-aero.org/scholarships",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
-          "source-8a86fc24cb20"
-        ]
+          "source-f05669a7d363"
+        ],
+        "verificationNote": "The current LPA scholarships page does not list this award."
       },
       {
-        "publicId": "award-b1a9ae5d6f04",
-        "name": "Mark R. Baker Primary FT Scholarship",
-        "summary": "AOPA lists this named fund under Examples of Past Scholarships. Historical terms: Primary pilot certification; other award-specific restrictions not stated. Historical amount: $10000. The current general application requires AOPA membership and residence in US/DC, Canada, Guam, Puerto Rico or US Virgin Islands; HS membership is free. Applications reopen October 1, 2026, but this child fund’s next offering and funding is unconfirmed. The fall deadline conflicts between parent December 30 and FAQ December 31, so no exact deadline is proposed. Flight training normally completed within 12 months; maintenance training within 24 months. Award-specific prerequisites must be confirmed for the next cycle.",
+        "publicId": "award-063f7b85a1ae",
+        "name": "LPA Aerospace Degree Advancement Scholarship",
+        "summary": "LPA Aerospace Degree Advancement Scholarship for a student enrolled in or accepted into an accredited institution in an aerospace field such as engineering, business, aircraft maintenance, air traffic control, dispatch, or aerospace technology. Flight training is excluded. The page says the award varies and that 3 awards are available. The Fall 2026 cycle opened October 15, 2026 and the deadline is November 5, 2026.",
         "amount": {
-          "label": "$10000 (past example; next funding unconfirmed)",
+          "label": "Award varies",
           "minimum": null,
           "maximum": null,
           "currency": null,
-          "state": "unparseable"
+          "state": "variable"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Student enrolled in or accepted into an accredited aerospace program; flight training is excluded",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": "Aerospace"
+        },
+        "cycle": {
+          "status": "active",
+          "label": "Open",
+          "year": 2026,
+          "opens": "October 15, 2026",
+          "closes": "November 5, 2026",
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "LPA scholarships",
+          "url": "https://www.lpa-aero.org/scholarships",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-063f7b85a1ae"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.lpa-aero.org/scholarships",
+          "openStatus": "open_now",
+          "deadline": "November 5, 2026"
+        }
+      },
+      {
+        "publicId": "award-4eb144ad1c26",
+        "name": "LPA Aviation Maintenance Technician Scholarship",
+        "summary": "LPA Aviation Maintenance Technician Scholarship for a person pursuing an FAA Airframe and Powerplant certificate and/or Inspection Authorization. The applicant must be enrolled in or planning to enroll in an FAA-recognized A&P program in the United States or its territories. The page says the award varies and that 4 awards are available. The Fall 2026 cycle opened October 15, 2026 and the deadline is November 5, 2026.",
+        "amount": {
+          "label": "Award varies",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "Person enrolled in or planning to enroll in an FAA-recognized A&P program in the United States or its territories",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": "Aviation maintenance"
+        },
+        "cycle": {
+          "status": "active",
+          "label": "Open",
+          "year": 2026,
+          "opens": "October 15, 2026",
+          "closes": "November 5, 2026",
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "LPA scholarships",
+          "url": "https://www.lpa-aero.org/scholarships",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-4eb144ad1c26"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.lpa-aero.org/scholarships",
+          "openStatus": "open_now",
+          "deadline": "November 5, 2026"
+        }
+      },
+      {
+        "publicId": "award-6299e3690153",
+        "name": "LPA Private Pilot Scholarship",
+        "summary": null,
+        "amount": {
+          "label": "Amount not stated",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "Not listed on the current LPA scholarships page",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
           "status": "unknown",
-          "label": "Recorded deadline: Unknown. Current availability not verified.",
+          "label": "Availability not verified",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "unknown",
+          "label": "https://www.lpa-aero.org/scholarships",
+          "url": "https://www.lpa-aero.org/scholarships",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-6299e3690153"
+        ],
+        "verificationNote": "The current LPA scholarships page does not list this award."
+      },
+      {
+        "publicId": "award-f3ea8c7493c6",
+        "name": "LPA Professional Flight Degree Scholarship",
+        "summary": "LPA Professional Flight Degree Scholarship for a student enrolled in or accepted into an accredited professional flight degree program. It supports tuition, flight fees, and required training. The page says the award varies and that 2 awards are available. The Fall 2026 cycle opened October 15, 2026 and the deadline is November 5, 2026.",
+        "amount": {
+          "label": "Award varies",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "Student enrolled in or accepted into an accredited professional flight degree program",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": "Professional flight"
+        },
+        "cycle": {
+          "status": "active",
+          "label": "Open",
+          "year": 2026,
+          "opens": "October 15, 2026",
+          "closes": "November 5, 2026",
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "LPA scholarships",
+          "url": "https://www.lpa-aero.org/scholarships",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-f3ea8c7493c6"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.lpa-aero.org/scholarships",
+          "openStatus": "open_now",
+          "deadline": "November 5, 2026"
+        }
+      },
+      {
+        "publicId": "award-e7ee72738a89",
+        "name": "LPA VOLAR Military Scholarship",
+        "summary": null,
+        "amount": {
+          "label": "Amount not stated",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "Not listed on the current LPA scholarships page",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Availability not verified",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "unknown",
+          "label": "https://www.lpa-aero.org/scholarships",
+          "url": "https://www.lpa-aero.org/scholarships",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-e7ee72738a89"
+        ],
+        "verificationNote": "The current LPA scholarships page does not list this award."
+      },
+      {
+        "publicId": "award-4156f119417d",
+        "name": "Lt. Col. Romeo and Josephine Bass Ferretti Scholarship",
+        "summary": "Lt. Col. Romeo and Josephine Bass Ferretti Scholarship of $5,000, one award, for a minor dependent of an enlisted Air Force, Air Force Reserve, Air National Guard, or Space Force member who is active duty or retired. The student must have graduated high school in 2026 and be entering the first year at an accredited university in a STEM field. The page says the deadline was April 30, 2026 at 11:59 p.m. EDT and that the program is closed. It does not post a next cycle.",
+        "amount": {
+          "label": "$5,000",
+          "minimum": 5000,
+          "maximum": 5000,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "Minor dependent of an enlisted Air Force, Air Force Reserve, Air National Guard, or Space Force member who is active duty or retired; 2026 high school graduate entering a STEM program",
+          "minimumGpa": null,
+          "schoolTypes": [
+            "four_year"
+          ],
+          "focus": "STEM"
+        },
+        "cycle": {
+          "status": "closed",
+          "label": "Closed",
+          "year": 2026,
+          "opens": "December 1, 2025",
+          "closes": "April 30, 2026 at 11:59 p.m. EDT",
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Ferretti Scholarship",
+          "url": "https://app.smarterselect.com/programs/94006-Air--Space-Forces-Association",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-4156f119417d"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://app.smarterselect.com/programs/94006-Air--Space-Forces-Association",
+          "openStatus": "closed_next_not_posted",
+          "deadline": "April 30, 2026 at 11:59 p.m. EDT"
+        }
+      },
+      {
+        "publicId": "award-8d772774a201",
+        "name": "M.C. and Florence Kolstad Vocational Technical Scholarship",
+        "summary": "The DCC application lists the M.C. and Florence Kolstad scholarship for a gas and diesel technology or welding technology major, with preference for a returning sophomore. It says the amount varies up to $500. It does not state a deadline.",
+        "amount": {
+          "label": "Up to $500",
+          "minimum": null,
+          "maximum": 500,
+          "currency": "USD",
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "Gas and diesel technology or welding technology major at Dawson Community College",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": "Gas and diesel technology or welding"
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Availability not verified",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "DCC general scholarship application",
+          "url": "https://dawsoncommunitycollege.formstack.com/forms/dcc_general_scholarship_application",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-8d772774a201"
+        ],
+        "verificationNote": "The DCC application lists this award at up to $500 and does not state a deadline."
+      },
+      {
+        "publicId": "award-38d067ff9b32",
+        "name": "M.L. Graves Memorial Scholarship (DCC)",
+        "summary": "The DCC application lists the M.L. Graves Memorial Scholarship for an education major or a baseball or softball athlete. Education majors must have completed EDU 200 or an approved EDU course and include a philosophy-of-education essay. It says the amount varies up to $1,200, with preference for a returning sophomore. It does not state a deadline.",
+        "amount": {
+          "label": "Up to $1,200",
+          "minimum": null,
+          "maximum": 1200,
+          "currency": "USD",
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "Education major or baseball or softball athlete at Dawson Community College",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": "Education"
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Availability not verified",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "DCC general scholarship application",
+          "url": "https://dawsoncommunitycollege.formstack.com/forms/dcc_general_scholarship_application",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-38d067ff9b32"
+        ],
+        "verificationNote": "The DCC application lists this award at up to $1,200 and does not state a deadline."
+      },
+      {
+        "publicId": "award-6b4f548adb79",
+        "name": "MABA-MGEA Scholarship",
+        "summary": "Reach Higher Montana lists the MABA-MGEA Scholarship as two $500 awards for a high school senior who is an FFA member with a GPA of 2.0 or higher. The application window on the page is January 1 through March 1 and does not name a year.",
+        "amount": {
+          "label": "$500",
+          "minimum": 500,
+          "maximum": 500,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "High school senior and FFA member",
+          "minimumGpa": 2,
+          "schoolTypes": [],
+          "focus": "Agriculture"
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Availability not verified",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Reach Higher Montana scholarships",
+          "url": "https://reachhighermontana.org/pay-for-school/scholarships",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-e6d5e0366500"
+        ],
+        "verificationNote": "The page lists this award and a yearless application window of January 1 to March 1."
+      },
+      {
+        "publicId": "award-116fe9ce5784",
+        "name": "Margaret & Jane Fellows Drama/Theatre Scholarship ($500)",
+        "summary": "The Margaret and Jane Fellows Drama/Theatre Scholarship application says the deadline is April 25 and that the scholarship amount varies. It is for an applicant who has participated in theatre. It does not name a year.",
+        "amount": {
+          "label": "Amount varies",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "Applicant who has participated in theatre",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": "Theatre"
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Availability not verified",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "offline",
+          "label": "Fellows drama/theatre scholarship application",
+          "url": "https://drive.google.com/file/d/1btB704nlikOJDiqFT0RgVmsVOVcCEM9g/view",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-8a86fc24cb20"
+        ],
+        "verificationNote": "The application gives an April 25 deadline and does not name a year."
+      },
+      {
+        "publicId": "award-b1a9ae5d6f04",
+        "name": "Mark R. Baker Primary FT Scholarship",
+        "summary": "The AOPA page lists this under examples of past scholarships: $10,000 for primary certification. The page does not give this named award a current deadline.",
+        "amount": {
+          "label": "$10,000",
+          "minimum": 10000,
+          "maximum": 10000,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "Past example: primary certification",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Availability not verified",
           "year": null,
           "opens": null,
           "closes": null,
@@ -9834,93 +9872,102 @@
         },
         "sourcePublicIds": [
           "source-b1a9ae5d6f04"
-        ]
+        ],
+        "verificationNote": "Listed only as an example of a past scholarship, with no current cycle."
       },
       {
         "publicId": "award-0c110e5a2639",
         "name": "Marshall Temple Memorial Scholarship",
-        "summary": "High-school senior or college student planning or attending an accredited avionics or aircraft-maintenance program. AEA lists the 2026-2027 cycle as closed; return to its program page in October for 2027-2028 details. Exact next deadline, GPA and renewal terms are unknown.",
+        "summary": "AEA Marshall Temple Memorial Scholarship of $1,000 for a high school senior or college student who plans to attend or is attending an accredited avionics or aircraft maintenance program. The page says applications for the 2027-28 school year are now available. It does not state a deadline.",
         "amount": {
           "label": "$1,000",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "minimum": 1000,
+          "maximum": 1000,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "High school senior or college student in an accredited avionics or aircraft maintenance program",
           "minimumGpa": null,
           "schoolTypes": [],
-          "focus": "Avionics / Aircraft Maintenance"
+          "focus": "Avionics or aircraft maintenance"
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: Closed: 2026-2027; next deadline unknown. Current availability not verified.",
-          "year": null,
+          "status": "active",
+          "label": "Open",
+          "year": 2028,
           "opens": null,
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "AEA program page: https://aea.net/scholarship (closed cycle; next instructions in October)",
-          "url": null,
+          "mode": "direct_per_award",
+          "label": "AEA Educational Foundation scholarships",
+          "url": "https://aea.net/educationalfoundation/scholarships.asp",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-0c110e5a2639"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://aea.net/educationalfoundation/scholarships.asp",
+          "openStatus": "open_now",
+          "deadline": null
+        }
       },
       {
         "publicId": "award-50b400bb43b2",
         "name": "MDU Foundation Scholarship (DCC)",
-        "summary": "The linked general form requires admission application and high-school cumulative GPA 2.25 for first-year students; transfer applicants need 12 graded college credits and cumulative college GPA 2.25. Current/former DCC students need degree-seeking admission, degree/certificate enrollment or plans, 12 graded credits and GPA 2.0; dual-enrollment students need 12 credits to use the returning category. Resume, academic-goals essay, transcripts, two recommendations and award-specific materials are required. DCC requires FAFSA for need-based awards. These general conditions do not replace higher or narrower award-specific conditions. Engineering, business or computer-science major; returning sophomores preferred. Two recipient slots are one named award. The form offers 2026–27 applications; general priority deadline March 1, 2026 is past but DCC encourages late applications. Award-specific dates, renewal and any unlisted restrictions remain unverified.",
+        "summary": "The DCC application lists the MDU Foundation Scholarship for an engineering, business, or computer-science major, with preference for a returning sophomore. It says there are two awards of up to $1,000 each. It does not state a deadline.",
         "amount": {
-          "label": "Up to$1000",
+          "label": "Up to $1,000",
           "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "maximum": 1000,
+          "currency": "USD",
+          "state": "variable"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Engineering, business, or computer-science major at Dawson Community College",
           "minimumGpa": null,
           "schoolTypes": [],
-          "focus": null
+          "focus": "Engineering, business, or computer science"
         },
         "cycle": {
           "status": "unknown",
-          "label": "Recorded deadline: 2026-03-01 priority (general; late applications allowed). Current availability not verified.",
+          "label": "Availability not verified",
           "year": null,
           "opens": null,
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "https://dawsoncommunitycollege.formstack.com/forms/dcc_general_scholarship_application",
+          "mode": "direct_per_award",
+          "label": "DCC general scholarship application",
           "url": "https://dawsoncommunitycollege.formstack.com/forms/dcc_general_scholarship_application",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-50b400bb43b2"
-        ]
+        ],
+        "verificationNote": "The DCC application lists two awards of up to $1,000 and does not state a deadline."
       },
       {
         "publicId": "award-e17a43d5029c",
         "name": "Memorial Scholarship (6 awards)",
-        "summary": null,
+        "summary": "The memorial scholarship application covers six named memorial scholarships. It says the amount is yet to be determined and the deadline is April 16. The student must be a graduating Whitefish High School senior. It does not name a year.",
         "amount": {
-          "label": "TBD",
+          "label": "Amount not stated",
           "minimum": null,
           "maximum": null,
           "currency": null,
-          "state": "unparseable"
+          "state": "unknown"
         },
         "eligibility": {
-          "audience": "National",
+          "audience": "Graduating Whitefish High School senior",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
@@ -9930,19 +9977,20 @@
           "label": "Availability not verified",
           "year": null,
           "opens": null,
-          "closes": "4/16/2024",
+          "closes": null,
           "recurrence": "unknown"
         },
         "application": {
           "mode": "offline",
-          "label": "Paper or counselor-provided application",
+          "label": "Memorial scholarship application",
           "url": "https://drive.google.com/file/d/1yrRwraJmwZqG4xn7pzbXK3U4nymt3ooc/view",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-d8e086af8bbd"
-        ]
+        ],
+        "verificationNote": "The application gives an April 16 deadline and does not name a year."
       },
       {
         "publicId": "award-a02e4b043558",
@@ -9995,117 +10043,7 @@
       {
         "publicId": "award-a2ee8e443eb2",
         "name": "Mid-Continent Instruments and Avionics Scholarship",
-        "summary": "High-school senior or college student planning or attending an accredited avionics or aircraft-maintenance program. AEA lists the 2026-2027 cycle as closed; return to its program page in October for 2027-2028 details. Exact next deadline, GPA and renewal terms are unknown.",
-        "amount": {
-          "label": "$1,000",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
-        },
-        "eligibility": {
-          "audience": "Geography not recorded",
-          "minimumGpa": null,
-          "schoolTypes": [],
-          "focus": "Avionics / Aircraft Maintenance"
-        },
-        "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: Closed: 2026-2027; next deadline unknown. Current availability not verified.",
-          "year": null,
-          "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
-        },
-        "application": {
-          "mode": "unknown",
-          "label": "AEA program page: https://aea.net/scholarship (closed cycle; next instructions in October)",
-          "url": null,
-          "groupPublicId": null,
-          "supplements": "unknown"
-        },
-        "sourcePublicIds": [
-          "source-a2ee8e443eb2"
-        ]
-      },
-      {
-        "publicId": "award-11c663acf42e",
-        "name": "Mike and Gail Donley Spouse Scholarships",
-        "summary": "Donley Spouse Scholarship offers3000 to a spouse of eligible Air Force/Space Force personnel or Department of the Air Force civilian employee. Spouses themselves serving in Air/Space Force or ROTC are excluded. Degree programs qualify; certificates do not. The ordinary academic requirements are cumulative3.5GPA and at least six undergraduate or three graduate credits, with transcript; non-enrolled applicants provide transcript plus institutional intent letter. The rules expressly permit proof of acceptance if no prior college coursework exists, but do not clarify how3.5applies to that alternative. Therefore no universalGPAfilter is proposed. Submit goals/motivation and Air/Space Force/community-involvement essay and recommendation via the named SmarterSelect record. Funds may support tuition, books, fees, transport or daycare. DeadlineApril30,2026at11:59p.m.EDT is closed; future cycle and renewal are unverified.",
-        "amount": {
-          "label": "$3,000",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
-        },
-        "eligibility": {
-          "audience": "Geography not recorded",
-          "minimumGpa": null,
-          "schoolTypes": [],
-          "focus": null
-        },
-        "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: April 30, 2026 at 11:59 p.m. EDT (closed). Current availability not verified.",
-          "year": null,
-          "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
-        },
-        "application": {
-          "mode": "unknown",
-          "label": "https://app.smarterselect.com/programs/94012-Air--Space-Forces-Association",
-          "url": "https://app.smarterselect.com/programs/94012-Air--Space-Forces-Association",
-          "groupPublicId": null,
-          "supplements": "unknown"
-        },
-        "sourcePublicIds": [
-          "source-11c663acf42e"
-        ]
-      },
-      {
-        "publicId": "award-ba8d9f252645",
-        "name": "Molitoris Leadership Scholarship for Undergraduates",
-        "summary": null,
-        "amount": {
-          "label": "$5,000",
-          "minimum": 5000,
-          "maximum": 5000,
-          "currency": "USD",
-          "state": "known"
-        },
-        "eligibility": {
-          "audience": "National",
-          "minimumGpa": null,
-          "schoolTypes": [
-            "four_year"
-          ],
-          "focus": "Transportation industry"
-        },
-        "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
-          "opens": null,
-          "closes": "TBD",
-          "recurrence": "unknown"
-        },
-        "application": {
-          "mode": "direct_per_award",
-          "label": "Separate application for this award",
-          "url": "https://www.wtsinternational.org/wts-foundation/scholarships",
-          "groupPublicId": null,
-          "supplements": "unknown"
-        },
-        "sourcePublicIds": [
-          "source-2e7d831baaca"
-        ]
-      },
-      {
-        "publicId": "award-140b97cfb628",
-        "name": "Montana Association of Conservation District's  2024 Natural Resources Scholarship (2 - $1,000)",
-        "summary": null,
+        "summary": "AEA Mid-Continent Instruments and Avionics Scholarship of $1,000 for a high school senior or college student who plans to attend or is attending an accredited avionics or aircraft maintenance program. The page says applications for the 2027-28 school year are now available. It does not state a deadline.",
         "amount": {
           "label": "$1,000",
           "minimum": 1000,
@@ -10114,29 +10052,165 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "In-State",
-          "minimumGpa": 3,
+          "audience": "High school senior or college student in an accredited avionics or aircraft maintenance program",
+          "minimumGpa": null,
           "schoolTypes": [],
-          "focus": "Natural Resources"
+          "focus": "Avionics or aircraft maintenance"
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "active",
+          "label": "Open",
+          "year": 2028,
           "opens": null,
-          "closes": "4/17/2026",
+          "closes": null,
           "recurrence": "unknown"
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
+          "label": "AEA Educational Foundation scholarships",
+          "url": "https://aea.net/educationalfoundation/scholarships.asp",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-a2ee8e443eb2"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://aea.net/educationalfoundation/scholarships.asp",
+          "openStatus": "open_now",
+          "deadline": null
+        }
+      },
+      {
+        "publicId": "award-11c663acf42e",
+        "name": "Mike and Gail Donley Spouse Scholarships",
+        "summary": "Mike and Gail Donley Spouse Scholarship of $3,000. The page lists 14 awards. The applicant must be a spouse of Air Force active duty, Air National Guard, Air Force Reserve, Space Force, or a Department of the Air Force civilian employee, in a degree program, with a cumulative GPA of at least 3.5. Spouses who are themselves Air or Space Force personnel or in ROTC are not eligible. The page says the deadline was April 30, 2026 at 11:59 p.m. EDT and that the program is closed. It does not post a next cycle.",
+        "amount": {
+          "label": "$3,000",
+          "minimum": 3000,
+          "maximum": 3000,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "Spouse of Air Force active duty, Air National Guard, Air Force Reserve, Space Force, or a Department of the Air Force civilian employee",
+          "minimumGpa": 3.5,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "closed",
+          "label": "Closed",
+          "year": 2026,
+          "opens": "December 1, 2025",
+          "closes": "April 30, 2026 at 11:59 p.m. EDT",
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Donley Spouse Scholarship",
+          "url": "https://app.smarterselect.com/programs/94012-Air--Space-Forces-Association",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-11c663acf42e"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://app.smarterselect.com/programs/94012-Air--Space-Forces-Association",
+          "openStatus": "closed_next_not_posted",
+          "deadline": "April 30, 2026 at 11:59 p.m. EDT"
+        }
+      },
+      {
+        "publicId": "award-ba8d9f252645",
+        "name": "Molitoris Leadership Scholarship for Undergraduates",
+        "summary": "WTS Molitoris Leadership Scholarship for Undergraduates of $5,000 for a woman who demonstrates leadership in the transportation industry. The page says the 2027 WTS Foundation scholarships open December 14, 2026 and chapter submissions close January 15, 2027.",
+        "amount": {
+          "label": "$5,000",
+          "minimum": 5000,
+          "maximum": 5000,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "Woman undergraduate who demonstrates leadership in the transportation industry",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": "Transportation"
+        },
+        "cycle": {
+          "status": "upcoming",
+          "label": "Opens December 14, 2026",
+          "year": 2027,
+          "opens": "December 14, 2026",
+          "closes": "January 15, 2027",
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "WTS Foundation scholarships",
+          "url": "https://www.wtsinternational.org/about/wts-scholarships",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-2e7d831baaca"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.wtsinternational.org/about/wts-scholarships",
+          "openStatus": "opens_on",
+          "deadline": "January 15, 2027"
+        }
+      },
+      {
+        "publicId": "award-140b97cfb628",
+        "name": "Montana Association of Conservation District's  2024 Natural Resources Scholarship (2 - $1,000)",
+        "summary": "Montana Association of Conservation Districts lists two $1,000 scholarships for a Montana high school senior or a student attending an accredited post-secondary institution in Montana. The student must be a U.S. citizen with Montana residency or attend an educational institution in Montana, have a GPA of at least 3.0, and study a field related to Montana natural resources. The 2026 application was open February 1 through April 17, 2026. The page does not post a later cycle.",
+        "amount": {
+          "label": "$1,000",
+          "minimum": 1000,
+          "maximum": 1000,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "Montana high school senior or student attending an accredited post-secondary institution in Montana",
+          "minimumGpa": 3,
+          "schoolTypes": [],
+          "focus": "Natural resources"
+        },
+        "cycle": {
+          "status": "closed",
+          "label": "Closed",
+          "year": 2026,
+          "opens": "February 1, 2026",
+          "closes": "April 17, 2026",
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "MACD scholarships",
           "url": "https://macdnet.org/programs/scholarships/",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-812f423babbe"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://macdnet.org/programs/scholarships/",
+          "openStatus": "closed_next_not_posted",
+          "deadline": "April 17, 2026"
+        }
       },
       {
         "publicId": "award-26c4b3c65985",
@@ -10229,16 +10303,16 @@
       {
         "publicId": "award-a0f5a36b98a2",
         "name": "Montana Farm Bureau Women's Leadership Committee Scholarships",
-        "summary": "The Montana Farm Bureau scholarships page lists other awards and does not name this Women's Leadership Committee scholarship.",
+        "summary": null,
         "amount": {
-          "label": "$1,500 (2 awards)",
-          "minimum": 1500,
-          "maximum": 1500,
-          "currency": "USD",
-          "state": "known"
+          "label": "Amount not stated",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
         },
         "eligibility": {
-          "audience": "In-State",
+          "audience": "Not named on the Montana Farm Bureau Foundation page",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
@@ -10248,34 +10322,35 @@
           "label": "Availability not verified",
           "year": null,
           "opens": null,
-          "closes": "Annual — closes Apr 1",
-          "recurrence": "annual"
+          "closes": null,
+          "recurrence": "unknown"
         },
         "application": {
-          "mode": "direct_per_award",
-          "label": "Separate application for this award",
-          "url": "https://form.jotform.com/250344617133147",
+          "mode": "unknown",
+          "label": "https://www.mfbf.org/foundation",
+          "url": "https://www.mfbf.org/foundation",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-53e2c940d0e2"
-        ]
+        ],
+        "verificationNote": "The Montana Farm Bureau Foundation page does not name this scholarship."
       },
       {
         "publicId": "award-b86982e726be",
         "name": "Montana FFA Foundation Leave a Legacy Scholarship",
-        "summary": "The Reach Higher Montana scholarships page does not list a Leave a Legacy scholarship.",
+        "summary": "Reach Higher Montana lists the Montana FFA Leave a Legacy Scholarship as $500 to $1,000 for a high school senior who is an FFA member with a GPA of 2.0 or higher. The application window on the page is January 1 through March 1 and does not name a year.",
         "amount": {
-          "label": "$500",
+          "label": "$500 to $1,000",
           "minimum": 500,
-          "maximum": 500,
+          "maximum": 1000,
           "currency": "USD",
-          "state": "known"
+          "state": "variable"
         },
         "eligibility": {
-          "audience": "In-State",
-          "minimumGpa": null,
+          "audience": "High school senior and FFA member",
+          "minimumGpa": 2,
           "schoolTypes": [],
           "focus": null
         },
@@ -10284,33 +10359,34 @@
           "label": "Availability not verified",
           "year": null,
           "opens": null,
-          "closes": "Annual — opens Jan 1, closes Mar 1",
-          "recurrence": "annual"
+          "closes": null,
+          "recurrence": "unknown"
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
+          "label": "Reach Higher Montana scholarships",
           "url": "https://reachhighermontana.org/pay-for-school/scholarships",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-e6d5e0366500"
-        ]
+        ],
+        "verificationNote": "The page lists this award and a yearless application window of January 1 to March 1."
       },
       {
         "publicId": "award-67de97a4f446",
         "name": "Montana Jaycee Foundation Scholarship",
-        "summary": "The vocational application says ten $1,000 grants, a GPA of at least 3.25, and a postmark deadline of January 12, 2026. The program page says the 2026-2027 program is open and does not print that deadline, so the current cycle is not confirmed.",
+        "summary": "The 2026-2027 U.S. JCI Senate vocational application says grants are $1,000 or $1,500 for a graduating high school senior who will begin a vocational, technical, or trade program in 2027. A GPA of at least 3.25 is required. Applications must be postmarked by January 12, 2027. The program page says the 2026-2027 program is open.",
         "amount": {
-          "label": "$1,000",
+          "label": "$1,000 or $1,500",
           "minimum": 1000,
-          "maximum": 1000,
+          "maximum": 1500,
           "currency": "USD",
-          "state": "known"
+          "state": "variable"
         },
         "eligibility": {
-          "audience": "National",
+          "audience": "Graduating high school senior beginning a vocational, technical, or trade program in 2027",
           "minimumGpa": 3.25,
           "schoolTypes": [
             "trade"
@@ -10318,48 +10394,55 @@
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "active",
+          "label": "Open",
+          "year": 2027,
           "opens": null,
-          "closes": "1/12/2026",
+          "closes": "January 12, 2027",
           "recurrence": "unknown"
         },
         "application": {
           "mode": "offline",
-          "label": "Paper or counselor-provided application",
-          "url": "https://docs.google.com/document/d/1evWdypsUxPJNAV0x5fv5l_kxknsEx68G/edit",
+          "label": "U.S. JCI Senate scholarship program",
+          "url": "https://www.usjcisenate.org/index.php/scholarship-program",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-859375501363",
           "source-f5d04be138ae"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+          "openStatus": "open_now",
+          "deadline": "January 12, 2027"
+        }
       },
       {
         "publicId": "award-e05338ef963f",
         "name": "Montana Jaycee Foundation Scholarship",
-        "summary": "The U.S. JCI Senate college application says grants are $1,500 or $2,000 and require a GPA of at least 3.75, postmarked by January 12, 2026. The program page says the 2026-2027 program is open and does not print that deadline, so the current cycle is not confirmed.",
+        "summary": "The 2026-2027 U.S. JCI Senate university application says grants are $2,000 or $2,500 for a graduating high school senior who will begin college in 2027 at an accredited U.S. college or university. A GPA of at least 3.75 is required. Applications must be postmarked by January 12, 2027. The program page says the 2026-2027 program is open.",
         "amount": {
-          "label": "$1,500 or $2,000",
-          "minimum": 1500,
-          "maximum": 2000,
+          "label": "$2,000 or $2,500",
+          "minimum": 2000,
+          "maximum": 2500,
           "currency": "USD",
           "state": "variable"
         },
         "eligibility": {
-          "audience": "Graduating high school senior with a GPA of at least 3.75",
+          "audience": "Graduating high school senior beginning college in 2027",
           "minimumGpa": 3.75,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "active",
+          "label": "Open",
+          "year": 2027,
           "opens": null,
-          "closes": "1/12/2026",
+          "closes": "January 12, 2027",
           "recurrence": "unknown"
         },
         "application": {
@@ -10372,21 +10455,28 @@
         "sourcePublicIds": [
           "source-6efdd7a6462e",
           "source-f5d04be138ae"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+          "openStatus": "open_now",
+          "deadline": "January 12, 2027"
+        }
       },
       {
         "publicId": "award-251c136369e5",
         "name": "Montana Premier Scholarship",
-        "summary": "This is an automatic, merit-based scholarship for Montana freshmen demonstrating academic promise based on their cumulative high school GPA. Award amounts vary based on GPA, ranging from $1,000 to $4,000 per year, and are renewable for four years for tuition only. Students are automatically considered upon submitting an application for admission with a self-reported GPA. For the published fall 2026 award, renewal requires a cumulative college GPA of at least 2.5, at least 15 credits each semester, continued Montana residency and continuous enrollment. This is for a first undergraduate bachelor’s degree. Fall 2027 scholarship terms are not yet available.",
+        "summary": "The MSU Fall 2027 resident freshman page lists the Montana Premier Scholarship at $1,000 to $4,000 per year for a Montana freshman, based on cumulative high school GPA, from 2.7 to 4.0 and above. It is automatic with an admission application and a self-reported GPA, for a first undergraduate bachelor's degree, and tuition only. The page does not state an application deadline.",
         "amount": {
           "label": "$1,000 to $4,000 per year",
           "minimum": 1000,
           "maximum": 4000,
           "currency": "USD",
-          "state": "known"
+          "state": "variable"
         },
         "eligibility": {
-          "audience": "In-State",
+          "audience": "Montana freshman seeking a first undergraduate bachelor's degree",
           "minimumGpa": 2.7,
           "schoolTypes": [
             "four_year"
@@ -10398,19 +10488,20 @@
           "label": "Availability not verified",
           "year": null,
           "opens": null,
-          "closes": "TBD",
+          "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "direct_per_award",
-          "label": "Separate application for this award",
+          "mode": "automatic_consideration",
+          "label": "MSU resident freshman scholarships",
           "url": "https://www.montana.edu/admissions/scholarships/residents/index.html",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-a42230db50da"
-        ]
+        ],
+        "verificationNote": "The Fall 2027 page states the award amounts and does not state an application deadline."
       },
       {
         "publicId": "award-6c3df1c9b693",
@@ -10550,7 +10641,7 @@
       {
         "publicId": "award-d26867d69108",
         "name": "Montana Tech’s Pre-Apprentice Line Program.",
-        "summary": "The Montana Tech pre-apprentice line program page does not state a scholarship amount or deadline.",
+        "summary": "Flathead Electric lists two $5,000 lineworker scholarships for a student enrolled in Montana Tech's Pre-Apprentice Line Program whose hometown is in the co-op service area. The page says the scholarships are available annually. It does not state a deadline.",
         "amount": {
           "label": "$5,000",
           "minimum": 5000,
@@ -10559,37 +10650,38 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "In-State (MT Tech)",
+          "audience": "Student enrolled in Montana Tech's Pre-Apprentice Line Program whose hometown is in the Flathead Electric service area",
           "minimumGpa": null,
           "schoolTypes": [
             "trade"
           ],
-          "focus": null
+          "focus": "Lineworker"
         },
         "cycle": {
           "status": "unknown",
           "label": "Availability not verified",
           "year": null,
           "opens": null,
-          "closes": "Info Available in December",
+          "closes": null,
           "recurrence": "unknown"
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
-          "url": "https://mtech.edu/lineprogram/index.html",
+          "label": "Flathead Electric scholarships",
+          "url": "https://www.flatheadelectric.com/our-community/educational-support/scholarships/",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-1f9a31b31213",
           "source-d827b8d81b52"
-        ]
+        ],
+        "verificationNote": "The Flathead Electric page lists two $5,000 lineworker scholarships and does not state a deadline."
       },
       {
         "publicId": "award-40db1e8dee39",
         "name": "Montana Treasure State First Generation Scholarship",
-        "summary": null,
+        "summary": "The MSU Fall 2027 resident freshman page lists the Montana Treasure State First Generation Scholarship at $1,500 per year for a Montana resident who self-reports being a first-generation student on the admission application. It is renewable for four years. The page does not state an application deadline.",
         "amount": {
           "label": "$1,500 per year",
           "minimum": 1500,
@@ -10598,7 +10690,7 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "In-State",
+          "audience": "Montana resident first-generation freshman",
           "minimumGpa": null,
           "schoolTypes": [
             "four_year"
@@ -10610,19 +10702,20 @@
           "label": "Availability not verified",
           "year": null,
           "opens": null,
-          "closes": "TBD",
+          "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "direct_per_award",
-          "label": "Separate application for this award",
+          "mode": "automatic_consideration",
+          "label": "MSU resident freshman scholarships",
           "url": "https://www.montana.edu/admissions/scholarships/residents/index.html",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-a42230db50da"
-        ]
+        ],
+        "verificationNote": "The Fall 2027 page states the award amount and does not state an application deadline."
       },
       {
         "publicId": "award-9635e0eb7f5e",
@@ -10671,7 +10764,7 @@
       {
         "publicId": "award-4324fe0c431f",
         "name": "MT Youth Serve Scholarships",
-        "summary": "The Governor’s Office of Community Service describes the Youth Serve Montana Scholarship for Montana students who volunteer and attend college in Montana. The page congratulates 2026 recipients. It does not state an award amount or a current deadline.",
+        "summary": "The Governor's Office of Community Service describes the Youth Serve Montana Scholarship for graduating high school seniors who complete volunteer service and attend a Montana Campus Network for Civic Engagement institution. It says up to 90 scholarships are available and congratulates the 2026 recipients. It does not state an award amount or a current deadline.",
         "amount": {
           "label": "Amount not stated",
           "minimum": null,
@@ -10680,14 +10773,14 @@
           "state": "unknown"
         },
         "eligibility": {
-          "audience": "Montana student who completed volunteer service and will attend college in Montana",
+          "audience": "Graduating Montana high school senior who completed volunteer service and will attend a Montana Campus Network institution",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
           "status": "unknown",
-          "label": "No current deadline listed",
+          "label": "Availability not verified",
           "year": null,
           "opens": null,
           "closes": null,
@@ -10695,7 +10788,7 @@
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Youth Serve Montana scholarship page",
+          "label": "Youth Serve Montana scholarships",
           "url": "https://serve.mt.gov/commission-initiatives/Youth-Serve-Montana-Scholarships",
           "groupPublicId": null,
           "supplements": "unknown"
@@ -10703,12 +10796,13 @@
         "sourcePublicIds": [
           "source-1de69e1589c2",
           "source-c19c47f183aa"
-        ]
+        ],
+        "verificationNote": "The page congratulates 2026 recipients and does not state an award amount or a current deadline."
       },
       {
         "publicId": "award-f8f731aa27df",
         "name": "Muldown Scholastic Scholarship ($1000)",
-        "summary": null,
+        "summary": "The Muldown Scholastic Scholarship application says the award is $1,000 and the deadline is April 4. It is for a Whitefish High School graduating senior interested in an education career who is in the top 20 percent of the senior class. It does not name a year.",
         "amount": {
           "label": "$1,000",
           "minimum": 1000,
@@ -10717,7 +10811,7 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "National",
+          "audience": "Whitefish High School graduating senior interested in an education career",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": "Education"
@@ -10727,24 +10821,25 @@
           "label": "Availability not verified",
           "year": null,
           "opens": null,
-          "closes": "4/4/2025",
+          "closes": null,
           "recurrence": "unknown"
         },
         "application": {
           "mode": "offline",
-          "label": "Paper or counselor-provided application",
+          "label": "Muldown Scholastic Scholarship application",
           "url": "https://drive.google.com/file/d/1UgtKs9dno0-scSV0ISow1gIKUWO4icbh/view",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-31713b47b5d5"
-        ]
+        ],
+        "verificationNote": "The application gives an April 4 deadline and does not name a year."
       },
       {
         "publicId": "award-fc37c2d47f56",
         "name": "Murdoch's Scholarship",
-        "summary": null,
+        "summary": "Reach Higher Montana lists Murdoch's Scholarship as one $500 award for a high school senior who is an FFA member with a GPA of 2.0 or higher. The application window on the page is January 1 through March 1 and does not name a year.",
         "amount": {
           "label": "$500",
           "minimum": 500,
@@ -10753,7 +10848,7 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "Montana students",
+          "audience": "High school senior and FFA member",
           "minimumGpa": 2,
           "schoolTypes": [],
           "focus": null
@@ -10762,78 +10857,86 @@
           "status": "unknown",
           "label": "Availability not verified",
           "year": null,
-          "opens": "01-01 each year (year not verified)",
-          "closes": "03-01 each year (year not verified)",
-          "recurrence": "annual"
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
         },
         "application": {
           "mode": "shared_with_supplements",
-          "label": "Shared application; some awards add supplements",
-          "url": "https://www.grantinterface.com/Home/Logon?urlkey=SAF",
+          "label": "Reach Higher Montana scholarships",
+          "url": "https://reachhighermontana.org/pay-for-school/scholarships",
           "groupPublicId": "application-1fbf4b4743cf",
           "supplements": "mixed"
         },
         "sourcePublicIds": [
           "source-ac022918a599",
           "source-c19c47f183aa"
-        ]
+        ],
+        "verificationNote": "The page lists this award and a yearless application window of January 1 to March 1."
       },
       {
         "publicId": "award-5dd6fcbcc0f8",
         "name": "NAEHCY Scholarship",
-        "summary": null,
+        "summary": "The 2026 NAEHCY Scholars application form says the deadline was Friday, July 31, 2026, at 11:59 p.m. EDT. The form does not state an award amount. The linked eligibility page could not be read.",
         "amount": {
-          "label": "Minimum five awards of $1,000 each (per student)",
-          "minimum": 1000,
-          "maximum": 1000,
-          "currency": "USD",
-          "state": "known"
+          "label": "Amount not stated",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
         },
         "eligibility": {
-          "audience": "National",
+          "audience": "Not stated on the application form",
           "minimumGpa": null,
           "schoolTypes": [],
-          "focus": "Any (homeless / McKinney-Vento)"
+          "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "closed",
+          "label": "Closed",
+          "year": 2026,
           "opens": null,
-          "closes": "July 31 (annual)",
-          "recurrence": "annual"
+          "closes": "July 31, 2026, 11:59 p.m. EDT",
+          "recurrence": "unknown"
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
+          "label": "2026 NAEHCY Scholars application",
           "url": "https://docs.google.com/forms/d/e/1FAIpQLSdKPOZ7Dff0m9K9-0KFO-lzanmPQESh0OzOUMFv6tU-K1I5Pw/viewform",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-763b545f79ea"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdKPOZ7Dff0m9K9-0KFO-lzanmPQESh0OzOUMFv6tU-K1I5Pw/viewform",
+          "openStatus": "closed_next_not_posted",
+          "deadline": "July 31, 2026, 11:59 p.m. EDT"
+        }
       },
       {
         "publicId": "award-7e66bc43f068",
         "name": "NATA Richard L. Taylor Flight Training Scholarship",
-        "summary": "The Richard L. Taylor Flight Training Scholarship provides $1,500 for one year of full-time undergraduate study in a college or university flight program, with the goal of becoming a professional pilot. Applicants must hold a private pilot license and have a GPA of at least 3.0. The official page describes college enrollment and also permits high-school seniors/incoming freshmen: incoming freshmen provide a high-school transcript and acceptance letter; enrolled students provide a college transcript showing at least 3.0. Submit the required materials no later than the last Friday in March; no cycle year or current opening is established. A four-year-only degree restriction is not established.",
+        "summary": "The Richard L. Taylor Flight Training Scholarship form says to complete the application before the last Friday in March. It does not name a year or an award amount.",
         "amount": {
-          "label": "$1,500 for one year",
+          "label": "Amount not stated",
           "minimum": null,
           "maximum": null,
           "currency": null,
-          "state": "unparseable"
+          "state": "unknown"
         },
         "eligibility": {
-          "audience": "Any",
+          "audience": "Not stated on the application form",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": "Aviation"
         },
         "cycle": {
           "status": "unknown",
-          "label": "Recorded deadline: Last Friday in March (annual; year not specified). Current availability not verified.",
+          "label": "Availability not verified",
           "year": null,
           "opens": null,
           "closes": null,
@@ -10841,35 +10944,117 @@
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
+          "label": "Richard L. Taylor Flight Training Scholarship",
           "url": "https://nataaero.wufoo.com/forms/richard-l-taylor-flight-training-scholarship/",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-b79201dd5907"
-        ]
+        ],
+        "verificationNote": "The form says applications are due the last Friday in March and does not name a year or an amount."
       },
       {
         "publicId": "award-5d3eb630cded",
         "name": "National Aviation Explorer Scholarship",
-        "summary": "National Aviation Explorer Scholarship2026 requires active registered Aviation Explorer post membership. Submit all materials together by email using the official PDF, at least three non-family recommendations and educational/career essay; under18 applicants need a parent/guardian signature. Leadership, aviation accomplishments and achievement are selection factors. Five categories cover aviation degree, avionics, pilot certification, maintenance and management. Applicants may request multiple categories but receive only one scholarship per academic year. The introduction says two2500scholarships while five types each describe2500; this does not guarantee five awards. Degree applicants must be accepted/attending accredited aviation college/university and redeem within four years. Avionics/maintenance permit HSseniors entering relevant accredited programs; management requires an accredited aviation-management program. These three redeem within two years. Sport/private pilot training need not be career-oriented; finish training within one year and redeem within two. DeadlineApril30,2026; future cycle, numericGPA, generalage/citizenship and fee conditions are unverified.",
+        "summary": "The 2026 National Aviation Explorer Scholarship guide says an Aviation Explorer may apply for either of two $2,500 scholarships. The applicant must be currently registered and active in an Aviation Explorer post. The deadline line says April 30 and does not name a year. The guide says it was revised February 2026.",
         "amount": {
-          "label": "$2,500 per scholarship; allocation wording conflicts",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "label": "$2,500",
+          "minimum": 2500,
+          "maximum": 2500,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Currently registered and active Aviation Explorer",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
           "status": "unknown",
-          "label": "Recorded deadline: April 30, 2026 (past cycle). Current availability not verified.",
+          "label": "Availability not verified",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "National Aviation Explorer Scholarship guide",
+          "url": "https://www.exploring.org/wp-content/uploads/2026/03/Scholarship-Application_Aviation_2026-fill3.pdf",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-5d3eb630cded"
+        ],
+        "verificationNote": "The 2026 guide gives an April 30 deadline and does not name the year."
+      },
+      {
+        "publicId": "award-3ea4f475bc9f",
+        "name": "National Honor Society Member Scholarship",
+        "summary": "The National Honor Society scholarship page says it is awarding $2 million to 600 students. Applications opened September 3, 2026, and the submission deadline is November 20, 2026 at 5:00 p.m. ET. The applicant must be a high school senior and an active NHS member planning to pursue a degree at an accredited U.S. college or university, military institute, or trade school. The page does not state an amount for each scholarship.",
+        "amount": {
+          "label": "$2 million for 600 students",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "High school senior and active National Honor Society member",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "active",
+          "label": "Open",
+          "year": 2026,
+          "opens": "September 3, 2026",
+          "closes": "November 20, 2026 at 5:00 p.m. ET",
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "NHS scholarship",
+          "url": "https://www.nationalhonorsociety.org/the-nhs-scholarship/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-7b75b96fdfa6",
+          "source-8949ae5c7949"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://www.nationalhonorsociety.org/the-nhs-scholarship/",
+          "openStatus": "open_now",
+          "deadline": "November 20, 2026, 5:00 p.m. ET"
+        }
+      },
+      {
+        "publicId": "award-aa0957679b02",
+        "name": "National Merit Scholarship",
+        "summary": null,
+        "amount": {
+          "label": "Amount not stated",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "Not listed on the University of Montana scholarships page",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Availability not verified",
           "year": null,
           "opens": null,
           "closes": null,
@@ -10877,94 +11062,20 @@
         },
         "application": {
           "mode": "unknown",
-          "label": "mailto:exploring@lflmail.org",
-          "url": null,
-          "groupPublicId": null,
-          "supplements": "unknown"
-        },
-        "sourcePublicIds": [
-          "source-5d3eb630cded"
-        ]
-      },
-      {
-        "publicId": "award-3ea4f475bc9f",
-        "name": "National Honor Society Member Scholarship",
-        "summary": null,
-        "amount": {
-          "label": "$3,200 (standard, could vary)",
-          "minimum": 3200,
-          "maximum": 3200,
-          "currency": "USD",
-          "state": "known"
-        },
-        "eligibility": {
-          "audience": "National",
-          "minimumGpa": null,
-          "schoolTypes": [],
-          "focus": null
-        },
-        "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
-          "opens": null,
-          "closes": "11/20/2026",
-          "recurrence": "unknown"
-        },
-        "application": {
-          "mode": "direct_per_award",
-          "label": "Separate application for this award",
-          "url": "https://www.nationalhonorsociety.org/create-an-account/",
-          "groupPublicId": null,
-          "supplements": "unknown"
-        },
-        "sourcePublicIds": [
-          "source-7b75b96fdfa6",
-          "source-8949ae5c7949"
-        ]
-      },
-      {
-        "publicId": "award-aa0957679b02",
-        "name": "National Merit Scholarship",
-        "summary": null,
-        "amount": {
-          "label": "Up to $2,000 a year",
-          "minimum": 2000,
-          "maximum": 2000,
-          "currency": "USD",
-          "state": "known"
-        },
-        "eligibility": {
-          "audience": "National",
-          "minimumGpa": null,
-          "schoolTypes": [
-            "four_year"
-          ],
-          "focus": null
-        },
-        "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
-          "opens": null,
-          "closes": "TBD",
-          "recurrence": "unknown"
-        },
-        "application": {
-          "mode": "direct_per_award",
-          "label": "Separate application for this award",
-          "url": "https://umontana.edu/how-to-apply/scholarships.php",
+          "label": "https://www.umt.edu/student-financial-services/scholarships/default.php",
+          "url": "https://www.umt.edu/student-financial-services/scholarships/default.php",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-f374a0dfaab3"
-        ]
+        ],
+        "verificationNote": "The University of Montana scholarships page does not list this award."
       },
       {
         "publicId": "award-ead4360dadca",
         "name": "National Technical Honor Society",
-        "summary": null,
+        "summary": "The Build Your Future page says the National Technical Honor Society annually awards five $2,000 scholarships to members pursuing construction-related careers. It lists application dates of October 1 to April 1 and does not name a year.",
         "amount": {
           "label": "$2,000",
           "minimum": 2000,
@@ -10973,14 +11084,14 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "National",
+          "audience": "High school senior or post-secondary NTHS member pursuing a construction-related career",
           "minimumGpa": null,
           "schoolTypes": [],
-          "focus": "Construction-related disciplines"
+          "focus": "Construction"
         },
         "cycle": {
           "status": "unknown",
-          "label": "Deadline not verified; confirm with NTHS.",
+          "label": "Availability not verified",
           "year": null,
           "opens": null,
           "closes": null,
@@ -10988,35 +11099,73 @@
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
-          "url": "https://www.byf.org/all-resources/scholarships/#1584583671954-985d7487-8bc5",
+          "label": "Build Your Future scholarships",
+          "url": "https://www.byf.org/all-resources/scholarships/",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-ef6935b71d8d"
-        ]
+        ],
+        "verificationNote": "The page gives a yearless window of October 1 to April 1 and does not name a cycle year."
       },
       {
         "publicId": "award-b4faadd4c1d5",
         "name": "Navigate Your Future Scholarship",
-        "summary": "NATA Navigate Your Future offers one $2,500 scholarship for one year of full-time undergraduate aviation study. Applicants must be high-school seniors planning a career in general aviation and enrolled or accepted in an aviation-related program at an accredited college or university. Submit the linked award application with a high-school transcript, recommendation, college/university acceptance letter and a personal statement about aviation career and education or flight-training goals and reasons for selection. Materials are due the last Friday in June; the public rules do not specify a cycle year. A numeric GPA, income threshold and guaranteed renewal are not established. This is distinct from NATA Richard L. Taylor, whose private-pilot and GPA requirements are not inherited.",
+        "summary": "The Navigate Your Future Scholarship page says one award of $2,500 is for one year of full-time undergraduate study. The applicant must be a high school senior planning a career in general aviation and enrolled or accepted in an aviation-related program. Materials are due the last Friday in June. The page does not name a year.",
         "amount": {
-          "label": "$2,500; one award",
+          "label": "$2,500",
+          "minimum": 2500,
+          "maximum": 2500,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "High school senior planning a career in general aviation",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": "General aviation"
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Availability not verified",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Navigate Your Future Scholarship",
+          "url": "https://nata.aero/national-air-transportation-foundation/scholarships/navigate-your-future-scholarship/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-b4faadd4c1d5"
+        ],
+        "verificationNote": "The page gives a last-Friday-in-June deadline and does not name a year."
+      },
+      {
+        "publicId": "award-4f96382a8925",
+        "name": "Nelson Scholarship",
+        "summary": null,
+        "amount": {
+          "label": "Amount not stated",
           "minimum": null,
           "maximum": null,
           "currency": null,
-          "state": "unparseable"
+          "state": "unknown"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Not stated; the Nelson scholarships page could not be read",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
           "status": "unknown",
-          "label": "Recorded deadline: Last Friday in June (annual; cycle year not stated). Current availability not verified.",
+          "label": "Availability not verified",
           "year": null,
           "opens": null,
           "closes": null,
@@ -11024,50 +11173,15 @@
         },
         "application": {
           "mode": "unknown",
-          "label": "https://nataaero.wufoo.com/forms/k1qeenh31v2nv13/",
-          "url": "https://nataaero.wufoo.com/forms/k1qeenh31v2nv13/",
-          "groupPublicId": null,
-          "supplements": "unknown"
-        },
-        "sourcePublicIds": [
-          "source-b4faadd4c1d5"
-        ]
-      },
-      {
-        "publicId": "award-4f96382a8925",
-        "name": "Nelson Scholarship",
-        "summary": null,
-        "amount": {
-          "label": "$1,500",
-          "minimum": 1500,
-          "maximum": 1500,
-          "currency": "USD",
-          "state": "known"
-        },
-        "eligibility": {
-          "audience": "National",
-          "minimumGpa": null,
-          "schoolTypes": [],
-          "focus": "Business, Interior Design, Architecture"
-        },
-        "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
-          "opens": null,
-          "closes": "December 31st, 2025",
-          "recurrence": "unknown"
-        },
-        "application": {
-          "mode": "direct_per_award",
-          "label": "Separate application for this award",
+          "label": "https://nelsonkb.com/scholarships/",
           "url": "https://nelsonkb.com/scholarships/",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-ffa9118baa72"
-        ]
+        ],
+        "verificationNote": "The Nelson scholarships page could not be read."
       },
       {
         "publicId": "award-512cf202b205",
@@ -11117,52 +11231,59 @@
       {
         "publicId": "award-8809a8f1adc4",
         "name": "NESA Scholarships (National Eagle Scout Association)",
-        "summary": null,
+        "summary": "The National Eagle Scout Association page lists 2026-2027 scholarships for an Eagle Scout who is a NESA member, from the senior year of high school through the junior year of an undergraduate program, or the halfway point of an associate or skilled-trade program. Named awards on the page run from $4,000 to a $50,000 four-year Cooke Scholarship. The application portal opens December 1, 2026 and must be submitted by 11:59 p.m. CST on February 1, 2027. The page does not state a GPA.",
         "amount": {
-          "label": "$5,000–$12,500/yr (up to $50,000 four-year Cooke Scholarship)",
-          "minimum": 5000,
+          "label": "$4,000 to $50,000",
+          "minimum": 4000,
           "maximum": 50000,
           "currency": "USD",
-          "state": "known"
+          "state": "variable"
         },
         "eligibility": {
-          "audience": "National",
+          "audience": "Eagle Scout and NESA member, from senior year of high school through junior year of an undergraduate program, or the halfway point of an associate or skilled-trade program",
           "minimumGpa": null,
           "schoolTypes": [],
-          "focus": "Eagle Scout / Scouting achievement"
+          "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
-          "opens": null,
-          "closes": "Annual — opens Dec 1, closes Jan 31 (11:59pm CST)",
-          "recurrence": "annual"
+          "status": "upcoming",
+          "label": "Opens December 1, 2026",
+          "year": 2027,
+          "opens": "December 1, 2026",
+          "closes": "February 1, 2027, 11:59 p.m. CST",
+          "recurrence": "unknown"
         },
         "application": {
           "mode": "direct_per_award",
-          "label": "Separate application for this award",
+          "label": "NESA scholarships",
           "url": "https://nesa.org/scholarships/",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-4c6562f21028"
-        ]
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-28",
+          "sourceUrl": "https://nesa.org/scholarships/",
+          "openStatus": "opens_on",
+          "deadline": "February 1, 2027, 11:59 p.m. CST"
+        }
       },
       {
         "publicId": "award-5b5b0db70dd0",
         "name": "NFPA (National Foster Parent Association) Scholarship",
         "summary": null,
         "amount": {
-          "label": "$500",
-          "minimum": 500,
-          "maximum": 500,
-          "currency": "USD",
-          "state": "known"
+          "label": "Amount not stated",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
         },
         "eligibility": {
-          "audience": "National",
+          "audience": "Not stated; the NFPA scholarships page could not be read",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
@@ -11172,379 +11293,390 @@
           "label": "Availability not verified",
           "year": null,
           "opens": null,
-          "closes": "Annual — Spring (~Apr)",
-          "recurrence": "annual"
+          "closes": null,
+          "recurrence": "unknown"
         },
         "application": {
-          "mode": "direct_per_award",
-          "label": "Separate application for this award",
+          "mode": "unknown",
+          "label": "https://nfpaonline.org/resources/scholarships/",
           "url": "https://nfpaonline.org/resources/scholarships/",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-6a3e32b0b0af"
-        ]
+        ],
+        "verificationNote": "The NFPA scholarships page could not be read."
       },
       {
         "publicId": "award-068bd3a04e24",
         "name": "NGPA General Aviation Scholarship",
-        "summary": "NGPA 2026 scholarship, now closed. NGPA member pursuing general-aviation interests; funds paid to the flight school. Three amount tiers and six recipient slots are one named fund. Universal requirements: active NGPA membership and age 18 or older. Flight-training awards require a current third-class medical or higher and at least a student pilot certificate; medical is not required for non-flight awards. Allies may apply with a documented history of LGBTQ+ advocacy. Applications had to be started by July 31,2026 and completed by August 7,2026 at 11:59 pm Pacific. The FAQ says most industry-sponsored awards require US work authorization; confirm the specific sponsor condition. No GPA, renewal or later-cycle deadline is stated.",
+        "summary": "NGPA lists the General Aviation Scholarship in three tiers: three awards of $5,000, two of $10,000, and one of $15,000, for a member pursuing general aviation interests. NGPA sends the funds to the flight school. Universal requirements on the page are active NGPA membership, age 18 or older, and at least a current third-class medical for flight-training scholarships. The page does not state a deadline.",
         "amount": {
-          "label": "$5000,$10000 or$15000",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "label": "$5,000, $10,000, or $15,000",
+          "minimum": 5000,
+          "maximum": 15000,
+          "currency": "USD",
+          "state": "variable"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Active NGPA member, age 18 or older, pursuing general aviation interests",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
           "status": "unknown",
-          "label": "Recorded deadline: 2026-08-07 23:59 PT (closed; application start deadline2026-07-31). Current availability not verified.",
+          "label": "Availability not verified",
           "year": null,
           "opens": null,
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "Apply through NGPA scholarship tab to Reviewr during the window: https://www.ngpa.org/applynow . Public login observed; authenticated application not tested.",
-          "url": null,
+          "mode": "direct_per_award",
+          "label": "NGPA 2026 scholarships",
+          "url": "https://www.ngpa.org/2026_scholarships",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-068bd3a04e24"
-        ]
+        ],
+        "verificationNote": "The 2026 scholarships page lists this award and does not state a deadline. The FAQ says the next cycle opens in June 2027 and also points to a 2025 list."
       },
       {
         "publicId": "award-7b8c0838e0b9",
         "name": "NGPA Transgender & Non-binary Committee Scholarship",
-        "summary": "NGPA 2026 scholarship, now closed. Outstanding transgender or gender-diverse advocate studying or training for aviation work. The wording concerns advocacy; do not infer that every applicant must personally identify as transgender/nonbinary. Universal requirements: active NGPA membership and age 18 or older. Flight-training awards require a current third-class medical or higher and at least a student pilot certificate; medical is not required for non-flight awards. Allies may apply with a documented history of LGBTQ+ advocacy. Applications had to be started by July 31,2026 and completed by August 7,2026 at 11:59 pm Pacific. The FAQ says most industry-sponsored awards require US work authorization; confirm the specific sponsor condition. No GPA, renewal or later-cycle deadline is stated.",
+        "summary": "NGPA lists the Transgender and Non-binary Committee Scholarship at $5,000 for a person who is an outstanding transgender or gender-diverse advocate and is studying or training to work in aviation. NGPA sends the funds to the school. Universal requirements on the page are active NGPA membership and age 18 or older. The page does not state a deadline.",
         "amount": {
-          "label": "$5000",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "label": "$5,000",
+          "minimum": 5000,
+          "maximum": 5000,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Active NGPA member, age 18 or older, who is an outstanding transgender or gender-diverse advocate studying or training for aviation work",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
           "status": "unknown",
-          "label": "Recorded deadline: 2026-08-07 23:59 PT (closed; application start deadline2026-07-31). Current availability not verified.",
+          "label": "Availability not verified",
           "year": null,
           "opens": null,
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "Apply through NGPA scholarship tab to Reviewr during the window: https://www.ngpa.org/applynow . Public login observed; authenticated application not tested.",
-          "url": null,
+          "mode": "direct_per_award",
+          "label": "NGPA 2026 scholarships",
+          "url": "https://www.ngpa.org/2026_scholarships",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-7b8c0838e0b9"
-        ]
+        ],
+        "verificationNote": "The 2026 scholarships page lists this award and does not state a deadline. The FAQ says the next cycle opens in June 2027 and also points to a 2025 list."
       },
       {
         "publicId": "award-b23111c6755c",
         "name": "NGPA Women’s Committee Scholarship",
-        "summary": "NGPA 2026 scholarship, now closed. Outstanding LGBTQ+ advocate studying or training for aviation work. Do not infer a women-only restriction from the committee name. Universal requirements: active NGPA membership and age 18 or older. Flight-training awards require a current third-class medical or higher and at least a student pilot certificate; medical is not required for non-flight awards. Allies may apply with a documented history of LGBTQ+ advocacy. Applications had to be started by July 31,2026 and completed by August 7,2026 at 11:59 pm Pacific. The FAQ says most industry-sponsored awards require US work authorization; confirm the specific sponsor condition. No GPA, renewal or later-cycle deadline is stated.",
+        "summary": "NGPA lists the Women's Committee Scholarship at $5,000 for a person who is an outstanding LGBTQ+ advocate and is studying or training to work in aviation. NGPA sends the funds to the school. Universal requirements on the page are active NGPA membership and age 18 or older. The page does not state a deadline.",
         "amount": {
-          "label": "$5000",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "label": "$5,000",
+          "minimum": 5000,
+          "maximum": 5000,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Active NGPA member, age 18 or older, who is an outstanding LGBTQ+ advocate studying or training for aviation work",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
           "status": "unknown",
-          "label": "Recorded deadline: 2026-08-07 23:59 PT (closed; application start deadline2026-07-31). Current availability not verified.",
+          "label": "Availability not verified",
           "year": null,
           "opens": null,
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "Apply through NGPA scholarship tab to Reviewr during the window: https://www.ngpa.org/applynow . Public login observed; authenticated application not tested.",
-          "url": null,
+          "mode": "direct_per_award",
+          "label": "NGPA 2026 scholarships",
+          "url": "https://www.ngpa.org/2026_scholarships",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-b23111c6755c"
-        ]
+        ],
+        "verificationNote": "The 2026 scholarships page lists this award and does not state a deadline. The FAQ says the next cycle opens in June 2027 and also points to a 2025 list."
       },
       {
         "publicId": "award-59ca9fde81ba",
         "name": "NTHS BPA Scholarship",
-        "summary": "Dual NTHS and Business Professionals of America membership. NTHS lists the application route shown here. Dates are annual/yearless; a current open cycle is not established. GPA, location restrictions and renewal terms remain unknown.",
+        "summary": "NTHS lists three $1,000 BPA scholarships for dual NTHS and BPA members. It says the award is available September 15 to March 15 and does not name a year.",
         "amount": {
           "label": "$1,000",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "minimum": 1000,
+          "maximum": 1000,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
-          "minimumGpa": null,
-          "schoolTypes": [],
-          "focus": "business finance"
-        },
-        "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: October 1–March 15 (annual; cycle year/status unknown). Current availability not verified.",
-          "year": null,
-          "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
-        },
-        "application": {
-          "mode": "unknown",
-          "label": "https://bpa.org/students/scholarships-and-awards/ (officially listed; verify current cycle before applying)",
-          "url": "https://bpa.org/students/scholarships-and-awards/",
-          "groupPublicId": null,
-          "supplements": "unknown"
-        },
-        "sourcePublicIds": [
-          "source-59ca9fde81ba"
-        ]
-      },
-      {
-        "publicId": "award-295621b942a5",
-        "name": "NTHS DECA Scholarship",
-        "summary": "Dual NTHS and DECA membership; supports marketing, finance, hospitality and management futures. NTHS lists the application route shown here. Dates are annual/yearless; a current open cycle is not established. GPA, location restrictions and renewal terms remain unknown.",
-        "amount": {
-          "label": "$1,000",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
-        },
-        "eligibility": {
-          "audience": "Geography not recorded",
-          "minimumGpa": null,
-          "schoolTypes": [],
-          "focus": "business finance"
-        },
-        "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: October 1–January 9 (annual; cycle year/status unknown). Current availability not verified.",
-          "year": null,
-          "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
-        },
-        "application": {
-          "mode": "unknown",
-          "label": "https://www.deca.org/scholarships (officially listed; verify current cycle before applying)",
-          "url": "https://www.deca.org/scholarships",
-          "groupPublicId": null,
-          "supplements": "unknown"
-        },
-        "sourcePublicIds": [
-          "source-295621b942a5"
-        ]
-      },
-      {
-        "publicId": "award-330e6040b83b",
-        "name": "NTHS FBLA Scholarship",
-        "summary": "Dual NTHS and FBLA membership; preparing for a business career. NTHS lists the application route shown here. Dates are annual/yearless; a current open cycle is not established. GPA, location restrictions and renewal terms remain unknown.",
-        "amount": {
-          "label": "$1,000",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
-        },
-        "eligibility": {
-          "audience": "Geography not recorded",
-          "minimumGpa": null,
-          "schoolTypes": [],
-          "focus": "business finance"
-        },
-        "cycle": {
-          "status": "unknown",
-          "label": "Recorded deadline: April 15, 5pm ET (annual; cycle year/status unknown). Current availability not verified.",
-          "year": null,
-          "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
-        },
-        "application": {
-          "mode": "unknown",
-          "label": "https://fblapbl.wufoo.com/forms/pxjne981nreatq (officially listed; verify current cycle before applying)",
-          "url": "https://fblapbl.wufoo.com/forms/pxjne981nreatq",
-          "groupPublicId": null,
-          "supplements": "unknown"
-        },
-        "sourcePublicIds": [
-          "source-330e6040b83b"
-        ]
-      },
-      {
-        "publicId": "award-9047b192ebf2",
-        "name": "NTHS FCCLA Scholarship",
-        "summary": "Active NTHS and FCCLA membership. NTHS lists the application route shown here. Dates are annual/yearless; a current open cycle is not established. GPA, location restrictions and renewal terms remain unknown.",
-        "amount": {
-          "label": "$1,000",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
-        },
-        "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Dual member of NTHS and the partner organization named on the page",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
           "status": "unknown",
-          "label": "Recorded deadline: October 1–March 2 (annual; cycle year/status unknown). Current availability not verified.",
+          "label": "Availability not verified",
           "year": null,
           "opens": null,
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "https://fcclainc.org/engage/youth-scholarships (officially listed; verify current cycle before applying)",
-          "url": "https://fcclainc.org/engage/youth-scholarships",
+          "mode": "direct_per_award",
+          "label": "NTHS scholarships",
+          "url": "https://nths.org/scholarships-2/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-59ca9fde81ba"
+        ],
+        "verificationNote": "The NTHS page gives a yearless window of September 15 to March 15 and does not name a cycle year."
+      },
+      {
+        "publicId": "award-295621b942a5",
+        "name": "NTHS DECA Scholarship",
+        "summary": "NTHS lists three $1,000 DECA scholarships for dual NTHS and DECA members preparing for marketing, finance, hospitality, or management. It says the award is available October 1 to January 9 and does not name a year.",
+        "amount": {
+          "label": "$1,000",
+          "minimum": 1000,
+          "maximum": 1000,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "Dual member of NTHS and the partner organization named on the page",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Availability not verified",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "NTHS scholarships",
+          "url": "https://nths.org/scholarships-2/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-295621b942a5"
+        ],
+        "verificationNote": "The NTHS page gives a yearless window of October 1 to January 9 and does not name a cycle year."
+      },
+      {
+        "publicId": "award-330e6040b83b",
+        "name": "NTHS FBLA Scholarship",
+        "summary": "NTHS lists two $1,000 FBLA scholarships for dual NTHS and FBLA members preparing for a business career. It says the deadline is April 15 at 5 p.m. ET and does not name a year.",
+        "amount": {
+          "label": "$1,000",
+          "minimum": 1000,
+          "maximum": 1000,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "Dual member of NTHS and the partner organization named on the page",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Availability not verified",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "NTHS scholarships",
+          "url": "https://nths.org/scholarships-2/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-330e6040b83b"
+        ],
+        "verificationNote": "The NTHS page gives an April 15 at 5 p.m. ET deadline and does not name a year."
+      },
+      {
+        "publicId": "award-9047b192ebf2",
+        "name": "NTHS FCCLA Scholarship",
+        "summary": "NTHS lists three $1,000 FCCLA scholarships for active NTHS and FCCLA members. It says the award is available September 15 to March 1 and does not name a year.",
+        "amount": {
+          "label": "$1,000",
+          "minimum": 1000,
+          "maximum": 1000,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "Dual member of NTHS and the partner organization named on the page",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Availability not verified",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "NTHS scholarships",
+          "url": "https://nths.org/scholarships-2/",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-9047b192ebf2"
-        ]
+        ],
+        "verificationNote": "The NTHS page gives a yearless window of September 15 to March 1 and does not name a cycle year."
       },
       {
         "publicId": "award-8debb4562aa5",
         "name": "NTHS FFA Scholarship",
-        "summary": "Dual NTHS and FFA membership; agriculture and leadership interests. NTHS lists the application route shown here. Dates are annual/yearless; a current open cycle is not established. GPA, location restrictions and renewal terms remain unknown.",
+        "summary": "NTHS lists three $1,000 FFA scholarships for students who are members of both NTHS and FFA. It says the award is available November 1 to January 15 and does not name a year.",
         "amount": {
           "label": "$1,000",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "minimum": 1000,
+          "maximum": 1000,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Dual member of NTHS and the partner organization named on the page",
           "minimumGpa": null,
           "schoolTypes": [],
-          "focus": "agriculture conservation"
+          "focus": null
         },
         "cycle": {
           "status": "unknown",
-          "label": "Recorded deadline: November 1–January 15 (annual; cycle year/status unknown). Current availability not verified.",
+          "label": "Availability not verified",
           "year": null,
           "opens": null,
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "https://apply.mykaleidoscope.com/scholarships/NationalFFA2526 (officially listed; verify current cycle before applying)",
-          "url": "https://apply.mykaleidoscope.com/scholarships/NationalFFA2526",
+          "mode": "direct_per_award",
+          "label": "NTHS scholarships",
+          "url": "https://nths.org/scholarships-2/",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-8debb4562aa5"
-        ]
+        ],
+        "verificationNote": "The NTHS page gives a yearless window of November 1 to January 15 and does not name a cycle year."
       },
       {
         "publicId": "award-1901179dd5bd",
         "name": "NTHS HOSA Scholarship",
-        "summary": "Dual NTHS and HOSA membership; health-care career connection. NTHS lists the application route shown here. Dates are annual/yearless; a current open cycle is not established. GPA, location restrictions and renewal terms remain unknown.",
+        "summary": "NTHS lists seven $1,000 HOSA scholarships for dual NTHS and HOSA members. It says the award is available January 1 to April 15 and does not name a year.",
         "amount": {
           "label": "$1,000",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "minimum": 1000,
+          "maximum": 1000,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Dual member of NTHS and the partner organization named on the page",
           "minimumGpa": null,
           "schoolTypes": [],
-          "focus": "healthcare"
+          "focus": null
         },
         "cycle": {
           "status": "unknown",
-          "label": "Recorded deadline: January 1–April 15 (annual; cycle year/status unknown). Current availability not verified.",
+          "label": "Availability not verified",
           "year": null,
           "opens": null,
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "https://hosa.org/scholarships (officially listed; verify current cycle before applying)",
-          "url": "https://hosa.org/scholarships",
+          "mode": "direct_per_award",
+          "label": "NTHS scholarships",
+          "url": "https://nths.org/scholarships-2/",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-1901179dd5bd"
-        ]
+        ],
+        "verificationNote": "The NTHS page gives a yearless window of January 1 to April 15 and does not name a cycle year."
       },
       {
         "publicId": "award-a35f143a67e4",
         "name": "NTHS SkillsUSA Scholarship",
-        "summary": "Dual NTHS and SkillsUSA membership. NTHS lists the application route shown here. Dates are annual/yearless; a current open cycle is not established. GPA, location restrictions and renewal terms remain unknown.",
+        "summary": "NTHS lists four $1,000 SkillsUSA scholarships for students who are members of both NTHS and SkillsUSA. It says the award is available January 6 to April 15 and does not name a year.",
         "amount": {
           "label": "$1,000",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unparseable"
+          "minimum": 1000,
+          "maximum": 1000,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Geography not recorded",
+          "audience": "Dual member of NTHS and the partner organization named on the page",
           "minimumGpa": null,
           "schoolTypes": [],
-          "focus": "trades"
+          "focus": null
         },
         "cycle": {
           "status": "unknown",
-          "label": "Recorded deadline: January 6–April 15 (annual; cycle year/status unknown). Current availability not verified.",
+          "label": "Availability not verified",
           "year": null,
           "opens": null,
           "closes": null,
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "https://apply.mykaleidoscope.com/program/NTHS2026 (officially listed; verify current cycle before applying)",
-          "url": "https://apply.mykaleidoscope.com/program/NTHS2026",
+          "mode": "direct_per_award",
+          "label": "NTHS scholarships",
+          "url": "https://nths.org/scholarships-2/",
           "groupPublicId": null,
           "supplements": "unknown"
         },
         "sourcePublicIds": [
           "source-a35f143a67e4"
-        ]
+        ],
+        "verificationNote": "The NTHS page gives a yearless window of January 6 to April 15 and does not name a cycle year."
       },
       {
         "publicId": "award-39cdccc5a462",
@@ -21747,9 +21879,7 @@
       "targetKind": "award",
       "targetId": "award-aa0957679b02",
       "minimumGpa": null,
-      "schoolTypes": [
-        "four_year"
-      ],
+      "schoolTypes": [],
       "applicationPreference": "direct_per_award"
     },
     {
@@ -21799,9 +21929,7 @@
       "targetKind": "award",
       "targetId": "award-ba8d9f252645",
       "minimumGpa": null,
-      "schoolTypes": [
-        "four_year"
-      ],
+      "schoolTypes": [],
       "applicationPreference": "direct_per_award"
     },
     {
@@ -22310,7 +22438,7 @@
       "sourceRow": 170,
       "targetKind": "award",
       "targetId": "award-b86982e726be",
-      "minimumGpa": null,
+      "minimumGpa": 2,
       "schoolTypes": [],
       "applicationPreference": null
     },
@@ -23155,7 +23283,9 @@
       "targetKind": "award",
       "targetId": "award-4156f119417d",
       "minimumGpa": null,
-      "schoolTypes": [],
+      "schoolTypes": [
+        "four_year"
+      ],
       "applicationPreference": null
     },
     {
@@ -23500,7 +23630,7 @@
       "sourceRow": 316,
       "targetKind": "award",
       "targetId": "award-11c663acf42e",
-      "minimumGpa": null,
+      "minimumGpa": 3.5,
       "schoolTypes": [],
       "applicationPreference": null
     },
