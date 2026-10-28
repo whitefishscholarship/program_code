@@ -58,22 +58,54 @@ export function actionLabel(status: StudentStatus): 'Apply' | 'Look now' {
   return status === 'open_now' ? 'Apply' : 'Look now';
 }
 
-export function amountLabel(award: StudentAward): string {
-  if (award.amount.minimum === null && award.amount.maximum === null) return 'See site';
-  if (award.amount.label === 'Amount not stated' || award.amount.label === 'Amount not verified') return 'See site';
-  return plainStudentText(award.amount.label);
+const DOLLAR_AMOUNT_SOURCE = String.raw`\$\s*(\d{1,3}(?:,\d{3})+|\d+)(?:\.(\d{2}))?`;
+const RANGE_GAP = /^(?:-|to|through)$/i;
+
+function pad2(value: number): string {
+  return String(value).padStart(2, '0');
 }
 
-export function deadlineLabel(award: StudentAward): string {
-  const verification = displayVerification(award);
-  if (verification.status !== 'verified') return 'Not sure';
-  return verification.deadline ? plainStudentText(verification.deadline) : 'See site';
+function dollarsToCents(whole: string, fraction: string | undefined): number {
+  return Number(whole.replaceAll(',', '')) * 100 + (fraction ? Number(fraction) : 0);
 }
 
-export function explicitDeadlineDate(award: StudentAward): { year: number; month: number; day: number } | null {
-  const verification = displayVerification(award);
-  if (verification.status !== 'verified' || !verification.deadline) return null;
-  const match = verification.deadline.match(EXPLICIT_DATE);
+function formatMoney(cents: number): string {
+  const whole = Math.floor(cents / 100);
+  const fraction = cents % 100;
+  const withCommas = String(whole).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  return fraction === 0 ? `$${withCommas}` : `$${withCommas}.${pad2(fraction)}`;
+}
+
+/** Student-facing amount. Reads the label only and does not change catalog data. */
+export function formatStudentAmount(label: string): string {
+  const text = plainStudentText(label);
+  const matches = [...text.matchAll(new RegExp(DOLLAR_AMOUNT_SOURCE, 'g'))];
+  if (matches.length === 0) return 'See site';
+  const cents = matches.map((match) => dollarsToCents(match[1], match[2]));
+  const unique = [...new Set(cents)];
+  if (unique.length === 1) return formatMoney(unique[0]);
+  if (matches.length === 2 && isDollarRange(text, matches)) {
+    const low = Math.min(cents[0], cents[1]);
+    const high = Math.max(cents[0], cents[1]);
+    return `${formatMoney(low)}-${formatMoney(high)}`;
+  }
+  return `Up to ${formatMoney(Math.max(...cents))}`;
+}
+
+function isDollarRange(text: string, matches: RegExpMatchArray[]): boolean {
+  const first = matches[0];
+  const second = matches[1];
+  if (first.index === undefined || second.index === undefined) return false;
+  const between = text.slice(first.index + first[0].length, second.index).replace(/\s/g, '');
+  return RANGE_GAP.test(between);
+}
+
+type CalendarDate = { year: number; month: number; day: number };
+
+function explicitDateInText(text: string): CalendarDate | null {
+  const withoutNotes = text.replace(/\([^)]*\)/g, ' ');
+  const matches = [...withoutNotes.matchAll(new RegExp(EXPLICIT_DATE.source, 'gi'))];
+  const match = matches.at(-1);
   if (!match) return null;
   const month = MONTHS[match[1].toLowerCase()];
   const day = Number(match[2]);
@@ -82,6 +114,29 @@ export function explicitDeadlineDate(award: StudentAward): { year: number; month
   const date = new Date(Date.UTC(year, month, day));
   if (date.getUTCFullYear() !== year || date.getUTCMonth() !== month || date.getUTCDate() !== day) return null;
   return { year, month: month + 1, day };
+}
+
+/** Student-facing deadline. A missing year stays "See site" and is never guessed. */
+export function formatStudentDeadline(text: string): string {
+  const date = explicitDateInText(text);
+  if (!date) return 'See site';
+  return `${pad2(date.month)}/${pad2(date.day)}/${date.year}`;
+}
+
+export function amountLabel(award: StudentAward): string {
+  return formatStudentAmount(award.amount.label);
+}
+
+export function deadlineLabel(award: StudentAward): string {
+  const verification = displayVerification(award);
+  if (verification.status !== 'verified') return 'Not sure';
+  return verification.deadline ? formatStudentDeadline(verification.deadline) : 'See site';
+}
+
+export function explicitDeadlineDate(award: StudentAward): CalendarDate | null {
+  const verification = displayVerification(award);
+  if (verification.status !== 'verified' || !verification.deadline) return null;
+  return explicitDateInText(verification.deadline);
 }
 
 export function deadlineSortTime(award: StudentAward, now: Date): number | null {
@@ -153,9 +208,4 @@ export function splitHidden<T extends { publicId: string }>(awards: readonly T[]
 export function formatListStamp(now: Date): string {
   const date = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric' }).format(now);
   return `List made ${date}. Each Apply button opens the real site.`;
-}
-
-export function shortCheckedDate(isoDate: string): string {
-  const [year, month, day] = isoDate.split('-').map(Number);
-  return new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' }).format(new Date(Date.UTC(year, month - 1, day)));
 }

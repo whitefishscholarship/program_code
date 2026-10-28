@@ -8,7 +8,7 @@ import {
   STUDENT_STATUS_LABELS,
   studentStatus,
 } from './studentList';
-import { displayVerification, type StudentAward } from './studentCatalog';
+import type { StudentAward } from './studentCatalog';
 
 export const STUDENT_EXPORT_COLUMNS = [
   'Name',
@@ -17,25 +17,20 @@ export const STUDENT_EXPORT_COLUMNS = [
   'Amount',
   'Link',
   'Short summary',
-  'Verified source',
 ] as const;
 
 export type StudentExportColumn = (typeof STUDENT_EXPORT_COLUMNS)[number];
 export type StudentExportRow = Record<StudentExportColumn, string>;
 
 export function toStudentExportRows(awards: readonly StudentAward[]): StudentExportRow[] {
-  return awards.map((award) => {
-    const verification = displayVerification(award);
-    return {
-      Name: plainStudentText(award.name),
-      Status: STUDENT_STATUS_LABELS[studentStatus(award)],
-      Deadline: deadlineLabel(award),
-      Amount: amountLabel(award),
-      Link: officialUrl(award) ?? '',
-      'Short summary': award.summary ? plainStudentText(award.summary) : '',
-      'Verified source': verification.status === 'verified' ? (verification.sourceUrl ?? '') : '',
-    };
-  });
+  return awards.map((award) => ({
+    Name: plainStudentText(award.name),
+    Status: STUDENT_STATUS_LABELS[studentStatus(award)],
+    Deadline: deadlineLabel(award),
+    Amount: amountLabel(award),
+    Link: officialUrl(award) ?? '',
+    'Short summary': award.summary ? plainStudentText(award.summary) : '',
+  }));
 }
 
 function csvCell(value: string): string {
@@ -67,6 +62,8 @@ function columnRef(index: number, row: number): string {
   return `${String.fromCharCode(65 + index)}${row}`;
 }
 
+const LAST_COLUMN = String.fromCharCode(64 + STUDENT_EXPORT_COLUMNS.length);
+
 function inlineCell(ref: string, value: string, style: number): string {
   return `<c r="${ref}" t="inlineStr" s="${style}"><is><t xml:space="preserve">${xmlEscape(value)}</t></is></c>`;
 }
@@ -81,15 +78,9 @@ function worksheetXml(stamp: string, rows: StudentExportRow[]): { sheet: string;
     const cells = STUDENT_EXPORT_COLUMNS.map((column, index) => {
       const ref = columnRef(index, excelRow);
       const value = row[column];
-      const linkTarget = column === 'Name' || column === 'Link'
-        ? row.Link
-        : column === 'Verified source'
-          ? row['Verified source']
-          : '';
-      if (linkTarget && (column !== 'Name' || value)) {
-        if (column === 'Name' || column === 'Link' || column === 'Verified source') {
-          if (/^https?:\/\//i.test(linkTarget)) links.push({ ref, target: linkTarget });
-        }
+      const linkTarget = column === 'Name' || column === 'Link' ? row.Link : '';
+      if (value && /^https?:\/\//i.test(linkTarget) && (column === 'Name' || column === 'Link')) {
+        links.push({ ref, target: linkTarget });
       }
       const style = links.some((link) => link.ref === ref) ? 2 : 0;
       return inlineCell(ref, value, style);
@@ -102,7 +93,7 @@ function worksheetXml(stamp: string, rows: StudentExportRow[]): { sheet: string;
     : '';
   const sheet = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">
-  <dimension ref="A1:G${lastRow}"/>
+  <dimension ref="A1:${LAST_COLUMN}${lastRow}"/>
   <sheetViews>
     <sheetView workbookViewId="0" tabSelected="1">
       <pane ySplit="2" topLeftCell="A3" activePane="bottomLeft" state="frozen"/>
@@ -113,19 +104,18 @@ function worksheetXml(stamp: string, rows: StudentExportRow[]): { sheet: string;
   <cols>
     <col min="1" max="1" width="36" customWidth="1"/>
     <col min="2" max="2" width="16" customWidth="1"/>
-    <col min="3" max="3" width="32" customWidth="1"/>
+    <col min="3" max="3" width="14" customWidth="1"/>
     <col min="4" max="4" width="18" customWidth="1"/>
     <col min="5" max="5" width="42" customWidth="1"/>
     <col min="6" max="6" width="48" customWidth="1"/>
-    <col min="7" max="7" width="42" customWidth="1"/>
   </cols>
   <sheetData>
     <row r="1">${inlineCell('A1', stamp, 0)}</row>
     <row r="2">${header}</row>
     ${body}
   </sheetData>
-  <autoFilter ref="A2:G${lastRow}"/>
-  <mergeCells count="1"><mergeCell ref="A1:G1"/></mergeCells>
+  <autoFilter ref="A2:${LAST_COLUMN}${lastRow}"/>
+  <mergeCells count="1"><mergeCell ref="A1:${LAST_COLUMN}1"/></mergeCells>
   ${hyperlinks}
 </worksheet>`;
   return { sheet, links };

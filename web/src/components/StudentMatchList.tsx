@@ -18,7 +18,6 @@ import {
   matchesStudentStatus,
   officialUrl,
   plainStudentText,
-  shortCheckedDate,
   sortStudentAwards,
   splitHidden,
   STUDENT_STATUS_LABELS,
@@ -309,20 +308,19 @@ function AwardRow({ award, result, onHide }: { award: StudentAward; result?: Dis
   const status = studentStatus(award);
   const url = officialUrl(award);
   const verification = displayVerification(award);
-  const verified = verification.status === 'verified';
   const why = result?.reasons.find((reason) => reason.message.trim())?.message;
   const action = actionLabel(status);
   return (
     <article data-award-id={award.publicId} data-verification-status={verification.status} data-student-status={status} className={`rounded-xl border border-slate-200 border-l-4 bg-white p-4 shadow-sm ${borderColor[status]}`}>
-      <div className="flex flex-col gap-4 lg:flex-row lg:items-start">
-        <div className="min-w-0 flex-1">
-          <h3 className="text-lg font-black leading-snug text-slate-950">
+      <div className="grid grid-cols-2 items-start gap-x-3 gap-y-3 md:grid-cols-[minmax(14rem,1fr)_minmax(8.5rem,11rem)_minmax(7rem,9rem)_auto] md:gap-x-4">
+        <div className="col-span-2 min-w-0 md:col-span-1">
+          <h3 className="break-words text-lg font-black leading-snug text-slate-950">
             {url ? <OfficialLink href={url}>{award.name}</OfficialLink> : award.name}
           </h3>
-          <p className="mt-1 line-clamp-2 text-sm leading-6 text-slate-600">{award.summary ? plainStudentText(award.summary) : plainStudentText(award.eligibility.audience)}</p>
+          <p className="mt-1 line-clamp-2 break-words text-sm leading-6 text-slate-600">{award.summary ? plainStudentText(award.summary) : plainStudentText(award.eligibility.audience)}</p>
           <details className="mt-2 text-sm">
             <summary className="cursor-pointer font-bold text-teal-800 focus:outline-none focus:ring-4 focus:ring-teal-200">Details</summary>
-            <div className="mt-3 space-y-2 leading-6 text-slate-700">
+            <div className="mt-3 space-y-2 break-words leading-6 text-slate-700">
               <p><span className="font-bold text-slate-950">What it is: </span>{award.summary ? plainStudentText(award.summary) : 'The official page has the details.'}</p>
               <p><span className="font-bold text-slate-950">What to do: </span>{plainStudentText(award.application.label)}</p>
               <p><span className="font-bold text-slate-950">Why it is on your list: </span>{why ? plainStudentText(why) : 'It stayed on the list because nothing you told us rules it out.'}</p>
@@ -330,21 +328,16 @@ function AwardRow({ award, result, onHide }: { award: StudentAward; result?: Dis
             </div>
           </details>
         </div>
-        <div className="grid grid-cols-2 gap-3 text-sm lg:w-auto lg:grid-cols-3 lg:items-start">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Amount</p>
-            <p className="font-bold text-slate-950">{amountLabel(award)}</p>
-          </div>
-          <div>
-            <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Deadline</p>
-            <p className="font-bold text-slate-950">{deadlineLabel(award)}</p>
-          </div>
-          <div>
-            <p className={`w-fit rounded-full border px-2.5 py-1 text-xs font-bold ${pillColor[status]}`}>{STUDENT_STATUS_LABELS[status]}</p>
-            {verified && verification.lastChecked && <p className="mt-1 text-xs font-semibold text-emerald-700">Verified checked {shortCheckedDate(verification.lastChecked)}</p>}
-          </div>
+        <div className="min-w-0">
+          <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Amount</p>
+          <p className="break-words font-bold text-slate-950">{amountLabel(award)}</p>
         </div>
-        <div className="flex items-center gap-2 lg:flex-col lg:items-stretch">
+        <div className="min-w-0">
+          <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Deadline</p>
+          <p className="break-words font-bold text-slate-950">{deadlineLabel(award)}</p>
+        </div>
+        <div className="col-span-2 flex flex-wrap items-center gap-2 md:col-span-1 md:flex-col md:items-stretch">
+          <p className={`w-fit rounded-full border px-2.5 py-1 text-xs font-bold ${pillColor[status]}`}>{STUDENT_STATUS_LABELS[status]}</p>
           {url ? <OfficialLink href={url} button>{action}</OfficialLink> : <p className="rounded-lg bg-slate-100 px-3 py-2 text-center text-sm font-bold text-slate-600">No website listed</p>}
           <button type="button" onClick={() => onHide(award.publicId)} className="rounded-lg px-3 py-2 text-sm font-bold text-slate-500 hover:bg-slate-100 hover:text-slate-800 focus:outline-none focus:ring-4 focus:ring-teal-200">✕ Hide</button>
         </div>

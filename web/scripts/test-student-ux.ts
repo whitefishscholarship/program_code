@@ -18,6 +18,8 @@ import {
   BOOKMARK_NOTE,
   HIDE_BANNER,
   HIDDEN_FOOTNOTE,
+  formatStudentAmount,
+  formatStudentDeadline,
   hideAwardId,
   isOpeningThisMonth,
   restoreAwardId,
@@ -141,14 +143,19 @@ assert.equal(toStudentExportRows([closedAward])[0].Link, 'https://school.example
 const exported = toStudentExportRows([openAward, laterAward]);
 assert.deepEqual(Object.keys(exported[0]), [...STUDENT_EXPORT_COLUMNS]);
 assert.equal(exported[0].Status, 'Open now');
-assert.equal(exported[0].Deadline, 'March 31, 2026');
+assert.equal(exported[0].Deadline, '03/31/2026');
+assert.equal(exported[0].Amount, '$1,000');
 assert.equal(exported[1].Status, 'Opens later');
+assert.equal(exported[1].Deadline, '01/15/2027');
+assert.equal(exported[1].Amount, '$500');
+assert.equal('Verified source' in exported[0], false);
 
 const visibleForFile = splitHidden([openAward, laterAward, closedAward], [laterAward.publicId]).visible;
 const csv = serializeStudentCsv(visibleForFile, now);
 assert(csv.startsWith('\uFEFF'));
 assert(csv.includes('List made Oct 28, 2026. Each Apply button opens the real site.'));
-assert(csv.includes(STUDENT_EXPORT_COLUMNS.join('","') ) || csv.includes('"Name","Status","Deadline","Amount","Link","Short summary","Verified source"'));
+assert(csv.includes('"Name","Status","Deadline","Amount","Link","Short summary"'));
+assert(!csv.includes('Verified source'));
 assert(!csv.includes(laterAward.name));
 assert(!csv.includes('Award ID'));
 assert(!csv.includes(laterAward.publicId));
@@ -159,7 +166,8 @@ const files = readStoredZip(workbook);
 const sheet = new TextDecoder().decode(files.get('xl/worksheets/sheet1.xml'));
 assert(sheet.includes('state="frozen"'));
 assert(sheet.includes('ySplit="2"'));
-assert(sheet.includes('<autoFilter ref="A2:G4"/>'));
+assert(sheet.includes('<autoFilter ref="A2:F4"/>'));
+assert(!sheet.includes('Verified source'));
 const headerRow = sheet.match(/<row r="2">([\s\S]*?)<\/row>/)?.[1] ?? '';
 const headerText = [...headerRow.matchAll(/<t[^>]*>([^<]*)<\/t>/g)].map((match) => match[1]);
 assert.deepEqual(headerText, [...STUDENT_EXPORT_COLUMNS]);
@@ -184,6 +192,34 @@ assert(calendar.includes('Deadline: Open Example'));
 assert(!calendar.includes('Closed Example'));
 assert(!calendar.includes('Unsure Example'));
 assert(!calendar.includes('residenceState'));
+
+assert.equal(formatStudentDeadline('October 31, 2026'), '10/31/2026');
+assert.equal(formatStudentDeadline('October 31, 2026, 11:59 p.m. EDT'), '10/31/2026');
+assert.equal(formatStudentDeadline('November 12, 2026, 11:59 p.m. Pacific Time'), '11/12/2026');
+assert.equal(formatStudentDeadline('October 31, 2026 (late applications for 2026-2027)'), '10/31/2026');
+assert.equal(formatStudentDeadline('April 30, 2026 at 11:59 p.m. EDT'), '04/30/2026');
+assert.equal(formatStudentDeadline('December 1, 2026 at midnight MST'), '12/01/2026');
+assert.equal(formatStudentDeadline('March 1, 11:59 p.m. MST'), 'See site');
+assert.equal(formatStudentDeadline('November 15 (August 1 to November 15; year not printed on the page)'), 'See site');
+assert.equal(formatStudentDeadline('Friday, December 11'), 'See site');
+assert.equal(formatStudentDeadline('November 30'), 'See site');
+assert.equal(formatStudentDeadline('February 31, 2026'), 'See site');
+
+assert.equal(formatStudentAmount('$4,000'), '$4,000');
+assert.equal(formatStudentAmount('$27,000-$122,000'), '$27,000-$122,000');
+assert.equal(formatStudentAmount('$1,000\u2013$5,000'), '$1,000-$5,000');
+assert.equal(formatStudentAmount('$1,000 to $5,000'), '$1,000-$5,000');
+assert.equal(formatStudentAmount('Typically $500 to $1,500'), '$500-$1,500');
+assert.equal(formatStudentAmount('$4,000, or $30,000 for the top 20'), 'Up to $30,000');
+assert.equal(formatStudentAmount('Club awards average $1,000; up to $16,000 total'), 'Up to $16,000');
+assert.equal(formatStudentAmount('National first place $35,000; other national awards up to $21,000; department first place at least $1,000'), 'Up to $35,000');
+assert.equal(formatStudentAmount('$500 each (two awards)'), '$500');
+assert.equal(formatStudentAmount('$5,000 ($2,500 a year for two years)'), 'Up to $5,000');
+assert.equal(formatStudentAmount('$500, $1,000, and $1,500'), 'Up to $1,500');
+assert.equal(formatStudentAmount('Amount not stated'), 'See site');
+assert.equal(formatStudentAmount('Full-time tuition and fees'), 'See site');
+assert.equal(formatStudentAmount('$2,500 and up'), '$2,500');
+assert.equal(formatStudentAmount('$1,500.50'), '$1,500.50');
 
 assert.equal(BOOKMARK_NOTE, "Bookmark this link. Don't share it, it holds your answers.");
 assert.equal(HIDE_BANNER, 'Award hidden. Your link changed. Copy or bookmark your new refresh link.');
@@ -213,6 +249,9 @@ assert(listSource.includes('Refresh my list'));
 assert(listSource.includes('Copy my link'));
 assert(listSource.includes('Show hidden'));
 assert(listSource.includes('Opening this month'));
+assert(listSource.includes('minmax(14rem,1fr)'));
+assert(listSource.includes('break-words'));
+assert(!listSource.includes('Verified checked'));
 assert(listSource.includes('Add deadlines to my calendar'));
 assert(listSource.includes('BOOKMARK_NOTE'));
 assert(listSource.includes('HIDE_BANNER'));
