@@ -1,8 +1,11 @@
 import { z } from 'zod';
+import { calendarDayIsBefore, explicitCalendarDay } from './dateParse';
 
 export const STUDENT_CATALOG_SCHEMA_VERSION = '1.0.0' as const;
 
 export const CYCLE_STATUSES = ['active', 'upcoming', 'closed', 'unavailable', 'unknown'] as const;
+export const VERIFICATION_STATUSES = ['verified', 'not_yet_checked'] as const;
+export const OPEN_STATUSES = ['open_now', 'opens_on', 'closed_next_not_posted'] as const;
 export const APPLICATION_MODES = [
   'automatic_consideration',
   'selectable_children',
@@ -62,6 +65,14 @@ export const FORBIDDEN_PUBLIC_KEYS = [
 const nullableText = z.string().min(1).nullable();
 const publicId = z.string().regex(/^(award|source|portal|application)-[a-f0-9]{12}$/);
 
+export const AwardVerificationSchema = z.object({
+  status: z.enum(VERIFICATION_STATUSES),
+  lastChecked: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).nullable(),
+  sourceUrl: z.string().url().nullable(),
+  openStatus: z.enum(OPEN_STATUSES).nullable(),
+  deadline: z.string().min(1).nullable(),
+}).strict();
+
 export const StudentAwardSchema = z.object({
   publicId: publicId,
   name: z.string().min(1),
@@ -95,6 +106,8 @@ export const StudentAwardSchema = z.object({
     supplements: z.enum(['required', 'not_required', 'mixed', 'unknown']),
   }),
   sourcePublicIds: z.array(publicId).min(1),
+  verification: AwardVerificationSchema.optional(),
+  verificationNote: z.string().min(1).optional(),
 }).strict();
 
 export const StudentSourceSchema = z.object({
@@ -154,6 +167,58 @@ export const StudentCatalogSchema = z.object({
 }).strict();
 
 export type StudentAward = z.infer<typeof StudentAwardSchema>;
+export type AwardVerification = z.infer<typeof AwardVerificationSchema>;
+
+const UNCHECKED_VERIFICATION: AwardVerification = {
+  status: 'not_yet_checked',
+  lastChecked: null,
+  sourceUrl: null,
+  openStatus: null,
+  deadline: null,
+};
+
+export function displayVerification(award: StudentAward): AwardVerification {
+  return award.verification ?? UNCHECKED_VERIFICATION;
+}
+
+export function formatCheckedDate(isoDate: string): string {
+  const [year, month, day] = isoDate.split('-').map(Number);
+  return new Intl.DateTimeFormat('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'UTC',
+  }).format(new Date(Date.UTC(year, month - 1, day)));
+}
+
+const UNSUPPORTED_AOPA_EXAM_NOTE = 'Check age limits and the FAA written-exam prerequisite. ';
+
+export function displayMatchReason(message: string): string {
+  return message.replace(UNSUPPORTED_AOPA_EXAM_NOTE, 'Check the age range stated on the official page. ');
+}
+
+export function openStatusText(award: StudentAward, now: Date = new Date()): string | null {
+  const verification = displayVerification(award);
+  if (verification.status !== 'verified') return null;
+  const sentence = (value: string) => value.endsWith('.') ? value : `${value}.`;
+  const datedDeadline = verification.deadline ? explicitCalendarDay(verification.deadline) : null;
+  if (datedDeadline && calendarDayIsBefore(datedDeadline, now) && verification.openStatus !== 'closed_next_not_posted') {
+    return verification.deadline ? sentence(`Closed. Deadline ${verification.deadline}`) : 'Closed.';
+  }
+  if (verification.openStatus === 'open_now') {
+    return verification.deadline ? sentence(`Open now. Deadline ${verification.deadline}`) : 'Open now.';
+  }
+  if (verification.openStatus === 'opens_on') {
+    const opens = award.cycle.opens ? `Opens ${award.cycle.opens}.` : 'Opens on a later date.';
+    return verification.deadline ? sentence(`${opens} Deadline ${verification.deadline}`) : `${opens} Exact deadline is not posted.`;
+  }
+  if (verification.openStatus === 'closed_next_not_posted') {
+    return verification.deadline
+      ? sentence(`Closed, next cycle not posted. Last deadline ${verification.deadline}`)
+      : 'Closed, next cycle not posted.';
+  }
+  return 'Verified. No application deadline is listed.';
+}
 export type StudentSource = z.infer<typeof StudentSourceSchema>;
 export type StudentPortal = z.infer<typeof StudentPortalSchema>;
 export type StudentCatalog = z.infer<typeof StudentCatalogSchema>;

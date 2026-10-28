@@ -23,7 +23,7 @@ for (const result of results) {
   const visible = result.results.filter(r=>r.decision!=='recorded_mismatch').map(r=>r.award);
   const csv = parseCsv(serializeAwardCsv(visible).replace(/^\uFEFF/,''));
   assert.deepEqual(csv.rows.map(r=>r.Name),visible.map(a=>a.name));
-  assert.deepEqual(csv.headers,['Award ID','Record type','Name','Cycle status','Cycle details','Amount','Minimum GPA','School types','Application method','Official link']);
+  assert.deepEqual(csv.headers,['Award ID','Record type','Name','Cycle status','Cycle details','Amount','Minimum GPA','School types','Application method','Official link','Verification','Last checked','Verification source','Open status','Deadline']);
 }
 assert(results[1].counts.knownConflict > results[0].counts.knownConflict,'lower GPA must change the actual shortlist');
 assert.notDeepEqual(results[2].results.filter(r=>r.decision==='recorded_mismatch').map(r=>r.award.publicId),results[0].results.filter(r=>r.decision==='recorded_mismatch').map(r=>r.award.publicId),'school choice must change results');

@@ -198,7 +198,11 @@ for (const forbidden of ['processAndFilter', './processor', 'rulesPack', 'studen
 assert(browserSource.includes('CURRENT_ACCEPTED_MATCH_FACTS'));
 assert(!browserSource.includes('SHORTLIST_NOTICE'), 'UX1 removes the blanket shortlist notice');
 assert(browserSource.includes('Browse all'));
-assert(browserSource.includes('awardCsvDataUri(visibleAwards)'));
+const listSource = fs.readFileSync(path.join(webRoot, 'src/components/StudentMatchList.tsx'), 'utf8');
+assert(listSource.includes('Download my list (Excel)'));
+assert(listSource.includes('rel="noopener noreferrer"'));
+assert(!listSource.includes('fetch('));
+assert(!listSource.includes('localStorage'));
 assert(browserSource.includes('rel="noopener noreferrer"'));
 assert(clientSource.includes("method: 'GET'"));
 assert(!/InterviewAnswers|answers|request\s*body|body\s*:/.test(clientSource));

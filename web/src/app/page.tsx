@@ -7,21 +7,16 @@ export default function Home() {
         Skip to scholarship interview
       </a>
       <header className="border-b border-slate-200 bg-[#123c3a] text-white">
-        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-teal-200">Whitefish Scholarship Fund</p>
-          <div className="max-w-4xl">
-            <h1 className="text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl">Find scholarships for your next step.</h1>
-            <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-200">
-              Explore scholarships in four short steps, or browse the complete catalog.
-            </p>
-          </div>
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
+          <h1 className="text-lg font-bold">Whitefish Scholarship Finder</h1>
+          <p className="text-right text-sm text-teal-100">No account. Nothing saved about you.</p>
         </div>
       </header>
-      <main id="main-content" tabIndex={-1} className="mx-auto max-w-7xl px-4 py-8 outline-none sm:px-6 lg:px-8 lg:py-12">
+      <main id="main-content" tabIndex={-1} className="mx-auto max-w-6xl px-4 py-6 outline-none sm:px-6 lg:py-8">
         <ScholarshipBrowser />
       </main>
       <footer className="border-t border-slate-200 bg-white">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-8 text-sm text-slate-600 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-8 text-sm text-slate-600 sm:px-6 md:flex-row md:items-center md:justify-between">
           <a href="/admin" className="font-semibold text-teal-800 underline-offset-4 hover:underline focus:outline-none focus:ring-4 focus:ring-teal-200">Administrator sign-in</a>
         </div>
       </footer>
