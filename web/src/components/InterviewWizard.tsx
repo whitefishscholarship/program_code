@@ -11,23 +11,18 @@ import {
   type DifferentiationProfile,
 } from '@/lib/differentiation';
 import { InterviewAnswersSchema, type InterviewAnswers } from '@/lib/interviewMatcher';
-import { ACTIVITY_QUESTIONS, EDUCATIONAL_STATUSES, RESIDENCE_STATES, SPECIAL_CRITERIA, SPECIAL_CRITERIA_CATEGORIES, TARGET_SCHOOL_TYPES } from '@/lib/interviewQuestions';
-import { FINANCIAL_NEED_INTEREST } from '@/lib/coverageQuestions';
+import { ACTIVITY_QUESTIONS, RESIDENCE_STATES, SPECIAL_CRITERIA, SPECIAL_CRITERIA_CATEGORIES, TARGET_SCHOOL_TYPES } from '@/lib/interviewQuestions';
 import type { StudentAward } from '@/lib/studentCatalog';
 
-const KEPT_UNIQUE_CRITERIA = new Set(['chronic_health', 'black_african_american', 'hispanic_latino', 'single_parent', 'mensa', 'farmers_union']);
+const KEPT_UNIQUE_CRITERIA = new Set(['chronic_health', 'black_african_american', 'hispanic_latino']);
 const UNIQUE_LABELS: Record<string, string> = {
   chronic_health: 'Long-term health issue',
   black_african_american: 'Black or African American',
   hispanic_latino: 'Hispanic or Latino',
-  single_parent: 'Single parent home',
-  mensa: 'Mensa member',
-  farmers_union: 'Farmers Union family',
 };
 const UNIQUE_SECTIONS: Record<string, { title: string; hint: string }> = {
   'Health & Hardships': { title: 'Long-term health', hint: 'Share only what you want. You can skip this.' },
   'Demographics & Identity': { title: 'More about you', hint: 'Share only what you want. You can skip this.' },
-  'Family, Employee, & Org Affiliations': { title: 'More family ties', hint: 'Pick a family tie if it fits. You can skip this.' },
 };
 const ACTIVITY_LABELS: Record<string, string> = {
   leadership: 'I lead a team or club',
@@ -36,7 +31,6 @@ const ACTIVITY_LABELS: Record<string, string> = {
   service: 'I help in my community',
 };
 
-type YesNo = InterviewAnswers['collegeAccepted'];
 type Props = { awards: readonly StudentAward[]; initialAnswers: InterviewAnswers | null; onComplete: (answers: InterviewAnswers) => void; onCancel: () => void; syntheticQa?: boolean };
 
 function readSeed(initial: InterviewAnswers | null) {
@@ -59,12 +53,13 @@ export default function InterviewWizard({ awards, initialAnswers, onComplete, on
   const seed = useState(() => readSeed(initialAnswers))[0];
   const [gpa, setGpa] = useState(initialAnswers ? String(initialAnswers.gpa) : '');
   const [residenceState, setResidenceState] = useState(initialAnswers?.residenceState ?? null);
-  const [educationalStatus, setEducationalStatus] = useState(initialAnswers?.educationalStatus ?? null);
   const [targetSchoolTypes, setTargetSchoolTypes] = useState<InterviewAnswers['targetSchoolTypes']>(initialAnswers?.targetSchoolTypes ?? []);
-  const [collegeAccepted, setCollegeAccepted] = useState<YesNo>(initialAnswers?.collegeAccepted === 'prefer_not_to_answer' ? null : initialAnswers?.collegeAccepted ?? null);
-  const [gapYear, setGapYear] = useState<YesNo>(initialAnswers?.gapYear === 'prefer_not_to_answer' ? null : initialAnswers?.gapYear ?? null);
   const [activities, setActivities] = useState<InterviewAnswers['activities']>((initialAnswers?.activities ?? []).filter((id) => !initialAnswers?.sensitiveCriteriaSkipped || id !== 'caregiving'));
-  const [financialNeedInterest, setFinancialNeedInterest] = useState<InterviewAnswers['financialNeedInterest']>(initialAnswers?.sensitiveCriteriaSkipped || initialAnswers?.financialNeedInterest === 'prefer_not_to_answer' ? null : initialAnswers?.financialNeedInterest ?? (initialAnswers?.financialNeed ? 'yes' : null));
+  const [financialNeedInterest, setFinancialNeedInterest] = useState<InterviewAnswers['financialNeedInterest']>(
+    !initialAnswers || initialAnswers.sensitiveCriteriaSkipped || initialAnswers.financialNeedInterest === 'no' || initialAnswers.financialNeedInterest === 'not_sure' || initialAnswers.financialNeedInterest === 'prefer_not_to_answer'
+      ? null
+      : initialAnswers.financialNeedInterest ?? (initialAnswers.financialNeed ? 'yes' : null),
+  );
   const [uniqueCriteria, setUniqueCriteria] = useState<InterviewAnswers['selectedCriteria']>(seed.uniqueCriteria);
   const [profile, setProfile] = useState<DifferentiationProfile>(seed.profile);
   const [error, setError] = useState('');
@@ -94,7 +89,7 @@ export default function InterviewWizard({ awards, initialAnswers, onComplete, on
     const derived = legacyFromProfile(profile);
     const selectedCriteria = [...new Set([...derived.selectedCriteria, ...uniqueCriteria])];
     const parsed = InterviewAnswersSchema.safeParse({
-      gpa: Number(gpa), residenceState, educationalStatus, targetSchoolTypes, collegeAccepted, gapYear, activities,
+      gpa: Number(gpa), residenceState, educationalStatus: null, targetSchoolTypes, collegeAccepted: null, gapYear: null, activities,
       volunteerHours: null,
       financialNeed: false,
       financialNeedInterest,
@@ -140,22 +135,6 @@ export default function InterviewWizard({ awards, initialAnswers, onComplete, on
           </label>
         </Section>
 
-        <Section title="School right now" hint="Pick one. You can skip this.">
-          <ChipRow>
-            {EDUCATIONAL_STATUSES.map(([value, label]) => (
-              <LightChip key={value} id={`student-educational-status-${value}`} name="student-educational-status" type="radio" label={label} checked={educationalStatus === value} onChange={() => { setEducationalStatus(value); setError(''); }} onClear={() => setEducationalStatus(null)} />
-            ))}
-          </ChipRow>
-        </Section>
-
-        <Section title="College letter" hint="Have you been accepted to a college yet?">
-          <YesNoChips id="student-college-accepted" value={collegeAccepted} onChange={setCollegeAccepted} />
-        </Section>
-
-        <Section title="Gap year" hint="Do you plan to take a year off before college?">
-          <YesNoChips id="student-gap-year" value={gapYear} onChange={setGapYear} />
-        </Section>
-
         <div>
           <h3 className="text-2xl font-black tracking-tight">What makes you different?</h3>
           <p className="mt-2 text-sm leading-6 text-slate-600">Pick any chips that fit you. You can skip a group. An empty chip does not hide an award.</p>
@@ -172,9 +151,7 @@ export default function InterviewWizard({ awards, initialAnswers, onComplete, on
 
         <Section title="Family money" hint="Some scholarships look at how much money your family has. Do you want to see those?">
           <ChipRow>
-            {FINANCIAL_NEED_INTEREST.filter(([value]) => value !== 'prefer_not_to_answer').map(([value, label]) => (
-              <LightChip key={value} id={`financial-need-${value}`} name="financial-need-interest" type="radio" label={label} checked={financialNeedInterest === value} onChange={() => setFinancialNeedInterest(value)} onClear={() => setFinancialNeedInterest(null)} />
-            ))}
+            <LightChip id="financial-need-yes" label="Yes" checked={financialNeedInterest === 'yes'} onChange={() => setFinancialNeedInterest(financialNeedInterest === 'yes' ? null : 'yes')} />
           </ChipRow>
         </Section>
 
@@ -222,15 +199,5 @@ function LightChip({ id, label, checked, onChange, onClear, name, type = 'checkb
       <input id={id} name={name} type={type} checked={checked} onChange={onChange} onClick={() => { if (type === 'radio' && checked) onClear?.(); }} className="sr-only" />
       {label}
     </label>
-  );
-}
-
-function YesNoChips({ id, value, onChange }: { id: string; value: YesNo; onChange: (value: YesNo) => void }) {
-  return (
-    <ChipRow>
-      {([[true, 'Yes'], [false, 'No']] as const).map(([option, label]) => (
-        <LightChip key={label} id={`${id}-${label.toLowerCase()}`} name={id} type="radio" label={label} checked={value === option} onChange={() => onChange(option)} onClear={() => onChange(null)} />
-      ))}
-    </ChipRow>
   );
 }
