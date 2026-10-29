@@ -1,17 +1,20 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import DifferentiationStep from '@/components/steps/DifferentiationStep';
+import { differentiationGroups, emptyDifferentiation, toggleDifferentiation, type DifferentiationProfile } from '@/lib/differentiation';
 import { INTERVIEW_APPLICATION_MODES, InterviewAnswersSchema, type InterviewAnswers } from '@/lib/interviewMatcher';
 import { ACTIVITY_QUESTIONS, EDUCATIONAL_STATUSES, RESIDENCE_STATES, SPECIAL_CRITERIA, SPECIAL_CRITERIA_CATEGORIES, TARGET_SCHOOL_TYPES } from '@/lib/interviewQuestions';
 import { COVERAGE_INTERESTS, STUDENT_ORGANIZATIONS, FINANCIAL_NEED_INTEREST } from '@/lib/coverageQuestions';
+import type { StudentAward } from '@/lib/studentCatalog';
 
-const stepHeadings = ['Start with two details', 'More details and application preferences', 'Study plans and activities', 'Helpful scholarship connections'] as const;
+const stepHeadings = ['Start with two details', 'More details and application preferences', 'What makes you different?', 'Study plans and activities', 'Helpful scholarship connections'] as const;
 const applicationModeLabels: Record<(typeof INTERVIEW_APPLICATION_MODES)[number], string> = {
   automatic_consideration: 'Automatic consideration', selectable_children: 'One application where I select awards', eligibility_matched: 'A portal that matches awards for me', shared_with_supplements: 'A shared application with possible supplements', direct_per_award: 'A separate application for each award', offline: 'Paper or counselor-provided application',
 };
-type Props = { initialAnswers: InterviewAnswers | null; onComplete: (answers: InterviewAnswers) => void; onCancel: () => void; syntheticQa?: boolean };
+type Props = { awards: readonly StudentAward[]; initialAnswers: InterviewAnswers | null; onComplete: (answers: InterviewAnswers) => void; onCancel: () => void; syntheticQa?: boolean };
 
-export default function InterviewWizard({ initialAnswers, onComplete, onCancel }: Props) {
+export default function InterviewWizard({ awards, initialAnswers, onComplete, onCancel }: Props) {
   const [step, setStep] = useState(0);
   const [gpa, setGpa] = useState(initialAnswers ? String(initialAnswers.gpa) : '');
   const [residenceState, setResidenceState] = useState(initialAnswers?.residenceState ?? null);
@@ -26,7 +29,9 @@ export default function InterviewWizard({ initialAnswers, onComplete, onCancel }
   const [organizationResponse, setOrganizationResponse] = useState<InterviewAnswers['organizationResponse']>(initialAnswers?.organizationResponse === 'prefer_not_to_answer' ? null : initialAnswers?.organizationResponse ?? null);
   const [selectedCriteria, setSelectedCriteria] = useState<InterviewAnswers['selectedCriteria']>((initialAnswers?.selectedCriteria ?? []).filter(id => !initialAnswers?.sensitiveCriteriaSkipped || !SPECIAL_CRITERIA.some(item => item.id === id && item.sensitive)));
   const [preferredApplicationModes, setPreferredApplicationModes] = useState<InterviewAnswers['preferredApplicationModes']>(initialAnswers?.preferredApplicationModes ?? []);
+  const [profile, setProfile] = useState<DifferentiationProfile>(initialAnswers?.differentiation ?? emptyDifferentiation());
   const [error, setError] = useState('');
+  const groups = useMemo(() => differentiationGroups(awards), [awards]);
   const headingRef = useRef<HTMLHeadingElement>(null);
   useEffect(() => { headingRef.current?.focus(); }, [step]);
 
@@ -46,7 +51,7 @@ export default function InterviewWizard({ initialAnswers, onComplete, onCancel }
       gpa: Number(gpa), residenceState, educationalStatus, targetSchoolTypes, collegeAccepted, gapYear, activities,
       volunteerHours: null,
       financialNeed: false, financialNeedInterest, discoveryInterests, studentOrganizations, organizationResponse,
-      selectedCriteria, sensitiveCriteriaSkipped: false, preferredApplicationModes,
+      selectedCriteria, sensitiveCriteriaSkipped: false, preferredApplicationModes, differentiation: profile,
     });
     if (!parsed.success) { setError('Review your answers before viewing results.'); return; }
     onComplete(parsed.data);
@@ -64,7 +69,7 @@ export default function InterviewWizard({ initialAnswers, onComplete, onCancel }
       <div className="border-b border-slate-200 pb-6">
         <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-800">Step {step + 1} of {stepHeadings.length}</p>
         <h2 ref={headingRef} tabIndex={-1} id="interview-step-heading" className="mt-2 text-3xl font-black tracking-tight outline-none">{stepHeadings[step]}</h2>
-        <p className="mt-3 leading-6 text-slate-600">{step === 0 ? 'Follow four short steps to build your scholarship shortlist. Only your GPA and target school type are required.' : 'Select what applies to you, then continue. You can leave other answers blank and go back to make changes.'}</p>
+        <p className="mt-3 leading-6 text-slate-600">{step === 0 ? 'Follow five short steps to build your scholarship shortlist. Only your GPA and target school type are required.' : step === 2 ? 'Pick any boxes that fit you. You can skip this step. Leaving a box empty does not hide an award.' : 'Select what applies to you, then continue. You can leave other answers blank and go back to make changes.'}</p>
       </div>
       {error && <p id="interview-error" role="alert" className="mt-5 rounded-xl border border-rose-200 bg-rose-50 p-4 font-bold text-rose-900">{error}</p>}
 
@@ -82,13 +87,15 @@ export default function InterviewWizard({ initialAnswers, onComplete, onCancel }
         <CheckboxGroup legend="Application formats you prefer">{INTERVIEW_APPLICATION_MODES.map((value) => <Choice key={value} id={`application-mode-${value}`} label={applicationModeLabels[value]} checked={preferredApplicationModes.includes(value)} onChange={() => toggle(value, preferredApplicationModes, setPreferredApplicationModes)} />)}</CheckboxGroup>
       </div>}
 
-      {step === 2 && <div className="mt-7 space-y-7">
+      {step === 2 && <DifferentiationStep groups={groups} profile={profile} onToggle={(chip) => { setProfile((current) => toggleDifferentiation(current, chip)); setError(''); }} />}
+
+      {step === 3 && <div className="mt-7 space-y-7">
         <CheckboxGroup legend="Education interests">{COVERAGE_INTERESTS.map(item => <Choice key={item.id} id={`discovery-${item.id}`} label={item.label} checked={discoveryInterests.includes(item.id)} onChange={() => toggle(item.id, discoveryInterests, setDiscoveryInterests)} />)}</CheckboxGroup>
         {renderCriteria(['Career Interests', 'Extracurriculars & Activities'])}
         <CheckboxGroup legend="Activities and responsibilities">{ACTIVITY_QUESTIONS.map((item) => <Choice key={item.id} id={item.controlId} label={item.label} checked={activities.includes(item.id)} onChange={() => { toggle(item.id, activities, setActivities); }} />)}</CheckboxGroup>
       </div>}
 
-      {step === 3 && <div className="mt-7 space-y-7">
+      {step === 4 && <div className="mt-7 space-y-7">
         <fieldset className="rounded-2xl border border-slate-200 p-4">
           <legend className="px-2 font-bold">Would you like to see scholarships that consider financial need? <Optional /></legend>
           <div className="mt-3 grid gap-3 sm:grid-cols-2">{FINANCIAL_NEED_INTEREST.filter(([value]) => value !== 'prefer_not_to_answer').map(([value, label]) => <label key={value} className="flex items-center rounded-xl border border-slate-300 p-3"><input type="radio" name="financial-need-interest" id={`financial-need-${value}`} checked={financialNeedInterest === value} onChange={() => setFinancialNeedInterest(value)} className="h-5 w-5 text-teal-700" /><span className="ml-3">{label}</span></label>)}</div>

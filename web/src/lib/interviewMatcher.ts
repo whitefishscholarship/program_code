@@ -16,6 +16,7 @@ import {
   type MatchingFactValue,
 } from './matchingFactRuntime';
 import { expandAlias } from '../../scripts/matching-fact-contract';
+import { DifferentiationProfileSchema } from './differentiation';
 
 export const INTERVIEW_APPLICATION_MODES = [
   'automatic_consideration', 'selectable_children', 'eligibility_matched',
@@ -52,6 +53,7 @@ export const InterviewAnswersSchema = z.strictObject({
   selectedCriteria: z.array(enumFrom<SpecialCriterionId>(SPECIAL_CRITERIA.map(({ id }) => id), 'Special criterion')).max(SPECIAL_CRITERIA.length).refine(uniqueValues, 'Special criteria must not repeat.').default([]),
   sensitiveCriteriaSkipped: z.boolean().default(false),
   preferredApplicationModes: z.array(z.enum(INTERVIEW_APPLICATION_MODES)).max(INTERVIEW_APPLICATION_MODES.length).refine(uniqueValues, 'Application preferences must not repeat.').default([]),
+  differentiation: DifferentiationProfileSchema.optional(),
 });
 
 export type InterviewAnswers = z.infer<typeof InterviewAnswersSchema>;

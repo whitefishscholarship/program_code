@@ -8,7 +8,9 @@ export const HIDDEN_FOOTNOTE = '* Hidden awards are saved only in your link, aft
 export const STUDENT_STATUS_ORDER = ['open_now', 'opens_later', 'closed', 'not_sure'] as const;
 export type StudentStatus = (typeof STUDENT_STATUS_ORDER)[number];
 export type StatusFilter = 'all' | StudentStatus;
-export type StudentSort = 'deadline' | 'amount' | 'name';
+export type StudentSort = 'deadline' | 'amount' | 'name' | 'pool';
+
+export const RULES_NOT_POSTED = 'Rules not posted yet';
 
 export const STUDENT_STATUS_LABELS: Record<StudentStatus, string> = {
   open_now: 'Open now',
@@ -152,8 +154,29 @@ export function amountSortValue(award: StudentAward): number | null {
   return value === null ? null : value;
 }
 
+export function poolRulesMissing(award: Pick<StudentAward, 'residencyScope' | 'poolLevel'>): boolean {
+  return award.residencyScope == null || award.poolLevel == null;
+}
+
+/** Shown on the card. A missing place does not use the stored reason. */
+export function poolExplanation(award: Pick<StudentAward, 'residencyScope' | 'poolLevel' | 'poolReason'>): string {
+  if (poolRulesMissing(award)) return RULES_NOT_POSTED;
+  const reason = award.poolReason?.trim();
+  return reason ? plainStudentText(reason) : RULES_NOT_POSTED;
+}
+
 export function sortStudentAwards(awards: readonly StudentAward[], sort: StudentSort, now: Date): StudentAward[] {
   return [...awards].sort((left, right) => {
+    if (sort === 'pool') {
+      const leftMissing = poolRulesMissing(left);
+      const rightMissing = poolRulesMissing(right);
+      if (leftMissing !== rightMissing) return leftMissing ? 1 : -1;
+      const leftLevel = left.poolLevel ?? 99;
+      const rightLevel = right.poolLevel ?? 99;
+      const leftScore = left.competitionScore ?? 101;
+      const rightScore = right.competitionScore ?? 101;
+      return leftLevel - rightLevel || leftScore - rightScore || left.name.localeCompare(right.name) || left.publicId.localeCompare(right.publicId);
+    }
     if (sort === 'name') return left.name.localeCompare(right.name) || left.publicId.localeCompare(right.publicId);
     if (sort === 'amount') {
       const leftAmount = amountSortValue(left);
