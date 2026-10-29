@@ -141,6 +141,73 @@ const nesa = one('NESA Scholarships');
 assert.deepEqual(nesa.clubs, ['Eagle Scout']);
 assert.equal(nesa.plans, null);
 
+const cskt = one('CSKT Higher Education');
+assert.equal(cskt.residencyScope, 'regional');
+assert.equal(cskt.poolLevel, 3);
+assert.deepEqual(cskt.heritage, ['Native American']);
+assert.equal(cskt.renewable, true);
+
+const chaikin = one('Rebuilding the Road Ahead');
+assert.equal(chaikin.residencyScope, 'regional');
+assert.equal(chaikin.poolLevel, 4);
+assert.match(String(chaikin.poolReason), /New York/);
+
+const lineworker = one('Lineman Country');
+assert.equal(lineworker.residencyScope, 'regional');
+assert.equal(lineworker.poolLevel, 3);
+assert.deepEqual(lineworker.plans, ['skilled trades']);
+assert.match(String(lineworker.poolReason), /Southeast Lineman Training Center/);
+
+const p1NullIds = [
+  'award-145de4f3884e',
+  'award-88d2adae4d6d',
+  'award-f72b8b128a76',
+  'award-5b93bad03efd',
+  'award-cd0fb7cd0c64',
+  'award-2126bc5d2f6b',
+  'award-116fe9ce5784',
+  'award-11c663acf42e',
+  'award-bb8ca59a7f0f',
+  'award-5dd6fcbcc0f8',
+  'award-47478b1163e1',
+  'award-0651dcec4d07',
+  'award-ffbd0f0b989f',
+  'award-2dc33d508924',
+  'award-607fe66710d6',
+  'award-273fe6406702',
+  'award-5dc2aab768d2',
+  'award-5dd4c3d3988a',
+  'award-d2b44a62c0a7',
+];
+const p2NullIds = [
+  'award-7859d00caa82',
+  'award-fdf6012f1498',
+  'award-21ab35b931ee',
+  'award-615c2c524263',
+  'award-dbe0160d5e4f',
+  'award-c2a30992d363',
+  'award-c3c9cbf0e4ee',
+  'award-e5f48a684b24',
+  'award-8eb603df07a2',
+  'award-fb00c6366324',
+  'award-b07d51070d88',
+  'award-899b6e8b36c5',
+  'award-0fd353bdab40',
+  'award-489629d01b5f',
+  'award-2ae241b793af',
+  'award-dc2b99725756',
+  'award-a93cd1244e14',
+  'award-edef6a6bc91c',
+];
+const byPublicId = new Map(bundle.catalog.awards.map((award) => [award.publicId, award]));
+for (const id of [...p1NullIds, ...p2NullIds]) assert.equal(byPublicId.get(id)?.residencyScope, null, id);
+assert.equal(scopeCounts.get('null'), p1NullIds.length + p2NullIds.length);
+assert.match(report, /## Flag for Kelsey/);
+assert.match(report, /Pages with no rules \(19\)/);
+assert.match(report, /May 10, 2026/);
+assert.match(report, /April 10, 2026/);
+assert.match(report, /January 20, 2026/);
+
 for (const past of bundle.catalog.awards.filter((award) => String(award.poolReason).startsWith('The page only shows an old example'))) {
   assert.equal(past.residencyScope, null, past.name);
   assert.equal(past.poolLevel, null, past.name);

@@ -14,48 +14,49 @@ Awards tagged: 456.
 
 ### residencyScope
 
-- national: 266
-- null: 80
-- montana: 48
+- national: 302
+- montana: 52
+- null: 37
 - flathead: 22
 - whitefish: 22
-- regional: 18
+- regional: 21
 
 ### poolLevel
 
-- 5: 222
-- null: 80
-- 4: 50
-- 6: 47
+- 5: 238
+- 6: 67
+- 4: 55
+- null: 37
 - 1: 22
 - 2: 22
-- 3: 13
+- 3: 15
 
 ### competitionScore
 
-- 73: 109
-- null: 80
-- 70: 72
-- 94: 37
+- 73: 121
+- 70: 74
+- 94: 57
+- null: 37
 - 67: 27
+- 58: 23
 - 55: 22
-- 58: 19
 - 16: 14
 - 27: 9
-- 72: 8
+- 72: 9
 - 30: 7
+- 41: 7
 - 93: 7
-- 41: 5
 - 13: 4
+- 57: 4
 - 24: 3
 - 44: 3
 - 52: 3
-- 57: 3
 - 92: 3
 - 15: 2
 - 26: 2
 - 38: 2
 - 54: 2
+- 71: 2
 - 10: 1
 - 14: 1
 - 29: 1
@@ -67,15 +68,13 @@ Awards tagged: 456.
 - 66: 1
 - 68: 1
 - 69: 1
-- 71: 1
 - 76: 1
 
 ### poolReason
 
-- Open to students across the United States.: 46
-- The page does not say the place.: 39
-- Montana students can apply.: 22
-- The page does not say who can apply.: 22
+- Open to students across the United States.: 66
+- Montana students can apply.: 26
+- The page does not say the place.: 21
 - Only Whitefish High School students can apply.: 17
 - Students across the United States who are training to fix airplanes can apply.: 16
 - Students in the United States and Canada who are AOPA members can apply.: 16
@@ -83,18 +82,22 @@ Awards tagged: 456.
 - Students across the United States who are WAI members and are training to be pilots can apply.: 13
 - Students across the United States who are training to be pilots can apply.: 10
 - Students across the United States who are NGPA members and are training to be pilots can apply.: 9
+- Students across the United States who need help paying for college can apply.: 8
+- The page does not say who can apply.: 8
 - Only Flathead County students can apply.: 7
 - Students across the United States who are FFA members can apply.: 7
-- Students across the United States who are in the skilled trades can apply.: 5
+- Students across the United States who are in the skilled trades can apply.: 7
 - Students across the United States who are WAI members and are training to fix airplanes can apply.: 5
 - Students across the United States who have a military family tie can apply.: 5
-- Students across the United States who need help paying for college can apply.: 5
 - Students across the United States who are studying business can apply.: 4
 - Students across the United States who are WAI members, are training to fix airplanes, and are women can apply.: 4
 - Montana students who are in the skilled trades can apply.: 3
 - Montana students who have a first responder in the family can apply.: 3
+- Students across the United States who are Native American can apply.: 3
+- Students across the United States who are studying STEM can apply.: 3
 - Students across the United States who are WAI members and are studying STEM can apply.: 3
 - Students across the United States who are women can apply.: 3
+- Students across the United States who have a learning disability can apply.: 3
 - Montana students who are studying agriculture or nature can apply.: 2
 - Montana students who have a Farm Bureau family tie can apply.: 2
 - Montana students who need help paying for college can apply.: 2
@@ -104,11 +107,9 @@ Awards tagged: 456.
 - Only students in the Flathead Electric service area who have an electric co-op family tie can apply.: 2
 - Students across the United States who are AEA members can apply.: 2
 - Students across the United States who are FFA members, are planning to teach, and are studying agriculture or nature can apply.: 2
-- Students across the United States who are Native American can apply.: 2
 - Students across the United States who are NGPA members and are training to fix airplanes can apply.: 2
 - Students across the United States who are NTHS members and are in the skilled trades can apply.: 2
 - Students across the United States who are NTHS members can apply.: 2
-- Students across the United States who are studying STEM can apply.: 2
 - Students across the United States who are studying STEM, are training to be pilots, and have a military family tie can apply.: 2
 - Students across the United States who are studying transportation and are women can apply.: 2
 - Students across the United States who are training to be pilots and are training to fix airplanes can apply.: 2
@@ -118,10 +119,6 @@ Awards tagged: 456.
 - Students across the United States who have a learning or health need listed on the award can apply.: 2
 - Students across the United States who work for the sponsor or have a parent who does can apply.: 2
 - Students in the United States and Canada who are AOPA members and are training to be pilots can apply.: 2
-- The page does not say the place. It is for students who are in the skilled trades.: 2
-- The page does not say the place. It is for students who are Native American.: 2
-- The page does not say the place. It is for students who have a learning disability.: 2
-- The page does not say the place. It is for students who need help paying for college.: 2
 - Montana students who are in a two-year program and are in the skilled trades can apply.: 1
 - Montana students who are in the skilled trades and need help paying for college can apply.: 1
 - Montana students who are planning to serve the public and have a first responder in the family can apply.: 1
@@ -136,6 +133,7 @@ Awards tagged: 456.
 - Montana students who play rodeo can apply.: 1
 - Montana students who play soccer can apply.: 1
 - Montana students who play wrestling can apply.: 1
+- Only enrolled members of the Confederated Salish and Kootenai Tribes who are Native American can apply.: 1
 - Only Flathead County students who are connected to a Catholic church can apply.: 1
 - Only Flathead County students who are in the skilled trades and are connected to a Christian church can apply.: 1
 - Only Flathead County students who are planning to teach can apply.: 1
@@ -146,9 +144,11 @@ Awards tagged: 456.
 - Only Montana State University students who are FFA members can apply.: 1
 - Only Montana State University students who are studying agriculture or nature can apply.: 1
 - Only Montana Tech students who are studying healthcare can apply.: 1
+- Only New York students can apply.: 1
 - Only Ohio students who are training to be pilots can apply.: 1
 - Only students at Chattanooga State Community College who are in the skilled trades can apply.: 1
 - Only students at Colorado State University in Fort Collins who would be the first in their family to go to college can apply.: 1
+- Only students at the Southeast Lineman Training Center in Georgia who are in the skilled trades can apply.: 1
 - Only students from a few Montana counties can apply.: 1
 - Only students from a few Montana counties who are in the skilled trades and are women can apply.: 1
 - Only students from a few Montana counties who are in the skilled trades can apply.: 1
@@ -166,14 +166,18 @@ Awards tagged: 456.
 - Open to students in the United States and Canada.: 1
 - Students across the United States who are AEA members and are training to fix airplanes can apply.: 1
 - Students across the United States who are AEA members, are training to fix airplanes, are studying business, and have a military family tie can apply.: 1
+- Students across the United States who are Asian or Pacific Islander and have a mental health need can apply.: 1
 - Students across the United States who are connected to a Catholic church can apply.: 1
 - Students across the United States who are connected to a Presbyterian church and need help paying for college can apply.: 1
+- Students across the United States who are Eagle Scouts can apply.: 1
 - Students across the United States who are FFA members and are in the skilled trades can apply.: 1
 - Students across the United States who are FFA members, are NTHS members, and are studying agriculture or nature can apply.: 1
 - Students across the United States who are in the skilled trades and are in a two-year program can apply.: 1
 - Students across the United States who are in the skilled trades and need help paying for college can apply.: 1
 - Students across the United States who are in the skilled trades, are studying business, and have a mental health need can apply.: 1
 - Students across the United States who are in the skilled trades, have a lineman in the family, and need help paying for college can apply.: 1
+- Students across the United States who are LGBTQ+ and would be the first in their family to go to college can apply.: 1
+- Students across the United States who are LGBTQ+ can apply.: 1
 - Students across the United States who are LPA members and are studying aviation management can apply.: 1
 - Students across the United States who are National Honor Society members can apply.: 1
 - Students across the United States who are NGPA members and are LGBTQ+ can apply.: 1
@@ -218,15 +222,17 @@ Awards tagged: 456.
 - Students across the United States who have a credit union family tie can apply.: 1
 - Students across the United States who have a family tie to a lodge can apply.: 1
 - Students across the United States who have a first responder in the family can apply.: 1
-- Students across the United States who have a learning disability can apply.: 1
+- Students across the United States who have a mental health need can apply.: 1
 - Students across the United States who have a mental health need, have been in foster care, and are LGBTQ+ can apply.: 1
 - Students across the United States who have a military family tie and lost a parent can apply.: 1
 - Students across the United States who have a military family tie and need help paying for college can apply.: 1
 - Students across the United States who have a union family tie can apply.: 1
 - Students across the United States who have faced a hard time can apply.: 1
 - Students across the United States who play golf can apply.: 1
+- Students across the United States who were adopted or were in foster care and have faced a hard time can apply.: 1
 - Students across the United States who were adopted or were in foster care can apply.: 1
 - Students across the United States who work for the sponsor or have a parent who does, were adopted, and need help paying for college can apply.: 1
+- Students across the United States who would be the first in their family to go to college can apply.: 1
 - Students in Montana and nearby states can apply.: 1
 - Students in Montana and nearby states who are FFA members can apply.: 1
 - Students in Montana and nearby states who are studying art or music can apply.: 1
@@ -234,16 +240,13 @@ Awards tagged: 456.
 - Students in the United States and Canada who are in the skilled trades can apply.: 1
 - Students in the United States and Canada who are training to be pilots can apply.: 1
 - Students in the United States and Canada who are women can apply.: 1
-- The page does not say the place. It is for students who are Eagle Scouts.: 1
 - The page does not say the place. It is for students who are in the skilled trades and have a military family tie.: 1
-- The page does not say the place. It is for students who are LGBTQ+ and would be the first in their family to go to college.: 1
-- The page does not say the place. It is for students who are LGBTQ+.: 1
+- The page does not say the place. It is for students who are in the skilled trades.: 1
 - The page does not say the place. It is for students who are studying agriculture or nature.: 1
 - The page does not say the place. It is for students who are studying art or music.: 1
 - The page does not say the place. It is for students who are WAI members.: 1
 - The page does not say the place. It is for students who are women.: 1
 - The page does not say the place. It is for students who have a military family tie.: 1
-- The page does not say the place. It is for students who were adopted or were in foster care and have faced a hard time.: 1
 - The page lists two ways to qualify, so one shared rule was not set.: 1
 
 ### ruralRule
@@ -283,8 +286,9 @@ Awards tagged: 456.
 
 ### heritage
 
-- null: 451
+- null: 450
 - Native American: 5
+- Asian or Pacific Islander: 1
 
 ### faith
 
@@ -308,11 +312,11 @@ Awards tagged: 456.
 
 ### plans
 
-- null: 283
+- null: 280
 - pilot training: 61
 - aviation maintenance: 35
-- skilled trades: 26
-- STEM: 15
+- skilled trades: 28
+- STEM: 16
 - business: 12
 - agriculture: 10
 - aviation management: 6
@@ -327,9 +331,9 @@ Awards tagged: 456.
 
 ### health
 
-- null: 446
+- null: 444
 - learning disability: 5
-- mental health: 3
+- mental health: 5
 - ADHD: 2
 - disability: 2
 - dyslexia: 2
@@ -354,24 +358,24 @@ Awards tagged: 456.
 
 ### firstGen
 
-- null: 454
-- true: 2
+- null: 453
+- true: 3
 
 ### needBased
 
-- null: 433
-- true: 23
+- null: 432
+- true: 24
 
 ### essayRequired
 
-- null: 387
-- true: 66
+- null: 373
+- true: 80
 - false: 3
 
 ### renewable
 
-- null: 442
-- true: 13
+- null: 441
+- true: 14
 - false: 1
 
 ### tagConfirmedBy
@@ -380,69 +384,8 @@ Awards tagged: 456.
 
 ## Pages that did not load
 
-32 awards. The place stays null because the official page did not load.
+0 awards. The place stays null because the official page did not load.
 
-- https://bluecollarbrain.com/scholarship/
-  - Blue Collar Brain Scholarship Program
-- https://bold.org/scholarships/adam-montes-pride-scholarship/
-  - Adam Montes Pride Scholarship
-- https://bold.org/scholarships/bulkthreads-lets-aim-higher-scholarship/
-  - Bulkthreads.com's "Let's Aim Higher" Scholarship
-- https://bold.org/scholarships/dr-christine-lawther-first-in-the-family-scholarship/
-  - Dr. Christine Lawther First in the Family Scholarship
-- https://bold.org/scholarships/elijahs-helping-hand-scholarship-award/
-  - Elijah's Helping Hand Scholarship Award
-- https://bold.org/scholarships/ethel-hayes-destigmatization-of-mental-health-scholarship/
-  - Ethel Hayes Destigmatization of Mental Health Scholarship
-- https://bold.org/scholarships/hue-ta-asian-american-scholarship/
-  - Hue Ta Asian American Scholarship
-- https://bold.org/scholarships/joseph-c-lowe-memorial-scholarship/
-  - Joseph C. Lowe Memorial Scholarship
-- https://bold.org/scholarships/robert-f-lawson-fund-for-careers-that-care/
-  - Robert F. Lawson Fund for Careers that Care
-- https://bold.org/scholarships/steam-generator-scholarship/
-  - STEAM Generator Scholarship
-- https://bold.org/scholarships/student-referee-scholarship/
-  - Student Referee Scholarship
-- https://cskt.org/education/higher-education/
-  - CSKT Higher Education Scholarship
-- https://dellinolaw.com/scholarship/
-  - Overcoming Challenges Together Scholarship
-- https://nata.aero/national-air-transportation-foundation/scholarships/navigate-your-future-scholarship/
-  - Navigate Your Future Scholarship
-- https://ncld.org/scholarships-awards/
-  - Everyday Champion Award
-- https://ncld.org/scholarships-awards/allegra-ford-thomas-scholarship/
-  - Allegra Ford Thomas Scholarship
-- https://ncld.org/scholarships-awards/anne-ford-scholarship/
-  - Anne Ford Scholarship
-- https://nesa.org/scholarships/
-  - NESA Scholarships (National Eagle Scout Association)
-- https://thendalliance.org/scholarship/
-  - The Neurodiversity Scholarship
-- https://www.adoptionstar.com/resources/scholarship/
-  - Adoption STAR Academic Scholarship Program
-  - Adoption STAR Scholarship for LGBTQ+ Prospective Adoptive Parents
-  - Parenthood For Me Medical Scholarship
-  - Shining Star Scholarship for the Adoption of Children with Special Needs
-- https://www.cardrates.com/scholarship/
-  - CardRates.com Financial Futures Scholarship
-- https://www.chaikintrialgroup.com/scholarship/
-  - Rebuilding the Road Ahead Scholarship
-- https://www.exploring.org/wp-content/uploads/2026/03/Scholarship-Application_Aviation_2026-fill3.pdf
-  - National Aviation Explorer Scholarship
-- https://www.jkcf.org/our-scholarships/college-scholarship-program/how-to-apply/
-  - Jack Kent Cooke Scholarship Program
-- https://www.lineworker.com/lineman-country-scholarship
-  - Lineman Country Scholarship (Southeast Lineman Training Center)
-- https://www.louiefamilyfoundation.org/scholarship-application
-  - The Kim and Harold Louie Family Foundation 2026 Scholarship
-- https://www.mikeroweworks.org/scholarship
-  - Work Ethic Scholarship Program
-- https://www.smartkidswithld.org/youth-achievement-award-application/
-  - Fred J. Epstein Youth Achievement Award
-- https://www.wellscall.com/scholarship-contest/
-  - The Safer Roadways Scholarship
 
 ## Pages that loaded but did not show this award's rules
 
@@ -468,19 +411,56 @@ Awards tagged: 456.
 - Whitefish Soroptimist Memorial Scholarship for Girls Graduating High School | https://docs.google.com/forms/d/e/1FAIpQLSfLo_j4XJoK6JEM8PeAJSU3YqbNJlp5rwD1-WQ8q0EJrNo5RA/viewform
 - Workforce Development Scholarships | https://app.ui3.smarterselect.com/programs/109007-Agc-Education-And-Research-Foundation
 
+## Flag for Kelsey
+
+These awards stay in the catalog. Each line is a question the page did not settle.
+
+### Place limits
+
+- Rebuilding the Road Ahead Scholarship | https://www.chaikintrialgroup.com/scholarship/ | The page says only New York residents can apply. Whitefish students likely cannot apply. Should this award stay off their list?
+- Lineman Country Scholarship (Southeast Lineman Training Center) | https://www.lineworker.com/lineman-country-scholarship | The page requires an active application with the Southeast Lineman Training Center in Trenton, Georgia. Whitefish students likely cannot apply unless they are in that program. Should this award stay off their list?
+
+### Passed deadlines with no new date
+
+- Anne Ford Scholarship | https://ncld.org/scholarships-awards/anne-ford-scholarship/ | The page lists a deadline of May 10, 2026, and it does not list a new date. Is this award closed?
+- Lineman Country Scholarship (Southeast Lineman Training Center) | https://www.lineworker.com/lineman-country-scholarship | The page lists a deadline of April 10, 2026, and it does not list a new date. Is this award closed?
+- Fred J. Epstein Youth Achievement Award | https://www.smartkidswithld.org/youth-achievement-award-application/ | The page lists a deadline of January 20, 2026, and it does not list a new date. Is this award closed?
+
+### Pages with no rules (19)
+
+- AMVETS Veteran Scholarship Program | https://apply.mykaleidoscope.com/scholarships/VSP2024 | The application site did not show the rules. Who can apply, and is there a location limit?
+- Jerry Barnes ($500) | https://drive.google.com/file/d/1EKVkgZdflTx7BqIFnm_vcl27w2kWeiWQ/view | The linked file is only an image, so the rules could not be read. Who can apply, and is there a location limit?
+- KPMG Future Leaders Program | https://apply.mykaleidoscope.com/scholarships/KPMGFutureLeaders2025 | The application site did not show the rules. Who can apply, and is there a location limit?
+- Level Up Aviation General Scholarship | https://www.wai.org/scholarship-listings | The WAI scholarship list did not include this award's rules. Who can apply, and is there a location limit?
+- LIFT Academy Pilot Scholarship | https://www.wai.org/how-to-apply | The WAI how-to-apply page did not state this award's rules. Who can apply, and is there a location limit?
+- Logan Health - Healthy Futures Scholarship | https://app.smartsheet.com/b/form/fe652ecd33394f99b059cbc1da39e7c0 | The form did not state who can apply. Who can apply, and is there a location limit?
+- Margaret & Jane Fellows Drama/Theatre Scholarship ($500) | https://drive.google.com/file/d/1btB704nlikOJDiqFT0RgVmsVOVcCEM9g/view | The linked file is only an image, so the rules could not be read. Who can apply, and is there a location limit?
+- Mike and Gail Donley Spouse Scholarships | https://app.smarterselect.com/programs/94012-Air--Space-Forces-Association | The application site did not show the rules. Who can apply, and is there a location limit?
+- Montana Coffee Traders Scholarship (2 - $1,000) | https://whitefishcommunityfoundation.org/menu/montana-coffee-traders-scholarship | The page lists two ways to qualify: an employee or dependent, or a Flathead Valley resident. Which students should this award include?
+- NAEHCY Scholarship | https://docs.google.com/forms/d/e/1FAIpQLSdKPOZ7Dff0m9K9-0KFO-lzanmPQESh0OzOUMFv6tU-K1I5Pw/viewform | The form did not state who can apply. Who can apply, and is there a location limit?
+- Ortho Rehab "Reach Your Peak" | https://drive.google.com/file/d/1fKimPYXfHasnJbZco-b7tFeP5Zi7P_nm/view | The linked file is only an image, so the rules could not be read. Who can apply, and is there a location limit?
+- SOKN Scholarship | https://drive.google.com/file/d/1MFtIcoZksmRYsRJmLMNDjkrRyP1BEqUv/view | The linked file is only an image, so the rules could not be read. Who can apply, and is there a location limit?
+- Soroptimist Certificate Scholarships | https://docs.google.com/forms/d/e/1FAIpQLSe5VPFHrngDDilLkT8Z5L-nQXid0JYSkvbBbsK0rCGly1IYSw/viewform | The form did not state who can apply. Who can apply, and is there a location limit?
+- The Dorothy Thompson/Tampa Bay Aviation Scholarship | https://www.wai.org/scholarship-listings | The WAI scholarship list did not include this award's rules. Who can apply, and is there a location limit?
+- VFW Voices of Democracy - Patriotic Audio Essay “How Are You Showing Patriotism And Support For Our Country?” | https://vfw.org/community/youth-and-education/youth-scholarships | The page showed winner stories, not the rules for who can apply. Which students can enter, and is there a location limit?
+- WAI Atlanta “Wheels Down South” Chapter Scholarship | https://www.wai.org/scholarship-listings | The WAI scholarship list did not include this award's rules. Who can apply, and is there a location limit?
+- Whitefish Bulldog Booster Club Scholarships | https://docs.google.com/presentation/d/1J9VyluY4pIU3SOBqRvtl9xcOJ9OtCWmj/edit | The slides showed dates only, not who can apply. Who can apply?
+- Whitefish Soroptimist Memorial Scholarship for Girls Graduating High School | https://docs.google.com/forms/d/e/1FAIpQLSfLo_j4XJoK6JEM8PeAJSU3YqbNJlp5rwD1-WQ8q0EJrNo5RA/viewform | The form did not state who can apply. Is it only for girls graduating from Whitefish High School?
+- Workforce Development Scholarships | https://app.ui3.smarterselect.com/programs/109007-Agc-Education-And-Research-Foundation | The application page did not state who can apply. Who can apply, and is there a location limit?
+
 ## Awards left uncertain
 
-257 awards still have a gap. The tag fields are filled with null where the page does not say.
+243 awards still have a gap. The tag fields are filled with null where the page does not say.
 
 - award-0a1f1d1b8505 | 2027 Wings for Val Foundation Lt. Cmdr. Lyndsay Evans Memorial Scholarship | no location limit listed
-- award-d06d7c7342e2 | Adam Montes Pride Scholarship | The page did not load.
-- award-2a22470d390c | Adoption STAR Academic Scholarship Program | The page did not load.
-- award-b8ae28986a81 | Adoption STAR Scholarship for LGBTQ+ Prospective Adoptive Parents | The page did not load.
+- award-d06d7c7342e2 | Adam Montes Pride Scholarship | no location limit listed
+- award-2a22470d390c | Adoption STAR Academic Scholarship Program | no location limit listed
+- award-b8ae28986a81 | Adoption STAR Scholarship for LGBTQ+ Prospective Adoptive Parents | no location limit listed
 - award-1b7e12cc1279 | AeroStar ATP CTP Certification Training Scholarship | no location limit listed
 - award-1b50b8ba8dc7 | Agri Industries | no location limit listed
 - award-025b82622063 | Aircraft Lighting International Scholarship | no location limit listed
 - award-c601a3ce6b92 | Alaska Airlines/Horizon Air Maintenance Scholarship | no location limit listed
-- award-00c8fd2e3b19 | Allegra Ford Thomas Scholarship | The page did not load.
+- award-00c8fd2e3b19 | Allegra Ford Thomas Scholarship | no location limit listed
 - award-67869a40834d | Amazon Maintenance Technician Scholarship | no location limit listed
 - award-e6d33b3f2691 | Amazon Professional Flight Training Scholarship | no location limit listed
 - award-25d250ec58c6 | Amazon Unmanned Aircraft System (UAS) Training Scholarship | no location limit listed
@@ -488,33 +468,30 @@ Awards tagged: 456.
 - award-15228c015499 | AMTOPP Scholarship | no location limit listed
 - award-145de4f3884e | AMVETS Veteran Scholarship Program | The page loaded but this award's rules were not on it.
 - award-74e0f7fdd4c5 | Anne Bridge Baddour Aviation Scholarship | no location limit listed
-- award-a9c6e0fcc5af | Anne Ford Scholarship | The page did not load.
+- award-a9c6e0fcc5af | Anne Ford Scholarship | no location limit listed
 - award-2974a6462e95 | AOPA FOUNDATION SCHOLARSHIP | no location limit listed
 - award-71e2ee7f2172 | ASE Scholarship | no location limit listed
 - award-9185ae8439e3 | Associated General Contractors of America’s Workforce Development Scholarship | no location limit listed
 - award-dafc0ee48bd2 | Avfuel Pilot-in-Training Scholarship | no location limit listed
 - award-4343de48868d | AVTRIP Scholarship | no location limit listed
-- award-3eba44ba5492 | Beauty Changes Lives Scholarships | The page does not say the place.
+- award-3eba44ba5492 | Beauty Changes Lives Scholarships | no location limit listed
 - award-8250bfe7501a | Big Sun Athletics Scholarship | no location limit listed
-- award-d2f262e03fe2 | Blue Collar Brain Scholarship Program | The page did not load.
 - award-ba504649a05d | Boeing Flight Training Scholarship | no location limit listed
 - award-9da4b8e00a27 | Boeing Maintenance Training Scholarship | no location limit listed
 - award-0546c2fa9e62 | Bonita Jean Olson Memorial Scholarship | no location limit listed
 - award-2ae241b793af | Boom and Bucket Heavy Machinery Scholarship | The page does not say the place.
 - award-6fa70e1db39e | Building Hope Scholarship | no location limit listed
-- award-7933697626cd | Bulkthreads.com's "Let's Aim Higher" Scholarship | The page does not say who can apply. The page did not load.
+- award-7933697626cd | Bulkthreads.com's "Let's Aim Higher" Scholarship | no location limit listed
 - award-b9a12b09957d | Bunny M. Connors Memorial Scholarship | no location limit listed
 - award-67ca7bc4fa40 | C. Allen Powell Alumni Scholarship | no location limit listed
-- award-a15386569627 | CardRates.com Financial Futures Scholarship | The page does not say who can apply. The page did not load.
+- award-a15386569627 | CardRates.com Financial Futures Scholarship | The page lists more than one field of study, so a single field was not tagged.
 - award-6781caed705a | Christine Reed Memorial Flight Scholarship | no location limit listed
 - award-b5aebadbd8d2 | Chuck Freeland Memorial Scholarship for Flight Training | no location limit listed
 - award-d1a6bced44ae | Chuck Peacock Memorial Scholarship | no location limit listed
 - award-a6594e658462 | Clearwater Credit Union Scholarship Program | no location limit listed
 - award-07f8d89b10ba | Colonel Aaron Burgstein Memorial Scholarship | no location limit listed
-- award-c32eca2c949c | CSKT Higher Education Scholarship | The page did not load.
 - award-8daa0f30de62 | D.A. Davidson Memorial Scholarship | no location limit listed
 - award-519dce301c62 | Dare to Dream Scholarship | no location limit listed
-- award-d5ab9d5dcef8 | Daughters of the American Revolution Scholarships | The page does not say the place.
 - award-ff63c599405f | David Arver Memorial Scholarship | no location limit listed
 - award-6eb2676b69f4 | Davis-Putter Scholarship | no location limit listed
 - award-6c9a2b50553e | Delta Air Lines Pilot Scholarship | no location limit listed
@@ -522,13 +499,13 @@ Awards tagged: 456.
 - award-83f3b6b43c5e | Delta Dental Grants | no location limit listed
 - award-d6ec98fa1642 | Destin Flight Works Pilot Training Scholarship | no location limit listed
 - award-7480af6a3f3d | Donald E. Pizzini Memorial Nurse Scholarships | no location limit listed
-- award-85eccd5611e9 | Dr. Christine Lawther First in the Family Scholarship | The page does not say who can apply. The page did not load. The name says first generation, but the page does not say that.
+- award-85eccd5611e9 | Dr. Christine Lawther First in the Family Scholarship | no location limit listed
 - award-bb295b2828b5 | Dr. Max L Amberson Ag Education Scholarship | no location limit listed
 - award-36791c097a52 | Dr. Sydell Perlmutter Gold Memorial Scholarship | no location limit listed
 - award-c3710c715ac5 | Dutch and Ginger Arver Scholarship | no location limit listed
 - award-bbe935853482 | EAA Ray Aviation Scholarship | no location limit listed
 - award-d6ae56218094 | Elevated Access Flight Training Scholarship (NGPA) | no location limit listed
-- award-8e955dce3eaa | Elijah's Helping Hand Scholarship Award | The page does not say who can apply. The page did not load.
+- award-8e955dce3eaa | Elijah's Helping Hand Scholarship Award | no location limit listed
 - award-9545b3c2a03a | Elisha Hall Memorial Scholarship | The page lists more than one field of study, so a single field was not tagged. no location limit listed
 - award-20025cb56901 | Elks National Foundation Legacy Awards  | no location limit listed
 - award-4b8060812f60 | Endeavor Air Flight Training Scholarship (NGPA) | no location limit listed
@@ -536,16 +513,16 @@ Awards tagged: 456.
 - award-3b5ec8c60897 | ERRAL LEA AND GLENN PLYMATE MEMORIAL FLIGHT TRAINING SCHOLARSHIP | The name says flight training, but the page does not say that.
 - award-a93cd1244e14 | Essential Visionaries Scholarship Fund | The page does not say the place.
 - award-c36fdba14b1f | Esther Noffke Flight Training Scholarship | no location limit listed
-- award-943678a94833 | Ethel Hayes Destigmatization of Mental Health Scholarship | The page does not say who can apply. The page did not load.
+- award-943678a94833 | Ethel Hayes Destigmatization of Mental Health Scholarship | no location limit listed
 - award-d7fd424f278f | Evelyn Lockwood Greene Memorial A&P Maintenance Scholarship | no location limit listed
-- award-60b634d314c6 | Everyday Champion Award | The page did not load.
+- award-60b634d314c6 | Everyday Champion Award | no location limit listed
 - award-d1dc783a1ff8 | FedEx Flight Training Scholarship | no location limit listed
 - award-033b1d3e62a1 | FedEx Flight Training Scholarship (NGPA) | no location limit listed
 - award-54180c19eb74 | FFA Ag Teachers Memorial Scholarship | no location limit listed
 - award-368605f80ab9 | Fisher House Scholarships for Military Children | no location limit listed
 - award-6ee1bd1bab1f | Folds of Honor First Responder Higher Education Scholarship | no location limit listed
 - award-8eb603df07a2 | Foster Care Education and Training Voucher | The name says foster, but the page does not say foster care is required. The page does not say the place.
-- award-5a371acc5f8b | Fred J. Epstein Youth Achievement Award | The page does not say who can apply. The page did not load.
+- award-5a371acc5f8b | Fred J. Epstein Youth Achievement Award | no location limit listed
 - award-c2add4aa3b24 | Garmin Scholarship | no location limit listed
 - award-8e8719f2146f | Garmin–Jerry Smith Memorial Scholarship | no location limit listed
 - award-3de0c3240164 | Gary Olszewski Memorial Scholarship | no location limit listed
@@ -558,16 +535,14 @@ Awards tagged: 456.
 - award-e9ca489e5a61 | GlennCo Electrical Repair Training Scholarship | no location limit listed
 - award-e48736fb17e8 | Gogo Scholarship | no location limit listed
 - award-c0661550686b | GoJet Airlines Flight Training Scholarship (NGPA) | no location limit listed
-- award-f50cdded7e41 | Grand Lodge of Montana Masonic Scholarship | The name says Montana, but the page does not say the student must be from Montana. The page does not say the place.
 - award-01dc5649ad46 | Harold Earl Paige Memorial Scholarship | no location limit listed
 - award-8034b093b983 | Heroes' Legacy Scholarship (Fisher House) | no location limit listed
-- award-bbad8145ca3e | Hue Ta Asian American Scholarship | The page does not say who can apply. The page did not load.
+- award-bbad8145ca3e | Hue Ta Asian American Scholarship | no location limit listed
 - award-62b0511e59fe | Hurst Foundation Flight Training Scholarship | The name says flight training, but the page does not say that.
 - award-be12d7769d06 | International Lineman's Rodeo Association (ILRA) Scholarship | no location limit listed
 - award-0c6f9832a101 | ISA+21 Financial Scholarship 2027 | no location limit listed
 - award-44bcbb2eeb9c | ISA+21 Francesca Norris Memorial Scholarship 2027 | no location limit listed
 - award-e30f226ed6fc | IvyPanda.com Video Scholarship | no location limit listed
-- award-4aa2be1b2660 | Jack Kent Cooke Scholarship Program | The page did not load.
 - award-4ea4015b19b3 | James Hammond Joubert Memorial Scholarship | no location limit listed
 - award-0b75492e8353 | Janet Clark Memorial Scholarship | The page lists more than one field of study, so a single field was not tagged. no location limit listed
 - award-88d2adae4d6d | Jerry Barnes ($500) | The page does not say who can apply. The page loaded but this award's rules were not on it.
@@ -577,7 +552,7 @@ Awards tagged: 456.
 - award-c2a30992d363 | John V. Cooley Scholarship | The page does not say the place.
 - award-1f84b7995c22 | Johnny Davis Memorial Scholarship | no location limit listed
 - award-de35aff29b9f | Jon H. Poteat Scholarship | no location limit listed
-- award-e3aec30264fc | Joseph C. Lowe Memorial Scholarship | The page does not say who can apply. The page did not load.
+- award-e3aec30264fc | Joseph C. Lowe Memorial Scholarship | no location limit listed
 - award-df3626999a99 | Juliana Turchetti Memorial Scholarship | no location limit listed
 - award-a4ca14a7716d | Junior College/Trade School Scholarship | no location limit listed
 - award-615c2c524263 | Kalispell Youth Softball Association Scholarship | The page does not say the place.
@@ -588,7 +563,6 @@ Awards tagged: 456.
 - award-3279a3f6cdff | Lee Tarbox Memorial Scholarship | no location limit listed
 - award-5b93bad03efd | Level Up Aviation General Scholarship | The page does not say who can apply. The page loaded but this award's rules were not on it.
 - award-cd0fb7cd0c64 | LIFT Academy Pilot Scholarship | The page loaded but this award's rules were not on it. The name says flight training, but the page does not say that.
-- award-3c66c7edc5d3 | Lineman Country Scholarship (Southeast Lineman Training Center) | The page does not say who can apply. The page did not load.
 - award-2126bc5d2f6b | Logan Health - Healthy Futures Scholarship | The page does not say who can apply. The page loaded but this award's rules were not on it.
 - award-bb776f54425c | LogTen Pro CFII Training Scholarship (NGPA) | no location limit listed
 - award-063f7b85a1ae | LPA Aerospace Degree Advancement Scholarship | The page lists more than one field of study, so a single field was not tagged. no location limit listed
@@ -606,7 +580,6 @@ Awards tagged: 456.
 - award-67de97a4f446 | Montana Jaycee Foundation Scholarship | The name says Montana, but the page does not say the student must be from Montana.
 - award-e05338ef963f | Montana Jaycee Foundation Scholarship | The name says Montana, but the page does not say the student must be from Montana.
 - award-fdf6012f1498 | Montana School Nutrition Association Scholarship | The name says Montana, but the page does not say the student must be from Montana. The page does not say the place.
-- award-82923d0ea01e | Montana State Grange Scholarship | The name says Montana, but the page does not say the student must be from Montana. The page does not say the place.
 - award-1f64dfaa7bf7 | Montana STEM/Healthcare Scholarship Program | The page lists more than one field of study, so a single field was not tagged.
 - award-40db1e8dee39 | Montana Treasure State First Generation Scholarship | The name says first generation, but the page says these students are considered automatically.
 - award-0fd353bdab40 | Montana TRIO Achievement Grant | The name says Montana, but the page does not say the student must be from Montana. The page does not say the place.
@@ -615,11 +588,11 @@ Awards tagged: 456.
 - award-7859d00caa82 | MSU Teacher Learning Community Scholarship | The page does not say the place.
 - award-fc37c2d47f56 | Murdoch's Scholarship | no location limit listed
 - award-5dd6fcbcc0f8 | NAEHCY Scholarship | The page loaded but this award's rules were not on it.
-- award-5d3eb630cded | National Aviation Explorer Scholarship | The page did not load.
+- award-5d3eb630cded | National Aviation Explorer Scholarship | no location limit listed
 - award-ead4360dadca | National Technical Honor Society | no location limit listed
-- award-b4faadd4c1d5 | Navigate Your Future Scholarship | The page did not load.
+- award-b4faadd4c1d5 | Navigate Your Future Scholarship | no location limit listed
 - award-4f96382a8925 | Nelson Scholarship | no location limit listed
-- award-8809a8f1adc4 | NESA Scholarships (National Eagle Scout Association) | The page did not load.
+- award-8809a8f1adc4 | NESA Scholarships (National Eagle Scout Association) | no location limit listed
 - award-5b5b0db70dd0 | NFPA (National Foster Parent Association) Scholarship | no location limit listed
 - award-068bd3a04e24 | NGPA General Aviation Scholarship | no location limit listed
 - award-7b8c0838e0b9 | NGPA Transgender & Non-binary Committee Scholarship | no location limit listed
@@ -636,20 +609,16 @@ Awards tagged: 456.
 - award-f910f9badd6e | Occupational Safety and Health / Industrial Hygiene Scholarship | no location limit listed
 - award-10b85bfc0c0c | Odd Fellows and Rebekah's Scholarship | no location limit listed
 - award-47478b1163e1 | Ortho Rehab "Reach Your Peak" | The page does not say who can apply. The page loaded but this award's rules were not on it.
-- award-faa7fd7ea934 | Overcoming Challenges Together Scholarship | The page did not load.
-- award-51729cb7b370 | Parenthood For Me Medical Scholarship | The page did not load.
-- award-9f67df122041 | Partnership With Native Americans Undergraduate Scholarship | The page does not say the place.
+- award-faa7fd7ea934 | Overcoming Challenges Together Scholarship | no location limit listed
+- award-51729cb7b370 | Parenthood For Me Medical Scholarship | no location limit listed
 - award-ef357d97de32 | Pat Napolitano Memorial Scholarship for Aspiring Technicians | no location limit listed
 - award-2179b44d009d | Pell Promise for Montana Students | The name says Montana, but the page does not say the student must be from Montana.
-- award-91e97d6c3fba | PNACAC Video Scholarship | The page does not say the place.
 - award-8b09bb021129 | PSA Airlines Aircraft Mechanic Scholarship (NGPA) | no location limit listed
 - award-b4cd9cb209ea | PSA Airlines Engineering Scholarship | no location limit listed
 - award-a9386e11715e | PSA Airlines Flight Scholarship | no location limit listed
 - award-453110814fe5 | PSA Airlines Flight Scholarship (NGPA) | no location limit listed
 - award-3c1de856d59e | PSA Airlines Maintenance Scholarship | no location limit listed
-- award-9a4aaed70a28 | Reach Higher Montana Design-a-Sticker Scholarship | The name says Montana, but the page does not say the student must be from Montana. The page does not say the place.
 - award-b07d51070d88 | Reach Higher Montana Stick with Scholarships | The name says Montana, but the page does not say the student must be from Montana. The page does not say the place.
-- award-9d1c9d543817 | Rebuilding the Road Ahead Scholarship | The page did not load.
 - award-8a34a5f3a4e6 | Red Cross Collegiate Leadership Program Scholarship | no location limit listed
 - award-fb00c6366324 | Region I MASSP Principal's Scholarship | The page does not say the place.
 - award-49934bf76150 | Republic Airways Airline Maintenance Technician Scholarship (PAPA) | The name says maintenance, but the page does not say that.
@@ -659,31 +628,30 @@ Awards tagged: 456.
 - award-79c1268f1ea5 | Republic Airways Flight Training Scholarship (NGPA) | no location limit listed
 - award-aeb5e9e39b82 | Republic Airways LIFT Academy Pilot Scholarship (NGPA) | no location limit listed
 - award-19c987735664 | Republic Airways Maintenance Scholarship (NGPA) | no location limit listed
-- award-f1d6a4b38033 | Robert F. Lawson Fund for Careers that Care | The page does not say who can apply. The page did not load.
+- award-f1d6a4b38033 | Robert F. Lawson Fund for Careers that Care | The page lists more than one field of study, so a single field was not tagged. no location limit listed
 - award-1a058b4c5510 | Rubin Propel Scholarship | no location limit listed
 - award-489629d01b5f | Sandpiper Art Gallery Art Scholarship | The page does not say the place.
 - award-4d77d6910970 | Seeley Family Memorial Scholarship | no location limit listed
 - award-ec7d28fb15f9 | Servant Leadership Scholarship | no location limit listed
 - award-8dc9700421f7 | Sharon D. Banks Memorial Undergraduate Scholarship | no location limit listed
-- award-3caab7453e5b | Shining Star Scholarship for the Adoption of Children with Special Needs | The page did not load.
+- award-3caab7453e5b | Shining Star Scholarship for the Adoption of Children with Special Needs | no location limit listed
 - award-0f841a2f9a61 | Sloan Sloan Memorial Scholarship for the Arts | no location limit listed
 - award-0651dcec4d07 | SOKN Scholarship | The page does not say who can apply. The page loaded but this award's rules were not on it.
-- award-fc8d0d20bba6 | Sons of Norway Foundation Scholarships | The page does not say the place.
+- award-fc8d0d20bba6 | Sons of Norway Foundation Scholarships | no location limit listed
 - award-ffbd0f0b989f | Soroptimist Certificate Scholarships | The page loaded but this award's rules were not on it.
 - award-f41c36b42ac9 | Special Recognition Award | no location limit listed
 - award-667db7bac4b9 | Sporty’s Foundation Flight Training Scholarship for WAI Chapter Member | no location limit listed
 - award-feaafc99a9fb | Sporty's Foundation Private Pilot Training for AEA Technicians | no location limit listed
-- award-df416d89833f | STEAM Generator Scholarship | The page does not say who can apply. The page did not load.
+- award-df416d89833f | STEAM Generator Scholarship | no location limit listed
 - award-8367e34203f4 | Stockman Bank Next Gen Scholarship | no location limit listed
 - award-a2fca0938b4e | Strategic Partner Scholarships | no location limit listed
-- award-7b536c5d129d | Student Referee Scholarship | The page does not say who can apply. The page did not load.
+- award-7b536c5d129d | Student Referee Scholarship | no location limit listed
 - award-aba97e610d99 | Student View Scholarship Program | no location limit listed
 - award-4abfd54c1a6a | Sun Country and Allegiant Air “Fly in a New Direction” Scholarship | no location limit listed
 - award-005b794acb14 | Surety Bond Authority Scholarship Program | no location limit listed
 - award-3e63902e8554 | Susan T. Friedle Scholarship | no location limit listed
 - award-e34d317f0f51 | T. Eugene Young Montana's Promise Scholarship | The page lists more than one field of study, so a single field was not tagged.
-- award-8b3ba6db3abf | Taco Bell Live Mas Scholarship | The page does not say the place.
-- award-c782e36ba01b | Tall Clubs International Foundation Scholarship | The page does not say the place.
+- award-c782e36ba01b | Tall Clubs International Foundation Scholarship | no location limit listed
 - award-9d3f65e8d844 | Ted & Holly Rollins Scholarship | no location limit listed
 - award-a3c9f5127f45 | Ted Mallory Memorial Scholarship | no location limit listed
 - award-4b84affbfa6e | The Brendan Looney Foundation High School Senior Scholarships | no location limit listed
@@ -697,13 +665,12 @@ Awards tagged: 456.
 - award-8739a664c0d7 | THE DUDLEY D. AND DELORES R. MALONE MEMORIAL FLIGHT TRAINING SCHOLARSHIP | The name says flight training, but the page does not say that. no location limit listed
 - award-23a5338563e4 | THE FRED AND DIANE FITTS MEMORIAL FLIGHT TRAINING SCHOLARSHIP BY CAA | The name says flight training, but the page does not say that.
 - award-5648e87a76d7 | The Kenneth Copeland Flight Training Scholarship | The name says flight training, but the page does not say that.
-- award-03e0f76e1886 | The Kim and Harold Louie Family Foundation 2026 Scholarship | The page does not say who can apply. The page did not load.
+- award-03e0f76e1886 | The Kim and Harold Louie Family Foundation 2026 Scholarship | no location limit listed
 - award-5d6c289f9cf6 | The LeRoy W. Homer Jr. Foundation Scholarship | no location limit listed
 - award-db429f56aafe | The Martha King Scholarship for Female Flight Instructors | no location limit listed
 - award-fa0711891ae7 | The Montana State Golf Association | no location limit listed
-- award-72b47d9371a6 | The Neurodiversity Scholarship | The page does not say who can apply. The page did not load.
 - award-913072c89540 | THE RICHARD MCSPADDEN SCHOLARSHIP FOR ADVANCED PILOT TRAINING | The name says flight training, but the page does not say that.
-- award-221b3ca571aa | The Safer Roadways Scholarship | The page did not load.
+- award-221b3ca571aa | The Safer Roadways Scholarship | no location limit listed
 - award-4ac74a9f17fd | The Stephanie Goetz and Endre Holen Multi-Engine Commercial Scholarship | no location limit listed
 - award-4562d94cb7b9 | The White Family Legacy Scholarship | no location limit listed
 - award-ba4602ec402b | The Zombie Apocalypse Scholarship | no location limit listed
@@ -725,8 +692,7 @@ Awards tagged: 456.
 - award-5dc2aab768d2 | Whitefish Bulldog Booster Club Scholarships | The page does not say who can apply. The page loaded but this award's rules were not on it. The name says Whitefish, but the page does not say the student must be from Whitefish.
 - award-5dd4c3d3988a | Whitefish Soroptimist Memorial Scholarship for Girls Graduating High School | The page loaded but this award's rules were not on it. The name says girls or women, but the page does not say that. The name says Whitefish, but the page does not say the student must be from Whitefish.
 - award-88670d80cadf | Women Military Aviators Dream of Flight Scholarship | The name says military or veteran, but the page does not require a military family tie.
-- award-f37bbc85b3c2 | Women of Rollins Scholarship | The page does not say the place.
-- award-a4379bfbc7bd | Work Ethic Scholarship Program | The page did not load.
+- award-f37bbc85b3c2 | Women of Rollins Scholarship | no location limit listed
 - award-d2b44a62c0a7 | Workforce Development Scholarships | The page loaded but this award's rules were not on it.
 - award-12a7ca904d6a | WTS Transportation YOU High School Scholarship | no location limit listed
 - award-fd629c83fb3f | Yukiko Howell Memorial Scholarship | The page lists more than one field of study, so a single field was not tagged. no location limit listed
@@ -736,7 +702,6 @@ Awards tagged: 456.
 - Health & Hardships: Chronic Disease / Physical Health (chronic_health)
 - Demographics & Identity: Black or African American (black_african_american)
 - Demographics & Identity: Hispanic or Latino/a (hispanic_latino)
-- Demographics & Identity: Asian or Pacific Islander (asian_pacific_islander)
 - Demographics & Identity: Single Parent Household (single_parent)
 - Demographics & Identity: Mensa Member (mensa)
 - Activities: Hold a leadership position (Captain, President, Manager) (leadership)
@@ -748,21 +713,22 @@ Awards tagged: 456.
 - ADHD: 2
 - Autism Spectrum: 1
 - Other Learning Disability: 5
-- Mental Health Challenges: 3
+- Mental Health Challenges: 5
 - Foster Care Experience: 4
 - Loss of Parent or Guardian: 1
 - Overcoming Significant Adversity: 3
-- First-Generation College: 2
+- First-Generation College: 3
 - Native American or Indigenous: 5
+- Asian or Pacific Islander: 1
 - LGBTQIA+: 4
 - Female: 44
 - Non-Binary: 2
 - Aviation - Pilot Training: 62
 - Aviation - Maintenance: 35
 - Aviation - Management: 6
-- STEM: 15
+- STEM: 16
 - Healthcare & Nursing: 3
-- Skilled Trades & Construction: 27
+- Skilled Trades & Construction: 29
 - Business & Finance: 12
 - Public Service & Social Impact: 2
 - Law & Legal Studies: 2
@@ -788,7 +754,7 @@ Awards tagged: 456.
 - SkillsUSA: 1
 - Technology Student Association (TSA): 1
 - Education / Teaching: 6
-- Financial need: 23
+- Financial need: 24
 
 ## Step 3 links the text does not support
 
@@ -806,8 +772,7 @@ These old links stay in the step 3 files. They were not copied onto the award be
   - Duck Brand "Stuck at Prom" Scholarship Contest
   - Nelson Scholarship
   - STEAM Generator Scholarship
-- Asian or Pacific Islander (asian_pacific_islander): 2
-  - Hue Ta Asian American Scholarship
+- Asian or Pacific Islander (asian_pacific_islander): 1
   - The Gates Scholarship
 - Student Athlete / Sports Background (athletics_sports): 4
   - Big Sky State Games Character Counts! Scholarship
@@ -897,7 +862,7 @@ These old links stay in the step 3 files. They were not copied onto the award be
   - Dr. Sydell Perlmutter Gold Memorial Scholarship
   - Soroptimist Certificate Scholarships
   - Whitefish Soroptimist Memorial Scholarship for Girls Graduating High School
-- Financial need (financial_need): 38
+- Financial need (financial_need): 37
   - Adam Montes Pride Scholarship
   - Beta Sigma Phi ($1,000)
   - Colorado State University First Generation Award
@@ -927,7 +892,6 @@ These old links stay in the step 3 files. They were not copied onto the award be
   - Montana Tech’s Pre-Apprentice Line Program.
   - Point Foundation Flagship Scholarship
   - Reach for the Future Scholarship for Vocational Degree Programs
-  - Robert F. Lawson Fund for Careers that Care
   - Sloan Sloan Memorial Scholarship for the Arts
   - The Barbara Mansfield Champion Scholar Award (The Last Best Ride)
   - The Luedke Family Scholarship
@@ -967,10 +931,8 @@ These old links stay in the step 3 files. They were not copied onto the award be
   - Point Foundation Flagship Scholarship
 - Loss of Parent or Guardian (loss_of_parent): 1
   - Heroes' Legacy Scholarship (Fisher House)
-- Mental Health Challenges (mental_health): 3
+- Mental Health Challenges (mental_health): 1
   - Elijah's Helping Hand Scholarship Award
-  - Ethel Hayes Destigmatization of Mental Health Scholarship
-  - Hue Ta Asian American Scholarship
 - Native American or Indigenous (native_american): 4
   - Colorado State University First Generation Award
   - Louise A. Dean All Montana Tribal Nations Scholarship
@@ -1011,7 +973,7 @@ These old links stay in the step 3 files. They were not copied onto the award be
   - Whitefish Bulldog Booster Club Scholarships
   - Whitefish Classified Employees Association Higher Education Scholarship
   - Whitefish Lions Scholarship
-- STEM (stem): 25
+- STEM (stem): 24
   - All-American Pest Control STEAM Trailblazer Scholarship
   - CardRates.com Financial Futures Scholarship
   - DEWALT Trades Scholarship
@@ -1030,20 +992,17 @@ These old links stay in the step 3 files. They were not copied onto the award be
   - NTHS TSA Scholarship
   - Occupational Safety and Health / Industrial Hygiene Scholarship
   - SOKN Scholarship
-  - STEAM Generator Scholarship
   - T. Eugene Young Montana's Promise Scholarship
   - THE CARLSBAD JET CENTER AND SONOMA JET CENTER GENERAL AVIATION PROFESSIONAL SCHOLARSHIPS
   - THE EDWARD B. SHAFER FUTURE OF FLIGHT SCHOLARSHIP
   - The Neurodiversity Scholarship
   - Whitefish Lake Institute Ripple Effect Scholarship
   - Work Ethic Scholarship Program
-- Skilled Trades & Construction (trades): 6
-  - Lineman Country Scholarship (Southeast Lineman Training Center)
+- Skilled Trades & Construction (trades): 4
   - Montana Tech’s Pre-Apprentice Line Program.
   - NTHS SkillsUSA Scholarship
   - Reach for the Future Scholarship for Vocational Degree Programs
   - Soroptimist Certificate Scholarships
-  - Work Ethic Scholarship Program
 - Have a part-time job or work experience (work_experience): 5
   - Flathead County Democratic Women's Club ($1,000)
   - Flathead Electric Basin and MECA Scholarship (2 scholarships, 1 application!)

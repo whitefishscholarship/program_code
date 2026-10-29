@@ -1,336 +1,282 @@
 # Phase 2 awards added
 
-Checked on October 29, 2026. Each new award uses its own official page when one could be opened. When that page does not post 2026-27 dates or rules, the catalog cycle is unknown and verification is not yet checked. Those awards are listed below for Kelsey.
+Checked on October 29, 2026. Each new award uses its own official page when one could be opened. This branch also includes the pass 3 tag read from `cursor/p1-award-tags` at `4677e62`.
 
 Added: 66.
 
+Verified on a posted 2026-27 date: 17. Not yet checked: 49.
+
 ## By pool level
 
-Level 1 is Whitefish only. Level 2 is Flathead County. Level 3 is smaller than one state. Level 4 is one state. Level 5 is bigger than one state, or open to the country with a narrower group. Level 6 is open across the United States. No place means the page did not name where a student must live.
+Level 1 is Whitefish only. Level 2 is Flathead County. Level 3 is smaller than one state. Level 4 is one state. Level 5 is bigger than one state, or open to the country with a narrower group. Level 6 is open across the United States. No place means the official page for that award was not found, or the page that loaded did not show this award's rules. A missing page was not treated as national.
 
 - Level 1: 0
 - Level 2: 7
 - Level 3: 2
-- Level 4: 13
-- Level 5: 10
-- Level 6: 5
-- No place: 29
+- Level 4: 17
+- Level 5: 11
+- Level 6: 11
+- No place: 18
+
+## Why the diff shows 1,898 deleted lines
+
+Compared with `969c5ba`, the commit this branch started from, `git diff --numstat` deletes 1,898 lines: 1,822 in `web/fixtures/r3/catalog-v1.json`, 72 in `web/fixtures/r3/p1-tagging-report.md`, 1 in `web/fixtures/r3/pin.json`, and 3 in `web/scripts/test-p1-award-tags.ts`.
+
+The catalog lines are the same JSON records moving when the new awards were inserted ahead of the sources list. Content that was removed and not added back is 8 catalog lines: the old `catalogRevision`, and the old counts for sources 438, awards 390, cycles 390, active 109, upcoming 154, closed 97, and unknown 30. No award record was removed. No field on an existing award was removed.
+
+Compared with `cursor/p1-award-tags` at `4677e62`: that branch has 390 awards. All 390 public ids are in this catalog, and each of those 390 award objects matches the pass 3 object field for field. All 438 pass 3 sources are still here. This catalog has 456 awards and 504 sources. The 66 new public ids are present.
+
+## Places set from the official pages
+
+These 11 awards had no place. The official page was read again on October 29, 2026.
+
+No location limit is stated on the page, so the place is national and the note is `no location limit listed`:
+
+- Women of Rollins Scholarship. https://womenofrollinsclub.org/scholarships
+- Sons of Norway Foundation Scholarships. https://www.sofn.com/foundation/scholarships/
+- Tall Clubs International Foundation Scholarship. https://tallclubfoundation.org/
+- Beauty Changes Lives Scholarships. https://www.beautychangeslives.org/scholarships/
+
+The page names the United States, so the place is national:
+
+- Taco Bell Live Mas Scholarship. Legal resident of the 50 United States and D.C., or a dependent child of an active-duty military member. Window October 13, 2026 through January 5, 2027. https://tacobellfoundation.org/live-mas-scholarship/eligibilityfaq/
+- Daughters of the American Revolution Scholarships. Citizens of the United States. The portal reopens November 1, 2026. https://www.dar.org/national-society/scholarships
+- Partnership With Native Americans Undergraduate Scholarship. Native American students at an accredited college in the United States. Level 5 because it is also limited to Native American students. https://nativepartnership.org/education/
+
+The page names Montana, so the place is Montana:
+
+- Montana State Grange Scholarship. Programs for communities in Montana. https://www.grange.org/MontanaState/program/
+- Grand Lodge of Montana Masonic Scholarship. The foundation lists its mailing address in Montana. https://www.mtmasonicfoundation.org/
+- Reach Higher Montana Design-a-Sticker Scholarship. The design is for Montana high school students. Opens March 1 and closes March 31. The year is not posted. https://reachhighermontana.org/pay-for-school/scholarships
+- PNACAC Video Scholarship. High school seniors in Alaska, Idaho, Montana, Oregon, or Washington. The tagger records Montana when Montana is named with those other states. The summary lists all five. Eleven awards of $1,500. Opens December 1, 2026. Video essay due March 15, 2027. https://www.pnacac.org/student-scholarship
+
+The other 18 still have no place. The page did not show this award, or no official page was found. They stay on the needs-review list.
+
+## Dates not posted yet, weekly re-check watches
+
+17 awards. The official page is clear enough about who can apply. The 2026-27 date is not posted yet. These are not questions for Kelsey.
+
+- Youth Serve Montana Scholarship. https://mtengage.org/allawards/scholarships-and-awards/youth-serve-mt-scholarship/
+- NILE Foundation Scholarship. https://thenile.org/events/youth/scholarships/
+- Flathead Pomona Grange Scholarship. https://resources.finalsite.net/images/v1771622180/sd5k12mtus/kqhhd0fst4ylbrjyvtig/PomonaGrangeScholarship2026.pdf
+- Knights of Columbus U.S. Undergraduate Scholarship. https://www.kofc.org/en/what-we-do/scholarships/index.html
+- Tall Clubs International Foundation Scholarship. https://tallclubfoundation.org/
+- Montana Coaches Association Scholarships. https://montanacoaches.com/scholarships
+- Montana 4-H Foundation Scholarships. https://www.mt4hfoundation.org/scholarships
+- Montana High School Rodeo Scholarships. https://www.mhsra.org/scholarships
+- Mary Naegeli Memorial Tree Farm Scholarship. https://www.treefarmsystem.org/montana-awards-and-scholarship
+- Hopa Mountain Vocational Scholarship. https://www.hopamountain.org/scholars-of-promise
+- UMPS CARE All-Star College Scholarship. https://www.umpscare.com/all-star-college-scholarship
+- American Legion Oratorical Contest Montana. https://www.mtlegion.org/oratoricalcontest.html
+- American Indian College Fund Scholarships. https://collegefund.org/students/scholarships/
+- Glacier Art Museum Mark Norby Memorial Scholarship. https://glacierartmuseum.org/scholarships/
+- NTGCR Scholarship. https://www.ntgcr.com/
+- Reach Higher Montana Design-a-Sticker Scholarship. https://reachhighermontana.org/pay-for-school/scholarships
+- Partnership With Native Americans Undergraduate Scholarship. https://nativepartnership.org/education/
+
+PNACAC and DAR are not on this list. Both now have a posted 2026-27 date and are verified. DAR reopens November 1, 2026. The close date is not posted.
 
 ## Needs review
 
-52 awards need a decision from Kelsey.
+33 awards still need a decision. The question is eligibility, whether a Whitefish student qualifies, or whether the program is still offered.
 
 ### AHLEF Academic Scholarship
 
 URL: https://www.ahlef.org/scholarships
 
-Question: The page says the next round opens in December 2026 for 2027-28. What is the deadline, and which awards can a Whitefish senior claim without a college nomination?
-
-### Youth Serve Montana Scholarship
-
-URL: https://mtengage.org/allawards/scholarships-and-awards/youth-serve-mt-scholarship/
-
-Question: The page says applications reopen in spring 2027. What are the exact open and deadline dates?
+Question: Which awards can a Whitefish senior claim without a college nomination?
 
 ### Central Christian Church Doris Johnston Memorial Scholarship
 
 URL: https://fvcc.academicworks.com/opportunities/4309
 
-Question: The page still shows a deadline of October 15, 2025. Is the scholarship open for 2026-27, and what is the deadline?
-
-### NILE Foundation Scholarship
-
-URL: https://thenile.org/events/youth/scholarships/
-
-Question: The page only shows a March 1, 2026 close. What is the 2027 deadline, and is a 2.5 GPA still required?
+Question: The page still shows a deadline of October 15, 2025. Is this scholarship still offered?
 
 ### Women of Rollins Scholarship
 
 URL: https://womenofrollinsclub.org/scholarships
 
-Question: Who can apply, and what are the 2026-27 open and deadline dates?
-
-### Flathead Pomona Grange Scholarship
-
-URL: https://resources.finalsite.net/images/v1771622180/sd5k12mtus/kqhhd0fst4ylbrjyvtig/PomonaGrangeScholarship2026.pdf
-
-Question: The only public form is the 2026 sheet, due March 6, 2026. Is the 2027 award the same, and what is the deadline?
+Question: Who can apply? The page lists two $1,000 awards and does not say who qualifies.
 
 ### Montana State Grange Scholarship
 
 URL: https://www.grange.org/MontanaState/program/
 
-Question: The Montana State Grange page names scholarships and gives no rules. Who can apply, what is the amount, and what are the 2026-27 dates?
+Question: The page names scholarships and gives no rules. Who can apply, and is there an amount?
 
 ### Sons of Norway Foundation Scholarships
 
 URL: https://www.sofn.com/foundation/scholarships/
 
-Question: The page says the season is October 1 through January 15 and that membership rules differ by award. Which awards can a Whitefish student use, what is each amount, and is the deadline January 15, 2027?
-
-### Knights of Columbus U.S. Undergraduate Scholarship
-
-URL: https://www.kofc.org/en/what-we-do/scholarships/index.html
-
-Question: The page says new applications run March 5 through April 22. Is that the 2027 window, and what is the dollar amount?
-
-### Tall Clubs International Foundation Scholarship
-
-URL: https://tallclubfoundation.org/
-
-Question: The page says the 2027 season starts January 1, 2027 and the rules will be final on December 31, 2026. What are the height rules, the deadline, and who may nominate a Whitefish student?
-
-### Montana Coaches Association Scholarships
-
-URL: https://montanacoaches.com/scholarships
-
-Question: The form says the next application opens January 1. Is that January 1, 2027, and what is the deadline for athletes graduating in 2027?
-
-### Montana 4-H Foundation Scholarships
-
-URL: https://www.mt4hfoundation.org/scholarships
-
-Question: The page says the application opens December 1 and closes February 14, but it does not name the year. Are those the 2026-27 dates?
-
-### Montana High School Rodeo Scholarships
-
-URL: https://www.mhsra.org/scholarships
-
-Question: The page lists 2026 recipients. When does the 2027 application open and close?
-
-### Mary Naegeli Memorial Tree Farm Scholarship
-
-URL: https://www.treefarmsystem.org/montana-awards-and-scholarship
-
-Question: The page says the deadline is May 31 and does not name the year or the amount. Is the deadline May 31, 2027, and what is the amount?
-
-### Hopa Mountain Vocational Scholarship
-
-URL: https://www.hopamountain.org/scholars-of-promise
-
-Question: The vocational scholarship still says apply by May 1, 2026. Is there a 2027 deadline?
-
-### UMPS CARE All-Star College Scholarship
-
-URL: https://www.umpscare.com/all-star-college-scholarship
-
-Question: The page says the 2027 application is not open yet. When does it open and close?
-
-### American Legion Oratorical Contest Montana
-
-URL: https://www.mtlegion.org/oratoricalcontest.html
-
-Question: The page says the 2027 schedule is not posted. When are the local and state contests, and how does a Whitefish student enter?
-
-### American Indian College Fund Scholarships
-
-URL: https://collegefund.org/students/scholarships/
-
-Question: The page says the application starts February 1 and that May 31 is a priority date for college students. Is May 31, 2027 the deadline for a high school senior?
-
-### Glacier Art Museum Mark Norby Memorial Scholarship
-
-URL: https://glacierartmuseum.org/scholarships/
-
-Question: The museum page did not show 2027 rules on October 29, 2026. What is the amount, and what are the open and deadline dates?
-
-### NTGCR Scholarship
-
-URL: https://www.ntgcr.com/
-
-Question: The page says the application is open and shows spring 2026 recipients. What is the deadline for the next award?
+Question: Membership rules differ by award. Which awards can a Whitefish student use without a family membership?
 
 ### Grand Lodge of Montana Masonic Scholarship
 
 URL: https://www.mtmasonicfoundation.org/
 
-Question: The foundation site is under construction. Who can apply, what is the amount, and what are the 2026-27 dates?
+Question: The site does not post rules. Who can apply, and is the scholarship still offered?
 
 ### MSU Teacher Learning Community Scholarship
 
 URL: No official page found.
 
-Question: What is the official page, the amount, who can apply, and the 2026-27 dates for the MSU Teacher Learning Community scholarship?
+Question: No official page was found. Is this scholarship still offered, and who can apply?
 
 ### Montana School Nutrition Association Scholarship
 
 URL: No official page found.
 
-Question: What is the official page, the amount, and the 2026-27 dates? The school lists say it is for a senior studying food service or nutrition.
+Question: No official page was found. Is this scholarship still offered, and who can apply?
 
 ### David Astle Scholarship
 
 URL: No official page found.
 
-Question: Is the David Astle Scholarship offered for 2026-27? What is the official page, the amount, and the deadline?
+Question: No official page was found. Is the David Astle Scholarship still offered?
 
 ### Harold Tutvedt Memorial Scholarship
 
 URL: No official page found.
 
-Question: Is the Harold Tutvedt Memorial Scholarship offered for 2026-27, what is the amount, and what is the deadline?
+Question: No current page was found. Is the Harold Tutvedt Memorial Scholarship still offered?
 
 ### Montana Food Distributors Association Scholarship
 
 URL: http://www.mfda.biz/index.aspx/dues/Scholarship
 
-Question: The listed MFDA page did not load. What is the working official page, the amount, and the 2026-27 deadline?
-
-### PNACAC Video Scholarship
-
-URL: https://www.pnacac.org/
-
-Question: Where is the official student page for the video scholarship, and what are the amount and 2026-27 deadline for a Montana senior?
-
-### Reach Higher Montana Design-a-Sticker Scholarship
-
-URL: https://reachhighermontana.org/
-
-Question: Is Design-a-Sticker offered for 2026-27? What is the official page, the amount, and the deadline?
+Question: The listed page returned an error. Is there a working official page, and who can apply?
 
 ### Kalispell Youth Softball Association Scholarship
 
 URL: No official page found.
 
-Question: Is the KYSA scholarship offered for 2026-27? The school list says it is for senior girls. What is the official page, the amount, and the deadline?
+Question: No official page was found. Is the scholarship still offered, and can a Whitefish student apply?
 
 ### MFPE Scholarship
 
 URL: https://www.mfpe.org/
 
-Question: Does MFPE offer a 2026-27 student scholarship? What is the official page, the amount, and the deadline?
+Question: The site has no student scholarship. Does MFPE still offer one?
 
 ### Flathead Education Foundation Scholarship
 
 URL: No official page found.
 
-Question: The newest public form is the 2025 application. Is there a 2026-27 scholarship, and what are the amount and deadline?
+Question: The newest public form is from 2025. Is there a 2026-27 scholarship?
 
 ### John V. Cooley Scholarship
 
 URL: No official page found.
 
-Question: Is the John V. Cooley Scholarship offered for 2026-27? The school list says University of Montana forestry or Montana State University agriculture. What is the official page, the amount, and the deadline?
+Question: No sponsor page was found. Is it still offered, and is it limited to University of Montana forestry or Montana State University agriculture?
 
 ### Flathead County Farmers Union Scholarship
 
 URL: No official page found.
 
-Question: Is this scholarship offered for 2026-27? What is the official page, the amount, and the deadline?
+Question: No official page was found. Is this scholarship still offered?
 
 ### Montana PTA Scholarship
 
 URL: https://www.montanapta.org/
 
-Question: Does Montana PTA offer a 2026-27 teaching scholarship? What is the amount, who can apply, and what is the deadline?
+Question: The site has no scholarship. Does Montana PTA still offer a teaching scholarship?
 
 ### Five Valley Chorus Sweet Adelines Music Scholarship
 
 URL: No official page found.
 
-Question: Is the Five Valley Chorus scholarship offered for 2026-27? What is the official page, the amount, and the deadline?
+Question: No official page was found. Is the Five Valley Chorus scholarship still offered?
 
 ### Universal Athletic Services Scholarship
 
 URL: No official page found.
 
-Question: Is the Universal Athletic Services scholarship offered for 2026-27? What is the official page, the amount, who can apply, and the deadline?
+Question: No official page was found. Is it still offered, and who can apply?
 
 ### Moose Scholarship
 
 URL: No official page found.
 
-Question: Which Moose scholarship can a Whitefish student use in 2026-27, and what are the official page, amount, membership rule, and deadline?
+Question: Which Moose scholarship can a Whitefish student use, and is membership required?
 
 ### Foster Care Education and Training Voucher
 
 URL: https://www.reachhighermontana.org/
 
-Question: What is the official 2026-27 page for the Montana foster-care education and training voucher, the amount, and the deadline?
+Question: The official 2026-27 voucher page was not found. Where is it, and who can apply?
 
 ### Region I MASSP Principal's Scholarship
 
 URL: No official page found.
 
-Question: Is the Region I MASSP Principal's Scholarship offered for 2026-27? What is the official page, the amount, who can apply, and the deadline?
+Question: No official page was found. Is the Region I scholarship still offered, and who can apply?
 
 ### Reach Higher Montana Stick with Scholarships
 
 URL: https://reachhighermontana.org/
 
-Question: Is Stick with Scholarships offered for 2026-27? What is the official page, the amount, and the deadline?
+Question: The contest was not on the Reach Higher Montana site. Is Stick with Scholarships still offered?
 
 ### Mountain America Foundation Elevate Scholarship
 
 URL: https://www.macu.com/about/community/mountain-america-foundation/scholarship-notification-form
 
-Question: What is the working official page for the Elevate Scholarship, the amount, who can apply, and the 2026-27 deadline?
+Question: The form page was empty. Is the Elevate Scholarship still offered, and who can apply?
 
 ### Beauty Changes Lives Scholarships
 
 URL: https://www.beautychangeslives.org/scholarships/
 
-Question: The page is a list of programs, not one award. Which program should Whitefish students use, and what are its amount and 2026-27 deadline?
+Question: The page is a directory. Which program should a Whitefish student use?
 
 ### Montana Youth Soccer Ralph Serette Scholarship
 
 URL: https://www.montanayouthsoccer.com/
 
-Question: What are the official rules, amount, and 2026-27 deadline for the Ralph Serette scholarship?
-
-### Daughters of the American Revolution Scholarships
-
-URL: https://www.dar.org/national-society/scholarships
-
-Question: The DAR page did not load. Which scholarships can a Whitefish senior use in 2026-27, and what are the amounts and deadlines?
-
-### Partnership With Native Americans Undergraduate Scholarship
-
-URL: https://www.nativepartnership.org/
-
-Question: What is the official undergraduate scholarship page, the amount, who can apply, and the 2026-27 deadline?
+Question: The rules were not on the page. Who can apply?
 
 ### Montana TRIO Achievement Grant
 
 URL: No official page found.
 
-Question: Is the Montana TRIO Achievement Grant offered for 2026-27? What is the official page, and is the amount still $1,500?
+Question: No official page was found. Is the Montana TRIO Achievement Grant still offered?
 
 ### George and Faye Harris Scholarship
 
 URL: No official page found.
 
-Question: What is the official page, the amount, and the 2026-27 deadline for the George and Faye Harris Scholarship?
+Question: No official page was found. Is the George and Faye Harris Scholarship still offered?
 
 ### Sandpiper Art Gallery Art Scholarship
 
 URL: https://sandpiperartgallery.com/
 
-Question: Does Sandpiper Art Gallery offer a 2026-27 art scholarship? What is the official application page, the amount, and the deadline?
+Question: The gallery site does not show a scholarship. Does it still offer one?
 
 ### Boom and Bucket Heavy Machinery Scholarship
 
 URL: https://www.boomandbucket.com/
 
-Question: Is the Boom and Bucket scholarship offered for 2026-27? What is the official page, the amount, who can apply, and the deadline?
+Question: The site does not show a scholarship. Is it still offered?
 
 ### Unity Bank Scholarship
 
 URL: https://www.unitybank.com/
 
-Question: Which Unity Bank offers the $500 customer scholarship, and what are the official page and the 2026-27 deadline?
+Question: The site that loaded is not a local scholarship page. Which Unity Bank offers this award?
 
 ### Essential Visionaries Scholarship Fund
 
 URL: https://learnmore.scholarsapply.org/essentialvisionaries/
 
-Question: Where did the Essential Visionaries rules move, and what are the amount, who can apply, and the 2026-27 deadline?
+Question: The page says the rules moved and does not show them. Is the fund still offered?
 
 ### Valley Banks Community Scholarship
 
 URL: No official page found.
 
-Question: Which Valley Bank runs this scholarship, and what are the official page, the amount, and the 2026-27 deadline?
+Question: No official page was found. Which Valley Bank runs this scholarship?
 
 ## Skipped
 

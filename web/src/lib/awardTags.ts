@@ -230,6 +230,10 @@ function addPlans(text: string, bags: Bags) {
       bags.fieldMenu = true;
       continue;
     }
+    if (/\bother fields\b/.test(sentence) && hits.length >= 1) {
+      bags.fieldMenu = true;
+      continue;
+    }
     for (const hit of hits) push(bags.plans, hit);
   }
 }
@@ -403,6 +407,12 @@ function findPlace(raw: string): Place | null {
   if (/\bfrom maine\b|maine students/.test(text)) return { scope: 'regional', level: 4, phrase: 'Only Maine students' };
   if (/morris county|new jersey/.test(text)) return { scope: 'regional', level: 3, phrase: 'Only students in that New Jersey area' };
   if (/helena area high school/.test(text)) return { scope: 'regional', level: 3, phrase: 'Only students from Helena area high schools' };
+  if (/confederated salish|enrolled member of the confederated salish and kootenai/.test(text)) {
+    return { scope: 'regional', level: 3, phrase: 'Only enrolled members of the Confederated Salish and Kootenai Tribes' };
+  }
+  if (/southeast lineman training center/.test(text)) {
+    return { scope: 'regional', level: 3, phrase: 'Only students at the Southeast Lineman Training Center in Georgia' };
+  }
   const countyLimit = text.match(/\b(?:residents?|students?|seniors?|graduates?) (?:of|from) ([a-z][a-z' .-]{2,70}? county)\b/);
   if (countyLimit && !/flathead|lake county|lincoln|missoula|ravalli|sanders/.test(countyLimit[1])) {
     const countyName = countyLimit[1].replace(/\b[a-z]/g, (letter) => letter.toUpperCase());
@@ -808,7 +818,7 @@ function essayFlag(award: TaggableAward, extra = ''): boolean | null {
 function renewableFlag(award: TaggableAward, extra = ''): boolean | null {
   const text = `${award.name} ${award.summary ?? ''} ${award.eligibility.audience} ${extra}`;
   if (/\b(non-renewable|nonrenewable|not renewable)\b/i.test(text)) return false;
-  if (/\brenewable\b|\bcan renew\b|\brenew for\b|\brenewed\b|reapply each year|reapply annually|option to reapply/i.test(text)) return true;
+  if (/\brenewable\b|\bcan renew\b|\brenew for\b|\brenewed\b|reapply each year|reapply annually|reapply yearly|option to reapply/i.test(text)) return true;
   return null;
 }
 
