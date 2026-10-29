@@ -1,5 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "ignoreCommand": "node -e \"const ref=process.env.VERCEL_GIT_COMMIT_REF||''; if(ref.startsWith('cursor/') && !ref.startsWith('cursor/preview-')) process.exit(0); process.exit(1)\"",
   "git": {
     "deploymentEnabled": {
       "codex/scholarship-monitor-state": false
