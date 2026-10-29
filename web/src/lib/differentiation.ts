@@ -163,11 +163,6 @@ function clubChips(awards: readonly TagSource[]): DifferentiationChip[] {
 
 /** Chip groups use only tag values that already appear on catalog awards. */
 export function differentiationGroups(awards: readonly TagSource[]): DifferentiationGroup[] {
-  const scopes = new Set(awards.map((award) => award.residencyScope).filter((scope): scope is NonNullable<typeof scope> => Boolean(scope)));
-  const placeValues = DIFFERENTIATION_PLACES.filter((place) => {
-    if (place === 'rural') return awards.some((award) => award.ruralRule != null && award.ruralRule !== 'none');
-    return scopes.has(place);
-  });
   const sports = presentValues(awards, 'sports');
   const heritage = presentValues(awards, 'heritage');
   const faith = presentValues(awards, 'faith');
@@ -184,12 +179,6 @@ export function differentiationGroups(awards: readonly TagSource[]): Differentia
   ];
 
   return [
-    {
-      id: 'place',
-      title: 'Where you live and go to school',
-      hint: 'Whitefish students count as rural. You can leave Rural or small town empty.',
-      chips: chipsFor('places', placeValues),
-    },
     {
       id: 'sports',
       title: 'Sports and outdoors',
@@ -260,18 +249,20 @@ export function toggleDifferentiation(profile: DifferentiationProfile, chip: Dif
 }
 
 /**
- * Whitefish students are treated as rural. The saved answers stay as the student left them.
+ * Every student is a Whitefish student. Local places are added only while matching.
+ * The saved answers stay as the student left them.
  */
 export function applyRuralAutoTag(profile: DifferentiationProfile): DifferentiationProfile {
-  if (!profile.places.includes('whitefish') || profile.places.includes('rural')) return profile;
-  return { ...profile, places: [...profile.places, 'rural'] };
+  const missing = DIFFERENTIATION_PLACES.filter((place) => !profile.places.includes(place));
+  if (missing.length === 0) return profile;
+  return { ...profile, places: [...profile.places, ...missing] };
 }
 
 export function awardHasRuralRule(award: { ruralRule?: string | null }): boolean {
   return award.ruralRule != null && award.ruralRule !== 'none';
 }
 
-/** Rural awards match a Whitefish student even when the rural box is empty. */
+/** Rural awards match every student. The place answers are applied in the background. */
 export function ruralRuleMatches(award: { ruralRule?: string | null }, profile: DifferentiationProfile): boolean {
   if (!awardHasRuralRule(award)) return false;
   return applyRuralAutoTag(profile).places.includes('rural');
@@ -285,9 +276,9 @@ export function differentiationHits(award: HitAward, profile: DifferentiationPro
   const add = (label: string) => {
     if (!hits.includes(label)) hits.push(label);
   };
-  if (profile.places.includes('whitefish') && award.residencyScope === 'whitefish') add(chipLabel('whitefish'));
-  if (profile.places.includes('flathead') && award.residencyScope === 'flathead') add(chipLabel('flathead'));
-  if (profile.places.includes('montana') && award.residencyScope === 'montana') add(chipLabel('montana'));
+  if (effective.places.includes('whitefish') && award.residencyScope === 'whitefish') add(chipLabel('whitefish'));
+  if (effective.places.includes('flathead') && award.residencyScope === 'flathead') add(chipLabel('flathead'));
+  if (effective.places.includes('montana') && award.residencyScope === 'montana') add(chipLabel('montana'));
   if (awardHasRuralRule(award) && effective.places.includes('rural')) add(chipLabel('rural'));
   for (const field of LIST_FIELDS) {
     const selected = profile[field];

@@ -15,6 +15,7 @@ import {
   type DifferentiationProfile,
 } from '../src/lib/differentiation';
 import { InterviewAnswersSchema } from '../src/lib/interviewMatcher';
+import { shortlistAwards } from '../src/lib/spreadsheetShortlist';
 import { selectedRelevanceAnswers } from '../src/lib/interviewRelevance';
 import { serializeAwardDeadlineCalendar } from '../src/lib/studentExport';
 import { decodeStudentLink, encodeStudentLink } from '../src/lib/studentLink';
@@ -142,23 +143,25 @@ const rural: DifferentiationProfile = { ...emptyDifferentiation(), places: ['rur
 const tagged = applyRuralAutoTag(whitefish);
 assert.notEqual(tagged, whitefish);
 assert.deepEqual(whitefish.places, ['whitefish']);
-assert.deepEqual(tagged.places, ['whitefish', 'rural']);
+assert.deepEqual(tagged.places, ['whitefish', 'flathead', 'montana', 'rural']);
 assert.equal(applyRuralAutoTag(tagged), tagged);
+assert.deepEqual(applyRuralAutoTag(emptyDifferentiation()).places, ['whitefish', 'flathead', 'montana', 'rural']);
+assert.deepEqual(emptyDifferentiation().places, []);
 
 assert.equal(ruralRuleMatches(county, whitefish), true);
 assert.equal(ruralRuleMatches(county, rural), true);
-assert.equal(ruralRuleMatches(county, flathead), false);
-assert.equal(ruralRuleMatches(county, montana), false);
-assert.equal(ruralRuleMatches(county, emptyDifferentiation()), false);
+assert.equal(ruralRuleMatches(county, flathead), true);
+assert.equal(ruralRuleMatches(county, montana), true);
+assert.equal(ruralRuleMatches(county, emptyDifferentiation()), true);
 assert.equal(ruralRuleMatches(tight, whitefish), false);
 assert.equal(ruralRuleMatches({ ruralRule: null }, whitefish), false);
-assert.deepEqual(differentiationHits(county, whitefish), ['Rural or small town']);
-assert.deepEqual(differentiationHits(county, flathead), ['Flathead']);
-assert.deepEqual(differentiationHits(tight, whitefish), ['Whitefish']);
+assert.deepEqual(differentiationHits(county, whitefish), ['Flathead', 'Rural or small town']);
+assert.deepEqual(differentiationHits(county, emptyDifferentiation()), ['Flathead', 'Rural or small town']);
+assert.deepEqual(differentiationHits(tight, emptyDifferentiation()), ['Whitefish']);
+assert.deepEqual(differentiationHits(state, emptyDifferentiation()), ['Montana']);
 
 const groups = differentiationGroups(catalog.awards);
 assert.deepEqual(groups.map((group) => group.title), [
-  'Where you live and go to school',
   'Sports and outdoors',
   'Heritage, faith and identity',
   'Family ties',
@@ -184,6 +187,17 @@ assert(differentiationHits(aviationAwards.find((item) => item.clubs?.includes('A
 assert.deepEqual(toggleDifferentiation(oldAopa, { field: 'clubs', value: AVIATION_GROUP_VALUE, label: 'Aviation group member' }).clubs, []);
 const sports = groups.find((group) => group.id === 'sports')?.chips.map((chip) => chip.value) ?? [];
 assert.deepEqual(sports, ['golf', 'rodeo', 'soccer', 'student athlete', 'track', 'wrestling']);
+assert.equal(groups.some((group) => group.title === 'Where you live and go to school' || group.hint.includes('Whitefish students count as rural')), false);
+const explicitLocal: DifferentiationProfile = { ...emptyDifferentiation(), places: ['whitefish', 'flathead', 'montana', 'rural'], plans: ['teaching'] };
+const backgroundLocal: DifferentiationProfile = { ...emptyDifferentiation(), plans: ['teaching'] };
+for (const item of catalog.awards) {
+  assert.deepEqual(differentiationHits(item, backgroundLocal), differentiationHits(item, explicitLocal), item.name);
+}
+const sampleAnswers = InterviewAnswersSchema.parse({ gpa: 3.4, targetSchoolTypes: ['four_year'], differentiation: backgroundLocal });
+const beforeAnswers = InterviewAnswersSchema.parse({ gpa: 3.4, targetSchoolTypes: ['four_year'], differentiation: explicitLocal });
+const sampleRank = shortlistAwards(catalog.awards, sampleAnswers).results.map((item) => `${item.award.publicId}:${item.decision}:${item.relevant}`);
+const beforeRank = shortlistAwards(catalog.awards, beforeAnswers).results.map((item) => `${item.award.publicId}:${item.decision}:${item.relevant}`);
+assert.deepEqual(sampleRank, beforeRank);
 assert.equal(sports.includes('skiing'), false);
 assert.equal(sports.includes('mountain biking'), false);
 for (const group of groups) {
