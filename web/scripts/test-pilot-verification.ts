@@ -387,6 +387,17 @@ const verifiedIds = [
   'award-91e97d6c3fba',
   'award-d5ab9d5dcef8',
   // p2-verified-ids
+  'award-c29a10000001',
+  'award-c29a10000002',
+  'award-c29a10000003',
+  'award-c29a10000004',
+  'award-c29a10000005',
+  'award-c29a10000006',
+  'award-c29a10000007',
+  'award-c29a10000008',
+  'award-c29a10000009',
+  'award-c29a1000000a',
+  'award-c29a1000000b',
 ];
 const uncheckedIds = [
   'award-5b5b0db70dd0',

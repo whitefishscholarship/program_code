@@ -8,14 +8,14 @@ If a page states no state or location limit, the place is national and the note 
 
 Pool level 1 is Whitefish only. Level 2 is Flathead County. Level 3 is a smaller area than one whole state. Level 4 is one whole state. Level 5 is bigger than one state, or open to the whole country but only for a specific group. Level 6 is open across the United States. A lower competition score means a smaller pool. Scores stay inside the band for that level, so local awards stay ahead of national ones.
 
-Awards tagged: 456.
+Awards tagged: 467.
 
 ## Counts
 
 ### residencyScope
 
-- national: 302
-- montana: 52
+- national: 309
+- montana: 56
 - null: 37
 - flathead: 22
 - whitefish: 22
@@ -23,9 +23,9 @@ Awards tagged: 456.
 
 ### poolLevel
 
-- 5: 238
+- 5: 245
 - 6: 67
-- 4: 55
+- 4: 59
 - null: 37
 - 1: 22
 - 2: 22
@@ -380,7 +380,7 @@ Awards tagged: 456.
 
 ### tagConfirmedBy
 
-- derived: 456
+- derived: 467
 
 ## Pages that did not load
 

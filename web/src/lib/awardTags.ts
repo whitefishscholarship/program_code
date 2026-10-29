@@ -280,6 +280,15 @@ function addClubs(text: string, bags: Bags) {
   if (/\blpa member\b|active lpa/.test(text)) push(bags.clubs, 'LPA');
   if (/aea member(?! compan)/.test(text)) push(bags.clubs, 'AEA');
   if (/national gay pilots association/.test(text) && !bags.clubs.includes('NGPA')) push(bags.clubs, 'NGPA');
+  if (/\bspeech and debate\b|\bdebate\b|\bspeech contest\b|\boratorical\b/.test(text)) push(bags.clubs, 'speech and debate');
+  if (/\bdrama\b|\btheatre\b|\btheater\b|\bthespian\b/.test(text)) push(bags.clubs, 'drama');
+  const bandText = text.replace(/\bbandwidth\b|\bbandage\b|\bband-aid\b/g, ' ');
+  if (/\bband\b/.test(bandText)) push(bags.clubs, 'band');
+  if (/\borchestra\b/.test(text)) push(bags.clubs, 'orchestra');
+  if (/\bchoir\b|\bchorus\b/.test(text)) push(bags.clubs, 'choir');
+  if (/\bchess\b/.test(text)) push(bags.clubs, 'chess');
+  if (/\bstudent council\b|\bclass officer\b/.test(text)) push(bags.clubs, 'student council');
+  if (/\byearbook\b/.test(text)) push(bags.clubs, 'yearbook');
 }
 
 function addSports(text: string, bags: Bags) {
@@ -288,6 +297,8 @@ function addSports(text: string, bags: Bags) {
     if (sport === 'rodeo' && /rodeo association|lineman's rodeo/.test(text)) continue;
     if (new RegExp(`\\b${sport}\\b`).test(text)) push(bags.sports, sport === 'ski' ? 'skiing' : sport);
   }
+  if (/\bcross[- ]country\b/.test(text)) push(bags.sports, 'cross country');
+  if (/\bcheerleading\b|\bcheerleader\b|\bcheer\b/.test(text)) push(bags.sports, 'cheer');
 }
 
 function addHeritage(text: string, bags: Bags) {
@@ -601,8 +612,22 @@ function poolReason(place: Place | null, level: PoolLevel | null, bags: Bags, bl
 
 function limitClauses(bags: Bags): string[] {
   const clauses: string[] = [];
+  const clubPhrase: Record<string, string> = {
+    'speech and debate': 'do speech and debate',
+    drama: 'do drama or theatre',
+    band: 'play in a band',
+    orchestra: 'play in an orchestra',
+    choir: 'sing in a choir',
+    chess: 'play chess',
+    'student council': 'are on student council',
+    yearbook: 'work on the yearbook',
+  };
+  const speechAndDrama = bags.clubs.includes('speech and debate') && bags.clubs.includes('drama');
+  if (speechAndDrama) clauses.push('do speech, debate, or drama');
   for (const club of bags.clubs) {
+    if (speechAndDrama && (club === 'speech and debate' || club === 'drama')) continue;
     if (club === 'Eagle Scout') clauses.push('are Eagle Scouts');
+    else if (clubPhrase[club]) clauses.push(clubPhrase[club]);
     else clauses.push(`are ${club} members`);
   }
   const planPhrase: Record<string, string> = {
@@ -623,7 +648,12 @@ function limitClauses(bags: Bags): string[] {
     transportation: 'are studying transportation',
   };
   for (const plan of bags.plans) clauses.push(planPhrase[plan] ?? `are studying ${plan}`);
-  for (const sport of bags.sports) clauses.push(sport === 'student athlete' ? 'play a sport' : `play ${sport}`);
+  for (const sport of bags.sports) {
+    if (sport === 'student athlete') clauses.push('play a sport');
+    else if (sport === 'cheer') clauses.push('cheer');
+    else if (sport === 'cross country') clauses.push('run cross country');
+    else clauses.push(`play ${sport}`);
+  }
   for (const item of bags.heritage) clauses.push(`are ${item}`);
   for (const item of bags.faith) clauses.push(`are connected to a ${item} church`);
   const familyPhrase: Record<string, string> = {

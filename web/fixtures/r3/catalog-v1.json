@@ -20,14 +20,14 @@
     "schemaVersion": "1.0.0",
     "catalogRevision": "cae04afef1f7a548cd5fcbc51b0e39cf6bb2c2de32b0afba3e4a514cd29691d8",
     "counts": {
-      "sources": 504,
+      "sources": 515,
       "portals": 21,
-      "awards": 456,
+      "awards": 467,
       "applicationGroups": 4,
-      "cycles": 456,
-      "activeCycles": 119,
-      "upcomingCycles": 160,
-      "closedCycles": 98,
+      "cycles": 467,
+      "activeCycles": 122,
+      "upcomingCycles": 167,
+      "closedCycles": 99,
       "unavailableCycles": 0,
       "unknownCycles": 79,
       "minimumObservedRecipientSlots": 71
@@ -13170,10 +13170,12 @@
         "residencyScope": null,
         "poolLevel": null,
         "competitionScore": null,
-        "poolReason": "The page does not say the place. It is for students who are studying art or music.",
+        "poolReason": "The page does not say the place. It is for students who do drama or theatre and are studying art or music.",
         "ruralRule": "none",
         "sports": null,
-        "clubs": null,
+        "clubs": [
+          "drama"
+        ],
         "heritage": null,
         "faith": null,
         "familyTies": null,
@@ -27145,11 +27147,13 @@
         },
         "residencyScope": "montana",
         "poolLevel": 4,
-        "competitionScore": 58,
-        "poolReason": "Montana students can apply.",
+        "competitionScore": 55,
+        "poolReason": "Montana students who do speech and debate can apply.",
         "ruralRule": "none",
         "sports": null,
-        "clubs": null,
+        "clubs": [
+          "speech and debate"
+        ],
         "heritage": null,
         "faith": null,
         "familyTies": null,
@@ -27856,7 +27860,7 @@
       {
         "publicId": "award-615c2c524263",
         "name": "Kalispell Youth Softball Association Scholarship",
-        "summary": "No official KYSA scholarship page was found on October 29, 2026. The school list says it is for a graduating senior who played for KYSA for two or more years.",
+        "summary": "No official KYSA scholarship page was found on October 29, 2026. The school list says it is for a graduating senior who played softball for KYSA for two or more years.",
         "amount": {
           "label": "Amount not posted",
           "minimum": null,
@@ -27898,9 +27902,11 @@
         "residencyScope": null,
         "poolLevel": null,
         "competitionScore": null,
-        "poolReason": "The page does not say the place.",
+        "poolReason": "The page does not say the place. It is for students who play softball.",
         "ruralRule": "none",
-        "sports": null,
+        "sports": [
+          "softball"
+        ],
         "clubs": null,
         "heritage": null,
         "faith": null,
@@ -28232,7 +28238,7 @@
       {
         "publicId": "award-c735b8c4c92e",
         "name": "Five Valley Chorus Sweet Adelines Music Scholarship",
-        "summary": "No official scholarship page was found on October 29, 2026. The school list says the student is a Montana senior who has been in a school music program for at least two years and will continue in music.",
+        "summary": "No official scholarship page was found on October 29, 2026. The school list says the student is a Montana senior who has been in a school chorus or other music program for at least two years and will continue in music.",
         "amount": {
           "label": "Amount not posted",
           "minimum": null,
@@ -28273,11 +28279,13 @@
         },
         "residencyScope": "montana",
         "poolLevel": 4,
-        "competitionScore": 55,
-        "poolReason": "Montana students who are studying art or music can apply.",
+        "competitionScore": 52,
+        "poolReason": "Montana students who sing in a choir and are studying art or music can apply.",
         "ruralRule": "none",
         "sports": null,
-        "clubs": null,
+        "clubs": [
+          "choir"
+        ],
         "heritage": null,
         "faith": null,
         "familyTies": null,
@@ -29411,6 +29419,713 @@
         "gender": null,
         "firstGen": null,
         "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-c29a10000001",
+        "name": "Montana Forensic Educators Association Scholarship",
+        "summary": "This award is up to $500 for a graduating Montana senior who competed in speech and debate or drama for at least 3 years. The student sends an essay, a transcript, a resume, and 2 letters, and 1 letter is from a coach. It opens each spring after the coaches meeting. The 2027 date is not posted yet.",
+        "amount": {
+          "label": "Up to $500",
+          "minimum": null,
+          "maximum": 500,
+          "currency": "USD",
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "Graduating Montana senior who competed in speech and debate or drama for 3 or more years.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "upcoming",
+          "label": "Each spring after the coaches meeting",
+          "year": 2027,
+          "opens": null,
+          "closes": null,
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "MFEA scholarship page",
+          "url": "https://www.mhsa.org/speech-drama-debate-mfea/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-c29a10000001"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.mhsa.org/speech-drama-debate-mfea/",
+          "openStatus": "closed_next_not_posted",
+          "deadline": null
+        },
+        "residencyScope": "montana",
+        "poolLevel": 4,
+        "competitionScore": 55,
+        "poolReason": "Montana students who do speech, debate, or drama can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": [
+          "drama",
+          "speech and debate"
+        ],
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": true,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-c29a10000002",
+        "name": "US Senate Youth Program Montana",
+        "summary": "The Hearst US Senate Youth Program gives $12,500 and a week in Washington to 2 Montana students. The student must be a Montana junior or senior with a year-round elected role, such as student council, class officer, or an NHS officer. The 2026 to 2027 round closed on October 5, 2026. The next round is in fall 2027.",
+        "amount": {
+          "label": "$12,500",
+          "minimum": 12500,
+          "maximum": 12500,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "Montana junior or senior who holds a year-round elected student role such as student council or class officer.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "closed",
+          "label": "Closed October 5, 2026. Next round fall 2027",
+          "year": 2027,
+          "opens": null,
+          "closes": "October 5, 2026",
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Montana US Senate Youth Program page",
+          "url": "https://opi.mt.gov/Leadership/Management-Operations/Office-of-the-Superintendent/US-Senate-Youth-Program-Scholarship",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-c29a10000002"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://opi.mt.gov/Leadership/Management-Operations/Office-of-the-Superintendent/US-Senate-Youth-Program-Scholarship",
+          "openStatus": "closed_next_not_posted",
+          "deadline": "October 5, 2026"
+        },
+        "residencyScope": "montana",
+        "poolLevel": 4,
+        "competitionScore": 55,
+        "poolReason": "Montana students who are on student council can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": [
+          "student council"
+        ],
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-c29a10000003",
+        "name": "Big Sky State Games Character Counts Scholarship",
+        "summary": "This $500 award is for a Montana high school junior who has competed in the Big Sky State Games as a student athlete and shows good character. About 4 students are chosen. The deadline is May 1, 2027.",
+        "amount": {
+          "label": "$500",
+          "minimum": 500,
+          "maximum": 500,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "Montana high school junior who has competed in the Big Sky State Games as a student athlete.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "active",
+          "label": "Deadline May 1, 2027",
+          "year": 2027,
+          "opens": null,
+          "closes": "May 1, 2027",
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Big Sky State Games scholarship page",
+          "url": "https://bigskygames.org/character-counts-scholarship/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-c29a10000003"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://bigskygames.org/character-counts-scholarship/",
+          "openStatus": "open_now",
+          "deadline": "May 1, 2027"
+        },
+        "residencyScope": "montana",
+        "poolLevel": 4,
+        "competitionScore": 55,
+        "poolReason": "Montana students who play a sport can apply.",
+        "ruralRule": "none",
+        "sports": [
+          "student athlete"
+        ],
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-c29a10000004",
+        "name": "Montana Bandmasters Association Scholarship",
+        "summary": "This $500 award is for a Montana senior with a GPA of 3.0 or higher who plays in band and is planning to teach music at a Montana college. A band director in the Montana Bandmasters Association must support the application. The 2027 form is not posted yet.",
+        "amount": {
+          "label": "$500",
+          "minimum": 500,
+          "maximum": 500,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "Montana senior with a 3.0 GPA who plays in band and is planning to teach music.",
+          "minimumGpa": 3,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "upcoming",
+          "label": "Yearly. The 2027 form is not posted yet",
+          "year": 2027,
+          "opens": null,
+          "closes": null,
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Montana Bandmasters scholarship form",
+          "url": "https://www.bandmasters.net/wp-content/uploads/2026/04/MBA-Scholarship-Application-2026.pdf",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-c29a10000004"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.bandmasters.net/wp-content/uploads/2026/04/MBA-Scholarship-Application-2026.pdf",
+          "openStatus": "closed_next_not_posted",
+          "deadline": null
+        },
+        "residencyScope": "montana",
+        "poolLevel": 4,
+        "competitionScore": 51,
+        "poolReason": "Montana students who play in a band and are planning to teach can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": [
+          "band"
+        ],
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": [
+          "teaching"
+        ],
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-c29a10000005",
+        "name": "DECA Inc. Scholarship Program",
+        "summary": "DECA gives scholarships of $1,000 to $2,500 to current DECA members. The program gives out more than $200,000 in all. Students in any state can apply. Some awards ask for an essay, a video, or another extra piece. The deadline is January 11, 2027.",
+        "amount": {
+          "label": "$1,000 to $2,500",
+          "minimum": 1000,
+          "maximum": 2500,
+          "currency": "USD",
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "Current DECA member in any state.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "active",
+          "label": "Deadline January 11, 2027",
+          "year": 2027,
+          "opens": null,
+          "closes": "January 11, 2027",
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "DECA scholarships page",
+          "url": "https://www.deca.org/scholarships",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-c29a10000005"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.deca.org/scholarships",
+          "openStatus": "open_now",
+          "deadline": "January 11, 2027"
+        },
+        "residencyScope": "national",
+        "poolLevel": 5,
+        "competitionScore": 73,
+        "poolReason": "Students across the United States who are DECA members can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": [
+          "DECA"
+        ],
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": true,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-c29a10000006",
+        "name": "Educational Theatre Foundation Thespian Scholarships",
+        "summary": "These awards are $1,000 to $1,500 for an inducted Thespian in drama. Some are for graduating seniors, including students who want to study drama, future drama teachers, and students from groups that are often left out. Students in any state can apply. The dates are February 1 to April 1, 2027.",
+        "amount": {
+          "label": "$1,000 to $1,500",
+          "minimum": 1000,
+          "maximum": 1500,
+          "currency": "USD",
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "Inducted Thespian in drama. Students in any state can apply.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "upcoming",
+          "label": "Opens February 1, 2027",
+          "year": 2027,
+          "opens": "February 1, 2027",
+          "closes": "April 1, 2027",
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Educational Theatre Foundation scholarships",
+          "url": "https://foundation.schooltheatre.org/scholarships/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-c29a10000006"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://foundation.schooltheatre.org/scholarships/",
+          "openStatus": "opens_on",
+          "deadline": "April 1, 2027"
+        },
+        "residencyScope": "national",
+        "poolLevel": 5,
+        "competitionScore": 73,
+        "poolReason": "Students across the United States who do drama or theatre can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": [
+          "drama"
+        ],
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-c29a10000007",
+        "name": "Thespy Finalist Scholarships",
+        "summary": "These awards are $1,000 to $6,000 for a student who earned a superior rating at a chapter Thespy drama event. College awards are for graduating seniors. Students in any state can apply. The dates are April 1 to April 30, 2027.",
+        "amount": {
+          "label": "$1,000 to $6,000",
+          "minimum": 1000,
+          "maximum": 6000,
+          "currency": "USD",
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "Graduating senior in drama who earned a superior rating at a chapter Thespy event. Students in any state can apply.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "upcoming",
+          "label": "Opens April 1, 2027",
+          "year": 2027,
+          "opens": "April 1, 2027",
+          "closes": "April 30, 2027",
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Thespy scholarship page",
+          "url": "https://foundation.schooltheatre.org/scholarships/thespy-scholarships/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-c29a10000007"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://foundation.schooltheatre.org/scholarships/thespy-scholarships/",
+          "openStatus": "opens_on",
+          "deadline": "April 30, 2027"
+        },
+        "residencyScope": "national",
+        "poolLevel": 5,
+        "competitionScore": 73,
+        "poolReason": "Students across the United States who do drama or theatre can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": [
+          "drama"
+        ],
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-c29a10000008",
+        "name": "US Chess Trust Scholar Chessplayer Award",
+        "summary": "This award is $1,500 and 6 students are chosen. The student must be a US Chess member, a junior or senior, and must have played at least 25 rated chess games in the year before. The student also needs strong grades and chess service. Students in any state can apply. The yearly date has been March 1. The 2027 call is not posted yet.",
+        "amount": {
+          "label": "$1,500",
+          "minimum": 1500,
+          "maximum": 1500,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "US Chess member who plays chess and is a high school junior or senior. Students in any state can apply.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "upcoming",
+          "label": "Yearly around March 1. The 2027 call is not posted yet",
+          "year": 2027,
+          "opens": null,
+          "closes": null,
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "US Chess Trust Scholar Chessplayer page",
+          "url": "https://www.uschesstrust.org/scholar-chessplayer-award",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-c29a10000008"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.uschesstrust.org/scholar-chessplayer-award",
+          "openStatus": "closed_next_not_posted",
+          "deadline": null
+        },
+        "residencyScope": "national",
+        "poolLevel": 5,
+        "competitionScore": 73,
+        "poolReason": "Students across the United States who play chess can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": [
+          "chess"
+        ],
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-c29a10000009",
+        "name": "Quill and Scroll Edward J. Nell Memorial Scholarship",
+        "summary": "This award is for a senior who is a national winner in a Quill and Scroll contest, including the Yearbook Excellence contest, and who plans to study journalism. The amount varies. Students in any state can apply. The deadline is May 7, 2027.",
+        "amount": {
+          "label": "Amount varies",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "Senior who won a national Quill and Scroll contest, including yearbook, and plans to study journalism. Students in any state can apply.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "active",
+          "label": "Deadline May 7, 2027",
+          "year": 2027,
+          "opens": null,
+          "closes": "May 7, 2027",
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Quill and Scroll scholarships page",
+          "url": "https://quillandscroll.org/scholarships-2/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-c29a10000009"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://quillandscroll.org/scholarships-2/",
+          "openStatus": "open_now",
+          "deadline": "May 7, 2027"
+        },
+        "residencyScope": "national",
+        "poolLevel": 5,
+        "competitionScore": 73,
+        "poolReason": "Students across the United States who work on the yearbook can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": [
+          "yearbook"
+        ],
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-c29a1000000a",
+        "name": "NSDA National Tournament Scholarships",
+        "summary": "These awards go to top finishers at the NSDA national speech and debate tournament. The amount depends on the finish. Students in any state can apply. The tournament is each June.",
+        "amount": {
+          "label": "Amount varies by finish",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "Top finisher at the NSDA national speech and debate tournament. Students in any state can apply.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "upcoming",
+          "label": "National tournament each June",
+          "year": 2027,
+          "opens": null,
+          "closes": "June 2027",
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "NSDA scholarships page",
+          "url": "https://www.speechanddebate.org/scholarships/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-c29a1000000a"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.speechanddebate.org/scholarships/",
+          "openStatus": "closed_next_not_posted",
+          "deadline": "June 2027"
+        },
+        "residencyScope": "national",
+        "poolLevel": 5,
+        "competitionScore": 73,
+        "poolReason": "Students across the United States who do speech and debate can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": [
+          "speech and debate"
+        ],
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-c29a1000000b",
+        "name": "USTA Foundation College Launch Scholarship",
+        "summary": "This award is for a first-time college student who played in an organized youth tennis program, has strong grades, and has financial need. The amount varies. Students in any state can apply. The 2027 round is not open yet.",
+        "amount": {
+          "label": "Amount varies",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "First-time college student from an organized youth tennis program who has financial need. Students in any state can apply.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "upcoming",
+          "label": "2027 round is not open yet",
+          "year": 2027,
+          "opens": null,
+          "closes": null,
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "USTA Foundation college scholarship page",
+          "url": "https://www.ustafoundation.com/en/home/what-we-do/college-scholarship-opportunities.html",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-c29a1000000b"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.ustafoundation.com/en/home/what-we-do/college-scholarship-opportunities.html",
+          "openStatus": "closed_next_not_posted",
+          "deadline": null
+        },
+        "residencyScope": "national",
+        "poolLevel": 5,
+        "competitionScore": 70,
+        "poolReason": "Students across the United States who play tennis and need help paying for college can apply.",
+        "ruralRule": "none",
+        "sports": [
+          "tennis"
+        ],
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": true,
         "essayRequired": null,
         "renewable": null,
         "tagConfirmedBy": "derived"
@@ -34455,6 +35170,116 @@
         "url": null,
         "access": "unknown",
         "availability": "unknown",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-c29a10000001",
+        "title": "mhsa.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.mhsa.org/speech-drama-debate-mfea/",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-c29a10000002",
+        "title": "opi.mt.gov",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://opi.mt.gov/Leadership/Management-Operations/Office-of-the-Superintendent/US-Senate-Youth-Program-Scholarship",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-c29a10000003",
+        "title": "bigskygames.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://bigskygames.org/character-counts-scholarship/",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-c29a10000004",
+        "title": "bandmasters.net",
+        "recordType": "source",
+        "architecture": "document_or_pdf",
+        "url": "https://www.bandmasters.net/wp-content/uploads/2026/04/MBA-Scholarship-Application-2026.pdf",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-c29a10000005",
+        "title": "deca.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.deca.org/scholarships",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-c29a10000006",
+        "title": "foundation.schooltheatre.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://foundation.schooltheatre.org/scholarships/",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-c29a10000007",
+        "title": "foundation.schooltheatre.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://foundation.schooltheatre.org/scholarships/thespy-scholarships/",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-c29a10000008",
+        "title": "uschesstrust.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.uschesstrust.org/scholar-chessplayer-award",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-c29a10000009",
+        "title": "quillandscroll.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://quillandscroll.org/scholarships-2/",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-c29a1000000a",
+        "title": "speechanddebate.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.speechanddebate.org/scholarships/",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-c29a1000000b",
+        "title": "ustafoundation.com",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.ustafoundation.com/en/home/what-we-do/college-scholarship-opportunities.html",
+        "access": "public",
+        "availability": "complete",
         "awardCount": 1
       }
     ],

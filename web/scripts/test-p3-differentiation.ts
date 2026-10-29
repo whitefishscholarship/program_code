@@ -186,7 +186,30 @@ assert.equal(aviationGroupSelected(oldAopa.clubs), true);
 assert(differentiationHits(aviationAwards.find((item) => item.clubs?.includes('AOPA'))!, oldAopa).includes('Aviation group member'));
 assert.deepEqual(toggleDifferentiation(oldAopa, { field: 'clubs', value: AVIATION_GROUP_VALUE, label: 'Aviation group member' }).clubs, []);
 const sports = groups.find((group) => group.id === 'sports')?.chips.map((chip) => chip.value) ?? [];
-assert.deepEqual(sports, ['golf', 'rodeo', 'soccer', 'student athlete', 'track', 'wrestling']);
+assert.deepEqual(sports, ['golf', 'rodeo', 'soccer', 'softball', 'student athlete', 'tennis', 'track', 'wrestling']);
+for (const missing of ['football', 'basketball', 'volleyball', 'cross country', 'swimming', 'baseball', 'cheer']) {
+  assert.equal(sports.includes(missing), false, missing);
+}
+for (const value of ['speech and debate', 'drama', 'band', 'choir', 'chess', 'student council', 'yearbook', 'National Honor Society']) {
+  assert.equal(clubValues.includes(value), true, value);
+}
+assert.equal(clubValues.includes('orchestra'), false);
+const chipProfile = (field: 'sports' | 'clubs', value: string) => ({ ...emptyDifferentiation(), [field]: [value] });
+const named = (name: string) => {
+  const found = catalog.awards.filter((item) => item.name.includes(name));
+  assert.equal(found.length, 1, name);
+  return found[0];
+};
+assert(differentiationHits(named('Kalispell Youth Softball'), chipProfile('sports', 'softball')).includes('Softball'));
+assert(differentiationHits(named('National Honor Society Member'), chipProfile('clubs', 'National Honor Society')).includes('National Honor Society'));
+assert(differentiationHits(named('Fellows Drama'), chipProfile('clubs', 'drama')).includes('Drama and theatre'));
+assert(differentiationHits(named('Thespian Scholarships'), chipProfile('clubs', 'drama')).includes('Drama and theatre'));
+assert(differentiationHits(named('Thespy Finalist'), chipProfile('clubs', 'drama')).includes('Drama and theatre'));
+assert(differentiationHits(named('Five Valley Chorus'), chipProfile('clubs', 'choir')).includes('Choir'));
+assert(differentiationHits(named('Montana Forensic Educators'), chipProfile('clubs', 'speech and debate')).includes('Speech and debate'));
+assert(differentiationHits(named('Montana Forensic Educators'), chipProfile('clubs', 'drama')).includes('Drama and theatre'));
+assert(differentiationHits(named('NSDA National'), chipProfile('clubs', 'speech and debate')).includes('Speech and debate'));
+assert(differentiationHits(named('USTA Foundation'), chipProfile('sports', 'tennis')).includes('Tennis'));
 assert.equal(groups.some((group) => group.title === 'Where you live and go to school' || group.hint.includes('Whitefish students count as rural')), false);
 const explicitLocal: DifferentiationProfile = { ...emptyDifferentiation(), places: ['whitefish', 'flathead', 'montana', 'rural'], plans: ['teaching'] };
 const backgroundLocal: DifferentiationProfile = { ...emptyDifferentiation(), plans: ['teaching'] };
