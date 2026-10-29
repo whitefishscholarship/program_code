@@ -8,15 +8,15 @@ If a page states no state or location limit, the place is national and the note 
 
 Pool level 1 is Whitefish only. Level 2 is Flathead County. Level 3 is a smaller area than one whole state. Level 4 is one whole state. Level 5 is bigger than one state, or open to the whole country but only for a specific group. Level 6 is open across the United States. A lower competition score means a smaller pool. Scores stay inside the band for that level, so local awards stay ahead of national ones.
 
-Awards tagged: 440.
+Awards tagged: 456.
 
 ## Counts
 
 ### residencyScope
 
-- national: 265
-- null: 67
-- montana: 46
+- national: 266
+- null: 80
+- montana: 48
 - flathead: 22
 - whitefish: 22
 - regional: 18
@@ -24,9 +24,9 @@ Awards tagged: 440.
 ### poolLevel
 
 - 5: 222
-- null: 67
-- 4: 48
-- 6: 46
+- null: 80
+- 4: 50
+- 6: 47
 - 1: 22
 - 2: 22
 - 3: 13
@@ -34,12 +34,12 @@ Awards tagged: 440.
 ### competitionScore
 
 - 73: 109
+- null: 80
 - 70: 72
-- null: 67
 - 94: 37
 - 67: 27
-- 55: 21
-- 58: 18
+- 55: 22
+- 58: 19
 - 16: 14
 - 27: 9
 - 72: 8
@@ -51,11 +51,11 @@ Awards tagged: 440.
 - 44: 3
 - 52: 3
 - 57: 3
+- 92: 3
 - 15: 2
 - 26: 2
 - 38: 2
 - 54: 2
-- 92: 2
 - 10: 1
 - 14: 1
 - 29: 1
@@ -72,10 +72,10 @@ Awards tagged: 440.
 
 ### poolReason
 
-- Open to students across the United States.: 45
-- The page does not say the place.: 27
+- Open to students across the United States.: 46
+- The page does not say the place.: 39
+- Montana students can apply.: 22
 - The page does not say who can apply.: 22
-- Montana students can apply.: 21
 - Only Whitefish High School students can apply.: 17
 - Students across the United States who are training to fix airplanes can apply.: 16
 - Students in the United States and Canada who are AOPA members can apply.: 16
@@ -119,6 +119,7 @@ Awards tagged: 440.
 - Students across the United States who work for the sponsor or have a parent who does can apply.: 2
 - Students in the United States and Canada who are AOPA members and are training to be pilots can apply.: 2
 - The page does not say the place. It is for students who are in the skilled trades.: 2
+- The page does not say the place. It is for students who are Native American.: 2
 - The page does not say the place. It is for students who have a learning disability.: 2
 - The page does not say the place. It is for students who need help paying for college.: 2
 - Montana students who are in a two-year program and are in the skilled trades can apply.: 1
@@ -133,6 +134,7 @@ Awards tagged: 440.
 - Montana students who have been in foster care can apply.: 1
 - Montana students who play a sport can apply.: 1
 - Montana students who play rodeo can apply.: 1
+- Montana students who play soccer can apply.: 1
 - Montana students who play wrestling can apply.: 1
 - Only Flathead County students who are connected to a Catholic church can apply.: 1
 - Only Flathead County students who are in the skilled trades and are connected to a Christian church can apply.: 1
@@ -236,7 +238,6 @@ Awards tagged: 440.
 - The page does not say the place. It is for students who are in the skilled trades and have a military family tie.: 1
 - The page does not say the place. It is for students who are LGBTQ+ and would be the first in their family to go to college.: 1
 - The page does not say the place. It is for students who are LGBTQ+.: 1
-- The page does not say the place. It is for students who are Native American.: 1
 - The page does not say the place. It is for students who are studying agriculture or nature.: 1
 - The page does not say the place. It is for students who are studying art or music.: 1
 - The page does not say the place. It is for students who are WAI members.: 1
@@ -247,21 +248,22 @@ Awards tagged: 440.
 
 ### ruralRule
 
-- none: 437
+- none: 453
 - service-area: 3
 
 ### sports
 
-- null: 434
+- null: 449
 - student athlete: 2
 - golf: 1
 - rodeo: 1
+- soccer: 1
 - track: 1
 - wrestling: 1
 
 ### clubs
 
-- null: 320
+- null: 336
 - WAI: 52
 - AOPA: 19
 - NGPA: 15
@@ -281,19 +283,19 @@ Awards tagged: 440.
 
 ### heritage
 
-- null: 436
-- Native American: 4
+- null: 451
+- Native American: 5
 
 ### faith
 
-- null: 436
+- null: 452
 - Catholic: 2
 - Christian: 1
 - Presbyterian: 1
 
 ### familyTies
 
-- null: 406
+- null: 422
 - military: 14
 - employer: 5
 - first responder: 5
@@ -306,7 +308,7 @@ Awards tagged: 440.
 
 ### plans
 
-- null: 267
+- null: 283
 - pilot training: 61
 - aviation maintenance: 35
 - skilled trades: 26
@@ -325,7 +327,7 @@ Awards tagged: 440.
 
 ### health
 
-- null: 430
+- null: 446
 - learning disability: 5
 - mental health: 3
 - ADHD: 2
@@ -335,7 +337,7 @@ Awards tagged: 440.
 
 ### lifeSituation
 
-- null: 429
+- null: 445
 - foster care: 4
 - LGBTQ+: 4
 - adopted: 3
@@ -344,7 +346,7 @@ Awards tagged: 440.
 
 ### gender
 
-- null: 395
+- null: 411
 - woman: 44
 - nonbinary: 2
 - gender-diverse: 1
@@ -352,29 +354,29 @@ Awards tagged: 440.
 
 ### firstGen
 
-- null: 438
+- null: 454
 - true: 2
 
 ### needBased
 
-- null: 417
+- null: 433
 - true: 23
 
 ### essayRequired
 
-- null: 371
+- null: 387
 - true: 66
 - false: 3
 
 ### renewable
 
-- null: 426
+- null: 442
 - true: 13
 - false: 1
 
 ### tagConfirmedBy
 
-- derived: 440
+- derived: 456
 
 ## Pages that did not load
 
@@ -468,7 +470,7 @@ Awards tagged: 440.
 
 ## Awards left uncertain
 
-244 awards still have a gap. The tag fields are filled with null where the page does not say.
+257 awards still have a gap. The tag fields are filled with null where the page does not say.
 
 - award-0a1f1d1b8505 | 2027 Wings for Val Foundation Lt. Cmdr. Lyndsay Evans Memorial Scholarship | no location limit listed
 - award-d06d7c7342e2 | Adam Montes Pride Scholarship | The page did not load.
@@ -492,11 +494,13 @@ Awards tagged: 440.
 - award-9185ae8439e3 | Associated General Contractors of America’s Workforce Development Scholarship | no location limit listed
 - award-dafc0ee48bd2 | Avfuel Pilot-in-Training Scholarship | no location limit listed
 - award-4343de48868d | AVTRIP Scholarship | no location limit listed
+- award-3eba44ba5492 | Beauty Changes Lives Scholarships | The page does not say the place.
 - award-8250bfe7501a | Big Sun Athletics Scholarship | no location limit listed
 - award-d2f262e03fe2 | Blue Collar Brain Scholarship Program | The page did not load.
 - award-ba504649a05d | Boeing Flight Training Scholarship | no location limit listed
 - award-9da4b8e00a27 | Boeing Maintenance Training Scholarship | no location limit listed
 - award-0546c2fa9e62 | Bonita Jean Olson Memorial Scholarship | no location limit listed
+- award-2ae241b793af | Boom and Bucket Heavy Machinery Scholarship | The page does not say the place.
 - award-6fa70e1db39e | Building Hope Scholarship | no location limit listed
 - award-7933697626cd | Bulkthreads.com's "Let's Aim Higher" Scholarship | The page does not say who can apply. The page did not load.
 - award-b9a12b09957d | Bunny M. Connors Memorial Scholarship | no location limit listed
@@ -510,6 +514,7 @@ Awards tagged: 440.
 - award-c32eca2c949c | CSKT Higher Education Scholarship | The page did not load.
 - award-8daa0f30de62 | D.A. Davidson Memorial Scholarship | no location limit listed
 - award-519dce301c62 | Dare to Dream Scholarship | no location limit listed
+- award-d5ab9d5dcef8 | Daughters of the American Revolution Scholarships | The page does not say the place.
 - award-ff63c599405f | David Arver Memorial Scholarship | no location limit listed
 - award-6eb2676b69f4 | Davis-Putter Scholarship | no location limit listed
 - award-6c9a2b50553e | Delta Air Lines Pilot Scholarship | no location limit listed
@@ -529,6 +534,7 @@ Awards tagged: 440.
 - award-4b8060812f60 | Endeavor Air Flight Training Scholarship (NGPA) | no location limit listed
 - award-f31bf2ed527a | Epic Flight Academy Aviation Maintenance Technician Scholarship (WAI) | no location limit listed
 - award-3b5ec8c60897 | ERRAL LEA AND GLENN PLYMATE MEMORIAL FLIGHT TRAINING SCHOLARSHIP | The name says flight training, but the page does not say that.
+- award-a93cd1244e14 | Essential Visionaries Scholarship Fund | The page does not say the place.
 - award-c36fdba14b1f | Esther Noffke Flight Training Scholarship | no location limit listed
 - award-943678a94833 | Ethel Hayes Destigmatization of Mental Health Scholarship | The page does not say who can apply. The page did not load.
 - award-d7fd424f278f | Evelyn Lockwood Greene Memorial A&P Maintenance Scholarship | no location limit listed
@@ -538,6 +544,7 @@ Awards tagged: 440.
 - award-54180c19eb74 | FFA Ag Teachers Memorial Scholarship | no location limit listed
 - award-368605f80ab9 | Fisher House Scholarships for Military Children | no location limit listed
 - award-6ee1bd1bab1f | Folds of Honor First Responder Higher Education Scholarship | no location limit listed
+- award-8eb603df07a2 | Foster Care Education and Training Voucher | The name says foster, but the page does not say foster care is required. The page does not say the place.
 - award-5a371acc5f8b | Fred J. Epstein Youth Achievement Award | The page does not say who can apply. The page did not load.
 - award-c2add4aa3b24 | Garmin Scholarship | no location limit listed
 - award-8e8719f2146f | Garmin–Jerry Smith Memorial Scholarship | no location limit listed
@@ -602,7 +609,9 @@ Awards tagged: 440.
 - award-82923d0ea01e | Montana State Grange Scholarship | The name says Montana, but the page does not say the student must be from Montana. The page does not say the place.
 - award-1f64dfaa7bf7 | Montana STEM/Healthcare Scholarship Program | The page lists more than one field of study, so a single field was not tagged.
 - award-40db1e8dee39 | Montana Treasure State First Generation Scholarship | The name says first generation, but the page says these students are considered automatically.
+- award-0fd353bdab40 | Montana TRIO Achievement Grant | The name says Montana, but the page does not say the student must be from Montana. The page does not say the place.
 - award-e5f48a684b24 | Moose Scholarship | The page does not say the place.
+- award-899b6e8b36c5 | Mountain America Foundation Elevate Scholarship | The page does not say the place.
 - award-7859d00caa82 | MSU Teacher Learning Community Scholarship | The page does not say the place.
 - award-fc37c2d47f56 | Murdoch's Scholarship | no location limit listed
 - award-5dd6fcbcc0f8 | NAEHCY Scholarship | The page loaded but this award's rules were not on it.
@@ -629,6 +638,7 @@ Awards tagged: 440.
 - award-47478b1163e1 | Ortho Rehab "Reach Your Peak" | The page does not say who can apply. The page loaded but this award's rules were not on it.
 - award-faa7fd7ea934 | Overcoming Challenges Together Scholarship | The page did not load.
 - award-51729cb7b370 | Parenthood For Me Medical Scholarship | The page did not load.
+- award-9f67df122041 | Partnership With Native Americans Undergraduate Scholarship | The page does not say the place.
 - award-ef357d97de32 | Pat Napolitano Memorial Scholarship for Aspiring Technicians | no location limit listed
 - award-2179b44d009d | Pell Promise for Montana Students | The name says Montana, but the page does not say the student must be from Montana.
 - award-91e97d6c3fba | PNACAC Video Scholarship | The page does not say the place.
@@ -638,8 +648,10 @@ Awards tagged: 440.
 - award-453110814fe5 | PSA Airlines Flight Scholarship (NGPA) | no location limit listed
 - award-3c1de856d59e | PSA Airlines Maintenance Scholarship | no location limit listed
 - award-9a4aaed70a28 | Reach Higher Montana Design-a-Sticker Scholarship | The name says Montana, but the page does not say the student must be from Montana. The page does not say the place.
+- award-b07d51070d88 | Reach Higher Montana Stick with Scholarships | The name says Montana, but the page does not say the student must be from Montana. The page does not say the place.
 - award-9d1c9d543817 | Rebuilding the Road Ahead Scholarship | The page did not load.
 - award-8a34a5f3a4e6 | Red Cross Collegiate Leadership Program Scholarship | no location limit listed
+- award-fb00c6366324 | Region I MASSP Principal's Scholarship | The page does not say the place.
 - award-49934bf76150 | Republic Airways Airline Maintenance Technician Scholarship (PAPA) | The name says maintenance, but the page does not say that.
 - award-d9861aae050d | Republic Airways Aviation Management Scholarship | no location limit listed
 - award-a2f7b9b6cbec | Republic Airways Aviation Management Scholarship (NGPA) | no location limit listed
@@ -649,6 +661,7 @@ Awards tagged: 440.
 - award-19c987735664 | Republic Airways Maintenance Scholarship (NGPA) | no location limit listed
 - award-f1d6a4b38033 | Robert F. Lawson Fund for Careers that Care | The page does not say who can apply. The page did not load.
 - award-1a058b4c5510 | Rubin Propel Scholarship | no location limit listed
+- award-489629d01b5f | Sandpiper Art Gallery Art Scholarship | The page does not say the place.
 - award-4d77d6910970 | Seeley Family Memorial Scholarship | no location limit listed
 - award-ec7d28fb15f9 | Servant Leadership Scholarship | no location limit listed
 - award-8dc9700421f7 | Sharon D. Banks Memorial Undergraduate Scholarship | no location limit listed
@@ -695,8 +708,10 @@ Awards tagged: 440.
 - award-4562d94cb7b9 | The White Family Legacy Scholarship | no location limit listed
 - award-ba4602ec402b | The Zombie Apocalypse Scholarship | no location limit listed
 - award-8e7ecab8f784 | United Airlines/Aviate Scholarships (NGPA) | no location limit listed
+- award-dc2b99725756 | Unity Bank Scholarship | The page does not say the place.
 - award-c3c9cbf0e4ee | Universal Athletic Services Scholarship | The page does not say the place.
 - award-580ec7a464a7 | Universal Avionics Scholarship | no location limit listed
+- award-edef6a6bc91c | Valley Banks Community Scholarship | The page does not say the place.
 - award-4a29a85c87bc | Vertical Aviation / WAI Commercial Helicopter Pilot Rating Scholarship | no location limit listed
 - award-142da69533e6 | Vertical Aviation / WAI Maintenance Technician Certificate Scholarship | no location limit listed
 - award-607fe66710d6 | VFW Voices of Democracy - Patriotic Audio Essay “How Are You Showing Patriotism And Support For Our Country?”
@@ -738,7 +753,7 @@ Awards tagged: 440.
 - Loss of Parent or Guardian: 1
 - Overcoming Significant Adversity: 3
 - First-Generation College: 2
-- Native American or Indigenous: 4
+- Native American or Indigenous: 5
 - LGBTQIA+: 4
 - Female: 44
 - Non-Binary: 2
@@ -753,7 +768,7 @@ Awards tagged: 440.
 - Law & Legal Studies: 2
 - Arts & Humanities: 5
 - Agriculture & Conservation: 10
-- Student Athlete / Sports Background: 6
+- Student Athlete / Sports Background: 7
 - Military or Veteran Affiliation: 14
 - First Responder Affiliation: 5
 - Farmers Union Member: 1
