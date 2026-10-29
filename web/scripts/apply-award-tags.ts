@@ -3,6 +3,54 @@ import crypto from 'node:crypto';
 import { AWARD_TAG_KEYS, type AwardTagKey } from '../src/lib/awardTagSchema';
 import { deriveAwardTags, step3Categories, type DeriveResult, type PageRead, type TaggableAward } from '../src/lib/awardTags';
 
+const FLAG_PLACES: Array<{ id: string; question: string }> = [
+  {
+    id: 'award-9d1c9d543817',
+    question: 'The page says only New York residents can apply. Whitefish students likely cannot apply. Should this award stay off their list?',
+  },
+  {
+    id: 'award-3c66c7edc5d3',
+    question: 'The page requires an active application with the Southeast Lineman Training Center in Trenton, Georgia. Whitefish students likely cannot apply unless they are in that program. Should this award stay off their list?',
+  },
+];
+
+const FLAG_DEADLINES: Array<{ id: string; question: string }> = [
+  {
+    id: 'award-a9c6e0fcc5af',
+    question: 'The page lists a deadline of May 10, 2026, and it does not list a new date. Is this award closed?',
+  },
+  {
+    id: 'award-3c66c7edc5d3',
+    question: 'The page lists a deadline of April 10, 2026, and it does not list a new date. Is this award closed?',
+  },
+  {
+    id: 'award-5a371acc5f8b',
+    question: 'The page lists a deadline of January 20, 2026, and it does not list a new date. Is this award closed?',
+  },
+];
+
+const FLAG_NO_RULES: Record<string, string> = {
+  'award-145de4f3884e': 'The application site did not show the rules. Who can apply, and is there a location limit?',
+  'award-88d2adae4d6d': 'The linked file is only an image, so the rules could not be read. Who can apply, and is there a location limit?',
+  'award-f72b8b128a76': 'The application site did not show the rules. Who can apply, and is there a location limit?',
+  'award-5b93bad03efd': 'The WAI scholarship list did not include this award\'s rules. Who can apply, and is there a location limit?',
+  'award-cd0fb7cd0c64': 'The WAI how-to-apply page did not state this award\'s rules. Who can apply, and is there a location limit?',
+  'award-2126bc5d2f6b': 'The form did not state who can apply. Who can apply, and is there a location limit?',
+  'award-116fe9ce5784': 'The linked file is only an image, so the rules could not be read. Who can apply, and is there a location limit?',
+  'award-11c663acf42e': 'The application site did not show the rules. Who can apply, and is there a location limit?',
+  'award-5dd6fcbcc0f8': 'The form did not state who can apply. Who can apply, and is there a location limit?',
+  'award-47478b1163e1': 'The linked file is only an image, so the rules could not be read. Who can apply, and is there a location limit?',
+  'award-0651dcec4d07': 'The linked file is only an image, so the rules could not be read. Who can apply, and is there a location limit?',
+  'award-ffbd0f0b989f': 'The form did not state who can apply. Who can apply, and is there a location limit?',
+  'award-2dc33d508924': 'The WAI scholarship list did not include this award\'s rules. Who can apply, and is there a location limit?',
+  'award-607fe66710d6': 'The page showed winner stories, not the rules for who can apply. Which students can enter, and is there a location limit?',
+  'award-273fe6406702': 'The WAI scholarship list did not include this award\'s rules. Who can apply, and is there a location limit?',
+  'award-5dc2aab768d2': 'The slides showed dates only, not who can apply. Who can apply?',
+  'award-5dd4c3d3988a': 'The form did not state who can apply. Is it only for girls graduating from Whitefish High School?',
+  'award-d2b44a62c0a7': 'The application page did not state who can apply. Who can apply, and is there a location limit?',
+  'award-bb8ca59a7f0f': 'The page lists two ways to qualify: an employee or dependent, or a Flathead Valley resident. Which students should this award include?',
+};
+
 const catalogPath = 'fixtures/r3/catalog-v1.json';
 const reportPath = 'fixtures/r3/p1-tagging-report.md';
 const pinPath = 'fixtures/r3/pin.json';
@@ -93,6 +141,7 @@ function renderReport(items: Array<{ award: TaggableAward; result: DeriveResult 
     lines.push(`- ${item.award.name} | ${url}`);
   }
   lines.push('');
+  lines.push(...flagForKelsey(items, unread));
   const uncertain = items.filter((item) => item.result.notes.length > 0).sort((a, b) => a.award.name.localeCompare(b.award.name));
   lines.push('## Awards left uncertain');
   lines.push('');
@@ -138,6 +187,45 @@ function renderReport(items: Array<{ award: TaggableAward; result: DeriveResult 
   }
   lines.push('');
   return `${lines.join('\n')}\n`;
+}
+
+function flagForKelsey(
+  items: Array<{ award: TaggableAward; result: DeriveResult }>,
+  unread: Array<{ award: TaggableAward; result: DeriveResult }>,
+): string[] {
+  const byId = new Map(items.map((item) => [item.award.publicId, item]));
+  const lines: string[] = [];
+  lines.push('## Flag for Kelsey');
+  lines.push('');
+  lines.push('These awards stay in the catalog. Each line is a question the page did not settle.');
+  lines.push('');
+  lines.push('### Place limits');
+  lines.push('');
+  for (const flag of FLAG_PLACES) lines.push(flagLine(byId.get(flag.id), flag.question));
+  lines.push('');
+  lines.push('### Passed deadlines with no new date');
+  lines.push('');
+  for (const flag of FLAG_DEADLINES) lines.push(flagLine(byId.get(flag.id), flag.question));
+  lines.push('');
+  const noRules = new Map<string, { award: TaggableAward; result: DeriveResult }>();
+  for (const item of unread) noRules.set(item.award.publicId, item);
+  const coffee = byId.get('award-bb8ca59a7f0f');
+  if (coffee) noRules.set(coffee.award.publicId, coffee);
+  const rows = [...noRules.values()].sort((a, b) => a.award.name.localeCompare(b.award.name));
+  lines.push(`### Pages with no rules (${rows.length})`);
+  lines.push('');
+  for (const item of rows) {
+    const question = FLAG_NO_RULES[item.award.publicId] ?? 'The page did not show this award\'s rules. Who can apply?';
+    lines.push(flagLine(item, question));
+  }
+  lines.push('');
+  return lines;
+}
+
+function flagLine(item: { award: TaggableAward } | undefined, question: string): string {
+  const name = (item?.award.name ?? 'Missing award').replace(/\s+/g, ' ').trim();
+  const url = item ? (pageReads[item.award.publicId]?.url ?? 'unknown url') : 'unknown url';
+  return `- ${name} | ${url} | ${question}`;
 }
 
 function countsFor(items: Array<{ result: DeriveResult }>, key: AwardTagKey): Array<[string, number]> {

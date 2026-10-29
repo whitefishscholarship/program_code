@@ -141,6 +141,30 @@ const nesa = one('NESA Scholarships');
 assert.deepEqual(nesa.clubs, ['Eagle Scout']);
 assert.equal(nesa.plans, null);
 
+const cskt = one('CSKT Higher Education');
+assert.equal(cskt.residencyScope, 'regional');
+assert.equal(cskt.poolLevel, 3);
+assert.deepEqual(cskt.heritage, ['Native American']);
+assert.equal(cskt.renewable, true);
+
+const chaikin = one('Rebuilding the Road Ahead');
+assert.equal(chaikin.residencyScope, 'regional');
+assert.equal(chaikin.poolLevel, 4);
+assert.match(String(chaikin.poolReason), /New York/);
+
+const lineworker = one('Lineman Country');
+assert.equal(lineworker.residencyScope, 'regional');
+assert.equal(lineworker.poolLevel, 3);
+assert.deepEqual(lineworker.plans, ['skilled trades']);
+assert.match(String(lineworker.poolReason), /Southeast Lineman Training Center/);
+
+assert.equal(scopeCounts.get('null'), 19);
+assert.match(report, /## Flag for Kelsey/);
+assert.match(report, /Pages with no rules \(19\)/);
+assert.match(report, /May 10, 2026/);
+assert.match(report, /April 10, 2026/);
+assert.match(report, /January 20, 2026/);
+
 for (const past of bundle.catalog.awards.filter((award) => String(award.poolReason).startsWith('The page only shows an old example'))) {
   assert.equal(past.residencyScope, null, past.name);
   assert.equal(past.poolLevel, null, past.name);
