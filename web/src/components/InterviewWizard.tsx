@@ -11,7 +11,7 @@ import {
   type DifferentiationProfile,
 } from '@/lib/differentiation';
 import { InterviewAnswersSchema, type InterviewAnswers } from '@/lib/interviewMatcher';
-import { ACTIVITY_QUESTIONS, RESIDENCE_STATES, SPECIAL_CRITERIA, SPECIAL_CRITERIA_CATEGORIES, TARGET_SCHOOL_TYPES } from '@/lib/interviewQuestions';
+import { ACTIVITY_QUESTIONS, SPECIAL_CRITERIA, SPECIAL_CRITERIA_CATEGORIES, TARGET_SCHOOL_TYPES } from '@/lib/interviewQuestions';
 import type { StudentAward } from '@/lib/studentCatalog';
 
 const KEPT_UNIQUE_CRITERIA = new Set(['chronic_health', 'black_african_american', 'hispanic_latino']);
@@ -24,6 +24,11 @@ const UNIQUE_SECTIONS: Record<string, { title: string; hint: string }> = {
   'Health & Hardships': { title: 'Long-term health', hint: 'Share only what you want. You can skip this.' },
   'Demographics & Identity': { title: 'More about you', hint: 'Share only what you want. You can skip this.' },
 };
+const FAMILY_MONEY_OPTIONS = [
+  ['yes', 'Yes'],
+  ['no', 'No'],
+  ['not_sure', "I don't know"],
+] as const;
 const ACTIVITY_LABELS: Record<string, string> = {
   leadership: 'I lead a team or club',
   work_experience: 'I have a job',
@@ -52,11 +57,10 @@ function readSeed(initial: InterviewAnswers | null) {
 export default function InterviewWizard({ awards, initialAnswers, onComplete, onCancel }: Props) {
   const seed = useState(() => readSeed(initialAnswers))[0];
   const [gpa, setGpa] = useState(initialAnswers ? String(initialAnswers.gpa) : '');
-  const [residenceState, setResidenceState] = useState(initialAnswers?.residenceState ?? null);
   const [targetSchoolTypes, setTargetSchoolTypes] = useState<InterviewAnswers['targetSchoolTypes']>(initialAnswers?.targetSchoolTypes ?? []);
   const [activities, setActivities] = useState<InterviewAnswers['activities']>((initialAnswers?.activities ?? []).filter((id) => !initialAnswers?.sensitiveCriteriaSkipped || id !== 'caregiving'));
   const [financialNeedInterest, setFinancialNeedInterest] = useState<InterviewAnswers['financialNeedInterest']>(
-    !initialAnswers || initialAnswers.sensitiveCriteriaSkipped || initialAnswers.financialNeedInterest === 'no' || initialAnswers.financialNeedInterest === 'not_sure' || initialAnswers.financialNeedInterest === 'prefer_not_to_answer'
+    !initialAnswers || initialAnswers.sensitiveCriteriaSkipped || initialAnswers.financialNeedInterest === 'prefer_not_to_answer'
       ? null
       : initialAnswers.financialNeedInterest ?? (initialAnswers.financialNeed ? 'yes' : null),
   );
@@ -89,7 +93,7 @@ export default function InterviewWizard({ awards, initialAnswers, onComplete, on
     const derived = legacyFromProfile(profile);
     const selectedCriteria = [...new Set([...derived.selectedCriteria, ...uniqueCriteria])];
     const parsed = InterviewAnswersSchema.safeParse({
-      gpa: Number(gpa), residenceState, educationalStatus: null, targetSchoolTypes, collegeAccepted: null, gapYear: null, activities,
+      gpa: Number(gpa), residenceState: null, educationalStatus: null, targetSchoolTypes, collegeAccepted: null, gapYear: null, activities,
       volunteerHours: null,
       financialNeed: false,
       financialNeedInterest,
@@ -126,15 +130,6 @@ export default function InterviewWizard({ awards, initialAnswers, onComplete, on
           </ChipRow>
         </Section>
 
-        <Section title="Your state" hint="Pick the state where you live. You can skip this.">
-          <label htmlFor="student-residence-state" className="mt-3 block text-sm font-semibold text-slate-700">State
-            <select id="student-residence-state" value={residenceState ?? ''} onChange={(event) => setResidenceState((event.target.value || null) as InterviewAnswers['residenceState'])} className="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base font-normal text-slate-900">
-              <option value="">Leave unanswered</option>
-              {RESIDENCE_STATES.map(([value, label]) => <option key={value} value={value}>{label}</option>)}
-            </select>
-          </label>
-        </Section>
-
         <div>
           <h3 className="text-2xl font-black tracking-tight">What makes you different?</h3>
           <p className="mt-2 text-sm leading-6 text-slate-600">Pick any chips that fit you. You can skip a group. An empty chip does not hide an award.</p>
@@ -151,7 +146,9 @@ export default function InterviewWizard({ awards, initialAnswers, onComplete, on
 
         <Section title="Family money" hint="Some scholarships look at how much money your family has. Do you want to see those?">
           <ChipRow>
-            <LightChip id="financial-need-yes" label="Yes" checked={financialNeedInterest === 'yes'} onChange={() => setFinancialNeedInterest(financialNeedInterest === 'yes' ? null : 'yes')} />
+            {FAMILY_MONEY_OPTIONS.map(([value, label]) => (
+              <LightChip key={value} id={`financial-need-${value === 'not_sure' ? 'not-sure' : value}`} name="financial-need-interest" type="radio" label={label} checked={financialNeedInterest === value} onChange={() => setFinancialNeedInterest(value)} onClear={() => setFinancialNeedInterest(null)} />
+            ))}
           </ChipRow>
         </Section>
 

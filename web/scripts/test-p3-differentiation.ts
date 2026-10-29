@@ -1,7 +1,10 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {
+  AVIATION_GROUP_CLUBS,
+  AVIATION_GROUP_VALUE,
   applyRuralAutoTag,
+  aviationGroupSelected,
   differentiationGroups,
   differentiationHits,
   emptyDifferentiation,
@@ -12,6 +15,7 @@ import {
   type DifferentiationProfile,
 } from '../src/lib/differentiation';
 import { InterviewAnswersSchema } from '../src/lib/interviewMatcher';
+import { selectedRelevanceAnswers } from '../src/lib/interviewRelevance';
 import { serializeAwardDeadlineCalendar } from '../src/lib/studentExport';
 import { decodeStudentLink, encodeStudentLink } from '../src/lib/studentLink';
 import { plainStudentText, poolExplanation, poolIsSmall, RULES_NOT_POSTED, sortStudentAwards } from '../src/lib/studentList';
@@ -162,6 +166,22 @@ assert.deepEqual(groups.map((group) => group.title), [
   'Plans and career path',
   'Health and life situation',
 ]);
+const clubValues = groups.find((group) => group.id === 'clubs')?.chips.map((chip) => chip.value) ?? [];
+for (const retired of AVIATION_GROUP_CLUBS) assert.equal(clubValues.includes(retired), false, retired);
+assert(clubValues.includes(AVIATION_GROUP_VALUE));
+const aviationAwards = catalog.awards.filter((item) => (item.clubs ?? []).some((club) => (AVIATION_GROUP_CLUBS as readonly string[]).includes(club)));
+assert.equal(aviationAwards.length, 90);
+const member = toggleDifferentiation(emptyDifferentiation(), { field: 'clubs', value: AVIATION_GROUP_VALUE, label: 'Aviation group member' });
+assert.deepEqual(member.clubs, [AVIATION_GROUP_VALUE]);
+for (const tag of AVIATION_GROUP_CLUBS) {
+  const sample = aviationAwards.find((item) => item.clubs?.includes(tag));
+  assert(sample, tag);
+  assert(differentiationHits(sample, member).includes('Aviation group member'), tag);
+}
+const oldAopa = { ...emptyDifferentiation(), clubs: ['AOPA'] };
+assert.equal(aviationGroupSelected(oldAopa.clubs), true);
+assert(differentiationHits(aviationAwards.find((item) => item.clubs?.includes('AOPA'))!, oldAopa).includes('Aviation group member'));
+assert.deepEqual(toggleDifferentiation(oldAopa, { field: 'clubs', value: AVIATION_GROUP_VALUE, label: 'Aviation group member' }).clubs, []);
 const sports = groups.find((group) => group.id === 'sports')?.chips.map((chip) => chip.value) ?? [];
 assert.deepEqual(sports, ['golf', 'rodeo', 'soccer', 'student athlete', 'track', 'wrestling']);
 assert.equal(sports.includes('skiing'), false);
@@ -179,6 +199,8 @@ for (const group of groups) {
       assert(catalog.awards.some((item) => item.residencyScope === chip.value));
     } else if (field === 'firstGen') {
       assert(catalog.awards.some((item) => item.firstGen === true));
+    } else if (field === 'clubs' && chip.value === AVIATION_GROUP_VALUE) {
+      assert(catalog.awards.some((item) => (item.clubs ?? []).some((club) => (AVIATION_GROUP_CLUBS as readonly string[]).includes(club))));
     } else {
       assert(catalog.awards.some((item) => (item[field] ?? []).includes(chip.value)), chip.value);
     }
@@ -222,7 +244,20 @@ assert(!/Step \d/.test(wizard));
 assert(!wizard.includes('Continue'));
 assert(wizard.includes('SPECIAL_CRITERIA.filter((item) => item.category === category).map'));
 assert(wizard.includes('Your GPA'));
-assert(wizard.includes('Your state'));
+assert(!wizard.includes('Your state'));
+assert(!wizard.includes('student-residence-state'));
+assert(wizard.includes('residenceState: null'));
+assert(wizard.includes("I don't know"));
+assert(wizard.includes("['no', 'No']"));
+assert(wizard.includes("['yes', 'Yes']"));
+assert(wizard.includes("['not_sure', \"I don't know\"]"));
+const keptState = InterviewAnswersSchema.parse({ gpa: 3.2, targetSchoolTypes: ['four_year'], residenceState: 'MT' });
+assert.equal(keptState.residenceState, 'MT');
+assert.equal(decodeStudentLink(encodeStudentLink({ answers: keptState, hiddenIds: [] }))?.answers?.residenceState, 'MT');
+const needBase = InterviewAnswersSchema.parse({ gpa: 3.2, targetSchoolTypes: ['four_year'] });
+assert.equal(selectedRelevanceAnswers({ ...needBase, financialNeedInterest: 'yes' }).has('financial_need'), true);
+assert.equal(selectedRelevanceAnswers({ ...needBase, financialNeedInterest: 'no' }).has('financial_need'), false);
+assert.equal(selectedRelevanceAnswers({ ...needBase, financialNeedInterest: 'not_sure' }).has('financial_need'), false);
 assert(!wizard.includes('College letter'));
 assert(!wizard.includes('Gap year'));
 assert(!wizard.includes('School right now'));
@@ -235,7 +270,6 @@ assert(wizard.includes('educationalStatus: null'));
 assert(!wizard.includes('student-college-accepted'));
 assert(!wizard.includes('student-gap-year'));
 assert(!wizard.includes('student-educational-status'));
-assert(!wizard.includes('financial-need-no'));
 const taught = toggleDifferentiation(emptyDifferentiation(), { field: 'plans', value: 'teaching', label: 'Teaching' });
 assert.deepEqual(legacyFromProfile(taught).discoveryInterests, ['education_teaching']);
 const adhd = toggleDifferentiation(emptyDifferentiation(), { field: 'health', value: 'ADHD', label: 'ADHD' });

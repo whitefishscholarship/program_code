@@ -102,7 +102,20 @@ const LABELS: Record<string, string> = {
   'hard times': 'Hard times',
   'loss of a parent': 'Lost a parent',
   true: 'First in my family to go to college',
+  'aviation group': 'Aviation group member',
 };
+
+/** One chip stands in for these catalog club tags. */
+export const AVIATION_GROUP_CLUBS = ['AEA', 'AOPA', 'NGPA', 'WAI'] as const;
+export const AVIATION_GROUP_VALUE = 'aviation group';
+
+function isAviationClub(value: string): boolean {
+  return (AVIATION_GROUP_CLUBS as readonly string[]).includes(value);
+}
+
+export function aviationGroupSelected(clubs: readonly string[]): boolean {
+  return clubs.includes(AVIATION_GROUP_VALUE) || clubs.some(isAviationClub);
+}
 
 export function emptyDifferentiation(): DifferentiationProfile {
   return {
@@ -138,6 +151,14 @@ function presentValues(awards: readonly TagSource[], field: ListField): string[]
 
 function chipsFor(field: ListField | 'places' | 'firstGen', values: readonly string[]): DifferentiationChip[] {
   return values.map((value) => ({ field, value, label: chipLabel(value) }));
+}
+
+function clubChips(awards: readonly TagSource[]): DifferentiationChip[] {
+  const chips = chipsFor('clubs', presentValues(awards, 'clubs').filter((value) => !isAviationClub(value)));
+  if (awards.some((award) => (award.clubs ?? []).some(isAviationClub))) {
+    chips.push({ field: 'clubs', value: AVIATION_GROUP_VALUE, label: chipLabel(AVIATION_GROUP_VALUE) });
+  }
+  return chips.sort((left, right) => left.label.localeCompare(right.label) || left.value.localeCompare(right.value));
 }
 
 /** Chip groups use only tag values that already appear on catalog awards. */
@@ -191,7 +212,7 @@ export function differentiationGroups(awards: readonly TagSource[]): Differentia
       id: 'clubs',
       title: 'Clubs and activities',
       hint: 'Pick clubs you belong to.',
-      chips: chipsFor('clubs', presentValues(awards, 'clubs')),
+      chips: clubChips(awards),
     },
     {
       id: 'plans',
@@ -211,6 +232,7 @@ export function differentiationGroups(awards: readonly TagSource[]): Differentia
 export function chipSelected(profile: DifferentiationProfile, chip: DifferentiationChip): boolean {
   if (chip.field === 'firstGen') return profile.firstGen;
   if (chip.field === 'places') return profile.places.includes(chip.value as DifferentiationPlace);
+  if (chip.field === 'clubs' && chip.value === AVIATION_GROUP_VALUE) return aviationGroupSelected(profile.clubs);
   const list = profile[chip.field];
   return Array.isArray(list) && list.includes(chip.value);
 }
@@ -224,6 +246,12 @@ export function toggleDifferentiation(profile: DifferentiationProfile, chip: Dif
       ? profile.places.filter((item) => item !== value)
       : [...profile.places, value];
     return { ...profile, places };
+  }
+  if (chip.field === 'clubs' && chip.value === AVIATION_GROUP_VALUE) {
+    const clubs = aviationGroupSelected(profile.clubs)
+      ? profile.clubs.filter((item) => item !== AVIATION_GROUP_VALUE && !isAviationClub(item))
+      : [...profile.clubs, AVIATION_GROUP_VALUE];
+    return { ...profile, clubs };
   }
   const list = profile[chip.field];
   if (!Array.isArray(list)) return profile;
@@ -265,7 +293,9 @@ export function differentiationHits(award: HitAward, profile: DifferentiationPro
     const selected = profile[field];
     const values = award[field];
     if (!values) continue;
+    if (field === 'clubs' && aviationGroupSelected(profile.clubs) && values.some(isAviationClub)) add(chipLabel(AVIATION_GROUP_VALUE));
     for (const value of values) {
+      if (field === 'clubs' && isAviationClub(value)) continue;
       if (selected.includes(value)) add(chipLabel(value));
     }
   }
