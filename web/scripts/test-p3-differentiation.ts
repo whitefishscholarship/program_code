@@ -5,13 +5,16 @@ import {
   differentiationGroups,
   differentiationHits,
   emptyDifferentiation,
+  legacyFromProfile,
   ruralRuleMatches,
+  toggleDifferentiation,
+  withLegacySelections,
   type DifferentiationProfile,
 } from '../src/lib/differentiation';
 import { InterviewAnswersSchema } from '../src/lib/interviewMatcher';
 import { serializeAwardDeadlineCalendar } from '../src/lib/studentExport';
 import { decodeStudentLink, encodeStudentLink } from '../src/lib/studentLink';
-import { poolExplanation, RULES_NOT_POSTED, sortStudentAwards } from '../src/lib/studentList';
+import { plainStudentText, poolExplanation, poolIsSmall, RULES_NOT_POSTED, sortStudentAwards } from '../src/lib/studentList';
 import { StudentAwardSchema, StudentCatalogSchema, type StudentAward } from '../src/lib/studentCatalog';
 
 const now = new Date(2026, 9, 28);
@@ -73,7 +76,17 @@ const national = award({
   residencyScope: 'national',
   poolLevel: 6,
   competitionScore: 90,
-  poolReason: 'Open to students across the United States.',
+  poolReason: 'Large pool: open nationwide.',
+  ruralRule: 'none',
+});
+const nicheNational = award({
+  publicId: 'award-aaaaaaaaaaa9',
+  name: 'Niche National',
+  residencyScope: 'national',
+  poolLevel: 5,
+  competitionScore: 70,
+  poolReason: 'Students across the United States who are Native American can apply.',
+  heritage: ['Native American'],
   ruralRule: 'none',
 });
 const unposted = award({
@@ -95,12 +108,28 @@ const levelMissing = award({
   ruralRule: 'none',
 });
 
-const byPool = sortStudentAwards([national, unposted, state, local, levelMissing, county, tight], 'pool', now).map((item) => item.name);
-assert.deepEqual(byPool, ['Tight Local', 'Local', 'County', 'State', 'National', 'Level Missing', 'Unposted']);
+const byPool = sortStudentAwards([national, unposted, state, local, levelMissing, county, tight, nicheNational], 'pool', now).map((item) => item.name);
+assert.deepEqual(byPool, ['Tight Local', 'Local', 'County', 'State', 'Niche National', 'National', 'Level Missing', 'Unposted']);
 assert.equal(poolExplanation(unposted), RULES_NOT_POSTED);
 assert.equal(poolExplanation(levelMissing), RULES_NOT_POSTED);
 assert.equal(poolExplanation(tight), 'Only Whitefish High School students can apply.');
+assert.equal(poolExplanation(nicheNational), 'Students across the United States who are Native American can apply.');
+assert.equal(poolIsSmall(nicheNational), true);
+assert.equal(poolIsSmall(national), false);
+assert.equal(poolExplanation(national), 'Large pool: open nationwide.');
 assert.equal(RULES_NOT_POSTED, 'Rules not posted yet');
+const wide = catalog.awards.filter((item) => item.residencyScope === 'national' && !poolIsSmall(item));
+assert.equal(wide.length, 67);
+for (const item of wide) {
+  assert.equal(item.poolLevel, 6, item.name);
+  assert.ok((item.competitionScore ?? 0) >= 86 && (item.competitionScore ?? 0) <= 94, item.name);
+  assert.equal(poolExplanation(item).startsWith('Large pool:'), true, item.name);
+}
+assert.equal(catalog.awards.filter((item) => item.poolReason === 'Large pool: open nationwide.').length, 66);
+assert.equal(catalog.awards.filter((item) => item.poolReason === 'Large pool: open in the United States and Canada.').length, 1);
+assert.equal(catalog.awards.filter((item) => (item.summary ?? '').includes('Checked on the sponsor page')).length, 0);
+assert.equal(plainStudentText('The application is open. Checked on the sponsor page on October 29, 2026.'), 'The application is open.');
+assert.equal(catalog.awards.filter((item) => item.residencyScope === 'regional' && item.poolLevel === 4 && !poolIsSmall(item)).length, 2);
 
 const whitefish: DifferentiationProfile = { ...emptyDifferentiation(), places: ['whitefish'] };
 const flathead: DifferentiationProfile = { ...emptyDifferentiation(), places: ['flathead'] };
@@ -187,7 +216,25 @@ const wizard = fs.readFileSync('src/components/InterviewWizard.tsx', 'utf8');
 const list = fs.readFileSync('src/components/StudentMatchList.tsx', 'utf8');
 const step = fs.readFileSync('src/components/steps/DifferentiationStep.tsx', 'utf8');
 assert(wizard.includes('What makes you different?'));
+assert(wizard.includes('Show my results'));
+assert(!wizard.includes('Application formats'));
+assert(!/Step \d/.test(wizard));
+assert(!wizard.includes('Continue'));
 assert(wizard.includes('SPECIAL_CRITERIA.filter((item) => item.category === category).map'));
+const taught = toggleDifferentiation(emptyDifferentiation(), { field: 'plans', value: 'teaching', label: 'Teaching' });
+assert.deepEqual(legacyFromProfile(taught).discoveryInterests, ['education_teaching']);
+const adhd = toggleDifferentiation(emptyDifferentiation(), { field: 'health', value: 'ADHD', label: 'ADHD' });
+assert.deepEqual(legacyFromProfile(adhd).selectedCriteria, ['adhd']);
+const club = toggleDifferentiation(emptyDifferentiation(), { field: 'clubs', value: 'NTHS', label: 'NTHS' });
+assert.deepEqual(legacyFromProfile(club).studentOrganizations, ['nths']);
+const athlete = toggleDifferentiation(emptyDifferentiation(), { field: 'sports', value: 'student athlete', label: 'Student athlete' });
+assert.deepEqual(legacyFromProfile(athlete).selectedCriteria, ['athletics_sports']);
+const golf = toggleDifferentiation(emptyDifferentiation(), { field: 'sports', value: 'golf', label: 'Golf' });
+assert.deepEqual(legacyFromProfile(golf).selectedCriteria, []);
+const restored = withLegacySelections(emptyDifferentiation(), { criteria: ['stem', 'chronic_health'], discovery: ['education_teaching'], organizations: ['ffa'] });
+assert.deepEqual(restored.plans, ['STEM', 'teaching']);
+assert.deepEqual(restored.clubs, ['FFA']);
+assert.deepEqual(legacyFromProfile(restored).selectedCriteria, ['stem']);
 assert(list.includes('Why this pool is small'));
 assert(list.includes('Add this deadline to my calendar'));
 assert(list.includes('Add deadlines to my calendar'));

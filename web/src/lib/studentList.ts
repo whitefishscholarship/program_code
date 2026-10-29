@@ -29,7 +29,7 @@ const OPEN_DATE = new RegExp(`\\b(${MONTH_ALT})\\b(?:\\.?\\s+(\\d{1,2})(?:st|nd|
 const URL_IN_TEXT = /https?:\/\/[^\s<>"')\]]+/i;
 
 export function plainStudentText(value: string): string {
-  return value.replaceAll('\u2014', ', ').replaceAll('\u2013', '-');
+  return value.replaceAll('\u2014', ', ').replaceAll('\u2013', '-').replace(/ ?Checked on the sponsor page on [A-Za-z]+ \d{1,2}, \d{4}\.?/g, '');
 }
 
 /**
@@ -154,13 +154,50 @@ export function amountSortValue(award: StudentAward): number | null {
   return value === null ? null : value;
 }
 
+const NARROW_FIELDS = ['sports', 'clubs', 'heritage', 'faith', 'familyTies', 'plans', 'health', 'lifeSituation', 'gender'] as const;
+
+type PoolAward = Pick<StudentAward, 'residencyScope' | 'poolLevel' | 'poolReason' | 'ruralRule' | 'firstGen' | 'needBased' | (typeof NARROW_FIELDS)[number]>;
+
 export function poolRulesMissing(award: Pick<StudentAward, 'residencyScope' | 'poolLevel'>): boolean {
   return award.residencyScope == null || award.poolLevel == null;
 }
 
+/** A heritage, union, health, club, or other specific trait makes the pool smaller. */
+export function hasNarrowingTrait(award: PoolAward): boolean {
+  for (const field of NARROW_FIELDS) {
+    const values = award[field];
+    if (values && values.length > 0) return true;
+  }
+  if (award.firstGen === true) return true;
+  if (award.needBased === true) return true;
+  return award.ruralRule != null && award.ruralRule !== 'none';
+}
+
+/**
+ * Whitefish, Flathead, Montana, and a small local area are small pools.
+ * A national award with no narrowing trait is a large pool.
+ */
+export function poolIsSmall(award: PoolAward): boolean {
+  if (poolRulesMissing(award)) return false;
+  if (hasNarrowingTrait(award)) return true;
+  if (award.residencyScope === 'whitefish' || award.residencyScope === 'flathead' || award.residencyScope === 'montana') return true;
+  return award.residencyScope === 'regional' && (award.poolLevel ?? 9) <= 3;
+}
+
+function largePoolLine(award: Pick<StudentAward, 'poolReason'>): string {
+  const reason = award.poolReason?.trim() ?? '';
+  if (reason.startsWith('Large pool:')) return plainStudentText(reason);
+  if (/Canada/.test(reason)) return 'Large pool: open in the United States and Canada.';
+  if (/\bTexas\b/.test(reason)) return 'Large pool: open across Texas.';
+  if (/New York/.test(reason)) return 'Large pool: open across New York.';
+  if (/nearby states/.test(reason)) return 'Large pool: open in Montana and nearby states.';
+  return 'Large pool: open nationwide.';
+}
+
 /** Shown on the card. A missing place does not use the stored reason. */
-export function poolExplanation(award: Pick<StudentAward, 'residencyScope' | 'poolLevel' | 'poolReason'>): string {
+export function poolExplanation(award: PoolAward): string {
   if (poolRulesMissing(award)) return RULES_NOT_POSTED;
+  if (!poolIsSmall(award)) return largePoolLine(award);
   const reason = award.poolReason?.trim();
   return reason ? plainStudentText(reason) : RULES_NOT_POSTED;
 }
@@ -171,11 +208,14 @@ export function sortStudentAwards(awards: readonly StudentAward[], sort: Student
       const leftMissing = poolRulesMissing(left);
       const rightMissing = poolRulesMissing(right);
       if (leftMissing !== rightMissing) return leftMissing ? 1 : -1;
+      // Level 1 is the smallest pool. Level 6, national and open, is the largest and sorts last among awards with a posted place.
       const leftLevel = left.poolLevel ?? 99;
       const rightLevel = right.poolLevel ?? 99;
       const leftScore = left.competitionScore ?? 101;
       const rightScore = right.competitionScore ?? 101;
-      return leftLevel - rightLevel || leftScore - rightScore || left.name.localeCompare(right.name) || left.publicId.localeCompare(right.publicId);
+      const leftDated = deadlineSortTime(left, now) === null ? 1 : 0;
+      const rightDated = deadlineSortTime(right, now) === null ? 1 : 0;
+      return leftLevel - rightLevel || leftScore - rightScore || leftDated - rightDated || left.name.localeCompare(right.name) || left.publicId.localeCompare(right.publicId);
     }
     if (sort === 'name') return left.name.localeCompare(right.name) || left.publicId.localeCompare(right.publicId);
     if (sort === 'amount') {

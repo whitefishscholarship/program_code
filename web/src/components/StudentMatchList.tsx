@@ -20,6 +20,7 @@ import {
   officialUrl,
   plainStudentText,
   poolExplanation,
+  poolIsSmall,
   poolRulesMissing,
   RULES_NOT_POSTED,
   sortStudentAwards,
@@ -113,7 +114,7 @@ export default function StudentMatchList({
   const filtered = useMemo(() => {
     const query = search.trim().toLocaleLowerCase();
     return awards.filter((award) => {
-      const haystack = [award.name, award.summary, award.amount.label, award.eligibility.audience, award.application.label, deadlineLabel(award)]
+      const haystack = [award.name, award.summary ? plainStudentText(award.summary) : '', award.amount.label, award.eligibility.audience, award.application.label, deadlineLabel(award)]
         .filter(Boolean).join(' ').toLocaleLowerCase();
       const matchesSearch = !query || haystack.includes(query);
       const matchesMethod = method === 'all' || award.application.mode === method;
@@ -333,8 +334,10 @@ function AwardRow({ award, now, result, profile, onHide, onAddDeadline }: { awar
           <p className="mt-1 line-clamp-2 break-words text-sm leading-6 text-slate-600">{award.summary ? plainStudentText(award.summary) : plainStudentText(award.eligibility.audience)}</p>
           {rulesMissing ? (
             <p className="mt-2 text-sm font-semibold text-slate-700">{RULES_NOT_POSTED}</p>
-          ) : (
+          ) : poolIsSmall(award) ? (
             <p className="mt-2 text-sm leading-6 text-slate-700"><span className="font-bold text-slate-950">Why this pool is small: </span>{poolExplanation(award)}</p>
+          ) : (
+            <p className="mt-2 text-sm leading-6 text-slate-700">{poolExplanation(award)}</p>
           )}
           {fits.length > 0 && <p className="mt-1 text-sm font-semibold text-teal-900">Fits you: {fits.join(', ')}</p>}
           <details className="mt-2 text-sm">

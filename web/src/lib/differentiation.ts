@@ -272,3 +272,87 @@ export function differentiationHits(award: HitAward, profile: DifferentiationPro
   if (profile.firstGen && award.firstGen === true) add(chipLabel('true'));
   return hits;
 }
+
+type LegacyChip = { field: keyof DifferentiationProfile; value: string };
+
+/** Old step 4 and 5 questions that ask the same thing as a catalog chip. */
+const LEGACY_CHIPS: readonly { kind: 'criterion' | 'discovery' | 'organization'; id: string; chip: LegacyChip }[] = [
+  { kind: 'criterion', id: 'aviation_pilot', chip: { field: 'plans', value: 'pilot training' } },
+  { kind: 'criterion', id: 'aviation_maintenance', chip: { field: 'plans', value: 'aviation maintenance' } },
+  { kind: 'criterion', id: 'aviation_management', chip: { field: 'plans', value: 'aviation management' } },
+  { kind: 'criterion', id: 'stem', chip: { field: 'plans', value: 'STEM' } },
+  { kind: 'criterion', id: 'healthcare', chip: { field: 'plans', value: 'healthcare' } },
+  { kind: 'criterion', id: 'trades', chip: { field: 'plans', value: 'skilled trades' } },
+  { kind: 'criterion', id: 'business_finance', chip: { field: 'plans', value: 'business' } },
+  { kind: 'criterion', id: 'public_service', chip: { field: 'plans', value: 'public service' } },
+  { kind: 'criterion', id: 'law', chip: { field: 'plans', value: 'law' } },
+  { kind: 'criterion', id: 'arts_humanities', chip: { field: 'plans', value: 'arts' } },
+  { kind: 'criterion', id: 'agriculture_conservation', chip: { field: 'plans', value: 'agriculture' } },
+  { kind: 'discovery', id: 'education_teaching', chip: { field: 'plans', value: 'teaching' } },
+  { kind: 'criterion', id: 'athletics_sports', chip: { field: 'sports', value: 'student athlete' } },
+  { kind: 'criterion', id: 'dyslexia', chip: { field: 'health', value: 'dyslexia' } },
+  { kind: 'criterion', id: 'adhd', chip: { field: 'health', value: 'ADHD' } },
+  { kind: 'criterion', id: 'autism', chip: { field: 'health', value: 'autism' } },
+  { kind: 'criterion', id: 'learning_other', chip: { field: 'health', value: 'learning disability' } },
+  { kind: 'criterion', id: 'mental_health', chip: { field: 'health', value: 'mental health' } },
+  { kind: 'criterion', id: 'foster_care', chip: { field: 'lifeSituation', value: 'foster care' } },
+  { kind: 'criterion', id: 'loss_of_parent', chip: { field: 'lifeSituation', value: 'loss of a parent' } },
+  { kind: 'criterion', id: 'overcoming_adversity', chip: { field: 'lifeSituation', value: 'hard times' } },
+  { kind: 'criterion', id: 'lgbtqia', chip: { field: 'lifeSituation', value: 'LGBTQ+' } },
+  { kind: 'criterion', id: 'first_generation', chip: { field: 'firstGen', value: 'true' } },
+  { kind: 'criterion', id: 'native_american', chip: { field: 'heritage', value: 'Native American' } },
+  { kind: 'criterion', id: 'asian_pacific_islander', chip: { field: 'heritage', value: 'Asian or Pacific Islander' } },
+  { kind: 'criterion', id: 'female', chip: { field: 'gender', value: 'woman' } },
+  { kind: 'criterion', id: 'nonbinary', chip: { field: 'gender', value: 'nonbinary' } },
+  { kind: 'criterion', id: 'military_veteran', chip: { field: 'familyTies', value: 'military' } },
+  { kind: 'criterion', id: 'first_responder', chip: { field: 'familyTies', value: 'first responder' } },
+  { kind: 'criterion', id: 'electric_coop', chip: { field: 'familyTies', value: 'electric co-op' } },
+  { kind: 'criterion', id: 'credit_union', chip: { field: 'familyTies', value: 'credit union' } },
+  { kind: 'criterion', id: 'elks_lodge', chip: { field: 'familyTies', value: 'fraternal' } },
+  { kind: 'criterion', id: 'company_employee', chip: { field: 'familyTies', value: 'employer' } },
+  { kind: 'organization', id: 'nths', chip: { field: 'clubs', value: 'NTHS' } },
+  { kind: 'organization', id: 'ffa', chip: { field: 'clubs', value: 'FFA' } },
+  { kind: 'organization', id: 'bpa', chip: { field: 'clubs', value: 'BPA' } },
+  { kind: 'organization', id: 'deca', chip: { field: 'clubs', value: 'DECA' } },
+  { kind: 'organization', id: 'fbla', chip: { field: 'clubs', value: 'FBLA' } },
+  { kind: 'organization', id: 'fccla', chip: { field: 'clubs', value: 'FCCLA' } },
+  { kind: 'organization', id: 'hosa', chip: { field: 'clubs', value: 'HOSA' } },
+  { kind: 'organization', id: 'skillsusa', chip: { field: 'clubs', value: 'SkillsUSA' } },
+  { kind: 'organization', id: 'tsa', chip: { field: 'clubs', value: 'TSA' } },
+];
+
+function bindingSelected(profile: DifferentiationProfile, chip: LegacyChip): boolean {
+  return chipSelected(profile, { ...chip, label: chip.value });
+}
+
+/** Turn older saved answers into the chips that replaced those questions. */
+export function withLegacySelections(
+  profile: DifferentiationProfile,
+  selections: { criteria?: readonly string[]; discovery?: readonly string[]; organizations?: readonly string[] },
+): DifferentiationProfile {
+  const wanted = new Set([...(selections.criteria ?? []), ...(selections.discovery ?? []), ...(selections.organizations ?? [])]);
+  let next = profile;
+  for (const binding of LEGACY_CHIPS) {
+    if (!wanted.has(binding.id) || bindingSelected(next, binding.chip)) continue;
+    next = toggleDifferentiation(next, { ...binding.chip, label: binding.chip.value });
+  }
+  return next;
+}
+
+/** Chip answers still fill the older match fields those questions used. */
+export function legacyFromProfile(profile: DifferentiationProfile): {
+  selectedCriteria: string[];
+  discoveryInterests: string[];
+  studentOrganizations: string[];
+} {
+  const selectedCriteria: string[] = [];
+  const discoveryInterests: string[] = [];
+  const studentOrganizations: string[] = [];
+  for (const binding of LEGACY_CHIPS) {
+    if (!bindingSelected(profile, binding.chip)) continue;
+    if (binding.kind === 'criterion') selectedCriteria.push(binding.id);
+    else if (binding.kind === 'discovery') discoveryInterests.push(binding.id);
+    else studentOrganizations.push(binding.id);
+  }
+  return { selectedCriteria, discoveryInterests, studentOrganizations };
+}

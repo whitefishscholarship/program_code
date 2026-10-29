@@ -45,7 +45,8 @@ const prefBase=shortlistAwards([preferredAward,plainAward],base,prefRows);
 const prefChoice=shortlistAwards([preferredAward,plainAward],{...base,preferredApplicationModes:['offline']},prefRows);
 assert.deepEqual(prefChoice.counts,prefBase.counts,'preferences never exclude');
 assert.equal(prefBase.results[0].award.publicId,plainAward.publicId);
-assert.equal(prefChoice.results[0].award.publicId,preferredAward.publicId);
+assert.equal(prefChoice.results[0].award.publicId,plainAward.publicId,'application format answers no longer change order');
+assert(!prefChoice.results.some((result) => result.reasons.some((reason) => reason.code === 'recorded_application_preference')));
 assert.deepEqual(shortlistAwards([...catalog.awards].reverse(),base),results[0],'input order cannot change result ordering');
 
 for (const n of [6,30,98,158]) assert.equal(SHORTLIST_PUBLICATION.rows.find(r=>r.sourceRow===n)?.minimumGpa,null);

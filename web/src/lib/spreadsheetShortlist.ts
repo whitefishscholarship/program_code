@@ -50,16 +50,14 @@ export function shortlistAwards(awards: readonly StudentAward[], rawAnswers: Int
       const labels = { two_year: 'two-year', four_year: 'four-year', trade_vocational: 'trade/vocational' };
       reasons.push({ code: 'recorded_school', kind: 'verification_needed', message: `Reviewed spreadsheet row ${row.sourceRow} lists ${row.schoolTypes.map(type => labels[type]).join(' or ')} study. ${overlaps ? 'At least one selected school type fits.' : outside ? 'Your selected school types differ from this record.' : 'Your undecided plans keep this award in consideration.'}` });
     }
-    const preferred = Boolean(row?.applicationPreference && answers.preferredApplicationModes.includes(row.applicationPreference));
-    if (preferred) reasons.push({ code: 'recorded_application_preference', kind: 'preference', message: 'The reviewed application route fits one of your preferences. This affects order only.' });
     reasons.push({ code: 'unverified_requirements', kind: 'verification_needed', message: row ? 'Other eligibility requirements and current availability still need checking. Missing information does not count against you.' : 'This award has no separate row in the saved spreadsheet. No parent requirements have been assumed; it remains available to check.' });
     const relevanceReasons = relevance.get(award.publicId) ?? [];
     reasons.unshift(...relevanceReasons);
     const decision: ShortlistDecision = mismatch ? 'recorded_mismatch' : fits ? 'recorded_fit' : 'needs_checking';
-    return { award, decision, reasons, preferred, relevant: relevanceReasons.length > 0 };
+    return { award, decision, reasons, relevant: relevanceReasons.length > 0 };
   }).sort((a,b) => {
     const tier = { recorded_fit: 0, needs_checking: 1, recorded_mismatch: 2 };
-    return Number(a.decision === 'recorded_mismatch') - Number(b.decision === 'recorded_mismatch') || Number(b.relevant) - Number(a.relevant) || tier[a.decision] - tier[b.decision] || Number(b.preferred) - Number(a.preferred) || a.award.name.localeCompare(b.award.name) || a.award.publicId.localeCompare(b.award.publicId);
-  }).map(({ preferred: _preferred, ...result }) => result);
+    return Number(a.decision === 'recorded_mismatch') - Number(b.decision === 'recorded_mismatch') || Number(b.relevant) - Number(a.relevant) || tier[a.decision] - tier[b.decision] || a.award.name.localeCompare(b.award.name) || a.award.publicId.localeCompare(b.award.publicId);
+  });
   return { results, counts: { match: results.filter(r => r.decision === 'recorded_fit').length, possibleMatch: results.filter(r => r.decision === 'needs_checking').length, knownConflict: results.filter(r => r.decision === 'recorded_mismatch').length, total: results.length } };
 }

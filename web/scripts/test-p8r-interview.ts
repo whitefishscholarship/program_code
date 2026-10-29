@@ -217,9 +217,10 @@ const preferred = matchStudentAwards([directAward, offlineAward], {
   ...syntheticAnswers,
   preferredApplicationModes: ['direct_per_award'],
 }, rankedFacts);
-assert.equal(preferred.results[0].award.publicId, directAward.publicId, 'accepted rank-only application preference must sort first');
+assert.equal(preferred.results[0].award.publicId, offlineAward.publicId, 'application format answers no longer change order');
 assert.equal(preferred.results[0].decision, 'possible_match', 'preference must not change eligibility decision');
-assert(preferred.results[0].reasons.some((reason) => reason.code === 'preferred_rule_application.mode' && reason.kind === 'preference'));
+assert(!preferred.results.some((result) => result.reasons.some((reason) => reason.code === 'preferred_rule_application.mode')));
+assert.deepEqual(preferred.results.map((result) => result.award.publicId), noPreference.results.map((result) => result.award.publicId));
 
 const immutableInput = [knownAward, unknownAward, closedAward, unavailableAward, directAward, offlineAward];
 const immutableFacts = factsMap(

@@ -1,4 +1,5 @@
 import type { StudentCatalog } from './studentCatalog';
+import { plainStudentText } from './studentList';
 
 // Legacy column names, derived from the same selected public awards as the browser.
 export function catalogCompatibilityRows(catalog: StudentCatalog) {
@@ -10,7 +11,7 @@ export function catalogCompatibilityRows(catalog: StudentCatalog) {
     Amount: award.amount.label,
     'Scholarship Location/Information': award.sourcePublicIds.map(id => sources.get(id)?.url).filter(Boolean).join('; '),
     'Name of Scholarship': award.name, 'Application Link/Method': award.application.url ?? award.application.label,
-    Summary: award.summary ?? '', 'Stated Min. GPA': award.eligibility.minimumGpa === null ? '' : String(award.eligibility.minimumGpa),
+    Summary: award.summary ? plainStudentText(award.summary) : '', 'Stated Min. GPA': award.eligibility.minimumGpa === null ? '' : String(award.eligibility.minimumGpa),
     'School Type (2-or 4-Year, or Trade)': award.eligibility.schoolTypes.join('; '),
     'Renewing/ Non-Renewing': '', Focus: award.eligibility.focus ?? '',
     'Acute Financial Need Prioritization': '', 'Accepts Gap Year Applications Upon Return': '',

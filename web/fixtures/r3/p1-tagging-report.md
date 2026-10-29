@@ -72,7 +72,7 @@ Awards tagged: 456.
 
 ### poolReason
 
-- Open to students across the United States.: 66
+- Large pool: open nationwide.: 66
 - Montana students can apply.: 26
 - The page does not say the place.: 21
 - Only Whitefish High School students can apply.: 17
@@ -163,7 +163,7 @@ Awards tagged: 456.
 - Only Whitefish High School students who are planning to teach can apply.: 1
 - Only Whitefish High School students who have faced a hard time can apply.: 1
 - Only Whitefish High School students who need help paying for college can apply.: 1
-- Open to students in the United States and Canada.: 1
+- Large pool: open in the United States and Canada.: 1
 - Students across the United States who are AEA members and are training to fix airplanes can apply.: 1
 - Students across the United States who are AEA members, are training to fix airplanes, are studying business, and have a military family tie can apply.: 1
 - Students across the United States who are Asian or Pacific Islander and have a mental health need can apply.: 1

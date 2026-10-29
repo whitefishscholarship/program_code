@@ -592,8 +592,8 @@ function poolReason(place: Place | null, level: PoolLevel | null, bags: Bags, bl
   }
   if (limits.length === 0) {
     if (level === 6) return place.phrase === 'Students in the United States and Canada'
-      ? 'Open to students in the United States and Canada.'
-      : 'Open to students across the United States.';
+      ? 'Large pool: open in the United States and Canada.'
+      : 'Large pool: open nationwide.';
     return `${place.phrase} can apply.`;
   }
   return clip(`${place.phrase} who ${joinAnd(limits)} can apply.`);

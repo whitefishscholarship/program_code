@@ -185,7 +185,7 @@ export default function ScholarshipBrowser() {
         <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-10 lg:p-12">
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-800">Scholarship interview</p>
           <h2 ref={experienceHeadingRef} tabIndex={-1} id="interview-start-heading" className="mt-3 max-w-3xl text-4xl font-black tracking-tight outline-none sm:text-5xl">Find scholarships that fit your education plans.</h2>
-          <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">Follow five short steps to explore scholarships for your education plans.</p>
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">Answer one page of questions to explore scholarships for your education plans.</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <button type="button" onClick={() => { setAnswers(null); setExperience('interview'); }} className="rounded-xl bg-teal-800 px-6 py-4 text-lg font-bold text-white shadow-sm hover:bg-teal-900 focus:outline-none focus:ring-4 focus:ring-teal-300">Start the interview</button>
             <button type="button" onClick={showBrowseAll} className="rounded-xl border-2 border-teal-800 bg-white px-6 py-4 text-lg font-bold text-teal-900 hover:bg-teal-50 focus:outline-none focus:ring-4 focus:ring-teal-200">Browse all {catalog.counts.awards} awards</button>
