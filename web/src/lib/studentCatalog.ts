@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { optionalAwardTagShape } from './awardTagSchema';
 import { calendarDayIsBefore, explicitCalendarDay } from './dateParse';
 
 export const STUDENT_CATALOG_SCHEMA_VERSION = '1.0.0' as const;
@@ -108,6 +109,7 @@ export const StudentAwardSchema = z.object({
   sourcePublicIds: z.array(publicId).min(1),
   verification: AwardVerificationSchema.optional(),
   verificationNote: z.string().min(1).optional(),
+  ...optionalAwardTagShape,
 }).strict();
 
 export const StudentSourceSchema = z.object({
