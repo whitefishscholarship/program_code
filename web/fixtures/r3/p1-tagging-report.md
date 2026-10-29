@@ -8,49 +8,49 @@ If a page states no state or location limit, the place is national and the note 
 
 Pool level 1 is Whitefish only. Level 2 is Flathead County. Level 3 is a smaller area than one whole state. Level 4 is one whole state. Level 5 is bigger than one state, or open to the whole country but only for a specific group. Level 6 is open across the United States. A lower competition score means a smaller pool. Scores stay inside the band for that level, so local awards stay ahead of national ones.
 
-Awards tagged: 390.
+Awards tagged: 415.
 
 ## Counts
 
 ### residencyScope
 
-- national: 252
-- null: 51
-- montana: 35
+- national: 262
+- null: 56
+- montana: 40
 - whitefish: 22
-- flathead: 15
-- regional: 15
+- flathead: 18
+- regional: 17
 
 ### poolLevel
 
-- 5: 212
-- null: 51
-- 6: 42
-- 4: 37
+- 5: 219
+- null: 56
+- 6: 46
+- 4: 42
 - 1: 22
-- 2: 15
-- 3: 11
+- 2: 18
+- 3: 12
 
 ### competitionScore
 
-- 73: 101
-- 70: 70
-- null: 51
-- 94: 33
+- 73: 106
+- 70: 72
+- null: 56
+- 94: 37
 - 67: 27
-- 55: 16
+- 55: 18
+- 58: 16
 - 16: 14
-- 58: 13
 - 72: 8
 - 93: 7
 - 27: 6
+- 30: 6
 - 13: 4
-- 30: 4
 - 41: 4
+- 24: 3
 - 44: 3
 - 57: 3
 - 15: 2
-- 24: 2
 - 26: 2
 - 38: 2
 - 52: 2
@@ -59,6 +59,7 @@ Awards tagged: 390.
 - 10: 1
 - 14: 1
 - 29: 1
+- 40: 1
 - 42: 1
 - 43: 1
 - 56: 1
@@ -71,25 +72,25 @@ Awards tagged: 390.
 
 ### poolReason
 
-- Open to students across the United States.: 42
+- Open to students across the United States.: 45
 - The page does not say who can apply.: 22
+- Montana students can apply.: 19
 - Only Whitefish High School students can apply.: 17
-- Montana students can apply.: 16
+- The page does not say the place.: 17
 - Students across the United States who are training to fix airplanes can apply.: 16
 - Students in the United States and Canada who are AOPA members can apply.: 16
 - Students across the United States who are WAI members, are training to be pilots, and are women can apply.: 15
 - Students across the United States who are WAI members and are training to be pilots can apply.: 13
-- The page does not say the place.: 12
 - Students across the United States who are training to be pilots can apply.: 10
 - Students across the United States who are NGPA members and are training to be pilots can apply.: 9
 - Students across the United States who are FFA members can apply.: 7
-- Only Flathead County students can apply.: 5
+- Only Flathead County students can apply.: 6
 - Students across the United States who are in the skilled trades can apply.: 5
 - Students across the United States who are WAI members and are training to fix airplanes can apply.: 5
 - Students across the United States who have a military family tie can apply.: 5
+- Students across the United States who need help paying for college can apply.: 5
 - Students across the United States who are studying business can apply.: 4
 - Students across the United States who are WAI members, are training to fix airplanes, and are women can apply.: 4
-- Students across the United States who need help paying for college can apply.: 4
 - Montana students who are in the skilled trades can apply.: 3
 - Montana students who have a first responder in the family can apply.: 3
 - Students across the United States who are WAI members and are studying STEM can apply.: 3
@@ -104,6 +105,7 @@ Awards tagged: 390.
 - Students across the United States who are NGPA members and are training to fix airplanes can apply.: 2
 - Students across the United States who are NTHS members and are in the skilled trades can apply.: 2
 - Students across the United States who are NTHS members can apply.: 2
+- Students across the United States who are studying STEM can apply.: 2
 - Students across the United States who are studying STEM, are training to be pilots, and have a military family tie can apply.: 2
 - Students across the United States who are studying transportation and are women can apply.: 2
 - Students across the United States who are training to be pilots and are training to fix airplanes can apply.: 2
@@ -125,6 +127,9 @@ Awards tagged: 390.
 - Montana students who have a family tie to a lodge and are women can apply.: 1
 - Montana students who have a military family tie can apply.: 1
 - Montana students who have been in foster care can apply.: 1
+- Montana students who play a sport can apply.: 1
+- Montana students who play wrestling can apply.: 1
+- Only Flathead County students who are in the skilled trades and are connected to a Christian church can apply.: 1
 - Only Flathead County students who are planning to teach can apply.: 1
 - Only Flathead County students who are studying agriculture or nature can apply.: 1
 - Only Flathead County students who are studying art or music can apply.: 1
@@ -137,6 +142,8 @@ Awards tagged: 390.
 - Only students at Colorado State University in Fort Collins who would be the first in their family to go to college can apply.: 1
 - Only students from a few Montana counties can apply.: 1
 - Only students from a few Montana counties who are in the skilled trades and are women can apply.: 1
+- Only students from a few Montana counties who are in the skilled trades can apply.: 1
+- Only students from Flathead County high schools can apply.: 1
 - Only students from Flathead County high schools who are studying healthcare can apply.: 1
 - Only students in Bozeman who are women and need help paying for college can apply.: 1
 - Only students in the Flathead Electric service area who live in the sponsor service area can apply.: 1
@@ -147,12 +154,15 @@ Awards tagged: 390.
 - Only Whitefish High School students who are planning to teach can apply.: 1
 - Only Whitefish High School students who have faced a hard time can apply.: 1
 - Only Whitefish High School students who need help paying for college can apply.: 1
+- Open to students in the United States and Canada.: 1
 - Students across the United States who are AEA members and are training to fix airplanes can apply.: 1
 - Students across the United States who are AEA members, are training to fix airplanes, are studying business, and have a military family tie can apply.: 1
+- Students across the United States who are connected to a Catholic church can apply.: 1
 - Students across the United States who are connected to a Presbyterian church and need help paying for college can apply.: 1
 - Students across the United States who are FFA members and are in the skilled trades can apply.: 1
 - Students across the United States who are FFA members, are NTHS members, and are studying agriculture or nature can apply.: 1
 - Students across the United States who are in the skilled trades and are in a two-year program can apply.: 1
+- Students across the United States who are in the skilled trades and need help paying for college can apply.: 1
 - Students across the United States who are in the skilled trades, are studying business, and have a mental health need can apply.: 1
 - Students across the United States who are in the skilled trades, have a lineman in the family, and need help paying for college can apply.: 1
 - Students across the United States who are LPA members and are studying aviation management can apply.: 1
@@ -172,6 +182,7 @@ Awards tagged: 390.
 - Students across the United States who are NTHS members, are in the skilled trades, and are studying transportation can apply.: 1
 - Students across the United States who are NTHS members, are studying law, and are planning to serve the public can apply.: 1
 - Students across the United States who are planning to teach and play a sport can apply.: 1
+- Students across the United States who are studying agriculture or nature and are Native American can apply.: 1
 - Students across the United States who are studying art or music and have a mental health need can apply.: 1
 - Students across the United States who are studying aviation management and are studying business can apply.: 1
 - Students across the United States who are studying aviation management can apply.: 1
@@ -180,7 +191,6 @@ Awards tagged: 390.
 - Students across the United States who are studying law can apply.: 1
 - Students across the United States who are studying STEM and are women can apply.: 1
 - Students across the United States who are studying STEM and have a military family tie can apply.: 1
-- Students across the United States who are studying STEM can apply.: 1
 - Students across the United States who are studying STEM, are nonbinary, and are women can apply.: 1
 - Students across the United States who are studying STEM, play track, and need help paying for college can apply.: 1
 - Students across the United States who are studying transportation can apply.: 1
@@ -203,10 +213,12 @@ Awards tagged: 390.
 - Students across the United States who have a mental health need, have been in foster care, and are LGBTQ+ can apply.: 1
 - Students across the United States who have a military family tie and lost a parent can apply.: 1
 - Students across the United States who have a military family tie and need help paying for college can apply.: 1
+- Students across the United States who have a union family tie can apply.: 1
 - Students across the United States who have faced a hard time can apply.: 1
 - Students across the United States who play golf can apply.: 1
 - Students across the United States who work for the sponsor or have a parent who does, were adopted, and need help paying for college can apply.: 1
 - Students in Montana and nearby states can apply.: 1
+- Students in Montana and nearby states who are FFA members can apply.: 1
 - Students in Montana and nearby states who are studying art or music can apply.: 1
 - Students in the United States and Canada who are AOPA members and are women can apply.: 1
 - Students in the United States and Canada who are in the skilled trades can apply.: 1
@@ -226,24 +238,25 @@ Awards tagged: 390.
 
 ### ruralRule
 
-- none: 387
+- none: 412
 - service-area: 3
 
 ### sports
 
-- null: 387
+- null: 410
+- student athlete: 2
 - golf: 1
-- student athlete: 1
 - track: 1
+- wrestling: 1
 
 ### clubs
 
-- null: 271
+- null: 295
 - WAI: 52
 - AOPA: 19
 - NGPA: 15
 - NTHS: 15
-- FFA: 12
+- FFA: 13
 - AEA: 4
 - BPA: 1
 - DECA: 1
@@ -258,17 +271,19 @@ Awards tagged: 390.
 
 ### heritage
 
-- null: 389
-- Native American: 1
+- null: 413
+- Native American: 2
 
 ### faith
 
-- null: 389
+- null: 412
+- Catholic: 1
+- Christian: 1
 - Presbyterian: 1
 
 ### familyTies
 
-- null: 358
+- null: 382
 - military: 14
 - employer: 5
 - first responder: 5
@@ -277,16 +292,17 @@ Awards tagged: 390.
 - fraternal: 2
 - credit union: 1
 - lineman family: 1
+- union: 1
 
 ### plans
 
-- null: 227
+- null: 247
 - pilot training: 61
 - aviation maintenance: 35
-- skilled trades: 22
-- STEM: 14
+- skilled trades: 25
+- STEM: 15
 - business: 12
-- agriculture: 6
+- agriculture: 7
 - aviation management: 6
 - teaching: 6
 - arts: 4
@@ -299,7 +315,7 @@ Awards tagged: 390.
 
 ### health
 
-- null: 380
+- null: 405
 - learning disability: 5
 - mental health: 3
 - ADHD: 2
@@ -309,7 +325,7 @@ Awards tagged: 390.
 
 ### lifeSituation
 
-- null: 380
+- null: 405
 - LGBTQ+: 4
 - foster care: 3
 - hard times: 3
@@ -318,7 +334,7 @@ Awards tagged: 390.
 
 ### gender
 
-- null: 345
+- null: 370
 - woman: 44
 - nonbinary: 2
 - gender-diverse: 1
@@ -326,29 +342,29 @@ Awards tagged: 390.
 
 ### firstGen
 
-- null: 388
+- null: 413
 - true: 2
 
 ### needBased
 
-- null: 371
-- true: 19
+- null: 394
+- true: 21
 
 ### essayRequired
 
-- null: 323
-- true: 64
+- null: 346
+- true: 66
 - false: 3
 
 ### renewable
 
-- null: 378
-- true: 11
+- null: 401
+- true: 13
 - false: 1
 
 ### tagConfirmedBy
 
-- derived: 390
+- derived: 415
 
 ## Pages that did not load
 
@@ -442,7 +458,7 @@ Awards tagged: 390.
 
 ## Awards left uncertain
 
-228 awards still have a gap. The tag fields are filled with null where the page does not say.
+233 awards still have a gap. The tag fields are filled with null where the page does not say.
 
 - award-0a1f1d1b8505 | 2027 Wings for Val Foundation Lt. Cmdr. Lyndsay Evans Memorial Scholarship | no location limit listed
 - award-d06d7c7342e2 | Adam Montes Pride Scholarship | The page did not load.
@@ -567,6 +583,7 @@ Awards tagged: 390.
 - award-b86982e726be | Montana FFA Foundation Leave a Legacy Scholarship | no location limit listed
 - award-67de97a4f446 | Montana Jaycee Foundation Scholarship | The name says Montana, but the page does not say the student must be from Montana.
 - award-e05338ef963f | Montana Jaycee Foundation Scholarship | The name says Montana, but the page does not say the student must be from Montana.
+- award-82923d0ea01e | Montana State Grange Scholarship | The name says Montana, but the page does not say the student must be from Montana. The page does not say the place.
 - award-1f64dfaa7bf7 | Montana STEM/Healthcare Scholarship Program | The page lists more than one field of study, so a single field was not tagged.
 - award-40db1e8dee39 | Montana Treasure State First Generation Scholarship | The name says first generation, but the page says these students are considered automatically.
 - award-fc37c2d47f56 | Murdoch's Scholarship | no location limit listed
@@ -618,6 +635,7 @@ Awards tagged: 390.
 - award-3caab7453e5b | Shining Star Scholarship for the Adoption of Children with Special Needs | The page did not load.
 - award-0f841a2f9a61 | Sloan Sloan Memorial Scholarship for the Arts | no location limit listed
 - award-0651dcec4d07 | SOKN Scholarship | The page does not say who can apply. The page loaded but this award's rules were not on it.
+- award-fc8d0d20bba6 | Sons of Norway Foundation Scholarships | The page does not say the place.
 - award-ffbd0f0b989f | Soroptimist Certificate Scholarships | The page loaded but this award's rules were not on it.
 - award-f41c36b42ac9 | Special Recognition Award | no location limit listed
 - award-667db7bac4b9 | Sporty’s Foundation Flight Training Scholarship for WAI Chapter Member | no location limit listed
@@ -631,6 +649,8 @@ Awards tagged: 390.
 - award-005b794acb14 | Surety Bond Authority Scholarship Program | no location limit listed
 - award-3e63902e8554 | Susan T. Friedle Scholarship | no location limit listed
 - award-e34d317f0f51 | T. Eugene Young Montana's Promise Scholarship | The page lists more than one field of study, so a single field was not tagged.
+- award-8b3ba6db3abf | Taco Bell Live Mas Scholarship | The page does not say the place.
+- award-c782e36ba01b | Tall Clubs International Foundation Scholarship | The page does not say the place.
 - award-9d3f65e8d844 | Ted & Holly Rollins Scholarship | no location limit listed
 - award-a3c9f5127f45 | Ted Mallory Memorial Scholarship | no location limit listed
 - award-4b84affbfa6e | The Brendan Looney Foundation High School Senior Scholarships | no location limit listed
@@ -669,6 +689,7 @@ Awards tagged: 390.
 - award-5dc2aab768d2 | Whitefish Bulldog Booster Club Scholarships | The page does not say who can apply. The page loaded but this award's rules were not on it. The name says Whitefish, but the page does not say the student must be from Whitefish.
 - award-5dd4c3d3988a | Whitefish Soroptimist Memorial Scholarship for Girls Graduating High School | The page loaded but this award's rules were not on it. The name says girls or women, but the page does not say that. The name says Whitefish, but the page does not say the student must be from Whitefish.
 - award-88670d80cadf | Women Military Aviators Dream of Flight Scholarship | The name says military or veteran, but the page does not require a military family tie.
+- award-f37bbc85b3c2 | Women of Rollins Scholarship | The page does not say the place.
 - award-a4379bfbc7bd | Work Ethic Scholarship Program | The page did not load.
 - award-d2b44a62c0a7 | Workforce Development Scholarships | The page loaded but this award's rules were not on it.
 - award-12a7ca904d6a | WTS Transportation YOU High School Scholarship | no location limit listed
@@ -697,22 +718,22 @@ Awards tagged: 390.
 - Loss of Parent or Guardian: 1
 - Overcoming Significant Adversity: 3
 - First-Generation College: 2
-- Native American or Indigenous: 1
+- Native American or Indigenous: 2
 - LGBTQIA+: 4
 - Female: 44
 - Non-Binary: 2
 - Aviation - Pilot Training: 62
 - Aviation - Maintenance: 35
 - Aviation - Management: 6
-- STEM: 14
+- STEM: 15
 - Healthcare & Nursing: 3
-- Skilled Trades & Construction: 23
+- Skilled Trades & Construction: 26
 - Business & Finance: 12
 - Public Service & Social Impact: 2
 - Law & Legal Studies: 2
 - Arts & Humanities: 4
-- Agriculture & Conservation: 6
-- Student Athlete / Sports Background: 3
+- Agriculture & Conservation: 7
+- Student Athlete / Sports Background: 5
 - Military or Veteran Affiliation: 14
 - First Responder Affiliation: 5
 - Electric Co-op Member: 2
@@ -720,9 +741,9 @@ Awards tagged: 390.
 - Elks Lodge Affiliation: 1
 - Corporate Sponsor Employee / Dependent: 5
 - Have a part-time job or work experience: 2
-- Participate in community service or volunteering: 6
+- Participate in community service or volunteering: 7
 - National Technical Honor Society (NTHS): 15
-- FFA: 12
+- FFA: 13
 - Business Professionals of America (BPA): 1
 - DECA: 1
 - Future Business Leaders of America (FBLA): 1
@@ -731,7 +752,7 @@ Awards tagged: 390.
 - SkillsUSA: 1
 - Technology Student Association (TSA): 1
 - Education / Teaching: 6
-- Financial need: 19
+- Financial need: 21
 
 ## Step 3 links the text does not support
 

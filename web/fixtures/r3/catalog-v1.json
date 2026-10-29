@@ -18,18 +18,18 @@
   },
   "catalog": {
     "schemaVersion": "1.0.0",
-    "catalogRevision": "783fd9d9de974e781027d5a1edfe92b5d27e0f2f5634e2515f36b2563f9fcd1a",
+    "catalogRevision": "fdd1815b76e10f6e4b0ee815829ffe9415807dd5e128c7c0ab78c707a4a9eace",
     "counts": {
-      "sources": 438,
+      "sources": 463,
       "portals": 21,
-      "awards": 390,
+      "awards": 415,
       "applicationGroups": 4,
-      "cycles": 390,
-      "activeCycles": 109,
-      "upcomingCycles": 154,
-      "closedCycles": 97,
+      "cycles": 415,
+      "activeCycles": 119,
+      "upcomingCycles": 157,
+      "closedCycles": 98,
       "unavailableCycles": 0,
-      "unknownCycles": 30,
+      "unknownCycles": 41,
       "minimumObservedRecipientSlots": 71
     },
     "awards": [
@@ -25250,6 +25250,1585 @@
         "essayRequired": null,
         "renewable": null,
         "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-a55aa2e1054d",
+        "name": "Blewett Statewide Wrestling Scholarship",
+        "summary": "Hoyt & Blewett awards $1,000 to one Montana senior wrestler in each class, AA, A, and B/C. Boys and girls may apply. A typed application must be mailed and received by April 2, 2027. Checked on the sponsor page on October 29, 2026.",
+        "amount": {
+          "label": "$1,000",
+          "minimum": 1000,
+          "maximum": 1000,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "Montana high school senior in wrestling. Both boys and girls may apply.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "active",
+          "label": "Open. Deadline April 2, 2027",
+          "year": 2027,
+          "opens": null,
+          "closes": "April 2, 2027",
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "offline",
+          "label": "Mail the typed application",
+          "url": "https://www.hoytblewett.com/community/blewett-statewide-wrestling-scholarships/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-a55aa2e1054d"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.hoytblewett.com/community/blewett-statewide-wrestling-scholarships/",
+          "openStatus": "open_now",
+          "deadline": "April 2, 2027"
+        },
+        "residencyScope": "montana",
+        "poolLevel": 4,
+        "competitionScore": 55,
+        "poolReason": "Montana students who play wrestling can apply.",
+        "ruralRule": "none",
+        "sports": [
+          "wrestling"
+        ],
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-dc91ab27f6f7",
+        "name": "Foundation for Rural Service Scholarship",
+        "summary": "The Foundation for Rural Service awards scholarships for the first year of college or vocational school. Applicants must partner with an NTCA member company. The main matched awards are $2,500, and named awards on the same page go up to $9,500. Applications for 2027 are open and close February 15, 2027. Checked on the sponsor page on October 29, 2026.",
+        "amount": {
+          "label": "$2,500 to $9,500",
+          "minimum": 2500,
+          "maximum": 9500,
+          "currency": "USD",
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "Students across the United States who partner with an NTCA member company.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "active",
+          "label": "Open. Deadline February 15, 2027",
+          "year": 2027,
+          "opens": null,
+          "closes": "February 15, 2027",
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "FRS scholarship application",
+          "url": "https://www.frs.org/programs/youth-programs/scholarships",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-dc91ab27f6f7"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.frs.org/programs/youth-programs/scholarships",
+          "openStatus": "open_now",
+          "deadline": "February 15, 2027"
+        },
+        "residencyScope": "national",
+        "poolLevel": 6,
+        "competitionScore": 94,
+        "poolReason": "Open to students across the United States.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-93672b6e2fd0",
+        "name": "Union Plus Scholarship",
+        "summary": "Union Plus awards $1,000 to $4,000 to current or retired members of participating unions, their spouses, and their dependent children. Membership must be continuous for at least one year. A GPA of 3.0 is recommended. Students may reapply each year. The 2027 deadline is January 31, 2027, at 11:59 p.m. Eastern Time. Checked on the sponsor page on October 29, 2026.",
+        "amount": {
+          "label": "$1,000 to $4,000",
+          "minimum": 1000,
+          "maximum": 4000,
+          "currency": "USD",
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "Union members and their children in the United States.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "active",
+          "label": "Open. Deadline January 31, 2027",
+          "year": 2027,
+          "opens": "mid-June",
+          "closes": "January 31, 2027",
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Union Plus 2027 application",
+          "url": "https://www.unionplus.org/benefits/education/scholarships",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-93672b6e2fd0"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.unionplus.org/benefits/education/scholarships",
+          "openStatus": "open_now",
+          "deadline": "January 31, 2027, 11:59 p.m. Eastern Time"
+        },
+        "residencyScope": "national",
+        "poolLevel": 5,
+        "competitionScore": 73,
+        "poolReason": "Students across the United States who have a union family tie can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": [
+          "union"
+        ],
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": true,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-7d64a0f1d998",
+        "name": "Horatio Alger National Career and Technical Scholarship",
+        "summary": "Horatio Alger offers 300 scholarships of $2,500 for a career or technical program. Students must show financial need, with household income of $100,000 or less, be a United States citizen under age 35, and plan to attend a not-for-profit community college or trade school. The next application window is March 15 through June 15, 2027. Checked on the sponsor page on October 29, 2026.",
+        "amount": {
+          "label": "$2,500",
+          "minimum": 2500,
+          "maximum": 2500,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "Students across the United States who need help paying for college and are entering a trade program.",
+          "minimumGpa": null,
+          "schoolTypes": [
+            "two_year",
+            "trade"
+          ],
+          "focus": null
+        },
+        "cycle": {
+          "status": "upcoming",
+          "label": "Opens March 15, 2027",
+          "year": 2027,
+          "opens": "March 15, 2027",
+          "closes": "June 15, 2027",
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Horatio Alger CTE application",
+          "url": "https://horatioalger.org/career-technical-education-scholarships/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-7d64a0f1d998"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://horatioalger.org/career-technical-education-scholarships/",
+          "openStatus": "opens_on",
+          "deadline": "June 15, 2027"
+        },
+        "residencyScope": "national",
+        "poolLevel": 5,
+        "competitionScore": 70,
+        "poolReason": "Students across the United States who are in the skilled trades and need help paying for college can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": [
+          "skilled trades"
+        ],
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": true,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-8b3ba6db3abf",
+        "name": "Taco Bell Live Mas Scholarship",
+        "summary": "The Taco Bell Foundation Live Mas Scholarship is open with a deadline of January 5, 2027, at 5 p.m. Pacific Time. The page shows awards of $25,000 and says scholars can renew. It does not ask for a GPA. It does not name a state limit. Checked on the sponsor page on October 29, 2026.",
+        "amount": {
+          "label": "$25,000",
+          "minimum": 25000,
+          "maximum": 25000,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "Students who share a passion and a plan. The page does not name a state limit.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "active",
+          "label": "Open. Deadline January 5, 2027",
+          "year": 2027,
+          "opens": null,
+          "closes": "January 5, 2027",
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Live Mas application",
+          "url": "https://www.tacobellfoundation.org/live-mas-scholarship/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-8b3ba6db3abf"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.tacobellfoundation.org/live-mas-scholarship/",
+          "openStatus": "open_now",
+          "deadline": "January 5, 2027 at 5 p.m. Pacific Time"
+        },
+        "residencyScope": null,
+        "poolLevel": null,
+        "competitionScore": null,
+        "poolReason": "The page does not say the place.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": true,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-5aa5606c6d92",
+        "name": "SME Education Foundation Scholarships",
+        "summary": "One SME application is considered for many manufacturing and engineering scholarships. Awards range from $2,500 to $20,000. The application opens November 1, 2026 and is accepted each year from November 1 through February 1. Checked on the sponsor page on October 29, 2026.",
+        "amount": {
+          "label": "$2,500 to $20,000",
+          "minimum": 2500,
+          "maximum": 20000,
+          "currency": "USD",
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "Students across the United States who are studying engineering.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "upcoming",
+          "label": "Opens November 1, 2026",
+          "year": 2027,
+          "opens": "November 1, 2026",
+          "closes": "February 1, 2027",
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "SME scholarship application",
+          "url": "https://www.smeef.org/scholarships",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-5aa5606c6d92"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.smeef.org/scholarships",
+          "openStatus": "opens_on",
+          "deadline": "February 1, 2027"
+        },
+        "residencyScope": "national",
+        "poolLevel": 5,
+        "competitionScore": 73,
+        "poolReason": "Students across the United States who are studying STEM can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": [
+          "STEM"
+        ],
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-29b2feca960c",
+        "name": "Krystal and Franklin H. Noble Endowed Scholarship",
+        "summary": "Montana State University Billings awards this scholarship to a Montana resident who graduated from a public high school in the Flathead Valley. The page lists a 2.75 GPA, or an ACT of 22, or an SAT of 1100, and three letters. The deadline on the page is September 30, 2027. The amount varies. Checked on the sponsor page on October 29, 2026.",
+        "amount": {
+          "label": "Varies",
+          "minimum": null,
+          "maximum": null,
+          "currency": "USD",
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "Graduating seniors at Whitefish, Glacier, Columbia Falls, and Flathead High School who will attend Montana State University Billings.",
+          "minimumGpa": 2.75,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "active",
+          "label": "Open. Deadline September 30, 2027",
+          "year": 2027,
+          "opens": null,
+          "closes": "September 30, 2027",
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "MSU Billings scholarship portal",
+          "url": "https://msubillings.academicworks.com/opportunities/10480",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-29b2feca960c"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://msubillings.academicworks.com/opportunities/10480",
+          "openStatus": "open_now",
+          "deadline": "September 30, 2027"
+        },
+        "residencyScope": "flathead",
+        "poolLevel": 2,
+        "competitionScore": 30,
+        "poolReason": "Only students from Flathead County high schools can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-d200693978b6",
+        "name": "Northwest Montana United Way Workforce Development Scholarship",
+        "summary": "Northwest Montana United Way awards five scholarships of $500 for trades training or starter tools. Applicants must be 2027 high school graduates, live in Flathead, Glacier, Lake, Lincoln, and Sanders County, and have a 3.0 GPA. The application must arrive by April 2, 2027. Checked on the sponsor page on October 29, 2026.",
+        "amount": {
+          "label": "$500",
+          "minimum": 500,
+          "maximum": 500,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "Students in Flathead, Glacier, Lake, Lincoln, and Sanders County who are entering the skilled trades.",
+          "minimumGpa": 3,
+          "schoolTypes": [
+            "trade"
+          ],
+          "focus": null
+        },
+        "cycle": {
+          "status": "active",
+          "label": "Open. Deadline April 2, 2027",
+          "year": 2027,
+          "opens": null,
+          "closes": "April 2, 2027",
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "United Way workforce application",
+          "url": "https://www.unitedwaycares.org/scholarship",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-d200693978b6"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.unitedwaycares.org/scholarship",
+          "openStatus": "open_now",
+          "deadline": "April 2, 2027"
+        },
+        "residencyScope": "regional",
+        "poolLevel": 3,
+        "competitionScore": 40,
+        "poolReason": "Only students from a few Montana counties who are in the skilled trades can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": [
+          "skilled trades"
+        ],
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-eb65be4e9357",
+        "name": "Coolidge Scholarship",
+        "summary": "The Coolidge Scholarship is a full ride for four years at any accredited college in the United States. It is for current high school juniors who are United States citizens or lawful permanent residents and who will start college in fall 2028. The application is open. All materials are due December 1, 2026, at 5:00 p.m. Pacific Time. An essay is required. Checked on the sponsor page on October 29, 2026.",
+        "amount": {
+          "label": "Full ride for four years",
+          "minimum": null,
+          "maximum": null,
+          "currency": "USD",
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "High school juniors in the United States.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "active",
+          "label": "Open. Deadline December 1, 2026",
+          "year": 2027,
+          "opens": null,
+          "closes": "December 1, 2026",
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Coolidge application",
+          "url": "https://coolidgescholars.org/apply/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-eb65be4e9357"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://coolidgescholars.org/selection-timeline/",
+          "openStatus": "open_now",
+          "deadline": "December 1, 2026 at 5:00 p.m. Pacific Time"
+        },
+        "residencyScope": "national",
+        "poolLevel": 6,
+        "competitionScore": 94,
+        "poolReason": "Open to students across the United States.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": true,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-f916a7b874f7",
+        "name": "Burger King Scholars",
+        "summary": "Burger King Scholars awards $1,000 to $60,000. The application is open through December 15, 2026, at 11:59 p.m. Central Time. Students must live in the United States, Puerto Rico, Guam, or Canada, have a 2.0 GPA, and plan to enroll full time for 2027-28. First-time applicants are graduating seniors in 2027. Checked on the sponsor page on October 29, 2026.",
+        "amount": {
+          "label": "$1,000 to $60,000",
+          "minimum": 1000,
+          "maximum": 60000,
+          "currency": "USD",
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "Students in the United States and Canada.",
+          "minimumGpa": 2,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "active",
+          "label": "Open. Deadline December 15, 2026",
+          "year": 2028,
+          "opens": null,
+          "closes": "December 15, 2026",
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Burger King Scholars application",
+          "url": "https://burgerking.scholarsapply.org/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-f916a7b874f7"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://burgerking.scholarsapply.org/",
+          "openStatus": "open_now",
+          "deadline": "December 15, 2026, 11:59 p.m. Central Time"
+        },
+        "residencyScope": "national",
+        "poolLevel": 6,
+        "competitionScore": 94,
+        "poolReason": "Open to students in the United States and Canada.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-bfc8cd5b172f",
+        "name": "Truman D. Picard Scholarship",
+        "summary": "The Intertribal Timber Council sponsors the Truman D. Picard Scholarship for Native American students in natural resources, forestry, or fire. The 2027 online application is due January 22, 2027, at 5:00 p.m. Pacific Time. The announcement page does not post a dollar amount. Checked on the sponsor page on October 29, 2026.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "Native American students across the United States who are studying natural resources.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": "Natural resources, forestry, or fire"
+        },
+        "cycle": {
+          "status": "active",
+          "label": "Open. Deadline January 22, 2027",
+          "year": 2027,
+          "opens": null,
+          "closes": "January 22, 2027",
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Picard online application",
+          "url": "https://www.itcnet.org/about_us/scholarships.html",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-bfc8cd5b172f"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.itcnet.org/about_us/scholarships.html",
+          "openStatus": "open_now",
+          "deadline": "January 22, 2027, 5:00 p.m. Pacific Time"
+        },
+        "residencyScope": "national",
+        "poolLevel": 5,
+        "competitionScore": 70,
+        "poolReason": "Students across the United States who are studying agriculture or nature and are Native American can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": [
+          "Native American"
+        ],
+        "faith": null,
+        "familyTies": null,
+        "plans": [
+          "agriculture"
+        ],
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-94bc46651bc7",
+        "name": "Alert Scholarship",
+        "summary": "Alert Magazine awards $500 for an essay on drug or alcohol abuse. High school seniors in Montana and the other listed western and plains states may apply if they have a 2.5 GPA and plan to attend college. The page says there is no deadline. Checked on the sponsor page on October 29, 2026.",
+        "amount": {
+          "label": "$500",
+          "minimum": 500,
+          "maximum": 500,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "High school seniors in Montana with a 2.5 GPA.",
+          "minimumGpa": 2.5,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "active",
+          "label": "Open. No deadline",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "rolling"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Email or mail the essay",
+          "url": "https://thealertmagazine.com/scholarship/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-94bc46651bc7"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://thealertmagazine.com/scholarship/",
+          "openStatus": "open_now",
+          "deadline": null
+        },
+        "residencyScope": "montana",
+        "poolLevel": 4,
+        "competitionScore": 58,
+        "poolReason": "Montana students can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": true,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-344d767af9a6",
+        "name": "QuestBridge National College Match",
+        "summary": "QuestBridge matches high school seniors from low-income homes with a full four-year scholarship at partner colleges. The page says the household income guide is under $65,000 for a family of four. The National College Match application deadline is October 1. Match Day is December 1. Checked on the sponsor page on October 29, 2026.",
+        "amount": {
+          "label": "Full four-year scholarship",
+          "minimum": null,
+          "maximum": null,
+          "currency": "USD",
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "High school seniors across the United States who need help paying for college.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "closed",
+          "label": "Application deadline October 1",
+          "year": 2027,
+          "opens": "Late summer",
+          "closes": "October 1",
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "QuestBridge National College Match",
+          "url": "https://www.questbridge.org/high-school-students/national-college-match",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-344d767af9a6"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.questbridge.org/high-school-students/national-college-match/apply/dates-and-deadlines",
+          "openStatus": "closed_next_not_posted",
+          "deadline": "October 1"
+        },
+        "residencyScope": "national",
+        "poolLevel": 5,
+        "competitionScore": 73,
+        "poolReason": "Students across the United States who need help paying for college can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": true,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-0249ee80bbce",
+        "name": "AHLEF Academic Scholarship",
+        "summary": "The American Hotel and Lodging Educational Foundation awards more than 300 academic scholarships of $2,000 to $7,000 for hospitality students. The 2026-27 cycle is closed. The page says applications reopen in December 2026 for the 2027-28 cycle. It does not post the next deadline. Checked on the sponsor page on October 29, 2026.",
+        "amount": {
+          "label": "$2,000 to $7,000",
+          "minimum": 2000,
+          "maximum": 7000,
+          "currency": "USD",
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "Hospitality students across the United States.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "upcoming",
+          "label": "Opens December 2026",
+          "year": 2028,
+          "opens": "December 2026",
+          "closes": null,
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "AHLEF scholarship application",
+          "url": "https://www.ahlef.org/scholarships",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-0249ee80bbce"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.ahlef.org/scholarships",
+          "openStatus": "opens_on",
+          "deadline": null
+        },
+        "residencyScope": "national",
+        "poolLevel": 6,
+        "competitionScore": 94,
+        "poolReason": "Open to students across the United States.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-efb6231ef93f",
+        "name": "Youth Serve Montana Scholarship",
+        "summary": "Youth Serve Montana awards about $1,500 to Montana high school seniors with at least 100 volunteer hours in the past 12 months who will attend a Montana Campus Network college. The Montana Campus Network page says the 2026 application is closed and will reopen in spring 2027. It does not give the 2027 dates. Checked on October 29, 2026.",
+        "amount": {
+          "label": "$1,500",
+          "minimum": 1500,
+          "maximum": 1500,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "Montana high school seniors with volunteer service.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "2027 dates not posted",
+          "year": 2027,
+          "opens": null,
+          "closes": null,
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Youth Serve Montana",
+          "url": "https://serve.mt.gov/commission-initiatives/youth-serve-montana-scholarships",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-efb6231ef93f"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://mtengage.org/allawards/scholarships-and-awards/youth-serve-mt-scholarship/",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "montana",
+        "poolLevel": 4,
+        "competitionScore": 58,
+        "poolReason": "Montana students can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-6603e0c74d86",
+        "name": "Central Christian Church Doris Johnston Memorial Scholarship",
+        "summary": "Central Christian Church awards $500 to graduates of a Flathead Valley high school who study education or a career and technical program. The Flathead Valley Community College page still shows a deadline of October 15, 2025. It does not post a 2026-27 date. Checked on October 29, 2026.",
+        "amount": {
+          "label": "$500",
+          "minimum": 500,
+          "maximum": 500,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "Graduates of a Flathead Valley high school. Priority is for education or a trade program.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": "Education or career and technical education"
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "2026-27 dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "FVCC opportunity page",
+          "url": "https://fvcc.academicworks.com/opportunities/4309",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-6603e0c74d86"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://fvcc.academicworks.com/opportunities/4309",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "flathead",
+        "poolLevel": 2,
+        "competitionScore": 24,
+        "poolReason": "Only Flathead County students who are in the skilled trades and are connected to a Christian church can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": [
+          "Christian"
+        ],
+        "familyTies": null,
+        "plans": [
+          "skilled trades"
+        ],
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-145865696a3a",
+        "name": "NILE Foundation Scholarship",
+        "summary": "The NILE Foundation awards scholarships to FFA members, including one-time awards of $500 to $2,000 and rolling awards of $1,000 a year. The page says applications closed March 1, 2026, and it lists 2026 recipients from Montana, Idaho, Wyoming, and Washington. It does not post a 2027 deadline. Checked on October 29, 2026.",
+        "amount": {
+          "label": "$500 to $4,000",
+          "minimum": 500,
+          "maximum": 4000,
+          "currency": "USD",
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "FFA members in Montana, Idaho, and Wyoming.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "2027 dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "NILE scholarships",
+          "url": "https://thenile.org/events/youth/scholarships/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-145865696a3a"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://thenile.org/events/youth/scholarships/",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "regional",
+        "poolLevel": 5,
+        "competitionScore": 73,
+        "poolReason": "Students in Montana and nearby states who are FFA members can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": [
+          "FFA"
+        ],
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-f37bbc85b3c2",
+        "name": "Women of Rollins Scholarship",
+        "summary": "The Rollins club page lists two scholarships of $1,000, the Wanda Hollensteiner scholarship and the Emma Jean Sager scholarship. It names a recent recipient and does not say who can apply or give a deadline. Checked on October 29, 2026.",
+        "amount": {
+          "label": "$1,000",
+          "minimum": 1000,
+          "maximum": 1000,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "The page does not say who can apply.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "unknown",
+          "label": "No application posted",
+          "url": "https://womenofrollinsclub.org/scholarships",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-f37bbc85b3c2"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://womenofrollinsclub.org/scholarships",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": null,
+        "poolLevel": null,
+        "competitionScore": null,
+        "poolReason": "The page does not say the place.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-e057126439b6",
+        "name": "Flathead Pomona Grange Scholarship",
+        "summary": "The Flathead Pomona Grange information sheet offers two scholarships of $500 to a graduating senior in Flathead County with a 2.25 GPA who will enroll full time. The sheet says the postmark deadline was March 6, 2026. It does not post a 2027 form. Checked on October 29, 2026.",
+        "amount": {
+          "label": "$500",
+          "minimum": 500,
+          "maximum": 500,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "Graduating seniors in Flathead County.",
+          "minimumGpa": 2.25,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "2027 dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "offline",
+          "label": "Mail the Grange form",
+          "url": "https://resources.finalsite.net/images/v1771622180/sd5k12mtus/kqhhd0fst4ylbrjyvtig/PomonaGrangeScholarship2026.pdf",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-e057126439b6"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://resources.finalsite.net/images/v1771622180/sd5k12mtus/kqhhd0fst4ylbrjyvtig/PomonaGrangeScholarship2026.pdf",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "flathead",
+        "poolLevel": 2,
+        "competitionScore": 30,
+        "poolReason": "Only Flathead County students can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-82923d0ea01e",
+        "name": "Montana State Grange Scholarship",
+        "summary": "The Montana State Grange programs page lists scholarships and does not give an amount, who can apply, or a deadline. Checked on October 29, 2026.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "The page does not say who can apply.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "unknown",
+          "label": "No application posted",
+          "url": "https://www.grange.org/MontanaState/program/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-82923d0ea01e"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.grange.org/MontanaState/program/",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": null,
+        "poolLevel": null,
+        "competitionScore": null,
+        "poolReason": "The page does not say the place.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-fc8d0d20bba6",
+        "name": "Sons of Norway Foundation Scholarships",
+        "summary": "The Sons of Norway Foundation says its application season is October 1 through January 15 and that it awards about 35 scholarships. Some awards require membership and some do not. The page does not name the 2027 year on the deadline or give one dollar amount. Checked on October 29, 2026.",
+        "amount": {
+          "label": "Varies",
+          "minimum": null,
+          "maximum": null,
+          "currency": "USD",
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "Students connected to Sons of Norway. The page says some awards do not require membership.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Year not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Sons of Norway scholarships",
+          "url": "https://www.sofn.com/foundation/scholarships/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-fc8d0d20bba6"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.sofn.com/foundation/scholarships/",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": null,
+        "poolLevel": null,
+        "competitionScore": null,
+        "poolReason": "The page does not say the place.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-fa1238c18365",
+        "name": "Knights of Columbus U.S. Undergraduate Scholarship",
+        "summary": "Knights of Columbus scholarships are for a member in good standing, or a child of a member, entering a Catholic college in the United States as a full-time freshman. The page says new applications are online from March 5 through April 22. It does not name the year or the dollar amount. Checked on October 29, 2026.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "A Knights of Columbus member, or the child of a member, entering a Catholic college in the United States.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": "Catholic college"
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Year not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Knights of Columbus scholarships",
+          "url": "https://www.kofc.org/en/what-we-do/scholarships/index.html",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-fa1238c18365"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.kofc.org/en/what-we-do/scholarships/index.html",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "national",
+        "poolLevel": 5,
+        "competitionScore": 73,
+        "poolReason": "Students across the United States who are connected to a Catholic church can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": [
+          "Catholic"
+        ],
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-c782e36ba01b",
+        "name": "Tall Clubs International Foundation Scholarship",
+        "summary": "Tall Clubs International says awards are up to $1,000 and come from club nominations. The foundation page says the 2027 season starts January 1, 2027, and that rules will be final on December 31, 2026. Checked on October 29, 2026.",
+        "amount": {
+          "label": "Up to $1,000",
+          "minimum": null,
+          "maximum": 1000,
+          "currency": "USD",
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "Students nominated by a tall club. The 2027 rules are not final.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Rules not final",
+          "year": 2027,
+          "opens": null,
+          "closes": null,
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Tall Clubs scholarship process",
+          "url": "https://tallclubfoundation.org/scholarship/scholarship/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-c782e36ba01b"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://tallclubfoundation.org/",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": null,
+        "poolLevel": null,
+        "competitionScore": null,
+        "poolReason": "The page does not say the place.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-be377da2d929",
+        "name": "Montana Coaches Association Scholarships",
+        "summary": "The Montana Coaches Association awards eight scholarships to a Montana graduating senior athlete: two of $1,600, two of $1,500, and four of $1,000. The page still titles the awards for the class graduating in 2026. The application form says the last round ended May 1 and the next round opens January 1. Checked on October 29, 2026.",
+        "amount": {
+          "label": "$1,000 to $1,600",
+          "minimum": 1000,
+          "maximum": 1600,
+          "currency": "USD",
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "Montana high school senior athlete.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "2027 dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "MCA scholarship form",
+          "url": "https://montanacoaches.powermediallc.org/scholarship-application/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-be377da2d929"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://montanacoaches.com/scholarships",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "montana",
+        "poolLevel": 4,
+        "competitionScore": 55,
+        "poolReason": "Montana students who play a sport can apply.",
+        "ruralRule": "none",
+        "sports": [
+          "student athlete"
+        ],
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-e069fb904004",
+        "name": "Montana 4-H Foundation Scholarships",
+        "summary": "One Montana 4-H Foundation application covers many scholarships for current or former 4-H members. Amounts on the page run from $500 to $3,000. The page says the application opens December 1 and the deadline is February 14. It does not name the year. Checked on October 29, 2026.",
+        "amount": {
+          "label": "$500 to $3,000",
+          "minimum": 500,
+          "maximum": 3000,
+          "currency": "USD",
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "Current or former 4-H members in Montana.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Year not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Montana 4-H Foundation application",
+          "url": "https://www.mt4hfoundation.org/scholarships",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-e069fb904004"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.mt4hfoundation.org/scholarships",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "montana",
+        "poolLevel": 4,
+        "competitionScore": 58,
+        "poolReason": "Montana students can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
       }
     ],
     "sources": [
@@ -29632,6 +31211,256 @@
         "access": "public",
         "availability": "complete",
         "awardCount": 27
+      },
+      {
+        "publicId": "source-a55aa2e1054d",
+        "title": "hoytblewett.com",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.hoytblewett.com/community/blewett-statewide-wrestling-scholarships/",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-dc91ab27f6f7",
+        "title": "frs.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.frs.org/programs/youth-programs/scholarships",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-93672b6e2fd0",
+        "title": "unionplus.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.unionplus.org/benefits/education/scholarships",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-7d64a0f1d998",
+        "title": "horatioalger.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://horatioalger.org/career-technical-education-scholarships/",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-8b3ba6db3abf",
+        "title": "tacobellfoundation.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.tacobellfoundation.org/live-mas-scholarship/",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-5aa5606c6d92",
+        "title": "smeef.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.smeef.org/scholarships",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-29b2feca960c",
+        "title": "msubillings.academicworks.com",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://msubillings.academicworks.com/opportunities/10480",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-d200693978b6",
+        "title": "unitedwaycares.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.unitedwaycares.org/scholarship",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-eb65be4e9357",
+        "title": "coolidgescholars.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://coolidgescholars.org/selection-timeline/",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-f916a7b874f7",
+        "title": "burgerking.scholarsapply.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://burgerking.scholarsapply.org/",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-bfc8cd5b172f",
+        "title": "itcnet.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.itcnet.org/about_us/scholarships.html",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-94bc46651bc7",
+        "title": "thealertmagazine.com",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://thealertmagazine.com/scholarship/",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-344d767af9a6",
+        "title": "questbridge.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.questbridge.org/high-school-students/national-college-match/apply/dates-and-deadlines",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-0249ee80bbce",
+        "title": "ahlef.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.ahlef.org/scholarships",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-efb6231ef93f",
+        "title": "mtengage.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://mtengage.org/allawards/scholarships-and-awards/youth-serve-mt-scholarship/",
+        "access": "public",
+        "availability": "partial",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-6603e0c74d86",
+        "title": "fvcc.academicworks.com",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://fvcc.academicworks.com/opportunities/4309",
+        "access": "public",
+        "availability": "partial",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-145865696a3a",
+        "title": "thenile.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://thenile.org/events/youth/scholarships/",
+        "access": "public",
+        "availability": "partial",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-f37bbc85b3c2",
+        "title": "womenofrollinsclub.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://womenofrollinsclub.org/scholarships",
+        "access": "public",
+        "availability": "partial",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-e057126439b6",
+        "title": "resources.finalsite.net",
+        "recordType": "source",
+        "architecture": "document_or_pdf",
+        "url": "https://resources.finalsite.net/images/v1771622180/sd5k12mtus/kqhhd0fst4ylbrjyvtig/PomonaGrangeScholarship2026.pdf",
+        "access": "public",
+        "availability": "partial",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-82923d0ea01e",
+        "title": "grange.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.grange.org/MontanaState/program/",
+        "access": "public",
+        "availability": "partial",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-fc8d0d20bba6",
+        "title": "sofn.com",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.sofn.com/foundation/scholarships/",
+        "access": "public",
+        "availability": "partial",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-fa1238c18365",
+        "title": "kofc.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.kofc.org/en/what-we-do/scholarships/index.html",
+        "access": "public",
+        "availability": "partial",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-c782e36ba01b",
+        "title": "tallclubfoundation.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://tallclubfoundation.org/",
+        "access": "public",
+        "availability": "partial",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-be377da2d929",
+        "title": "montanacoaches.com",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://montanacoaches.com/scholarships",
+        "access": "public",
+        "availability": "partial",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-e069fb904004",
+        "title": "mt4hfoundation.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.mt4hfoundation.org/scholarships",
+        "access": "public",
+        "availability": "partial",
+        "awardCount": 1
       }
     ],
     "portals": [

@@ -369,6 +369,21 @@ const verifiedIds = [
   'award-72b47d9371a6',
   'award-9bb9b1051d9e',
   'award-40db1e8dee39',
+  'award-a55aa2e1054d',
+  'award-dc91ab27f6f7',
+  'award-93672b6e2fd0',
+  'award-7d64a0f1d998',
+  'award-8b3ba6db3abf',
+  'award-5aa5606c6d92',
+  'award-29b2feca960c',
+  'award-d200693978b6',
+  'award-eb65be4e9357',
+  'award-f916a7b874f7',
+  'award-bfc8cd5b172f',
+  'award-94bc46651bc7',
+  'award-344d767af9a6',
+  'award-0249ee80bbce',
+  // p2-verified-ids
 ];
 const uncheckedIds = [
   'award-5b5b0db70dd0',
