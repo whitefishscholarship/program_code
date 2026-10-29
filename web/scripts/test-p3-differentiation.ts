@@ -195,6 +195,14 @@ assert(!list.includes('type="email"'));
 assert(!list.includes('mailto:'));
 assert(!list.includes('fetch('));
 assert(step.includes('type="checkbox"'));
+assert(step.includes('className="sr-only"'));
+assert(step.includes('bg-teal-800'));
+assert(step.includes('has-[:focus-visible]:ring-4'));
+assert(wizard.includes('className="sr-only"'));
+assert(wizard.includes('bg-teal-800'));
+assert(wizard.includes('has-[:focus-visible]:ring-4'));
+assert(!wizard.includes('h-5 w-5'));
+assert(!step.includes('h-4 w-4'));
 for (const file of [wizard, list, step, fs.readFileSync('src/lib/differentiation.ts', 'utf8')]) {
   assert.equal(file.includes('\u2014'), false);
   assert.equal(file.includes('\u2013'), false);

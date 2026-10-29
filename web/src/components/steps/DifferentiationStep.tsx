@@ -29,14 +29,14 @@ export default function DifferentiationStep({ groups, profile, onToggle }: Props
                   <label
                     key={id}
                     htmlFor={id}
-                    className={`inline-flex cursor-pointer items-center gap-2 rounded-full border px-3 py-1.5 text-sm font-semibold ${checked ? 'border-teal-700 bg-teal-50 text-teal-950' : 'border-slate-300 bg-white text-slate-800 hover:bg-slate-50'}`}
+                    className={`relative inline-flex cursor-pointer items-center rounded-full border px-3 py-1.5 text-sm font-semibold outline-none has-[:focus-visible]:ring-4 has-[:focus-visible]:ring-teal-300 ${checked ? 'border-teal-800 bg-teal-800 text-white' : 'border-slate-300 bg-white text-slate-800 hover:bg-slate-50'}`}
                   >
                     <input
                       id={id}
                       type="checkbox"
                       checked={checked}
                       onChange={() => onToggle(chip)}
-                      className="h-4 w-4 rounded border-slate-300 text-teal-700 focus:ring-teal-600"
+                      className="sr-only"
                     />
                     {chip.label}
                   </label>
