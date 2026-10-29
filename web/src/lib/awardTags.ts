@@ -28,6 +28,8 @@ export type DeriveResult = {
   unsupportedLinks: string[];
 };
 
+export type PageRead = { loaded: boolean; text: string };
+
 type Place = { scope: ResidencyScope; level: PoolLevel; phrase: string };
 
 const SCORE_BANDS: Record<PoolLevel, [number, number]> = {
@@ -67,20 +69,34 @@ export function pickAwardTags(award: Record<string, unknown>): AwardTags {
   return tags as AwardTags;
 }
 
-export function deriveAwardTags(award: TaggableAward, linkAnswerIds: readonly string[] = []): DeriveResult {
-  const blocked = blockReason(award);
-  const evidence = blocked ? '' : evidenceText(award);
+export function deriveAwardTags(
+  award: TaggableAward,
+  linkAnswerIds: readonly string[] = [],
+  page: PageRead | null = null,
+): DeriveResult {
+  const catalogBlock = blockReason(award);
+  const pageBits = page?.loaded ? usableSentences(page.text.replace(/reach higher montana/gi, ' ')).join(' ') : '';
+  const pageUsable = Boolean(page?.loaded && pageBits.length >= 40);
+  // A fresh page read replaces an old catalog example. The old text stays out.
+  const blocked = pageUsable ? null : catalogBlock;
+  const catalogEvidence = catalogBlock ? '' : evidenceText(award);
+  const evidence = [catalogEvidence, pageBits].filter(Boolean).join(' ');
+  const pageFailed = page?.loaded === false;
+  const pageEmpty = page?.loaded === true && !pageUsable;
   const notes: string[] = [];
   if (blocked === 'past') notes.push('The page only shows an old example, so the current rules were not tagged.');
   if (blocked === 'unread') notes.push('The page does not say who can apply.');
   if (!blocked && evidence === '' && !/^(any student|in-state)$/i.test(award.eligibility.audience.trim())) {
     notes.push('The page does not say who can apply.');
   }
-  if (/^in-state$/i.test(award.eligibility.audience.trim())) {
+  if (/^in-state$/i.test(award.eligibility.audience.trim()) && !pageUsable) {
     notes.push('The page only says In-State and does not name the state.');
   }
+  if (pageFailed) notes.push('The page did not load.');
+  if (pageEmpty) notes.push('The page loaded but this award\'s rules were not on it.');
 
   const bags = collect(evidence, blocked);
+  if (!blocked && bags.ruralRule === null) bags.ruralRule = 'none';
   if (/first generation/i.test(award.name) && /considered automatically/i.test(evidence)) {
     bags.firstGen = null;
     notes.push('The name says first generation, but the page says these students are considered automatically.');
@@ -95,8 +111,16 @@ export function deriveAwardTags(award: TaggableAward, linkAnswerIds: readonly st
     notes.push('The page lists two ways to qualify, so those paths were not combined into one rule.');
   }
 
-  const place = blocked || splitPaths ? null : findPlace(evidence);
-  if (!place && !blocked && !splitPaths && evidence !== '') notes.push('The page does not say the place.');
+  const foundPlace = blocked || splitPaths ? null : findPlace(evidence);
+  const unnamedState = /^in-state$/i.test(award.eligibility.audience.trim()) && !foundPlace;
+  const place = foundPlace ?? (
+    pageUsable && !blocked && !splitPaths && !unnamedState
+      ? { scope: 'national' as const, level: 6 as const, phrase: 'Students across the United States' }
+      : null
+  );
+  if (place && !foundPlace) notes.push('no location limit listed');
+  if (unnamedState && pageUsable) notes.push('The page only says In-State and does not name the state.');
+  if (!place && !unnamedState && !blocked && !splitPaths && evidence !== '' && !pageFailed && !pageEmpty) notes.push('The page does not say the place.');
   const niche = hasNiche(bags);
   const level: PoolLevel | null = place ? (place.scope === 'national' && niche ? 5 : place.level) : null;
   const score = level === null ? null : competitionScore(level, bags, award.eligibility.minimumGpa);
@@ -119,8 +143,8 @@ export function deriveAwardTags(award: TaggableAward, linkAnswerIds: readonly st
     gender: listOrNull(bags.gender),
     firstGen: bags.firstGen,
     needBased: bags.needBased,
-    essayRequired: blocked ? null : essayFlag(award),
-    renewable: blocked ? null : renewableFlag(award),
+    essayRequired: blocked ? null : essayFlag(award, pageBits),
+    renewable: blocked ? null : renewableFlag(award, pageBits),
     tagConfirmedBy: 'derived',
   };
   const step3Ids = matchedStep3Ids(tags, evidence);
@@ -169,7 +193,7 @@ function collect(evidence: string, blocked: 'past' | 'unread' | null): Bags {
   addGender(text, bags);
   if (/\bfirst[- ]generation\b|\bfirst in (?:your|their|the) (?:immediate )?family\b/.test(text)) bags.firstGen = true;
   if (/\bfinancial need\b|\bneed-based\b|\bpell-eligible\b|\bpell eligible\b|\blow-income\b|\bcannot rely on family to pay\b|\bdemonstrated need\b/.test(text)) bags.needBased = true;
-  if (/\bservice area\b/.test(text)) bags.ruralRule = 'service-area';
+  if (/\bservice area\b|\bservice territory\b|\bmember of flathead electric\b|\bserved by the co-op\b|\bserved by flathead electric\b/.test(text)) bags.ruralRule = 'service-area';
   if (/\bnces\b[^.]{0,40}\brural\b|\brural\b[^.]{0,40}\bnces\b/.test(text) && /\btown\b/.test(text)) bags.ruralRule = 'nces-town-or-rural';
   else if (/\bnces\b[^.]{0,40}\brural\b|\brural locale\b/.test(text)) bags.ruralRule = 'nces-rural';
   if (/\bnon-?metro(?:politan)? county\b/.test(text)) bags.ruralRule = 'nonmetro-county';
@@ -181,6 +205,7 @@ function addPlans(text: string, bags: Bags) {
   const narrowed = withoutSchoolMenus(text);
   for (const sentence of narrowed.split(/(?<=[.!?])\s+/)) {
     if (/\b(is excluded|are excluded|not eligible|ineligible|does not include|not included)\b/.test(sentence)) continue;
+    if (/\bany\b/.test(sentence) && /\bsuch as\b|\betc\b/.test(sentence)) continue;
     let hits = planHits(sentence);
     if (hits.length >= 3 || (hits.length >= 2 && /\bsuch as\b|\bcareers include\b/.test(sentence))) {
       bags.fieldMenu = true;
@@ -221,14 +246,14 @@ function planHits(sentence: string): string[] {
   add('aviation management', /\baviation management\b|\bdispatch/.test(sentence));
   add('STEM', /\bstem\b|\bengineering\b/.test(sentence));
   add('healthcare', /\bhealthcare career\b|\bhealth care career\b|\bnursing\b|\bhealth sciences?\b|\bpre-med\b|\bmedical career\b/.test(sentence));
-  add('skilled trades', /\bskilled trades?\b|\bvocational\b|\btrade program\b|\btrade school\b|\bhvac\b|\bweld(?:er|ing)\b|\blineman\b|\bconstruction\b|\bcertificate program\b|\bcraft\b|\btechnical programs?\b|\btrades\b/.test(sentence));
+  add('skilled trades', /\bskilled trades?\b|\bvocational\b|\btrade program\b|\btrade school\b|\bhvac\b|\bweld(?:er|ing)\b|\blineman\b|\bconstruction\b|\bcertificate program\b|\bcraft\b|\btechnical programs?\b|\btrades\b|\bautomotive\b|\bdiesel\b/.test(sentence));
   add('two-year college', /\btwo years or less\b|\btwo-year\b|\b2-year\b|\bassociate degree\b|\bassociate program\b/.test(sentence));
-  add('teaching', /\beducation career\b|\bmajor in education\b|\bplanning to teach\b|\bearly childhood\b|\beducation teacher\b|\bwork with children\b/.test(sentence));
-  add('agriculture', /\bagricultur|\bfarming\b|\bnatural resources\b|\bforestry\b|\bconservation\b/.test(sentence));
+  add('teaching', /\beducation career\b|\bmajor in education\b|\bplanning to teach\b|\bearly childhood\b|\beducation teacher\b|\bwork with children\b|\bag ed\b|\bagricultural education\b/.test(sentence));
+  add('agriculture', /\bagricultur|\bag ed\b|\bfarming\b|\bnatural resources\b|\bforestry\b|\bconservation\b/.test(sentence));
   add('business', /\bbusiness\b|\bfinance\b|\baccounting\b/.test(businessText));
-  add('law', /\bpre-law\b|\blaw school\b|\blegal studies\b|\bcriminal justice\b/.test(sentence));
+  add('law', /\bpre-law\b|\blaw school\b|\blegal studies\b|\bcriminal justice\b|\blaw & public safety\b|\blaw and public safety\b/.test(sentence));
   add('arts', /\bart or music\b|\bfine arts?\b|\btheatre\b|\btheater\b|\bmajor in art\b|\bin music\b|\bmusic degree\b/.test(sentence));
-  add('public service', /\blaw enforcement\b|\bsocial work\b|\bpublic service\b/.test(sentence));
+  add('public service', /\blaw enforcement\b|\bsocial work\b|\bpublic service\b|\bpublic safety\b/.test(sentence));
   add('transportation', /\bdegree in (?:a |an )?(?:[\w-]+ ){0,3}transportation\b|\btransportation(?:-related)? (?:industry|field|degree|major|career)\b/.test(sentence));
   return hits;
 }
@@ -285,7 +310,7 @@ function addFamily(text: string, bags: Bags) {
     push(bags.familyTies, 'military');
   }
   if (/first responder|game warden|highway patrol|sheriff|police officer|firefighter/.test(text)) push(bags.familyTies, 'first responder');
-  if (/\bunion\b/.test(text.replace(/credit unions?/g, ' '))) push(bags.familyTies, 'union');
+  if (/\bunion\b/.test(text.replace(/credit unions?/g, ' ').replace(/union league/g, ' '))) push(bags.familyTies, 'union');
   if (/farm bureau member/.test(text)) push(bags.familyTies, 'farm bureau');
   if (/electric co-op|electric coop|co-op member|regional co-op/.test(text)) push(bags.familyTies, 'electric co-op');
   if (/credit union member|member of .{0,40}credit union/.test(text)) push(bags.familyTies, 'credit union');
@@ -327,6 +352,8 @@ function addLife(text: string, bags: Bags) {
 }
 
 function addGender(text: string, bags: Bags) {
+  text = text.replace(/women['’]s committee|women in aviation/g, ' ');
+  if (/both boys and girls|boys and girls|men and women|women and men|male and female|female and male|any gender|all genders/.test(text)) return;
   if (/\bnon-?binary\b/.test(text)) push(bags.gender, 'nonbinary');
   if (/\btransgender\b/.test(text)) push(bags.gender, 'transgender');
   if (/gender-diverse/.test(text)) push(bags.gender, 'gender-diverse');
@@ -335,8 +362,13 @@ function addGender(text: string, bags: Bags) {
 }
 
 function findPlace(raw: string): Place | null {
-  const text = raw.toLowerCase();
+  const text = stripStateLists(raw.toLowerCase())
+    .replace(/turn[^.]{0,140}guidance counselor/g, ' ')
+    .replace(/on u\.s\. soil/g, ' ');
   if (!text.trim()) return null;
+  if (/u\.s\. citizens/.test(text) && /stars institutions/.test(text)) {
+    return { scope: 'national', level: 6, phrase: 'Students across the United States' };
+  }
   const schools = listedSchools(text);
   if (schools.length > 0) return placeFromSchools(schools);
   if (/whitefish (?:independent )?high|whitefish independent/.test(text)) {
@@ -348,7 +380,8 @@ function findPlace(raw: string): Place | null {
       ? { scope: 'flathead', level: 2, phrase: 'Only Flathead County students' }
       : { scope: 'regional', level: 3, phrase: 'Only students from a few Montana counties' };
   }
-  if (/flathead electric/.test(text) && /service area|flathead electric member|be a flathead electric/.test(text) && !/regional co-op/.test(text)) {
+  if ((/flathead electric/.test(text) && /service area|flathead electric member|be a flathead electric/.test(text) && !/regional co-op/.test(text))
+    || /member of flathead electric|served by the co-op|served by flathead electric|service territory of flathead electric|flathead electric service area|co-op's service area|co-op service area/.test(text)) {
     return { scope: 'flathead', level: 2, phrase: 'Only students in the Flathead Electric service area' };
   }
   if (/flathead county|flathead valley high|in flathead county|flathead valley/.test(text)) {
@@ -369,6 +402,14 @@ function findPlace(raw: string): Place | null {
   if (/\bin texas\b|texas high school/.test(text)) return { scope: 'regional', level: 4, phrase: 'Only Texas students' };
   if (/\bfrom maine\b|maine students/.test(text)) return { scope: 'regional', level: 4, phrase: 'Only Maine students' };
   if (/morris county|new jersey/.test(text)) return { scope: 'regional', level: 3, phrase: 'Only students in that New Jersey area' };
+  if (/helena area high school/.test(text)) return { scope: 'regional', level: 3, phrase: 'Only students from Helena area high schools' };
+  const countyLimit = text.match(/\b(?:residents?|students?|seniors?|graduates?) (?:of|from) ([a-z][a-z' .-]{2,70}? county)\b/);
+  if (countyLimit && !/flathead|lake county|lincoln|missoula|ravalli|sanders/.test(countyLimit[1])) {
+    const countyName = countyLimit[1].replace(/\b[a-z]/g, (letter) => letter.toUpperCase());
+    return { scope: 'regional', level: 3, phrase: `Only students in ${countyName}` };
+  }
+  const otherState = otherStatePlace(text);
+  if (otherState) return otherState;
   if (/bozeman/.test(text)) return { scope: 'regional', level: 3, phrase: 'Only students in Bozeman' };
   if (/montana tech/.test(text) && !/flathead electric/.test(text)) {
     return { scope: 'regional', level: 3, phrase: 'Only Montana Tech students' };
@@ -376,7 +417,7 @@ function findPlace(raw: string): Place | null {
   if (/montana state university|accepted to msu\b/.test(text)) {
     return { scope: 'regional', level: 3, phrase: 'Only Montana State University students' };
   }
-  if (/university of montana/.test(text)) {
+  if (/university of montana/.test(text) && !/stars institutions/.test(text)) {
     return { scope: 'regional', level: 3, phrase: 'Only University of Montana students' };
   }
   if (/wyoming/.test(text) && /montana|idaho/.test(text)) {
@@ -388,6 +429,67 @@ function findPlace(raw: string): Place | null {
   }
   if (/\bany student\b|\bany state\b|\bunited states\b|\bu\.s\./.test(text)) {
     return { scope: 'national', level: 6, phrase: 'Students across the United States' };
+  }
+  return null;
+}
+
+function stripStateLists(text: string): string {
+  const names = 'alabama|alaska|american samoa|arizona|arkansas|california|colorado|connecticut|delaware|florida|georgia|guam|hawaii|idaho|illinois|indiana|iowa|kansas|kentucky|louisiana|maine|maryland|massachusetts|michigan|minnesota|mississippi|missouri|montana|nebraska|nevada|new hampshire|new jersey|new mexico|new york|north carolina|north dakota|ohio|oklahoma|oregon|pennsylvania|puerto rico|rhode island|south carolina|south dakota|tennessee|texas|utah|vermont|virginia|washington|west virginia|wisconsin|wyoming';
+  return text.replace(new RegExp(`(?:\\b(?:${names})\\b[\\s,]*){6,}`, 'g'), ' ');
+}
+
+function otherStatePlace(text: string): Place | null {
+  const states: Array<[string, string]> = [
+    ['district of columbia', 'the District of Columbia'],
+    ['north carolina', 'North Carolina'],
+    ['south carolina', 'South Carolina'],
+    ['north dakota', 'North Dakota'],
+    ['south dakota', 'South Dakota'],
+    ['west virginia', 'West Virginia'],
+    ['new hampshire', 'New Hampshire'],
+    ['new mexico', 'New Mexico'],
+    ['new york', 'New York'],
+    ['rhode island', 'Rhode Island'],
+    ['alaska', 'Alaska'],
+    ['alaskan', 'Alaska'],
+    ['california', 'California'],
+    ['alabama', 'Alabama'],
+    ['arizona', 'Arizona'],
+    ['arkansas', 'Arkansas'],
+    ['colorado', 'Colorado'],
+    ['connecticut', 'Connecticut'],
+    ['delaware', 'Delaware'],
+    ['florida', 'Florida'],
+    ['georgia', 'Georgia'],
+    ['hawaii', 'Hawaii'],
+    ['idaho', 'Idaho'],
+    ['illinois', 'Illinois'],
+    ['indiana', 'Indiana'],
+    ['iowa', 'Iowa'],
+    ['kansas', 'Kansas'],
+    ['kentucky', 'Kentucky'],
+    ['louisiana', 'Louisiana'],
+    ['maryland', 'Maryland'],
+    ['massachusetts', 'Massachusetts'],
+    ['michigan', 'Michigan'],
+    ['minnesota', 'Minnesota'],
+    ['mississippi', 'Mississippi'],
+    ['missouri', 'Missouri'],
+    ['nebraska', 'Nebraska'],
+    ['nevada', 'Nevada'],
+    ['oklahoma', 'Oklahoma'],
+    ['oregon', 'Oregon'],
+    ['pennsylvania', 'Pennsylvania'],
+    ['tennessee', 'Tennessee'],
+    ['utah', 'Utah'],
+    ['vermont', 'Vermont'],
+    ['virginia', 'Virginia'],
+    ['washington', 'Washington'],
+    ['wisconsin', 'Wisconsin'],
+  ];
+  for (const [pattern, name] of states) {
+    const re = new RegExp(`\\b(?:residents? of(?: the state of)?|high school students? (?:in|from)|must be an?|must be) ${pattern}\\b|\\b${pattern} residents?\\b`);
+    if (re.test(text)) return { scope: 'regional', level: 4, phrase: `Only ${name} students` };
   }
   return null;
 }
@@ -568,9 +670,10 @@ function healthClause(tag: string): string {
 
 function competitionScore(level: PoolLevel, bags: Bags, gpa: number | null): number {
   const [low, high] = SCORE_BANDS[level];
+  const ruralNiche = Boolean(bags.ruralRule && bags.ruralRule !== 'none');
   const groups = [bags.sports, bags.clubs, bags.heritage, bags.faith, bags.familyTies, bags.plans, bags.health, bags.lifeSituation, bags.gender]
     .filter((list) => list.length > 0).length
-    + (bags.firstGen ? 1 : 0) + (bags.needBased ? 1 : 0) + (bags.ruralRule ? 1 : 0);
+    + (bags.firstGen ? 1 : 0) + (bags.needBased ? 1 : 0) + (ruralNiche ? 1 : 0);
   let gpaCut = 0;
   if (gpa !== null && gpa >= 3.5) gpaCut = 2;
   else if (gpa !== null && gpa >= 3) gpaCut = 1;
@@ -581,7 +684,7 @@ function hasNiche(bags: Bags): boolean {
   return Boolean(
     bags.sports.length || bags.clubs.length || bags.heritage.length || bags.faith.length || bags.familyTies.length
     || bags.plans.length || bags.health.length || bags.lifeSituation.length || bags.gender.length
-    || bags.firstGen || bags.needBased || bags.ruralRule,
+    || bags.firstGen || bags.needBased || (bags.ruralRule !== null && bags.ruralRule !== 'none'),
   );
 }
 
@@ -686,7 +789,8 @@ function usableSentences(text: string): string[] {
     .split(/(?<=[.!?])\s+/)
     .map((sentence) => sentence.trim())
     .filter(Boolean)
-    .filter((sentence) => !/does not (state|name|give|list|post|say)|could not be read|examples of past|past scholarships|preference|preferred|priority goes to|not stated|not named|next window|does not have to|do not have to|not have to be/i.test(sentence));
+    .filter((sentence) => !/does not (state|name|give|list|post|say)|could not be read|examples of past|past scholarships|preference|preferred|priority goes to|not stated|not named|next window|does not have to|do not have to|not have to be|regardless of race|regardless of ethnicity/i.test(sentence))
+    .filter((sentence) => !/\b(she|he) (became|bought|earned|joined|worked|was|qualified|went)\b/i.test(sentence));
 }
 
 function stripName(text: string, name: string): string {
@@ -694,15 +798,15 @@ function stripName(text: string, name: string): string {
   return text.split(name).join(' ');
 }
 
-function essayFlag(award: TaggableAward): boolean | null {
-  const text = `${award.name} ${award.summary ?? ''} ${award.eligibility.audience}`;
+function essayFlag(award: TaggableAward, extra = ''): boolean | null {
+  const text = `${award.name} ${award.summary ?? ''} ${award.eligibility.audience} ${extra}`;
   if (/\bno[ -]?essay\b/i.test(text)) return false;
   if (/\b(essay|personal statement)\b/i.test(text)) return true;
   return null;
 }
 
-function renewableFlag(award: TaggableAward): boolean | null {
-  const text = `${award.name} ${award.summary ?? ''} ${award.eligibility.audience}`;
+function renewableFlag(award: TaggableAward, extra = ''): boolean | null {
+  const text = `${award.name} ${award.summary ?? ''} ${award.eligibility.audience} ${extra}`;
   if (/\b(non-renewable|nonrenewable|not renewable)\b/i.test(text)) return false;
   if (/\brenewable\b|\bcan renew\b|\brenew for\b|\brenewed\b|reapply each year|reapply annually|option to reapply/i.test(text)) return true;
   return null;

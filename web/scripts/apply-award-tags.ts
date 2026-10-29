@@ -1,11 +1,15 @@
 import fs from 'node:fs';
 import crypto from 'node:crypto';
 import { AWARD_TAG_KEYS, type AwardTagKey } from '../src/lib/awardTagSchema';
-import { deriveAwardTags, step3Categories, type DeriveResult, type TaggableAward } from '../src/lib/awardTags';
+import { deriveAwardTags, step3Categories, type DeriveResult, type PageRead, type TaggableAward } from '../src/lib/awardTags';
 
 const catalogPath = 'fixtures/r3/catalog-v1.json';
 const reportPath = 'fixtures/r3/p1-tagging-report.md';
 const pinPath = 'fixtures/r3/pin.json';
+const readsPath = 'fixtures/r3/p1-page-reads.json';
+const pageReads = fs.existsSync(readsPath)
+  ? (JSON.parse(fs.readFileSync(readsPath, 'utf8')) as { reads: Record<string, PageRead & { url?: string }> }).reads
+  : {};
 const bundle = JSON.parse(fs.readFileSync(catalogPath, 'utf8')) as {
   catalog: { awards: Array<TaggableAward & Record<string, unknown>> };
   connections: Array<{ answerId: string; awardId: string }>;
@@ -21,7 +25,9 @@ for (const connection of [...bundle.connections, ...relevance.connections, ...co
 
 const rows: Array<{ award: TaggableAward; result: DeriveResult }> = [];
 for (const award of bundle.catalog.awards) {
-  const result = deriveAwardTags(award, linkIds.get(award.publicId) ?? []);
+  const stored = pageReads[award.publicId];
+  const page: PageRead | null = stored ? { loaded: stored.loaded, text: stored.text } : null;
+  const result = deriveAwardTags(award, linkIds.get(award.publicId) ?? [], page);
   for (const key of AWARD_TAG_KEYS) award[key] = result.tags[key];
   rows.push({ award, result });
 }
@@ -42,9 +48,11 @@ function renderReport(items: Array<{ award: TaggableAward; result: DeriveResult 
   const lines: string[] = [];
   lines.push('# Phase 1 award tags');
   lines.push('');
-  lines.push('Each award now carries its own tags. The tags come from the award name, summary, and eligibility text. A step 3 link is kept in the old files, but it is copied onto the award only when that text supports it.');
+  lines.push('Each award now carries its own tags. The tags come from the award name, summary, and eligibility text. When an award had no place, its official page was opened and the rules on that page were added. A step 3 link is kept in the old files, but it is copied onto the award only when that text supports it.');
   lines.push('');
   lines.push('Checked by is `derived` for every award. A person has not confirmed these tags yet.');
+  lines.push('');
+  lines.push('If a page states no state or location limit, the place is national and the note is `no location limit listed`. `ruralRule` is `none` when the page does not state a rural preference.');
   lines.push('');
   lines.push('Pool level 1 is Whitefish only. Level 2 is Flathead County. Level 3 is a smaller area than one whole state. Level 4 is one whole state. Level 5 is bigger than one state, or open to the whole country but only for a specific group. Level 6 is open across the United States. A lower competition score means a smaller pool. Scores stay inside the band for that level, so local awards stay ahead of national ones.');
   lines.push('');
@@ -58,6 +66,33 @@ function renderReport(items: Array<{ award: TaggableAward; result: DeriveResult 
     for (const [value, count] of countsFor(items, key)) lines.push(`- ${value}: ${count}`);
     lines.push('');
   }
+  const failed = items.filter((item) => item.result.notes.some((note) => note === 'The page did not load.'));
+  const unread = items.filter((item) => item.result.notes.some((note) => note === 'The page loaded but this award\'s rules were not on it.'));
+  lines.push('## Pages that did not load');
+  lines.push('');
+  lines.push(`${failed.length} awards. The place stays null because the official page did not load.`);
+  lines.push('');
+  const failedUrls = new Map<string, string[]>();
+  for (const item of failed) {
+    const url = pageReads[item.award.publicId]?.url ?? 'unknown url';
+    const names = failedUrls.get(url) ?? [];
+    names.push(item.award.name);
+    failedUrls.set(url, names);
+  }
+  for (const [url, names] of [...failedUrls.entries()].sort((a, b) => a[0].localeCompare(b[0]))) {
+    lines.push(`- ${url}`);
+    for (const name of names.sort((a, b) => a.localeCompare(b))) lines.push(`  - ${name}`);
+  }
+  lines.push('');
+  lines.push('## Pages that loaded but did not show this award\'s rules');
+  lines.push('');
+  lines.push(`${unread.length} awards. The page opened, but the award's own rules were not on it, so the place stays null.`);
+  lines.push('');
+  for (const item of unread.sort((a, b) => a.award.name.localeCompare(b.award.name))) {
+    const url = pageReads[item.award.publicId]?.url ?? 'unknown url';
+    lines.push(`- ${item.award.name} | ${url}`);
+  }
+  lines.push('');
   const uncertain = items.filter((item) => item.result.notes.length > 0).sort((a, b) => a.award.name.localeCompare(b.award.name));
   lines.push('## Awards left uncertain');
   lines.push('');

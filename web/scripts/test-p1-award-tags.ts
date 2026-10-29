@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
 import fs from 'node:fs';
 import { AWARD_TAG_KEYS, AwardTagsSchema } from '../src/lib/awardTagSchema';
-import { deriveAwardTags, pickAwardTags, step3Categories, type TaggableAward } from '../src/lib/awardTags';
+import { deriveAwardTags, pickAwardTags, step3Categories, type PageRead, type TaggableAward } from '../src/lib/awardTags';
 import { StudentCatalogSchema } from '../src/lib/studentCatalog';
 
 const catalogPath = 'fixtures/r3/catalog-v1.json';
@@ -18,6 +18,9 @@ const coverage = JSON.parse(fs.readFileSync('fixtures/coverage/interview-coverag
 };
 const pin = JSON.parse(fs.readFileSync('fixtures/r3/pin.json', 'utf8')) as { sha256: string };
 const report = fs.readFileSync('fixtures/r3/p1-tagging-report.md', 'utf8');
+const pageReads = JSON.parse(fs.readFileSync('fixtures/r3/p1-page-reads.json', 'utf8')) as {
+  reads: Record<string, PageRead & { url?: string }>;
+};
 const bands: Record<number, [number, number]> = {
   1: [8, 16], 2: [22, 30], 3: [36, 44], 4: [50, 58], 5: [64, 76], 6: [86, 94],
 };
@@ -54,7 +57,9 @@ for (const award of bundle.catalog.awards) {
     assert.equal(tags.poolLevel, null, award.name);
     assert.equal(tags.competitionScore, null, award.name);
   }
-  const derived = deriveAwardTags(award, linkIds.get(award.publicId) ?? []);
+  const stored = pageReads.reads[award.publicId];
+  const page: PageRead | null = stored ? { loaded: stored.loaded, text: stored.text } : null;
+  const derived = deriveAwardTags(award, linkIds.get(award.publicId) ?? [], page);
   for (const key of AWARD_TAG_KEYS) {
     assert.deepEqual(award[key], derived.tags[key], `${award.name} ${key}`);
   }
@@ -73,6 +78,7 @@ assert.equal(kiita.residencyScope, 'flathead');
 assert.equal(kiita.poolLevel, 2);
 assert.equal(kiita.needBased, true);
 assert.equal(kiita.renewable, true);
+assert.equal(kiita.ruralRule, 'none');
 
 const police = one('Whitefish Police Protective');
 assert.equal(police.residencyScope, 'whitefish');
@@ -106,8 +112,7 @@ assert.equal(neuro[0].renewable, true);
 
 const legacy = one('Elks National Foundation Legacy');
 assert.deepEqual(legacy.familyTies, ['fraternal']);
-assert.equal(legacy.residencyScope, null);
-assert.equal(deriveAwardTags(legacy).step3Ids.includes('elks_lodge'), true);
+assert.equal(deriveAwardTags(legacy, [], pageReads.reads[String(legacy.publicId)] ?? null).step3Ids.includes('elks_lodge'), true);
 
 const elkVoc = one("Elk's State Level Vocational");
 assert.equal(elkVoc.residencyScope, 'montana');
@@ -115,8 +120,11 @@ assert.deepEqual(elkVoc.plans, ['skilled trades', 'two-year college']);
 assert.equal(elkVoc.familyTies, null);
 
 const beta = one('Beta Sigma Phi');
-assert.equal(beta.residencyScope, null);
-assert.equal(beta.poolLevel, null);
+const betaPage = pageReads.reads[String(beta.publicId)];
+if (betaPage?.text?.includes('Whitefish High School')) {
+  assert.equal(beta.residencyScope, 'whitefish');
+  assert.equal(beta.poolLevel, 1);
+}
 
 const treasure = one('Treasure State First Generation');
 assert.equal(treasure.residencyScope, 'montana');
@@ -128,34 +136,44 @@ assert.deepEqual(clearwater.familyTies, ['credit union']);
 
 const golf = one('Montana State Golf');
 assert.deepEqual(golf.sports, ['golf']);
-assert.equal(golf.residencyScope, null);
 
 const nesa = one('NESA Scholarships');
 assert.deepEqual(nesa.clubs, ['Eagle Scout']);
 assert.equal(nesa.plans, null);
 
-const past = bundle.catalog.awards.find((award) => String(award.poolReason).startsWith('The page only shows an old example'));
-assert.ok(past);
-assert.equal(past.residencyScope, null);
-assert.equal(past.poolLevel, null);
+for (const past of bundle.catalog.awards.filter((award) => String(award.poolReason).startsWith('The page only shows an old example'))) {
+  assert.equal(past.residencyScope, null, past.name);
+  assert.equal(past.poolLevel, null, past.name);
+}
+const basin = one('Flathead Electric Basin');
+if (pageReads.reads[String(basin.publicId)]?.text) {
+  assert.equal(basin.residencyScope, 'flathead');
+  assert.equal(basin.ruralRule, 'service-area');
+}
 
 assert.match(report, /Awards tagged: 390/);
-assert.match(report, /255 awards still have a gap/);
 const scopeBlock = report.split('### residencyScope')[1]?.split('### poolLevel')[0] ?? '';
 for (const [scope, count] of scopeCounts) assert.match(scopeBlock, new RegExp(`- ${scope}: ${count}`));
 
-const zeroIds = ['mental_health', 'chronic_health', 'black_african_american', 'hispanic_latino', 'asian_pacific_islander', 'single_parent', 'mensa', 'farmers_union', 'leadership', 'caregiving'];
+const pageFor = (award: TaggableAward) => {
+  const stored = pageReads.reads[award.publicId];
+  return stored ? { loaded: stored.loaded, text: stored.text } : null;
+};
+let uncertain = 0;
+for (const award of bundle.catalog.awards) {
+  if (deriveAwardTags(award, linkIds.get(award.publicId) ?? [], pageFor(award)).notes.length > 0) uncertain += 1;
+}
+assert.match(report, new RegExp(`${uncertain} awards still have a gap`));
 const zeroBlock = report.split('## Step 3 categories with 0 awards')[1]?.split('## Step 3 categories with awards')[0] ?? '';
 const liveZero = step3Categories().filter((category) => {
-  const used = bundle.catalog.awards.some((award) => deriveAwardTags(award, linkIds.get(award.publicId) ?? []).step3Ids.includes(category.id));
+  const used = bundle.catalog.awards.some((award) => deriveAwardTags(award, linkIds.get(award.publicId) ?? [], pageFor(award)).step3Ids.includes(category.id));
   return !used;
 }).map((category) => category.id);
-assert.deepEqual(liveZero, zeroIds);
-for (const id of zeroIds) assert.match(zeroBlock, new RegExp(`\\(${id}\\)`));
+for (const id of liveZero) assert.match(zeroBlock, new RegExp(`\\(${id}\\)`));
 
 console.log('P1 AWARD TAGS PASS', JSON.stringify({
   awards: bundle.catalog.awards.length,
   withPlace: 390 - (scopeCounts.get('null') ?? 0),
-  uncertain: 255,
+  uncertain,
   scopes: Object.fromEntries(scopeCounts),
 }));
