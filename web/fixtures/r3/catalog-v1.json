@@ -18,18 +18,18 @@
   },
   "catalog": {
     "schemaVersion": "1.0.0",
-    "catalogRevision": "fdd1815b76e10f6e4b0ee815829ffe9415807dd5e128c7c0ab78c707a4a9eace",
+    "catalogRevision": "a0ab54be2b16be4817be65754e78be0c35bdf1fa205c220716a44fa3b6c30961",
     "counts": {
-      "sources": 463,
+      "sources": 488,
       "portals": 21,
-      "awards": 415,
+      "awards": 440,
       "applicationGroups": 4,
-      "cycles": 415,
+      "cycles": 440,
       "activeCycles": 119,
       "upcomingCycles": 157,
       "closedCycles": 98,
       "unavailableCycles": 0,
-      "unknownCycles": 41,
+      "unknownCycles": 66,
       "minimumObservedRecipientSlots": 71
     },
     "awards": [
@@ -26829,6 +26829,1581 @@
         "essayRequired": null,
         "renewable": null,
         "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-388b65decea5",
+        "name": "Montana High School Rodeo Scholarships",
+        "summary": "The Montana high school rodeo page lists 2026 scholarship recipients, including hall awards of $3,000 for seniors who compete in rodeo. It does not post the 2027 application dates. Checked on October 29, 2026.",
+        "amount": {
+          "label": "$3,000",
+          "minimum": 3000,
+          "maximum": 3000,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "Montana high school seniors who compete in rodeo.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "2027 dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "MHSRA scholarship forms",
+          "url": "https://www.mhsra.org/scholarships",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-388b65decea5"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.mhsra.org/scholarships",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "montana",
+        "poolLevel": 4,
+        "competitionScore": 55,
+        "poolReason": "Montana students who play rodeo can apply.",
+        "ruralRule": "none",
+        "sports": [
+          "rodeo"
+        ],
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-9c44b840ed10",
+        "name": "Mary Naegeli Memorial Tree Farm Scholarship",
+        "summary": "The Montana Tree Farm page says the Mary Naegeli Memorial Scholarship is for a Montana resident in college full time with a 2.5 GPA and an interest in forestry. The deadline line says May 31 and does not name the year. The page does not show a dollar amount. Checked on October 29, 2026.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "Montana residents studying forestry.",
+          "minimumGpa": 2.5,
+          "schoolTypes": [],
+          "focus": "Forestry"
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Year not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Montana Tree Farm scholarship",
+          "url": "https://www.treefarmsystem.org/montana-awards-and-scholarship",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-9c44b840ed10"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.treefarmsystem.org/montana-awards-and-scholarship",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "montana",
+        "poolLevel": 4,
+        "competitionScore": 55,
+        "poolReason": "Montana students who are studying agriculture or nature can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": [
+          "agriculture"
+        ],
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-aa2e2be9bfdd",
+        "name": "Hopa Mountain Vocational Scholarship",
+        "summary": "Hopa Mountain lists a $2,000 need-based vocational scholarship for students entering a trade program. Priority goes to students who were in foster care, kinship care, or were homeless. The page says to apply by May 1, 2026. It does not post a 2027 date. Checked on October 29, 2026.",
+        "amount": {
+          "label": "$2,000",
+          "minimum": 2000,
+          "maximum": 2000,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "Montana students entering a vocational program who need help paying for college.",
+          "minimumGpa": null,
+          "schoolTypes": [
+            "trade"
+          ],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "2027 dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Hopa Mountain Scholars of Promise",
+          "url": "https://www.hopamountain.org/scholars-of-promise",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-aa2e2be9bfdd"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.hopamountain.org/scholars-of-promise",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "montana",
+        "poolLevel": 4,
+        "competitionScore": 52,
+        "poolReason": "Montana students who are in the skilled trades and need help paying for college can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": [
+          "skilled trades"
+        ],
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": true,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-b1af16516e95",
+        "name": "UMPS CARE All-Star College Scholarship",
+        "summary": "UMPS CARE awards up to $10,000 a year, and up to $40,000 over four years, to one student who was adopted at or after age 13 or who left foster care for a permanent guardianship. A 2.5 GPA is required. The page says the current application is closed and offers a form for notice when the 2027 application opens. Checked on October 29, 2026.",
+        "amount": {
+          "label": "Up to $10,000 a year",
+          "minimum": null,
+          "maximum": 10000,
+          "currency": "USD",
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "Students across the United States who were adopted at or after age 13.",
+          "minimumGpa": 2.5,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "2027 dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "All-Star College Scholarship",
+          "url": "https://www.umpscare.com/all-star-college-scholarship",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-b1af16516e95"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.umpscare.com/all-star-college-scholarship",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "national",
+        "poolLevel": 5,
+        "competitionScore": 73,
+        "poolReason": "Students across the United States who were adopted or were in foster care can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": [
+          "adopted",
+          "foster care"
+        ],
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-ba869396fe69",
+        "name": "American Legion Oratorical Contest Montana",
+        "summary": "The Montana American Legion oratorical contest is a Constitution speech contest for high school students under age 20. Department awards are $5,000, $1,500, $500, and $500. The page says the 2027 schedule is not posted. Checked on October 29, 2026.",
+        "amount": {
+          "label": "Up to $5,000",
+          "minimum": 500,
+          "maximum": 5000,
+          "currency": "USD",
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "Montana high school students under age 20.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "2027 dates not posted",
+          "year": 2027,
+          "opens": null,
+          "closes": null,
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "offline",
+          "label": "Contact the Montana American Legion",
+          "url": "https://www.mtlegion.org/oratoricalcontest.html",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-ba869396fe69"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.mtlegion.org/oratoricalcontest.html",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "montana",
+        "poolLevel": 4,
+        "competitionScore": 58,
+        "poolReason": "Montana students can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-71cad5952092",
+        "name": "American Indian College Fund Scholarships",
+        "summary": "The American Indian College Fund awards scholarships to enrolled Native American students. High school students apply in the last semester of senior year. The page says the application starts February 1 each year and that college students should apply by May 31 for priority review. Awards average $2,000 to $3,000. It does not name a 2027 close date for high school seniors. Checked on October 29, 2026.",
+        "amount": {
+          "label": "$2,000 to $3,000",
+          "minimum": 2000,
+          "maximum": 3000,
+          "currency": "USD",
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "Enrolled Native American students across the United States.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "High school deadline not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "American Indian College Fund",
+          "url": "https://collegefund.org/students/scholarships/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-71cad5952092"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://collegefund.org/students/scholarships/",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "national",
+        "poolLevel": 5,
+        "competitionScore": 73,
+        "poolReason": "Students across the United States who are Native American can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": [
+          "Native American"
+        ],
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-685eaa92156c",
+        "name": "Glacier Art Museum Mark Norby Memorial Scholarship",
+        "summary": "The Glacier High School list and the museum site name a visual-art scholarship for a Flathead County senior. The museum site did not return the 2027 rules on October 29, 2026. A 2026 requirements file is linked from search, and that cycle's April 10, 2026 date has passed.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "High school seniors in Flathead County who are studying art.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": "Visual art"
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "2027 dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Glacier Art Museum scholarships",
+          "url": "https://glacierartmuseum.org/scholarships/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-685eaa92156c"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://glacierartmuseum.org/scholarships/",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "flathead",
+        "poolLevel": 2,
+        "competitionScore": 30,
+        "poolReason": "Only Flathead County students can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-70de96c094f3",
+        "name": "NTGCR Scholarship",
+        "summary": "NTGCR says it awards scholarships of $2,500 for full-time students. The page announces spring 2026 recipients and says the application is open. It does not post a 2027 deadline. Checked on October 29, 2026.",
+        "amount": {
+          "label": "$2,500",
+          "minimum": 2500,
+          "maximum": 2500,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "Native American students across the United States.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "2027 deadline not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "NTGCR scholarships",
+          "url": "https://www.ntgcr.com/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-70de96c094f3"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.ntgcr.com/",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "national",
+        "poolLevel": 5,
+        "competitionScore": 73,
+        "poolReason": "Students across the United States who are Native American can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": [
+          "Native American"
+        ],
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-f50cdded7e41",
+        "name": "Grand Lodge of Montana Masonic Scholarship",
+        "summary": "The Montana Masonic Foundation site says it is under construction and does not post scholarship rules, an amount, or dates. Checked on October 29, 2026.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "The page does not say who can apply.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "unknown",
+          "label": "No application posted",
+          "url": "https://www.mtmasonicfoundation.org/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-f50cdded7e41"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.mtmasonicfoundation.org/",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": null,
+        "poolLevel": null,
+        "competitionScore": null,
+        "poolReason": "The page does not say the place.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-7859d00caa82",
+        "name": "MSU Teacher Learning Community Scholarship",
+        "summary": "No official MSU Teacher Learning Community scholarship page was found on October 29, 2026. The addresses that were tried did not load a scholarship.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "The page does not say who can apply.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "unknown",
+          "label": "No application posted",
+          "url": null,
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-7859d00caa82"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": null,
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": null,
+        "poolLevel": null,
+        "competitionScore": null,
+        "poolReason": "The page does not say the place.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-fdf6012f1498",
+        "name": "Montana School Nutrition Association Scholarship",
+        "summary": "No official scholarship page was found on October 29, 2026.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "The page does not say who can apply.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "unknown",
+          "label": "No application posted",
+          "url": null,
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-fdf6012f1498"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": null,
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": null,
+        "poolLevel": null,
+        "competitionScore": null,
+        "poolReason": "The page does not say the place.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-ebba9ca9f152",
+        "name": "David Astle Scholarship",
+        "summary": "No public sponsor page was found on October 29, 2026. The Glacier High School list describes a Flathead County senior sponsored by a current member, with Irish ancestry, for an in-state or Catholic college.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "The official page was not found.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "unknown",
+          "label": "No application posted",
+          "url": null,
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-ebba9ca9f152"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": null,
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "flathead",
+        "poolLevel": 2,
+        "competitionScore": 27,
+        "poolReason": "Only Flathead County students who are connected to a Catholic church can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": [
+          "Catholic"
+        ],
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-ca523f3f0dbc",
+        "name": "Harold Tutvedt Memorial Scholarship",
+        "summary": "No current sponsor page was found on October 29, 2026. The Glacier High School list says the student must attend Montana State University and plan an agriculture career. A 2021 news story named $2,000. That amount was not confirmed for 2026-27.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "Students planning to study agriculture at Montana State University.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": "Agriculture"
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "2027 dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "unknown",
+          "label": "No application posted",
+          "url": null,
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-ca523f3f0dbc"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": null,
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "regional",
+        "poolLevel": 3,
+        "competitionScore": 41,
+        "poolReason": "Only Montana State University students who are studying agriculture or nature can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": [
+          "agriculture"
+        ],
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-21ab35b931ee",
+        "name": "Montana Food Distributors Association Scholarship",
+        "summary": "The address on the school list did not load a scholarship page on October 29, 2026. The list says the student or a parent works in grocery.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "The official page did not load.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "unknown",
+          "label": "Page did not load",
+          "url": "http://www.mfda.biz/index.aspx/dues/Scholarship",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-21ab35b931ee"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "http://www.mfda.biz/index.aspx/dues/Scholarship",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": null,
+        "poolLevel": null,
+        "competitionScore": null,
+        "poolReason": "The page does not say the place.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-91e97d6c3fba",
+        "name": "PNACAC Video Scholarship",
+        "summary": "The PNACAC site loaded on October 29, 2026, and it is a counselor association site. A student video-scholarship page with 2026-27 rules was not found there.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "The student rules were not on the page that loaded.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "unknown",
+          "label": "Student page not found",
+          "url": "https://www.pnacac.org/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-91e97d6c3fba"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.pnacac.org/",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": null,
+        "poolLevel": null,
+        "competitionScore": null,
+        "poolReason": "The page does not say the place.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-9a4aaed70a28",
+        "name": "Reach Higher Montana Design-a-Sticker Scholarship",
+        "summary": "The old Design-a-Sticker addresses on the school list returned a page-not-found result on October 29, 2026. Reach Higher Montana's main site did not show this contest.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "The contest page was not found.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "unknown",
+          "label": "Page not found",
+          "url": "https://reachhighermontana.org/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-9a4aaed70a28"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://reachhighermontana.org/",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": null,
+        "poolLevel": null,
+        "competitionScore": null,
+        "poolReason": "The page does not say the place.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-615c2c524263",
+        "name": "Kalispell Youth Softball Association Scholarship",
+        "summary": "No official KYSA scholarship page was found on October 29, 2026. The school list says it is for a graduating senior who played for KYSA for two or more years.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "The official page was not found.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "unknown",
+          "label": "No application posted",
+          "url": null,
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-615c2c524263"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": null,
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": null,
+        "poolLevel": null,
+        "competitionScore": null,
+        "poolReason": "The page does not say the place.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-dbe0160d5e4f",
+        "name": "MFPE Scholarship",
+        "summary": "The MFPE site loaded on October 29, 2026, and it did not post a student scholarship with an amount or a deadline. The school list says an active member must sponsor the student.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "The page does not say who can apply.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "unknown",
+          "label": "No application posted",
+          "url": "https://www.mfpe.org/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-dbe0160d5e4f"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.mfpe.org/",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": null,
+        "poolLevel": null,
+        "competitionScore": null,
+        "poolReason": "The page does not say the place.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-c71e9e9b198e",
+        "name": "Flathead Education Foundation Scholarship",
+        "summary": "The public form that was found is a 2025 Flathead Education Foundation application for Flathead County graduates, due April 7, 2025, with a 2.5 GPA and financial need. No 2026-27 form was found on October 29, 2026.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "Graduating seniors in Flathead County who need help paying for college.",
+          "minimumGpa": 2.5,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "2027 dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "unknown",
+          "label": "No current application posted",
+          "url": null,
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-c71e9e9b198e"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": null,
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "flathead",
+        "poolLevel": 2,
+        "competitionScore": 27,
+        "poolReason": "Only Flathead County students who need help paying for college can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": true,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-c2a30992d363",
+        "name": "John V. Cooley Scholarship",
+        "summary": "No sponsor page was found on October 29, 2026. The school list says the student plans to study forestry or agriculture.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "The official page was not found.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": "Forestry or agriculture"
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "unknown",
+          "label": "No application posted",
+          "url": null,
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-c2a30992d363"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": null,
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": null,
+        "poolLevel": null,
+        "competitionScore": null,
+        "poolReason": "The page does not say the place. It is for students who are studying agriculture or nature.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": [
+          "agriculture"
+        ],
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-e60a8616de9c",
+        "name": "Flathead County Farmers Union Scholarship",
+        "summary": "No official page was found on October 29, 2026. The school list says the family has had a Farmers Union membership for at least one year.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "Graduating seniors in Flathead County with a Farmers Union family membership.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "unknown",
+          "label": "No application posted",
+          "url": null,
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-e60a8616de9c"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": null,
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "flathead",
+        "poolLevel": 2,
+        "competitionScore": 27,
+        "poolReason": "Only Flathead County students who have a union family tie can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": [
+          "union"
+        ],
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-c929e6b8199a",
+        "name": "Montana PTA Scholarship",
+        "summary": "The Montana PTA site loaded on October 29, 2026, and it did not post a scholarship amount, deadline, or application. The school list says it is for a senior who will teach in a Montana public college.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "The page does not say who can apply.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "unknown",
+          "label": "No application posted",
+          "url": "https://www.montanapta.org/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-c929e6b8199a"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": "https://www.montanapta.org/",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "montana",
+        "poolLevel": 4,
+        "competitionScore": 58,
+        "poolReason": "Montana students can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-c735b8c4c92e",
+        "name": "Five Valley Chorus Sweet Adelines Music Scholarship",
+        "summary": "No official scholarship page was found on October 29, 2026. The school list says the student is a Montana senior who has been in a school music program for at least two years and will continue in music.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "The official page was not found.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": "Music"
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "unknown",
+          "label": "No application posted",
+          "url": null,
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-c735b8c4c92e"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": null,
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "montana",
+        "poolLevel": 4,
+        "competitionScore": 55,
+        "poolReason": "Montana students who are studying art or music can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": [
+          "arts"
+        ],
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-c3c9cbf0e4ee",
+        "name": "Universal Athletic Services Scholarship",
+        "summary": "No official scholarship page was found on October 29, 2026. The school list names Universal Athletic Services and does not give rules.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "The official page was not found.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "unknown",
+          "label": "No application posted",
+          "url": null,
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-c3c9cbf0e4ee"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": null,
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": null,
+        "poolLevel": null,
+        "competitionScore": null,
+        "poolReason": "The page does not say the place.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-e5f48a684b24",
+        "name": "Moose Scholarship",
+        "summary": "No official Moose scholarship page was found on October 29, 2026.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "The official page was not found.",
+          "minimumGpa": null,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Dates not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "unknown",
+          "label": "No application posted",
+          "url": null,
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-e5f48a684b24"
+        ],
+        "verification": {
+          "status": "not_yet_checked",
+          "lastChecked": "2026-10-29",
+          "sourceUrl": null,
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": null,
+        "poolLevel": null,
+        "competitionScore": null,
+        "poolReason": "The page does not say the place.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
       }
     ],
     "sources": [
@@ -31460,6 +33035,256 @@
         "url": "https://www.mt4hfoundation.org/scholarships",
         "access": "public",
         "availability": "partial",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-388b65decea5",
+        "title": "mhsra.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.mhsra.org/scholarships",
+        "access": "public",
+        "availability": "partial",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-9c44b840ed10",
+        "title": "treefarmsystem.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.treefarmsystem.org/montana-awards-and-scholarship",
+        "access": "public",
+        "availability": "partial",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-aa2e2be9bfdd",
+        "title": "hopamountain.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.hopamountain.org/scholars-of-promise",
+        "access": "public",
+        "availability": "partial",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-b1af16516e95",
+        "title": "umpscare.com",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.umpscare.com/all-star-college-scholarship",
+        "access": "public",
+        "availability": "partial",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-ba869396fe69",
+        "title": "mtlegion.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.mtlegion.org/oratoricalcontest.html",
+        "access": "public",
+        "availability": "partial",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-71cad5952092",
+        "title": "collegefund.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://collegefund.org/students/scholarships/",
+        "access": "public",
+        "availability": "partial",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-685eaa92156c",
+        "title": "glacierartmuseum.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://glacierartmuseum.org/scholarships/",
+        "access": "public",
+        "availability": "partial",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-70de96c094f3",
+        "title": "ntgcr.com",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.ntgcr.com/",
+        "access": "public",
+        "availability": "partial",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-f50cdded7e41",
+        "title": "mtmasonicfoundation.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.mtmasonicfoundation.org/",
+        "access": "public",
+        "availability": "partial",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-7859d00caa82",
+        "title": "MSU Teacher Learning Community Scholarship",
+        "recordType": "source",
+        "architecture": "unknown",
+        "url": null,
+        "access": "unknown",
+        "availability": "unknown",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-fdf6012f1498",
+        "title": "Montana School Nutrition Association Scholarship",
+        "recordType": "source",
+        "architecture": "unknown",
+        "url": null,
+        "access": "unknown",
+        "availability": "unknown",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-ebba9ca9f152",
+        "title": "David Astle Scholarship",
+        "recordType": "source",
+        "architecture": "unknown",
+        "url": null,
+        "access": "unknown",
+        "availability": "unknown",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-ca523f3f0dbc",
+        "title": "Harold Tutvedt Memorial Scholarship",
+        "recordType": "source",
+        "architecture": "unknown",
+        "url": null,
+        "access": "unknown",
+        "availability": "unknown",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-21ab35b931ee",
+        "title": "mfda.biz",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "http://www.mfda.biz/index.aspx/dues/Scholarship",
+        "access": "public",
+        "availability": "partial",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-91e97d6c3fba",
+        "title": "pnacac.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.pnacac.org/",
+        "access": "public",
+        "availability": "partial",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-9a4aaed70a28",
+        "title": "reachhighermontana.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://reachhighermontana.org/",
+        "access": "public",
+        "availability": "partial",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-615c2c524263",
+        "title": "Kalispell Youth Softball Association Scholarship",
+        "recordType": "source",
+        "architecture": "unknown",
+        "url": null,
+        "access": "unknown",
+        "availability": "unknown",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-dbe0160d5e4f",
+        "title": "mfpe.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.mfpe.org/",
+        "access": "public",
+        "availability": "partial",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-c71e9e9b198e",
+        "title": "Flathead Education Foundation Scholarship",
+        "recordType": "source",
+        "architecture": "unknown",
+        "url": null,
+        "access": "unknown",
+        "availability": "unknown",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-c2a30992d363",
+        "title": "John V. Cooley Scholarship",
+        "recordType": "source",
+        "architecture": "unknown",
+        "url": null,
+        "access": "unknown",
+        "availability": "unknown",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-e60a8616de9c",
+        "title": "Flathead County Farmers Union Scholarship",
+        "recordType": "source",
+        "architecture": "unknown",
+        "url": null,
+        "access": "unknown",
+        "availability": "unknown",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-c929e6b8199a",
+        "title": "montanapta.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.montanapta.org/",
+        "access": "public",
+        "availability": "partial",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-c735b8c4c92e",
+        "title": "Five Valley Chorus Sweet Adelines Music Scholarship",
+        "recordType": "source",
+        "architecture": "unknown",
+        "url": null,
+        "access": "unknown",
+        "availability": "unknown",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-c3c9cbf0e4ee",
+        "title": "Universal Athletic Services Scholarship",
+        "recordType": "source",
+        "architecture": "unknown",
+        "url": null,
+        "access": "unknown",
+        "availability": "unknown",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-e5f48a684b24",
+        "title": "Moose Scholarship",
+        "recordType": "source",
+        "architecture": "unknown",
+        "url": null,
+        "access": "unknown",
+        "availability": "unknown",
         "awardCount": 1
       }
     ],
