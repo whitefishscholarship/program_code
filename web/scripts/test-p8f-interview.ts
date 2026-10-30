@@ -204,7 +204,11 @@ const listSource = fs.readFileSync(path.join(webRoot, 'src/components/StudentMat
 assert(listSource.includes('Download my list (Excel)'));
 assert(listSource.includes('rel="noopener noreferrer"'));
 assert(!listSource.includes('fetch('));
-assert(!listSource.includes('localStorage'));
+assert.deepEqual(listSource.match(/localStorage/g), ['localStorage', 'localStorage', 'localStorage']);
+assert(listSource.includes('readAwardProgress(window.localStorage)'));
+assert(listSource.includes('writeAwardProgress(window.localStorage, next)'));
+assert(listSource.includes('clearAwardProgress(window.localStorage)'));
+assert(!listSource.includes('localStorage.setItem'));
 assert(browserSource.includes('rel="noopener noreferrer"'));
 assert(clientSource.includes("method: 'GET'"));
 assert(!/InterviewAnswers|answers|request\s*body|body\s*:/.test(clientSource));

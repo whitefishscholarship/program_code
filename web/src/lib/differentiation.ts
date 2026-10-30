@@ -33,6 +33,7 @@ export type DifferentiationGroup = {
   id: string;
   title: string;
   hint: string;
+  layout?: 'pills' | 'questions';
   chips: DifferentiationChip[];
 };
 
@@ -58,24 +59,48 @@ const LABELS: Record<string, string> = {
   baseball: 'Baseball',
   softball: 'Softball',
   cheer: 'Cheer',
-  'speech and debate': 'Speech and debate',
-  drama: 'Drama and theatre',
-  band: 'Band',
-  orchestra: 'Orchestra',
-  choir: 'Choir',
-  chess: 'Chess',
-  'student council': 'Student council or class officer',
-  yearbook: 'Yearbook',
+  'speech and debate': 'Are you in speech and debate?',
+  drama: 'Are you in drama or theatre?',
+  band: 'Are you in band?',
+  orchestra: 'Are you in orchestra?',
+  choir: 'Are you in choir?',
+  chess: 'Are you in a chess club?',
+  'student council': 'Are you in student council or a class officer?',
+  yearbook: 'Are you on the yearbook staff?',
+  FFA: 'Are you in the National FFA Organization (FFA)?',
+  NTHS: 'Are you in the National Technical Honor Society (NTHS)?',
+  DECA: 'Are you in DECA, the marketing student organization?',
+  FBLA: 'Are you in Future Business Leaders of America (FBLA)?',
+  BPA: 'Are you in Business Professionals of America (BPA)?',
+  FCCLA: 'Are you in Family, Career and Community Leaders of America (FCCLA)?',
+  HOSA: 'Are you in HOSA Future Health Professionals?',
+  SkillsUSA: 'Are you in SkillsUSA?',
+  TSA: 'Are you in the Technology Student Association (TSA)?',
+  'National Honor Society': 'Are you in the National Honor Society?',
+  'Eagle Scout': 'Are you an Eagle Scout?',
+  AEA: 'Are you or a parent a member of the Aircraft Electronics Association (AEA)?',
+  AOPA: 'Are you a member of the Aircraft Owners and Pilots Association (AOPA)?',
+  NGPA: 'Are you a member of the National Gay Pilots Association (NGPA)?',
+  WAI: 'Are you a member of Women in Aviation International (WAI)?',
+  LPA: 'Are you a member of Latino Professionals in Aerospace (LPA)?',
+  elks: 'Are you or a parent an Elks member?',
+  rainbow: 'Are you in the Order of the Rainbow for Girls?',
+  'employer:aea-member-company': 'Do you work for an Aircraft Electronics Association member company?',
+  'employer:da-davidson': 'Do you or a parent work for D.A. Davidson?',
+  'employer:glacier-bancorp': 'Do you or a parent work for Glacier Bancorp?',
+  'employer:glacier-restaurant-group': 'Do you or a parent work for Glacier Restaurant Group?',
+  'employer:dc-goodman': 'Does a parent work for D.C. Goodman?',
+  'employer:fiore': 'Does a parent work for Fiore?',
+  'employer:kish-bank': 'Does a parent work for Kish Bank?',
+  'employer:mead-westvaco': 'Does a parent work for Mead/Westvaco?',
   rodeo: 'Rodeo',
   soccer: 'Soccer',
   track: 'Track',
   wrestling: 'Wrestling',
-  employer: 'A parent works for the sponsor',
   military: 'Military family',
   'first responder': 'First responder in the family',
   'electric co-op': 'Electric co-op family',
   'farm bureau': 'Farm Bureau family',
-  fraternal: 'Club like the Elks',
   union: 'Union family',
   'credit union': 'Credit union family',
   'lineman family': 'Lineman in the family',
@@ -94,7 +119,7 @@ const LABELS: Record<string, string> = {
   teaching: 'Teaching',
   law: 'Law',
   arts: 'Art',
-  woman: 'Girl or woman',
+  woman: 'Female',
   nonbinary: 'Nonbinary',
   transgender: 'Transgender',
   'gender-diverse': 'Gender diverse',
@@ -121,7 +146,6 @@ const LABELS: Record<string, string> = {
   'loss of a parent': 'Lost a parent',
   twins: 'Twins',
   true: 'First in my family to go to college',
-  'aviation group': 'Aviation group member',
 };
 
 /** One chip stands in for these catalog club tags. */
@@ -132,8 +156,9 @@ function isAviationClub(value: string): boolean {
   return (AVIATION_GROUP_CLUBS as readonly string[]).includes(value);
 }
 
+/** Older answers used one aviation chip. New answers name each group. */
 export function aviationGroupSelected(clubs: readonly string[]): boolean {
-  return clubs.includes(AVIATION_GROUP_VALUE) || clubs.some(isAviationClub);
+  return clubs.includes(AVIATION_GROUP_VALUE);
 }
 
 export function emptyDifferentiation(): DifferentiationProfile {
@@ -156,7 +181,61 @@ export function chipLabel(value: string): string {
   return LABELS[value] ?? value.replace(/\b[a-z]/g, (letter) => letter.toUpperCase());
 }
 
-type TagSource = Pick<StudentAward, 'residencyScope' | 'ruralRule' | 'firstGen' | ListField>;
+type TagSource = Pick<StudentAward, 'residencyScope' | 'ruralRule' | 'firstGen' | ListField> & {
+  name?: string;
+  summary?: string | null;
+  eligibility?: { audience?: string | null };
+};
+
+type TieQuestion = {
+  field: 'familyTies';
+  value: string;
+  group: 'community' | 'employer';
+  matches: (award: TagSource) => boolean;
+};
+
+function awardBlob(award: TagSource): string {
+  return `${award.name ?? ''} ${award.summary ?? ''} ${award.eligibility?.audience ?? ''}`;
+}
+
+function tieQuestions(): TieQuestion[] {
+  const fraternal = (award: TagSource, pattern: RegExp) => (award.familyTies ?? []).includes('fraternal') && pattern.test(awardBlob(award));
+  const employer = (award: TagSource, pattern: RegExp) => (award.familyTies ?? []).includes('employer') && pattern.test(awardBlob(award));
+  return [
+    { field: 'familyTies', value: 'elks', group: 'community', matches: (award) => fraternal(award, /elk/i) },
+    { field: 'familyTies', value: 'rainbow', group: 'community', matches: (award) => fraternal(award, /rainbow/i) },
+    { field: 'familyTies', value: 'employer:aea-member-company', group: 'employer', matches: (award) => employer(award, /aea member company/i) },
+    { field: 'familyTies', value: 'employer:da-davidson', group: 'employer', matches: (award) => employer(award, /d\.a\. davidson/i) },
+    { field: 'familyTies', value: 'employer:glacier-bancorp', group: 'employer', matches: (award) => employer(award, /glacier bancorp/i) },
+    { field: 'familyTies', value: 'employer:glacier-restaurant-group', group: 'employer', matches: (award) => employer(award, /glacier restaurant group/i) },
+    { field: 'familyTies', value: 'employer:dc-goodman', group: 'employer', matches: (award) => employer(award, /d\.c\. goodman/i) },
+    { field: 'familyTies', value: 'employer:fiore', group: 'employer', matches: (award) => employer(award, /fiore/i) },
+    { field: 'familyTies', value: 'employer:kish-bank', group: 'employer', matches: (award) => employer(award, /kish bank/i) },
+    { field: 'familyTies', value: 'employer:mead-westvaco', group: 'employer', matches: (award) => employer(award, /mead\/westvaco/i) },
+  ];
+}
+
+function clubBucket(value: string): 'school' | 'community' | 'aviation' {
+  if (value === 'LPA' || isAviationClub(value)) return 'aviation';
+  if (value === 'Eagle Scout') return 'community';
+  return 'school';
+}
+
+function sortChips(chips: DifferentiationChip[]): DifferentiationChip[] {
+  return chips.sort((left, right) => left.label.localeCompare(right.label) || left.value.localeCompare(right.value));
+}
+
+function clubQuestionChips(awards: readonly TagSource[], bucket: 'school' | 'community' | 'aviation'): DifferentiationChip[] {
+  return chipsFor('clubs', presentValues(awards, 'clubs').filter((value) => clubBucket(value) === bucket));
+}
+
+function tieQuestionChips(awards: readonly TagSource[], group: 'community' | 'employer'): DifferentiationChip[] {
+  return tieQuestions()
+    .filter((question) => question.group === group && awards.some((award) => question.matches(award)))
+    .map((question) => ({ field: question.field, value: question.value, label: chipLabel(question.value) }));
+}
+
+const HIDDEN_FAMILY = new Set(['employer', 'fraternal']);
 
 function presentValues(awards: readonly TagSource[], field: ListField): string[] {
   const found = new Set<string>();
@@ -170,14 +249,6 @@ function presentValues(awards: readonly TagSource[], field: ListField): string[]
 
 function chipsFor(field: ListField | 'places' | 'firstGen', values: readonly string[]): DifferentiationChip[] {
   return values.map((value) => ({ field, value, label: chipLabel(value) }));
-}
-
-function clubChips(awards: readonly TagSource[]): DifferentiationChip[] {
-  const chips = chipsFor('clubs', presentValues(awards, 'clubs').filter((value) => !isAviationClub(value)));
-  if (awards.some((award) => (award.clubs ?? []).some(isAviationClub))) {
-    chips.push({ field: 'clubs', value: AVIATION_GROUP_VALUE, label: chipLabel(AVIATION_GROUP_VALUE) });
-  }
-  return chips.sort((left, right) => left.label.localeCompare(right.label) || left.value.localeCompare(right.value));
 }
 
 /** Chip groups use only tag values that already appear on catalog awards. */
@@ -214,13 +285,35 @@ export function differentiationGroups(awards: readonly TagSource[]): Differentia
       id: 'family',
       title: 'Family ties',
       hint: 'Pick a tie your family has.',
-      chips: chipsFor('familyTies', presentValues(awards, 'familyTies')),
+      chips: chipsFor('familyTies', presentValues(awards, 'familyTies').filter((value) => !HIDDEN_FAMILY.has(value))),
     },
     {
-      id: 'clubs',
-      title: 'Clubs and activities',
-      hint: 'Pick clubs you belong to.',
-      chips: clubChips(awards),
+      id: 'school-clubs',
+      title: 'School clubs',
+      hint: 'Check a club only if you are in it.',
+      layout: 'questions',
+      chips: sortChips(clubQuestionChips(awards, 'school')),
+    },
+    {
+      id: 'community-orgs',
+      title: 'Community and fraternal organizations',
+      hint: 'Check one only if you or your family belong.',
+      layout: 'questions',
+      chips: sortChips([...clubQuestionChips(awards, 'community'), ...tieQuestionChips(awards, 'community')]),
+    },
+    {
+      id: 'aviation-groups',
+      title: 'Aviation groups',
+      hint: 'Check a group only if you are a member.',
+      layout: 'questions',
+      chips: sortChips(clubQuestionChips(awards, 'aviation')),
+    },
+    {
+      id: 'employers',
+      title: 'Where a parent works',
+      hint: 'Check a workplace only if the question fits your family.',
+      layout: 'questions',
+      chips: sortChips(tieQuestionChips(awards, 'employer')),
     },
     {
       id: 'plans',
@@ -240,7 +333,6 @@ export function differentiationGroups(awards: readonly TagSource[]): Differentia
 export function chipSelected(profile: DifferentiationProfile, chip: DifferentiationChip): boolean {
   if (chip.field === 'firstGen') return profile.firstGen;
   if (chip.field === 'places') return profile.places.includes(chip.value as DifferentiationPlace);
-  if (chip.field === 'clubs' && chip.value === AVIATION_GROUP_VALUE) return aviationGroupSelected(profile.clubs);
   const list = profile[chip.field];
   return Array.isArray(list) && list.includes(chip.value);
 }
@@ -254,12 +346,6 @@ export function toggleDifferentiation(profile: DifferentiationProfile, chip: Dif
       ? profile.places.filter((item) => item !== value)
       : [...profile.places, value];
     return { ...profile, places };
-  }
-  if (chip.field === 'clubs' && chip.value === AVIATION_GROUP_VALUE) {
-    const clubs = aviationGroupSelected(profile.clubs)
-      ? profile.clubs.filter((item) => item !== AVIATION_GROUP_VALUE && !isAviationClub(item))
-      : [...profile.clubs, AVIATION_GROUP_VALUE];
-    return { ...profile, clubs };
   }
   const list = profile[chip.field];
   if (!Array.isArray(list)) return profile;
@@ -287,7 +373,13 @@ export function ruralRuleMatches(award: { ruralRule?: string | null }, profile: 
   return applyRuralAutoTag(profile).places.includes('rural');
 }
 
-type HitAward = Pick<StudentAward, 'residencyScope' | 'ruralRule' | 'firstGen' | ListField>;
+type HitAward = TagSource;
+
+function tieQuestionSelected(profile: DifferentiationProfile, question: TieQuestion): boolean {
+  if (profile.familyTies.includes(question.value)) return true;
+  if (question.value.startsWith('employer:') && profile.familyTies.includes('employer')) return true;
+  return (question.value === 'elks' || question.value === 'rainbow') && profile.familyTies.includes('fraternal');
+}
 
 export function differentiationHits(award: HitAward, profile: DifferentiationProfile): string[] {
   const effective = applyRuralAutoTag(profile);
@@ -299,15 +391,18 @@ export function differentiationHits(award: HitAward, profile: DifferentiationPro
   if (effective.places.includes('flathead') && award.residencyScope === 'flathead') add(chipLabel('flathead'));
   if (effective.places.includes('montana') && award.residencyScope === 'montana') add(chipLabel('montana'));
   if (awardHasRuralRule(award) && effective.places.includes('rural')) add(chipLabel('rural'));
+  const legacyAviation = profile.clubs.includes(AVIATION_GROUP_VALUE);
   for (const field of LIST_FIELDS) {
     const selected = profile[field];
     const values = award[field];
     if (!values) continue;
-    if (field === 'clubs' && aviationGroupSelected(profile.clubs) && values.some(isAviationClub)) add(chipLabel(AVIATION_GROUP_VALUE));
     for (const value of values) {
-      if (field === 'clubs' && isAviationClub(value)) continue;
-      if (selected.includes(value)) add(chipLabel(value));
+      if (field === 'familyTies' && HIDDEN_FAMILY.has(value)) continue;
+      if (selected.includes(value) || (legacyAviation && field === 'clubs' && isAviationClub(value))) add(chipLabel(value));
     }
+  }
+  for (const question of tieQuestions()) {
+    if (tieQuestionSelected(profile, question) && question.matches(award)) add(chipLabel(question.value));
   }
   if (profile.firstGen && award.firstGen === true) add(chipLabel('true'));
   return hits;
@@ -348,7 +443,7 @@ const LEGACY_CHIPS: readonly { kind: 'criterion' | 'discovery' | 'organization';
   { kind: 'criterion', id: 'first_responder', chip: { field: 'familyTies', value: 'first responder' } },
   { kind: 'criterion', id: 'electric_coop', chip: { field: 'familyTies', value: 'electric co-op' } },
   { kind: 'criterion', id: 'credit_union', chip: { field: 'familyTies', value: 'credit union' } },
-  { kind: 'criterion', id: 'elks_lodge', chip: { field: 'familyTies', value: 'fraternal' } },
+  { kind: 'criterion', id: 'elks_lodge', chip: { field: 'familyTies', value: 'elks' } },
   { kind: 'criterion', id: 'company_employee', chip: { field: 'familyTies', value: 'employer' } },
   { kind: 'organization', id: 'nths', chip: { field: 'clubs', value: 'NTHS' } },
   { kind: 'organization', id: 'ffa', chip: { field: 'clubs', value: 'FFA' } },
@@ -361,7 +456,9 @@ const LEGACY_CHIPS: readonly { kind: 'criterion' | 'discovery' | 'organization';
   { kind: 'organization', id: 'tsa', chip: { field: 'clubs', value: 'TSA' } },
 ];
 
-function bindingSelected(profile: DifferentiationProfile, chip: LegacyChip): boolean {
+function bindingSelected(profile: DifferentiationProfile, chip: LegacyChip, id: string): boolean {
+  if (id === 'company_employee') return profile.familyTies.includes('employer');
+  if (id === 'elks_lodge') return profile.familyTies.includes('elks') || profile.familyTies.includes('fraternal');
   return chipSelected(profile, { ...chip, label: chip.value });
 }
 
@@ -373,7 +470,7 @@ export function withLegacySelections(
   const wanted = new Set([...(selections.criteria ?? []), ...(selections.discovery ?? []), ...(selections.organizations ?? [])]);
   let next = profile;
   for (const binding of LEGACY_CHIPS) {
-    if (!wanted.has(binding.id) || bindingSelected(next, binding.chip)) continue;
+    if (!wanted.has(binding.id) || bindingSelected(next, binding.chip, binding.id)) continue;
     next = toggleDifferentiation(next, { ...binding.chip, label: binding.chip.value });
   }
   return next;
@@ -389,7 +486,7 @@ export function legacyFromProfile(profile: DifferentiationProfile): {
   const discoveryInterests: string[] = [];
   const studentOrganizations: string[] = [];
   for (const binding of LEGACY_CHIPS) {
-    if (!bindingSelected(profile, binding.chip)) continue;
+    if (!bindingSelected(profile, binding.chip, binding.id)) continue;
     if (binding.kind === 'criterion') selectedCriteria.push(binding.id);
     else if (binding.kind === 'discovery') discoveryInterests.push(binding.id);
     else studentOrganizations.push(binding.id);

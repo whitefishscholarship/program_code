@@ -5,6 +5,7 @@ import {
   AVIATION_GROUP_VALUE,
   applyRuralAutoTag,
   aviationGroupSelected,
+  chipLabel,
   differentiationGroups,
   differentiationHits,
   emptyDifferentiation,
@@ -165,26 +166,33 @@ assert.deepEqual(groups.map((group) => group.title), [
   'Sports and outdoors',
   'Heritage, faith and identity',
   'Family ties',
-  'Clubs and activities',
+  'School clubs',
+  'Community and fraternal organizations',
+  'Aviation groups',
+  'Where a parent works',
   'Plans and career path',
   'Health and life situation',
 ]);
-const clubValues = groups.find((group) => group.id === 'clubs')?.chips.map((chip) => chip.value) ?? [];
-for (const retired of AVIATION_GROUP_CLUBS) assert.equal(clubValues.includes(retired), false, retired);
-assert(clubValues.includes(AVIATION_GROUP_VALUE));
+const clubValues = groups.flatMap((group) => group.chips).filter((chip) => chip.field === 'clubs').map((chip) => chip.value);
+for (const tag of [...AVIATION_GROUP_CLUBS, 'LPA']) assert.equal(clubValues.includes(tag), true, tag);
+assert.equal(clubValues.includes(AVIATION_GROUP_VALUE), false);
 const aviationAwards = catalog.awards.filter((item) => (item.clubs ?? []).some((club) => (AVIATION_GROUP_CLUBS as readonly string[]).includes(club)));
 assert.equal(aviationAwards.length, 90);
-const member = toggleDifferentiation(emptyDifferentiation(), { field: 'clubs', value: AVIATION_GROUP_VALUE, label: 'Aviation group member' });
-assert.deepEqual(member.clubs, [AVIATION_GROUP_VALUE]);
+const member = { ...emptyDifferentiation(), clubs: [AVIATION_GROUP_VALUE] };
+assert.equal(aviationGroupSelected(member.clubs), true);
 for (const tag of AVIATION_GROUP_CLUBS) {
   const sample = aviationAwards.find((item) => item.clubs?.includes(tag));
   assert(sample, tag);
-  assert(differentiationHits(sample, member).includes('Aviation group member'), tag);
+  assert(differentiationHits(sample, member).includes(chipLabel(tag)), tag);
 }
 const oldAopa = { ...emptyDifferentiation(), clubs: ['AOPA'] };
-assert.equal(aviationGroupSelected(oldAopa.clubs), true);
-assert(differentiationHits(aviationAwards.find((item) => item.clubs?.includes('AOPA'))!, oldAopa).includes('Aviation group member'));
-assert.deepEqual(toggleDifferentiation(oldAopa, { field: 'clubs', value: AVIATION_GROUP_VALUE, label: 'Aviation group member' }).clubs, []);
+assert.equal(aviationGroupSelected(oldAopa.clubs), false);
+const aopaAward = aviationAwards.find((item) => item.clubs?.includes('AOPA') && !item.clubs?.includes('WAI'));
+const waiOnly = aviationAwards.find((item) => item.clubs?.includes('WAI') && !item.clubs?.includes('AOPA'));
+assert(aopaAward && waiOnly);
+assert(differentiationHits(aopaAward, oldAopa).includes(chipLabel('AOPA')));
+assert.equal(differentiationHits(waiOnly, oldAopa).includes(chipLabel('WAI')), false);
+assert.deepEqual(toggleDifferentiation(oldAopa, { field: 'clubs', value: 'AOPA', label: chipLabel('AOPA') }).clubs, []);
 const sports = groups.find((group) => group.id === 'sports')?.chips.map((chip) => chip.value) ?? [];
 assert.deepEqual(sports, ['golf', 'rodeo', 'soccer', 'softball', 'student athlete', 'tennis', 'track', 'wrestling']);
 for (const missing of ['football', 'basketball', 'volleyball', 'cross country', 'swimming', 'baseball', 'cheer']) {
@@ -201,14 +209,14 @@ const named = (name: string) => {
   return found[0];
 };
 assert(differentiationHits(named('Kalispell Youth Softball'), chipProfile('sports', 'softball')).includes('Softball'));
-assert(differentiationHits(named('National Honor Society Member'), chipProfile('clubs', 'National Honor Society')).includes('National Honor Society'));
-assert(differentiationHits(named('Fellows Drama'), chipProfile('clubs', 'drama')).includes('Drama and theatre'));
-assert(differentiationHits(named('Thespian Scholarships'), chipProfile('clubs', 'drama')).includes('Drama and theatre'));
-assert(differentiationHits(named('Thespy Finalist'), chipProfile('clubs', 'drama')).includes('Drama and theatre'));
-assert(differentiationHits(named('Five Valley Chorus'), chipProfile('clubs', 'choir')).includes('Choir'));
-assert(differentiationHits(named('Montana Forensic Educators'), chipProfile('clubs', 'speech and debate')).includes('Speech and debate'));
-assert(differentiationHits(named('Montana Forensic Educators'), chipProfile('clubs', 'drama')).includes('Drama and theatre'));
-assert(differentiationHits(named('NSDA National'), chipProfile('clubs', 'speech and debate')).includes('Speech and debate'));
+assert(differentiationHits(named('National Honor Society Member'), chipProfile('clubs', 'National Honor Society')).includes(chipLabel('National Honor Society')));
+assert(differentiationHits(named('Fellows Drama'), chipProfile('clubs', 'drama')).includes(chipLabel('drama')));
+assert(differentiationHits(named('Thespian Scholarships'), chipProfile('clubs', 'drama')).includes(chipLabel('drama')));
+assert(differentiationHits(named('Thespy Finalist'), chipProfile('clubs', 'drama')).includes(chipLabel('drama')));
+assert(differentiationHits(named('Five Valley Chorus'), chipProfile('clubs', 'choir')).includes(chipLabel('choir')));
+assert(differentiationHits(named('Montana Forensic Educators'), chipProfile('clubs', 'speech and debate')).includes(chipLabel('speech and debate')));
+assert(differentiationHits(named('Montana Forensic Educators'), chipProfile('clubs', 'drama')).includes(chipLabel('drama')));
+assert(differentiationHits(named('NSDA National'), chipProfile('clubs', 'speech and debate')).includes(chipLabel('speech and debate')));
 assert(differentiationHits(named('USTA Foundation'), chipProfile('sports', 'tennis')).includes('Tennis'));
 assert.equal(groups.some((group) => group.title === 'Where you live and go to school' || group.hint.includes('Whitefish students count as rural')), false);
 const explicitLocal: DifferentiationProfile = { ...emptyDifferentiation(), places: ['whitefish', 'flathead', 'montana', 'rural'], plans: ['teaching'] };
@@ -236,8 +244,9 @@ for (const group of groups) {
       assert(catalog.awards.some((item) => item.residencyScope === chip.value));
     } else if (field === 'firstGen') {
       assert(catalog.awards.some((item) => item.firstGen === true));
-    } else if (field === 'clubs' && chip.value === AVIATION_GROUP_VALUE) {
-      assert(catalog.awards.some((item) => (item.clubs ?? []).some((club) => (AVIATION_GROUP_CLUBS as readonly string[]).includes(club))));
+    } else if (field === 'familyTies' && (chip.value === 'elks' || chip.value === 'rainbow' || chip.value.startsWith('employer:'))) {
+      const picked = toggleDifferentiation(emptyDifferentiation(), chip);
+      assert(catalog.awards.some((item) => differentiationHits(item, picked).includes(chip.label)), chip.value);
     } else {
       assert(catalog.awards.some((item) => (item[field] ?? []).includes(chip.value)), chip.value);
     }

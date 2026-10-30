@@ -9,7 +9,7 @@ export default function Home() {
       <header className="border-b border-slate-200 bg-[#123c3a] text-white">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
           <h1 className="text-lg font-bold">Whitefish Scholarship Finder</h1>
-          <p className="text-right text-sm text-teal-100">No account. Nothing saved about you.</p>
+          <p className="text-right text-sm text-teal-100">No account. We never keep your information.</p>
         </div>
       </header>
       <main id="main-content" tabIndex={-1} className="mx-auto max-w-6xl px-4 py-6 outline-none sm:px-6 lg:py-8">

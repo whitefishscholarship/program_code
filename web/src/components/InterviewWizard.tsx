@@ -132,7 +132,7 @@ export default function InterviewWizard({ awards, initialAnswers, onComplete, on
 
         <div>
           <h3 className="text-2xl font-black tracking-tight">What makes you different?</h3>
-          <p className="mt-2 text-sm leading-6 text-slate-600">Pick any chips that fit you. You can skip a group. An empty chip does not hide an award.</p>
+          <p className="mt-2 text-sm leading-6 text-slate-600">Check anything that fits you. You can skip a group. An empty box does not hide an award.</p>
           <DifferentiationStep groups={groups} profile={profile} onToggle={(chip) => { setProfile((current) => toggleDifferentiation(current, chip)); setError(''); }} />
         </div>
 

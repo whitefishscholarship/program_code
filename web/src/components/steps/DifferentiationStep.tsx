@@ -11,6 +11,10 @@ type Props = {
   onToggle: (chip: DifferentiationChip) => void;
 };
 
+function chipId(groupId: string, chip: DifferentiationChip): string {
+  return `diff-${groupId}-${chip.field}-${chip.value}`.replace(/[^a-z0-9-]+/gi, '-').toLowerCase();
+}
+
 export default function DifferentiationStep({ groups, profile, onToggle }: Props) {
   return (
     <div className="mt-7 space-y-7">
@@ -20,11 +24,35 @@ export default function DifferentiationStep({ groups, profile, onToggle }: Props
           <p className="mt-1 text-sm leading-6 text-slate-600">{group.hint}</p>
           {group.chips.length === 0 ? (
             <p className="mt-3 text-sm text-slate-600">Nothing in the list uses this yet.</p>
+          ) : group.layout === 'questions' ? (
+            <ul className="mt-3 space-y-2">
+              {group.chips.map((chip) => {
+                const checked = chipSelected(profile, chip);
+                const id = chipId(group.id, chip);
+                return (
+                  <li key={id}>
+                    <label
+                      htmlFor={id}
+                      className={`flex cursor-pointer items-start rounded-xl border px-3 py-2 text-sm font-semibold leading-6 outline-none has-[:focus-visible]:ring-4 has-[:focus-visible]:ring-teal-300 ${checked ? 'border-teal-800 bg-teal-800 text-white' : 'border-slate-300 bg-white text-slate-800 hover:bg-slate-50'}`}
+                    >
+                      <input
+                        id={id}
+                        type="checkbox"
+                        checked={checked}
+                        onChange={() => onToggle(chip)}
+                        className="sr-only"
+                      />
+                      {chip.label}
+                    </label>
+                  </li>
+                );
+              })}
+            </ul>
           ) : (
             <div className="mt-3 flex flex-wrap gap-2">
               {group.chips.map((chip) => {
                 const checked = chipSelected(profile, chip);
-                const id = `diff-${group.id}-${chip.field}-${chip.value}`.replace(/[^a-z0-9-]+/gi, '-').toLowerCase();
+                const id = chipId(group.id, chip);
                 return (
                   <label
                     key={id}

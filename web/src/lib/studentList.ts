@@ -29,7 +29,7 @@ const OPEN_DATE = new RegExp(`\\b(${MONTH_ALT})\\b(?:\\.?\\s+(\\d{1,2})(?:st|nd|
 const URL_IN_TEXT = /https?:\/\/[^\s<>"')\]]+/i;
 
 export function plainStudentText(value: string): string {
-  return value.replaceAll('\u2014', ', ').replaceAll('\u2013', '-').replace(/ ?Checked on the sponsor page on [A-Za-z]+ \d{1,2}, \d{4}\.?/g, '');
+  return value.replaceAll('\u2014', ', ').replaceAll('\u2013', '-').replace(/ ?Checked on the sponsor page on [A-Za-z]+ \d{1,2}, \d{4}\.?/g, '').replaceAll('are women', 'are female');
 }
 
 /**

@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Whitefish Scholarship Finder",
-  description: "Find scholarships and open the real application sites. No account. Nothing is saved about you.",
+  description: "Find scholarships and open the real application sites. No account. We never keep your information.",
 };
 
 export default function RootLayout({

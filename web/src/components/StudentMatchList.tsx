@@ -1,6 +1,21 @@
 'use client';
 
 import { useEffect, useMemo, useState, type ReactNode, type Ref } from 'react';
+import {
+  PROGRESS_LABELS,
+  PROGRESS_NOTE,
+  PROGRESS_ORDER,
+  awardProgress,
+  clearAwardProgress,
+  filterByProgress,
+  progressCounts,
+  readAwardProgress,
+  setAwardProgress,
+  writeAwardProgress,
+  type AwardProgress,
+  type AwardProgressMap,
+  type ProgressFilter,
+} from '@/lib/awardProgress';
 import { differentiationHits } from '@/lib/differentiation';
 import { buildStudentWorkbook, googleCalendarTemplateUrl, serializeAwardDeadlineCalendar, serializeStudentCalendar, serializeStudentCsv } from '@/lib/studentExport';
 import type { InterviewAnswers } from '@/lib/interviewMatcher';
@@ -98,6 +113,8 @@ export default function StudentMatchList({
   const [sort, setSort] = useState<StudentSort>(mode === 'results' ? 'pool' : 'deadline');
   const [method, setMethod] = useState<'all' | ApplicationMode>('all');
   const [schoolType, setSchoolType] = useState<SchoolType>('all');
+  const [progress, setProgress] = useState<AwardProgressMap>({});
+  const [progressFilter, setProgressFilter] = useState<ProgressFilter>('all');
   const [showHidden, setShowHidden] = useState(false);
   const [copied, setCopied] = useState(false);
   const [copyFallback, setCopyFallback] = useState('');
@@ -111,6 +128,10 @@ export default function StudentMatchList({
     return () => window.clearTimeout(timer);
   }, [copied]);
 
+  useEffect(() => {
+    setProgress(readAwardProgress(window.localStorage));
+  }, []);
+
   const filtered = useMemo(() => filterStudentAwards(awards, {
     search,
     status: statusFilter,
@@ -121,7 +142,9 @@ export default function StudentMatchList({
   }), [awards, method, now, openingThisMonth, schoolType, search, statusFilter]);
 
   const { visible, concealed } = useMemo(() => splitHidden(filtered, hiddenIds), [filtered, hiddenIds]);
-  const sorted = useMemo(() => sortStudentAwards(visible, sort, now), [now, sort, visible]);
+  const progressTotals = useMemo(() => progressCounts(visible, progress), [progress, visible]);
+  const progressed = useMemo(() => filterByProgress(visible, progress, progressFilter), [progress, progressFilter, visible]);
+  const sorted = useMemo(() => sortStudentAwards(progressed, sort, now), [now, progressed, sort]);
   const hiddenAwards = hiddenIds.map((id) => awardById.get(id)).filter((award): award is StudentAward => Boolean(award));
   const missingHidden = hiddenIds.length - hiddenAwards.length;
   const openingCount = awards.filter((award) => isOpeningThisMonth(award, now) && !hiddenIds.includes(award.publicId)).length;
@@ -158,6 +181,18 @@ export default function StudentMatchList({
   };
 
   const hasFilters = Boolean(search || statusFilter !== 'all' || openingThisMonth || method !== 'all' || schoolType !== 'all');
+  const hasProgress = Object.keys(progress).length > 0;
+  const changeProgress = (id: string, status: AwardProgress) => {
+    setProgress((current) => {
+      const next = setAwardProgress(current, id, status);
+      writeAwardProgress(window.localStorage, next);
+      return next;
+    });
+  };
+  const clearProgress = () => {
+    setProgress({});
+    clearAwardProgress(window.localStorage);
+  };
   const clearFilters = () => {
     setSearch('');
     setStatusFilter('all');
@@ -187,6 +222,19 @@ export default function StudentMatchList({
           <h3 className="text-2xl font-black tracking-tight text-slate-950">All awards ({sorted.length})</h3>
         )}
         {mode === 'results' && <p className="mt-1 text-slate-600">{sort === 'pool' ? 'Smallest pools are first. Open awards are still marked in green.' : 'Start with the green ones. They are open right now.'}</p>}
+      </div>
+
+      <div className="mt-4">
+        <div role="group" aria-label="Filter by progress" className="flex flex-wrap gap-2">
+          <FilterButton pressed={progressFilter === 'all'} onClick={() => setProgressFilter('all')}>All ({progressTotals.all})</FilterButton>
+          {PROGRESS_ORDER.map((status) => (
+            <FilterButton key={status} pressed={progressFilter === status} onClick={() => setProgressFilter(status)}>{PROGRESS_LABELS[status]} ({progressTotals[status]})</FilterButton>
+          ))}
+        </div>
+        <div className="mt-2 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm leading-6 text-slate-600">{PROGRESS_NOTE}</p>
+          <button type="button" onClick={clearProgress} disabled={!hasProgress} className="self-start rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm font-bold text-slate-800 hover:bg-slate-50 focus:outline-none focus:ring-4 focus:ring-teal-200 disabled:cursor-not-allowed disabled:text-slate-400">Clear progress</button>
+        </div>
       </div>
 
       <div className="mt-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
@@ -285,12 +333,12 @@ export default function StudentMatchList({
                 <span className="rounded-full bg-slate-200 px-2 py-0.5 text-xs font-bold text-slate-700">{group.awards.length}</span>
                 <p className="text-sm text-slate-600">{sectionHelp[group.status]}</p>
               </div>
-              <div className="space-y-3">{group.awards.map((award) => <AwardRow key={award.publicId} award={award} now={now} result={resultsById.get(award.publicId)} profile={answers?.differentiation} onHide={onHide} onAddDeadline={addDeadline} />)}</div>
+              <div className="space-y-3">{group.awards.map((award) => <AwardRow key={award.publicId} award={award} now={now} result={resultsById.get(award.publicId)} profile={answers?.differentiation} progress={awardProgress(progress, award.publicId)} onProgress={changeProgress} onHide={onHide} onAddDeadline={addDeadline} />)}</div>
             </section>
           ))}
         </div>
       ) : (
-        <div className="mt-6 space-y-3">{sorted.map((award) => <AwardRow key={award.publicId} award={award} now={now} result={resultsById.get(award.publicId)} profile={answers?.differentiation} onHide={onHide} onAddDeadline={addDeadline} />)}</div>
+        <div className="mt-6 space-y-3">{sorted.map((award) => <AwardRow key={award.publicId} award={award} now={now} result={resultsById.get(award.publicId)} profile={answers?.differentiation} progress={awardProgress(progress, award.publicId)} onProgress={changeProgress} onHide={onHide} onAddDeadline={addDeadline} />)}</div>
       )}
 
       <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -311,7 +359,7 @@ function FilterButton({ pressed, onClick, children }: { pressed: boolean; onClic
   return <button type="button" aria-pressed={pressed} onClick={onClick} className={`rounded-full px-3 py-1.5 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-teal-200 ${pressed ? 'bg-[#123c3a] text-white' : 'bg-white text-slate-700 ring-1 ring-slate-300 hover:bg-slate-50'}`}>{children}</button>;
 }
 
-function AwardRow({ award, now, result, profile, onHide, onAddDeadline }: { award: StudentAward; now: Date; result?: DisplayResult; profile?: InterviewAnswers['differentiation']; onHide: (id: string) => void; onAddDeadline: (award: StudentAward) => void }) {
+function AwardRow({ award, now, result, profile, progress, onProgress, onHide, onAddDeadline }: { award: StudentAward; now: Date; result?: DisplayResult; profile?: InterviewAnswers['differentiation']; progress: AwardProgress; onProgress: (id: string, status: AwardProgress) => void; onHide: (id: string) => void; onAddDeadline: (award: StudentAward) => void }) {
   const status = studentStatus(award, now);
   const url = officialUrl(award);
   const verification = displayVerification(award);
@@ -337,6 +385,14 @@ function AwardRow({ award, now, result, profile, onHide, onAddDeadline }: { awar
             <p className="mt-2 text-sm leading-6 text-slate-700">{poolExplanation(award)}</p>
           )}
           {fits.length > 0 && <p className="mt-1 text-sm font-semibold text-teal-900">Fits you: {fits.join(', ')}</p>}
+          <div className="mt-3">
+            <p className="text-xs font-bold uppercase tracking-wide text-slate-500">My progress</p>
+            <div role="group" aria-label={`Progress for ${award.name}`} className="mt-1 flex flex-wrap gap-2">
+              {PROGRESS_ORDER.map((status) => (
+                <button key={status} type="button" aria-pressed={progress === status} onClick={() => onProgress(award.publicId, status)} className={`rounded-full px-3 py-1 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-teal-200 ${progress === status ? 'bg-teal-800 text-white' : 'bg-white text-slate-700 ring-1 ring-slate-300 hover:bg-slate-50'}`}>{PROGRESS_LABELS[status]}</button>
+              ))}
+            </div>
+          </div>
           <details className="mt-2 text-sm">
             <summary className="cursor-pointer font-bold text-teal-800 focus:outline-none focus:ring-4 focus:ring-teal-200">Details</summary>
             <div className="mt-3 space-y-2 break-words leading-6 text-slate-700">
