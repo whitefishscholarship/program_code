@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "ignoreCommand": "node -e \"const ref=process.env.VERCEL_GIT_COMMIT_REF||''; if(ref==='cursor/p6-tags-filters-gcal'||ref.startsWith('cursor/preview-')) process.exit(1); if(ref.startsWith('cursor/')) process.exit(0); process.exit(1)\"",
+  "ignoreCommand": "node -e \"const ref=process.env.VERCEL_GIT_COMMIT_REF||''; if(ref==='cursor/p6-tags-filters-gcal'||ref==='cursor/glass-restyle-f17b'||ref.startsWith('cursor/preview-')) process.exit(1); if(ref.startsWith('cursor/')) process.exit(0); process.exit(1)\"",
   "git": {
     "deploymentEnabled": {
       "codex/scholarship-monitor-state": false
