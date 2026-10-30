@@ -19,11 +19,11 @@ export default function DifferentiationStep({ groups, profile, onToggle }: Props
   return (
     <div className="mt-7 space-y-7">
       {groups.map((group) => (
-        <fieldset key={group.id} className="rounded-2xl border border-slate-200 p-4">
-          <legend className="px-2 text-base font-bold text-slate-950">{group.title}</legend>
-          <p className="mt-1 text-sm leading-6 text-slate-600">{group.hint}</p>
+        <fieldset key={group.id} className="panel">
+          <legend className="panel-title">{group.title}</legend>
+          <p className="hint">{group.hint}</p>
           {group.chips.length === 0 ? (
-            <p className="mt-3 text-sm text-slate-600">Nothing in the list uses this yet.</p>
+            <p className="hint mt-3">Nothing in the list uses this yet.</p>
           ) : group.layout === 'questions' ? (
             <ul className="mt-3 space-y-2">
               {group.chips.map((chip) => {
@@ -33,7 +33,7 @@ export default function DifferentiationStep({ groups, profile, onToggle }: Props
                   <li key={id}>
                     <label
                       htmlFor={id}
-                      className={`flex cursor-pointer items-start rounded-xl border px-3 py-2 text-sm font-semibold leading-6 outline-none has-[:focus-visible]:ring-4 has-[:focus-visible]:ring-teal-300 ${checked ? 'border-teal-800 bg-teal-800 text-white' : 'border-slate-300 bg-white text-slate-800 hover:bg-slate-50'}`}
+                      className={`question-row has-[:focus-visible]:ring-4 has-[:focus-visible]:ring-transparent${checked ? ' is-selected bg-teal-800' : ''}`}
                     >
                       <input
                         id={id}
@@ -49,7 +49,7 @@ export default function DifferentiationStep({ groups, profile, onToggle }: Props
               })}
             </ul>
           ) : (
-            <div className="mt-3 flex flex-wrap gap-2">
+            <div className="chip-row">
               {group.chips.map((chip) => {
                 const checked = chipSelected(profile, chip);
                 const id = chipId(group.id, chip);
@@ -57,7 +57,7 @@ export default function DifferentiationStep({ groups, profile, onToggle }: Props
                   <label
                     key={id}
                     htmlFor={id}
-                    className={`relative inline-flex cursor-pointer items-center rounded-full border px-3 py-1.5 text-sm font-semibold outline-none has-[:focus-visible]:ring-4 has-[:focus-visible]:ring-teal-300 ${checked ? 'border-teal-800 bg-teal-800 text-white' : 'border-slate-300 bg-white text-slate-800 hover:bg-slate-50'}`}
+                    className={`chip has-[:focus-visible]:ring-4 has-[:focus-visible]:ring-transparent${checked ? ' is-selected bg-teal-800' : ''}`}
                   >
                     <input
                       id={id}

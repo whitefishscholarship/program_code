@@ -156,21 +156,21 @@ export default function ScholarshipBrowser() {
 
   if (!linkReady || loading) {
     return (
-      <section aria-live="polite" aria-busy="true" className="rounded-3xl border border-slate-200 bg-white p-10 text-center shadow-sm">
-        <div className="mx-auto mb-4 h-10 w-10 animate-spin rounded-full border-4 border-slate-200 border-t-teal-700" aria-hidden="true" />
-        <h2 className="text-xl font-bold">Loading your list</h2>
-        <p className="mt-2 text-slate-600">Getting the scholarship list. Your answers stay on this device.</p>
+      <section aria-live="polite" aria-busy="true" className="py-8 text-center">
+        <div className="spinner" aria-hidden="true" />
+        <h2 className="section-title">Loading your list</h2>
+        <p className="lede">Getting the scholarship list. Your answers stay on this device.</p>
       </section>
     );
   }
 
   if (error || !catalog) {
     return (
-      <section role="alert" className="mx-auto max-w-2xl rounded-3xl border border-rose-200 bg-white p-8 text-center shadow-sm">
-        <p className="text-sm font-bold uppercase tracking-wider text-rose-700">Catalog unavailable</p>
-        <h2 className="mt-2 text-2xl font-black">We could not load the scholarship list.</h2>
-        <p className="mt-3 text-slate-600">{error || 'Please try again.'}</p>
-        <button type="button" onClick={() => setAttempt((value) => value + 1)} className="mt-6 rounded-xl bg-teal-800 px-5 py-3 font-bold text-white hover:bg-teal-900 focus:outline-none focus:ring-4 focus:ring-teal-300">
+      <section role="alert" className="mx-auto max-w-2xl py-6 text-center">
+        <p className="meta-label req">Catalog unavailable</p>
+        <h2 className="page-title mt-2">We could not load the scholarship list.</h2>
+        <p className="lede">{error || 'Please try again.'}</p>
+        <button type="button" onClick={() => setAttempt((value) => value + 1)} className="btn btn-primary mt-6">
           Try again
         </button>
       </section>
@@ -179,14 +179,14 @@ export default function ScholarshipBrowser() {
 
   if (experience === 'start') {
     return (
-      <section aria-labelledby="interview-start-heading" className="mx-auto max-w-5xl">
-        <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-10 lg:p-12">
-          <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-800">Scholarship interview</p>
-          <h2 ref={experienceHeadingRef} tabIndex={-1} id="interview-start-heading" className="mt-3 max-w-3xl text-4xl font-black tracking-tight outline-none sm:text-5xl">Find scholarships that fit your education plans.</h2>
-          <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">Answer one page of questions to explore scholarships for your education plans.</p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <button type="button" onClick={() => { setAnswers(null); setExperience('interview'); }} className="rounded-xl bg-teal-800 px-6 py-4 text-lg font-bold text-white shadow-sm hover:bg-teal-900 focus:outline-none focus:ring-4 focus:ring-teal-300">Start the interview</button>
-            <button type="button" onClick={showBrowseAll} className="rounded-xl border-2 border-teal-800 bg-white px-6 py-4 text-lg font-bold text-teal-900 hover:bg-teal-50 focus:outline-none focus:ring-4 focus:ring-teal-200">Browse all {catalog.counts.awards} awards</button>
+      <section aria-labelledby="interview-start-heading">
+        <div className="stage-head">
+          <p className="meta-label">Scholarship interview</p>
+          <h2 ref={experienceHeadingRef} tabIndex={-1} id="interview-start-heading" className="page-title mt-3 max-w-3xl outline-none">Find scholarships that fit your education plans.</h2>
+          <p className="lede max-w-3xl">Answer one page of questions to explore scholarships for your education plans.</p>
+          <div className="toolbar mt-8">
+            <button type="button" onClick={() => { setAnswers(null); setExperience('interview'); }} className="btn btn-primary">Start the interview</button>
+            <button type="button" onClick={showBrowseAll} className="btn btn-secondary">Browse all {catalog.counts.awards} awards</button>
           </div>
         </div>
       </section>
@@ -225,6 +225,7 @@ export default function ScholarshipBrowser() {
       refreshNote={refreshNote}
       embedHeading={embedHeading}
       headingRef={embedHeading ? experienceHeadingRef : undefined}
+      resetToken={isResults ? resultScope : 'browse'}
       onHide={hideOne}
       onRestore={restoreOne}
       onUndo={undoHide}
@@ -236,34 +237,36 @@ export default function ScholarshipBrowser() {
     <section aria-labelledby="catalog-heading">
       {isResults ? (
         <div>
-          <div className="flex flex-wrap gap-2">
-            <button type="button" onClick={() => setExperience('interview')} className="rounded-xl border border-teal-800 bg-white px-4 py-3 font-bold text-teal-900 hover:bg-teal-50 focus:outline-none focus:ring-4 focus:ring-teal-200">Edit answers</button>
-            <button type="button" onClick={showBrowseAll} className="rounded-xl border border-slate-300 bg-white px-4 py-3 font-bold text-slate-800 hover:bg-slate-50 focus:outline-none focus:ring-4 focus:ring-teal-200">Browse all</button>
-            <button type="button" onClick={resetInterview} className="rounded-xl bg-slate-800 px-4 py-3 font-bold text-white hover:bg-slate-900 focus:outline-none focus:ring-4 focus:ring-slate-300">Start over</button>
-          </div>
-          <div role="group" aria-label="Choose which awards to show" className="mt-4 flex flex-wrap gap-2">
-            <ScopeButton active={resultScope === 'recommended'} onClick={() => setResultScope('recommended')}>My matches ({matching.counts.match + matching.counts.possibleMatch})</ScopeButton>
-            <ScopeButton active={resultScope === 'conflicts'} onClick={() => setResultScope('conflicts')}>May not fit ({matching.counts.knownConflict})</ScopeButton>
-            <ScopeButton active={resultScope === 'all'} onClick={() => setResultScope('all')}>Every award ({matching.counts.total})</ScopeButton>
+          <div className="stage-head">
+            <div className="toolbar">
+              <button type="button" onClick={() => setExperience('interview')} className="btn btn-tertiary">Edit answers</button>
+              <button type="button" onClick={showBrowseAll} className="btn btn-secondary">Browse all</button>
+              <button type="button" onClick={resetInterview} className="btn btn-primary">Start over</button>
+            </div>
+            <div role="group" aria-label="Choose which awards to show" className="toolbar mt-4">
+              <ScopeButton active={resultScope === 'recommended'} onClick={() => setResultScope('recommended')}>My matches ({matching.counts.match + matching.counts.possibleMatch})</ScopeButton>
+              <ScopeButton active={resultScope === 'conflicts'} onClick={() => setResultScope('conflicts')}>May not fit ({matching.counts.knownConflict})</ScopeButton>
+              <ScopeButton active={resultScope === 'all'} onClick={() => setResultScope('all')}>Every award ({matching.counts.total})</ScopeButton>
+            </div>
           </div>
           {baseAwards.length === 0 ? (
             <>
-              <h2 ref={experienceHeadingRef} tabIndex={-1} id="catalog-heading" className="mt-6 text-3xl font-black tracking-tight outline-none">Your matches (0)</h2>
+              <h2 ref={experienceHeadingRef} tabIndex={-1} id="catalog-heading" className="page-title mt-6 outline-none">Your matches (0)</h2>
               <NoRecommendations onEdit={() => setExperience('interview')} onBrowse={showBrowseAll} />
             </>
           ) : list(true)}
         </div>
       ) : (
         <div>
-          <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+          <div className="stage-head flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-800">Browse all</p>
-              <h2 ref={experienceHeadingRef} tabIndex={-1} id="catalog-heading" className="mt-2 text-3xl font-black tracking-tight outline-none sm:text-4xl">See what is verified, and what is not.</h2>
-              <p className="mt-3 max-w-3xl text-base leading-7 text-slate-600">{catalog.notice}</p>
+              <p className="meta-label">Browse all</p>
+              <h2 ref={experienceHeadingRef} tabIndex={-1} id="catalog-heading" className="page-title mt-2 outline-none">See what is verified, and what is not.</h2>
+              <p className="lede max-w-3xl">{catalog.notice}</p>
             </div>
-            <button type="button" onClick={() => { setAnswers(null); setExperience('interview'); }} className="rounded-xl bg-teal-800 px-5 py-3 font-bold text-white hover:bg-teal-900 focus:outline-none focus:ring-4 focus:ring-teal-300">Start interview</button>
+            <button type="button" onClick={() => { setAnswers(null); setExperience('interview'); }} className="btn btn-primary">Start interview</button>
           </div>
-          <dl className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6" aria-label="Catalog counts">
+          <dl className="stat-grid mt-8" aria-label="Catalog counts">
             <Count label="Awards" value={catalog.counts.awards} />
             <Count label="Open now" value={catalog.awards.filter((award) => studentStatus(award) === 'open_now').length} emphasis="positive" />
             <Count label="Not checked" value={catalog.awards.filter((award) => award.verification?.status !== 'verified').length} emphasis="warning" />
@@ -271,11 +274,11 @@ export default function ScholarshipBrowser() {
             <Count label="Sources" value={catalog.counts.sources} />
             <Count label="Minimum award slots" value={catalog.counts.minimumObservedRecipientSlots} suffix="*" />
           </dl>
-          <p className="mt-2 text-xs text-slate-500">* This is an old minimum count, not a count of open awards today.</p>
-          <div className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-950">
+          <p className="fine">* This is an old minimum count, not a count of open awards today.</p>
+          <div className="notice mt-6 text-sm leading-6">
             <strong>Checked October 28, 2026:</strong> {catalog.awards.filter((award) => award.verification?.status === 'verified').length} scholarships are marked Verified, with a source link and a clear open, later, or closed status. The other awards are not checked yet, so they say Not sure.
           </div>
-          <div role="group" aria-label="Choose catalog record type" className="mt-6 flex flex-wrap gap-2 rounded-2xl border border-slate-200 bg-white p-3 shadow-sm">
+          <div role="group" aria-label="Choose catalog record type" className="toolbar panel mt-6">
             <ScopeButton active={view === 'awards'} onClick={() => setView('awards')}>Awards ({catalog.counts.awards})</ScopeButton>
             <ScopeButton active={view === 'portals'} onClick={() => setView('portals')}>Portal records ({catalog.counts.portals})</ScopeButton>
             <ScopeButton active={view === 'sources'} onClick={() => setView('sources')}>Source records ({catalog.counts.sources})</ScopeButton>
@@ -283,9 +286,9 @@ export default function ScholarshipBrowser() {
           {view === 'awards' && list(false)}
           {view !== 'awards' && (
             <div className="mt-4">
-              <label className="block text-sm font-bold text-slate-800">
+              <label className="block text-sm font-semibold">
                 Search {view}
-                <input type="search" value={portalSearch} onChange={(event) => setPortalSearch(event.target.value)} className="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3 font-normal focus:border-teal-700 focus:outline-none focus:ring-4 focus:ring-teal-100" />
+                <input type="search" value={portalSearch} onChange={(event) => setPortalSearch(event.target.value)} className="field mt-2" />
               </label>
               {view === 'portals' && (visiblePortals.length
                 ? <div className="mt-6 grid grid-cols-[minmax(0,1fr)] gap-5 md:grid-cols-2 xl:grid-cols-3">{visiblePortals.map((portal) => <PortalCard key={portal.publicId} portal={portal} />)}</div>
@@ -301,55 +304,54 @@ export default function ScholarshipBrowser() {
   );
 }
 
-function Count({ label, value, suffix = '', emphasis = 'neutral' }: { label: string; value: number; suffix?: string; emphasis?: 'neutral' | 'warning' | 'positive' }) {
-  const color = emphasis === 'warning' ? 'border-amber-200 bg-amber-50' : emphasis === 'positive' ? 'border-emerald-200 bg-emerald-50' : 'border-slate-200 bg-white';
-  return <div className={`rounded-2xl border p-4 shadow-sm ${color}`}><dt className="text-xs font-bold uppercase tracking-wide text-slate-600">{label}</dt><dd className="mt-2 text-3xl font-black text-slate-950">{value}{suffix}</dd></div>;
+function Count({ label, value, suffix = '' }: { label: string; value: number; suffix?: string; emphasis?: 'neutral' | 'warning' | 'positive' }) {
+  return <div className="stat"><dt>{label}</dt><dd>{value}{suffix}</dd></div>;
 }
 
 function ScopeButton({ active, onClick, children }: { active: boolean; onClick: () => void; children: React.ReactNode }) {
-  return <button aria-pressed={active} type="button" onClick={onClick} className={`rounded-xl px-4 py-2.5 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-teal-200 ${active ? 'bg-teal-800 text-white' : 'bg-white text-slate-700 ring-1 ring-slate-200 hover:bg-slate-100'}`}>{children}</button>;
+  return <button aria-pressed={active} type="button" onClick={onClick} className={`chip${active ? ' is-selected' : ''}`}>{children}</button>;
 }
 
 function SourceCard({ source }: { source: StudentSource }) {
   return (
-    <article className="min-w-0 max-w-full overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-      <div className="flex flex-wrap items-center justify-between gap-2"><p className="text-xs font-bold uppercase tracking-wider text-teal-800">{source.architecture.replaceAll('_', ' ')}</p><span className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-bold capitalize text-slate-700">{source.recordType}</span></div>
-      <h3 className="mt-2 break-words text-xl font-black">{source.title}</h3>
-      <dl className="mt-5 grid grid-cols-2 gap-4 text-sm"><div><dt className="font-bold">Catalog state</dt><dd className="mt-1 capitalize text-slate-600">{source.availability}</dd></div><div><dt className="font-bold">Linked awards</dt><dd className="mt-1 text-slate-600">{source.awardCount}</dd></div></dl>
-      {source.url ? <a href={source.url} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex font-bold text-teal-800 underline decoration-2 underline-offset-4 hover:text-teal-950 focus:outline-none focus:ring-4 focus:ring-teal-200">Visit official source <span className="sr-only">{source.title}</span><span aria-hidden="true"> ↗</span></a> : <p className="mt-6 text-sm font-bold text-slate-600">Offline source; no verified URL</p>}
+    <article className="award-card min-w-0 max-w-full overflow-hidden">
+      <div className="flex flex-wrap items-center justify-between gap-2"><p className="meta-label">{source.architecture.replaceAll('_', ' ')}</p><span className="pill pill-later capitalize">{source.recordType}</span></div>
+      <h3 className="mt-2 break-words text-xl font-semibold">{source.title}</h3>
+      <dl className="mt-5 grid grid-cols-2 gap-4 text-sm"><div><dt className="font-semibold">Catalog state</dt><dd className="mt-1 capitalize muted">{source.availability}</dd></div><div><dt className="font-semibold">Linked awards</dt><dd className="mt-1 muted">{source.awardCount}</dd></div></dl>
+      {source.url ? <a href={source.url} target="_blank" rel="noopener noreferrer" className="title-link mt-6 inline-flex">Visit official source <span className="sr-only">{source.title}</span><span aria-hidden="true"> ↗</span></a> : <p className="fine mt-6 font-semibold">Offline source; no verified URL</p>}
     </article>
   );
 }
 
 function PortalCard({ portal }: { portal: StudentPortal }) {
   return (
-    <article className="min-w-0 max-w-full overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-      <p className="text-xs font-bold uppercase tracking-wider text-teal-800">Portal record · {portal.architecture.replaceAll('_', ' ')}</p>
-      <h3 className="mt-2 break-words text-xl font-black">{portal.title}</h3>
-      <p className="mt-4 text-sm text-slate-600">Linked to {portal.sourcePublicIds.length} source record{portal.sourcePublicIds.length === 1 ? '' : 's'}.</p>
-      {portal.url ? <a href={portal.url} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex font-bold text-teal-800 underline decoration-2 underline-offset-4 hover:text-teal-950 focus:outline-none focus:ring-4 focus:ring-teal-200">Visit portal source <span className="sr-only">{portal.title}</span><span aria-hidden="true"> ↗</span></a> : <p className="mt-6 text-sm font-bold text-slate-600">No verified online portal URL</p>}
+    <article className="award-card min-w-0 max-w-full overflow-hidden">
+      <p className="meta-label">Portal record · {portal.architecture.replaceAll('_', ' ')}</p>
+      <h3 className="mt-2 break-words text-xl font-semibold">{portal.title}</h3>
+      <p className="hint mt-4">Linked to {portal.sourcePublicIds.length} source record{portal.sourcePublicIds.length === 1 ? '' : 's'}.</p>
+      {portal.url ? <a href={portal.url} target="_blank" rel="noopener noreferrer" className="title-link mt-6 inline-flex">Visit portal source <span className="sr-only">{portal.title}</span><span aria-hidden="true"> ↗</span></a> : <p className="fine mt-6 font-semibold">No verified online portal URL</p>}
     </article>
   );
 }
 
 function EmptyState({ noun, onClear }: { noun: string; onClear: () => void }) {
   return (
-    <div role="status" className="mx-auto mt-6 max-w-2xl rounded-3xl border border-slate-200 bg-white p-10 text-center shadow-sm">
-      <p className="text-sm font-bold uppercase tracking-wider text-amber-800">No matching {noun}</p>
-      <h3 className="mt-2 text-2xl font-black">Try a broader search.</h3>
-      <button type="button" onClick={onClear} className="mt-6 rounded-xl bg-teal-800 px-5 py-3 font-bold text-white hover:bg-teal-900 focus:outline-none focus:ring-4 focus:ring-teal-300">Clear search</button>
+    <div role="status" className="mx-auto mt-6 max-w-2xl py-8 text-center">
+      <p className="meta-label">No matching {noun}</p>
+      <h3 className="section-title mt-2">Try a broader search.</h3>
+      <button type="button" onClick={onClear} className="btn btn-primary mt-6">Clear search</button>
     </div>
   );
 }
 
 function NoRecommendations({ onEdit, onBrowse }: { onEdit: () => void; onBrowse: () => void }) {
   return (
-    <div role="status" className="mx-auto mt-8 max-w-2xl rounded-3xl border border-amber-200 bg-white p-10 text-center shadow-sm">
-      <h3 className="text-2xl font-black">None of these fit the answers you gave.</h3>
-      <p className="mt-3 text-slate-600">You can change your answers, or look at every award. Nothing is thrown away.</p>
-      <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
-        <button type="button" onClick={onEdit} className="rounded-xl bg-teal-800 px-5 py-3 font-bold text-white hover:bg-teal-900 focus:outline-none focus:ring-4 focus:ring-teal-300">Edit answers</button>
-        <button type="button" onClick={onBrowse} className="rounded-xl border border-slate-300 bg-white px-5 py-3 font-bold text-slate-800 hover:bg-slate-50 focus:outline-none focus:ring-4 focus:ring-teal-200">Browse all awards</button>
+    <div role="status" className="notice mx-auto mt-8 max-w-2xl p-8 text-center">
+      <h3 className="section-title">None of these fit the answers you gave.</h3>
+      <p className="lede">You can change your answers, or look at every award. Nothing is thrown away.</p>
+      <div className="toolbar mt-6 justify-center">
+        <button type="button" onClick={onEdit} className="btn btn-primary">Edit answers</button>
+        <button type="button" onClick={onBrowse} className="btn btn-secondary">Browse all awards</button>
       </div>
     </div>
   );
