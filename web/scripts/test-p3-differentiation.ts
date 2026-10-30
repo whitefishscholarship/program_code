@@ -124,13 +124,13 @@ assert.equal(poolIsSmall(national), false);
 assert.equal(poolExplanation(national), 'Large pool: open nationwide.');
 assert.equal(RULES_NOT_POSTED, 'Rules not posted yet');
 const wide = catalog.awards.filter((item) => item.residencyScope === 'national' && !poolIsSmall(item));
-assert.equal(wide.length, 67);
+assert.equal(wide.length, 71);
 for (const item of wide) {
   assert.equal(item.poolLevel, 6, item.name);
   assert.ok((item.competitionScore ?? 0) >= 86 && (item.competitionScore ?? 0) <= 94, item.name);
   assert.equal(poolExplanation(item).startsWith('Large pool:'), true, item.name);
 }
-assert.equal(catalog.awards.filter((item) => item.poolReason === 'Large pool: open nationwide.').length, 66);
+assert.equal(catalog.awards.filter((item) => item.poolReason === 'Large pool: open nationwide.').length, 70);
 assert.equal(catalog.awards.filter((item) => item.poolReason === 'Large pool: open in the United States and Canada.').length, 1);
 assert.equal(catalog.awards.filter((item) => (item.summary ?? '').includes('Checked on the sponsor page')).length, 0);
 assert.equal(plainStudentText('The application is open. Checked on the sponsor page on October 29, 2026.'), 'The application is open.');

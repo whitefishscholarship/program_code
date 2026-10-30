@@ -9,7 +9,7 @@ import {
   type InterviewAnswers,
 } from '@/lib/interviewMatcher';
 import { CURRENT_ACCEPTED_MATCH_FACTS } from '@/lib/p8mMatchingFacts';
-import { shortlistAwards, type DisplayResult } from '@/lib/spreadsheetShortlist';
+import { awardsForResultScope, shortlistAwards, type DisplayResult } from '@/lib/spreadsheetShortlist';
 import { decodeStudentLink, encodeStudentLink, writeStudentFragment } from '@/lib/studentLink';
 import { hideAwardId, restoreAwardId, studentStatus } from '@/lib/studentList';
 import { loadStudentCatalog, type CatalogQaMode } from '@/lib/studentCatalogClient';
@@ -102,9 +102,7 @@ export default function ScholarshipBrowser() {
 
   const selectedResults = useMemo(() => {
     if (!matching) return [];
-    if (resultScope === 'recommended') return matching.results.filter((result) => result.decision !== 'known_conflict' && result.decision !== 'recorded_mismatch');
-    if (resultScope === 'conflicts') return matching.results.filter((result) => result.decision === 'known_conflict' || result.decision === 'recorded_mismatch');
-    return matching.results;
+    return awardsForResultScope(matching.results as Array<(typeof matching.results)[number]>, resultScope);
   }, [matching, resultScope]);
 
   const visibleSources = useMemo(() => {

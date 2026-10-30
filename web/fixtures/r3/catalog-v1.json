@@ -20,16 +20,16 @@
     "schemaVersion": "1.0.0",
     "catalogRevision": "cae04afef1f7a548cd5fcbc51b0e39cf6bb2c2de32b0afba3e4a514cd29691d8",
     "counts": {
-      "sources": 515,
+      "sources": 526,
       "portals": 21,
-      "awards": 467,
+      "awards": 478,
       "applicationGroups": 4,
-      "cycles": 467,
+      "cycles": 478,
       "activeCycles": 122,
-      "upcomingCycles": 167,
-      "closedCycles": 99,
+      "upcomingCycles": 169,
+      "closedCycles": 101,
       "unavailableCycles": 0,
-      "unknownCycles": 79,
+      "unknownCycles": 86,
       "minimumObservedRecipientSlots": 71
     },
     "awards": [
@@ -12002,14 +12002,17 @@
         "residencyScope": null,
         "poolLevel": null,
         "competitionScore": null,
-        "poolReason": "The page does not say the place. It is for students who are women.",
+        "poolReason": "The page does not say the place. It is for students who are studying business, are studying STEM, and are women.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "business",
+          "STEM"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": [
@@ -14344,15 +14347,18 @@
         },
         "residencyScope": "montana",
         "poolLevel": 4,
-        "competitionScore": 57,
-        "poolReason": "Montana students can apply.",
+        "competitionScore": 54,
+        "poolReason": "Montana students who are studying STEM and are studying healthcare can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "healthcare",
+          "STEM"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": null,
@@ -15303,10 +15309,10 @@
           "source-6a3e32b0b0af"
         ],
         "verificationNote": "confirmed by Kelsey: no dates on site. Status Not sure/Opens later with no deadline. check weekly for new dates",
-        "residencyScope": "national",
-        "poolLevel": 5,
-        "competitionScore": 70,
-        "poolReason": "Students across the United States who have a mental health need, have been in foster care, and are LGBTQ+ can apply.",
+        "residencyScope": null,
+        "poolLevel": null,
+        "competitionScore": null,
+        "poolReason": "The page does not say the place.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
@@ -15314,13 +15320,8 @@
         "faith": null,
         "familyTies": null,
         "plans": null,
-        "health": [
-          "mental health"
-        ],
-        "lifeSituation": [
-          "foster care",
-          "LGBTQ+"
-        ],
+        "health": null,
+        "lifeSituation": null,
         "gender": null,
         "firstGen": null,
         "needBased": null,
@@ -19239,15 +19240,18 @@
         },
         "residencyScope": "montana",
         "poolLevel": 4,
-        "competitionScore": 57,
-        "poolReason": "Montana students can apply.",
+        "competitionScore": 54,
+        "poolReason": "Montana students who are studying STEM and are studying healthcare can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "healthcare",
+          "STEM"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": null,
@@ -23200,19 +23204,20 @@
       },
       {
         "publicId": "award-a4379bfbc7bd",
-        "name": "Work Ethic Scholarship Program",
-        "summary": "Later deadlines: April 30, 2027; June 30, 2027; August 30, 2027; October 31, 2027.",
+        "name": "mikeroweWORKS Work Ethic Scholarship",
+        "summary": "mikeroweWORKS Work Ethic Scholarship for a U.S. citizen who is a high school senior or graduate. The student must enroll in an approved skilled trades program of two years or less at an accredited school, sign the S.W.E.A.T. pledge, and provide a tuition bill. Four-year programs do not qualify. Apply by April 30, June 30, August 30, or October 31, 2026. The page does not post one award amount.",
         "amount": {
-          "label": "See site",
+          "label": "Amount not posted",
           "minimum": null,
           "maximum": null,
           "currency": null,
           "state": "unknown"
         },
         "eligibility": {
-          "audience": "Not stated; the official page could not be read",
+          "audience": "U.S. citizen in an approved skilled trades program of two years or less.",
           "minimumGpa": null,
           "schoolTypes": [
+            "two_year",
             "trade"
           ],
           "focus": null
@@ -23226,8 +23231,8 @@
           "recurrence": "unknown"
         },
         "application": {
-          "mode": "unknown",
-          "label": "https://www.mikeroweworks.org/scholarship",
+          "mode": "direct_per_award",
+          "label": "mikeroweWORKS scholarship page",
           "url": "https://www.mikeroweworks.org/scholarship",
           "groupPublicId": null,
           "supplements": "unknown"
@@ -23237,7 +23242,7 @@
         ],
         "verification": {
           "status": "verified",
-          "lastChecked": "2026-10-28",
+          "lastChecked": "2026-10-30",
           "sourceUrl": "https://www.mikeroweworks.org/scholarship",
           "openStatus": "open_now",
           "deadline": "October 31, 2026"
@@ -30129,6 +30134,730 @@
         "essayRequired": null,
         "renewable": null,
         "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-775bc6382cfe",
+        "name": "Juniata College merit and endowed scholarships",
+        "summary": "Juniata College considers admitted students automatically for its merit and endowed scholarships. Students cannot apply for these awards directly. They can be renewed for up to eight fall and spring semesters when the student still meets the criteria. The scholarships page does not post one award amount or a separate scholarship deadline. The admission page says standard merit scholarships do not use an early deadline.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "Admitted Juniata College students. There is no separate scholarship application.",
+          "minimumGpa": null,
+          "schoolTypes": [
+            "four_year"
+          ],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Deadline not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "automatic_consideration",
+          "label": "Considered through the Juniata admission application",
+          "url": "https://www.juniata.edu/admission/apply/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-dafc344a60ce"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-30",
+          "sourceUrl": "https://www.juniata.edu/admission/scholarships-and-aid/scholarships.php",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "national",
+        "poolLevel": 6,
+        "competitionScore": 94,
+        "poolReason": "Large pool: open nationwide.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": true,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-350623e70f7c",
+        "name": "Juniata College international academic merit scholarship",
+        "summary": "Juniata considers admitted international applicants for an academic merit scholarship of up to $40,000. The same dollar amount can be renewed each year when the student keeps satisfactory academic progress and full-time enrollment. The page bases the award on grades, the strength of the academic program, and TOEFL or IELTS scores. SAT scores count only if the student submits them. No scholarship deadline is posted.",
+        "amount": {
+          "label": "Up to $40,000",
+          "minimum": null,
+          "maximum": 40000,
+          "currency": "USD",
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "Admitted international applicants to Juniata College.",
+          "minimumGpa": null,
+          "schoolTypes": [
+            "four_year"
+          ],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Deadline not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "automatic_consideration",
+          "label": "Considered through the Juniata admission application",
+          "url": "https://www.juniata.edu/admission/scholarships-and-aid/scholarships.php",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-6fb4cbb3f4ad"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-30",
+          "sourceUrl": "https://www.juniata.edu/admission/scholarships-and-aid/scholarships.php",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "national",
+        "poolLevel": 6,
+        "competitionScore": 94,
+        "poolReason": "Large pool: open nationwide.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": true,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-75bd5c7e5e3b",
+        "name": "Juniata College Global Scholars Award",
+        "summary": "The Global Scholars Award is $2,000 for an outstanding international student, for educational expenses such as tuition and housing. The page describes exceptional academic achievement, leadership, and a commitment to the student's community. No deadline is posted.",
+        "amount": {
+          "label": "$2,000",
+          "minimum": 2000,
+          "maximum": 2000,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "Outstanding international applicants to Juniata College.",
+          "minimumGpa": null,
+          "schoolTypes": [
+            "four_year"
+          ],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Deadline not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "automatic_consideration",
+          "label": "Considered through the Juniata admission application",
+          "url": "https://www.juniata.edu/admission/scholarships-and-aid/scholarships.php",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-d43d415681be"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-30",
+          "sourceUrl": "https://www.juniata.edu/admission/scholarships-and-aid/scholarships.php",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "national",
+        "poolLevel": 6,
+        "competitionScore": 94,
+        "poolReason": "Large pool: open nationwide.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-b3cb04938cc9",
+        "name": "D.C. Goodman Scholarship Program at Juniata College",
+        "summary": "Juniata says you may be eligible if you have a parent who works at D.C. Goodman. The scholarships page does not post an amount or a deadline.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "A student with a parent who works at D.C. Goodman.",
+          "minimumGpa": null,
+          "schoolTypes": [
+            "four_year"
+          ],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Deadline not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "unknown",
+          "label": "Contact Juniata Student Financial Planning",
+          "url": "https://www.juniata.edu/admission/scholarships-and-aid/scholarships.php",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-ed21a325fa3c"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-30",
+          "sourceUrl": "https://www.juniata.edu/admission/scholarships-and-aid/scholarships.php",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "national",
+        "poolLevel": 5,
+        "competitionScore": 73,
+        "poolReason": "Students across the United States who have a parent who works for the sponsor can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": [
+          "employer"
+        ],
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-72dfe8ce1f12",
+        "name": "Fiore Scholarship Program at Juniata College",
+        "summary": "Juniata says you may be eligible if you have a parent who works at Fiore. The scholarships page does not post an amount or a deadline.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "A student with a parent who works at Fiore.",
+          "minimumGpa": null,
+          "schoolTypes": [
+            "four_year"
+          ],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Deadline not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "unknown",
+          "label": "Contact Juniata Student Financial Planning",
+          "url": "https://www.juniata.edu/admission/scholarships-and-aid/scholarships.php",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-247ec3f1c928"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-30",
+          "sourceUrl": "https://www.juniata.edu/admission/scholarships-and-aid/scholarships.php",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "national",
+        "poolLevel": 5,
+        "competitionScore": 73,
+        "poolReason": "Students across the United States who have a parent who works for the sponsor can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": [
+          "employer"
+        ],
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-9cc5af0c7913",
+        "name": "Kish Bank Scholarship Program at Juniata College",
+        "summary": "Juniata says you may be eligible if you have a parent who works at Kish Bank. The scholarships page does not post an amount or a deadline.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "A student with a parent who works at Kish Bank.",
+          "minimumGpa": null,
+          "schoolTypes": [
+            "four_year"
+          ],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Deadline not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "unknown",
+          "label": "Contact Juniata Student Financial Planning",
+          "url": "https://www.juniata.edu/admission/scholarships-and-aid/scholarships.php",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-1c3a17522301"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-30",
+          "sourceUrl": "https://www.juniata.edu/admission/scholarships-and-aid/scholarships.php",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "national",
+        "poolLevel": 5,
+        "competitionScore": 73,
+        "poolReason": "Students across the United States who have a parent who works for the sponsor can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": [
+          "employer"
+        ],
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-39b396f02a23",
+        "name": "Mead/Westvaco Scholarship Program at Juniata College",
+        "summary": "Juniata says you may be eligible if you have a parent who works at Mead/Westvaco. The scholarships page does not post an amount or a deadline.",
+        "amount": {
+          "label": "Amount not posted",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "unknown"
+        },
+        "eligibility": {
+          "audience": "A student with a parent who works at Mead/Westvaco.",
+          "minimumGpa": null,
+          "schoolTypes": [
+            "four_year"
+          ],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Deadline not posted",
+          "year": null,
+          "opens": null,
+          "closes": null,
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "unknown",
+          "label": "Contact Juniata Student Financial Planning",
+          "url": "https://www.juniata.edu/admission/scholarships-and-aid/scholarships.php",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-6f24bdb31281"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-30",
+          "sourceUrl": "https://www.juniata.edu/admission/scholarships-and-aid/scholarships.php",
+          "openStatus": null,
+          "deadline": null
+        },
+        "residencyScope": "national",
+        "poolLevel": 5,
+        "competitionScore": 73,
+        "poolReason": "Students across the United States who have a parent who works for the sponsor can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": [
+          "employer"
+        ],
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": null,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-1f998a20cd35",
+        "name": "Evans Scholarship for caddies",
+        "summary": "The Western Golf Association Evans Scholarship pays full tuition and housing for a caddie with limited financial means. Applicants need at least two years of regular caddying, above a B average in college preparatory courses, and demonstrated financial need. For the 2027-28 cycle, the application packet is expected by September 30 and the CSS Profile and FAFSA by October 15, 2026. Decisions are finalized by April 1. The application asks for an essay.",
+        "amount": {
+          "label": "Full tuition and housing",
+          "minimum": null,
+          "maximum": null,
+          "currency": null,
+          "state": "variable"
+        },
+        "eligibility": {
+          "audience": "A high school senior or college freshman who has caddied regularly for at least two years and has demonstrated financial need.",
+          "minimumGpa": null,
+          "schoolTypes": [
+            "four_year"
+          ],
+          "focus": null
+        },
+        "cycle": {
+          "status": "closed",
+          "label": "Closed",
+          "year": 2026,
+          "opens": "August 1, 2026",
+          "closes": "October 15, 2026",
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Evans Scholarship application",
+          "url": "https://wgaesf.org/a-life-changing-opportunity/applying-evans-scholarship",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-2a22a458236b"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-30",
+          "sourceUrl": "https://wgaesf.org/a-life-changing-opportunity/applying-evans-scholarship",
+          "openStatus": "closed_next_not_posted",
+          "deadline": "October 15, 2026"
+        },
+        "residencyScope": "national",
+        "poolLevel": 5,
+        "competitionScore": 70,
+        "poolReason": "Students across the United States who play golf and need help paying for college can apply.",
+        "ruralRule": "none",
+        "sports": [
+          "golf"
+        ],
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": true,
+        "essayRequired": true,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-7ccf0b5abd18",
+        "name": "Twins Days Twins Scholarship",
+        "summary": "The Twins Days Festival awards $1,000 per twin to one set of twins. Twins must be high school seniors accepted at an accredited college, technical, or trade school, must have attended three of the last five festivals and be registered for the current festival, and must be citizens of the United States or its territories. The 2026 application is closed. Applications for 2027 open on April 1, 2027 and must be received by July 5, 2027. Each twin submits an essay.",
+        "amount": {
+          "label": "$1,000 per twin",
+          "minimum": 1000,
+          "maximum": 1000,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "A set of twins who are high school seniors, United States citizens, and registered Twins Days Festival attendees.",
+          "minimumGpa": null,
+          "schoolTypes": [
+            "two_year",
+            "four_year",
+            "trade"
+          ],
+          "focus": null
+        },
+        "cycle": {
+          "status": "upcoming",
+          "label": "Opens April 1, 2027",
+          "year": 2027,
+          "opens": "April 1, 2027",
+          "closes": "July 5, 2027",
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Twins Days twins scholarship application",
+          "url": "https://twinsdays.org/twin-application/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-1d05dcebe46b"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-30",
+          "sourceUrl": "https://twinsdays.org/twin-application/",
+          "openStatus": "opens_on",
+          "deadline": "July 5, 2027"
+        },
+        "residencyScope": "national",
+        "poolLevel": 5,
+        "competitionScore": 73,
+        "poolReason": "Students across the United States who are twins can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": [
+          "twins"
+        ],
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": true,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-1373d6434858",
+        "name": "Twins Days Andrew R. Miller Memorial Scholarship",
+        "summary": "This non-renewable Twins Days award is $1,500. The applicant must be a citizen of the United States or its territories and must qualify in one of three ways: as twins or multiples who attended three of the last five festivals, as a parent, sibling, or child of those twins, or as a resident of Twinsburg or Twinsburg Township, Ohio. A graduating high school senior is not eligible unless that student is returning to school after a break of at least a year. Applications for 2027 open on April 1, 2027 and must be received by July 5, 2027. An essay is required.",
+        "amount": {
+          "label": "$1,500",
+          "minimum": 1500,
+          "maximum": 1500,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "A United States citizen who attended Twins Days as a twin or as the parent, sibling, or child of twins, or who lives in Twinsburg or Twinsburg Township, Ohio.",
+          "minimumGpa": null,
+          "schoolTypes": [
+            "two_year",
+            "four_year",
+            "trade"
+          ],
+          "focus": null
+        },
+        "cycle": {
+          "status": "upcoming",
+          "label": "Opens April 1, 2027",
+          "year": 2027,
+          "opens": "April 1, 2027",
+          "closes": "July 5, 2027",
+          "recurrence": "annual"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Andrew R. Miller Memorial Scholarship application",
+          "url": "https://twinsdays.org/andrew-r-miller-memorial-application/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-b1c9ac05af47"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-30",
+          "sourceUrl": "https://twinsdays.org/andrew-r-miller-memorial-application/",
+          "openStatus": "opens_on",
+          "deadline": "July 5, 2027"
+        },
+        "residencyScope": "national",
+        "poolLevel": 6,
+        "competitionScore": 94,
+        "poolReason": "Large pool: open nationwide.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": null,
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": null,
+        "essayRequired": true,
+        "renewable": false,
+        "tagConfirmedBy": "derived"
+      },
+      {
+        "publicId": "award-b4baad962dc2",
+        "name": "Beyond Scholars",
+        "summary": "Beyond Scholars, from Beyond Type 1, gives $10,000 need-based scholarships to students living with type 1 diabetes or type 2 diabetes. The 2025 cycle was for a spring 2025 high school graduate who is a United States citizen, can show financial need, and is attending a two-year, four-year, or technical college in the United States for 2025-2026. That application closed on August 29, 2025, and it asked for an essay. The Beyond Scholars page says Beyond Type 1 is not opening additional scholarship applications at this time.",
+        "amount": {
+          "label": "$10,000",
+          "minimum": 10000,
+          "maximum": 10000,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "A student living with type 1 diabetes or type 2 diabetes. No new application cycle is open.",
+          "minimumGpa": null,
+          "schoolTypes": [
+            "two_year",
+            "four_year",
+            "trade"
+          ],
+          "focus": null
+        },
+        "cycle": {
+          "status": "closed",
+          "label": "Closed, next cycle not posted",
+          "year": 2025,
+          "opens": null,
+          "closes": "August 29, 2025",
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "direct_per_award",
+          "label": "Beyond Scholars page",
+          "url": "https://beyondtype1.org/beyond-scholars/",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-68c2f4632758"
+        ],
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-10-30",
+          "sourceUrl": "https://beyondtype1.org/beyond-scholars/",
+          "openStatus": "closed_next_not_posted",
+          "deadline": "August 29, 2025"
+        },
+        "residencyScope": "national",
+        "poolLevel": 5,
+        "competitionScore": 70,
+        "poolReason": "Students across the United States who have diabetes and need help paying for college can apply.",
+        "ruralRule": "none",
+        "sports": null,
+        "clubs": null,
+        "heritage": null,
+        "faith": null,
+        "familyTies": null,
+        "plans": null,
+        "health": [
+          "diabetes"
+        ],
+        "lifeSituation": null,
+        "gender": null,
+        "firstGen": null,
+        "needBased": true,
+        "essayRequired": true,
+        "renewable": null,
+        "tagConfirmedBy": "derived"
       }
     ],
     "sources": [
@@ -35278,6 +36007,116 @@
         "recordType": "source",
         "architecture": "single_award_page",
         "url": "https://www.ustafoundation.com/en/home/what-we-do/college-scholarship-opportunities.html",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-dafc344a60ce",
+        "title": "juniata.edu",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.juniata.edu/admission/scholarships-and-aid/scholarships.php",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-6fb4cbb3f4ad",
+        "title": "juniata.edu",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.juniata.edu/admission/scholarships-and-aid/scholarships.php",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-d43d415681be",
+        "title": "juniata.edu",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.juniata.edu/admission/scholarships-and-aid/scholarships.php",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-ed21a325fa3c",
+        "title": "juniata.edu",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.juniata.edu/admission/scholarships-and-aid/scholarships.php",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-247ec3f1c928",
+        "title": "juniata.edu",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.juniata.edu/admission/scholarships-and-aid/scholarships.php",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-1c3a17522301",
+        "title": "juniata.edu",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.juniata.edu/admission/scholarships-and-aid/scholarships.php",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-6f24bdb31281",
+        "title": "juniata.edu",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://www.juniata.edu/admission/scholarships-and-aid/scholarships.php",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-2a22a458236b",
+        "title": "wgaesf.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://wgaesf.org/a-life-changing-opportunity/applying-evans-scholarship",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-1d05dcebe46b",
+        "title": "twinsdays.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://twinsdays.org/twin-application/",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-b1c9ac05af47",
+        "title": "twinsdays.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://twinsdays.org/andrew-r-miller-memorial-application/",
+        "access": "public",
+        "availability": "complete",
+        "awardCount": 1
+      },
+      {
+        "publicId": "source-68c2f4632758",
+        "title": "beyondtype1.org",
+        "recordType": "source",
+        "architecture": "single_award_page",
+        "url": "https://beyondtype1.org/beyond-scholars/",
         "access": "public",
         "availability": "complete",
         "awardCount": 1

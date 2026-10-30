@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState, type ReactNode, type Ref } from 'react';
 import { differentiationHits } from '@/lib/differentiation';
-import { buildStudentWorkbook, serializeAwardDeadlineCalendar, serializeStudentCalendar, serializeStudentCsv } from '@/lib/studentExport';
+import { buildStudentWorkbook, googleCalendarTemplateUrl, serializeAwardDeadlineCalendar, serializeStudentCalendar, serializeStudentCsv } from '@/lib/studentExport';
 import type { InterviewAnswers } from '@/lib/interviewMatcher';
 import { buildStudentHref } from '@/lib/studentLink';
 import type { DisplayResult } from '@/lib/spreadsheetShortlist';
@@ -12,11 +12,11 @@ import {
   BOOKMARK_NOTE,
   deadlineLabel,
   explicitDeadlineDate,
+  filterStudentAwards,
   formatListStamp,
   HIDE_BANNER,
   HIDDEN_FOOTNOTE,
   isOpeningThisMonth,
-  matchesStudentStatus,
   officialUrl,
   plainStudentText,
   poolExplanation,
@@ -111,18 +111,14 @@ export default function StudentMatchList({
     return () => window.clearTimeout(timer);
   }, [copied]);
 
-  const filtered = useMemo(() => {
-    const query = search.trim().toLocaleLowerCase();
-    return awards.filter((award) => {
-      const haystack = [award.name, award.summary ? plainStudentText(award.summary) : '', award.amount.label, award.eligibility.audience, award.application.label, deadlineLabel(award)]
-        .filter(Boolean).join(' ').toLocaleLowerCase();
-      const matchesSearch = !query || haystack.includes(query);
-      const matchesMethod = method === 'all' || award.application.mode === method;
-      const matchesSchool = schoolType === 'all' || award.eligibility.schoolTypes.includes(schoolType);
-      const matchesMonth = !openingThisMonth || isOpeningThisMonth(award, now);
-      return matchesSearch && matchesStudentStatus(award, statusFilter, now) && matchesMethod && matchesSchool && matchesMonth;
-    });
-  }, [awards, method, now, openingThisMonth, schoolType, search, statusFilter]);
+  const filtered = useMemo(() => filterStudentAwards(awards, {
+    search,
+    status: statusFilter,
+    openingThisMonth,
+    method,
+    schoolType,
+    now,
+  }), [awards, method, now, openingThisMonth, schoolType, search, statusFilter]);
 
   const { visible, concealed } = useMemo(() => splitHidden(filtered, hiddenIds), [filtered, hiddenIds]);
   const sorted = useMemo(() => sortStudentAwards(visible, sort, now), [now, sort, visible]);
@@ -305,7 +301,7 @@ export default function StudentMatchList({
           Download CSV
         </button>
       </div>
-      <p className="mt-3 text-xs leading-5 text-slate-500">The Excel file and the CSV match the awards on the screen. Hidden awards are left out. A deadline file is made on this device only when you tap the button. No email. Nothing is sent or saved.</p>
+      <p className="mt-3 text-xs leading-5 text-slate-500">The Excel file and the CSV match the awards on the screen. Hidden awards are left out. A deadline file is made on this device only when you tap the button. Add to Google Calendar opens Google with that award's public deadline filled in. No email. Nothing is sent or saved.</p>
       <p className="mt-4 text-xs leading-5 text-slate-500">{HIDDEN_FOOTNOTE}</p>
     </div>
   );
@@ -324,6 +320,7 @@ function AwardRow({ award, now, result, profile, onHide, onAddDeadline }: { awar
   const fits = profile ? differentiationHits(award, profile) : [];
   const rulesMissing = poolRulesMissing(award);
   const dated = Boolean(explicitDeadlineDate(award));
+  const googleCalendarUrl = dated ? googleCalendarTemplateUrl(award) : null;
   return (
     <article data-award-id={award.publicId} data-verification-status={verification.status} data-student-status={status} className={`rounded-xl border border-slate-200 border-l-4 bg-white p-4 shadow-sm ${borderColor[status]}`}>
       <div className="grid grid-cols-2 items-start gap-x-3 gap-y-3 md:grid-cols-[minmax(14rem,1fr)_minmax(8.5rem,11rem)_minmax(7rem,9rem)_auto] md:gap-x-4">
@@ -362,6 +359,7 @@ function AwardRow({ award, now, result, profile, onHide, onAddDeadline }: { awar
           <p className={`w-fit rounded-full border px-2.5 py-1 text-xs font-bold ${pillColor[status]}`}>{STUDENT_STATUS_LABELS[status]}</p>
           {url ? <OfficialLink href={url} button>{action}</OfficialLink> : <p className="rounded-lg bg-slate-100 px-3 py-2 text-center text-sm font-bold text-slate-600">No website listed</p>}
           <button type="button" onClick={() => onAddDeadline(award)} disabled={!dated} className="rounded-lg border border-[#123c3a] bg-white px-3 py-2 text-sm font-bold text-[#123c3a] hover:bg-slate-50 focus:outline-none focus:ring-4 focus:ring-teal-200 disabled:cursor-not-allowed disabled:border-slate-200 disabled:text-slate-400">{dated ? 'Add this deadline to my calendar' : 'No date to add yet'}</button>
+          {googleCalendarUrl ? <OfficialLink href={googleCalendarUrl} button>Add to Google Calendar</OfficialLink> : null}
           <button type="button" onClick={() => onHide(award.publicId)} className="rounded-lg px-3 py-2 text-sm font-bold text-slate-500 hover:bg-slate-100 hover:text-slate-800 focus:outline-none focus:ring-4 focus:ring-teal-200">✕ Hide</button>
         </div>
       </div>

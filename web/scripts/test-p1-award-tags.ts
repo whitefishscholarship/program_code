@@ -178,6 +178,7 @@ const p1NullIds = [
   'award-5dc2aab768d2',
   'award-5dd4c3d3988a',
   'award-d2b44a62c0a7',
+  'award-5b5b0db70dd0',
 ];
 const p2NullIds = [
   'award-7859d00caa82',
@@ -203,7 +204,7 @@ const byPublicId = new Map(bundle.catalog.awards.map((award) => [award.publicId,
 for (const id of [...p1NullIds, ...p2NullIds]) assert.equal(byPublicId.get(id)?.residencyScope, null, id);
 assert.equal(scopeCounts.get('null'), p1NullIds.length + p2NullIds.length);
 assert.match(report, /## Flag for Kelsey/);
-assert.match(report, /Pages with no rules \(19\)/);
+assert.match(report, /Pages with no rules \(20\)/);
 assert.match(report, /May 10, 2026/);
 assert.match(report, /April 10, 2026/);
 assert.match(report, /January 20, 2026/);

@@ -113,11 +113,13 @@ const LABELS: Record<string, string> = {
   disability: 'A disability',
   dyslexia: 'Dyslexia',
   autism: 'Autism',
+  diabetes: 'Diabetes',
   'foster care': 'Foster care',
   'LGBTQ+': 'LGBTQ+',
   adopted: 'Adopted',
   'hard times': 'Hard times',
   'loss of a parent': 'Lost a parent',
+  twins: 'Twins',
   true: 'First in my family to go to college',
   'aviation group': 'Aviation group member',
 };
