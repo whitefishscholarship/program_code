@@ -92,12 +92,12 @@ assert.equal(optionLabels.includes('A parent works for the sponsor'), false);
 assert.equal(optionLabels.includes('Aviation group member'), false);
 assert.equal(optionLabels.includes('Club like the Elks'), false);
 for (const label of [
-  'Are you or a parent an Elks member?',
-  'Are you in the National FFA Organization (FFA)?',
-  'Does a parent work for Kish Bank?',
-  'Does a parent work for D.C. Goodman?',
-  'Does a parent work for Fiore?',
-  'Does a parent work for Mead/Westvaco?',
+  'Elks',
+  'FFA',
+  'Kish Bank',
+  'D.C. Goodman',
+  'Fiore',
+  'Mead/Westvaco',
   chipLabel('woman'),
 ]) {
   assert.equal(optionLabels.includes(label), true, label);
@@ -114,7 +114,7 @@ const seen = new Set<string>();
 for (const id of ['school-clubs', 'community-orgs', 'aviation-groups', 'employers']) {
   const group = groups.find((item) => item.id === id);
   assert.ok(group, id);
-  assert.equal(group.layout, 'questions');
+  assert.notEqual(group.layout, 'questions');
   assert.ok(group.chips.length > 0, id);
   for (const chip of group.chips) {
     const profile = toggleDifferentiation(emptyDifferentiation(), chip);
