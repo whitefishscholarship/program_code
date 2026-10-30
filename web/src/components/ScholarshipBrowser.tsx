@@ -224,6 +224,7 @@ export default function ScholarshipBrowser() {
       canUndo={undoIds !== null}
       refreshNote={refreshNote}
       embedHeading={embedHeading}
+      listTitle={scopeTitle(resultScope)}
       headingRef={embedHeading ? experienceHeadingRef : undefined}
       resetToken={isResults ? resultScope : 'browse'}
       onHide={hideOne}
@@ -244,14 +245,14 @@ export default function ScholarshipBrowser() {
               <button type="button" onClick={resetInterview} className="btn btn-primary">Start over</button>
             </div>
             <div role="group" aria-label="Choose which awards to show" className="toolbar mt-4">
-              <ScopeButton active={resultScope === 'recommended'} onClick={() => setResultScope('recommended')}>My matches ({matching.counts.match + matching.counts.possibleMatch})</ScopeButton>
-              <ScopeButton active={resultScope === 'conflicts'} onClick={() => setResultScope('conflicts')}>May not fit ({matching.counts.knownConflict})</ScopeButton>
-              <ScopeButton active={resultScope === 'all'} onClick={() => setResultScope('all')}>Every award ({matching.counts.total})</ScopeButton>
+              <ScopeButton active={resultScope === 'recommended'} onClick={() => setResultScope('recommended')}>My matches ({scopeCount(matching.results, 'recommended', hiddenIds)})</ScopeButton>
+              <ScopeButton active={resultScope === 'conflicts'} onClick={() => setResultScope('conflicts')}>May not fit ({scopeCount(matching.results, 'conflicts', hiddenIds)})</ScopeButton>
+              <ScopeButton active={resultScope === 'all'} onClick={() => setResultScope('all')}>Every award ({scopeCount(matching.results, 'all', hiddenIds)})</ScopeButton>
             </div>
           </div>
           {baseAwards.length === 0 ? (
             <>
-              <h2 ref={experienceHeadingRef} tabIndex={-1} id="catalog-heading" className="page-title mt-6 outline-none">Your matches (0)</h2>
+              <h2 ref={experienceHeadingRef} tabIndex={-1} id="catalog-heading" className="page-title mt-6 outline-none">{scopeTitle(resultScope)} (0)</h2>
               <NoRecommendations onEdit={() => setExperience('interview')} onBrowse={showBrowseAll} />
             </>
           ) : list(true)}
@@ -279,7 +280,7 @@ export default function ScholarshipBrowser() {
             <strong>Checked October 28, 2026:</strong> {catalog.awards.filter((award) => award.verification?.status === 'verified').length} scholarships are marked Verified, with a source link and a clear open, later, or closed status. The other awards are not checked yet, so they say Not sure.
           </div>
           <div role="group" aria-label="Choose catalog record type" className="toolbar panel mt-6">
-            <ScopeButton active={view === 'awards'} onClick={() => setView('awards')}>Awards ({catalog.counts.awards})</ScopeButton>
+            <ScopeButton active={view === 'awards'} onClick={() => setView('awards')}>Awards ({catalog.awards.filter((award) => !hiddenIds.includes(award.publicId)).length})</ScopeButton>
             <ScopeButton active={view === 'portals'} onClick={() => setView('portals')}>Portal records ({catalog.counts.portals})</ScopeButton>
             <ScopeButton active={view === 'sources'} onClick={() => setView('sources')}>Source records ({catalog.counts.sources})</ScopeButton>
           </div>
@@ -306,6 +307,17 @@ export default function ScholarshipBrowser() {
 
 function Count({ label, value, suffix = '' }: { label: string; value: number; suffix?: string; emphasis?: 'neutral' | 'warning' | 'positive' }) {
   return <div className="stat"><dt>{label}</dt><dd>{value}{suffix}</dd></div>;
+}
+
+function scopeTitle(scope: ResultScope): string {
+  if (scope === 'conflicts') return 'May not fit';
+  if (scope === 'all') return 'Every award';
+  return 'Your matches';
+}
+
+function scopeCount(results: ReadonlyArray<{ decision: string; award: { publicId: string } }>, scope: ResultScope, hiddenIds: readonly string[]): number {
+  const hidden = new Set(hiddenIds);
+  return awardsForResultScope(results, scope).filter((result) => !hidden.has(result.award.publicId)).length;
 }
 
 function ScopeButton({ active, onClick, children }: { active: boolean; onClick: () => void; children: React.ReactNode }) {

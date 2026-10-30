@@ -460,8 +460,16 @@ const LEGACY_CHIPS: readonly { kind: 'criterion' | 'discovery' | 'organization';
   { kind: 'organization', id: 'tsa', chip: { field: 'clubs', value: 'TSA' } },
 ];
 
+/** A specific employer chip matches only the award whose name fits that workplace. */
+export function employerChipMatchesAward(award: TagSource, familyTies: readonly string[]): boolean {
+  const selected = new Set(familyTies);
+  return tieQuestions().some((question) => question.value.startsWith('employer:') && selected.has(question.value) && question.matches(award));
+}
+
 function bindingSelected(profile: DifferentiationProfile, chip: LegacyChip, id: string): boolean {
-  if (id === 'company_employee') return profile.familyTies.includes('employer');
+  if (id === 'company_employee') {
+    return profile.familyTies.includes('employer') || profile.familyTies.some((value) => value.startsWith('employer:'));
+  }
   if (id === 'elks_lodge') return profile.familyTies.includes('elks') || profile.familyTies.includes('fraternal');
   return chipSelected(profile, { ...chip, label: chip.value });
 }

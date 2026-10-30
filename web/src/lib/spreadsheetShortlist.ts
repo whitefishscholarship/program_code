@@ -1,5 +1,8 @@
 import { R3_SHORTLIST_ROWS, R3_CONNECTIONS, type DiscoveryConnection } from './r3Catalog';
+import { gpaRuleHeld, schoolRuleHeld } from './eligibilityHolds';
 import { relevanceByAward } from './interviewRelevance';
+import { SHORTLIST_ID_RELINKS } from './shortlistRelinks';
+import { preferenceReasonsForAward } from './studentFit';
 import { z } from 'zod';
 import publicationJson from '../../fixtures/shortlist/spreadsheet-shortlist-v1.json';
 import pin from '../../fixtures/shortlist/pin.json';
@@ -35,33 +38,72 @@ export function awardsForResultScope<T extends { decision: string }>(results: re
   return [...results];
 }
 
+const SCHOOL_LABELS = { two_year: 'two-year', four_year: 'four-year', trade_vocational: 'trade/vocational' } as const;
+type ComparedSchool = keyof typeof SCHOOL_LABELS;
+
+function awardSchoolTypes(award: StudentAward): ComparedSchool[] {
+  const found = new Set<ComparedSchool>();
+  for (const type of award.eligibility.schoolTypes) {
+    if (type === 'two_year' || type === 'four_year') found.add(type);
+    else if (type === 'trade') found.add('trade_vocational');
+  }
+  return [...found];
+}
+
+function rowsByAward(rows: readonly ShortlistRow[]): Map<string, ShortlistRow> {
+  const byId = new Map<string, ShortlistRow>();
+  for (const row of rows) {
+    if (row.targetKind !== 'award') continue;
+    if (!byId.has(row.targetId)) byId.set(row.targetId, row);
+    const linked = SHORTLIST_ID_RELINKS[row.targetId];
+    if (linked && !byId.has(linked)) byId.set(linked, row);
+  }
+  return byId;
+}
+
+/** The award's own eligibility wins. The shortlist row is only the backup. Held rules stay off. */
+export function comparedGpa(award: StudentAward, row: ShortlistRow | undefined): number | null {
+  if (gpaRuleHeld(award.publicId)) return null;
+  if (award.eligibility.minimumGpa != null) return award.eligibility.minimumGpa;
+  return row?.minimumGpa ?? null;
+}
+
+export function comparedSchoolTypes(award: StudentAward, row: ShortlistRow | undefined): ComparedSchool[] {
+  if (schoolRuleHeld(award.publicId)) return [];
+  const own = awardSchoolTypes(award);
+  if (own.length > 0) return own;
+  return row?.schoolTypes ? [...row.schoolTypes] : [];
+}
+
 export function shortlistAwards(awards: readonly StudentAward[], rawAnswers: InterviewAnswers, rows: readonly ShortlistRow[] = R3_SHORTLIST_ROWS, additionalConnections: readonly DiscoveryConnection[] = R3_CONNECTIONS): { counts: MatchResponse['counts']; results: ShortlistResult[] } {
   const answers = InterviewAnswersSchema.parse(rawAnswers);
   const relevance = relevanceByAward(answers, additionalConnections);
-  const byId = new Map(rows.filter(row => row.targetKind === 'award').map(row => [row.targetId, row]));
+  const byId = rowsByAward(rows);
   const chosenSchools = answers.targetSchoolTypes.filter(type => type !== 'undecided');
   const results = awards.map(award => {
     const row = byId.get(award.publicId);
     const reasons: AwardMatchResult['reasons'] = [];
     let fits = 0, mismatch = false;
-    if (row?.minimumGpa !== null && row?.minimumGpa !== undefined) {
-      const below = answers.gpa < row.minimumGpa;
+    const minimumGpa = comparedGpa(award, row);
+    if (minimumGpa != null) {
+      const below = answers.gpa < minimumGpa;
       mismatch ||= below;
       if (!below) fits++;
-      reasons.push({ code: 'recorded_gpa', kind: 'verification_needed', message: `Saved spreadsheet row ${row.sourceRow} lists a minimum GPA of ${row.minimumGpa}. ${below ? 'Your answer is below that recorded minimum.' : 'Your answer meets that recorded minimum.'} Confirm the required GPA scale and current rule.` });
+      reasons.push({ code: 'recorded_gpa', kind: 'verification_needed', message: `The minimum GPA for this award is ${minimumGpa}. ${below ? 'Your answer is below that minimum.' : 'Your answer meets that minimum.'} Confirm the required GPA scale and the current rule.` });
     }
-    if (row?.schoolTypes.length && chosenSchools.length) {
-      const overlaps = chosenSchools.some(type => row.schoolTypes.includes(type));
+    const schoolTypes = comparedSchoolTypes(award, row);
+    if (schoolTypes.length && chosenSchools.length) {
+      const overlaps = chosenSchools.some(type => schoolTypes.includes(type));
       // Undecided means another education path remains possible, even alongside a concrete choice.
       const outside = !overlaps && !answers.targetSchoolTypes.includes('undecided');
       mismatch ||= outside;
       if (overlaps) fits++;
-      const labels = { two_year: 'two-year', four_year: 'four-year', trade_vocational: 'trade/vocational' };
-      reasons.push({ code: 'recorded_school', kind: 'verification_needed', message: `Reviewed spreadsheet row ${row.sourceRow} lists ${row.schoolTypes.map(type => labels[type]).join(' or ')} study. ${overlaps ? 'At least one selected school type fits.' : outside ? 'Your selected school types differ from this record.' : 'Your undecided plans keep this award in consideration.'}` });
+      reasons.push({ code: 'recorded_school', kind: 'verification_needed', message: `This award lists ${schoolTypes.map(type => SCHOOL_LABELS[type]).join(' or ')} study. ${overlaps ? 'At least one selected school type fits.' : outside ? 'Your selected school types differ from this award.' : 'Your undecided plans keep this award in consideration.'}` });
     }
-    reasons.push({ code: 'unverified_requirements', kind: 'verification_needed', message: row ? 'Other eligibility requirements and current availability still need checking. Missing information does not count against you.' : 'This award has no separate row in the saved spreadsheet. No parent requirements have been assumed; it remains available to check.' });
-    const relevanceReasons = relevance.get(award.publicId) ?? [];
-    reasons.unshift(...relevanceReasons);
+    reasons.push({ code: 'unverified_requirements', kind: 'verification_needed', message: 'Other requirements and the current deadline still need checking. Missing information does not count against you.' });
+    const relevanceReasons = preferenceReasonsForAward(award, answers, relevance);
+    if (mismatch) reasons.push(...relevanceReasons);
+    else reasons.unshift(...relevanceReasons);
     const decision: ShortlistDecision = mismatch ? 'recorded_mismatch' : fits ? 'recorded_fit' : 'needs_checking';
     return { award, decision, reasons, relevant: relevanceReasons.length > 0 };
   }).sort((a,b) => {

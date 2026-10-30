@@ -51,7 +51,9 @@ assert.deepEqual(shortlistAwards([...catalog.awards].reverse(),base),results[0],
 
 for (const n of [6,30,98,158]) assert.equal(SHORTLIST_PUBLICATION.rows.find(r=>r.sourceRow===n)?.minimumGpa,null);
 const mappedIds = new Set(SHORTLIST_PUBLICATION.rows.filter(r=>r.targetKind==='award').map(r=>r.targetId));
-assert.equal(results[0].results.filter(r=>!mappedIds.has(r.award.publicId)&&r.decision==='needs_checking').length,16);
+const catalogOnly = results[0].results.filter(r=>!mappedIds.has(r.award.publicId));
+assert.equal(catalogOnly.length,16);
+assert.equal(catalogOnly.filter(r=>r.decision==='needs_checking').length,4,'award eligibility now checks catalog-only awards that publish a GPA or school rule');
 assert.equal(crypto.createHash('sha256').update(fs.readFileSync('fixtures/shortlist/spreadsheet-shortlist-v1.json')).digest('hex'),SHORTLIST_SHA256);
 assert.deepEqual(SHORTLIST_PUBLICATION.counts,{sourceRows:197,awardRows:176,portalRows:21,catalogAwards:192,catalogOnlyAwards:16,gpaRules:49,schoolRules:64});
 execFileSync(process.execPath,['--import','tsx','scripts/build-spreadsheet-shortlist.ts'],{stdio:'pipe'});

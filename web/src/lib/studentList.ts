@@ -1,19 +1,20 @@
 import { calendarDayIsBefore, explicitCalendarDay, parseDeadline } from './dateParse';
-import { displayVerification, type ApplicationMode, type StudentAward } from './studentCatalog';
+import { displayVerification, explicitOpenDayHasArrived, type ApplicationMode, type StudentAward } from './studentCatalog';
 
 export const BOOKMARK_NOTE = "Bookmark this link. Don't share it, it holds your answers.";
 export const HIDE_BANNER = 'Award hidden. Your link changed. Copy or bookmark your new refresh link.';
 export const HIDDEN_FOOTNOTE = '* Hidden awards are saved only in your link, after the # sign. No account. We never see or keep your info. A brand new award will still show up.';
 
-export const STUDENT_STATUS_ORDER = ['open_now', 'opens_later', 'closed', 'not_sure'] as const;
+export const STUDENT_STATUS_ORDER = ['open_now', 'check_site', 'opens_later', 'closed', 'not_sure'] as const;
 export type StudentStatus = (typeof STUDENT_STATUS_ORDER)[number];
 export type StatusFilter = 'all' | StudentStatus;
-export type StudentSort = 'deadline' | 'amount' | 'name' | 'pool';
+export type StudentSort = 'match' | 'deadline' | 'amount' | 'name' | 'pool';
 
 export const RULES_NOT_POSTED = 'Rules not posted yet';
 
 export const STUDENT_STATUS_LABELS: Record<StudentStatus, string> = {
   open_now: 'Open now',
+  check_site: 'Check site',
   opens_later: 'Opens later',
   closed: 'Closed',
   not_sure: 'Not sure',
@@ -46,7 +47,10 @@ export function studentStatus(award: StudentAward, now: Date = new Date()): Stud
   if (verification.status !== 'verified') return 'not_sure';
   if (datedDeadlineIsBeforeToday(award, now)) return 'closed';
   if (verification.openStatus === 'open_now') return 'open_now';
-  if (verification.openStatus === 'opens_on') return 'opens_later';
+  if (verification.openStatus === 'opens_on') {
+    // The browser date decides this. A passed open date is not Open now until a person verifies it.
+    return explicitOpenDayHasArrived(award.cycle.opens, now) ? 'check_site' : 'opens_later';
+  }
   if (verification.openStatus === 'closed_next_not_posted') return 'closed';
   return 'not_sure';
 }
@@ -99,6 +103,15 @@ export function actionLabel(status: StudentStatus): 'Apply' | 'Look now' {
   return status === 'open_now' ? 'Apply' : 'Look now';
 }
 
+/** Fits-you awards come first. Every award stays in the list. */
+export function sortByFit<T extends { name: string; publicId: string }>(awards: readonly T[], fits: (award: T) => boolean): T[] {
+  return [...awards].sort((left, right) => {
+    const leftFit = fits(left) ? 0 : 1;
+    const rightFit = fits(right) ? 0 : 1;
+    return leftFit - rightFit || left.name.localeCompare(right.name) || left.publicId.localeCompare(right.publicId);
+  });
+}
+
 const DOLLAR_AMOUNT_SOURCE = String.raw`\$\s*(\d{1,3}(?:,\d{3})+|\d+)(?:\.(\d{2}))?`;
 const RANGE_GAP = /^(?:-|to|through)$/i;
 
@@ -122,6 +135,23 @@ export function formatStudentAmount(label: string): string {
   const text = plainStudentText(label);
   const matches = [...text.matchAll(new RegExp(DOLLAR_AMOUNT_SOURCE, 'g'))];
   if (matches.length === 0) return 'See site';
+  const units = matches.map((match) => {
+    const after = text.slice((match.index ?? 0) + match[0].length);
+    const unit = after.match(/^\s*(million|billion)\b/i);
+    return unit ? unit[1].toLowerCase() : null;
+  });
+  if (units.every((unit) => unit && unit === units[0])) {
+    const baseCents = matches.map((match) => dollarsToCents(match[1], match[2]));
+    const uniqueBase = [...new Set(baseCents)];
+    const unit = units[0];
+    if (uniqueBase.length === 1) return `${formatMoney(uniqueBase[0])} ${unit}`;
+    if (matches.length === 2 && isDollarRange(text, matches)) {
+      const low = Math.min(baseCents[0], baseCents[1]);
+      const high = Math.max(baseCents[0], baseCents[1]);
+      return `${formatMoney(low)} ${unit}-${formatMoney(high)} ${unit}`;
+    }
+    return `Up to ${formatMoney(Math.max(...baseCents))} ${unit}`;
+  }
   const cents = matches.map((match) => dollarsToCents(match[1], match[2]));
   const unique = [...new Set(cents)];
   if (unique.length === 1) return formatMoney(unique[0]);
@@ -232,7 +262,7 @@ export function poolExplanation(award: PoolAward): string {
   return reason ? plainStudentText(reason) : RULES_NOT_POSTED;
 }
 
-export function sortStudentAwards(awards: readonly StudentAward[], sort: StudentSort, now: Date): StudentAward[] {
+export function sortStudentAwards(awards: readonly StudentAward[], sort: Exclude<StudentSort, 'match'>, now: Date): StudentAward[] {
   return [...awards].sort((left, right) => {
     if (sort === 'pool') {
       const leftMissing = poolRulesMissing(left);
@@ -256,6 +286,9 @@ export function sortStudentAwards(awards: readonly StudentAward[], sort: Student
       if (rightAmount === null) return -1;
       return rightAmount - leftAmount || left.name.localeCompare(right.name) || left.publicId.localeCompare(right.publicId);
     }
+    const leftClosed = studentStatus(left, now) === 'closed' ? 1 : 0;
+    const rightClosed = studentStatus(right, now) === 'closed' ? 1 : 0;
+    if (leftClosed !== rightClosed) return leftClosed - rightClosed;
     const leftTime = deadlineSortTime(left, now);
     const rightTime = deadlineSortTime(right, now);
     if (leftTime === null && rightTime === null) return left.name.localeCompare(right.name) || left.publicId.localeCompare(right.publicId);
@@ -267,7 +300,7 @@ export function sortStudentAwards(awards: readonly StudentAward[], sort: Student
 
 export function isOpeningThisMonth(award: StudentAward, now: Date): boolean {
   const status = studentStatus(award, now);
-  if (status !== 'open_now' && status !== 'opens_later') return false;
+  if (status !== 'open_now' && status !== 'opens_later' && status !== 'check_site') return false;
   const opens = award.cycle.opens;
   if (!opens) return false;
   const match = opens.match(OPEN_DATE);

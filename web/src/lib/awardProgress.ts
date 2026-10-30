@@ -95,3 +95,28 @@ export function clearAwardProgress(storage: Pick<ProgressStorage, 'removeItem'>)
     // Same as a blocked write: leave the data where the browser already put it.
   }
 }
+
+/** Opens storage inside the try, so a browser that blocks storage does not throw. */
+export function readAwardProgressSafely(openStorage: () => Pick<ProgressStorage, 'getItem'>): AwardProgressMap {
+  try {
+    return readAwardProgress(openStorage());
+  } catch {
+    return {};
+  }
+}
+
+export function writeAwardProgressSafely(openStorage: () => ProgressStorage, map: AwardProgressMap): void {
+  try {
+    writeAwardProgress(openStorage(), map);
+  } catch {
+    // The storage getter itself can throw before writeAwardProgress runs.
+  }
+}
+
+export function clearAwardProgressSafely(openStorage: () => Pick<ProgressStorage, 'removeItem'>): void {
+  try {
+    clearAwardProgress(openStorage());
+  } catch {
+    // Same as a blocked write.
+  }
+}

@@ -199,6 +199,16 @@ export function displayMatchReason(message: string): string {
   return message.replace(UNSUPPORTED_AOPA_EXAM_NOTE, 'Check the age range stated on the official page. ');
 }
 
+/** True when the opens text names a year and that calendar day is today or earlier. A missing year is not guessed. */
+export function explicitOpenDayHasArrived(opens: string | null | undefined, now: Date): boolean {
+  if (!opens) return false;
+  const day = explicitCalendarDay(opens);
+  if (!day) return false;
+  const openTime = Date.UTC(day.year, day.month - 1, day.day);
+  const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+  return openTime <= today;
+}
+
 export function openStatusText(award: StudentAward, now: Date = new Date()): string | null {
   const verification = displayVerification(award);
   if (verification.status !== 'verified') return null;
@@ -211,6 +221,9 @@ export function openStatusText(award: StudentAward, now: Date = new Date()): str
     return verification.deadline ? sentence(`Open now. Deadline ${verification.deadline}`) : 'Open now.';
   }
   if (verification.openStatus === 'opens_on') {
+    if (explicitOpenDayHasArrived(award.cycle.opens, now)) {
+      return 'Check the sponsor site. The listed open date has passed.';
+    }
     const opens = award.cycle.opens ? `Opens ${award.cycle.opens}.` : 'Opens on a later date.';
     return verification.deadline ? sentence(`${opens} Deadline ${verification.deadline}`) : `${opens} Exact deadline is not posted.`;
   }
