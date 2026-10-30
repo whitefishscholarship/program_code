@@ -131,19 +131,10 @@ export default function InterviewWizard({ awards, initialAnswers, onComplete, on
         </Section>
 
         <div>
-          <h3 className="section-title">What makes you different?</h3>
-          <p className="hint">Check anything that fits you. You can skip a group. An empty box does not hide an award.</p>
-          <DifferentiationStep groups={groups} profile={profile} onToggle={(chip) => { setProfile((current) => toggleDifferentiation(current, chip)); setError(''); }} />
+          <h3 className="section-title">Filter for scholarships</h3>
+          <p className="hint">Pick what fits you so we can point out scholarships you may want. You can skip any group. An empty group does not hide an award.</p>
         </div>
-
-        <Section title="Things you do" hint="Pick any that fit you. You can skip these.">
-          <ChipRow>
-            {ACTIVITY_QUESTIONS.map((item) => (
-              <LightChip key={item.id} id={item.controlId} label={ACTIVITY_LABELS[item.id] ?? item.label} checked={activities.includes(item.id)} onChange={() => toggleValue(item.id, activities, setActivities)} />
-            ))}
-          </ChipRow>
-        </Section>
-
+        <FilterGroups ids={['where-you-live']} groups={groups} profile={profile} onToggle={(chip) => { setProfile((current) => toggleDifferentiation(current, chip)); setError(''); }} />
         <Section title="Family money" hint="Some scholarships look at how much money your family has. Do you want to see those?">
           <ChipRow>
             {FAMILY_MONEY_OPTIONS.map(([value, label]) => (
@@ -151,6 +142,15 @@ export default function InterviewWizard({ awards, initialAnswers, onComplete, on
             ))}
           </ChipRow>
         </Section>
+        <FilterGroups ids={['plans', 'first-gen', 'identity', 'sports']} groups={groups} profile={profile} onToggle={(chip) => { setProfile((current) => toggleDifferentiation(current, chip)); setError(''); }} />
+        <Section title="Things you do" hint="Pick any that fit you. You can skip these.">
+          <ChipRow>
+            {ACTIVITY_QUESTIONS.map((item) => (
+              <LightChip key={item.id} id={item.controlId} label={ACTIVITY_LABELS[item.id] ?? item.label} checked={activities.includes(item.id)} onChange={() => toggleValue(item.id, activities, setActivities)} />
+            ))}
+          </ChipRow>
+        </Section>
+        <FilterGroups ids={['family', 'health']} groups={groups} profile={profile} onToggle={(chip) => { setProfile((current) => toggleDifferentiation(current, chip)); setError(''); }} />
 
         {SPECIAL_CRITERIA_CATEGORIES.map((category) => {
           const items = SPECIAL_CRITERIA.filter((item) => item.category === category).map((item) => item).filter((item) => KEPT_UNIQUE_CRITERIA.has(item.id));
@@ -166,6 +166,7 @@ export default function InterviewWizard({ awards, initialAnswers, onComplete, on
             </Section>
           );
         })}
+        <FilterGroups ids={['community-orgs', 'school-clubs', 'aviation-groups', 'employers']} groups={groups} profile={profile} onToggle={(chip) => { setProfile((current) => toggleDifferentiation(current, chip)); setError(''); }} />
       </div>
 
       <div className="wizard-actions">
@@ -174,6 +175,12 @@ export default function InterviewWizard({ awards, initialAnswers, onComplete, on
       </div>
     </section>
   );
+}
+
+function FilterGroups({ ids, groups, profile, onToggle }: { ids: readonly string[]; groups: ReturnType<typeof differentiationGroups>; profile: DifferentiationProfile; onToggle: (chip: Parameters<typeof toggleDifferentiation>[1]) => void }) {
+  const picked = ids.map((id) => groups.find((group) => group.id === id)).filter((group) => group != null);
+  if (picked.length === 0) return null;
+  return <DifferentiationStep groups={picked} profile={profile} onToggle={onToggle} />;
 }
 
 function Section({ title, hint, required = false, children }: { title: string; hint: string; required?: boolean; children: ReactNode }) {

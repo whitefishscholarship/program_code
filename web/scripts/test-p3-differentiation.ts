@@ -163,15 +163,17 @@ assert.deepEqual(differentiationHits(state, emptyDifferentiation()), ['Montana']
 
 const groups = differentiationGroups(catalog.awards);
 assert.deepEqual(groups.map((group) => group.title), [
-  'Sports and outdoors',
+  'Where you live',
+  'Plans and career path',
+  'First in your family',
   'Heritage, faith and identity',
+  'Sports and outdoors',
   'Family ties',
-  'School clubs',
+  'Health and life situation',
   'Community and fraternal organizations',
+  'School clubs',
   'Aviation groups',
   'Where a parent works',
-  'Plans and career path',
-  'Health and life situation',
 ]);
 const clubValues = groups.flatMap((group) => group.chips).filter((chip) => chip.field === 'clubs').map((chip) => chip.value);
 for (const tag of [...AVIATION_GROUP_CLUBS, 'LPA']) assert.equal(clubValues.includes(tag), true, tag);
@@ -244,6 +246,8 @@ for (const group of groups) {
       assert(catalog.awards.some((item) => item.residencyScope === chip.value));
     } else if (field === 'firstGen') {
       assert(catalog.awards.some((item) => item.firstGen === true));
+    } else if (field === 'outsideMontana') {
+      assert.equal(chip.value, 'true');
     } else if (field === 'familyTies' && (chip.value === 'elks' || chip.value === 'rainbow' || chip.value.startsWith('employer:'))) {
       const picked = toggleDifferentiation(emptyDifferentiation(), chip);
       assert(catalog.awards.some((item) => differentiationHits(item, picked).includes(chip.label)), chip.value);
@@ -283,7 +287,8 @@ assert.equal(ruralRuleMatches(county, decoded?.answers?.differentiation ?? empty
 const wizard = fs.readFileSync('src/components/InterviewWizard.tsx', 'utf8');
 const list = fs.readFileSync('src/components/StudentMatchList.tsx', 'utf8');
 const step = fs.readFileSync('src/components/steps/DifferentiationStep.tsx', 'utf8');
-assert(wizard.includes('What makes you different?'));
+assert(wizard.includes('Filter for scholarships'));
+assert(!wizard.includes('What makes you different?'));
 assert(wizard.includes('Show my results'));
 assert(!wizard.includes('Application formats'));
 assert(!/Step \d/.test(wizard));
