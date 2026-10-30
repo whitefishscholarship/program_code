@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import glassCss from "../styles/glass";
+
+if (!glassCss.includes(".scene-photo") || glassCss.toLowerCase().includes("</style")) {
+  throw new Error("glass stylesheet is missing its scene rules");
+}
 
 export const metadata: Metadata = {
   title: "Whitefish Scholarship Finder",
@@ -14,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="app-body">
+        <style dangerouslySetInnerHTML={{ __html: glassCss }} />
         <style>{`
           .topbar-inner,.stage,.glass-card,.panel,.award-card,.banner,.notice,.field,.chip,.question-row,.btn-secondary,.btn-tertiary,.app-footer,.stat,.hidden-box {
             -webkit-backdrop-filter: blur(20px) saturate(1.3);
