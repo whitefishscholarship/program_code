@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import {
   chipSelected,
   type DifferentiationChip,
@@ -12,31 +12,29 @@ type Props = {
   groups: readonly DifferentiationGroup[];
   profile: DifferentiationProfile;
   onToggle: (chip: DifferentiationChip) => void;
+  extras?: Readonly<Record<string, { selected: number; node: ReactNode }>>;
 };
 
 function chipId(groupId: string, chip: DifferentiationChip): string {
   return `diff-${groupId}-${chip.field}-${chip.value}`.replace(/[^a-z0-9-]+/gi, '-').toLowerCase();
 }
 
-const NICHE_START_CLOSED = new Set(['school-clubs', 'aviation-groups', 'employers']);
+const ALWAYS_COLLAPSIBLE = new Set(['school-clubs', 'aviation-groups', 'employers']);
 const MANY_CHIPS = 8;
 
 function canCollapse(group: DifferentiationGroup): boolean {
-  return group.chips.length >= MANY_CHIPS || NICHE_START_CLOSED.has(group.id);
+  return group.chips.length >= MANY_CHIPS || ALWAYS_COLLAPSIBLE.has(group.id);
 }
 
-function startsClosed(group: DifferentiationGroup): boolean {
-  return NICHE_START_CLOSED.has(group.id);
-}
-
-export default function DifferentiationStep({ groups, profile, onToggle }: Props) {
+export default function DifferentiationStep({ groups, profile, onToggle, extras }: Props) {
   const [openIds, setOpenIds] = useState<Record<string, boolean>>({});
   return (
     <div className="card-stack mt-4">
       {groups.map((group) => {
         const collapsible = canCollapse(group);
-        const open = !collapsible || (group.id in openIds ? openIds[group.id] : !startsClosed(group));
-        const selected = group.chips.filter((chip) => chipSelected(profile, chip)).length;
+        const open = collapsible ? openIds[group.id] === true : true;
+        const extra = extras?.[group.id];
+        const selected = group.chips.filter((chip) => chipSelected(profile, chip)).length + (extra?.selected ?? 0);
         const panelId = `diff-panel-${group.id}`;
         return (
         <fieldset key={group.id} className="bare-fieldset">
@@ -106,6 +104,7 @@ export default function DifferentiationStep({ groups, profile, onToggle }: Props
                   </label>
                 );
               })}
+              {extra?.node}
             </div>
           )}
           </div>

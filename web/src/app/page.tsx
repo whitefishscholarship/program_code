@@ -9,11 +9,10 @@ export default function Home() {
       <header className="topbar">
         <div className="topbar-inner">
           <h1 className="topbar-title">Whitefish Scholarship Finder</h1>
-          <p className="topbar-note">No account. We never keep your information.</p>
         </div>
       </header>
       <main id="main-content" tabIndex={-1} className="stage">
-        <img className="diorama" src="/scene/diorama.webp" alt="" width={520} height={401} />
+        <img className="diorama" src="/scene/diorama.webp" alt="" width={492} height={401} />
         <ScholarshipBrowser />
       </main>
       <footer className="app-footer">
