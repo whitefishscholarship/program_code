@@ -26,6 +26,15 @@ export type ShortlistResult = Omit<AwardMatchResult, 'decision'> & { decision: S
 export type DisplayResult = AwardMatchResult | ShortlistResult;
 export const SHORTLIST_NOTICE = 'Uses organizer records captured September 14, 2026, while preserving previously reviewed rules for existing awards. GPA and school type can narrow the shortlist where recorded; supported interests, experiences, optional personal connections and application preferences can bring awards forward with explanations. These connections never remove an award or confirm eligibility. Confirm current requirements and availability before applying.';
 
+export type ResultScope = 'recommended' | 'conflicts' | 'all';
+
+/** My matches leaves out recorded conflicts. May not fit keeps only those conflicts. */
+export function awardsForResultScope<T extends { decision: string }>(results: readonly T[], scope: ResultScope): T[] {
+  if (scope === 'recommended') return results.filter((result) => result.decision !== 'known_conflict' && result.decision !== 'recorded_mismatch');
+  if (scope === 'conflicts') return results.filter((result) => result.decision === 'known_conflict' || result.decision === 'recorded_mismatch');
+  return [...results];
+}
+
 export function shortlistAwards(awards: readonly StudentAward[], rawAnswers: InterviewAnswers, rows: readonly ShortlistRow[] = R3_SHORTLIST_ROWS, additionalConnections: readonly DiscoveryConnection[] = R3_CONNECTIONS): { counts: MatchResponse['counts']; results: ShortlistResult[] } {
   const answers = InterviewAnswersSchema.parse(rawAnswers);
   const relevance = relevanceByAward(answers, additionalConnections);

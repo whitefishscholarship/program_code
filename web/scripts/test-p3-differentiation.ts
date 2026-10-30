@@ -5,6 +5,7 @@ import {
   AVIATION_GROUP_VALUE,
   applyRuralAutoTag,
   aviationGroupSelected,
+  chipLabel,
   differentiationGroups,
   differentiationHits,
   emptyDifferentiation,
@@ -124,13 +125,13 @@ assert.equal(poolIsSmall(national), false);
 assert.equal(poolExplanation(national), 'Large pool: open nationwide.');
 assert.equal(RULES_NOT_POSTED, 'Rules not posted yet');
 const wide = catalog.awards.filter((item) => item.residencyScope === 'national' && !poolIsSmall(item));
-assert.equal(wide.length, 67);
+assert.equal(wide.length, 71);
 for (const item of wide) {
   assert.equal(item.poolLevel, 6, item.name);
   assert.ok((item.competitionScore ?? 0) >= 86 && (item.competitionScore ?? 0) <= 94, item.name);
   assert.equal(poolExplanation(item).startsWith('Large pool:'), true, item.name);
 }
-assert.equal(catalog.awards.filter((item) => item.poolReason === 'Large pool: open nationwide.').length, 66);
+assert.equal(catalog.awards.filter((item) => item.poolReason === 'Large pool: open nationwide.').length, 70);
 assert.equal(catalog.awards.filter((item) => item.poolReason === 'Large pool: open in the United States and Canada.').length, 1);
 assert.equal(catalog.awards.filter((item) => (item.summary ?? '').includes('Checked on the sponsor page')).length, 0);
 assert.equal(plainStudentText('The application is open. Checked on the sponsor page on October 29, 2026.'), 'The application is open.');
@@ -162,29 +163,37 @@ assert.deepEqual(differentiationHits(state, emptyDifferentiation()), ['Montana']
 
 const groups = differentiationGroups(catalog.awards);
 assert.deepEqual(groups.map((group) => group.title), [
-  'Sports and outdoors',
-  'Heritage, faith and identity',
-  'Family ties',
-  'Clubs and activities',
   'Plans and career path',
+  'First in your family',
+  'Heritage, faith and identity',
+  'Sports and outdoors',
+  'Family ties',
   'Health and life situation',
+  'Community and fraternal organizations',
+  'School clubs',
+  'Aviation groups',
+  'Where a parent works',
 ]);
-const clubValues = groups.find((group) => group.id === 'clubs')?.chips.map((chip) => chip.value) ?? [];
-for (const retired of AVIATION_GROUP_CLUBS) assert.equal(clubValues.includes(retired), false, retired);
-assert(clubValues.includes(AVIATION_GROUP_VALUE));
+const clubValues = groups.flatMap((group) => group.chips).filter((chip) => chip.field === 'clubs').map((chip) => chip.value);
+for (const tag of [...AVIATION_GROUP_CLUBS, 'LPA']) assert.equal(clubValues.includes(tag), true, tag);
+assert.equal(clubValues.includes(AVIATION_GROUP_VALUE), false);
 const aviationAwards = catalog.awards.filter((item) => (item.clubs ?? []).some((club) => (AVIATION_GROUP_CLUBS as readonly string[]).includes(club)));
 assert.equal(aviationAwards.length, 90);
-const member = toggleDifferentiation(emptyDifferentiation(), { field: 'clubs', value: AVIATION_GROUP_VALUE, label: 'Aviation group member' });
-assert.deepEqual(member.clubs, [AVIATION_GROUP_VALUE]);
+const member = { ...emptyDifferentiation(), clubs: [AVIATION_GROUP_VALUE] };
+assert.equal(aviationGroupSelected(member.clubs), true);
 for (const tag of AVIATION_GROUP_CLUBS) {
   const sample = aviationAwards.find((item) => item.clubs?.includes(tag));
   assert(sample, tag);
-  assert(differentiationHits(sample, member).includes('Aviation group member'), tag);
+  assert(differentiationHits(sample, member).includes(chipLabel(tag)), tag);
 }
 const oldAopa = { ...emptyDifferentiation(), clubs: ['AOPA'] };
-assert.equal(aviationGroupSelected(oldAopa.clubs), true);
-assert(differentiationHits(aviationAwards.find((item) => item.clubs?.includes('AOPA'))!, oldAopa).includes('Aviation group member'));
-assert.deepEqual(toggleDifferentiation(oldAopa, { field: 'clubs', value: AVIATION_GROUP_VALUE, label: 'Aviation group member' }).clubs, []);
+assert.equal(aviationGroupSelected(oldAopa.clubs), false);
+const aopaAward = aviationAwards.find((item) => item.clubs?.includes('AOPA') && !item.clubs?.includes('WAI'));
+const waiOnly = aviationAwards.find((item) => item.clubs?.includes('WAI') && !item.clubs?.includes('AOPA'));
+assert(aopaAward && waiOnly);
+assert(differentiationHits(aopaAward, oldAopa).includes(chipLabel('AOPA')));
+assert.equal(differentiationHits(waiOnly, oldAopa).includes(chipLabel('WAI')), false);
+assert.deepEqual(toggleDifferentiation(oldAopa, { field: 'clubs', value: 'AOPA', label: chipLabel('AOPA') }).clubs, []);
 const sports = groups.find((group) => group.id === 'sports')?.chips.map((chip) => chip.value) ?? [];
 assert.deepEqual(sports, ['golf', 'rodeo', 'soccer', 'softball', 'student athlete', 'tennis', 'track', 'wrestling']);
 for (const missing of ['football', 'basketball', 'volleyball', 'cross country', 'swimming', 'baseball', 'cheer']) {
@@ -201,14 +210,14 @@ const named = (name: string) => {
   return found[0];
 };
 assert(differentiationHits(named('Kalispell Youth Softball'), chipProfile('sports', 'softball')).includes('Softball'));
-assert(differentiationHits(named('National Honor Society Member'), chipProfile('clubs', 'National Honor Society')).includes('National Honor Society'));
-assert(differentiationHits(named('Fellows Drama'), chipProfile('clubs', 'drama')).includes('Drama and theatre'));
-assert(differentiationHits(named('Thespian Scholarships'), chipProfile('clubs', 'drama')).includes('Drama and theatre'));
-assert(differentiationHits(named('Thespy Finalist'), chipProfile('clubs', 'drama')).includes('Drama and theatre'));
-assert(differentiationHits(named('Five Valley Chorus'), chipProfile('clubs', 'choir')).includes('Choir'));
-assert(differentiationHits(named('Montana Forensic Educators'), chipProfile('clubs', 'speech and debate')).includes('Speech and debate'));
-assert(differentiationHits(named('Montana Forensic Educators'), chipProfile('clubs', 'drama')).includes('Drama and theatre'));
-assert(differentiationHits(named('NSDA National'), chipProfile('clubs', 'speech and debate')).includes('Speech and debate'));
+assert(differentiationHits(named('National Honor Society Member'), chipProfile('clubs', 'National Honor Society')).includes(chipLabel('National Honor Society')));
+assert(differentiationHits(named('Fellows Drama'), chipProfile('clubs', 'drama')).includes(chipLabel('drama')));
+assert(differentiationHits(named('Thespian Scholarships'), chipProfile('clubs', 'drama')).includes(chipLabel('drama')));
+assert(differentiationHits(named('Thespy Finalist'), chipProfile('clubs', 'drama')).includes(chipLabel('drama')));
+assert(differentiationHits(named('Five Valley Chorus'), chipProfile('clubs', 'choir')).includes(chipLabel('choir')));
+assert(differentiationHits(named('Montana Forensic Educators'), chipProfile('clubs', 'speech and debate')).includes(chipLabel('speech and debate')));
+assert(differentiationHits(named('Montana Forensic Educators'), chipProfile('clubs', 'drama')).includes(chipLabel('drama')));
+assert(differentiationHits(named('NSDA National'), chipProfile('clubs', 'speech and debate')).includes(chipLabel('speech and debate')));
 assert(differentiationHits(named('USTA Foundation'), chipProfile('sports', 'tennis')).includes('Tennis'));
 assert.equal(groups.some((group) => group.title === 'Where you live and go to school' || group.hint.includes('Whitefish students count as rural')), false);
 const explicitLocal: DifferentiationProfile = { ...emptyDifferentiation(), places: ['whitefish', 'flathead', 'montana', 'rural'], plans: ['teaching'] };
@@ -236,8 +245,9 @@ for (const group of groups) {
       assert(catalog.awards.some((item) => item.residencyScope === chip.value));
     } else if (field === 'firstGen') {
       assert(catalog.awards.some((item) => item.firstGen === true));
-    } else if (field === 'clubs' && chip.value === AVIATION_GROUP_VALUE) {
-      assert(catalog.awards.some((item) => (item.clubs ?? []).some((club) => (AVIATION_GROUP_CLUBS as readonly string[]).includes(club))));
+    } else if (field === 'familyTies' && (chip.value === 'elks' || chip.value === 'rainbow' || chip.value.startsWith('employer:'))) {
+      const picked = toggleDifferentiation(emptyDifferentiation(), chip);
+      assert(catalog.awards.some((item) => differentiationHits(item, picked).includes(chip.label)), chip.value);
     } else {
       assert(catalog.awards.some((item) => (item[field] ?? []).includes(chip.value)), chip.value);
     }
@@ -274,7 +284,8 @@ assert.equal(ruralRuleMatches(county, decoded?.answers?.differentiation ?? empty
 const wizard = fs.readFileSync('src/components/InterviewWizard.tsx', 'utf8');
 const list = fs.readFileSync('src/components/StudentMatchList.tsx', 'utf8');
 const step = fs.readFileSync('src/components/steps/DifferentiationStep.tsx', 'utf8');
-assert(wizard.includes('What makes you different?'));
+assert(wizard.includes('Filter for scholarships'));
+assert(!wizard.includes('What makes you different?'));
 assert(wizard.includes('Show my results'));
 assert(!wizard.includes('Application formats'));
 assert(!/Step \d/.test(wizard));

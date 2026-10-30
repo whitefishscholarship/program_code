@@ -219,11 +219,15 @@ function addPlans(text: string, bags: Bags) {
       hits = hits.filter((hit) => hit !== 'two-year college');
     }
     if (/stem\/healthcare|stem or healthcare|healthcare or stem/.test(sentence)) {
+      push(bags.plans, 'STEM');
+      push(bags.plans, 'healthcare');
       hits = hits.filter((hit) => hit !== 'STEM' && hit !== 'healthcare');
-      bags.fieldMenu = true;
     }
     if (hits.includes('business') && hits.includes('STEM') && /\bbusiness\b.{0,12}\bor\b.{0,12}\bstem\b|\bstem\b.{0,12}\bor\b.{0,12}\bbusiness\b/.test(sentence)) {
-      bags.fieldMenu = true;
+      if (hits.length === 2) {
+        push(bags.plans, 'business');
+        push(bags.plans, 'STEM');
+      } else bags.fieldMenu = true;
       continue;
     }
     if (hits.includes('skilled trades') && hits.includes('agriculture') && /\btrades?\b.{0,24}\bor\b.{0,40}\bagricultur|\bagricultur\w*.{0,24}\bor\b.{0,40}\btrades?\b/.test(sentence)) {
@@ -337,6 +341,10 @@ function addFamily(text: string, bags: Bags) {
     const self = /employee of|employees of|\bemployee or\b|\bemployee, or\b|current eligible employee|current [\w .'-]{0,40}employee/.test(text);
     bags.employerKind = child && self ? 'either' : child ? 'parent' : 'self';
   }
+  if (/parent who works at|parent works at/.test(text)) {
+    push(bags.familyTies, 'employer');
+    if (!bags.employerKind) bags.employerKind = 'parent';
+  }
   if (/journeyman lineman/.test(text)) push(bags.familyTies, 'lineman family');
 }
 
@@ -346,7 +354,8 @@ function addHealth(text: string, bags: Bags) {
   if (/autism/.test(text)) push(bags.health, 'autism');
   if (/learning disability|learning difference|processing disorder/.test(text)) push(bags.health, 'learning disability');
   if (/mental health/.test(text)) push(bags.health, 'mental health');
-  if (/chronic (?:disease|illness|condition)|diabetes/.test(text)) push(bags.health, 'chronic illness');
+  if (/\bdiabetes\b|\bt1d\b|\bt2d\b|\btype 1\b|\btype 2\b/.test(text) && /diabetes|t1d|t2d/.test(text)) push(bags.health, 'diabetes');
+  if (/chronic (?:disease|illness|condition)/.test(text)) push(bags.health, 'chronic illness');
   if (/\bdisability\b/.test(text) && !bags.health.includes('learning disability') && !/hardship, disability|disability, or|or disability/.test(text)) {
     push(bags.health, 'disability');
   }
@@ -364,6 +373,7 @@ function addLife(text: string, bags: Bags) {
   if (/single parent/.test(text)) push(bags.lifeSituation, 'single parent');
   if (/caregiv/.test(text)) push(bags.lifeSituation, 'caregiving');
   if (/lgbtq/.test(text) && !/\bally\b/.test(text)) push(bags.lifeSituation, 'LGBTQ+');
+  if (/\btwins must be\b|\bmust be twins\b|\bset of twins\b|\bhonors a set of twins\b/.test(text)) push(bags.lifeSituation, 'twins');
 }
 
 function addGender(text: string, bags: Bags) {
@@ -682,6 +692,7 @@ function limitClauses(bags: Bags): string[] {
     caregiving: 'care for someone at home',
     'hard times': 'have faced a hard time',
     'LGBTQ+': 'are LGBTQ+',
+    twins: 'are twins',
   };
   const life = new Set(bags.lifeSituation);
   if (life.has('adopted') && life.has('foster care')) {
@@ -705,6 +716,7 @@ function limitClauses(bags: Bags): string[] {
 function healthClause(tag: string): string {
   if (tag === 'ADHD' || tag === 'autism' || tag === 'dyslexia') return `have ${tag}`;
   if (tag === 'mental health') return 'have a mental health need';
+  if (tag === 'diabetes') return 'have diabetes';
   return `have a ${tag}`;
 }
 

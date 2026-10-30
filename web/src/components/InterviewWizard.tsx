@@ -11,7 +11,7 @@ import {
   type DifferentiationProfile,
 } from '@/lib/differentiation';
 import { InterviewAnswersSchema, type InterviewAnswers } from '@/lib/interviewMatcher';
-import { ACTIVITY_QUESTIONS, SPECIAL_CRITERIA, SPECIAL_CRITERIA_CATEGORIES, TARGET_SCHOOL_TYPES } from '@/lib/interviewQuestions';
+import { ACTIVITY_QUESTIONS, SPECIAL_CRITERIA, TARGET_SCHOOL_TYPES } from '@/lib/interviewQuestions';
 import type { StudentAward } from '@/lib/studentCatalog';
 
 const KEPT_UNIQUE_CRITERIA = new Set(['chronic_health', 'black_african_american', 'hispanic_latino']);
@@ -19,10 +19,6 @@ const UNIQUE_LABELS: Record<string, string> = {
   chronic_health: 'Long-term health issue',
   black_african_american: 'Black or African American',
   hispanic_latino: 'Hispanic or Latino',
-};
-const UNIQUE_SECTIONS: Record<string, { title: string; hint: string }> = {
-  'Health & Hardships': { title: 'Long-term health', hint: 'Share only what you want. You can skip this.' },
-  'Demographics & Identity': { title: 'More about you', hint: 'Share only what you want. You can skip this.' },
 };
 const FAMILY_MONEY_OPTIONS = [
   ['yes', 'Yes'],
@@ -110,16 +106,16 @@ export default function InterviewWizard({ awards, initialAnswers, onComplete, on
   };
 
   return (
-    <section aria-labelledby="interview-step-heading" className="mx-auto max-w-4xl rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
-      <div className="border-b border-slate-200 pb-6">
-        <h2 ref={headingRef} tabIndex={-1} id="interview-step-heading" className="text-3xl font-black tracking-tight outline-none">Tell us about you</h2>
-        <p className="mt-3 leading-6 text-slate-600">Answer this page once. Only your GPA and the kind of school you want are required. You can skip the rest. An empty box does not hide an award.</p>
+    <section aria-labelledby="interview-step-heading" className="wizard">
+      <div className="stage-head">
+        <h2 ref={headingRef} tabIndex={-1} id="interview-step-heading" className="page-title outline-none">Tell us about you</h2>
+        <p className="lede">Answer this page once. Only your GPA and the kind of school you want are required. You can skip the rest. An empty box does not hide an award.</p>
       </div>
-      {error && <p id="interview-error" role="alert" className="mt-5 rounded-xl border border-rose-200 bg-rose-50 p-4 font-bold text-rose-900">{error}</p>}
+      {error && <p id="interview-error" role="alert" className="notice notice-rose mt-5 font-semibold">{error}</p>}
 
-      <div className="mt-7 space-y-7">
+      <div className="card-stack mt-7">
         <Section title="Your GPA" hint="Use your GPA from 0 to 4.0. Do not use a weighted GPA." required>
-          <input id="student-gpa" type="number" required inputMode="decimal" min="0" max="4" step="0.01" value={gpa} aria-invalid={error.includes('GPA') || undefined} aria-describedby={error ? 'interview-error' : undefined} onChange={(event) => { setGpa(event.target.value); setError(''); }} className="mt-3 block w-full rounded-xl border border-slate-300 px-4 py-3 font-normal sm:max-w-xs" placeholder="For example, 3.5" />
+          <input id="student-gpa" type="number" required inputMode="decimal" min="0" max="4" step="0.01" value={gpa} aria-invalid={error.includes('GPA') || undefined} aria-describedby={error ? 'interview-error' : undefined} onChange={(event) => { setGpa(event.target.value); setError(''); }} className="field field-narrow mt-3" placeholder="For example, 3.5" />
         </Section>
 
         <Section title="Kind of school you want" hint="Pick every kind you might go to." required>
@@ -131,19 +127,9 @@ export default function InterviewWizard({ awards, initialAnswers, onComplete, on
         </Section>
 
         <div>
-          <h3 className="text-2xl font-black tracking-tight">What makes you different?</h3>
-          <p className="mt-2 text-sm leading-6 text-slate-600">Pick any chips that fit you. You can skip a group. An empty chip does not hide an award.</p>
-          <DifferentiationStep groups={groups} profile={profile} onToggle={(chip) => { setProfile((current) => toggleDifferentiation(current, chip)); setError(''); }} />
+          <h3 className="section-title">Filter for scholarships</h3>
+          <p className="hint">Pick what fits you so we can point out scholarships you may want. You can skip any group. An empty group does not hide an award.</p>
         </div>
-
-        <Section title="Things you do" hint="Pick any that fit you. You can skip these.">
-          <ChipRow>
-            {ACTIVITY_QUESTIONS.map((item) => (
-              <LightChip key={item.id} id={item.controlId} label={ACTIVITY_LABELS[item.id] ?? item.label} checked={activities.includes(item.id)} onChange={() => toggleValue(item.id, activities, setActivities)} />
-            ))}
-          </ChipRow>
-        </Section>
-
         <Section title="Family money" hint="Some scholarships look at how much money your family has. Do you want to see those?">
           <ChipRow>
             {FAMILY_MONEY_OPTIONS.map(([value, label]) => (
@@ -151,48 +137,66 @@ export default function InterviewWizard({ awards, initialAnswers, onComplete, on
             ))}
           </ChipRow>
         </Section>
-
-        {SPECIAL_CRITERIA_CATEGORIES.map((category) => {
-          const items = SPECIAL_CRITERIA.filter((item) => item.category === category).map((item) => item).filter((item) => KEPT_UNIQUE_CRITERIA.has(item.id));
-          if (items.length === 0) return null;
-          const copy = UNIQUE_SECTIONS[category] ?? { title: category, hint: 'Share only what you want. You can skip this.' };
-          return (
-            <Section key={category} title={copy.title} hint={copy.hint}>
-              <ChipRow>
-                {items.map((item) => (
-                  <LightChip key={item.id} id={item.controlId} label={UNIQUE_LABELS[item.id] ?? item.label} checked={uniqueCriteria.includes(item.id)} onChange={() => toggleValue(item.id, uniqueCriteria, setUniqueCriteria)} />
-                ))}
-              </ChipRow>
-            </Section>
-          );
-        })}
+        <FilterGroups ids={['plans', 'first-gen', 'identity', 'sports']} groups={groups} profile={profile} onToggle={(chip) => { setProfile((current) => toggleDifferentiation(current, chip)); setError(''); }} extras={{ identity: uniqueExtra('Demographics & Identity', uniqueCriteria, (id) => toggleValue(id, uniqueCriteria, setUniqueCriteria)) }} />
+        <Section title="Things you do" hint="Pick any that fit you. You can skip these.">
+          <ChipRow>
+            {ACTIVITY_QUESTIONS.map((item) => (
+              <LightChip key={item.id} id={item.controlId} label={ACTIVITY_LABELS[item.id] ?? item.label} checked={activities.includes(item.id)} onChange={() => toggleValue(item.id, activities, setActivities)} />
+            ))}
+          </ChipRow>
+        </Section>
+        <FilterGroups ids={['family', 'health']} groups={groups} profile={profile} onToggle={(chip) => { setProfile((current) => toggleDifferentiation(current, chip)); setError(''); }} extras={{ health: uniqueExtra('Health & Hardships', uniqueCriteria, (id) => toggleValue(id, uniqueCriteria, setUniqueCriteria)) }} />
+        <FilterGroups ids={['community-orgs', 'school-clubs', 'aviation-groups', 'employers']} groups={groups} profile={profile} onToggle={(chip) => { setProfile((current) => toggleDifferentiation(current, chip)); setError(''); }} />
       </div>
 
-      <div className="mt-9 flex flex-col gap-3 border-t border-slate-200 pt-6 sm:flex-row-reverse sm:items-center sm:justify-between">
-        <button type="button" onClick={submit} className="rounded-xl bg-teal-800 px-6 py-3 font-bold text-white shadow-sm hover:bg-teal-900 focus:outline-none focus:ring-4 focus:ring-teal-300">Show my results</button>
-        <button type="button" onClick={onCancel} className="rounded-xl px-5 py-3 text-sm font-semibold text-slate-600 underline underline-offset-4 hover:text-slate-950 focus:outline-none focus:ring-4 focus:ring-teal-200">{initialAnswers ? 'Return to my matches' : 'Browse all scholarships'}</button>
+      <div className="wizard-actions">
+        <button type="button" onClick={submit} className="btn btn-primary btn-wide">Show my results</button>
+        <button type="button" onClick={onCancel} className="btn btn-quiet">{initialAnswers ? 'Return to my matches' : 'Browse all scholarships'}</button>
       </div>
     </section>
   );
 }
 
+function keptUnique(category: string) {
+  return SPECIAL_CRITERIA.filter((item) => item.category === category).map((item) => item).filter((item) => KEPT_UNIQUE_CRITERIA.has(item.id));
+}
+
+function uniqueExtra(category: string, selected: readonly string[], onToggle: (id: (typeof SPECIAL_CRITERIA)[number]['id']) => void) {
+  const items = keptUnique(category);
+  return {
+    selected: items.filter((item) => selected.includes(item.id)).length,
+    node: items.map((item) => (
+      <LightChip key={item.id} id={item.controlId} label={UNIQUE_LABELS[item.id] ?? item.label} checked={selected.includes(item.id)} onChange={() => onToggle(item.id)} />
+    )),
+  };
+}
+
+function FilterGroups({ ids, groups, profile, onToggle, extras }: { ids: readonly string[]; groups: ReturnType<typeof differentiationGroups>; profile: DifferentiationProfile; onToggle: (chip: Parameters<typeof toggleDifferentiation>[1]) => void; extras?: Readonly<Record<string, { selected: number; node: ReactNode }>> }) {
+  const picked = ids.map((id) => groups.find((group) => group.id === id)).filter((group) => group != null);
+  if (picked.length === 0) return null;
+  return <DifferentiationStep groups={picked} profile={profile} onToggle={onToggle} extras={extras} />;
+}
+
 function Section({ title, hint, required = false, children }: { title: string; hint: string; required?: boolean; children: ReactNode }) {
   return (
-    <fieldset className="rounded-2xl border border-slate-200 p-4">
-      <legend className="px-2 text-base font-bold text-slate-950">{title}{required ? <span className="text-rose-700"> (required)</span> : null}</legend>
-      <p className="mt-1 text-sm leading-6 text-slate-600">{hint}</p>
-      {children}
+    <fieldset className="bare-fieldset">
+      <legend className="sr-only">{title}{required ? ' (required)' : ''}</legend>
+      <div className="panel">
+        <p className="panel-title">{title}{required ? <span className="req"> (required)</span> : null}</p>
+        <p className="hint">{hint}</p>
+        {children}
+      </div>
     </fieldset>
   );
 }
 
 function ChipRow({ children }: { children: ReactNode }) {
-  return <div className="mt-3 flex flex-wrap gap-2">{children}</div>;
+  return <div className="chip-row">{children}</div>;
 }
 
 function LightChip({ id, label, checked, onChange, onClear, name, type = 'checkbox' }: { id: string; label: string; checked: boolean; onChange: () => void; onClear?: () => void; name?: string; type?: 'checkbox' | 'radio' }) {
   return (
-    <label htmlFor={id} className={`relative inline-flex cursor-pointer items-center rounded-full border px-3 py-1.5 text-sm font-semibold outline-none has-[:focus-visible]:ring-4 has-[:focus-visible]:ring-teal-300 ${checked ? 'border-teal-800 bg-teal-800 text-white' : 'border-slate-300 bg-white text-slate-800 hover:bg-slate-50'}`}>
+    <label htmlFor={id} className={`chip has-[:focus-visible]:ring-4 has-[:focus-visible]:ring-transparent${checked ? ' is-selected bg-teal-800' : ''}`}>
       <input id={id} name={name} type={type} checked={checked} onChange={onChange} onClick={() => { if (type === 'radio' && checked) onClear?.(); }} className="sr-only" />
       {label}
     </label>

@@ -398,6 +398,17 @@ const verifiedIds = [
   'award-c29a10000009',
   'award-c29a1000000a',
   'award-c29a1000000b',
+  'award-775bc6382cfe',
+  'award-350623e70f7c',
+  'award-75bd5c7e5e3b',
+  'award-b3cb04938cc9',
+  'award-72dfe8ce1f12',
+  'award-9cc5af0c7913',
+  'award-39b396f02a23',
+  'award-1f998a20cd35',
+  'award-7ccf0b5abd18',
+  'award-1373d6434858',
+  'award-b4baad962dc2',
 ];
 const uncheckedIds = [
   'award-5b5b0db70dd0',

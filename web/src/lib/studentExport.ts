@@ -275,6 +275,38 @@ function pad(value: number): string {
   return String(value).padStart(2, '0');
 }
 
+function calendarStamp(year: number, month: number, day: number): string {
+  return `${year}${pad(month)}${pad(day)}`;
+}
+
+function nextCalendarDay(year: number, month: number, day: number): { year: number; month: number; day: number } {
+  const date = new Date(Date.UTC(year, month - 1, day));
+  date.setUTCDate(date.getUTCDate() + 1);
+  return { year: date.getUTCFullYear(), month: date.getUTCMonth() + 1, day: date.getUTCDate() };
+}
+
+/**
+ * Opt-in Google Calendar template. Built in the browser from the public award
+ * only. No email, no account, and nothing is sent to this app.
+ * Returns null when the deadline has no calendar day.
+ */
+export function googleCalendarTemplateUrl(award: StudentAward): string | null {
+  const date = explicitDeadlineDate(award);
+  if (!date) return null;
+  const end = nextCalendarDay(date.year, date.month, date.day);
+  const official = officialUrl(award);
+  const details = official
+    ? `Check the official site before you apply. The date can change. ${official}`
+    : 'Check the official site before you apply. The date can change.';
+  const params = new URLSearchParams({
+    action: 'TEMPLATE',
+    text: `Deadline: ${plainStudentText(award.name)}`,
+    dates: `${calendarStamp(date.year, date.month, date.day)}/${calendarStamp(end.year, end.month, end.day)}`,
+    details,
+  });
+  return `https://calendar.google.com/calendar/render?${params.toString()}`;
+}
+
 /** One award, one file, built on the device. Returns null when the deadline has no calendar day. */
 export function serializeAwardDeadlineCalendar(award: StudentAward, now: Date): string | null {
   if (!explicitDeadlineDate(award)) return null;

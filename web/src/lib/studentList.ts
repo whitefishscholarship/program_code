@@ -1,5 +1,5 @@
 import { calendarDayIsBefore, explicitCalendarDay, parseDeadline } from './dateParse';
-import { displayVerification, type StudentAward } from './studentCatalog';
+import { displayVerification, type ApplicationMode, type StudentAward } from './studentCatalog';
 
 export const BOOKMARK_NOTE = "Bookmark this link. Don't share it, it holds your answers.";
 export const HIDE_BANNER = 'Award hidden. Your link changed. Copy or bookmark your new refresh link.';
@@ -29,7 +29,7 @@ const OPEN_DATE = new RegExp(`\\b(${MONTH_ALT})\\b(?:\\.?\\s+(\\d{1,2})(?:st|nd|
 const URL_IN_TEXT = /https?:\/\/[^\s<>"')\]]+/i;
 
 export function plainStudentText(value: string): string {
-  return value.replaceAll('\u2014', ', ').replaceAll('\u2013', '-').replace(/ ?Checked on the sponsor page on [A-Za-z]+ \d{1,2}, \d{4}\.?/g, '');
+  return value.replaceAll('\u2014', ', ').replaceAll('\u2013', '-').replace(/ ?Checked on the sponsor page on [A-Za-z]+ \d{1,2}, \d{4}\.?/g, '').replaceAll('are women', 'are female');
 }
 
 /**
@@ -53,6 +53,36 @@ export function studentStatus(award: StudentAward, now: Date = new Date()): Stud
 
 export function matchesStudentStatus(award: StudentAward, filter: StatusFilter, now: Date = new Date()): boolean {
   return filter === 'all' || studentStatus(award, now) === filter;
+}
+
+export type StudentSchoolFilter = 'all' | 'two_year' | 'four_year' | 'trade' | 'other';
+
+export type StudentListFilters = {
+  search?: string;
+  status?: StatusFilter;
+  openingThisMonth?: boolean;
+  method?: 'all' | ApplicationMode;
+  schoolType?: StudentSchoolFilter;
+  now?: Date;
+};
+
+/** Same rules as the award list. Each option is compared with that control left off. */
+export function filterStudentAwards(awards: readonly StudentAward[], filters: StudentListFilters = {}): StudentAward[] {
+  const now = filters.now ?? new Date();
+  const query = (filters.search ?? '').trim().toLocaleLowerCase();
+  const status = filters.status ?? 'all';
+  const method = filters.method ?? 'all';
+  const schoolType = filters.schoolType ?? 'all';
+  const openingThisMonth = filters.openingThisMonth === true;
+  return awards.filter((award) => {
+    const haystack = [award.name, award.summary ? plainStudentText(award.summary) : '', award.amount.label, award.eligibility.audience, award.application.label, deadlineLabel(award)]
+      .filter(Boolean).join(' ').toLocaleLowerCase();
+    const matchesSearch = !query || haystack.includes(query);
+    const matchesMethod = method === 'all' || award.application.mode === method;
+    const matchesSchool = schoolType === 'all' || award.eligibility.schoolTypes.includes(schoolType);
+    const matchesMonth = !openingThisMonth || isOpeningThisMonth(award, now);
+    return matchesSearch && matchesStudentStatus(award, status, now) && matchesMethod && matchesSchool && matchesMonth;
+  });
 }
 
 export function officialUrl(award: StudentAward): string | null {

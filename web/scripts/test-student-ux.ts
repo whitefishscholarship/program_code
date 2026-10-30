@@ -276,8 +276,11 @@ for (const file of [
   const source = fs.readFileSync(file, 'utf8');
   assert(!source.includes('\u2014'), `${file} has an em dash`);
   assert(!source.includes('\u2013'), `${file} has an en dash`);
-  for (const forbidden of ['localStorage', 'sessionStorage', 'indexedDB', 'document.cookie', 'sendBeacon', 'XMLHttpRequest']) {
+  for (const forbidden of ['sessionStorage', 'indexedDB', 'document.cookie', 'sendBeacon', 'XMLHttpRequest']) {
     assert(!source.includes(forbidden), `${file} uses ${forbidden}`);
+  }
+  if (file !== 'src/components/StudentMatchList.tsx') {
+    assert(!source.includes('localStorage'), `${file} uses localStorage`);
   }
 }
 const browserSource = fs.readFileSync('src/components/ScholarshipBrowser.tsx', 'utf8');
@@ -296,6 +299,12 @@ assert(listSource.includes('Add deadlines to my calendar'));
 assert(listSource.includes('BOOKMARK_NOTE'));
 assert(listSource.includes('HIDE_BANNER'));
 assert(listSource.includes('HIDDEN_FOOTNOTE'));
+assert.deepEqual(listSource.match(/localStorage/g), ['localStorage', 'localStorage', 'localStorage']);
+assert(listSource.includes('readAwardProgress(window.localStorage)'));
+assert(listSource.includes('writeAwardProgress(window.localStorage, next)'));
+assert(listSource.includes('clearAwardProgress(window.localStorage)'));
+assert(listSource.includes('Progress is saved on this device only') || listSource.includes('PROGRESS_NOTE'));
+assert(!listSource.includes('localStorage.setItem'));
 assert(listSource.includes('\u2715 Hide') || listSource.includes('✕ Hide'));
 const linkSource = fs.readFileSync('src/lib/studentLink.ts', 'utf8');
 assert(!linkSource.includes('searchParams.set'));

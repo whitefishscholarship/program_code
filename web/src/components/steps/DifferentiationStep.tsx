@@ -1,3 +1,6 @@
+'use client';
+
+import type { ReactNode } from 'react';
 import {
   chipSelected,
   type DifferentiationChip,
@@ -9,43 +12,55 @@ type Props = {
   groups: readonly DifferentiationGroup[];
   profile: DifferentiationProfile;
   onToggle: (chip: DifferentiationChip) => void;
+  extras?: Readonly<Record<string, { selected: number; node: ReactNode }>>;
 };
 
-export default function DifferentiationStep({ groups, profile, onToggle }: Props) {
+function chipId(groupId: string, chip: DifferentiationChip): string {
+  return `diff-${groupId}-${chip.field}-${chip.value}`.replace(/[^a-z0-9-]+/gi, '-').toLowerCase();
+}
+
+export default function DifferentiationStep({ groups, profile, onToggle, extras }: Props) {
   return (
-    <div className="mt-7 space-y-7">
-      {groups.map((group) => (
-        <fieldset key={group.id} className="rounded-2xl border border-slate-200 p-4">
-          <legend className="px-2 text-base font-bold text-slate-950">{group.title}</legend>
-          <p className="mt-1 text-sm leading-6 text-slate-600">{group.hint}</p>
-          {group.chips.length === 0 ? (
-            <p className="mt-3 text-sm text-slate-600">Nothing in the list uses this yet.</p>
-          ) : (
-            <div className="mt-3 flex flex-wrap gap-2">
-              {group.chips.map((chip) => {
-                const checked = chipSelected(profile, chip);
-                const id = `diff-${group.id}-${chip.field}-${chip.value}`.replace(/[^a-z0-9-]+/gi, '-').toLowerCase();
-                return (
-                  <label
-                    key={id}
-                    htmlFor={id}
-                    className={`relative inline-flex cursor-pointer items-center rounded-full border px-3 py-1.5 text-sm font-semibold outline-none has-[:focus-visible]:ring-4 has-[:focus-visible]:ring-teal-300 ${checked ? 'border-teal-800 bg-teal-800 text-white' : 'border-slate-300 bg-white text-slate-800 hover:bg-slate-50'}`}
-                  >
-                    <input
-                      id={id}
-                      type="checkbox"
-                      checked={checked}
-                      onChange={() => onToggle(chip)}
-                      className="sr-only"
-                    />
-                    {chip.label}
-                  </label>
-                );
-              })}
+    <div className="card-stack mt-4">
+      {groups.map((group) => {
+        const extra = extras?.[group.id];
+        return (
+          <fieldset key={group.id} className="bare-fieldset">
+            <legend className="sr-only">{group.title}</legend>
+            <div className="panel">
+              <p className="panel-title">{group.title}</p>
+              <p className="hint">{group.hint}</p>
+              {group.chips.length === 0 ? (
+                <p className="hint mt-3">Nothing in the list uses this yet.</p>
+              ) : (
+                <div className="chip-row">
+                  {group.chips.map((chip) => {
+                    const checked = chipSelected(profile, chip);
+                    const id = chipId(group.id, chip);
+                    return (
+                      <label
+                        key={id}
+                        htmlFor={id}
+                        className={`chip has-[:focus-visible]:ring-4 has-[:focus-visible]:ring-transparent${checked ? ' is-selected bg-teal-800' : ''}`}
+                      >
+                        <input
+                          id={id}
+                          type="checkbox"
+                          checked={checked}
+                          onChange={() => onToggle(chip)}
+                          className="sr-only"
+                        />
+                        {chip.label}
+                      </label>
+                    );
+                  })}
+                  {extra?.node}
+                </div>
+              )}
             </div>
-          )}
-        </fieldset>
-      ))}
+          </fieldset>
+        );
+      })}
     </div>
   );
 }
