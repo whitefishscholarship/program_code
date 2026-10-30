@@ -14,7 +14,6 @@ export const DifferentiationProfileSchema = z.strictObject({
   faith: tagList(20),
   gender: tagList(10),
   firstGen: z.boolean(),
-  outsideMontana: z.boolean().default(false),
   familyTies: tagList(20),
   clubs: tagList(40),
   plans: tagList(40),
@@ -170,7 +169,6 @@ export function emptyDifferentiation(): DifferentiationProfile {
     faith: [],
     gender: [],
     firstGen: false,
-    outsideMontana: false,
     familyTies: [],
     clubs: [],
     plans: [],
@@ -271,21 +269,7 @@ export function differentiationGroups(awards: readonly TagSource[]): Differentia
     ...chipsFor('health', presentValues(awards, 'health')),
     ...chipsFor('lifeSituation', presentValues(awards, 'lifeSituation')),
   ];
-  const placeOrder = ['montana', 'whitefish', 'flathead', 'rural'] as const;
-  const places = placeOrder.filter((place) => place === 'rural'
-    ? awards.some((award) => award.ruralRule != null && award.ruralRule !== 'none')
-    : awards.some((award) => award.residencyScope === place));
-
   const ordered: DifferentiationGroup[] = [
-    {
-      id: 'where-you-live',
-      title: 'Where you live',
-      hint: 'Many scholarships are for students in Montana. Pick a place if you want. If you live outside Montana, say so. If you skip this, we still count you as a Whitefish-area student.',
-      chips: [
-        ...chipsFor('places', places),
-        { field: 'outsideMontana', value: 'true', label: 'I live outside Montana' } satisfies DifferentiationChip,
-      ],
-    },
     {
       id: 'plans',
       title: 'Plans and career path',
@@ -356,7 +340,6 @@ export function differentiationGroups(awards: readonly TagSource[]): Differentia
 
 export function chipSelected(profile: DifferentiationProfile, chip: DifferentiationChip): boolean {
   if (chip.field === 'firstGen') return profile.firstGen;
-  if (chip.field === 'outsideMontana') return profile.outsideMontana;
   if (chip.field === 'places') return profile.places.includes(chip.value as DifferentiationPlace);
   const list = profile[chip.field];
   return Array.isArray(list) && list.includes(chip.value);
@@ -364,7 +347,6 @@ export function chipSelected(profile: DifferentiationProfile, chip: Differentiat
 
 export function toggleDifferentiation(profile: DifferentiationProfile, chip: DifferentiationChip): DifferentiationProfile {
   if (chip.field === 'firstGen') return { ...profile, firstGen: !profile.firstGen };
-  if (chip.field === 'outsideMontana') return { ...profile, outsideMontana: !profile.outsideMontana };
   if (chip.field === 'places') {
     const value = chip.value as DifferentiationPlace;
     if (!DIFFERENTIATION_PLACES.includes(value)) return profile;
@@ -384,7 +366,6 @@ export function toggleDifferentiation(profile: DifferentiationProfile, chip: Dif
  * The saved answers stay as the student left them.
  */
 export function applyRuralAutoTag(profile: DifferentiationProfile): DifferentiationProfile {
-  if (profile.outsideMontana) return profile;
   const missing = DIFFERENTIATION_PLACES.filter((place) => !profile.places.includes(place));
   if (missing.length === 0) return profile;
   return { ...profile, places: [...profile.places, ...missing] };

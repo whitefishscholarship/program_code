@@ -163,7 +163,6 @@ assert.deepEqual(differentiationHits(state, emptyDifferentiation()), ['Montana']
 
 const groups = differentiationGroups(catalog.awards);
 assert.deepEqual(groups.map((group) => group.title), [
-  'Where you live',
   'Plans and career path',
   'First in your family',
   'Heritage, faith and identity',
@@ -246,8 +245,6 @@ for (const group of groups) {
       assert(catalog.awards.some((item) => item.residencyScope === chip.value));
     } else if (field === 'firstGen') {
       assert(catalog.awards.some((item) => item.firstGen === true));
-    } else if (field === 'outsideMontana') {
-      assert.equal(chip.value, 'true');
     } else if (field === 'familyTies' && (chip.value === 'elks' || chip.value === 'rainbow' || chip.value.startsWith('employer:'))) {
       const picked = toggleDifferentiation(emptyDifferentiation(), chip);
       assert(catalog.awards.some((item) => differentiationHits(item, picked).includes(chip.label)), chip.value);

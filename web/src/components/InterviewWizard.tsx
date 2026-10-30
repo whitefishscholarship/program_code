@@ -130,7 +130,6 @@ export default function InterviewWizard({ awards, initialAnswers, onComplete, on
           <h3 className="section-title">Filter for scholarships</h3>
           <p className="hint">Pick what fits you so we can point out scholarships you may want. You can skip any group. An empty group does not hide an award.</p>
         </div>
-        <FilterGroups ids={['where-you-live']} groups={groups} profile={profile} onToggle={(chip) => { setProfile((current) => toggleDifferentiation(current, chip)); setError(''); }} />
         <Section title="Family money" hint="Some scholarships look at how much money your family has. Do you want to see those?">
           <ChipRow>
             {FAMILY_MONEY_OPTIONS.map(([value, label]) => (
