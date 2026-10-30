@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { R3_CATALOG } from '@/lib/r3Catalog';
 import { catalogCompatibilityRows } from '@/lib/catalogCompatibility';
 import matrixCatalogJson from '../../../../fixtures/p7/matrix-catalog.json';
+import { applyLocalPlaces } from '@/lib/localPlace';
 import { StudentCatalogSchema } from '@/lib/studentCatalog';
 
 export const dynamic = 'force-dynamic';
@@ -12,7 +13,7 @@ const matrixCatalog = StudentCatalogSchema.parse(matrixCatalogJson);
 
 export async function GET(request: NextRequest) {
   const useMatrixFixture = process.env.NODE_ENV !== 'production' && request.nextUrl.searchParams.get('qa') === 'matrix';
-  const selectedCatalog = useMatrixFixture ? matrixCatalog : catalog;
+  const selectedCatalog = applyLocalPlaces(useMatrixFixture ? matrixCatalog : catalog);
   return NextResponse.json({
     schemaVersion: '2.0.0',
     catalog: selectedCatalog,

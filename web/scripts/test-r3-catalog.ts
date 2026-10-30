@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import crypto from 'node:crypto';
 import { R3_CATALOG, R3_SHORTLIST_ROWS, R3_CONNECTIONS, R3_PROVENANCE } from '../src/lib/r3Catalog';
 import { StudentCatalogSchema } from '../src/lib/studentCatalog';
-import { shortlistAwards, SHORTLIST_PUBLICATION } from '../src/lib/spreadsheetShortlist';
+import { comparedGpa, comparedSchoolTypes, shortlistAwards, SHORTLIST_PUBLICATION } from '../src/lib/spreadsheetShortlist';
 import { RELEVANCE_PUBLICATION, UNSUPPORTED_SPECIAL_CHOICES } from '../src/lib/interviewRelevance';
 import { COVERAGE_PUBLICATION } from '../src/lib/coverageRelevance';
 import { InterviewAnswersSchema, type InterviewAnswers } from '../src/lib/interviewMatcher';
@@ -89,10 +89,16 @@ for(const profile of profiles){
   }
   const retained=now.results.find(x=>x.award.publicId===prior.award.publicId)!;
   const cleared=clearedByOfficialPage.get(prior.award.publicId);
-  if(!cleared) assert.equal(retained.decision,prior.decision,'existing academic decision changed');
+  const oldRow=SHORTLIST_PUBLICATION.rows.find(row=>row.targetKind==='award'&&row.targetId===prior.award.publicId);
+  const newRow=R3_SHORTLIST_ROWS.find(row=>row.targetKind==='award'&&row.targetId===retained.award.publicId);
+  const sameGpa=comparedGpa(prior.award,oldRow)===comparedGpa(retained.award,newRow);
+  const sameSchool=comparedSchoolTypes(prior.award,oldRow).join()===comparedSchoolTypes(retained.award,newRow).join();
+  if(!cleared && sameGpa && sameSchool) assert.equal(retained.decision,prior.decision,`${prior.award.publicId} existing academic decision changed`);
   for(const reason of prior.reasons){
    if(cleared?.has(reason.code)) continue;
-   assert(retained.reasons.some(r=>r.code===reason.code&&r.message===reason.message),'existing reason lost');
+   if(reason.code==='recorded_gpa' && !sameGpa) continue;
+   if(reason.code==='recorded_school' && !sameSchool) continue;
+   assert(retained.reasons.some(r=>r.code===reason.code&&r.message===reason.message),`${prior.award.publicId} existing reason lost ${reason.code}`);
   }
  }
 }

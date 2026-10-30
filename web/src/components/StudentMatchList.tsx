@@ -1,22 +1,23 @@
 'use client';
 
-import { useEffect, useMemo, useState, type ReactNode, type Ref } from 'react';
+import { useEffect, useMemo, useRef, useState, type ReactNode, type Ref } from 'react';
 import {
   PROGRESS_LABELS,
   PROGRESS_NOTE,
   PROGRESS_ORDER,
   awardProgress,
-  clearAwardProgress,
   filterByProgress,
   progressCounts,
-  readAwardProgress,
+  readAwardProgressSafely,
   setAwardProgress,
-  writeAwardProgress,
+  writeAwardProgressSafely,
+  clearAwardProgressSafely,
   type AwardProgress,
   type AwardProgressMap,
   type ProgressFilter,
 } from '@/lib/awardProgress';
-import { differentiationHits } from '@/lib/differentiation';
+import { relevanceByAward } from '@/lib/interviewRelevance';
+import { studentFitExplanations, studentFitLabels } from '@/lib/studentFit';
 import { buildStudentWorkbook, googleCalendarTemplateUrl, serializeAwardDeadlineCalendar, serializeStudentCalendar, serializeStudentCsv } from '@/lib/studentExport';
 import type { InterviewAnswers } from '@/lib/interviewMatcher';
 import { buildStudentHref } from '@/lib/studentLink';
@@ -38,6 +39,7 @@ import {
   poolIsSmall,
   poolRulesMissing,
   RULES_NOT_POSTED,
+  sortByFit,
   sortStudentAwards,
   splitHidden,
   STUDENT_STATUS_LABELS,
@@ -66,6 +68,7 @@ const schoolTypeLabels: Record<Exclude<SchoolType, 'all'>, string> = {
 
 const sectionHelp: Record<StudentStatus, string> = {
   open_now: 'Apply now',
+  check_site: 'The listed open date has passed. Check the sponsor site.',
   opens_later: 'Get ready. These open later.',
   closed: 'Save for next year',
   not_sure: 'We could not confirm the dates',
@@ -73,6 +76,7 @@ const sectionHelp: Record<StudentStatus, string> = {
 
 const pillClass: Record<StudentStatus, string> = {
   open_now: 'pill pill-open',
+  check_site: 'pill pill-unsure',
   opens_later: 'pill pill-later',
   closed: 'pill pill-closed',
   not_sure: 'pill pill-unsure',
@@ -91,6 +95,7 @@ type Props = {
   canUndo: boolean;
   refreshNote: string;
   embedHeading?: boolean;
+  listTitle?: string;
   headingRef?: Ref<HTMLHeadingElement>;
   resetToken?: string;
   onHide: (id: string) => void;
@@ -100,13 +105,13 @@ type Props = {
 };
 
 export default function StudentMatchList({
-  mode, awards, allAwards, resultsById, hiddenIds, answers, hideBanner, canUndo, refreshNote, embedHeading = false, headingRef, resetToken = '',
+  mode, awards, allAwards, resultsById, hiddenIds, answers, hideBanner, canUndo, refreshNote, embedHeading = false, listTitle = 'Your matches', headingRef, resetToken = '',
   onHide, onRestore, onUndo, onRefresh,
 }: Props) {
   const [search, setSearch] = useState('');
   const [statusFilter, setStatusFilter] = useState<StatusFilter>('all');
   const [openingThisMonth, setOpeningThisMonth] = useState(false);
-  const [sort, setSort] = useState<StudentSort>(mode === 'results' ? 'pool' : 'deadline');
+  const [sort, setSort] = useState<StudentSort>(mode === 'results' ? 'match' : 'deadline');
   const [method, setMethod] = useState<'all' | ApplicationMode>('all');
   const [schoolType, setSchoolType] = useState<SchoolType>('all');
   const [progress, setProgress] = useState<AwardProgressMap>({});
@@ -125,7 +130,7 @@ export default function StudentMatchList({
   }, [copied]);
 
   useEffect(() => {
-    setProgress(readAwardProgress(window.localStorage));
+    setProgress(readAwardProgressSafely(() => window.localStorage));
   }, []);
 
   const filtered = useMemo(() => filterStudentAwards(awards, {
@@ -140,7 +145,11 @@ export default function StudentMatchList({
   const { visible, concealed } = useMemo(() => splitHidden(filtered, hiddenIds), [filtered, hiddenIds]);
   const progressTotals = useMemo(() => progressCounts(visible, progress), [progress, visible]);
   const progressed = useMemo(() => filterByProgress(visible, progress, progressFilter), [progress, progressFilter, visible]);
-  const sorted = useMemo(() => sortStudentAwards(progressed, sort, now), [now, progressed, sort]);
+  const relevance = useMemo(() => (answers ? relevanceByAward(answers) : null), [answers]);
+  const sorted = useMemo(() => {
+    if (sort === 'match') return sortByFit(progressed, (award) => studentFitLabels(award, answers, relevance ?? undefined).length > 0);
+    return sortStudentAwards(progressed, sort, now);
+  }, [answers, now, progressed, relevance, sort]);
   const hiddenAwards = hiddenIds.map((id) => awardById.get(id)).filter((award): award is StudentAward => Boolean(award));
   const missingHidden = hiddenIds.length - hiddenAwards.length;
   const openingCount = awards.filter((award) => isOpeningThisMonth(award, now) && !hiddenIds.includes(award.publicId)).length;
@@ -177,13 +186,13 @@ export default function StudentMatchList({
   const changeProgress = (id: string, status: AwardProgress) => {
     setProgress((current) => {
       const next = setAwardProgress(current, id, status);
-      writeAwardProgress(window.localStorage, next);
+      writeAwardProgressSafely(() => window.localStorage, next);
       return next;
     });
   };
   const clearProgress = () => {
     setProgress({});
-    clearAwardProgress(window.localStorage);
+    clearAwardProgressSafely(() => window.localStorage);
   };
   const clearFilters = () => {
     setSearch('');
@@ -204,6 +213,12 @@ export default function StudentMatchList({
     setPage(pageCount);
   }
   const currentPage = Math.min(page, pageCount);
+  const seenPage = useRef(currentPage);
+  useEffect(() => {
+    if (seenPage.current === currentPage) return;
+    seenPage.current = currentPage;
+    window.scrollTo(0, 0);
+  }, [currentPage]);
   const pageStart = sorted.length === 0 ? 0 : (currentPage - 1) * PAGE_SIZE;
   const pageAwards = sorted.slice(pageStart, pageStart + PAGE_SIZE);
   const rangeStart = sorted.length === 0 ? 0 : pageStart + 1;
@@ -228,12 +243,12 @@ export default function StudentMatchList({
       <div className={embedHeading ? 'stage-head' : undefined}>
         {embedHeading ? (
           <h2 ref={headingRef} tabIndex={-1} id="catalog-heading" className="page-title outline-none">
-            Your matches ({sorted.length})
+            {listTitle} ({sorted.length})
           </h2>
         ) : (
           <h3 className="section-title">All awards ({sorted.length})</h3>
         )}
-        {mode === 'results' && <p className="lede">{sort === 'pool' ? 'Smallest pools are first. Open awards are still marked in green.' : 'Start with the green ones. They are open right now.'}</p>}
+        {mode === 'results' && <p className="lede">{sort === 'match' ? 'Awards that fit your answers come first. Every award stays on the list.' : sort === 'pool' ? 'Smallest pools are first. Open awards are still marked in green.' : 'Start with the green ones. They are open right now.'}</p>}
       </div>
 
       <div className="panel mt-4">
@@ -266,6 +281,7 @@ export default function StudentMatchList({
           <label className="text-sm font-semibold">
             Sort by
             <select value={sort} onChange={(event) => setSort(event.target.value as StudentSort)} className="field field-inline">
+              {mode === 'results' && <option value="match">Best match</option>}
               <option value="pool">Smallest pool</option>
               <option value="deadline">Soonest deadline</option>
               <option value="amount">Highest amount</option>
@@ -346,12 +362,12 @@ export default function StudentMatchList({
                 <span className="pill pill-closed">{group.awards.length}</span>
                 <p className="hint">{sectionHelp[group.status]}</p>
               </div>
-              <div className="card-stack">{group.awards.map((award) => <AwardRow key={award.publicId} award={award} now={now} result={resultsById.get(award.publicId)} profile={answers?.differentiation} progress={awardProgress(progress, award.publicId)} onProgress={changeProgress} onHide={onHide} onAddDeadline={addDeadline} />)}</div>
+              <div className="card-stack">{group.awards.map((award) => <AwardRow key={award.publicId} award={award} now={now} result={resultsById.get(award.publicId)} answers={answers} relevance={relevance} progress={awardProgress(progress, award.publicId)} onProgress={changeProgress} onHide={onHide} onAddDeadline={addDeadline} />)}</div>
             </section>
           ))}
         </div>
       ) : (
-        <div className="card-stack mt-6">{pageAwards.map((award) => <AwardRow key={award.publicId} award={award} now={now} result={resultsById.get(award.publicId)} profile={answers?.differentiation} progress={awardProgress(progress, award.publicId)} onProgress={changeProgress} onHide={onHide} onAddDeadline={addDeadline} />)}</div>
+        <div className="card-stack mt-6">{pageAwards.map((award) => <AwardRow key={award.publicId} award={award} now={now} result={resultsById.get(award.publicId)} answers={answers} relevance={relevance} progress={awardProgress(progress, award.publicId)} onProgress={changeProgress} onHide={onHide} onAddDeadline={addDeadline} />)}</div>
       )}
 
       {sorted.length > 0 && (
@@ -402,13 +418,20 @@ function pageItems(current: number, total: number): Array<number | 'gap'> {
   return items;
 }
 
-function AwardRow({ award, now, result, profile, progress, onProgress, onHide, onAddDeadline }: { award: StudentAward; now: Date; result?: DisplayResult; profile?: InterviewAnswers['differentiation']; progress: AwardProgress; onProgress: (id: string, status: AwardProgress) => void; onHide: (id: string) => void; onAddDeadline: (award: StudentAward) => void }) {
+function AwardRow({ award, now, result, answers, relevance, progress, onProgress, onHide, onAddDeadline }: { award: StudentAward; now: Date; result?: DisplayResult; answers: InterviewAnswers | null; relevance: ReturnType<typeof relevanceByAward> | null; progress: AwardProgress; onProgress: (id: string, status: AwardProgress) => void; onHide: (id: string) => void; onAddDeadline: (award: StudentAward) => void }) {
   const status = studentStatus(award, now);
   const url = officialUrl(award);
   const verification = displayVerification(award);
-  const why = result?.reasons.find((reason) => reason.message.trim())?.message;
+  const fit = studentFitExplanations(award, answers, relevance ?? undefined);
+  const conflict = result?.decision === 'recorded_mismatch'
+    ? result.reasons.find((reason) => (
+      (reason.code === 'recorded_gpa' && reason.message.includes('below that minimum'))
+      || (reason.code === 'recorded_school' && reason.message.includes('differ from this award'))
+    ))
+    : undefined;
+  const why = conflict?.message ?? (fit.length > 0 ? fit.map((item) => item.message).join(' ') : undefined);
   const action = actionLabel(status);
-  const fits = profile ? differentiationHits(award, profile) : [];
+  const fits = fit.map((item) => item.label);
   const rulesMissing = poolRulesMissing(award);
   const dated = Boolean(explicitDeadlineDate(award));
   const googleCalendarUrl = dated ? googleCalendarTemplateUrl(award) : null;

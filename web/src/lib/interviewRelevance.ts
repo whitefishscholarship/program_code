@@ -5,6 +5,7 @@ import publication from '../../fixtures/relevance/interview-relevance-v1.json';
 import pin from '../../fixtures/relevance/pin.json';
 import type { InterviewAnswers } from './interviewMatcher';
 import { SPECIAL_CRITERIA, ACTIVITY_QUESTIONS } from './interviewQuestions';
+import { SHORTLIST_ID_RELINKS } from './shortlistRelinks';
 const answerIds = new Set<string>([...SPECIAL_CRITERIA, ...ACTIVITY_QUESTIONS].map(item => item.id));
 answerIds.add('financial_need');
 export const RELEVANCE_PUBLICATION = z.strictObject({
@@ -21,14 +22,22 @@ export function selectedRelevanceAnswers(answers: InterviewAnswers): ReadonlySet
   return new Set([...answers.selectedCriteria, ...answers.activities, ...(answers.discoveryInterests ?? []), ...organizations.map(id => `org_${id}`), ...(wantsNeed ? ['financial_need'] : [])]
     .filter(id => !answers.sensitiveCriteriaSkipped || !sensitive.has(id)));
 }
-export function relevanceByAward(answers: InterviewAnswers, additionalConnections: readonly DiscoveryConnection[] = R3_CONNECTIONS): ReadonlyMap<string, readonly { code: string; kind: 'preference'; message: string }[]> {
+export type PreferenceReason = { code: string; kind: 'preference'; message: string; answerId: string };
+
+export function relevanceByAward(answers: InterviewAnswers, additionalConnections: readonly DiscoveryConnection[] = R3_CONNECTIONS): ReadonlyMap<string, readonly PreferenceReason[]> {
   const selected = selectedRelevanceAnswers(answers);
-  const reasons = new Map<string, { code: string; kind: 'preference'; message: string }[]>();
+  const reasons = new Map<string, PreferenceReason[]>();
+  const add = (awardId: string, reason: PreferenceReason) => {
+    const current = reasons.get(awardId) ?? [];
+    current.push(reason);
+    reasons.set(awardId, current);
+  };
   for (const connection of [...RELEVANCE_PUBLICATION.connections, ...COVERAGE_PUBLICATION.connections, ...additionalConnections]) {
     if (!selected.has(connection.answerId)) continue;
-    const current = reasons.get(connection.awardId) ?? [];
-    current.push({ code: connection.id, kind: 'preference', message: connection.message });
-    reasons.set(connection.awardId, current);
+    const reason = { code: connection.id, kind: 'preference' as const, message: connection.message, answerId: connection.answerId };
+    add(connection.awardId, reason);
+    const linked = SHORTLIST_ID_RELINKS[connection.awardId];
+    if (linked && linked !== connection.awardId) add(linked, reason);
   }
   return reasons;
 }

@@ -23,12 +23,20 @@ import {
   hideAwardId,
   isOpeningThisMonth,
   restoreAwardId,
+  sortByFit,
   sortStudentAwards,
   splitHidden,
+  actionLabel,
   explicitDeadlineDate,
   STUDENT_STATUS_LABELS,
   studentStatus,
 } from '../src/lib/studentList';
+import { readAwardProgressSafely } from '../src/lib/awardProgress';
+import { emptyDifferentiation, legacyFromProfile, toggleDifferentiation } from '../src/lib/differentiation';
+import { gpaRuleHeld, schoolRuleHeld } from '../src/lib/eligibilityHolds';
+import { applyLocalPlace } from '../src/lib/localPlace';
+import { shortlistAwards } from '../src/lib/spreadsheetShortlist';
+import { studentFitLabels } from '../src/lib/studentFit';
 import { openStatusText, StudentAwardSchema, type StudentAward } from '../src/lib/studentCatalog';
 
 const now = new Date(2026, 9, 28);
@@ -300,9 +308,9 @@ assert(listSource.includes('BOOKMARK_NOTE'));
 assert(listSource.includes('HIDE_BANNER'));
 assert(listSource.includes('HIDDEN_FOOTNOTE'));
 assert.deepEqual(listSource.match(/localStorage/g), ['localStorage', 'localStorage', 'localStorage']);
-assert(listSource.includes('readAwardProgress(window.localStorage)'));
-assert(listSource.includes('writeAwardProgress(window.localStorage, next)'));
-assert(listSource.includes('clearAwardProgress(window.localStorage)'));
+assert(listSource.includes('readAwardProgressSafely(() => window.localStorage)'));
+assert(listSource.includes('writeAwardProgressSafely(() => window.localStorage, next)'));
+assert(listSource.includes('clearAwardProgressSafely(() => window.localStorage)'));
 assert(listSource.includes('Progress is saved on this device only') || listSource.includes('PROGRESS_NOTE'));
 assert(!listSource.includes('localStorage.setItem'));
 assert(listSource.includes('\u2715 Hide') || listSource.includes('✕ Hide'));
@@ -317,6 +325,85 @@ assert(!fs.readFileSync('src/app/globals.css', 'utf8').includes('glass.css'), 'd
 const linkSource = fs.readFileSync('src/lib/studentLink.ts', 'utf8');
 assert(!linkSource.includes('searchParams.set'));
 assert(linkSource.includes('url.hash'));
+
+const pastClosed = award({
+  publicId: 'award-aaaaaaaaaaa9',
+  name: 'Past Closed',
+  verification: { status: 'verified', lastChecked: '2026-10-28', sourceUrl: 'https://example.com/past', openStatus: 'open_now', deadline: 'January 2, 2024' },
+});
+assert.deepEqual(sortStudentAwards([pastClosed, openAward], 'deadline', now).map((item) => item.name), ['Open Example', 'Past Closed']);
+assert.equal(studentStatus(laterAward, new Date(2026, 9, 31)), 'opens_later');
+assert.equal(studentStatus(laterAward, new Date(2026, 10, 1)), 'check_site');
+assert.equal(STUDENT_STATUS_LABELS.check_site, 'Check site');
+assert.notEqual(STUDENT_STATUS_LABELS[studentStatus(laterAward, new Date(2026, 10, 1))], 'Open now');
+assert.equal(actionLabel('check_site'), 'Look now');
+assert.equal(actionLabel('open_now'), 'Apply');
+const yearlessOpen = award({
+  publicId: 'award-aaaaaaaaaa10',
+  name: 'Yearless Open',
+  cycle: { status: 'upcoming', label: 'Upcoming', year: null, opens: 'January 1', closes: null, recurrence: 'annual' },
+  verification: { status: 'verified', lastChecked: '2026-10-28', sourceUrl: 'https://example.com/yearless', openStatus: 'opens_on', deadline: 'March 1, 2027' },
+});
+assert.equal(studentStatus(yearlessOpen, new Date(2026, 9, 30)), 'opens_later');
+assert.equal(studentStatus(yearlessOpen, new Date(2027, 0, 2)), 'opens_later');
+assert.equal(openStatusText(laterAward, new Date(2026, 10, 1)), 'Check the sponsor site. The listed open date has passed.');
+assert.equal(formatStudentAmount('$2 million for 600 students'), '$2 million');
+assert.deepEqual(readAwardProgressSafely(() => { throw new Error('blocked'); }), {});
+const fitRanked = sortByFit([openAward, laterAward, closedAward], (item) => item.publicId === laterAward.publicId);
+assert.deepEqual(fitRanked.map((item) => item.publicId), [laterAward.publicId, closedAward.publicId, openAward.publicId]);
+assert.equal(sortByFit([openAward, laterAward, closedAward], () => false).length, 3);
+
+const liveAwards = (catalog.catalog.awards as StudentAward[]).map((item) => StudentAwardSchema.parse(item));
+const byLiveId = new Map(liveAwards.map((item) => [item.publicId, item]));
+const cameron = byLiveId.get('award-d1f523e64c60');
+assert(cameron);
+const cameronLow = shortlistAwards([cameron], InterviewAnswersSchema.parse({ gpa: 1, targetSchoolTypes: ['trade_vocational'] })).results[0];
+const cameronHigh = shortlistAwards([cameron], InterviewAnswersSchema.parse({ gpa: 4, targetSchoolTypes: ['four_year'] })).results[0];
+assert.equal(cameronLow.decision, 'recorded_mismatch');
+assert.equal(cameronHigh.decision, 'recorded_fit');
+assert.equal(cameronLow.reasons.some((reason) => /spreadsheet row/i.test(reason.message)), false);
+assert.equal(gpaRuleHeld(gatesAward.publicId), true);
+const gatesLow = shortlistAwards([gatesAward], InterviewAnswersSchema.parse({ gpa: 1, targetSchoolTypes: ['four_year'] })).results[0];
+assert.equal(gatesLow.reasons.some((reason) => reason.code === 'recorded_gpa'), false);
+const noble = byLiveId.get('award-29b2feca960c');
+assert(noble);
+assert.equal(shortlistAwards([noble], InterviewAnswersSchema.parse({ gpa: 1, targetSchoolTypes: ['trade_vocational'] })).results[0].decision, 'needs_checking');
+const peck = byLiveId.get('award-dd3cf3aeab83');
+assert(peck);
+assert.equal(schoolRuleHeld(peck.publicId), true);
+assert.notEqual(shortlistAwards([peck], InterviewAnswersSchema.parse({ gpa: 4, targetSchoolTypes: ['four_year'] })).results[0].decision, 'recorded_mismatch');
+assert.equal(shortlistAwards([peck], InterviewAnswersSchema.parse({ gpa: 1, targetSchoolTypes: ['four_year'] })).results[0].decision, 'recorded_mismatch');
+const serviceAnswers = InterviewAnswersSchema.parse({ gpa: 3.5, targetSchoolTypes: ['four_year'], activities: ['service'] });
+assert(liveAwards.some((item) => studentFitLabels(item, serviceAnswers).includes('I help in my community')));
+const youth = byLiveId.get('award-efb6231ef93f');
+assert(youth);
+assert(studentFitLabels(youth, serviceAnswers).includes('I help in my community'));
+const familyAnswers = InterviewAnswersSchema.parse({ gpa: 3.5, targetSchoolTypes: ['four_year'], financialNeedInterest: 'yes' });
+assert(liveAwards.some((item) => studentFitLabels(item, familyAnswers).includes('Family money')));
+const blackAnswers = InterviewAnswersSchema.parse({ gpa: 3.5, targetSchoolTypes: ['four_year'], selectedCriteria: ['black_african_american'] });
+assert(studentFitLabels(gatesAward, blackAnswers).includes('Black or African American'));
+const hispanicAnswers = InterviewAnswersSchema.parse({ gpa: 3.5, targetSchoolTypes: ['four_year'], selectedCriteria: ['hispanic_latino'] });
+assert(studentFitLabels(gatesAward, hispanicAnswers).includes('Hispanic or Latino'));
+const healthAnswers = InterviewAnswersSchema.parse({ gpa: 3.5, targetSchoolTypes: ['four_year'], selectedCriteria: ['chronic_health'] });
+assert(liveAwards.some((item) => studentFitLabels(item, healthAnswers).includes('Long-term health issue')));
+for (const activity of ['leadership', 'work_experience', 'caregiving'] as const) {
+  const picked = InterviewAnswersSchema.parse({ gpa: 3.5, targetSchoolTypes: ['four_year'], activities: [activity] });
+  const label = activity === 'leadership' ? 'I lead a team or club' : activity === 'work_experience' ? 'I have a job' : 'I help care for my family';
+  assert(liveAwards.some((item) => studentFitLabels(item, picked).includes(label)), activity);
+}
+const employerProfile = toggleDifferentiation(emptyDifferentiation(), { field: 'familyTies', value: 'employer:glacier-bancorp', label: 'Glacier Bancorp' });
+assert(legacyFromProfile(employerProfile).selectedCriteria.includes('company_employee'));
+const employerAnswers = InterviewAnswersSchema.parse({ gpa: 3.5, targetSchoolTypes: ['four_year'], differentiation: employerProfile });
+const employerHits = liveAwards.filter((item) => studentFitLabels(item, employerAnswers).includes('Glacier Bancorp'));
+assert(employerHits.length > 0);
+assert(employerHits.every((item) => /glacier bancorp/i.test(`${item.name} ${item.summary ?? ''}`)));
+const coffee = byLiveId.get('award-bb8ca59a7f0f');
+assert(coffee);
+assert.equal(coffee.residencyScope ?? null, null);
+assert.equal(applyLocalPlace(coffee).residencyScope, 'flathead');
+const bulldogs = byLiveId.get('award-5dc2aab768d2');
+assert(bulldogs);
+assert.equal(applyLocalPlace(bulldogs).residencyScope, 'whitefish');
 
 console.log('student ux tests passed');
 
