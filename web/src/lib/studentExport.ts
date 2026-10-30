@@ -275,6 +275,15 @@ function pad(value: number): string {
   return String(value).padStart(2, '0');
 }
 
+/** One award, one file, built on the device. Returns null when the deadline has no calendar day. */
+export function serializeAwardDeadlineCalendar(award: StudentAward, now: Date): string | null {
+  if (!explicitDeadlineDate(award)) return null;
+  const calendar = serializeStudentCalendar([award], now);
+  const events = calendar.split('BEGIN:VEVENT').length - 1;
+  if (events !== 1) return null;
+  return calendar;
+}
+
 export function serializeStudentCalendar(awards: readonly StudentAward[], now: Date): string {
   const stamp = now.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z$/, 'Z');
   const events = awards.flatMap((award) => {

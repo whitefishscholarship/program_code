@@ -1,7 +1,8 @@
 'use client';
 
 import { useEffect, useMemo, useState, type ReactNode, type Ref } from 'react';
-import { buildStudentWorkbook, serializeStudentCalendar, serializeStudentCsv } from '@/lib/studentExport';
+import { differentiationHits } from '@/lib/differentiation';
+import { buildStudentWorkbook, serializeAwardDeadlineCalendar, serializeStudentCalendar, serializeStudentCsv } from '@/lib/studentExport';
 import type { InterviewAnswers } from '@/lib/interviewMatcher';
 import { buildStudentHref } from '@/lib/studentLink';
 import type { DisplayResult } from '@/lib/spreadsheetShortlist';
@@ -18,6 +19,10 @@ import {
   matchesStudentStatus,
   officialUrl,
   plainStudentText,
+  poolExplanation,
+  poolIsSmall,
+  poolRulesMissing,
+  RULES_NOT_POSTED,
   sortStudentAwards,
   splitHidden,
   STUDENT_STATUS_LABELS,
@@ -90,7 +95,7 @@ export default function StudentMatchList({
   const [search, setSearch] = useState('');
   const [statusFilter, setStatusFilter] = useState<StatusFilter>('all');
   const [openingThisMonth, setOpeningThisMonth] = useState(false);
-  const [sort, setSort] = useState<StudentSort>('deadline');
+  const [sort, setSort] = useState<StudentSort>(mode === 'results' ? 'pool' : 'deadline');
   const [method, setMethod] = useState<'all' | ApplicationMode>('all');
   const [schoolType, setSchoolType] = useState<SchoolType>('all');
   const [showHidden, setShowHidden] = useState(false);
@@ -109,7 +114,7 @@ export default function StudentMatchList({
   const filtered = useMemo(() => {
     const query = search.trim().toLocaleLowerCase();
     return awards.filter((award) => {
-      const haystack = [award.name, award.summary, award.amount.label, award.eligibility.audience, award.application.label, deadlineLabel(award)]
+      const haystack = [award.name, award.summary ? plainStudentText(award.summary) : '', award.amount.label, award.eligibility.audience, award.application.label, deadlineLabel(award)]
         .filter(Boolean).join(' ').toLocaleLowerCase();
       const matchesSearch = !query || haystack.includes(query);
       const matchesMethod = method === 'all' || award.application.mode === method;
@@ -150,6 +155,11 @@ export default function StudentMatchList({
   const downloadCalendar = () => {
     saveFile(`whitefish-deadlines-${fileDay(now)}.ics`, new TextEncoder().encode(serializeStudentCalendar(sorted, now)), 'text/calendar');
   };
+  const addDeadline = (award: StudentAward) => {
+    const text = serializeAwardDeadlineCalendar(award, now);
+    if (!text) return;
+    saveFile(`whitefish-deadline-${award.publicId}.ics`, new TextEncoder().encode(text), 'text/calendar');
+  };
 
   const hasFilters = Boolean(search || statusFilter !== 'all' || openingThisMonth || method !== 'all' || schoolType !== 'all');
   const clearFilters = () => {
@@ -180,7 +190,7 @@ export default function StudentMatchList({
         ) : (
           <h3 className="text-2xl font-black tracking-tight text-slate-950">All awards ({sorted.length})</h3>
         )}
-        {mode === 'results' && <p className="mt-1 text-slate-600">Start with the green ones. They are open right now.</p>}
+        {mode === 'results' && <p className="mt-1 text-slate-600">{sort === 'pool' ? 'Smallest pools are first. Open awards are still marked in green.' : 'Start with the green ones. They are open right now.'}</p>}
       </div>
 
       <div className="mt-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
@@ -213,6 +223,7 @@ export default function StudentMatchList({
           <label className="text-sm font-bold text-slate-800">
             Sort by
             <select value={sort} onChange={(event) => setSort(event.target.value as StudentSort)} className="ml-2 rounded-lg border border-slate-300 bg-white px-3 py-2 font-normal focus:border-teal-700 focus:outline-none focus:ring-4 focus:ring-teal-100">
+              <option value="pool">Smallest pool</option>
               <option value="deadline">Soonest deadline</option>
               <option value="amount">Highest amount</option>
               <option value="name">Name A to Z</option>
@@ -278,12 +289,12 @@ export default function StudentMatchList({
                 <span className="rounded-full bg-slate-200 px-2 py-0.5 text-xs font-bold text-slate-700">{group.awards.length}</span>
                 <p className="text-sm text-slate-600">{sectionHelp[group.status]}</p>
               </div>
-              <div className="space-y-3">{group.awards.map((award) => <AwardRow key={award.publicId} award={award} now={now} result={resultsById.get(award.publicId)} onHide={onHide} />)}</div>
+              <div className="space-y-3">{group.awards.map((award) => <AwardRow key={award.publicId} award={award} now={now} result={resultsById.get(award.publicId)} profile={answers?.differentiation} onHide={onHide} onAddDeadline={addDeadline} />)}</div>
             </section>
           ))}
         </div>
       ) : (
-        <div className="mt-6 space-y-3">{sorted.map((award) => <AwardRow key={award.publicId} award={award} now={now} result={resultsById.get(award.publicId)} onHide={onHide} />)}</div>
+        <div className="mt-6 space-y-3">{sorted.map((award) => <AwardRow key={award.publicId} award={award} now={now} result={resultsById.get(award.publicId)} profile={answers?.differentiation} onHide={onHide} onAddDeadline={addDeadline} />)}</div>
       )}
 
       <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -294,7 +305,7 @@ export default function StudentMatchList({
           Download CSV
         </button>
       </div>
-      <p className="mt-3 text-xs leading-5 text-slate-500">The Excel file and the CSV match the awards on the screen. Hidden awards are left out.</p>
+      <p className="mt-3 text-xs leading-5 text-slate-500">The Excel file and the CSV match the awards on the screen. Hidden awards are left out. A deadline file is made on this device only when you tap the button. No email. Nothing is sent or saved.</p>
       <p className="mt-4 text-xs leading-5 text-slate-500">{HIDDEN_FOOTNOTE}</p>
     </div>
   );
@@ -304,12 +315,15 @@ function FilterButton({ pressed, onClick, children }: { pressed: boolean; onClic
   return <button type="button" aria-pressed={pressed} onClick={onClick} className={`rounded-full px-3 py-1.5 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-teal-200 ${pressed ? 'bg-[#123c3a] text-white' : 'bg-white text-slate-700 ring-1 ring-slate-300 hover:bg-slate-50'}`}>{children}</button>;
 }
 
-function AwardRow({ award, now, result, onHide }: { award: StudentAward; now: Date; result?: DisplayResult; onHide: (id: string) => void }) {
+function AwardRow({ award, now, result, profile, onHide, onAddDeadline }: { award: StudentAward; now: Date; result?: DisplayResult; profile?: InterviewAnswers['differentiation']; onHide: (id: string) => void; onAddDeadline: (award: StudentAward) => void }) {
   const status = studentStatus(award, now);
   const url = officialUrl(award);
   const verification = displayVerification(award);
   const why = result?.reasons.find((reason) => reason.message.trim())?.message;
   const action = actionLabel(status);
+  const fits = profile ? differentiationHits(award, profile) : [];
+  const rulesMissing = poolRulesMissing(award);
+  const dated = Boolean(explicitDeadlineDate(award));
   return (
     <article data-award-id={award.publicId} data-verification-status={verification.status} data-student-status={status} className={`rounded-xl border border-slate-200 border-l-4 bg-white p-4 shadow-sm ${borderColor[status]}`}>
       <div className="grid grid-cols-2 items-start gap-x-3 gap-y-3 md:grid-cols-[minmax(14rem,1fr)_minmax(8.5rem,11rem)_minmax(7rem,9rem)_auto] md:gap-x-4">
@@ -318,6 +332,14 @@ function AwardRow({ award, now, result, onHide }: { award: StudentAward; now: Da
             {url ? <OfficialLink href={url}>{award.name}</OfficialLink> : award.name}
           </h3>
           <p className="mt-1 line-clamp-2 break-words text-sm leading-6 text-slate-600">{award.summary ? plainStudentText(award.summary) : plainStudentText(award.eligibility.audience)}</p>
+          {rulesMissing ? (
+            <p className="mt-2 text-sm font-semibold text-slate-700">{RULES_NOT_POSTED}</p>
+          ) : poolIsSmall(award) ? (
+            <p className="mt-2 text-sm leading-6 text-slate-700"><span className="font-bold text-slate-950">Why this pool is small: </span>{poolExplanation(award)}</p>
+          ) : (
+            <p className="mt-2 text-sm leading-6 text-slate-700">{poolExplanation(award)}</p>
+          )}
+          {fits.length > 0 && <p className="mt-1 text-sm font-semibold text-teal-900">Fits you: {fits.join(', ')}</p>}
           <details className="mt-2 text-sm">
             <summary className="cursor-pointer font-bold text-teal-800 focus:outline-none focus:ring-4 focus:ring-teal-200">Details</summary>
             <div className="mt-3 space-y-2 break-words leading-6 text-slate-700">
@@ -339,6 +361,7 @@ function AwardRow({ award, now, result, onHide }: { award: StudentAward; now: Da
         <div className="col-span-2 flex flex-wrap items-center gap-2 md:col-span-1 md:flex-col md:items-stretch">
           <p className={`w-fit rounded-full border px-2.5 py-1 text-xs font-bold ${pillColor[status]}`}>{STUDENT_STATUS_LABELS[status]}</p>
           {url ? <OfficialLink href={url} button>{action}</OfficialLink> : <p className="rounded-lg bg-slate-100 px-3 py-2 text-center text-sm font-bold text-slate-600">No website listed</p>}
+          <button type="button" onClick={() => onAddDeadline(award)} disabled={!dated} className="rounded-lg border border-[#123c3a] bg-white px-3 py-2 text-sm font-bold text-[#123c3a] hover:bg-slate-50 focus:outline-none focus:ring-4 focus:ring-teal-200 disabled:cursor-not-allowed disabled:border-slate-200 disabled:text-slate-400">{dated ? 'Add this deadline to my calendar' : 'No date to add yet'}</button>
           <button type="button" onClick={() => onHide(award.publicId)} className="rounded-lg px-3 py-2 text-sm font-bold text-slate-500 hover:bg-slate-100 hover:text-slate-800 focus:outline-none focus:ring-4 focus:ring-teal-200">✕ Hide</button>
         </div>
       </div>

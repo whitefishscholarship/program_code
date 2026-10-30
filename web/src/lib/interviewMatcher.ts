@@ -16,6 +16,7 @@ import {
   type MatchingFactValue,
 } from './matchingFactRuntime';
 import { expandAlias } from '../../scripts/matching-fact-contract';
+import { DifferentiationProfileSchema } from './differentiation';
 
 export const INTERVIEW_APPLICATION_MODES = [
   'automatic_consideration', 'selectable_children', 'eligibility_matched',
@@ -51,7 +52,9 @@ export const InterviewAnswersSchema = z.strictObject({
   organizationResponse: z.enum(ORGANIZATION_RESPONSES).nullable().optional(),
   selectedCriteria: z.array(enumFrom<SpecialCriterionId>(SPECIAL_CRITERIA.map(({ id }) => id), 'Special criterion')).max(SPECIAL_CRITERIA.length).refine(uniqueValues, 'Special criteria must not repeat.').default([]),
   sensitiveCriteriaSkipped: z.boolean().default(false),
+  // Older links may still include this list. The form no longer asks, and matching ignores it.
   preferredApplicationModes: z.array(z.enum(INTERVIEW_APPLICATION_MODES)).max(INTERVIEW_APPLICATION_MODES.length).refine(uniqueValues, 'Application preferences must not repeat.').default([]),
+  differentiation: DifferentiationProfileSchema.optional(),
 });
 
 export type InterviewAnswers = z.infer<typeof InterviewAnswersSchema>;
@@ -134,10 +137,7 @@ function observationForCriterion(answers: InterviewAnswers, criterionId: string)
     if (expanded.operator === 'gte' && typeof expanded.value === 'number') return { lower: expanded.value, upper: null };
     return typeof expanded.value === 'number' ? expanded.value : undefined;
   }
-  if (criterionId === 'application.mode') {
-    const values = answers.preferredApplicationModes.map((mode) => applicationPreferenceToContract[mode]);
-    return values.length > 0 ? [...new Set(values)] : undefined;
-  }
+  if (criterionId === 'application.mode') return undefined;
   return selectedAliasObservation(answers, criterionId);
 }
 

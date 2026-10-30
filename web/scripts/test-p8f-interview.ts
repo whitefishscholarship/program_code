@@ -128,7 +128,9 @@ for (const alias of positiveAliases) {
   assert.notEqual(runFact(fact, oppositeAnswers).decision, 'known_conflict', `nonselection must remain non-excluding for ${alias}`);
 }
 const preferredAppFact = createSyntheticAcceptedFact(award, 'application.mode', 'preferred', 'eq', 'provider_form');
-assert(runFact(preferredAppFact).reasons.some((reason) => reason.kind === 'preference'));
+const preferredAppResult = runFact(preferredAppFact);
+assert(!preferredAppResult.reasons.some((reason) => reason.kind === 'preference'), 'application format answers no longer change order');
+assert.notEqual(preferredAppResult.decision, 'known_conflict');
 
 const partialRaceAnswers = InterviewAnswersSchema.parse({ ...oppositeAnswers, selectedCriteria: ['black_african_american'], sensitiveCriteriaSkipped: false });
 const hispanicFact = createSyntheticAcceptedFact(award, 'identity.race_ethnicity', 'required', 'contains_any', ['hispanic_latino']);
