@@ -1,3 +1,4 @@
+const glassCss = `
 /* Shared glass system for every page.
    One forest green is mixed into the three button shades.
    Panel white is 0.66 (just above 0.60) so charcoal text stays WCAG AA
@@ -861,3 +862,6 @@
     animation: none;
   }
 }
+`;
+
+export default glassCss;
