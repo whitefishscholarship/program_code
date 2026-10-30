@@ -346,12 +346,12 @@ export default function StudentMatchList({
                 <span className="pill pill-closed">{group.awards.length}</span>
                 <p className="hint">{sectionHelp[group.status]}</p>
               </div>
-              <div className="space-y-3">{group.awards.map((award) => <AwardRow key={award.publicId} award={award} now={now} result={resultsById.get(award.publicId)} profile={answers?.differentiation} progress={awardProgress(progress, award.publicId)} onProgress={changeProgress} onHide={onHide} onAddDeadline={addDeadline} />)}</div>
+              <div className="card-stack">{group.awards.map((award) => <AwardRow key={award.publicId} award={award} now={now} result={resultsById.get(award.publicId)} profile={answers?.differentiation} progress={awardProgress(progress, award.publicId)} onProgress={changeProgress} onHide={onHide} onAddDeadline={addDeadline} />)}</div>
             </section>
           ))}
         </div>
       ) : (
-        <div className="mt-6 space-y-3">{pageAwards.map((award) => <AwardRow key={award.publicId} award={award} now={now} result={resultsById.get(award.publicId)} profile={answers?.differentiation} progress={awardProgress(progress, award.publicId)} onProgress={changeProgress} onHide={onHide} onAddDeadline={addDeadline} />)}</div>
+        <div className="card-stack mt-6">{pageAwards.map((award) => <AwardRow key={award.publicId} award={award} now={now} result={resultsById.get(award.publicId)} profile={answers?.differentiation} progress={awardProgress(progress, award.publicId)} onProgress={changeProgress} onHide={onHide} onAddDeadline={addDeadline} />)}</div>
       )}
 
       {sorted.length > 0 && (

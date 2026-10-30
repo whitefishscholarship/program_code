@@ -264,19 +264,47 @@
   gap: 1rem;
 }
 
+.card-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
+}
+
+.card-stack > * {
+  margin: 0;
+}
+
+/* Fieldsets paint a second background behind the legend. Keep the
+   fieldset unstyled and put one glass panel inside it. */
+.bare-fieldset {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-inline-size: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
 .panel {
   margin: 0;
   min-width: 0;
   border-radius: var(--radius-panel);
   padding: 0.95rem 1rem 1.05rem;
-  background: rgba(255, 255, 255, 0.46);
+  background: rgba(255, 255, 255, 0.5);
+  background-clip: padding-box;
   border: 1px solid rgba(255, 255, 255, 0.82);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+  box-shadow: 0 8px 18px rgba(16, 36, 28, 0.08);
 }
 
 .panel-title {
+  margin: 0;
   font-size: 1.05rem;
   font-weight: 600;
+  line-height: 1.35;
 }
 
 .glass-card {
@@ -433,8 +461,17 @@
 .chip-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem;
+  gap: 8px;
   margin-top: 0.75rem;
+}
+
+.question-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
 }
 
 .field {
@@ -470,13 +507,14 @@
 .award-card {
   border-radius: 22px;
   background: rgba(255, 255, 255, 0.6);
+  background-clip: padding-box;
   border: 1px solid var(--glass-edge);
-  box-shadow: 0 12px 28px rgba(16, 36, 28, 0.1), var(--glow);
+  box-shadow: 0 10px 24px rgba(16, 36, 28, 0.1);
   padding: 1rem 1.05rem;
 }
 
 .award-card[data-student-status="open_now"] {
-  box-shadow: 0 12px 28px rgba(16, 36, 28, 0.1), inset 4px 0 0 #1f7a4d, var(--glow);
+  box-shadow: 0 10px 24px rgba(16, 36, 28, 0.1), inset 4px 0 0 #1f7a4d;
 }
 
 .award-actions {

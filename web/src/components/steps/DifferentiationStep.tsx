@@ -17,15 +17,17 @@ function chipId(groupId: string, chip: DifferentiationChip): string {
 
 export default function DifferentiationStep({ groups, profile, onToggle }: Props) {
   return (
-    <div className="mt-7 space-y-7">
+    <div className="card-stack mt-4">
       {groups.map((group) => (
-        <fieldset key={group.id} className="panel">
-          <legend className="panel-title">{group.title}</legend>
+        <fieldset key={group.id} className="bare-fieldset">
+          <legend className="sr-only">{group.title}</legend>
+          <div className="panel">
+          <p className="panel-title">{group.title}</p>
           <p className="hint">{group.hint}</p>
           {group.chips.length === 0 ? (
             <p className="hint mt-3">Nothing in the list uses this yet.</p>
           ) : group.layout === 'questions' ? (
-            <ul className="mt-3 space-y-2">
+            <ul className="question-list">
               {group.chips.map((chip) => {
                 const checked = chipSelected(profile, chip);
                 const id = chipId(group.id, chip);
@@ -72,6 +74,7 @@ export default function DifferentiationStep({ groups, profile, onToggle }: Props
               })}
             </div>
           )}
+          </div>
         </fieldset>
       ))}
     </div>

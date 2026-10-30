@@ -117,7 +117,7 @@ export default function InterviewWizard({ awards, initialAnswers, onComplete, on
       </div>
       {error && <p id="interview-error" role="alert" className="notice notice-rose mt-5 font-semibold">{error}</p>}
 
-      <div className="mt-7 space-y-5">
+      <div className="card-stack mt-7">
         <Section title="Your GPA" hint="Use your GPA from 0 to 4.0. Do not use a weighted GPA." required>
           <input id="student-gpa" type="number" required inputMode="decimal" min="0" max="4" step="0.01" value={gpa} aria-invalid={error.includes('GPA') || undefined} aria-describedby={error ? 'interview-error' : undefined} onChange={(event) => { setGpa(event.target.value); setError(''); }} className="field field-narrow mt-3" placeholder="For example, 3.5" />
         </Section>
@@ -178,10 +178,13 @@ export default function InterviewWizard({ awards, initialAnswers, onComplete, on
 
 function Section({ title, hint, required = false, children }: { title: string; hint: string; required?: boolean; children: ReactNode }) {
   return (
-    <fieldset className="panel">
-      <legend className="panel-title">{title}{required ? <span className="req"> (required)</span> : null}</legend>
-      <p className="hint">{hint}</p>
-      {children}
+    <fieldset className="bare-fieldset">
+      <legend className="sr-only">{title}{required ? ' (required)' : ''}</legend>
+      <div className="panel">
+        <p className="panel-title">{title}{required ? <span className="req"> (required)</span> : null}</p>
+        <p className="hint">{hint}</p>
+        {children}
+      </div>
     </fieldset>
   );
 }

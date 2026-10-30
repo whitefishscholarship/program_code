@@ -19,6 +19,12 @@ export default function RootLayout({
             -webkit-backdrop-filter: blur(20px) saturate(1.3);
             backdrop-filter: blur(20px) saturate(1.3);
           }
+          .bare-fieldset {
+            -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+            background: transparent;
+            box-shadow: none;
+          }
           @supports not (backdrop-filter: blur(1px)) {
             .topbar-inner,.stage,.glass-card,.panel,.award-card,.banner,.notice,.field,.chip,.question-row,.btn-secondary,.btn-tertiary,.app-footer,.stat,.hidden-box {
               background-color: rgba(255,255,255,0.94);
