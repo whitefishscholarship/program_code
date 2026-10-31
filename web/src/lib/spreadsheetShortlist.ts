@@ -68,8 +68,15 @@ export function comparedGpa(award: StudentAward, row: ShortlistRow | undefined):
   return row?.minimumGpa ?? null;
 }
 
+/** Trades or agricultural science. A trade program and a four-year program both count. */
+const WIDENED_SCHOOLS: Readonly<Record<string, readonly ComparedSchool[]>> = {
+  'award-dd3cf3aeab83': ['trade_vocational', 'four_year'],
+};
+
 export function comparedSchoolTypes(award: StudentAward, row: ShortlistRow | undefined): ComparedSchool[] {
   if (schoolRuleHeld(award.publicId)) return [];
+  const widened = WIDENED_SCHOOLS[award.publicId];
+  if (widened) return [...widened];
   const own = awardSchoolTypes(award);
   if (own.length > 0) return own;
   return row?.schoolTypes ? [...row.schoolTypes] : [];
