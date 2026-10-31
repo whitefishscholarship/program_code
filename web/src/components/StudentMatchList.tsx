@@ -18,7 +18,8 @@ import {
 } from '@/lib/awardProgress';
 import { relevanceByAward } from '@/lib/interviewRelevance';
 import { studentFitExplanations, studentFitLabels } from '@/lib/studentFit';
-import { buildStudentWorkbook, googleCalendarTemplateUrl, serializeAwardDeadlineCalendar, serializeStudentCalendar, serializeStudentCsv } from '@/lib/studentExport';
+import { awardNotice } from '@/lib/eligibilityHolds';
+import { awardOnStudentCalendar, buildStudentWorkbook, googleCalendarTemplateUrl, serializeAwardDeadlineCalendar, serializeStudentCalendar, serializeStudentCsv } from '@/lib/studentExport';
 import type { InterviewAnswers } from '@/lib/interviewMatcher';
 import { buildStudentHref } from '@/lib/studentLink';
 import type { DisplayResult } from '@/lib/spreadsheetShortlist';
@@ -26,6 +27,7 @@ import {
   actionLabel,
   amountLabel,
   BOOKMARK_NOTE,
+  datedDeadlineIsBeforeToday,
   deadlineLabel,
   explicitDeadlineDate,
   filterStudentAwards,
@@ -153,7 +155,7 @@ export default function StudentMatchList({
   const hiddenAwards = hiddenIds.map((id) => awardById.get(id)).filter((award): award is StudentAward => Boolean(award));
   const missingHidden = hiddenIds.length - hiddenAwards.length;
   const openingCount = awards.filter((award) => isOpeningThisMonth(award, now) && !hiddenIds.includes(award.publicId)).length;
-  const datedCount = sorted.filter((award) => explicitDeadlineDate(award)).length;
+  const datedCount = sorted.filter((award) => awardOnStudentCalendar(award, now)).length;
 
   const copyLink = async () => {
     const href = buildStudentHref(window.location.href, { answers, hiddenIds: [...hiddenIds] });
@@ -432,9 +434,11 @@ function AwardRow({ award, now, result, answers, relevance, progress, onProgress
   const why = conflict?.message ?? (fit.length > 0 ? fit.map((item) => item.message).join(' ') : undefined);
   const action = actionLabel(status);
   const fits = fit.map((item) => item.label);
+  const notice = awardNotice(award.publicId)?.label ?? null;
   const rulesMissing = poolRulesMissing(award);
   const dated = Boolean(explicitDeadlineDate(award));
-  const googleCalendarUrl = dated ? googleCalendarTemplateUrl(award) : null;
+  const pastDeadline = dated && datedDeadlineIsBeforeToday(award, now);
+  const googleCalendarUrl = dated && !pastDeadline ? googleCalendarTemplateUrl(award) : null;
   return (
     <article data-award-id={award.publicId} data-verification-status={verification.status} data-student-status={status} className="award-card">
       <div className="grid grid-cols-2 items-start gap-x-3 gap-y-3 md:grid-cols-[minmax(14rem,1fr)_minmax(8.5rem,11rem)_minmax(7rem,9rem)_auto] md:gap-x-4">
@@ -443,6 +447,7 @@ function AwardRow({ award, now, result, answers, relevance, progress, onProgress
             {url ? <OfficialLink href={url}>{award.name}</OfficialLink> : award.name}
           </h3>
           <p className="muted mt-1 line-clamp-2 break-words text-sm leading-6">{award.summary ? plainStudentText(award.summary) : plainStudentText(award.eligibility.audience)}</p>
+          {notice ? <p className="mt-1 text-sm font-semibold">{notice}</p> : null}
           {rulesMissing ? (
             <p className="mt-2 text-sm font-semibold">{RULES_NOT_POSTED}</p>
           ) : poolIsSmall(award) ? (
@@ -472,7 +477,7 @@ function AwardRow({ award, now, result, answers, relevance, progress, onProgress
         <div className="award-actions col-span-2 md:col-span-1">
           <p className={pillClass[status]}>{STUDENT_STATUS_LABELS[status]}</p>
           {url ? <OfficialLink href={url} button>{action}</OfficialLink> : <p className="pill pill-closed">No website listed</p>}
-          <button type="button" onClick={() => onAddDeadline(award)} disabled={!dated} className="btn btn-secondary">{dated ? 'Add this deadline to my calendar' : 'No date to add yet'}</button>
+          <button type="button" onClick={() => onAddDeadline(award)} disabled={!dated || pastDeadline} className="btn btn-secondary">{!dated ? 'No date to add yet' : pastDeadline ? 'Deadline has passed' : 'Add this deadline to my calendar'}</button>
           {googleCalendarUrl ? <OfficialLink href={googleCalendarUrl} tone="tertiary">{`Add to Google Calendar`}</OfficialLink> : null}
           <div>
             <p className="meta-label">My progress</p>

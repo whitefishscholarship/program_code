@@ -83,7 +83,7 @@ const LABELS: Record<string, string> = {
   NGPA: 'NGPA',
   WAI: 'WAI',
   LPA: 'LPA',
-  elks: 'Elks',
+  elks: 'My family is in the Elks',
   rainbow: 'Rainbow Girls',
   'employer:aea-member-company': 'AEA member company',
   'employer:da-davidson': 'D.A. Davidson',
@@ -198,11 +198,18 @@ function awardBlob(award: TagSource): string {
   return `${award.name ?? ''} ${award.summary ?? ''} ${award.eligibility?.audience ?? ''}`;
 }
 
+/** The Elks chip is a family-membership filter. A public Elks award does not match. */
+function elksFamily(award: TagSource): boolean {
+  if (!(award.familyTies ?? []).includes('fraternal')) return false;
+  const text = awardBlob(award);
+  return /\belks?\b/i.test(text) && /\b(?:child|stepchild|grandchild|dependent|ward|member)\b/i.test(text);
+}
+
 function tieQuestions(): TieQuestion[] {
   const fraternal = (award: TagSource, pattern: RegExp) => (award.familyTies ?? []).includes('fraternal') && pattern.test(awardBlob(award));
   const employer = (award: TagSource, pattern: RegExp) => (award.familyTies ?? []).includes('employer') && pattern.test(awardBlob(award));
   return [
-    { field: 'familyTies', value: 'elks', group: 'community', matches: (award) => fraternal(award, /elk/i) },
+    { field: 'familyTies', value: 'elks', group: 'community', matches: elksFamily },
     { field: 'familyTies', value: 'rainbow', group: 'community', matches: (award) => fraternal(award, /rainbow/i) },
     { field: 'familyTies', value: 'employer:aea-member-company', group: 'employer', matches: (award) => employer(award, /aea member company/i) },
     { field: 'familyTies', value: 'employer:da-davidson', group: 'employer', matches: (award) => employer(award, /d\.a\. davidson/i) },
@@ -386,15 +393,15 @@ function tieQuestionSelected(profile: DifferentiationProfile, question: TieQuest
 }
 
 export function differentiationHits(award: HitAward, profile: DifferentiationProfile): string[] {
-  const effective = applyRuralAutoTag(profile);
   const hits: string[] = [];
   const add = (label: string) => {
     if (!hits.includes(label)) hits.push(label);
   };
-  if (effective.places.includes('whitefish') && award.residencyScope === 'whitefish') add(chipLabel('whitefish'));
-  if (effective.places.includes('flathead') && award.residencyScope === 'flathead') add(chipLabel('flathead'));
-  if (effective.places.includes('montana') && award.residencyScope === 'montana') add(chipLabel('montana'));
-  if (awardHasRuralRule(award) && effective.places.includes('rural')) add(chipLabel('rural'));
+  // Place labels use only places the student picked. The rural auto-tag stays off the card.
+  if (profile.places.includes('whitefish') && award.residencyScope === 'whitefish') add(chipLabel('whitefish'));
+  if (profile.places.includes('flathead') && award.residencyScope === 'flathead') add(chipLabel('flathead'));
+  if (profile.places.includes('montana') && award.residencyScope === 'montana') add(chipLabel('montana'));
+  if (awardHasRuralRule(award) && profile.places.includes('rural')) add(chipLabel('rural'));
   const legacyAviation = profile.clubs.includes(AVIATION_GROUP_VALUE);
   for (const field of LIST_FIELDS) {
     const selected = profile[field];

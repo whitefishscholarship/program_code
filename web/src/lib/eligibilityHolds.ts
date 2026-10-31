@@ -1,7 +1,7 @@
 /**
- * GPA and school rules Kelsey has not decided yet.
+ * GPA and school rules Kelsey has decided.
  * `apply: false` means the finder does not use that rule.
- * Set `apply` to true on one entry when the decision is to enforce it.
+ * `apply: true` means the finder uses the rule stored on the award.
  */
 export type EligibilityHold = {
   id: string;
@@ -10,11 +10,20 @@ export type EligibilityHold = {
   apply: boolean;
 };
 
+export type AwardNotice = {
+  id: string;
+  label: string;
+  /** A college-only label is not a Fits you match for a high school senior. */
+  collegeOnly: boolean;
+};
+
+export const PELL_PROMISE_URL = 'https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise';
+
 export const GPA_RULE_HOLDS: readonly EligibilityHold[] = [
   {
     id: 'award-29b2feca960c',
     name: 'Krystal and Franklin H. Noble Endowed Scholarship',
-    reason: 'The page lists a 2.75 GPA or an ACT 22 or SAT 1100. The form does not ask for test scores.',
+    reason: 'The page lists a 2.75 GPA or an ACT 22 or SAT 1100. The form does not ask for test scores. A 22 ACT or 1100 SAT also qualifies.',
     apply: false,
   },
   {
@@ -26,8 +35,8 @@ export const GPA_RULE_HOLDS: readonly EligibilityHold[] = [
   {
     id: 'award-2179b44d009d',
     name: 'Pell Promise for Montana Students',
-    reason: 'The 3.0 looks like a rule for keeping the award, not for getting it.',
-    apply: false,
+    reason: 'Carroll College uses a 3.0 GPA to enter.',
+    apply: true,
   },
   {
     id: 'award-9c85eb732e7a',
@@ -44,8 +53,8 @@ export const GPA_RULE_HOLDS: readonly EligibilityHold[] = [
   {
     id: 'award-9c44b840ed10',
     name: 'Mary Naegeli Memorial Tree Farm Scholarship',
-    reason: 'The GPA is for a student already in college full time.',
-    apply: false,
+    reason: 'The page requires a 2.5 GPA.',
+    apply: true,
   },
   {
     id: 'award-a321ba096da1',
@@ -68,14 +77,20 @@ export const GPA_RULE_HOLDS: readonly EligibilityHold[] = [
   {
     id: 'award-df57e3f6a067',
     name: 'John Kozlowski Memorial Scholarship',
-    reason: 'The 2.0 applies to a high school senior or a college undergraduate.',
-    apply: false,
+    reason: 'A 2.0 GPA applies to a high school senior or a college undergraduate.',
+    apply: true,
   },
   {
     id: 'award-bb295b2828b5',
     name: 'Dr. Max L Amberson Ag Education Scholarship',
-    reason: 'The 2.0 applies to a high school senior or a college freshman.',
-    apply: false,
+    reason: 'A 2.0 GPA applies to a high school senior or a college freshman.',
+    apply: true,
+  },
+  {
+    id: 'award-dd3cf3aeab83',
+    name: 'W. Ralph Peck Memorial Scholarship',
+    reason: 'A 3.0 GPA is required.',
+    apply: true,
   },
 ];
 
@@ -83,10 +98,46 @@ export const SCHOOL_RULE_HOLDS: readonly EligibilityHold[] = [
   {
     id: 'award-dd3cf3aeab83',
     name: 'W. Ralph Peck Memorial Scholarship',
-    reason: 'Stored as trade only, but the summary says trades or agricultural science.',
-    apply: false,
+    reason: 'Trades or agricultural science. A trade program and a four-year program both count.',
+    apply: true,
   },
 ];
+
+/** Shown on the card. These are not Fits you labels. */
+export const AWARD_NOTICES: readonly AwardNotice[] = [
+  {
+    id: 'award-29b2feca960c',
+    label: 'A 22 ACT or 1100 SAT also qualifies',
+    collegeOnly: false,
+  },
+  {
+    id: 'award-9c85eb732e7a',
+    label: 'After 1 year of college',
+    collegeOnly: true,
+  },
+  {
+    id: 'award-cd6e4da18357',
+    label: 'College juniors only',
+    collegeOnly: true,
+  },
+  {
+    id: 'award-a321ba096da1',
+    label: 'MSU Bozeman sophomores and juniors only',
+    collegeOnly: true,
+  },
+  {
+    id: 'award-6f66c4a77103',
+    label: 'Must be in an A&P program',
+    collegeOnly: true,
+  },
+  {
+    id: 'award-82867636c6e1',
+    label: 'College engineering students',
+    collegeOnly: true,
+  },
+];
+
+const NOTICES = new Map(AWARD_NOTICES.map((notice) => [notice.id, notice]));
 
 function held(holds: readonly EligibilityHold[], id: string): boolean {
   const hold = holds.find((item) => item.id === id);
@@ -99,4 +150,12 @@ export function gpaRuleHeld(id: string): boolean {
 
 export function schoolRuleHeld(id: string): boolean {
   return held(SCHOOL_RULE_HOLDS, id);
+}
+
+export function awardNotice(id: string): AwardNotice | null {
+  return NOTICES.get(id) ?? null;
+}
+
+export function collegeOnlyAward(id: string): boolean {
+  return NOTICES.get(id)?.collegeOnly === true;
 }

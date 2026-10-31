@@ -4,6 +4,7 @@ import { crc32 } from 'node:zlib';
 import { InterviewAnswersSchema, type InterviewAnswers } from '../src/lib/interviewMatcher';
 import {
   buildStudentWorkbook,
+  serializeAwardDeadlineCalendar,
   serializeStudentCalendar,
   serializeStudentCsv,
   STUDENT_EXPORT_COLUMNS,
@@ -33,7 +34,7 @@ import {
 } from '../src/lib/studentList';
 import { readAwardProgressSafely } from '../src/lib/awardProgress';
 import { emptyDifferentiation, legacyFromProfile, toggleDifferentiation } from '../src/lib/differentiation';
-import { gpaRuleHeld, schoolRuleHeld } from '../src/lib/eligibilityHolds';
+import { awardNotice, gpaRuleHeld, PELL_PROMISE_URL, schoolRuleHeld } from '../src/lib/eligibilityHolds';
 import { applyLocalPlace } from '../src/lib/localPlace';
 import { shortlistAwards } from '../src/lib/spreadsheetShortlist';
 import { studentFitLabels } from '../src/lib/studentFit';
@@ -233,13 +234,15 @@ for (const [name, data] of files) {
   assert.equal(localCrc, crc32(data.subarray(30 + name.length)), name);
 }
 
-const calendar = serializeStudentCalendar([openAward, closedAward, unsureAward], now);
+const calendar = serializeStudentCalendar([openAward, closedAward, unsureAward, gatesAward], now);
 assert(calendar.includes('BEGIN:VCALENDAR'));
 assert(calendar.includes('DTSTART;VALUE=DATE:20261215'));
 assert(calendar.includes('Deadline: Open Example'));
 assert(!calendar.includes('Closed Example'));
 assert(!calendar.includes('Unsure Example'));
+assert(!calendar.includes('The Gates Scholarship'));
 assert(!calendar.includes('residenceState'));
+assert.equal(serializeAwardDeadlineCalendar(gatesAward, now), null);
 
 assert.equal(formatStudentDeadline('October 31, 2026'), '10/31/2026');
 assert.equal(formatStudentDeadline('October 31, 2026, 11:59 p.m. EDT'), '10/31/2026');
@@ -367,12 +370,66 @@ const gatesLow = shortlistAwards([gatesAward], InterviewAnswersSchema.parse({ gp
 assert.equal(gatesLow.reasons.some((reason) => reason.code === 'recorded_gpa'), false);
 const noble = byLiveId.get('award-29b2feca960c');
 assert(noble);
+assert.equal(awardNotice(noble.publicId)?.label, 'A 22 ACT or 1100 SAT also qualifies');
 assert.equal(shortlistAwards([noble], InterviewAnswersSchema.parse({ gpa: 1, targetSchoolTypes: ['trade_vocational'] })).results[0].decision, 'needs_checking');
+const pell = byLiveId.get('award-2179b44d009d');
+assert(pell);
+assert.equal(gpaRuleHeld(pell.publicId), false);
+assert.equal(pell.application.url, PELL_PROMISE_URL);
+assert.equal(pell.eligibility.minimumGpa, 3);
+assert.equal(shortlistAwards([pell], InterviewAnswersSchema.parse({ gpa: 2.9, targetSchoolTypes: ['four_year'] })).results[0].decision, 'recorded_mismatch');
+assert.notEqual(shortlistAwards([pell], InterviewAnswersSchema.parse({ gpa: 3, targetSchoolTypes: ['four_year'] })).results[0].decision, 'recorded_mismatch');
+const naegeli = byLiveId.get('award-9c44b840ed10');
+assert(naegeli);
+assert.equal(naegeli.eligibility.minimumGpa, 2.5);
+assert.equal(gpaRuleHeld(naegeli.publicId), false);
+assert.equal(shortlistAwards([naegeli], InterviewAnswersSchema.parse({ gpa: 2.4, targetSchoolTypes: ['four_year'] })).results[0].decision, 'recorded_mismatch');
+assert.notEqual(shortlistAwards([naegeli], InterviewAnswersSchema.parse({ gpa: 2.5, targetSchoolTypes: ['undecided'] })).results[0].decision, 'recorded_mismatch');
+for (const id of ['award-df57e3f6a067', 'award-bb295b2828b5'] as const) {
+  const ffa = byLiveId.get(id);
+  assert(ffa);
+  assert.equal(ffa.eligibility.minimumGpa, 2);
+  assert.equal(gpaRuleHeld(id), false);
+  assert.equal(shortlistAwards([ffa], InterviewAnswersSchema.parse({ gpa: 1.9, targetSchoolTypes: ['undecided'] })).results[0].decision, 'recorded_mismatch');
+  assert.notEqual(shortlistAwards([ffa], InterviewAnswersSchema.parse({ gpa: 2, targetSchoolTypes: ['undecided'] })).results[0].decision, 'recorded_mismatch');
+}
 const peck = byLiveId.get('award-dd3cf3aeab83');
 assert(peck);
-assert.equal(schoolRuleHeld(peck.publicId), true);
-assert.notEqual(shortlistAwards([peck], InterviewAnswersSchema.parse({ gpa: 4, targetSchoolTypes: ['four_year'] })).results[0].decision, 'recorded_mismatch');
-assert.equal(shortlistAwards([peck], InterviewAnswersSchema.parse({ gpa: 1, targetSchoolTypes: ['four_year'] })).results[0].decision, 'recorded_mismatch');
+assert.equal(schoolRuleHeld(peck.publicId), false);
+assert.equal(gpaRuleHeld(peck.publicId), false);
+assert.deepEqual(peck.eligibility.schoolTypes, ['trade', 'four_year']);
+assert.equal(peck.eligibility.minimumGpa, 3);
+assert.notEqual(shortlistAwards([peck], InterviewAnswersSchema.parse({ gpa: 3, targetSchoolTypes: ['four_year'] })).results[0].decision, 'recorded_mismatch');
+assert.notEqual(shortlistAwards([peck], InterviewAnswersSchema.parse({ gpa: 3, targetSchoolTypes: ['trade_vocational'] })).results[0].decision, 'recorded_mismatch');
+assert.equal(shortlistAwards([peck], InterviewAnswersSchema.parse({ gpa: 2.9, targetSchoolTypes: ['trade_vocational'] })).results[0].decision, 'recorded_mismatch');
+assert.equal(shortlistAwards([peck], InterviewAnswersSchema.parse({ gpa: 4, targetSchoolTypes: ['two_year'] })).results[0].decision, 'recorded_mismatch');
+const stemProfile = toggleDifferentiation(emptyDifferentiation(), { field: 'plans', value: 'STEM', label: 'STEM' });
+const senior = InterviewAnswersSchema.parse({ gpa: 4, targetSchoolTypes: ['four_year'], educationalStatus: 'high_school_senior', differentiation: stemProfile });
+const formSenior = InterviewAnswersSchema.parse({ gpa: 4, targetSchoolTypes: ['four_year'], differentiation: stemProfile });
+const collegeStudent = InterviewAnswersSchema.parse({ gpa: 4, targetSchoolTypes: ['four_year'], educationalStatus: 'undergraduate', differentiation: stemProfile });
+const notices = [
+  ['award-9c85eb732e7a', 'After 1 year of college'],
+  ['award-cd6e4da18357', 'College juniors only'],
+  ['award-a321ba096da1', 'MSU Bozeman sophomores and juniors only'],
+  ['award-6f66c4a77103', 'Must be in an A&P program'],
+  ['award-82867636c6e1', 'College engineering students'],
+] as const;
+for (const [id, label] of notices) {
+  const item = byLiveId.get(id);
+  assert(item, id);
+  assert.equal(gpaRuleHeld(id), true, id);
+  assert.equal(awardNotice(id)?.label, label);
+  assert.equal(studentFitLabels(item, senior).length, 0, id);
+  assert.equal(shortlistAwards([item], InterviewAnswersSchema.parse({ gpa: 0, targetSchoolTypes: ['undecided'] })).results[0].reasons.some((reason) => reason.code === 'recorded_gpa'), false, id);
+}
+const engineering = byLiveId.get('award-82867636c6e1');
+assert(engineering);
+assert.equal(formSenior.educationalStatus, null);
+assert.equal(studentFitLabels(engineering, senior).includes('STEM'), false);
+assert.equal(studentFitLabels(engineering, formSenior).includes('STEM'), false);
+assert.equal(shortlistAwards([engineering], formSenior).results.length, 1);
+assert.equal(studentFitLabels(engineering, collegeStudent).includes('STEM'), true);
+assert.equal(fs.readFileSync('fixtures/r3/catalog-v1.json', 'utf8').includes('pell-promise-montana-students'), false);
 const serviceAnswers = InterviewAnswersSchema.parse({ gpa: 3.5, targetSchoolTypes: ['four_year'], activities: ['service'] });
 assert(liveAwards.some((item) => studentFitLabels(item, serviceAnswers).includes('I help in my community')));
 const youth = byLiveId.get('award-efb6231ef93f');
