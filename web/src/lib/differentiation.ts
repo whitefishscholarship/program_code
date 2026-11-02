@@ -1,4 +1,12 @@
 import { z } from 'zod';
+import {
+  CAREER_CHOICES,
+  careerChoiceCount,
+  careerChoiceSelected,
+  careerEmptyNote,
+  careerFitLabels,
+  toggleCareerPlan,
+} from './careerClusters';
 import type { StudentAward } from './studentCatalog';
 
 export const DIFFERENTIATION_PLACES = ['whitefish', 'flathead', 'montana', 'rural'] as const;
@@ -27,6 +35,10 @@ export type DifferentiationChip = {
   field: keyof DifferentiationProfile;
   value: string;
   label: string;
+  /** Awards that carry this path. Zero is shown on purpose. */
+  count?: number;
+  /** Set when this chip sits inside a broader path, such as aviation under transportation. */
+  nestUnder?: string;
 };
 
 export type DifferentiationGroup = {
@@ -35,6 +47,8 @@ export type DifferentiationGroup = {
   hint: string;
   layout?: 'pills' | 'questions';
   chips: DifferentiationChip[];
+  /** Shown when a path has no scholarship limited to it. */
+  emptyNote?: string;
 };
 
 type ListField = 'sports' | 'clubs' | 'heritage' | 'faith' | 'familyTies' | 'plans' | 'health' | 'lifeSituation' | 'gender';
@@ -104,21 +118,30 @@ const LABELS: Record<string, string> = {
   union: 'Union family',
   'credit union': 'Credit union family',
   'lineman family': 'Lineman in the family',
-  'pilot training': 'Pilot training',
+  'pilot training': 'Pilot',
   'aviation maintenance': 'Fixing airplanes',
   'aviation management': 'Aviation jobs',
-  'skilled trades': 'Skilled trades',
-  'two-year college': 'Two-year college',
-  STEM: 'STEM',
-  'drone training': 'Flying drones',
-  healthcare: 'Health care',
-  'public service': 'Public service',
-  agriculture: 'Farming and nature',
-  transportation: 'Transportation',
+  'skilled trades': 'Skilled trades and construction',
+  'two-year college': 'Two-year program',
+  STEM: 'Engineering and manufacturing',
+  engineering: 'Engineering and manufacturing',
+  computers: 'Computers and technology',
+  'drone training': 'Drones',
+  healthcare: 'Health and nursing',
+  health: 'Health and nursing',
+  'public service': 'Law, public safety, and government',
+  agriculture: 'Agriculture, animals, and natural resources',
+  transportation: 'Transportation and aviation',
   business: 'Business',
-  teaching: 'Teaching',
-  law: 'Law',
-  arts: 'Art',
+  teaching: 'Education and teaching',
+  education: 'Education and teaching',
+  law: 'Law, public safety, and government',
+  arts: 'Art, music, and design',
+  hospitality: 'Hospitality, food, and tourism',
+  helping: 'Helping people',
+  communications: 'Communications and media',
+  energy: 'Energy and utilities',
+  any: "Any major / I'm not sure",
   woman: 'Female',
   nonbinary: 'Nonbinary',
   transgender: 'Transgender',
@@ -251,6 +274,16 @@ function chipsFor(field: ListField | 'places' | 'firstGen', values: readonly str
   return values.map((value) => ({ field, value, label: chipLabel(value) }));
 }
 
+function careerPlanChips(awards: readonly TagSource[]): DifferentiationChip[] {
+  return CAREER_CHOICES.map((choice) => ({
+    field: 'plans' as const,
+    value: choice.id,
+    label: choice.label,
+    count: careerChoiceCount(awards, choice.id),
+    nestUnder: choice.nestUnder,
+  }));
+}
+
 /** Chip groups use only tag values that already appear on catalog awards. */
 export function differentiationGroups(awards: readonly TagSource[]): DifferentiationGroup[] {
   const sports = presentValues(awards, 'sports');
@@ -269,12 +302,14 @@ export function differentiationGroups(awards: readonly TagSource[]): Differentia
     ...chipsFor('health', presentValues(awards, 'health')),
     ...chipsFor('lifeSituation', presentValues(awards, 'lifeSituation')),
   ];
+  const planChips = careerPlanChips(awards);
   const ordered: DifferentiationGroup[] = [
     {
       id: 'plans',
       title: 'Plans and career path',
-      hint: 'Pick what you want to study or do for work.',
-      chips: chipsFor('plans', presentValues(awards, 'plans')),
+      hint: 'Pick what you want to study or do for work. A path puts matching scholarships first. It never hides an award.',
+      chips: planChips,
+      emptyNote: careerEmptyNote(planChips) ?? undefined,
     },
     {
       id: 'first-gen',
@@ -337,6 +372,7 @@ export function differentiationGroups(awards: readonly TagSource[]): Differentia
 export function chipSelected(profile: DifferentiationProfile, chip: DifferentiationChip): boolean {
   if (chip.field === 'firstGen') return profile.firstGen;
   if (chip.field === 'places') return profile.places.includes(chip.value as DifferentiationPlace);
+  if (chip.field === 'plans') return careerChoiceSelected(profile.plans, chip.value);
   const list = profile[chip.field];
   return Array.isArray(list) && list.includes(chip.value);
 }
@@ -353,6 +389,7 @@ export function toggleDifferentiation(profile: DifferentiationProfile, chip: Dif
   }
   const list = profile[chip.field];
   if (!Array.isArray(list)) return profile;
+  if (chip.field === 'plans') return { ...profile, plans: toggleCareerPlan(profile.plans, chip.value) };
   const next = list.includes(chip.value) ? list.filter((item) => item !== chip.value) : [...list, chip.value];
   return { ...profile, [chip.field]: next };
 }
@@ -399,6 +436,10 @@ export function differentiationHits(award: HitAward, profile: DifferentiationPro
   for (const field of LIST_FIELDS) {
     const selected = profile[field];
     const values = award[field];
+    if (field === 'plans') {
+      for (const label of careerFitLabels(values, selected)) add(label);
+      continue;
+    }
     if (!values) continue;
     for (const value of values) {
       if (field === 'familyTies' && HIDDEN_FAMILY.has(value)) continue;
@@ -419,15 +460,15 @@ const LEGACY_CHIPS: readonly { kind: 'criterion' | 'discovery' | 'organization';
   { kind: 'criterion', id: 'aviation_pilot', chip: { field: 'plans', value: 'pilot training' } },
   { kind: 'criterion', id: 'aviation_maintenance', chip: { field: 'plans', value: 'aviation maintenance' } },
   { kind: 'criterion', id: 'aviation_management', chip: { field: 'plans', value: 'aviation management' } },
-  { kind: 'criterion', id: 'stem', chip: { field: 'plans', value: 'STEM' } },
-  { kind: 'criterion', id: 'healthcare', chip: { field: 'plans', value: 'healthcare' } },
-  { kind: 'criterion', id: 'trades', chip: { field: 'plans', value: 'skilled trades' } },
+  { kind: 'criterion', id: 'stem', chip: { field: 'plans', value: 'engineering' } },
+  { kind: 'criterion', id: 'healthcare', chip: { field: 'plans', value: 'health' } },
+  { kind: 'criterion', id: 'trades', chip: { field: 'plans', value: 'trades' } },
   { kind: 'criterion', id: 'business_finance', chip: { field: 'plans', value: 'business' } },
-  { kind: 'criterion', id: 'public_service', chip: { field: 'plans', value: 'public service' } },
+  { kind: 'criterion', id: 'public_service', chip: { field: 'plans', value: 'law' } },
   { kind: 'criterion', id: 'law', chip: { field: 'plans', value: 'law' } },
   { kind: 'criterion', id: 'arts_humanities', chip: { field: 'plans', value: 'arts' } },
   { kind: 'criterion', id: 'agriculture_conservation', chip: { field: 'plans', value: 'agriculture' } },
-  { kind: 'discovery', id: 'education_teaching', chip: { field: 'plans', value: 'teaching' } },
+  { kind: 'discovery', id: 'education_teaching', chip: { field: 'plans', value: 'education' } },
   { kind: 'criterion', id: 'athletics_sports', chip: { field: 'sports', value: 'student athlete' } },
   { kind: 'criterion', id: 'dyslexia', chip: { field: 'health', value: 'dyslexia' } },
   { kind: 'criterion', id: 'adhd', chip: { field: 'health', value: 'ADHD' } },
