@@ -23,8 +23,8 @@ Awards tagged: 478.
 
 ### poolLevel
 
-- 5: 251
-- 6: 71
+- 5: 258
+- 6: 64
 - 4: 59
 - null: 38
 - 1: 22
@@ -33,32 +33,34 @@ Awards tagged: 478.
 
 ### competitionScore
 
-- 73: 132
-- 70: 76
-- 94: 61
+- 73: 129
+- 70: 82
+- 94: 57
 - null: 38
-- 67: 27
-- 55: 25
-- 58: 22
-- 16: 14
+- 67: 28
+- 55: 26
+- 58: 21
+- 16: 13
+- 72: 11
 - 27: 9
-- 72: 9
-- 30: 7
 - 41: 7
-- 93: 7
-- 13: 4
+- 30: 6
+- 13: 5
+- 24: 4
 - 52: 4
 - 54: 4
-- 24: 3
+- 93: 4
 - 44: 3
 - 92: 3
-- 15: 2
 - 26: 2
 - 38: 2
 - 57: 2
+- 69: 2
 - 71: 2
 - 10: 1
+- 12: 1
 - 14: 1
+- 15: 1
 - 29: 1
 - 40: 1
 - 42: 1
@@ -68,43 +70,44 @@ Awards tagged: 478.
 - 64: 1
 - 66: 1
 - 68: 1
-- 69: 1
 - 76: 1
 
 ### poolReason
 
-- Large pool: open nationwide.: 70
-- Montana students can apply.: 23
-- The page does not say the place.: 21
-- Only Whitefish High School students can apply.: 17
+- Large pool: open nationwide.: 63
+- Montana students can apply.: 22
+- The page does not say the place.: 19
 - Students across the United States who are training to fix airplanes can apply.: 16
-- Students in the United States and Canada who are AOPA members can apply.: 16
+- Only Whitefish High School students can apply.: 15
 - Students across the United States who are WAI members, are training to be pilots, and are women can apply.: 15
+- Students in the United States and Canada who are AOPA members can apply.: 14
 - Students across the United States who are WAI members and are training to be pilots can apply.: 13
 - Students across the United States who are training to be pilots can apply.: 10
 - Students across the United States who are NGPA members and are training to be pilots can apply.: 9
+- Students across the United States who are in the skilled trades can apply.: 8
 - Students across the United States who need help paying for college can apply.: 8
 - The page does not say who can apply.: 8
-- Only Flathead County students can apply.: 7
-- Students across the United States who are FFA members can apply.: 7
-- Students across the United States who are in the skilled trades can apply.: 7
+- Only Flathead County students can apply.: 6
+- Students across the United States who are FFA members can apply.: 6
 - Students across the United States who are WAI members and are training to fix airplanes can apply.: 5
 - Students across the United States who have a military family tie can apply.: 5
+- Montana students who are in the skilled trades can apply.: 4
 - Students across the United States who are studying business can apply.: 4
+- Students across the United States who are studying transportation can apply.: 4
 - Students across the United States who are WAI members, are training to fix airplanes, and are women can apply.: 4
 - Students across the United States who have a parent who works for the sponsor can apply.: 4
-- Montana students who are in the skilled trades can apply.: 3
+- Students in the United States and Canada who are AOPA members and are training to be pilots can apply.: 4
 - Montana students who have a first responder in the family can apply.: 3
 - Students across the United States who are Native American can apply.: 3
-- Students across the United States who are studying STEM can apply.: 3
-- Students across the United States who are WAI members and are studying STEM can apply.: 3
-- Students across the United States who are women can apply.: 3
+- Students across the United States who are studying engineering can apply.: 3
+- Students across the United States who are studying transportation and are women can apply.: 3
 - Students across the United States who have a learning disability can apply.: 3
 - Montana students who are studying agriculture or nature can apply.: 2
-- Montana students who are studying STEM and are studying healthcare can apply.: 2
+- Montana students who are studying engineering and are studying health care can apply.: 2
 - Montana students who have a Farm Bureau family tie can apply.: 2
 - Montana students who need help paying for college can apply.: 2
 - Montana students who play a sport can apply.: 2
+- Only Flathead County students who are studying art or music can apply.: 2
 - Only Flathead County students who are women can apply.: 2
 - Only Flathead County students who need help paying for college can apply.: 2
 - Only students from a few nearby high schools can apply.: 2
@@ -114,22 +117,18 @@ Awards tagged: 478.
 - Students across the United States who are NGPA members and are training to fix airplanes can apply.: 2
 - Students across the United States who are NTHS members and are in the skilled trades can apply.: 2
 - Students across the United States who are NTHS members can apply.: 2
-- Students across the United States who are studying STEM, are training to be pilots, and have a military family tie can apply.: 2
-- Students across the United States who are studying transportation and are women can apply.: 2
-- Students across the United States who are training to be pilots and are training to fix airplanes can apply.: 2
+- Students across the United States who are studying engineering, are training to be pilots, and have a military family tie can apply.: 2
+- Students across the United States who are WAI members and are studying engineering can apply.: 2
 - Students across the United States who are WAI members can apply.: 2
-- Students across the United States who are WAI members, are studying aviation management, and are women can apply.: 2
-- Students across the United States who do drama or theatre can apply.: 2
 - Students across the United States who have a disability can apply.: 2
 - Students across the United States who have a learning or health need listed on the award can apply.: 2
 - Students across the United States who work for the sponsor or have a parent who does can apply.: 2
-- Students in the United States and Canada who are AOPA members and are training to be pilots can apply.: 2
 - Large pool: open in the United States and Canada.: 1
 - Montana students who are in a two-year program and are in the skilled trades can apply.: 1
 - Montana students who are in the skilled trades and need help paying for college can apply.: 1
 - Montana students who are on student council can apply.: 1
-- Montana students who are planning to serve the public and have a first responder in the family can apply.: 1
 - Montana students who are studying business can apply.: 1
+- Montana students who are studying law and have a first responder in the family can apply.: 1
 - Montana students who are training to fix airplanes can apply.: 1
 - Montana students who are women can apply.: 1
 - Montana students who do speech and debate can apply.: 1
@@ -147,29 +146,30 @@ Awards tagged: 478.
 - Only Flathead County students who are in the skilled trades and are connected to a Christian church can apply.: 1
 - Only Flathead County students who are planning to teach can apply.: 1
 - Only Flathead County students who are studying agriculture or nature can apply.: 1
-- Only Flathead County students who are studying art or music can apply.: 1
 - Only Flathead County students who have a union family tie can apply.: 1
 - Only Montana State University students can apply.: 1
 - Only Montana State University students who are FFA members can apply.: 1
 - Only Montana State University students who are studying agriculture or nature can apply.: 1
-- Only Montana Tech students who are studying healthcare can apply.: 1
+- Only Montana Tech students who are studying health care can apply.: 1
 - Only New York students can apply.: 1
 - Only Ohio students who are training to be pilots can apply.: 1
 - Only students at Chattanooga State Community College who are in the skilled trades can apply.: 1
 - Only students at Colorado State University in Fort Collins who would be the first in their family to go to college can apply.: 1
-- Only students at the Southeast Lineman Training Center in Georgia who are in the skilled trades can apply.: 1
+- Only students at the Southeast Lineman Training Center in Georgia who are in the skilled trades and are studying energy or utilities can apply.: 1
 - Only students from a few Montana counties can apply.: 1
 - Only students from a few Montana counties who are in the skilled trades and are women can apply.: 1
 - Only students from a few Montana counties who are in the skilled trades can apply.: 1
 - Only students from Flathead County high schools can apply.: 1
-- Only students from Flathead County high schools who are studying healthcare can apply.: 1
+- Only students from Flathead County high schools who are studying health care can apply.: 1
 - Only students in Bozeman who are women and need help paying for college can apply.: 1
-- Only students in the Flathead Electric service area who live in the sponsor service area can apply.: 1
+- Only students in the Flathead Electric service area who are in the skilled trades, are studying energy or utilities, and live in the sponsor service area can apply.: 1
 - Only students in western Montana can apply.: 1
 - Only Texas students can apply.: 1
 - Only Whitefish High School students who are in a two-year program can apply.: 1
 - Only Whitefish High School students who are planning to teach and are women can apply.: 1
 - Only Whitefish High School students who are planning to teach can apply.: 1
+- Only Whitefish High School students who are studying agriculture or nature can apply.: 1
+- Only Whitefish High School students who are studying art or music can apply.: 1
 - Only Whitefish High School students who have faced a hard time can apply.: 1
 - Only Whitefish High School students who need help paying for college can apply.: 1
 - Students across the United States who are AEA members and are training to fix airplanes can apply.: 1
@@ -179,12 +179,13 @@ Awards tagged: 478.
 - Students across the United States who are connected to a Presbyterian church and need help paying for college can apply.: 1
 - Students across the United States who are DECA members can apply.: 1
 - Students across the United States who are Eagle Scouts can apply.: 1
-- Students across the United States who are FFA members and are in the skilled trades can apply.: 1
+- Students across the United States who are FFA members and are studying agriculture or nature can apply.: 1
+- Students across the United States who are FFA members, are in the skilled trades, and are studying agriculture or nature can apply.: 1
 - Students across the United States who are FFA members, are NTHS members, and are studying agriculture or nature can apply.: 1
 - Students across the United States who are in the skilled trades and are in a two-year program can apply.: 1
 - Students across the United States who are in the skilled trades and need help paying for college can apply.: 1
 - Students across the United States who are in the skilled trades, are studying business, and have a mental health need can apply.: 1
-- Students across the United States who are in the skilled trades, have a lineman in the family, and need help paying for college can apply.: 1
+- Students across the United States who are in the skilled trades, are studying energy or utilities, have a lineman in the family, and need help paying for college can apply.: 1
 - Students across the United States who are LGBTQ+ and would be the first in their family to go to college can apply.: 1
 - Students across the United States who are LGBTQ+ can apply.: 1
 - Students across the United States who are LPA members and are studying aviation management can apply.: 1
@@ -198,37 +199,48 @@ Awards tagged: 478.
 - Students across the United States who are NTHS members and are HOSA members can apply.: 1
 - Students across the United States who are NTHS members and are SkillsUSA members can apply.: 1
 - Students across the United States who are NTHS members and are studying business can apply.: 1
-- Students across the United States who are NTHS members and are TSA members can apply.: 1
-- Students across the United States who are NTHS members, are DECA members, and are studying business can apply.: 1
+- Students across the United States who are NTHS members and are studying law can apply.: 1
+- Students across the United States who are NTHS members, are DECA members, are studying business, and are studying hospitality can apply.: 1
 - Students across the United States who are NTHS members, are FBLA members, and are studying business can apply.: 1
 - Students across the United States who are NTHS members, are in the skilled trades, and are studying transportation can apply.: 1
-- Students across the United States who are NTHS members, are studying law, and are planning to serve the public can apply.: 1
+- Students across the United States who are NTHS members, are TSA members, and are studying engineering can apply.: 1
 - Students across the United States who are planning to teach and play a sport can apply.: 1
 - Students across the United States who are studying agriculture or nature and are Native American can apply.: 1
+- Students across the United States who are studying agriculture or nature can apply.: 1
 - Students across the United States who are studying art or music and have a mental health need can apply.: 1
 - Students across the United States who are studying aviation management and are studying business can apply.: 1
 - Students across the United States who are studying aviation management can apply.: 1
 - Students across the United States who are studying business and work for the sponsor or have a parent who does can apply.: 1
-- Students across the United States who are studying healthcare can apply.: 1
+- Students across the United States who are studying computers can apply.: 1
+- Students across the United States who are studying engineering and are women can apply.: 1
+- Students across the United States who are studying engineering and have a military family tie can apply.: 1
+- Students across the United States who are studying engineering, are nonbinary, and are women can apply.: 1
+- Students across the United States who are studying engineering, are studying art or music, and are women can apply.: 1
+- Students across the United States who are studying engineering, play track, and need help paying for college can apply.: 1
+- Students across the United States who are studying health care can apply.: 1
+- Students across the United States who are studying hospitality can apply.: 1
 - Students across the United States who are studying law can apply.: 1
-- Students across the United States who are studying STEM and are women can apply.: 1
-- Students across the United States who are studying STEM and have a military family tie can apply.: 1
-- Students across the United States who are studying STEM, are nonbinary, and are women can apply.: 1
-- Students across the United States who are studying STEM, play track, and need help paying for college can apply.: 1
-- Students across the United States who are studying transportation can apply.: 1
+- Students across the United States who are training to be pilots and are training to fix airplanes can apply.: 1
 - Students across the United States who are training to be pilots and are women can apply.: 1
 - Students across the United States who are training to be pilots and work for the sponsor can apply.: 1
-- Students across the United States who are training to fix airplanes and are studying STEM can apply.: 1
+- Students across the United States who are training to fix airplanes and are studying engineering can apply.: 1
 - Students across the United States who are training to fix airplanes and are training to be pilots can apply.: 1
+- Students across the United States who are training to fix airplanes, are studying aviation management, are studying engineering, and are studying business can apply.: 1
 - Students across the United States who are twins can apply.: 1
-- Students across the United States who are WAI members and are women can apply.: 1
-- Students across the United States who are WAI members, are studying STEM, and are training to be pilots can apply.: 1
-- Students across the United States who are WAI members, are studying STEM, and need help paying for college can apply.: 1
+- Students across the United States who are WAI members, are studying aviation management, and are women can apply.: 1
+- Students across the United States who are WAI members, are studying aviation management, are studying business, and are women can apply.: 1
+- Students across the United States who are WAI members, are studying engineering, and are studying transportation can apply.: 1
+- Students across the United States who are WAI members, are studying engineering, and are training to be pilots can apply.: 1
+- Students across the United States who are WAI members, are studying engineering, and need help paying for college can apply.: 1
 - Students across the United States who are WAI members, are training to be pilots, are studying agriculture or nature, and are women can apply.: 1
+- Students across the United States who are WAI members, are training to be pilots, are training to fix airplanes, are studying aviation management, and meet other rules on the award can apply.: 1
 - Students across the United States who are WAI members, are training to be pilots, are women, and need help paying for college can apply.: 1
-- Students across the United States who are WAI members, are training to fix airplanes, and are studying STEM can apply.: 1
+- Students across the United States who are WAI members, are training to fix airplanes, and are studying engineering can apply.: 1
 - Students across the United States who are WAI members, are training to fly drones, and are women can apply.: 1
 - Students across the United States who are women and need help paying for college can apply.: 1
+- Students across the United States who are women can apply.: 1
+- Students across the United States who do drama or theatre can apply.: 1
+- Students across the United States who do drama or theatre, are planning to teach, and are studying art or music can apply.: 1
 - Students across the United States who do speech and debate can apply.: 1
 - Students across the United States who have a credit union family tie can apply.: 1
 - Students across the United States who have a family tie to a lodge can apply.: 1
@@ -246,7 +258,7 @@ Awards tagged: 478.
 - Students across the United States who were adopted or were in foster care and have faced a hard time can apply.: 1
 - Students across the United States who were adopted or were in foster care can apply.: 1
 - Students across the United States who work for the sponsor or have a parent who does, were adopted, and need help paying for college can apply.: 1
-- Students across the United States who work on the yearbook can apply.: 1
+- Students across the United States who work on the yearbook and are studying communications can apply.: 1
 - Students across the United States who would be the first in their family to go to college can apply.: 1
 - Students in Montana and nearby states can apply.: 1
 - Students in Montana and nearby states who are FFA members can apply.: 1
@@ -257,8 +269,10 @@ Awards tagged: 478.
 - Students in the United States and Canada who are women can apply.: 1
 - The page does not say the place. It is for students who are in the skilled trades and have a military family tie.: 1
 - The page does not say the place. It is for students who are in the skilled trades.: 1
+- The page does not say the place. It is for students who are planning to teach.: 1
 - The page does not say the place. It is for students who are studying agriculture or nature.: 1
-- The page does not say the place. It is for students who are studying business, are studying STEM, and are women.: 1
+- The page does not say the place. It is for students who are studying art or music.: 1
+- The page does not say the place. It is for students who are studying business, are studying engineering, and are women.: 1
 - The page does not say the place. It is for students who are WAI members.: 1
 - The page does not say the place. It is for students who do drama or theatre and are studying art or music.: 1
 - The page does not say the place. It is for students who have a military family tie.: 1
@@ -337,21 +351,24 @@ Awards tagged: 478.
 
 ### plans
 
-- null: 298
-- pilot training: 61
-- aviation maintenance: 35
-- skilled trades: 28
-- STEM: 19
-- business: 13
-- agriculture: 10
-- teaching: 7
-- aviation management: 6
-- arts: 5
-- healthcare: 5
-- transportation: 4
+- null: 275
+- pilot training: 63
+- aviation maintenance: 36
+- trades: 31
+- engineering: 22
+- business: 15
+- agriculture: 14
+- arts: 10
+- education: 9
+- transportation: 9
+- aviation management: 8
+- health: 5
+- energy: 3
+- law: 3
 - two-year college: 3
-- law: 2
-- public service: 2
+- hospitality: 2
+- communications: 1
+- computers: 1
 - drone training: 1
 
 ### health
@@ -758,17 +775,17 @@ These awards stay in the catalog. Each line is a question the page did not settl
 - LGBTQIA+: 3
 - Female: 44
 - Non-Binary: 2
-- Aviation - Pilot Training: 62
-- Aviation - Maintenance: 35
-- Aviation - Management: 6
-- STEM: 19
+- Aviation - Pilot Training: 64
+- Aviation - Maintenance: 36
+- Aviation - Management: 8
+- STEM: 22
 - Healthcare & Nursing: 5
-- Skilled Trades & Construction: 29
-- Business & Finance: 13
+- Skilled Trades & Construction: 32
+- Business & Finance: 15
 - Public Service & Social Impact: 2
-- Law & Legal Studies: 2
-- Arts & Humanities: 5
-- Agriculture & Conservation: 10
+- Law & Legal Studies: 3
+- Arts & Humanities: 10
+- Agriculture & Conservation: 14
 - Student Athlete / Sports Background: 11
 - Military or Veteran Affiliation: 14
 - First Responder Affiliation: 5
@@ -788,7 +805,7 @@ These awards stay in the catalog. Each line is a question the page did not settl
 - HOSA: 1
 - SkillsUSA: 1
 - Technology Student Association (TSA): 1
-- Education / Teaching: 7
+- Education / Teaching: 9
 - Financial need: 27
 
 ## Step 3 links the text does not support
@@ -797,13 +814,10 @@ These old links stay in the step 3 files. They were not copied onto the award be
 
 - ADHD (adhd): 1
   - Fred J. Epstein Youth Achievement Award
-- Agriculture & Conservation (agriculture_conservation): 3
-  - MABA-MGEA Scholarship
+- Agriculture & Conservation (agriculture_conservation): 1
   - mikeroweWORKS Work Ethic Scholarship
-  - Whitefish Lake Institute Ripple Effect Scholarship
-- Arts & Humanities (arts_humanities): 5
+- Arts & Humanities (arts_humanities): 4
   - Adams/Marcellin International Interest Scholarship
-  - All-American Pest Control STEAM Trailblazer Scholarship
   - Duck Brand "Stuck at Prom" Scholarship Contest
   - Nelson Scholarship
   - STEAM Generator Scholarship
@@ -814,34 +828,28 @@ These old links stay in the step 3 files. They were not copied onto the award be
   - Jerry Barnes ($500)
   - Student Referee Scholarship
   - Ted Lund Scholarship
-- Aviation - Maintenance (aviation_maintenance): 9
+- Aviation - Maintenance (aviation_maintenance): 8
   - DEWALT Trades Scholarship
   - Edward W. Stimpson Aviation Excellence Award
-  - Elisha Hall Memorial Scholarship
   - Janet Clark Memorial Scholarship
   - Level Up Aviation General Scholarship
   - National Aviation Explorer Scholarship
   - Republic Airways Airline Maintenance Technician Scholarship (PAPA)
   - THE CARLSBAD JET CENTER AND SONOMA JET CENTER GENERAL AVIATION PROFESSIONAL SCHOLARSHIPS
   - THE EDWARD B. SHAFER FUTURE OF FLIGHT SCHOLARSHIP
-- Aviation - Management (aviation_management): 11
+- Aviation - Management (aviation_management): 9
   - Edward W. Stimpson Aviation Excellence Award
-  - Elisha Hall Memorial Scholarship
   - Janet Clark Memorial Scholarship
   - Level Up Aviation General Scholarship
-  - LPA Aerospace Degree Advancement Scholarship
   - National Aviation Explorer Scholarship
   - Navigate Your Future Scholarship
   - THE CARLSBAD JET CENTER AND SONOMA JET CENTER GENERAL AVIATION PROFESSIONAL SCHOLARSHIPS
   - THE CORPORATE AIRCRAFT ASSOCIATION PREFERRED FBO EMPLOYEE SCHOLARSHIP
   - THE EDWARD B. SHAFER FUTURE OF FLIGHT SCHOLARSHIP
   - WAI Atlanta “Wheels Down South” Chapter Scholarship
-- Aviation - Pilot Training (aviation_pilot): 33
+- Aviation - Pilot Training (aviation_pilot): 30
   - AVTRIP Scholarship
   - Edward W. Stimpson Aviation Excellence Award
-  - Elisha Hall Memorial Scholarship
-  - ERRAL LEA AND GLENN PLYMATE MEMORIAL FLIGHT TRAINING SCHOLARSHIP
-  - Hurst Foundation Flight Training Scholarship
   - LIFT Academy Pilot Scholarship
   - LPA Professional Flight Degree Scholarship
   - Mark R. Baker Primary FT Scholarship
@@ -872,11 +880,10 @@ These old links stay in the step 3 files. They were not copied onto the award be
   - WASP Elaine D. Harmon Tailwheel Scholarship
 - Black or African American (black_african_american): 1
   - The Gates Scholarship
-- Business & Finance (business_finance): 6
+- Business & Finance (business_finance): 5
   - CardRates.com Financial Futures Scholarship
   - John & Joe Norrish Memorial Scholarship ($500-$1500)
   - Kitchen Cabinet Kings 2026 Scholarship
-  - LPA Aerospace Degree Advancement Scholarship
   - MABA-MGEA Scholarship
   - NTHS BPA Scholarship
 - Have significant caregiving responsibilities at home (caregiving): 1
@@ -947,8 +954,6 @@ These old links stay in the step 3 files. They were not copied onto the award be
   - Robert F. Lawson Fund for Careers that Care
 - Hispanic or Latino/a (hispanic_latino): 1
   - The Gates Scholarship
-- Law & Legal Studies (law): 1
-  - Montana Sheriffs & Peace Officers Association (2 - $1500)
 - Hold a leadership position (Captain, President, Manager) (leadership): 8
   - Coca-Cola Scholars Program
   - Elks Most Valuable Student Scholarship
@@ -1007,8 +1012,7 @@ These old links stay in the step 3 files. They were not copied onto the award be
   - Whitefish Bulldog Booster Club Scholarships
   - Whitefish Classified Employees Association Higher Education Scholarship
   - Whitefish Lions Scholarship
-- STEM (stem): 21
-  - All-American Pest Control STEAM Trailblazer Scholarship
+- STEM (stem): 18
   - CardRates.com Financial Futures Scholarship
   - DEWALT Trades Scholarship
   - Edward W. Stimpson Aviation Excellence Award
@@ -1018,21 +1022,17 @@ These old links stay in the step 3 files. They were not copied onto the award be
   - John & Joe Norrish Memorial Scholarship ($500-$1500)
   - John C. and Blanche Lee Lindsay Memorial Scholarship
   - Level Up Aviation General Scholarship
-  - LPA Aerospace Degree Advancement Scholarship
   - mikeroweWORKS Work Ethic Scholarship
   - Montana Association of Conservation District's  2024 Natural Resources Scholarship (2 - $1,000)
   - National Aviation Explorer Scholarship
-  - NTHS TSA Scholarship
   - Occupational Safety and Health / Industrial Hygiene Scholarship
   - SOKN Scholarship
   - THE CARLSBAD JET CENTER AND SONOMA JET CENTER GENERAL AVIATION PROFESSIONAL SCHOLARSHIPS
   - THE EDWARD B. SHAFER FUTURE OF FLIGHT SCHOLARSHIP
   - The Neurodiversity Scholarship
   - Whitefish Lake Institute Ripple Effect Scholarship
-- Skilled Trades & Construction (trades): 4
-  - Montana Tech’s Pre-Apprentice Line Program.
+- Skilled Trades & Construction (trades): 2
   - NTHS SkillsUSA Scholarship
-  - Reach for the Future Scholarship for Vocational Degree Programs
   - Soroptimist Certificate Scholarships
 - Have a part-time job or work experience (work_experience): 5
   - Flathead County Democratic Women's Club ($1,000)
