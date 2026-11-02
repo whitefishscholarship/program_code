@@ -525,6 +525,12 @@ const glassCss = `
   max-width: 16rem;
 }
 
+#student-gpa {
+  background: var(--mint);
+  border-color: var(--glass-edge);
+  color: var(--forest-ink);
+}
+
 .field-inline {
   width: auto;
   display: inline-block;
@@ -820,6 +826,11 @@ const glassCss = `
     background-color: #173f32;
     color: #fff;
   }
+
+  #student-gpa {
+    background-color: rgba(255, 255, 255, 0.94);
+    color: var(--forest-ink);
+  }
 }
 
 @media (prefers-reduced-transparency: reduce) {
@@ -854,6 +865,11 @@ const glassCss = `
   .btn-primary {
     background-color: #173f32;
     color: #fff;
+  }
+
+  #student-gpa {
+    background-color: rgba(255, 255, 255, 0.94);
+    color: var(--forest-ink);
   }
 }
 
