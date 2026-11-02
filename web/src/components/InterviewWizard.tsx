@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import DifferentiationStep from '@/components/steps/DifferentiationStep';
+import { careerChoiceCount, careerChoiceSelected, TWO_YEAR_PLAN } from '@/lib/careerClusters';
 import {
   differentiationGroups,
   emptyDifferentiation,
@@ -123,6 +124,12 @@ export default function InterviewWizard({ awards, initialAnswers, onComplete, on
             {TARGET_SCHOOL_TYPES.map(([value, label]) => (
               <LightChip key={value} id={`student-target-school-types-${value}`} label={label} checked={targetSchoolTypes.includes(value)} onChange={() => toggleValue(value, targetSchoolTypes, setTargetSchoolTypes)} />
             ))}
+          </ChipRow>
+        </Section>
+
+        <Section title="Two-year programs" hint="Optional. This points out scholarships for a two-year program. It does not hide any scholarship, and it is not a career path.">
+          <ChipRow>
+            <LightChip id="plan-two-year-college" label={`Two-year program (${careerChoiceCount(awards, TWO_YEAR_PLAN)})`} checked={careerChoiceSelected(profile.plans, TWO_YEAR_PLAN)} onChange={() => { setProfile((current) => toggleDifferentiation(current, { field: 'plans', value: TWO_YEAR_PLAN, label: 'Two-year program' })); setError(''); }} />
           </ChipRow>
         </Section>
 

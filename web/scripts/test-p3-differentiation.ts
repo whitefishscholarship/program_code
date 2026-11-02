@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import { awardMatchesCareerChoice } from '../src/lib/careerClusters';
 import {
   AVIATION_GROUP_CLUBS,
   AVIATION_GROUP_VALUE,
@@ -248,6 +249,11 @@ for (const group of groups) {
     } else if (field === 'familyTies' && (chip.value === 'elks' || chip.value === 'rainbow' || chip.value.startsWith('employer:'))) {
       const picked = toggleDifferentiation(emptyDifferentiation(), chip);
       assert(catalog.awards.some((item) => differentiationHits(item, picked).includes(chip.label)), chip.value);
+    } else if (field === 'plans') {
+      assert.equal(typeof chip.count, 'number', chip.value);
+      if (chip.value === 'any') assert((chip.count ?? 0) > 0);
+      else if ((chip.count ?? 0) > 0) assert(catalog.awards.some((item) => awardMatchesCareerChoice(item.plans ?? [], chip.value)), chip.value);
+      else assert.equal(catalog.awards.some((item) => awardMatchesCareerChoice(item.plans ?? [], chip.value)), false, chip.value);
     } else {
       assert(catalog.awards.some((item) => (item[field] ?? []).includes(chip.value)), chip.value);
     }
@@ -318,8 +324,10 @@ assert(wizard.includes('educationalStatus: null'));
 assert(!wizard.includes('student-college-accepted'));
 assert(!wizard.includes('student-gap-year'));
 assert(!wizard.includes('student-educational-status'));
-const taught = toggleDifferentiation(emptyDifferentiation(), { field: 'plans', value: 'teaching', label: 'Teaching' });
+const taught = toggleDifferentiation(emptyDifferentiation(), { field: 'plans', value: 'education', label: 'Education and teaching' });
 assert.deepEqual(legacyFromProfile(taught).discoveryInterests, ['education_teaching']);
+const taughtAlias = { ...emptyDifferentiation(), plans: ['teaching'] };
+assert.deepEqual(legacyFromProfile(taughtAlias).discoveryInterests, ['education_teaching']);
 const adhd = toggleDifferentiation(emptyDifferentiation(), { field: 'health', value: 'ADHD', label: 'ADHD' });
 assert.deepEqual(legacyFromProfile(adhd).selectedCriteria, ['adhd']);
 const club = toggleDifferentiation(emptyDifferentiation(), { field: 'clubs', value: 'NTHS', label: 'NTHS' });
@@ -329,9 +337,12 @@ assert.deepEqual(legacyFromProfile(athlete).selectedCriteria, ['athletics_sports
 const golf = toggleDifferentiation(emptyDifferentiation(), { field: 'sports', value: 'golf', label: 'Golf' });
 assert.deepEqual(legacyFromProfile(golf).selectedCriteria, []);
 const restored = withLegacySelections(emptyDifferentiation(), { criteria: ['stem', 'chronic_health'], discovery: ['education_teaching'], organizations: ['ffa'] });
-assert.deepEqual(restored.plans, ['STEM', 'teaching']);
+assert.deepEqual(restored.plans, ['engineering', 'education']);
 assert.deepEqual(restored.clubs, ['FFA']);
 assert.deepEqual(legacyFromProfile(restored).selectedCriteria, ['stem']);
+const restoredAlias = legacyFromProfile({ ...emptyDifferentiation(), plans: ['STEM', 'teaching'] });
+assert.deepEqual(restoredAlias.selectedCriteria, ['stem']);
+assert.deepEqual(restoredAlias.discoveryInterests, ['education_teaching']);
 assert(list.includes('Why this pool is small'));
 assert(list.includes('Add this deadline to my calendar'));
 assert(list.includes('Add deadlines to my calendar'));
