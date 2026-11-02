@@ -18,18 +18,18 @@
   },
   "catalog": {
     "schemaVersion": "1.0.0",
-    "catalogRevision": "cae04afef1f7a548cd5fcbc51b0e39cf6bb2c2de32b0afba3e4a514cd29691d8",
+    "catalogRevision": "5aef417639ad4e30ac48c28fbd6b727f5ca89b49ec29a4d9e0b1d30e8180ecc2",
     "counts": {
       "sources": 526,
       "portals": 21,
       "awards": 478,
       "applicationGroups": 4,
       "cycles": 478,
-      "activeCycles": 122,
-      "upcomingCycles": 169,
-      "closedCycles": 101,
+      "activeCycles": 140,
+      "upcomingCycles": 168,
+      "closedCycles": 103,
       "unavailableCycles": 0,
-      "unknownCycles": 86,
+      "unknownCycles": 67,
       "minimumObservedRecipientSlots": 71
     },
     "awards": [
@@ -6119,7 +6119,7 @@
       {
         "publicId": "award-bbe935853482",
         "name": "EAA Ray Aviation Scholarship",
-        "summary": "EAA Ray Aviation Scholarship provides up to $12,000 toward flight training for youths nominated by an EAA chapter. The 2027 chapter application opens November 1, 2026. Nominated scholars for a full scholarship apply from February through August 31. The page does not state a GPA.",
+        "summary": "EAA Ray Aviation Scholarship provides up to $12,000 toward flight training for youths nominated by an EAA chapter. The 2027 chapter application is open now and closes January 31, 2027. Nominated scholars for a full scholarship apply from February through August 31. The page does not state a GPA.",
         "amount": {
           "label": "Up to $12,000",
           "minimum": null,
@@ -6134,12 +6134,12 @@
           "focus": "Flight training"
         },
         "cycle": {
-          "status": "upcoming",
-          "label": "Opens November 1, 2026",
+          "status": "active",
+          "label": "Open now",
           "year": 2027,
           "opens": "November 1, 2026",
-          "closes": null,
-          "recurrence": "unknown"
+          "closes": "January 31, 2027",
+          "recurrence": "annual"
         },
         "application": {
           "mode": "direct_per_award",
@@ -6153,10 +6153,10 @@
         ],
         "verification": {
           "status": "verified",
-          "lastChecked": "2026-10-28",
+          "lastChecked": "2026-11-02",
           "sourceUrl": "https://www.eaa.org/eaa/eaa-chapters/eaa-chapter-resources/chapter-programs-and-activities/ray-aviation-scholarship-fund",
-          "openStatus": "opens_on",
-          "deadline": null
+          "openStatus": "open_now",
+          "deadline": "January 31, 2027"
         },
         "residencyScope": "national",
         "poolLevel": 5,
@@ -23720,7 +23720,7 @@
       {
         "publicId": "award-e30f226ed6fc",
         "name": "IvyPanda.com Video Scholarship",
-        "summary": "Reach Higher Montana lists a $1,000 grand prize and a $500 runner-up for current high school, college, or university students from any country who submit a video.",
+        "summary": "IvyPanda offers a $1,000 grand prize and a $500 runner-up for a video from a current high school, college, or university student from any country. Submissions for this round closed October 31, 2026. The page says next year's dates will be posted after the winners are announced.",
         "amount": {
           "label": "$1,000 grand prize and $500 runner-up",
           "minimum": 500,
@@ -23735,12 +23735,12 @@
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
-          "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
+          "status": "closed",
+          "label": "Closed. Next date not posted",
+          "year": 2026,
+          "opens": "July 1, 2026",
+          "closes": "October 31, 2026",
+          "recurrence": "annual"
         },
         "application": {
           "mode": "direct_per_award",
@@ -23771,12 +23771,19 @@
         "needBased": null,
         "essayRequired": null,
         "renewable": null,
-        "tagConfirmedBy": "derived"
+        "tagConfirmedBy": "derived",
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-11-02",
+          "sourceUrl": "https://ivypanda.com/scholarship-video",
+          "openStatus": "closed_next_not_posted",
+          "deadline": "October 31, 2026"
+        }
       },
       {
         "publicId": "award-ba4602ec402b",
         "name": "The Zombie Apocalypse Scholarship",
-        "summary": "Reach Higher Montana lists a $2,000 scholarship open to anyone 14 or older.",
+        "summary": "Unigo offers a $2,000 Zombie Apocalypse Scholarship for anyone 14 or older who lives in the United States and will enroll in a college, university, or trade school. The application window closed October 31, 2026. The page does not post the next open date. The page asks for a written essay of 250 words or less.",
         "amount": {
           "label": "$2,000",
           "minimum": 2000,
@@ -23785,17 +23792,17 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "Anyone 14 or older",
+          "audience": "Anyone 14 or older who lives in the United States",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "closed",
+          "label": "Closed. Next date not posted",
+          "year": 2026,
           "opens": null,
-          "closes": null,
+          "closes": "October 31, 2026",
           "recurrence": "unknown"
         },
         "application": {
@@ -23825,9 +23832,16 @@
         "gender": null,
         "firstGen": null,
         "needBased": null,
-        "essayRequired": null,
+        "essayRequired": true,
         "renewable": null,
-        "tagConfirmedBy": "derived"
+        "tagConfirmedBy": "derived",
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-11-02",
+          "sourceUrl": "https://www.unigo.com/scholarships/our-scholarships/zombie-apocalypse-scholarship",
+          "openStatus": "closed_next_not_posted",
+          "deadline": "October 31, 2026"
+        }
       },
       {
         "publicId": "award-dd0c07c3bf06",
@@ -23950,7 +23964,7 @@
       {
         "publicId": "award-1602b29c7b0b",
         "name": "Montana Department of Transportation Aviation Scholarships",
-        "summary": "Reach Higher Montana lists about fourteen Montana Department of Transportation aviation scholarships, from $1,000 to $5,000, for Montanans studying for an aviation profession such as flight instruction or aircraft maintenance.",
+        "summary": "The Montana Department of Transportation lists about fourteen aviation scholarships, from $1,000 to $5,000, for Montana students studying for an aviation profession such as flight instruction or aircraft maintenance. The 2027 application period is open from October 1 to November 13, 2026.",
         "amount": {
           "label": "$1,000 to $5,000",
           "minimum": 1000,
@@ -23965,11 +23979,11 @@
           "focus": "Aviation"
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
-          "opens": null,
-          "closes": null,
+          "status": "active",
+          "label": "Open now",
+          "year": 2027,
+          "opens": "October 1, 2026",
+          "closes": "November 13, 2026",
           "recurrence": "unknown"
         },
         "application": {
@@ -24003,12 +24017,19 @@
         "needBased": null,
         "essayRequired": null,
         "renewable": null,
-        "tagConfirmedBy": "derived"
+        "tagConfirmedBy": "derived",
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-11-02",
+          "sourceUrl": "https://www.mdt.mt.gov/aviation/scholarships.aspx",
+          "openStatus": "open_now",
+          "deadline": "November 13, 2026"
+        }
       },
       {
         "publicId": "award-4181bcd4ff7d",
         "name": "Against All Odds Scholarship",
-        "summary": "Reach Higher Montana lists a $2,500 scholarship for undergraduate or graduate students from underrepresented demographics who are enrolled in or accepted at an accredited U.S. college or university.",
+        "summary": "HMW Law offers a $2,500 Against All Odds Scholarship for an undergraduate or graduate student from an underrepresented demographic. The student must be enrolled in or accepted at an accredited college or university in the United States, be 18 when they enroll, and live in the United States. Applications are open now. The deadline is November 15, 2026. The page asks for a two to three minute video.",
         "amount": {
           "label": "$2,500",
           "minimum": 2500,
@@ -24017,17 +24038,17 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "Undergraduate or graduate student from an underrepresented demographic",
+          "audience": "Undergraduate or graduate student from an underrepresented demographic who lives in the United States",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "active",
+          "label": "Open now",
+          "year": 2026,
           "opens": null,
-          "closes": null,
+          "closes": "November 15, 2026",
           "recurrence": "unknown"
         },
         "application": {
@@ -24059,7 +24080,14 @@
         "needBased": null,
         "essayRequired": null,
         "renewable": null,
-        "tagConfirmedBy": "derived"
+        "tagConfirmedBy": "derived",
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-11-02",
+          "sourceUrl": "https://teamhmwwins.com/scholarship/",
+          "openStatus": "open_now",
+          "deadline": "November 15, 2026"
+        }
       },
       {
         "publicId": "award-faa7fd7ea934",
@@ -24241,7 +24269,7 @@
       {
         "publicId": "award-5fab0140f42a",
         "name": "Providing Support to Young Entrepreneurs Scholarship",
-        "summary": "Reach Higher Montana lists a $2,500 scholarship for an undergraduate or graduate student enrolled at an accredited U.S. college or university who describes a business they want to start.",
+        "summary": "Reach Higher Montana lists a $2,500 scholarship for an undergraduate or graduate student enrolled at an accredited U.S. college or university who describes a business they want to start. Applications are open now. The deadline is November 30, 2026.",
         "amount": {
           "label": "$2,500",
           "minimum": 2500,
@@ -24256,11 +24284,11 @@
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "active",
+          "label": "Open now",
+          "year": 2026,
           "opens": null,
-          "closes": null,
+          "closes": "November 30, 2026",
           "recurrence": "unknown"
         },
         "application": {
@@ -24294,12 +24322,19 @@
         "needBased": null,
         "essayRequired": null,
         "renewable": null,
-        "tagConfirmedBy": "derived"
+        "tagConfirmedBy": "derived",
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-11-02",
+          "sourceUrl": "https://calldannext.com/scholarship/",
+          "openStatus": "open_now",
+          "deadline": "November 30, 2026"
+        }
       },
       {
         "publicId": "award-8a34a5f3a4e6",
         "name": "Red Cross Collegiate Leadership Program Scholarship",
-        "summary": "Reach Higher Montana lists a $3,000 Red Cross Collegiate Leadership Program scholarship for a college student. It states program dates of June 2-13, 2026. The listing deadline is December 11 and does not include a year.",
+        "summary": "The American Red Cross Collegiate Leadership Program offers a $3,000 scholarship for a college student. Applications for the Class of 2027 are open now and are due December 11, 2026. The training in Washington, D.C. is June 7-18, 2027.",
         "amount": {
           "label": "$3,000",
           "minimum": 3000,
@@ -24314,11 +24349,11 @@
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "active",
+          "label": "Open now",
+          "year": 2027,
           "opens": null,
-          "closes": null,
+          "closes": "December 11, 2026",
           "recurrence": "unknown"
         },
         "application": {
@@ -24350,32 +24385,39 @@
         "needBased": null,
         "essayRequired": null,
         "renewable": null,
-        "tagConfirmedBy": "derived"
+        "tagConfirmedBy": "derived",
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-11-02",
+          "sourceUrl": "https://www.redcrossblood.org/rccl.html",
+          "openStatus": "open_now",
+          "deadline": "December 11, 2026"
+        }
       },
       {
         "publicId": "award-5602f1001d80",
         "name": "Science Ambassador Scholarship",
-        "summary": "Reach Higher Montana lists the Science Ambassador Scholarship for a woman who is a high school senior or undergraduate with an interest in STEM. The listing does not state an award amount.",
+        "summary": "Cards Against Humanity offers five Science Ambassador Scholarships of $20,000 each for the 2027 academic year. Women and non-binary students who are high school seniors or undergraduates can apply if they will attend college in the United States and are interested in STEM. The video is due December 14, 2026, at 11:59 p.m. Central Time. The page says U.S. citizenship is not required.",
         "amount": {
-          "label": "Amount not stated",
-          "minimum": null,
-          "maximum": null,
-          "currency": null,
-          "state": "unknown"
+          "label": "$20,000",
+          "minimum": 20000,
+          "maximum": 20000,
+          "currency": "USD",
+          "state": "known"
         },
         "eligibility": {
-          "audience": "Woman who is a high school senior or undergraduate student interested in STEM",
+          "audience": "Woman or non-binary high school senior or undergraduate student interested in STEM",
           "minimumGpa": null,
           "schoolTypes": [],
           "focus": "STEM"
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "active",
+          "label": "Open now",
+          "year": 2027,
           "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
+          "closes": "December 14, 2026, 11:59 p.m. Central Time",
+          "recurrence": "annual"
         },
         "application": {
           "mode": "direct_per_award",
@@ -24411,12 +24453,19 @@
         "needBased": null,
         "essayRequired": true,
         "renewable": null,
-        "tagConfirmedBy": "derived"
+        "tagConfirmedBy": "derived",
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-11-02",
+          "sourceUrl": "https://www.scienceambassadorscholarship.org/",
+          "openStatus": "open_now",
+          "deadline": "December 14, 2026, 11:59 p.m. Central Time"
+        }
       },
       {
         "publicId": "award-9d1c9d543817",
         "name": "Rebuilding the Road Ahead Scholarship",
-        "summary": "Reach Higher Montana lists a $2,500 scholarship for a high school senior or college student whose life was changed by a serious car accident, with a GPA of at least 3.0. The listing says it launched in 2025 and does not put a year on the December 15 deadline.",
+        "summary": "Chaikin Trial Group offers a $2,500 scholarship for a New York student whose life was changed by a serious car accident. High school seniors and undergraduate or graduate students can apply. Minimum GPA is 3.0. Applications are open now and the deadline is December 15, 2026. The page asks for a video.",
         "amount": {
           "label": "$2,500",
           "minimum": 2500,
@@ -24425,17 +24474,17 @@
           "state": "known"
         },
         "eligibility": {
-          "audience": "High school senior or undergraduate or graduate student affected by a serious car accident",
+          "audience": "New York high school senior or college student affected by a serious car accident",
           "minimumGpa": 3,
           "schoolTypes": [],
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "active",
+          "label": "Open now",
+          "year": 2026,
           "opens": null,
-          "closes": null,
+          "closes": "December 15, 2026",
           "recurrence": "unknown"
         },
         "application": {
@@ -24467,12 +24516,19 @@
         "needBased": null,
         "essayRequired": null,
         "renewable": null,
-        "tagConfirmedBy": "derived"
+        "tagConfirmedBy": "derived",
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-11-02",
+          "sourceUrl": "https://www.chaikintrialgroup.com/scholarship/",
+          "openStatus": "open_now",
+          "deadline": "December 15, 2026"
+        }
       },
       {
         "publicId": "award-88024508a56d",
         "name": "Brooklyn Injury Attorneys P.C. Scholarship",
-        "summary": "Reach Higher Montana lists a $500 scholarship for an undergraduate or graduate student enrolled at a U.S. college or university.",
+        "summary": "Reach Higher Montana lists a $500 scholarship for an undergraduate or graduate student enrolled at a U.S. college or university. The official page sets the deadline at December 31, 2026. The winner is announced on January 31, 2027. The page asks for an essay.",
         "amount": {
           "label": "$500",
           "minimum": 500,
@@ -24487,11 +24543,11 @@
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "active",
+          "label": "Open now",
+          "year": 2026,
           "opens": null,
-          "closes": null,
+          "closes": "December 31, 2026",
           "recurrence": "unknown"
         },
         "application": {
@@ -24521,14 +24577,21 @@
         "gender": null,
         "firstGen": null,
         "needBased": null,
-        "essayRequired": null,
+        "essayRequired": true,
         "renewable": null,
-        "tagConfirmedBy": "derived"
+        "tagConfirmedBy": "derived",
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-11-02",
+          "sourceUrl": "https://brooklyn-injury-attorneys.com/scholarship",
+          "openStatus": "open_now",
+          "deadline": "December 31, 2026"
+        }
       },
       {
         "publicId": "award-911f98582415",
         "name": "Philadelphia Medical Malpractice Lawyers, P.C. Scholarship",
-        "summary": "Reach Higher Montana lists a $1,000 scholarship for an undergraduate or graduate student enrolled at a U.S. college or university.",
+        "summary": "Reach Higher Montana lists a $1,000 scholarship for an undergraduate or graduate student enrolled at a U.S. college or university. The official page sets the deadline at December 31, 2026. The winner is announced on January 31, 2027. The page asks for an essay.",
         "amount": {
           "label": "$1,000",
           "minimum": 1000,
@@ -24543,12 +24606,12 @@
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "active",
+          "label": "Open now",
+          "year": 2026,
           "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
+          "closes": "December 31, 2026",
+          "recurrence": "annual"
         },
         "application": {
           "mode": "direct_per_award",
@@ -24577,14 +24640,21 @@
         "gender": null,
         "firstGen": null,
         "needBased": null,
-        "essayRequired": null,
+        "essayRequired": true,
         "renewable": null,
-        "tagConfirmedBy": "derived"
+        "tagConfirmedBy": "derived",
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-11-02",
+          "sourceUrl": "https://philadelphia-medical-malpractice-lawyers.com/scholarship/",
+          "openStatus": "open_now",
+          "deadline": "December 31, 2026"
+        }
       },
       {
         "publicId": "award-c0d9ad850982",
         "name": "PA Medical Malpractice Lawyers P.C. Essay Contest",
-        "summary": "Reach Higher Montana lists a $500 essay scholarship for a student enrolled at a U.S. college or university.",
+        "summary": "Reach Higher Montana lists a $500 essay scholarship for a student enrolled at a U.S. college or university. The official page sets the deadline at December 31, 2026. The winner is announced on January 31, 2027.",
         "amount": {
           "label": "$500",
           "minimum": 500,
@@ -24599,11 +24669,11 @@
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "active",
+          "label": "Open now",
+          "year": 2026,
           "opens": null,
-          "closes": null,
+          "closes": "December 31, 2026",
           "recurrence": "unknown"
         },
         "application": {
@@ -24635,12 +24705,19 @@
         "needBased": null,
         "essayRequired": true,
         "renewable": null,
-        "tagConfirmedBy": "derived"
+        "tagConfirmedBy": "derived",
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-11-02",
+          "sourceUrl": "https://malpractice-injury-lawyers.com/scholarship/",
+          "openStatus": "open_now",
+          "deadline": "December 31, 2026"
+        }
       },
       {
         "publicId": "award-b9368e845b0d",
         "name": "New Jersey Injury Lawyers P.C. Essay Competition",
-        "summary": "Reach Higher Montana lists a $500 scholarship for an undergraduate or postgraduate student enrolled at a U.S. college or university.",
+        "summary": "Reach Higher Montana lists a $500 scholarship for an undergraduate or postgraduate student enrolled at a U.S. college or university. The official page sets the deadline at December 31, 2026. The winner is announced on January 31, 2027.",
         "amount": {
           "label": "$500",
           "minimum": 500,
@@ -24655,11 +24732,11 @@
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "active",
+          "label": "Open now",
+          "year": 2026,
           "opens": null,
-          "closes": null,
+          "closes": "December 31, 2026",
           "recurrence": "unknown"
         },
         "application": {
@@ -24691,12 +24768,19 @@
         "needBased": null,
         "essayRequired": true,
         "renewable": null,
-        "tagConfirmedBy": "derived"
+        "tagConfirmedBy": "derived",
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-11-02",
+          "sourceUrl": "https://new-jersey-injury-lawyers.com/scholarship/",
+          "openStatus": "open_now",
+          "deadline": "December 31, 2026"
+        }
       },
       {
         "publicId": "award-92d445287bd8",
         "name": "Boland Injury Lawyers P.C. Essay Competition",
-        "summary": "Reach Higher Montana lists a $500 scholarship for an undergraduate or postgraduate student enrolled at a U.S. college or university.",
+        "summary": "Reach Higher Montana lists a $500 scholarship for an undergraduate or postgraduate student enrolled at a U.S. college or university. The official page sets the deadline at December 31, 2026. The winner is announced on January 31, 2027.",
         "amount": {
           "label": "$500",
           "minimum": 500,
@@ -24711,12 +24795,12 @@
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "active",
+          "label": "Open now",
+          "year": 2026,
           "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
+          "closes": "December 31, 2026",
+          "recurrence": "annual"
         },
         "application": {
           "mode": "direct_per_award",
@@ -24747,12 +24831,19 @@
         "needBased": null,
         "essayRequired": true,
         "renewable": null,
-        "tagConfirmedBy": "derived"
+        "tagConfirmedBy": "derived",
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-11-02",
+          "sourceUrl": "https://boland-injury-law.com/scholarship/",
+          "openStatus": "open_now",
+          "deadline": "December 31, 2026"
+        }
       },
       {
         "publicId": "award-6e7c3d4623cc",
         "name": "NYC Injury Attorneys P.C. Essay Competition",
-        "summary": "Reach Higher Montana lists a $500 scholarship for an undergraduate or postgraduate student enrolled in a U.S. undergraduate or graduate program.",
+        "summary": "Reach Higher Montana lists a $500 scholarship for an undergraduate or postgraduate student enrolled in a U.S. undergraduate or graduate program. The official page sets the deadline at December 31, 2026. The winner is announced on January 31, 2027.",
         "amount": {
           "label": "$500",
           "minimum": 500,
@@ -24767,11 +24858,11 @@
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "active",
+          "label": "Open now",
+          "year": 2026,
           "opens": null,
-          "closes": null,
+          "closes": "December 31, 2026",
           "recurrence": "unknown"
         },
         "application": {
@@ -24803,12 +24894,19 @@
         "needBased": null,
         "essayRequired": true,
         "renewable": null,
-        "tagConfirmedBy": "derived"
+        "tagConfirmedBy": "derived",
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-11-02",
+          "sourceUrl": "https://nyc-injury-attorneys.com/scholarship/",
+          "openStatus": "open_now",
+          "deadline": "December 31, 2026"
+        }
       },
       {
         "publicId": "award-abee1977b98d",
         "name": "Bronx Injury Lawyers P.C. Essay Competition",
-        "summary": "Reach Higher Montana lists a $500 scholarship for an undergraduate or graduate student enrolled at a U.S. college or university.",
+        "summary": "Reach Higher Montana lists a $500 scholarship for an undergraduate or graduate student enrolled at a U.S. college or university. The official page sets the deadline at December 31, 2026. The winner is announced on January 31, 2027.",
         "amount": {
           "label": "$500",
           "minimum": 500,
@@ -24823,12 +24921,12 @@
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "active",
+          "label": "Open now",
+          "year": 2026,
           "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
+          "closes": "December 31, 2026",
+          "recurrence": "annual"
         },
         "application": {
           "mode": "direct_per_award",
@@ -24859,12 +24957,19 @@
         "needBased": null,
         "essayRequired": true,
         "renewable": null,
-        "tagConfirmedBy": "derived"
+        "tagConfirmedBy": "derived",
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-11-02",
+          "sourceUrl": "https://bronx-injury-lawyers.com/scholarship/",
+          "openStatus": "open_now",
+          "deadline": "December 31, 2026"
+        }
       },
       {
         "publicId": "award-38dc1d210031",
         "name": "Lehigh Valley Medical Malpractice Scholarship",
-        "summary": "Reach Higher Montana lists a $500 scholarship for an undergraduate or graduate student enrolled at a U.S. college or university. The listing uses the provider URL as its title.",
+        "summary": "Reach Higher Montana lists a $500 scholarship for an undergraduate or graduate student enrolled at a U.S. college or university. The listing uses the provider URL as its title. The official page sets the deadline at December 31, 2026. The winner is announced on January 31, 2027. The page asks for an essay.",
         "amount": {
           "label": "$500",
           "minimum": 500,
@@ -24879,12 +24984,12 @@
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "active",
+          "label": "Open now",
+          "year": 2026,
           "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
+          "closes": "December 31, 2026",
+          "recurrence": "annual"
         },
         "application": {
           "mode": "direct_per_award",
@@ -24913,14 +25018,21 @@
         "gender": null,
         "firstGen": null,
         "needBased": null,
-        "essayRequired": null,
+        "essayRequired": true,
         "renewable": null,
-        "tagConfirmedBy": "derived"
+        "tagConfirmedBy": "derived",
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-11-02",
+          "sourceUrl": "https://lehigh-valley-medical-malpractice.com/scholarship/",
+          "openStatus": "open_now",
+          "deadline": "December 31, 2026"
+        }
       },
       {
         "publicId": "award-83e53748074c",
         "name": "Staten Island Accident Scholarship Essay Competition",
-        "summary": "Reach Higher Montana lists a $1,000 scholarship for an undergraduate or graduate student enrolled at a U.S. college or university.",
+        "summary": "Reach Higher Montana lists a $1,000 scholarship for an undergraduate or graduate student enrolled at a U.S. college or university. The official page sets the deadline at December 31, 2026. The winner is announced on January 31, 2027.",
         "amount": {
           "label": "$1,000",
           "minimum": 1000,
@@ -24935,12 +25047,12 @@
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "active",
+          "label": "Open now",
+          "year": 2026,
           "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
+          "closes": "December 31, 2026",
+          "recurrence": "annual"
         },
         "application": {
           "mode": "direct_per_award",
@@ -24971,7 +25083,14 @@
         "needBased": null,
         "essayRequired": true,
         "renewable": null,
-        "tagConfirmedBy": "derived"
+        "tagConfirmedBy": "derived",
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-11-02",
+          "sourceUrl": "https://staten-island-accident-lawyers.com/scholarship/",
+          "openStatus": "open_now",
+          "deadline": "December 31, 2026"
+        }
       },
       {
         "publicId": "award-ee322455ce13",
@@ -25092,7 +25211,7 @@
       {
         "publicId": "award-c3fce1fe8c46",
         "name": "Philadelphia Injury Lawyers P.C. Scholarship Essay Competition",
-        "summary": "Reach Higher Montana lists a $500 scholarship for a current U.S. undergraduate interested in law school, or a graduate or law student.",
+        "summary": "Reach Higher Montana lists a $500 scholarship for a current U.S. undergraduate interested in law school, or a graduate or law student. The official page sets the 2027 deadline at July 31, 2027. The winner is announced on August 31, 2027.",
         "amount": {
           "label": "$500",
           "minimum": 500,
@@ -25107,11 +25226,11 @@
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "active",
+          "label": "Open now",
+          "year": 2027,
           "opens": null,
-          "closes": null,
+          "closes": "July 31, 2027",
           "recurrence": "unknown"
         },
         "application": {
@@ -25145,12 +25264,19 @@
         "needBased": null,
         "essayRequired": true,
         "renewable": null,
-        "tagConfirmedBy": "derived"
+        "tagConfirmedBy": "derived",
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-11-02",
+          "sourceUrl": "https://philly-injury-law.com/scholarship.html",
+          "openStatus": "open_now",
+          "deadline": "July 31, 2027"
+        }
       },
       {
         "publicId": "award-0780f551327d",
         "name": "Pittsburgh Injury Lawyers P.C. Scholarship Essay Contest",
-        "summary": "Reach Higher Montana lists a $500 scholarship for a student enrolled in a U.S. undergraduate, graduate, or law program.",
+        "summary": "Reach Higher Montana lists a $500 scholarship for a student enrolled in a U.S. undergraduate, graduate, or law program. The official page sets the 2027 deadline at July 31, 2027. The winner is announced on August 31, 2027.",
         "amount": {
           "label": "$500",
           "minimum": 500,
@@ -25165,12 +25291,12 @@
           "focus": null
         },
         "cycle": {
-          "status": "unknown",
-          "label": "Availability not verified",
-          "year": null,
+          "status": "active",
+          "label": "Open now",
+          "year": 2027,
           "opens": null,
-          "closes": null,
-          "recurrence": "unknown"
+          "closes": "July 31, 2027",
+          "recurrence": "annual"
         },
         "application": {
           "mode": "direct_per_award",
@@ -25201,7 +25327,14 @@
         "needBased": null,
         "essayRequired": true,
         "renewable": null,
-        "tagConfirmedBy": "derived"
+        "tagConfirmedBy": "derived",
+        "verification": {
+          "status": "verified",
+          "lastChecked": "2026-11-02",
+          "sourceUrl": "https://www.pittsburgh-injury-lawyers.com/scholarship/",
+          "openStatus": "open_now",
+          "deadline": "July 31, 2027"
+        }
       },
       {
         "publicId": "award-a321ba096da1",

@@ -479,7 +479,7 @@ These awards stay in the catalog. Each line is a question the page did not settl
 
 ## Awards left uncertain
 
-249 awards still have a gap. The tag fields are filled with null where the page does not say.
+248 awards still have a gap. The tag fields are filled with null where the page does not say.
 
 - award-0a1f1d1b8505 | 2027 Wings for Val Foundation Lt. Cmdr. Lyndsay Evans Memorial Scholarship | no location limit listed
 - award-d06d7c7342e2 | Adam Montes Pride Scholarship | no location limit listed
@@ -708,7 +708,6 @@ These awards stay in the catalog. Each line is a question the page did not settl
 - award-221b3ca571aa | The Safer Roadways Scholarship | no location limit listed
 - award-4ac74a9f17fd | The Stephanie Goetz and Endre Holen Multi-Engine Commercial Scholarship | no location limit listed
 - award-4562d94cb7b9 | The White Family Legacy Scholarship | no location limit listed
-- award-ba4602ec402b | The Zombie Apocalypse Scholarship | no location limit listed
 - award-8e7ecab8f784 | United Airlines/Aviate Scholarships (NGPA) | no location limit listed
 - award-dc2b99725756 | Unity Bank Scholarship | The page does not say the place.
 - award-c3c9cbf0e4ee | Universal Athletic Services Scholarship | The page does not say the place.

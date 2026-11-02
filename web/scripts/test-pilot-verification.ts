@@ -409,6 +409,25 @@ const verifiedIds = [
   'award-7ccf0b5abd18',
   'award-1373d6434858',
   'award-b4baad962dc2',
+  'award-4181bcd4ff7d',
+  'award-ba4602ec402b',
+  'award-5602f1001d80',
+  'award-9d1c9d543817',
+  'award-c0d9ad850982',
+  'award-c3fce1fe8c46',
+  'award-0780f551327d',
+  'award-5fab0140f42a',
+  'award-8a34a5f3a4e6',
+  'award-1602b29c7b0b',
+  'award-e30f226ed6fc',
+  'award-92d445287bd8',
+  'award-abee1977b98d',
+  'award-88024508a56d',
+  'award-38dc1d210031',
+  'award-6e7c3d4623cc',
+  'award-83e53748074c',
+  'award-911f98582415',
+  'award-b9368e845b0d',
 ];
 const uncheckedIds = [
   'award-5b5b0db70dd0',
@@ -456,7 +475,8 @@ assert.equal(byId.get('award-3caab7453e5b')?.verification?.status, 'verified');
 assert.equal(byId.get('award-51729cb7b370')?.verification?.status, 'verified');
 assert.equal(byId.get('award-a321ba096da1')?.verification?.deadline, 'September 1, 2026');
 assert.equal(byId.get('award-a321ba096da1')?.verification?.openStatus, 'closed_next_not_posted');
-assert.equal(byId.get('award-e30f226ed6fc')?.verification, undefined);
+assert.equal(byId.get('award-e30f226ed6fc')?.verification?.openStatus, 'closed_next_not_posted');
+assert.equal(byId.get('award-e30f226ed6fc')?.verification?.deadline, 'October 31, 2026');
 assert.match(byId.get('award-fa212121a110')?.verificationNote ?? '', /confirmed by Kelsey/);
 assert.equal(byId.get('award-7e11abb8d4fc')?.verification?.openStatus, 'open_now');
 assert.equal(byId.get('award-7e11abb8d4fc')?.verification?.deadline, 'December 1, 2026 at midnight MST');
