@@ -95,7 +95,7 @@ export function deriveAwardTags(
   if (pageFailed) notes.push('The page did not load.');
   if (pageEmpty) notes.push('The page loaded but this award\'s rules were not on it.');
 
-  const bags = collect(evidence, blocked);
+  const bags = collect(catalogEvidence, blocked, planSupplements(award), pageBits);
   if (!blocked && bags.ruralRule === null) bags.ruralRule = 'none';
   if (/first generation/i.test(award.name) && /considered automatically/i.test(evidence)) {
     bags.firstGen = null;
@@ -177,13 +177,29 @@ function emptyBags(): Bags {
   };
 }
 
-function collect(evidence: string, blocked: 'past' | 'unread' | null): Bags {
+function planSupplements(award: TaggableAward): { focus: string; name: string } {
+  // Focus counts even when it is one to three words. The name is checked only
+  // for specific path words. Neither string is fed to place, faith, or sport tags.
+  return {
+    focus: award.eligibility.focus?.trim().toLowerCase() ?? '',
+    name: award.name.trim().toLowerCase(),
+  };
+}
+
+function collect(
+  catalogEvidence: string,
+  blocked: 'past' | 'unread' | null,
+  supplements: { focus: string; name: string } = { focus: '', name: '' },
+  pageEvidence = '',
+): Bags {
   const bags = emptyBags();
-  if (!evidence || blocked) return bags;
-  const text = evidence.toLowerCase();
+  const catalogText = catalogEvidence.toLowerCase().replace(/future business leaders of america|business professionals of america/g, ' ');
+  const pageText = pageEvidence.toLowerCase().replace(/future business leaders of america|business professionals of america/g, ' ');
+  if ((!catalogText && !pageText && !supplements.focus && !supplements.name) || blocked) return bags;
+  const text = [catalogText, pageText].filter(Boolean).join(' ');
 
   addClubs(text, bags);
-  addPlans(text.replace(/future business leaders of america|business professionals of america/g, ' '), bags);
+  addPlans(catalogText, bags, supplements, pageText);
   addSports(text, bags);
   addHeritage(text, bags);
   addFaith(text, bags);
@@ -201,48 +217,113 @@ function collect(evidence: string, blocked: 'past' | 'unread' | null): Bags {
   return bags;
 }
 
-function addPlans(text: string, bags: Bags) {
+function addPlans(text: string, bags: Bags, supplements: { focus: string; name: string }, pageText = '') {
   const narrowed = withoutSchoolMenus(text);
+  const pageNarrowed = withoutSchoolMenus(pageText);
+  for (const sentence of narrowed.split(/(?<=[.!?])\s+/)) applyLegacyPlans(sentence, bags, true);
+  // A shared page can describe a neighboring award. Keep the old menu rule there
+  // so a "such as engineering or finance" line does not attach those paths here.
+  for (const sentence of pageNarrowed.split(/(?<=[.!?])\s+/)) applyLegacyPlans(sentence, bags, false);
+  // A short focus used to be dropped before any path check. The focus gets the
+  // legacy rules plus specific phrases. The award name is not scanned with the
+  // broad legacy words, so a sponsor word such as Software or Education does
+  // not become a path. Example lists still do not become one required path.
+  if (supplements.focus && !isExampleList(supplements.focus)) {
+    applyLegacyPlans(supplements.focus, bags, true);
+    for (const hit of precisePlanHits(supplements.focus, 'focus')) push(bags.plans, hit);
+  }
+  if (supplements.name && !isExampleList(supplements.name)) {
+    for (const hit of precisePlanHits(supplements.name, 'name')) push(bags.plans, hit);
+  }
+  for (const sentence of text.split(/(?<=[.!?])\s+/)) {
+    // "College, university, or a trade program" is a school menu, not a trades-only rule.
+    const tradesProgram = /\bstudies a vocation or trade\b|\bvocation(?:al)? or trade program\b/.test(sentence);
+    const schoolMenu = /\bundergraduate\b|\buniversity\b|\bcollege, university\b/.test(sentence);
+    if (tradesProgram && !schoolMenu) push(bags.plans, 'trades');
+  }
   for (const sentence of narrowed.split(/(?<=[.!?])\s+/)) {
-    if (/\b(is excluded|are excluded|not eligible|ineligible|does not include|not included)\b/.test(sentence)) continue;
-    if (/\bany\b/.test(sentence) && /\bsuch as\b|\betc\b/.test(sentence)) continue;
-    let hits = planHits(sentence);
-    if (hits.length >= 3 || (hits.length >= 2 && /\bsuch as\b|\bcareers include\b/.test(sentence))) {
-      bags.fieldMenu = true;
-      continue;
-    }
-    if (/\bpilot applicant\b/.test(sentence)) hits = hits.filter((hit) => hit !== 'pilot training');
-    if (hits.includes('aviation maintenance') && hits.includes('skilled trades')) {
-      hits = hits.filter((hit) => hit !== 'skilled trades');
-    }
-    if (hits.includes('skilled trades') && hits.includes('two-year college') && /\bor\b/.test(sentence)) {
-      hits = hits.filter((hit) => hit !== 'two-year college');
-    }
-    if (/stem\/healthcare|stem or healthcare|healthcare or stem/.test(sentence)) {
-      push(bags.plans, 'STEM');
-      push(bags.plans, 'healthcare');
-      hits = hits.filter((hit) => hit !== 'STEM' && hit !== 'healthcare');
-    }
-    if (hits.includes('business') && hits.includes('STEM') && /\bbusiness\b.{0,12}\bor\b.{0,12}\bstem\b|\bstem\b.{0,12}\bor\b.{0,12}\bbusiness\b/.test(sentence)) {
-      if (hits.length === 2) {
-        push(bags.plans, 'business');
-        push(bags.plans, 'STEM');
-      } else bags.fieldMenu = true;
-      continue;
-    }
-    if (hits.includes('skilled trades') && hits.includes('agriculture') && /\btrades?\b.{0,24}\bor\b.{0,40}\bagricultur|\bagricultur\w*.{0,24}\bor\b.{0,40}\btrades?\b/.test(sentence)) {
-      bags.fieldMenu = true;
-      continue;
-    }
-    if (/\bother fields\b/.test(sentence) && hits.length >= 1) {
-      bags.fieldMenu = true;
-      continue;
-    }
-    for (const hit of hits) push(bags.plans, hit);
+    if (isExampleList(sentence) || /\bsuch as\b/.test(sentence)) continue;
+    for (const hit of precisePlanHits(sentence, 'body')) push(bags.plans, hit);
+  }
+  for (const sentence of pageNarrowed.split(/(?<=[.!?])\s+/)) {
+    if (isExampleList(sentence) || /\bsuch as\b/.test(sentence)) continue;
+    for (const hit of precisePlanHits(sentence, 'body')) push(bags.plans, hit);
+  }
+  const specificAviation = ['pilot training', 'aviation maintenance', 'aviation management', 'drone training'];
+  const genericAviationFocus = /\baviation\b/.test(supplements.focus) && !/\btransportation\b/.test(supplements.focus);
+  if (genericAviationFocus && specificAviation.some((plan) => bags.plans.includes(plan))) {
+    bags.plans = bags.plans.filter((plan) => plan !== 'transportation');
   }
 }
 
-function planHits(sentence: string): string[] {
+function applyLegacyPlans(sentence: string, bags: Bags, restoreListedPaths: boolean) {
+  if (/\b(is excluded|are excluded|not eligible|ineligible|does not include|not included)\b/.test(sentence)) return;
+  if (/\bany\b/.test(sentence) && /\bsuch as\b|\betc\b/.test(sentence)) return;
+  let hits = legacyPlanHits(sentence);
+  if (hits.length >= 3 || (hits.length >= 2 && /\bsuch as\b|\bcareers include\b/.test(sentence))) {
+    bags.fieldMenu = true;
+    // An example list is not one required path. A sentence that names three
+    // real paths, without "such as" or "other fields", keeps those paths.
+    if (restoreListedPaths && hits.length >= 3 && !isExampleList(sentence)) {
+      for (const hit of hits) push(bags.plans, mapLegacyPlan(hit, sentence));
+    }
+    return;
+  }
+  if (/\bpilot applicant\b/.test(sentence)) hits = hits.filter((hit) => hit !== 'pilot training');
+  if (/\bno flight training\b|\bflight training is excluded\b|\bflight training is not\b/.test(sentence)) {
+    hits = hits.filter((hit) => hit !== 'pilot training');
+  }
+  if (hits.includes('aviation maintenance') && hits.includes('skilled trades')) {
+    hits = hits.filter((hit) => hit !== 'skilled trades');
+  }
+  if (hits.includes('skilled trades') && hits.includes('two-year college') && /\bor\b/.test(sentence)) {
+    hits = hits.filter((hit) => hit !== 'two-year college');
+  }
+  if (/stem\/healthcare|stem or healthcare|healthcare or stem/.test(sentence)) {
+    push(bags.plans, 'engineering');
+    push(bags.plans, 'health');
+    hits = hits.filter((hit) => hit !== 'STEM' && hit !== 'healthcare');
+  }
+  if (hits.includes('business') && hits.includes('STEM') && /\bbusiness\b.{0,12}\bor\b.{0,12}\bstem\b|\bstem\b.{0,12}\bor\b.{0,12}\bbusiness\b/.test(sentence)) {
+    if (hits.length === 2) {
+      push(bags.plans, 'business');
+      push(bags.plans, 'engineering');
+    } else bags.fieldMenu = true;
+    return;
+  }
+  if (hits.includes('skilled trades') && hits.includes('agriculture') && /\btrades?\b.{0,24}\bor\b.{0,40}\bagricultur|\bagricultur\w*.{0,24}\bor\b.{0,40}\btrades?\b/.test(sentence)) {
+    bags.fieldMenu = true;
+    return;
+  }
+  if (/\bother fields\b/.test(sentence) && hits.length >= 1) {
+    bags.fieldMenu = true;
+    return;
+  }
+  for (const hit of hits) push(bags.plans, mapLegacyPlan(hit, sentence));
+}
+
+function mapLegacyPlan(hit: string, sentence: string): string {
+  if (hit === 'public service') {
+    if (/\bsocial work\b/.test(sentence) && !/\blaw enforcement\b|\bpublic safety\b|\bpublic service\b/.test(sentence)) return 'helping';
+    return 'law';
+  }
+  const mapped: Record<string, string> = {
+    STEM: 'engineering',
+    healthcare: 'health',
+    'skilled trades': 'trades',
+    teaching: 'education',
+    'public service': 'law',
+  };
+  return mapped[hit] ?? hit;
+}
+
+function isExampleList(sentence: string): boolean {
+  // "Such as" inside a named field ("an aerospace field such as engineering") is a
+  // real list of paths. Open-ended examples are not.
+  return /\bcareers include\b|\blisted careers include\b|\bother fields\b|\bany (?:field|major|area) of study\b|\bany field\b|\bor another\b/.test(sentence);
+}
+
+function legacyPlanHits(sentence: string): string[] {
   const hits: string[] = [];
   const add = (plan: string, ok: boolean) => {
     if (ok && !hits.includes(plan)) hits.push(plan);
@@ -263,6 +344,40 @@ function planHits(sentence: string): string[] {
   add('arts', /\bart or music\b|\bfine arts?\b|\btheatre\b|\btheater\b|\bmajor in art\b|\bin music\b|\bmusic degree\b/.test(sentence));
   add('public service', /\blaw enforcement\b|\bsocial work\b|\bpublic service\b|\bpublic safety\b/.test(sentence));
   add('transportation', /\bdegree in (?:a |an )?(?:[\w-]+ ){0,3}transportation\b|\btransportation(?:-related)? (?:industry|field|degree|major|career)\b/.test(sentence));
+  return hits;
+}
+
+function precisePlanHits(sentence: string, source: 'body' | 'focus' | 'name'): string[] {
+  const hits: string[] = [];
+  const add = (plan: string, ok: boolean) => {
+    if (ok && !hits.includes(plan)) hits.push(plan);
+  };
+  const bareField = sentence.trim();
+  const focus = source === 'focus';
+  const name = source === 'name';
+  add('engineering', /\bstem\b|\bsteam\b|\bengineering\b/.test(sentence));
+  add('computers', /\bcomputer science\b|\binformation technology\b|\bcybersecurity\b|\bcomputer programming\b|\bsoftware (?:development|engineering|developer)\b|\btechnology or a related major\b|\binformation systems\b/.test(sentence));
+  add('health', /\bnurse\b|\bnursing\b|\bpre-?med(?:icine)?\b|\bhealth sciences?\b|\bhealthcare career\b|\bhealth care career\b|\bmedical career\b|\bdental hygiene\b|\bpharmacy\b/.test(sentence));
+  const teachingWords = /\bteachers?\b|\bteaching\b|\bearly childhood\b|\bmajor in education\b|\beducation career\b|\bplanning to teach\b/.test(sentence);
+  const teachingBoilerplate = /\bhigher education\b|\beducational (?:institution|foundation|opportunity|program)\b|\baviation education\b|\brecommendation\b[^.]{0,120}\bteachers?\b|\bformer teachers?\b|\bteachers?\/professor\b/.test(sentence);
+  add('education', teachingWords && !teachingBoilerplate);
+  if (name) {
+    // A sponsor or program name is not scanned for broad words such as business,
+    // technology, education, or construction. Only a path stated in the name.
+    return hits.filter((hit) => hit === 'engineering' || hit === 'health' || hit === 'education' || hits.includes('trades') || hits.includes('energy'));
+  }
+  add('trades', /\blineworkers?\b|\blinemen\b|\bhvac\b|\bweld(?:er|ing)\b|\bvocational\b|\btrade school\b|\bskilled trades?\b|\bconstruction trades?\b|\bconstruction management\b/.test(sentence) || (focus && /\bcertificate program\b|\boccupational safety\b|\bindustrial hygiene\b/.test(sentence)));
+  add('energy', /\blineworkers?\b|\blineman\b|\blinemen\b|\bline worker\b|\bwind energy\b|\bsolar energy\b|\belectrical utility\b/.test(sentence));
+  add('agriculture', /\bagricultur|\bfarming\b|\bnatural resources?\b|\bforestry\b|\bconservation\b|\benvironmental science\b|\blimnology\b|\bwildlife\b/.test(sentence) || (focus && /\bsustainability\b/.test(sentence)));
+  add('hospitality', /\bhospitality\b|\bculinary\b(?! club)|\bhotel management\b|\btourism\b/.test(sentence));
+  add('helping', /\bsocial work\b|\bcounseling\b|\bpsychology\b|\bhuman services\b/.test(sentence));
+  add('communications', /\bjournalism\b|\bcommunications major\b|\bbroadcasting\b|\bfilm production\b/.test(sentence));
+  add('law', /\bpre-?law\b|\blaw school\b|\blegal studies\b|\bcriminal justice\b|\bparalegal\b/.test(sentence));
+  add('business', /\bfinance\b|\baccounting\b|\bentrepreneur/.test(sentence) || /\bmarketing\b(?!\s*(?:\(|of)\b)/.test(sentence) || /\b(?:major|degree|career|studies) in business\b|\bbusiness (?:major|degree|career|school|administration)\b/.test(sentence));
+  add('arts', /\bvisual arts?\b|\bfine arts?\b|\bgraphic design\b|\bperforming arts?\b|\bmusic degree\b|\btheatre\b|\btheater\b|\b(?:study|studying|major in) drama\b|\bdrama teachers?\b/.test(sentence) || (focus && /^(?:art|music|theatre|theater|visual art)$/.test(bareField)) || (focus && /\bsteam\b/.test(sentence)));
+  add('transportation', /\btransportation(?:-related)? (?:industry|field|degree|major|career)\b|\bdegree in (?:a |an )?(?:[\w-]+ ){0,3}transportation\b|\bor a related field\b/.test(sentence) && /\btransportation\b/.test(sentence) || (focus && /\baviation\b/.test(sentence) && !/\bpilot\b|\bflight training\b|\baircraft maintenance\b|\baviation maintenance\b|\baviation management\b|\bdrone\b|\bavionics\b/.test(sentence)));
+  add('pilot training', focus && /\bflight training\b|\bpilot certificate\b|\bprivate pilot\b/.test(sentence));
+  if (name) return hits;
   return hits;
 }
 
@@ -645,16 +760,25 @@ function limitClauses(bags: Bags): string[] {
     'drone training': 'are training to fly drones',
     'aviation maintenance': 'are training to fix airplanes',
     'aviation management': 'are studying aviation management',
-    STEM: 'are studying STEM',
+    STEM: 'are studying engineering',
+    engineering: 'are studying engineering',
+    computers: 'are studying computers',
     healthcare: 'are studying healthcare',
+    health: 'are studying health care',
     'skilled trades': 'are in the skilled trades',
+    trades: 'are in the skilled trades',
     'two-year college': 'are in a two-year program',
     teaching: 'are planning to teach',
+    education: 'are planning to teach',
     agriculture: 'are studying agriculture or nature',
     business: 'are studying business',
     law: 'are studying law',
     arts: 'are studying art or music',
     'public service': 'are planning to serve the public',
+    helping: 'are planning to help people',
+    hospitality: 'are studying hospitality',
+    communications: 'are studying communications',
+    energy: 'are studying energy or utilities',
     transportation: 'are studying transportation',
   };
   for (const plan of bags.plans) clauses.push(planPhrase[plan] ?? `are studying ${plan}`);
@@ -766,15 +890,15 @@ function matchedStep3Ids(tags: AwardTags, evidence: string): string[] {
     if (plan === 'pilot training' || plan === 'drone training') ids.add('aviation_pilot');
     if (plan === 'aviation maintenance') ids.add('aviation_maintenance');
     if (plan === 'aviation management') ids.add('aviation_management');
-    if (plan === 'STEM') ids.add('stem');
-    if (plan === 'healthcare') ids.add('healthcare');
-    if (plan === 'skilled trades' || plan === 'two-year college') ids.add('trades');
+    if (plan === 'STEM' || plan === 'engineering') ids.add('stem');
+    if (plan === 'healthcare' || plan === 'health') ids.add('healthcare');
+    if (plan === 'skilled trades' || plan === 'trades' || plan === 'two-year college') ids.add('trades');
     if (plan === 'business') ids.add('business_finance');
-    if (plan === 'law') ids.add('law');
+    if (plan === 'law' || plan === 'public service') ids.add('law');
+    if (plan === 'public service' || (plan === 'law' && /law enforcement|public safety|public service|sheriff/i.test(evidence))) ids.add('public_service');
     if (plan === 'arts') ids.add('arts_humanities');
     if (plan === 'agriculture') ids.add('agriculture_conservation');
-    if (plan === 'teaching') ids.add('education_teaching');
-    if (plan === 'public service') ids.add('public_service');
+    if (plan === 'teaching' || plan === 'education') ids.add('education_teaching');
   }
   for (const item of tags.health ?? []) {
     if (item === 'dyslexia') ids.add('dyslexia');

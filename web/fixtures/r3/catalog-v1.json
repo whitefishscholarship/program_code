@@ -18,7 +18,7 @@
   },
   "catalog": {
     "schemaVersion": "1.0.0",
-    "catalogRevision": "cae04afef1f7a548cd5fcbc51b0e39cf6bb2c2de32b0afba3e4a514cd29691d8",
+    "catalogRevision": "01ed745307e7b50b2cd0da7264d355494eca859b96b5a74ecfd9d60d358ce44e",
     "counts": {
       "sources": 526,
       "portals": 21,
@@ -286,7 +286,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "skilled trades"
+          "trades"
         ],
         "health": null,
         "lifeSituation": null,
@@ -677,7 +677,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "skilled trades"
+          "trades"
         ],
         "health": null,
         "lifeSituation": null,
@@ -1186,15 +1186,18 @@
         },
         "residencyScope": "national",
         "poolLevel": 5,
-        "competitionScore": 72,
-        "poolReason": "Students across the United States who are women can apply.",
+        "competitionScore": 69,
+        "poolReason": "Students across the United States who are studying engineering, are studying art or music, and are women can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "arts",
+          "engineering"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": [
@@ -1652,7 +1655,7 @@
         "residencyScope": "national",
         "poolLevel": 5,
         "competitionScore": 72,
-        "poolReason": "Students across the United States who are studying STEM can apply.",
+        "poolReason": "Students across the United States who are studying engineering can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
@@ -1660,7 +1663,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "STEM"
+          "engineering"
         ],
         "health": null,
         "lifeSituation": null,
@@ -1925,7 +1928,7 @@
           "military"
         ],
         "plans": [
-          "skilled trades"
+          "trades"
         ],
         "health": null,
         "lifeSituation": null,
@@ -2391,7 +2394,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "skilled trades",
+          "trades",
           "transportation"
         ],
         "health": null,
@@ -2460,7 +2463,7 @@
         "familyTies": null,
         "plans": [
           "business",
-          "skilled trades"
+          "trades"
         ],
         "health": [
           "mental health"
@@ -2580,16 +2583,18 @@
           "deadline": "October 31, 2026, 11:59 p.m. EDT"
         },
         "residencyScope": "national",
-        "poolLevel": 6,
-        "competitionScore": 94,
-        "poolReason": "Large pool: open nationwide.",
+        "poolLevel": 5,
+        "competitionScore": 73,
+        "poolReason": "Students across the United States who are studying transportation can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "transportation"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": null,
@@ -2845,7 +2850,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "teaching"
+          "education"
         ],
         "health": null,
         "lifeSituation": null,
@@ -2965,7 +2970,7 @@
         "residencyScope": "national",
         "poolLevel": 5,
         "competitionScore": 67,
-        "poolReason": "Students across the United States who are studying STEM, play track, and need help paying for college can apply.",
+        "poolReason": "Students across the United States who are studying engineering, play track, and need help paying for college can apply.",
         "ruralRule": "none",
         "sports": [
           "track"
@@ -2975,7 +2980,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "STEM"
+          "engineering"
         ],
         "health": null,
         "lifeSituation": null,
@@ -3043,7 +3048,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "skilled trades"
+          "trades"
         ],
         "health": null,
         "lifeSituation": null,
@@ -3297,7 +3302,7 @@
         "residencyScope": "national",
         "poolLevel": 5,
         "competitionScore": 70,
-        "poolReason": "Students across the United States who are WAI members and are studying STEM can apply.",
+        "poolReason": "Students across the United States who are WAI members and are studying engineering can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": [
@@ -3307,7 +3312,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "STEM"
+          "engineering"
         ],
         "health": null,
         "lifeSituation": null,
@@ -3437,7 +3442,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "skilled trades"
+          "trades"
         ],
         "health": null,
         "lifeSituation": null,
@@ -3501,7 +3506,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "skilled trades"
+          "trades"
         ],
         "health": null,
         "lifeSituation": null,
@@ -5248,7 +5253,7 @@
         "residencyScope": "national",
         "poolLevel": 5,
         "competitionScore": 70,
-        "poolReason": "Students across the United States who are studying STEM, are training to be pilots, and have a military family tie can apply.",
+        "poolReason": "Students across the United States who are studying engineering, are training to be pilots, and have a military family tie can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
@@ -5258,8 +5263,8 @@
           "military"
         ],
         "plans": [
-          "pilot training",
-          "STEM"
+          "engineering",
+          "pilot training"
         ],
         "health": null,
         "lifeSituation": null,
@@ -5388,7 +5393,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "skilled trades"
+          "trades"
         ],
         "health": null,
         "lifeSituation": null,
@@ -5511,7 +5516,7 @@
         "residencyScope": "national",
         "poolLevel": 5,
         "competitionScore": 73,
-        "poolReason": "Students across the United States who are studying healthcare can apply.",
+        "poolReason": "Students across the United States who are studying health care can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
@@ -5519,7 +5524,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "healthcare"
+          "health"
         ],
         "health": null,
         "lifeSituation": null,
@@ -5778,7 +5783,7 @@
         "familyTies": null,
         "plans": [
           "agriculture",
-          "teaching"
+          "education"
         ],
         "health": null,
         "lifeSituation": null,
@@ -5837,7 +5842,7 @@
         "residencyScope": "national",
         "poolLevel": 5,
         "competitionScore": 70,
-        "poolReason": "Students across the United States who are studying STEM, are training to be pilots, and have a military family tie can apply.",
+        "poolReason": "Students across the United States who are studying engineering, are training to be pilots, and have a military family tie can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
@@ -5847,8 +5852,8 @@
           "military"
         ],
         "plans": [
-          "pilot training",
-          "STEM"
+          "engineering",
+          "pilot training"
         ],
         "health": null,
         "lifeSituation": null,
@@ -6223,16 +6228,18 @@
           "deadline": "April 24, 2026"
         },
         "residencyScope": "national",
-        "poolLevel": 6,
-        "competitionScore": 93,
-        "poolReason": "Large pool: open nationwide.",
+        "poolLevel": 5,
+        "competitionScore": 72,
+        "poolReason": "Students across the United States who are studying transportation can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "transportation"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": null,
@@ -6415,8 +6422,8 @@
         },
         "residencyScope": "national",
         "poolLevel": 5,
-        "competitionScore": 70,
-        "poolReason": "Students across the United States who are WAI members and are women can apply.",
+        "competitionScore": 67,
+        "poolReason": "Students across the United States who are WAI members, are training to be pilots, are training to fix airplanes, are studying aviation management, and meet other rules on the award can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": [
@@ -6425,7 +6432,11 @@
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "aviation maintenance",
+          "aviation management",
+          "pilot training"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": [
@@ -6495,7 +6506,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "skilled trades",
+          "trades",
           "two-year college"
         ],
         "health": null,
@@ -6756,7 +6767,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "teaching"
+          "education"
         ],
         "health": null,
         "lifeSituation": null,
@@ -7075,8 +7086,8 @@
         "verificationNote": "confirmed by Kelsey: from url: Key Details\nFall Application Period: October 1–December 31, 11:59 p.m. ET (all Fall period applicants will be notified of award decisions by April 15)\nSpring Application Period: April 1 - June 30, 11:59 p.m. ET (all Spring period applicants will be notified of award decisions by September 15).\nEligibility: Open to current AOPA members who are residents of the United States & District of Columbia, Canada, Guam, Puerto Rico, and the U.S. Virgin Islands. Not a member? Click here to see our membership options. High School students qualify for a free membership.\nAward Amounts:\nNumerous scholarship opportunities ranging from $250 to $14,000 (amounts may vary depending on donor funding)\nHigh School Students: At least 90 scholarships of $12,000 each for students aged 16-18 to earn their private pilot certificate. Additional criteria apply. See our FAQs.\nTeachers Using the AOPA You Can Fly Curriculum: Apply for one of up to 20 scholarships, at $12,000 each, to earn your private pilot certificate. Additional criteria apply. See our FAQs.     Assume 2026-2027 school year Recheck weekly.",
         "residencyScope": "national",
         "poolLevel": 5,
-        "competitionScore": 73,
-        "poolReason": "Students in the United States and Canada who are AOPA members can apply.",
+        "competitionScore": 70,
+        "poolReason": "Students in the United States and Canada who are AOPA members and are training to be pilots can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": [
@@ -7085,7 +7096,9 @@
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "pilot training"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": null,
@@ -7619,7 +7632,7 @@
         "familyTies": null,
         "plans": [
           "agriculture",
-          "teaching"
+          "education"
         ],
         "health": null,
         "lifeSituation": null,
@@ -7947,7 +7960,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "teaching"
+          "education"
         ],
         "health": null,
         "lifeSituation": null,
@@ -8067,7 +8080,7 @@
         "residencyScope": "national",
         "poolLevel": 5,
         "competitionScore": 70,
-        "poolReason": "Students across the United States who are WAI members, are training to fix airplanes, and are studying STEM can apply.",
+        "poolReason": "Students across the United States who are WAI members, are training to fix airplanes, and are studying engineering can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": [
@@ -8078,7 +8091,7 @@
         "familyTies": null,
         "plans": [
           "aviation maintenance",
-          "STEM"
+          "engineering"
         ],
         "health": null,
         "lifeSituation": null,
@@ -8529,7 +8542,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "skilled trades",
+          "trades",
           "two-year college"
         ],
         "health": null,
@@ -8724,7 +8737,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "skilled trades"
+          "trades"
         ],
         "health": null,
         "lifeSituation": null,
@@ -8845,7 +8858,7 @@
         "residencyScope": "flathead",
         "poolLevel": 2,
         "competitionScore": 27,
-        "poolReason": "Only students from Flathead County high schools who are studying healthcare can apply.",
+        "poolReason": "Only students from Flathead County high schools who are studying health care can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
@@ -8853,7 +8866,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "healthcare"
+          "health"
         ],
         "health": null,
         "lifeSituation": null,
@@ -9367,7 +9380,7 @@
         "residencyScope": "national",
         "poolLevel": 5,
         "competitionScore": 70,
-        "poolReason": "Students across the United States who are WAI members and are studying STEM can apply.",
+        "poolReason": "Students across the United States who are WAI members, are studying engineering, and are studying transportation can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": [
@@ -9377,7 +9390,8 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "STEM"
+          "engineering",
+          "transportation"
         ],
         "health": null,
         "lifeSituation": null,
@@ -9754,16 +9768,18 @@
           "deadline": "March 16, 2026"
         },
         "residencyScope": "national",
-        "poolLevel": 6,
-        "competitionScore": 93,
-        "poolReason": "Large pool: open nationwide.",
+        "poolLevel": 5,
+        "competitionScore": 72,
+        "poolReason": "Students across the United States who are studying computers can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "computers"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": null,
@@ -10158,8 +10174,8 @@
         "verificationNote": "confirmed by Kelsey: from url: Key Details\nFall Application Period: October 1–December 31, 11:59 p.m. ET (all Fall period applicants will be notified of award decisions by April 15)\nSpring Application Period: April 1 - June 30, 11:59 p.m. ET (all Spring period applicants will be notified of award decisions by September 15).\nEligibility: Open to current AOPA members who are residents of the United States & District of Columbia, Canada, Guam, Puerto Rico, and the U.S. Virgin Islands. Not a member? Click here to see our membership options. High School students qualify for a free membership.\nAward Amounts:\nNumerous scholarship opportunities ranging from $250 to $14,000 (amounts may vary depending on donor funding)\nHigh School Students: At least 90 scholarships of $12,000 each for students aged 16-18 to earn their private pilot certificate. Additional criteria apply. See our FAQs.\nTeachers Using the AOPA You Can Fly Curriculum: Apply for one of up to 20 scholarships, at $12,000 each, to earn your private pilot certificate. Additional criteria apply. See our FAQs.     Assume 2026-2027 school year Recheck weekly.",
         "residencyScope": "national",
         "poolLevel": 5,
-        "competitionScore": 73,
-        "poolReason": "Students in the United States and Canada who are AOPA members can apply.",
+        "competitionScore": 70,
+        "poolReason": "Students in the United States and Canada who are AOPA members and are training to be pilots can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": [
@@ -10168,7 +10184,9 @@
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "pilot training"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": null,
@@ -10226,7 +10244,7 @@
         "residencyScope": "national",
         "poolLevel": 5,
         "competitionScore": 67,
-        "poolReason": "Students across the United States who are in the skilled trades, have a lineman in the family, and need help paying for college can apply.",
+        "poolReason": "Students across the United States who are in the skilled trades, are studying energy or utilities, have a lineman in the family, and need help paying for college can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
@@ -10236,7 +10254,8 @@
           "lineman family"
         ],
         "plans": [
-          "skilled trades"
+          "energy",
+          "trades"
         ],
         "health": null,
         "lifeSituation": null,
@@ -10818,7 +10837,7 @@
         "residencyScope": "national",
         "poolLevel": 5,
         "competitionScore": 67,
-        "poolReason": "Students across the United States who are WAI members, are studying aviation management, and are women can apply.",
+        "poolReason": "Students across the United States who are WAI members, are studying aviation management, are studying business, and are women can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": [
@@ -10828,7 +10847,8 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "aviation management"
+          "aviation management",
+          "business"
         ],
         "health": null,
         "lifeSituation": null,
@@ -10963,7 +10983,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "skilled trades"
+          "trades"
         ],
         "health": null,
         "lifeSituation": null,
@@ -11612,7 +11632,7 @@
         "residencyScope": "regional",
         "poolLevel": 3,
         "competitionScore": 41,
-        "poolReason": "Only Montana Tech students who are studying healthcare can apply.",
+        "poolReason": "Only Montana Tech students who are studying health care can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
@@ -11620,7 +11640,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "healthcare"
+          "health"
         ],
         "health": null,
         "lifeSituation": null,
@@ -11676,7 +11696,7 @@
         "residencyScope": "national",
         "poolLevel": 5,
         "competitionScore": 73,
-        "poolReason": "Students across the United States who are training to fix airplanes and are studying STEM can apply.",
+        "poolReason": "Students across the United States who are training to fix airplanes and are studying engineering can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
@@ -11685,7 +11705,7 @@
         "familyTies": null,
         "plans": [
           "aviation maintenance",
-          "STEM"
+          "engineering"
         ],
         "health": null,
         "lifeSituation": null,
@@ -12002,7 +12022,7 @@
         "residencyScope": null,
         "poolLevel": null,
         "competitionScore": null,
-        "poolReason": "The page does not say the place. It is for students who are studying business, are studying STEM, and are women.",
+        "poolReason": "The page does not say the place. It is for students who are studying business, are studying engineering, and are women.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
@@ -12011,7 +12031,7 @@
         "familyTies": null,
         "plans": [
           "business",
-          "STEM"
+          "engineering"
         ],
         "health": null,
         "lifeSituation": null,
@@ -12136,7 +12156,7 @@
         "residencyScope": "national",
         "poolLevel": 5,
         "competitionScore": 70,
-        "poolReason": "Students across the United States who are NTHS members, are studying law, and are planning to serve the public can apply.",
+        "poolReason": "Students across the United States who are NTHS members and are studying law can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": [
@@ -12146,8 +12166,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "law",
-          "public service"
+          "law"
         ],
         "health": null,
         "lifeSituation": null,
@@ -12462,7 +12481,7 @@
         "residencyScope": "regional",
         "poolLevel": 3,
         "competitionScore": 41,
-        "poolReason": "Only students at the Southeast Lineman Training Center in Georgia who are in the skilled trades can apply.",
+        "poolReason": "Only students at the Southeast Lineman Training Center in Georgia who are in the skilled trades and are studying energy or utilities can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
@@ -12470,7 +12489,8 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "skilled trades"
+          "energy",
+          "trades"
         ],
         "health": null,
         "lifeSituation": null,
@@ -12721,15 +12741,17 @@
         },
         "residencyScope": "whitefish",
         "poolLevel": 1,
-        "competitionScore": 15,
-        "poolReason": "Only Whitefish High School students can apply.",
+        "competitionScore": 12,
+        "poolReason": "Only Whitefish High School students who are studying art or music can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "arts"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": null,
@@ -12846,7 +12868,7 @@
         "residencyScope": "national",
         "poolLevel": 5,
         "competitionScore": 73,
-        "poolReason": "Students across the United States who are training to be pilots and are training to fix airplanes can apply.",
+        "poolReason": "Students across the United States who are training to fix airplanes, are studying aviation management, are studying engineering, and are studying business can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
@@ -12855,7 +12877,9 @@
         "familyTies": null,
         "plans": [
           "aviation maintenance",
-          "pilot training"
+          "aviation management",
+          "business",
+          "engineering"
         ],
         "health": null,
         "lifeSituation": null,
@@ -13041,7 +13065,7 @@
         "residencyScope": "national",
         "poolLevel": 5,
         "competitionScore": 70,
-        "poolReason": "Students across the United States who are studying STEM and have a military family tie can apply.",
+        "poolReason": "Students across the United States who are studying engineering and have a military family tie can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
@@ -13051,7 +13075,7 @@
           "military"
         ],
         "plans": [
-          "STEM"
+          "engineering"
         ],
         "health": null,
         "lifeSituation": null,
@@ -13107,8 +13131,8 @@
         "verificationNote": "confirmed by Kelsey: assumed 2027, needs review to watch for date changes Recheck weekly.",
         "residencyScope": "national",
         "poolLevel": 5,
-        "competitionScore": 73,
-        "poolReason": "Students across the United States who are FFA members can apply.",
+        "competitionScore": 70,
+        "poolReason": "Students across the United States who are FFA members and are studying agriculture or nature can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": [
@@ -13117,7 +13141,9 @@
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "agriculture"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": null,
@@ -14028,7 +14054,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "skilled trades"
+          "trades"
         ],
         "health": null,
         "lifeSituation": null,
@@ -14213,7 +14239,7 @@
         "residencyScope": "montana",
         "poolLevel": 4,
         "competitionScore": 52,
-        "poolReason": "Montana students who are planning to serve the public and have a first responder in the family can apply.",
+        "poolReason": "Montana students who are studying law and have a first responder in the family can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
@@ -14223,7 +14249,7 @@
           "first responder"
         ],
         "plans": [
-          "public service"
+          "law"
         ],
         "health": null,
         "lifeSituation": null,
@@ -14348,7 +14374,7 @@
         "residencyScope": "montana",
         "poolLevel": 4,
         "competitionScore": 54,
-        "poolReason": "Montana students who are studying STEM and are studying healthcare can apply.",
+        "poolReason": "Montana students who are studying engineering and are studying health care can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
@@ -14356,8 +14382,8 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "healthcare",
-          "STEM"
+          "engineering",
+          "health"
         ],
         "health": null,
         "lifeSituation": null,
@@ -14416,15 +14442,18 @@
         "verificationNote": "confirmed by Kelsey: URL: https://www.flatheadelectric.com/flathead-electric-cooperative-trustees-announce-new-scholarship-for-lineworkers/        No closing date, treat as open ended, always available",
         "residencyScope": "flathead",
         "poolLevel": 2,
-        "competitionScore": 27,
-        "poolReason": "Only students in the Flathead Electric service area who live in the sponsor service area can apply.",
+        "competitionScore": 24,
+        "poolReason": "Only students in the Flathead Electric service area who are in the skilled trades, are studying energy or utilities, and live in the sponsor service area can apply.",
         "ruralRule": "service-area",
         "sports": null,
         "clubs": null,
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "energy",
+          "trades"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": null,
@@ -14616,7 +14645,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "teaching"
+          "education"
         ],
         "health": null,
         "lifeSituation": null,
@@ -15004,7 +15033,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "skilled trades"
+          "trades"
         ],
         "health": null,
         "lifeSituation": null,
@@ -15059,16 +15088,18 @@
         },
         "verificationNote": "confirmed by Kelsey: from url: NO LATER than the last Friday in June.\nAssume 2027 but check for updates Recheck weekly.",
         "residencyScope": "national",
-        "poolLevel": 6,
-        "competitionScore": 94,
-        "poolReason": "Large pool: open nationwide.",
+        "poolLevel": 5,
+        "competitionScore": 73,
+        "poolReason": "Students across the United States who are studying transportation can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "transportation"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": null,
@@ -15198,7 +15229,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "skilled trades"
+          "trades"
         ],
         "health": null,
         "lifeSituation": null,
@@ -15644,7 +15675,7 @@
         "residencyScope": "national",
         "poolLevel": 5,
         "competitionScore": 70,
-        "poolReason": "Students across the United States who are NTHS members, are DECA members, and are studying business can apply.",
+        "poolReason": "Students across the United States who are NTHS members, are DECA members, are studying business, and are studying hospitality can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": [
@@ -15655,7 +15686,8 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "business"
+          "business",
+          "hospitality"
         ],
         "health": null,
         "lifeSituation": null,
@@ -16056,7 +16088,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "skilled trades"
+          "trades"
         ],
         "health": null,
         "lifeSituation": null,
@@ -16111,8 +16143,8 @@
         },
         "residencyScope": "national",
         "poolLevel": 5,
-        "competitionScore": 73,
-        "poolReason": "Students across the United States who are NTHS members and are TSA members can apply.",
+        "competitionScore": 70,
+        "poolReason": "Students across the United States who are NTHS members, are TSA members, and are studying engineering can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": [
@@ -16122,7 +16154,9 @@
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "engineering"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": null,
@@ -16175,16 +16209,18 @@
           "deadline": "November 13, 2026"
         },
         "residencyScope": "national",
-        "poolLevel": 6,
-        "competitionScore": 94,
-        "poolReason": "Large pool: open nationwide.",
+        "poolLevel": 5,
+        "competitionScore": 73,
+        "poolReason": "Students across the United States who are in the skilled trades can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "trades"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": null,
@@ -17017,7 +17053,7 @@
         "residencyScope": "national",
         "poolLevel": 5,
         "competitionScore": 70,
-        "poolReason": "Students across the United States who are WAI members and are studying STEM can apply.",
+        "poolReason": "Students across the United States who are WAI members and are studying engineering can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": [
@@ -17027,7 +17063,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "STEM"
+          "engineering"
         ],
         "health": null,
         "lifeSituation": null,
@@ -17283,15 +17319,17 @@
         },
         "residencyScope": "montana",
         "poolLevel": 4,
-        "competitionScore": 58,
-        "poolReason": "Montana students can apply.",
+        "competitionScore": 55,
+        "poolReason": "Montana students who are in the skilled trades can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "trades"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": null,
@@ -18196,15 +18234,17 @@
         },
         "residencyScope": "national",
         "poolLevel": 5,
-        "competitionScore": 73,
-        "poolReason": "Students across the United States who are women can apply.",
+        "competitionScore": 70,
+        "poolReason": "Students across the United States who are studying transportation and are women can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "transportation"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": [
@@ -18723,7 +18763,7 @@
         "residencyScope": "national",
         "poolLevel": 5,
         "competitionScore": 73,
-        "poolReason": "Students across the United States who are studying STEM can apply.",
+        "poolReason": "Students across the United States who are studying engineering can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
@@ -18731,7 +18771,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "STEM"
+          "engineering"
         ],
         "health": null,
         "lifeSituation": null,
@@ -19241,7 +19281,7 @@
         "residencyScope": "montana",
         "poolLevel": 4,
         "competitionScore": 54,
-        "poolReason": "Montana students who are studying STEM and are studying healthcare can apply.",
+        "poolReason": "Montana students who are studying engineering and are studying health care can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
@@ -19249,8 +19289,8 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "healthcare",
-          "STEM"
+          "engineering",
+          "health"
         ],
         "health": null,
         "lifeSituation": null,
@@ -21119,7 +21159,7 @@
         "residencyScope": "national",
         "poolLevel": 5,
         "competitionScore": 66,
-        "poolReason": "Students across the United States who are WAI members, are studying STEM, and need help paying for college can apply.",
+        "poolReason": "Students across the United States who are WAI members, are studying engineering, and need help paying for college can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": [
@@ -21129,7 +21169,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "STEM"
+          "engineering"
         ],
         "health": null,
         "lifeSituation": null,
@@ -22089,7 +22129,7 @@
         "residencyScope": "national",
         "poolLevel": 5,
         "competitionScore": 69,
-        "poolReason": "Students across the United States who are FFA members and are in the skilled trades can apply.",
+        "poolReason": "Students across the United States who are FFA members, are in the skilled trades, and are studying agriculture or nature can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": [
@@ -22099,7 +22139,8 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "skilled trades"
+          "agriculture",
+          "trades"
         ],
         "health": null,
         "lifeSituation": null,
@@ -22486,7 +22527,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "skilled trades"
+          "trades"
         ],
         "health": null,
         "lifeSituation": null,
@@ -22865,15 +22906,17 @@
         "verificationNote": "confirmed by Kelsey: the page's internship date and scholarship date are both correct (March 15 and April 15). The high school scholarship is due April 15 and the internship is due March 15. Treated as annual; scholarship deadline is April 15, 2027.",
         "residencyScope": "whitefish",
         "poolLevel": 1,
-        "competitionScore": 16,
-        "poolReason": "Only Whitefish High School students can apply.",
+        "competitionScore": 13,
+        "poolReason": "Only Whitefish High School students who are studying agriculture or nature can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "agriculture"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": null,
@@ -23259,7 +23302,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "skilled trades"
+          "trades"
         ],
         "health": null,
         "lifeSituation": null,
@@ -23326,7 +23369,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "skilled trades"
+          "trades"
         ],
         "health": null,
         "lifeSituation": null,
@@ -23382,7 +23425,7 @@
         "residencyScope": "national",
         "poolLevel": 5,
         "competitionScore": 70,
-        "poolReason": "Students across the United States who are studying STEM and are women can apply.",
+        "poolReason": "Students across the United States who are studying engineering and are women can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
@@ -23390,7 +23433,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "STEM"
+          "engineering"
         ],
         "health": null,
         "lifeSituation": null,
@@ -23448,7 +23491,7 @@
         "residencyScope": "national",
         "poolLevel": 5,
         "competitionScore": 70,
-        "poolReason": "Students across the United States who are WAI members, are studying STEM, and are training to be pilots can apply.",
+        "poolReason": "Students across the United States who are WAI members, are studying engineering, and are training to be pilots can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": [
@@ -23458,8 +23501,8 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "pilot training",
-          "STEM"
+          "engineering",
+          "pilot training"
         ],
         "health": null,
         "lifeSituation": null,
@@ -24167,7 +24210,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "skilled trades"
+          "trades"
         ],
         "health": null,
         "lifeSituation": null,
@@ -24219,16 +24262,18 @@
         ],
         "verificationNote": "Checked 2026-10-28 against the Reach Higher Montana scholarships list. The list shows a November 20 deadline and does not state the year, so this row is not verified.",
         "residencyScope": "national",
-        "poolLevel": 6,
-        "competitionScore": 93,
-        "poolReason": "Large pool: open nationwide.",
+        "poolLevel": 5,
+        "competitionScore": 72,
+        "poolReason": "Students across the United States who are studying agriculture or nature can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "agriculture"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": null,
@@ -24391,7 +24436,7 @@
         "residencyScope": "national",
         "poolLevel": 5,
         "competitionScore": 70,
-        "poolReason": "Students across the United States who are studying STEM, are nonbinary, and are women can apply.",
+        "poolReason": "Students across the United States who are studying engineering, are nonbinary, and are women can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
@@ -24399,7 +24444,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "STEM"
+          "engineering"
         ],
         "health": null,
         "lifeSituation": null,
@@ -25516,7 +25561,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "skilled trades"
+          "trades"
         ],
         "health": null,
         "lifeSituation": null,
@@ -25634,7 +25679,7 @@
         "residencyScope": "national",
         "poolLevel": 5,
         "competitionScore": 73,
-        "poolReason": "Students across the United States who are studying STEM can apply.",
+        "poolReason": "Students across the United States who are studying engineering can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
@@ -25642,7 +25687,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "STEM"
+          "engineering"
         ],
         "health": null,
         "lifeSituation": null,
@@ -25770,7 +25815,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "skilled trades"
+          "trades"
         ],
         "health": null,
         "lifeSituation": null,
@@ -26138,16 +26183,18 @@
           "deadline": null
         },
         "residencyScope": "national",
-        "poolLevel": 6,
-        "competitionScore": 94,
-        "poolReason": "Large pool: open nationwide.",
+        "poolLevel": 5,
+        "competitionScore": 73,
+        "poolReason": "Students across the United States who are studying hospitality can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "hospitality"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": null,
@@ -26274,7 +26321,7 @@
         ],
         "familyTies": null,
         "plans": [
-          "skilled trades"
+          "trades"
         ],
         "health": null,
         "lifeSituation": null,
@@ -27032,7 +27079,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "skilled trades"
+          "trades"
         ],
         "health": null,
         "lifeSituation": null,
@@ -27280,15 +27327,17 @@
         },
         "residencyScope": "flathead",
         "poolLevel": 2,
-        "competitionScore": 30,
-        "poolReason": "Only Flathead County students can apply.",
+        "competitionScore": 27,
+        "poolReason": "Only Flathead County students who are studying art or music can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "arts"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": null,
@@ -27469,14 +27518,16 @@
         "residencyScope": null,
         "poolLevel": null,
         "competitionScore": null,
-        "poolReason": "The page does not say the place.",
+        "poolReason": "The page does not say the place. It is for students who are planning to teach.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "education"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": null,
@@ -29099,14 +29150,16 @@
         "residencyScope": null,
         "poolLevel": null,
         "competitionScore": null,
-        "poolReason": "The page does not say the place.",
+        "poolReason": "The page does not say the place. It is for students who are studying art or music.",
         "ruralRule": "none",
         "sports": null,
         "clubs": null,
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "arts"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": null,
@@ -29676,7 +29729,7 @@
         "faith": null,
         "familyTies": null,
         "plans": [
-          "teaching"
+          "education"
         ],
         "health": null,
         "lifeSituation": null,
@@ -29795,8 +29848,8 @@
         },
         "residencyScope": "national",
         "poolLevel": 5,
-        "competitionScore": 73,
-        "poolReason": "Students across the United States who do drama or theatre can apply.",
+        "competitionScore": 70,
+        "poolReason": "Students across the United States who do drama or theatre, are planning to teach, and are studying art or music can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": [
@@ -29805,7 +29858,10 @@
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "arts",
+          "education"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": null,
@@ -29987,8 +30043,8 @@
         },
         "residencyScope": "national",
         "poolLevel": 5,
-        "competitionScore": 73,
-        "poolReason": "Students across the United States who work on the yearbook can apply.",
+        "competitionScore": 70,
+        "poolReason": "Students across the United States who work on the yearbook and are studying communications can apply.",
         "ruralRule": "none",
         "sports": null,
         "clubs": [
@@ -29997,7 +30053,9 @@
         "heritage": null,
         "faith": null,
         "familyTies": null,
-        "plans": null,
+        "plans": [
+          "communications"
+        ],
         "health": null,
         "lifeSituation": null,
         "gender": null,

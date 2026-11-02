@@ -116,7 +116,7 @@ assert.equal(deriveAwardTags(legacy, [], pageReads.reads[String(legacy.publicId)
 
 const elkVoc = one("Elk's State Level Vocational");
 assert.equal(elkVoc.residencyScope, 'montana');
-assert.deepEqual(elkVoc.plans, ['skilled trades', 'two-year college']);
+assert.deepEqual(elkVoc.plans, ['trades', 'two-year college']);
 assert.equal(elkVoc.familyTies, null);
 
 const beta = one('Beta Sigma Phi');
@@ -155,7 +155,7 @@ assert.match(String(chaikin.poolReason), /New York/);
 const lineworker = one('Lineman Country');
 assert.equal(lineworker.residencyScope, 'regional');
 assert.equal(lineworker.poolLevel, 3);
-assert.deepEqual(lineworker.plans, ['skilled trades']);
+assert.deepEqual(lineworker.plans, ['energy', 'trades']);
 assert.match(String(lineworker.poolReason), /Southeast Lineman Training Center/);
 
 const p1NullIds = [
