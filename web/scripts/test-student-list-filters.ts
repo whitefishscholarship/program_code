@@ -92,7 +92,7 @@ assert.equal(optionLabels.includes('A parent works for the sponsor'), false);
 assert.equal(optionLabels.includes('Aviation group member'), false);
 assert.equal(optionLabels.includes('Club like the Elks'), false);
 for (const label of [
-  'Elks',
+  'My family is in the Elks',
   'FFA',
   'Kish Bank',
   'D.C. Goodman',

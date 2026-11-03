@@ -1,4 +1,5 @@
 import { chipLabel, employerChipMatchesAward, differentiationHits } from './differentiation';
+import { collegeOnlyAward } from './eligibilityHolds';
 import type { InterviewAnswers } from './interviewMatcher';
 import { relevanceByAward, selectedRelevanceAnswers, type PreferenceReason } from './interviewRelevance';
 import type { StudentAward } from './studentCatalog';
@@ -43,13 +44,21 @@ export function preferenceReasonsForAward(
 /**
  * Labels and Details reasons come from this list.
  * A choice adds a label only. It never removes an award.
+ * A college-only award does not count as a Fits you match for a high school senior.
  */
+/** The form is for a high school senior unless a saved answer says they are already in college. */
+function highSchoolSenior(answers: InterviewAnswers): boolean {
+  const status = answers.educationalStatus;
+  return status == null || status === 'high_school_senior' || status === 'homeschool_senior';
+}
+
 export function studentFitExplanations(
   award: StudentAward,
   answers: InterviewAnswers | null,
   reasonsByAward?: ReadonlyMap<string, readonly PreferenceReason[]>,
 ): FitExplanation[] {
   if (!answers) return [];
+  if (collegeOnlyAward(award.publicId) && highSchoolSenior(answers)) return [];
   const map = reasonsByAward ?? relevanceByAward(answers);
   const reasons = preferenceReasonsForAward(award, answers, map);
   const selected = selectedRelevanceAnswers(answers);

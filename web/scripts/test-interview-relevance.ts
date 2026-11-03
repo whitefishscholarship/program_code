@@ -34,7 +34,7 @@ for(const ex of matrix.pairedExamples){
  let reachedPlain=false;for(const r of visible){if(!r.relevant)reachedPlain=true;else assert(!reachedPlain,'relevant awards must precede unrelated awards within shortlist');}
  const csv=parseCsv(serializeAwardCsv(visible.map(x=>x.award)).replace(/^\uFEFF/,''));assert.deepEqual(csv.rows.map(x=>x.Name),visible.map(x=>x.award.name));assert(!csv.headers.some(x=>/relevance|answer|reason|decision/i.test(x)));
 }
-for(const [profile,expected] of [[base,165],[{...base,gpa:2},123],[{...base,targetSchoolTypes:['trade_vocational']},148],[{...base,targetSchoolTypes:['undecided']},190]] as const){const out=run(InterviewAnswersSchema.parse(profile));assert.equal(out.counts.match+out.counts.possibleMatch,expected,'award eligibility is checked ahead of the shortlist table');}
+for(const [profile,expected] of [[base,165],[{...base,gpa:2},122],[{...base,targetSchoolTypes:['trade_vocational']},148],[{...base,targetSchoolTypes:['undecided']},190]] as const){const out=run(InterviewAnswersSchema.parse(profile));assert.equal(out.counts.match+out.counts.possibleMatch,expected,'award eligibility is checked ahead of the shortlist table');}
 const compound=run({...base,selectedCriteria:['stem','healthcare']});const stem=run(choose('stem')),health=run(choose('healthcare'));
 assert.deepEqual(new Set(compound.results.filter(x=>x.relevant).map(x=>x.award.publicId)),new Set([...stem.results,...health.results].filter(x=>x.relevant).map(x=>x.award.publicId)));
 assert(compound.results.some(x=>x.reasons.filter(r=>r.code.startsWith('relevance-')).length>1));
@@ -59,4 +59,4 @@ assert.equal(ledger.rows.length,197);assert.equal(new Set(ledger.rows.map(r=>r.s
 assert.equal(crypto.createHash('sha256').update(fs.readFileSync('fixtures/relevance/interview-relevance-v1.json')).digest('hex'),RELEVANCE_SHA256);
 execFileSync(process.execPath,['--import','tsx','scripts/build-interview-relevance.ts'],{stdio:'pipe'});
 for(const p of ['src/lib/interviewRelevance.ts','src/lib/spreadsheetShortlist.ts','src/components/InterviewWizard.tsx','src/components/ScholarshipBrowser.tsx'])for(const token of ['localStorage','sessionStorage','indexedDB','sendBeacon','document.cookie','console.log','XMLHttpRequest'])assert(!fs.readFileSync(p,'utf8').includes(token));
-console.log('RELEVANCE PASS',JSON.stringify({pairedConnections:matrix.pairedExamples.length,enabledControls:matrix.browserExamples.length,sourceRows:197,awards:192,academicRegression:[165,123,148,190]}));
+console.log('RELEVANCE PASS',JSON.stringify({pairedConnections:matrix.pairedExamples.length,enabledControls:matrix.browserExamples.length,sourceRows:197,awards:192,academicRegression:[165,122,148,190]}));

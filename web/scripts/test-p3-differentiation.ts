@@ -156,12 +156,24 @@ assert.equal(ruralRuleMatches(county, montana), true);
 assert.equal(ruralRuleMatches(county, emptyDifferentiation()), true);
 assert.equal(ruralRuleMatches(tight, whitefish), false);
 assert.equal(ruralRuleMatches({ ruralRule: null }, whitefish), false);
-assert.deepEqual(differentiationHits(county, whitefish), ['Flathead', 'Rural or small town']);
-assert.deepEqual(differentiationHits(county, emptyDifferentiation()), ['Flathead', 'Rural or small town']);
-assert.deepEqual(differentiationHits(tight, emptyDifferentiation()), ['Whitefish']);
-assert.deepEqual(differentiationHits(state, emptyDifferentiation()), ['Montana']);
+assert.deepEqual(differentiationHits(county, whitefish), []);
+assert.deepEqual(differentiationHits(county, flathead), ['Flathead']);
+assert.deepEqual(differentiationHits(county, rural), ['Rural or small town']);
+assert.deepEqual(differentiationHits(county, emptyDifferentiation()), []);
+assert.deepEqual(differentiationHits(tight, emptyDifferentiation()), []);
+assert.deepEqual(differentiationHits(tight, whitefish), ['Whitefish']);
+assert.deepEqual(differentiationHits(state, emptyDifferentiation()), []);
+assert.deepEqual(differentiationHits(state, montana), ['Montana']);
 
 const groups = differentiationGroups(catalog.awards);
+const elksChip = groups.flatMap((group) => group.chips).find((chip) => chip.value === 'elks');
+assert.equal(elksChip?.label, 'My family is in the Elks');
+const elksProfile = toggleDifferentiation(emptyDifferentiation(), elksChip!);
+const elksLegacy = catalog.awards.find((item) => item.publicId === 'award-20025cb56901');
+const elksPublic = catalog.awards.find((item) => item.publicId === 'award-2c06399c35e5');
+assert(elksLegacy && elksPublic);
+assert(differentiationHits(elksLegacy, elksProfile).includes('My family is in the Elks'));
+assert.equal(differentiationHits(elksPublic, elksProfile).includes('My family is in the Elks'), false);
 assert.deepEqual(groups.map((group) => group.title), [
   'Plans and career path',
   'First in your family',
@@ -222,8 +234,12 @@ assert(differentiationHits(named('USTA Foundation'), chipProfile('sports', 'tenn
 assert.equal(groups.some((group) => group.title === 'Where you live and go to school' || group.hint.includes('Whitefish students count as rural')), false);
 const explicitLocal: DifferentiationProfile = { ...emptyDifferentiation(), places: ['whitefish', 'flathead', 'montana', 'rural'], plans: ['teaching'] };
 const backgroundLocal: DifferentiationProfile = { ...emptyDifferentiation(), plans: ['teaching'] };
+const placeLabels = ['Whitefish', 'Flathead', 'Montana', 'Rural or small town'];
 for (const item of catalog.awards) {
-  assert.deepEqual(differentiationHits(item, backgroundLocal), differentiationHits(item, explicitLocal), item.name);
+  const backgroundHits = differentiationHits(item, backgroundLocal);
+  const explicitHits = differentiationHits(item, explicitLocal);
+  for (const place of placeLabels) assert.equal(backgroundHits.includes(place), false, `${item.name} ${place}`);
+  if (item.plans?.includes('teaching')) assert.equal(backgroundHits.includes('Teaching'), explicitHits.includes('Teaching'), item.name);
 }
 const sampleAnswers = InterviewAnswersSchema.parse({ gpa: 3.4, targetSchoolTypes: ['four_year'], differentiation: backgroundLocal });
 const beforeAnswers = InterviewAnswersSchema.parse({ gpa: 3.4, targetSchoolTypes: ['four_year'], differentiation: explicitLocal });

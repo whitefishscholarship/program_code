@@ -1,5 +1,6 @@
 import {
   amountLabel,
+  datedDeadlineIsBeforeToday,
   deadlineLabel,
   explicitDeadlineDate,
   formatListStamp,
@@ -316,9 +317,15 @@ export function serializeAwardDeadlineCalendar(award: StudentAward, now: Date): 
   return calendar;
 }
 
+/** A deadline stays off the .ics file once its calendar day is before today. */
+export function awardOnStudentCalendar(award: StudentAward, now: Date): boolean {
+  return explicitDeadlineDate(award) != null && !datedDeadlineIsBeforeToday(award, now);
+}
+
 export function serializeStudentCalendar(awards: readonly StudentAward[], now: Date): string {
   const stamp = now.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z$/, 'Z');
   const events = awards.flatMap((award) => {
+    if (!awardOnStudentCalendar(award, now)) return [];
     const date = explicitDeadlineDate(award);
     if (!date) return [];
     const day = `${date.year}${pad(date.month)}${pad(date.day)}`;
